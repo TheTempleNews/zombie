@@ -288,8 +288,87 @@ function zombie_register_required_plugins() {
 		),
 		array(
 			'name'		=> 'Convert Post Types',
-			'slug'		=> 'post-thumbnail-editor',
+			'slug'		=> 'convert-post-types',
+			'required'	=> false,
+		),
+		array(
+			'name'		=> 'Enable Media Replace',
+			'slug'		=> 'enable-media-replace',
+			'required'	=> false,
+		),
+		array(
+			'name'		=> 'FitVids for WordPress',
+			'slug'		=> 'fitvids-for-wordpress',
 			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Issuu Embed',
+			'slug'		=> 'issuu-embed',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Video Thumbnails',
+			'slug'		=> 'video-thumbnails',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'AntiVirus',
+			'slug'		=> 'antivirus',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'BackWPup',
+			'slug'		=> 'backwpup',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Exploit Scanner',
+			'slug'		=> 'exploit-scanner',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Redirection',
+			'slug'		=> 'redirection',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Social Metrics',
+			'slug'		=> 'social-metrics',
+			'required'	=> false,
+		),
+		array(
+			'name'		=> 'Jetpack',
+			'slug'		=> 'jetpack',
+			'required'	=> false,
+		),
+		array(
+			'name'		=> 'WP To Twitter',
+			'slug'		=> 'wp-to-twitter',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Dev4Press Uodater',
+			'slug'		=> 'dev4press-updater',
+			'source'    => get_stylesheet_directory() . '/library/plugins/dev4press-updater.1.8.7.zip',
+			'required'	=> false,
+		),
+		array(
+			'name'		=> 'Flex Tetrodo',
+			'slug'		=> 'flex-tetrodo',
+			'source'    => get_stylesheet_directory() . '/library/plugins/flex-tetrodo.zip',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'GD Custom Posts and Taxonomies Tools',
+			'slug'		=> 'gd-taxonomies-tools',
+			'source'    => get_stylesheet_directory() . '/library/plugins/gd-taxonomies-tools.3.6.6.zip',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Hello Zombie',
+			'slug'		=> 'hello-zombie',
+			'source'    => get_stylesheet_directory() . '/library/plugins/hello-zombie.zip',
+			'required'	=> false,
 		),
 	);
 
