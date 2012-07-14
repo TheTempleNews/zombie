@@ -1,0 +1,514 @@
+/******************************************************************
+Site Name: The Temple News
+Author: Chris Montgomery (@montchr, mont.chr@gmail.com)
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+
+
+
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.rtl {}
+.home {}                            /* home page */
+.blog {}                            /* blog page */
+.archive {}                         /* archive page */
+.date {}                            /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                          /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                        /* 404 page */
+.single {}                          /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                      /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                          /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                        /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                             /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                   /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}
+	.page-child {}
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                       /* if user is logged in */
+.paged {}                           /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	max-width: 1140px;
+}
+	/*
+		This is a combination of the 1140 grid and Twitter Boostrap.
+		I liked 1140 but Boostrap's grid was way more detailed so
+		I merged them together, let's see how this works out.
+		If you want to use 1140, the original values are commented
+		out on each line.
+	*/
+	.onecol    { width:  5.801104972%;  }       /* 4.85%;  } /* grid_1  */
+	.twocol    { width: 14.364640883%; }       /* 13.45%; } /* grid_2  */
+	.threecol  { width: 22.928176794%; }       /* 22.05%; } /* grid_3  */
+	.fourcol   { width: 31.491712705%; }       /* 30.75%; } /* grid_4  */
+	.fivecol   { width: 40.055248616%; }       /* 39.45%; } /* grid_5  */
+	.sixcol    { width: 48.618784527%; }       /* 48%;    } /* grid_6  */
+	.sevencol  { width: 57.182320438%; } /* 56.75%; } /* grid_7  */
+	.eightcol  { width: 65.745856349%; }  /* 65.4%;  } /* grid_8  */
+	.ninecol   { width: 74.309392260%; }        /* 74.05%; } /* grid_9  */
+	.tencol    { width: 82.872928171%; }  /* 82.7%;  } /* grid_10 */
+	.elevencol { width: 91.436464082%; }       /* 91.35%; } /* grid_11 */
+	.twelvecol { width: 99.999999993%; }       /* 100%;   } /* grid_12 */
+	
+	/* layout & column defaults */
+	@grid_margin-left: 2.762430939%;
+	
+	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol { 
+		position: relative;
+		float: left; 
+		margin-left: @grid_margin-left;
+	}
+	
+	.first {
+		margin-left: 0;
+	}
+	
+	.last {
+		float: right;
+	}
+	
+	/* push classes */
+	.push_one    { left:  (5.801104972% + @grid_margin-left); }       /* 4.85%;  } /* grid_1  */
+	.push_two    { left: (14.364640883% + @grid_margin-left); }       /* 13.45%; } /* grid_2  */
+	.push_three  { left: (22.928176794% + @grid_margin-left); }       /* 22.05%; } /* grid_3  */
+	.push_four   { left: (31.491712705% + @grid_margin-left); }       /* 30.75%; } /* grid_4  */
+	.push_five   { left: (40.055248616% + @grid_margin-left); }       /* 39.45%; } /* grid_5  */
+	.push_six    { left: (48.618784527% + @grid_margin-left); }       /* 48%;    } /* grid_6  */
+	.push_seven  { left: (57.182320438% + @grid_margin-left); } /* 56.75%; } /* grid_7  */
+	.push_eight  { left: (65.745856349% + @grid_margin-left); }  /* 65.4%;  } /* grid_8  */
+	.push_nine   { left: (74.309392260% + @grid_margin-left); }        /* 74.05%; } /* grid_9  */
+	.push_ten    { left: (82.872928171% + @grid_margin-left); }  /* 82.7%;  } /* grid_10 */
+	.push_eleven { left: (91.436464082% + @grid_margin-left); }       /* 91.35%; } /* grid_11 */
+	.push_twelve { left: (99.999999993% + @grid_margin-left); }       /* 100%;   } /* grid_12 */
+
+	/* pull classes */
+	.pull_one    { left:  -(5.801104972% + @grid_margin-left); }       /* 4.85%;  } /* grid_1  */
+	.pull_two    { left: -(14.364640883% + @grid_margin-left); }       /* 13.45%; } /* grid_2  */
+	.pull_three  { left: -(22.928176794% + @grid_margin-left); }       /* 22.05%; } /* grid_3  */
+	.pull_four   { left: -(31.491712705% + @grid_margin-left); }       /* 30.75%; } /* grid_4  */
+	.pull_five   { left: -(40.055248616% + @grid_margin-left); }       /* 39.45%; } /* grid_5  */
+	.pull_six    { left: -(48.618784527% + @grid_margin-left); }       /* 48%;    } /* grid_6  */
+	.pull_seven  { left: -(57.182320438% + @grid_margin-left); } /* 56.75%; } /* grid_7  */
+	.pull_eight  { left: -(65.745856349% + @grid_margin-left); }  /* 65.4%;  } /* grid_8  */
+	.pull_nine   { left: -(74.309392260% + @grid_margin-left); }        /* 74.05%; } /* grid_9  */
+	.pull_ten    { left: -(82.872928171% + @grid_margin-left); }  /* 82.7%;  } /* grid_10 */
+	.pull_eleven { left: -(91.436464082% + @grid_margin-left); }       /* 91.35%; } /* grid_11 */
+	.pull_twelve { left: -(99.999999993% + @grid_margin-left); }       /* 100%;   } /* grid_12 */
+	
+	
+	#media-container-solo {
+		display: none;
+	}
+	
+#section-box-print-carousel,
+#media-container {
+	width: 100%;
+}
+
+
+
+/*********************
+HEADER SYTLES
+*********************/
+
+.header {}
+
+	#logo {}
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	background: #eee; 
+	border: 0;
+			
+	li {
+		float: left;
+		position: relative;
+				
+		a {
+			border-bottom: 0;
+					
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				background-color: #dedede;
+					
+			}
+		}
+				
+		&:first-child {}
+		&:last-child {}
+				
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			width: 200px;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			display: none;
+			z-index: 8999;
+						
+			li {
+		
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+							
+					&:hover,
+					&:focus {}
+		
+					&:link {}
+				}
+		
+				&:first-child {}
+	
+				&:last-child {
+		
+					a {
+						border-bottom: 0;
+					}
+				}
+						
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {}
+			}
+					
+			/* highlight sub-menu current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}
+		}
+				
+		/* showing sub-menus */
+		&:hover ul {
+			top: auto;
+			display: block;
+		}
+				
+	} /* end .menu ul li */
+			
+	/* highlight current page */
+	li.current-menu-item, 
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {}
+	}  /* end current highlighters */
+	
+} /* end .nav */
+
+
+/* Cancel FlexNav for 768+ */
+.menu-button {
+	display: none;
+}
+
+.js #menu-top-navigation {
+	display: block;	
+}
+
+#menu-top-navigation {
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: #eee;
+	/* border-bottom: 1px solid #ccc; */
+	
+	li {
+		position: relative;
+		float: left;
+		width: auto;
+		
+		a {
+			border-bottom: 0;
+			margin: 0;
+			
+					
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				background-color: #dedede;
+					
+			}
+		}
+				
+		&:first-child {}
+		&:last-child {}
+				
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			width: 200px;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			display: none;
+			z-index: 8999;
+						
+			li {
+		
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+							
+					&:hover,
+					&:focus {}
+		
+					&:link {}
+				}
+		
+				&:first-child {}
+	
+				&:last-child {
+		
+					a {
+						border-bottom: 0;
+					}
+				}
+						
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {}
+			}
+					
+			/* highlight sub-menu current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}
+		}
+				
+		/* showing sub-menus */
+		&:hover ul {
+			top: auto;
+			display: block;
+		}
+	}
+	
+	.menu-parent-item {
+		background: none;
+		border-bottom: none; 
+	}
+	
+	.menu-parent-item a {
+		position: relative;
+		display: block;
+		z-index: 0;
+	}
+}
+
+	
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 1px solid #CCCCCC;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+		
+		ul {
+			li {
+				margin-bottom: 0.75em;
+				
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+				
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+	
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+	
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+	
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+	
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {} 
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+	
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+	
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+	
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {} 
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+	
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+	
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+	
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+	
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/* 
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+			

@@ -1,0 +1,77 @@
+			<footer class="footer" role="contentinfo">
+				
+				<div id="outer-footer">
+
+				<div id="inner-footer" class="wrap clearfix">
+
+
+
+						<div id="footer-column-left" class="fourcol first clearfix">
+							
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500.png" /></a>
+							
+							<nav id="footer-links-sections" class="footer-links" role="navigation">
+								
+								<?php zombie_footer_links_sections(); // Adjust using Menus in Wordpress Admin ?>
+								
+							</nav>
+							
+							<div class="hoz-rule-third"></div>
+							
+							<nav id="footer-links-misc" class="footer-links" role="navigation">
+								
+								<?php zombie_footer_links_misc(); // Adjust using Menus in Wordpress Admin ?>
+								
+							</nav>
+							
+							<div class="footer-social-container">
+								<div class="footer-social">
+								
+									<a class="social-icon-large" href="#"><i class="icon-facebook"></i></a>
+									<a class="social-icon-large" href="#"><i class="icon-twitter"></i></a>
+									<a class="social-icon-large" href="#"><i class="icon-rss"></i></a>
+								
+								</div>
+							</div>
+							
+							<nav id="footer-links-meta" class="footer-links" role="navigation">
+								
+		    					<?php zombie_footer_links_meta(); // Adjust using Menus in Wordpress Admin ?>
+								
+			                </nav>
+							
+						</div>
+
+
+
+						<div id="footer-column-center" class="fourcol clearfix">
+							
+							
+							
+						</div>
+
+
+
+						<div id="footer-column-right" class="fourcol last clearfix">
+							
+	    					<p class="footer-about">The Temple News has been the paper of record for the Temple University community since it first printed as Temple University Weekly on Sept. 19, 1921. The award-winning student publication, editorially independent of Temple, now publishes every Tuesday. The Temple News distributes 8,000 printed copies, free of charge, to the university’s four primary locations in the Delaware Valley.</p>
+	
+							<p class="attribution">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.<br />
+								Powered by <a href="http://www.wordpress.org/" rel="nofollow">WordPress</a>. Developed by <a href="https://github.com/montchr/ttn-zombie" title="Zombie Theme on Github"</a>Chris Montgomery</a>. Built from <a href="http://themble.com/bones/" rel="nofollow">Bones</a>.</p>
+						
+						</div>
+
+
+				</div> <!-- end #inner-footer -->
+				
+				</div> <!-- end #outer-footer -->
+				
+			</footer> <!-- end footer -->
+		
+		</div> <!-- end #container -->
+		
+		<?php wp_footer(); // js scripts are inserted using this function ?>
+
+	</body>
+
+</html> <!-- end page. what a ride! -->

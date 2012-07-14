@@ -1,0 +1,34 @@
+<?php get_header(); ?>
+			
+			<div id="content">
+			
+				<div id="inner-content" class="wrap clearfix">
+				
+				    <div id="main" class="eightcol first clearfix" role="main">
+					
+						<h2 class="single-section-name" class="first last twelvecol">News</h2>
+
+						<?php the_zombie_loop('news'); ?>	
+					
+					        <?php if (function_exists('bones_page_navi')) { // if experimental feature is active ?>
+						
+						        <?php bones_page_navi(); // use the page navi function ?>
+
+					        <?php } else { // if it is disabled, display regular wp prev & next links ?>
+						        <nav class="wp-prev-next">
+							        <ul class="clearfix">
+								        <li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "zombietheme")) ?></li>
+								        <li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "zombietheme")) ?></li>
+							        </ul>
+					    	    </nav>
+					        <?php } ?>
+			
+    				</div> <!-- end #main -->
+    
+	    			<?php get_sidebar(); // sidebar 1 ?>
+                
+                </div> <!-- end #inner-content -->
+                
+			</div> <!-- end #content -->
+
+<?php get_footer(); ?>
