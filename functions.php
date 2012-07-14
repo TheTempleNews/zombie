@@ -114,9 +114,9 @@ you like. Enjoy!
 add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 function custom_image_sizes_choose( $sizes ) {
 	$custom_sizes = array(
-		'zombie-landscape-264' => 'Landscape Half',
+		'zom-landscape-396' => 'Landscape Half',
 		// 'zombie-landscape-768' => 'Landscape Full',
-		'zombie-portrait-384'  => 'Portrait Half'
+		'zom-portrait-384'  => 'Portrait Half'
 	);
 	return array_merge( $sizes, $custom_sizes );
 }
