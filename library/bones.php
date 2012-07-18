@@ -138,6 +138,9 @@ function bones_scripts_and_styles() {
 	
 	// add elastislide.js - jquery carousel plugin
 	wp_register_script( 'elastislide', get_stylesheet_directory_uri() . '/library/js/libs/jquery.elastislide.js', array('jquery','jquery-easing'), '', true );
+	
+	// add fittext, for menu button and wherever else...
+	wp_register_script('fittext', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array('jquery'), '', true);
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
@@ -152,6 +155,7 @@ function bones_scripts_and_styles() {
 	wp_enqueue_script( 'masonry' );
 	wp_enqueue_script('jquery-easing');
 	wp_enqueue_script('elastislide');
+	wp_enqueue_script('fittext');
 	
     wp_enqueue_script( 'bones-js' ); 
     

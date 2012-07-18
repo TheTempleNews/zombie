@@ -37,21 +37,36 @@ jQuery(document).ready(function($) {
     
     /* getting viewport width */
     var responsive_viewport = document.documentElement.clientWidth;
-    
+
+
+
+
     /* if is below 481px */
     if (responsive_viewport < 481) {
     
 		flexNav();
+		
+		// fittext for menu button
+		//$(".menu-button").fitText();
 
     } /* end smallest screen */
-    
+
+
+
+
     /* if is larger than 481px */
     if (responsive_viewport > 481) {
         
 		flexNav();
+		
+		// fittext for menu button
+		//$(".menu-button").fitText();
 
     } /* end larger than 481px */
-    
+
+
+
+
     /* if is above 768px */
     if (responsive_viewport > 768) {
 	
@@ -62,30 +77,20 @@ jQuery(document).ready(function($) {
         $('.comment img[data-gravatar]').each(function(){
             $(this).attr('src',$(this).attr('data-gravatar'));
         });
-		
-		// masonry.js
-		/*	var $container = $('#inner-content');
-		
-			$container.masonry({
-				// options
-				itemSelector : '.section-container',
-			
-				// set columnWidth a fraction of the container width
-				columnWidth: function( containerWidth ) {
-					return containerWidth / 10;
-				}
-			}); */
-
-		
-
         
     }
-    
+
+
+
+
     /* off the bat large screen actions */
     if (responsive_viewport > 1030) {
 
     }
-    
+
+
+
+
     /* 300x250 sidebar ad display-related js (see style.less for info) - should load appropriate 300x250 ad js above this size */
     if (responsive_viewport > 1140) {
 
