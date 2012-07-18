@@ -46,7 +46,8 @@
 								</header> <!-- end article header -->
 					
 								<section class="post-content clearfix" itemprop="articleBody">
-									<?php echo get_post_meta($post->ID, 'print_embed', true) ?>
+									<?php // echo get_post_meta($post->ID, 'print_embed', true) ?>
+									<?php the_content(); ?>
 								</section> <!-- end article section -->
 						
 								<footer class="article-footer">
