@@ -1,4 +1,29 @@
 <?php get_header(); ?>
+
+			<?php $post_type = get_post_type();
+					    
+						if ( $post_type == "article_ae" ) {
+							$cat_id     = 4;
+						} elseif ( $post_type == "article_sports" ) {
+							$cat_id     = 10;
+						} elseif ( $post_type == "article_living" ) {
+							$cat_id     = 11;
+						} elseif ( $post_type == "article_ae" ) {
+							$cat_id     = 2341;
+						} elseif ( $post_type == "article_opinion" ) {
+							$cat_id     = 5;
+						} elseif ( $post_type == "multimedia" ) {
+							$cat_id     = 194;
+						} elseif ( $post_type == "slideshows" ) {
+							$cat_id     = 39;
+						} 
+						
+						// Get the single name of the post type
+						global $wp_post_types;
+						$obj = $wp_post_types[$post_type];
+						$post_type_name = $obj->labels->singular_name; 
+						
+						?>
 			
 			<div id="content">
 
@@ -6,7 +31,7 @@
 			
 					<div id="main" class="eightcol first clearfix" role="main">
 						
-						<h1 class="single-section-name" class="first last twelvecol"><?php zombie_section_name(); ?></h1>
+						<h1 class="single-section-name" class="first last twelvecol"><?php echo $post_type_name; ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -14,7 +39,7 @@
 						
 								<header class="article-header">
 									
-									<div class="post-category-list-container"><?php the_category('&ensp;&#124;&ensp;'); ?></div>
+									<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
 									
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
@@ -22,7 +47,7 @@
 										<?php the_excerpt(); ?>
 									</section> <!-- end dek -->
 									
-									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 						
 								</header> <!-- end article header -->
 					

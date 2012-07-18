@@ -19,7 +19,7 @@
 
 					    ?>
 					    
-<h1 class="archive-main-title" class="first last twelvecol"><?php post_type_archive_title(); ?>
+<h1 class="archive-main-title" class="first last twelvecol"><a href="<?php echo get_post_type_archive_link( $post_type ); ?>"><?php post_type_archive_title(); ?></a>
 							<?php if ( is_post_type_archive() ) : ?>
 								<span class="archive-breadcrumb"><?php
 									if ( is_year() || is_day() || is_month() ) { ?>
@@ -30,6 +30,7 @@
 												 / <?php the_time('d'); } ?></span>
 							<?php endif; ?>
 						</h1>
+
 						
 						<?php
 						// no reason to change this stuff
@@ -69,7 +70,7 @@
 											<header>
 												<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 												<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 											</header>
 
 											<section class="dek">

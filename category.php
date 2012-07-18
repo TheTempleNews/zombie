@@ -8,6 +8,8 @@
 					
 						<h1 id="archive-main-title">Archives <span class="archive-breadcrumb"> / category / <?php echo strtolower( single_cat_title('', false) ); ?></span></h1>
 						
+						
+						
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

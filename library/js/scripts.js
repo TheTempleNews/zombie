@@ -66,8 +66,8 @@ jQuery(document).ready(function($) {
             $(this).attr('src',$(this).attr('data-gravatar'));
         });
 		
-		/* masonry.js */
-			/* var $container = $('#inner-content');
+		// masonry.js
+			var $container = $('#inner-content');
 		
 			$container.masonry({
 				// options
@@ -75,9 +75,9 @@ jQuery(document).ready(function($) {
 			
 				// set columnWidth a fraction of the container width
 				columnWidth: function( containerWidth ) {
-					return containerWidth / 12;
+					return containerWidth / 10;
 				}
-			}); */
+			});
 
 		
 

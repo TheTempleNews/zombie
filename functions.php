@@ -628,7 +628,8 @@ function ttn_display_featured_media( $content_type ) {
 					    //print apply_filters( 'the_content', $gallery_shortcode );
 				 
 					 	$html .= '<div class="slideshow-container" clearfix">';
-					 	$html .= apply_filters( 'the_content', $gallery_shortcode );
+					 	// $html .= apply_filters( 'the_content', $gallery_shortcode );
+					 	$html .= do_shortcode($gallery_shortcode);
 					 	$html .= '</div>';
 					 	
 					 	//$juicy = new Juicebox;
@@ -648,5 +649,28 @@ function ttn_display_featured_media( $content_type ) {
 	echo $html;
 	
 }
+
+?>
+<?php
+
+function the_category_no_link() {
+	foreach((get_the_category()) as $category) {
+    echo $category->cat_name . ' | ';
+}
+	
+}
+
+?>
+<?php
+
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'article_news', 'article_sports', 'article_living', 'article_ae', 'article_opinion', 'multimedia','slideshows'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 ?>

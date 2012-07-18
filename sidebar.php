@@ -6,11 +6,11 @@
 
 					<?php else : ?>
 
-						<!-- This content shows up if there are no widgets defined in the backend. -->
+						<!-- This content shows up if there are no widgets defined in the backend. 
 						
 						<div class="alert help">
 							<p>Please activate some Widgets.</p>
-						</div>
+						</div> -->
 
 					<?php endif; ?>
 
@@ -33,11 +33,11 @@
 
 					<?php else : ?>
 
-						<!-- This content shows up if there are no widgets defined in the backend. -->
+						<!-- This content shows up if there are no widgets defined in the backend.
 						
 						<div class="alert help">
 							<p>Please activate some Widgets.</p>
-						</div>
+						</div> -->
 
 					<?php endif; ?>
 

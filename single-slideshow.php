@@ -19,7 +19,7 @@
 									// echo do_shortcode($fnord); 
 									// echo $fnord; ?>
 									
-									<div class="post-category-list-container"><?php the_category('&ensp;&#124;&ensp;'); ?></div>
+									<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
 									
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
@@ -27,7 +27,7 @@
 										<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 									</section> <!-- end dek -->
 									
-									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 						
 								</header> <!-- end article header -->
 					

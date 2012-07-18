@@ -149,7 +149,7 @@ function bones_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
-	// wp_enqueue_script( 'masonry' );
+	wp_enqueue_script( 'masonry' );
 	wp_enqueue_script('jquery-easing');
 	wp_enqueue_script('elastislide');
 	
@@ -196,7 +196,7 @@ function bones_theme_support() {
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 	
 	// adding post format support
-	add_theme_support( 'post-formats',  
+	/* add_theme_support( 'post-formats',  
 		array( 
 			'aside',             // title less blurb
 			'gallery',           // gallery of images
@@ -208,7 +208,7 @@ function bones_theme_support() {
 			'audio',             // audio
 			'chat'               // chat transcript 
 		)
-	);	
+	);	*/
 	
 	// wp menus
 	add_theme_support( 'menus' );  
@@ -239,6 +239,7 @@ function bones_main_nav() {
     	'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
     	'menu' => 'The Main Menu',                           // nav name
     	'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
+    	'menu_id' => 'menu-top-navigation',				// id for nav ul
     	'theme_location' => 'main-nav',                 // where it's located in the theme
     	'before' => '',                                 // before the menu
         'after' => '',                                  // after the menu

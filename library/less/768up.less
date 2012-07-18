@@ -29,9 +29,48 @@ style a page via class
 ********************/
 
 .rtl {}
-.home {}                            /* home page */
+.home {
+	.slide-image {
+		float:left;
+		position: relative;
+	}
+
+	#section-box-featured-multimedia,
+	#section-box-print,
+	#section-box-featured .section-box-title {
+		display: block;
+	}
+	
+}                            /* home page */
 .blog {}                            /* blog page */
 .archive {}                         /* archive page */
+.post-type-archive {
+	.top-news-article {
+		border-bottom: @niceborders;
+		padding: 1em 0;
+	}
+}                          /* post type archive */
+	.post-type-archive-article_news {}         /* news article type archive */
+	.post-type-archive-article_sports {}       /* sports article type archive */
+	.post-type-archive-article_living {}       /* living article type archive */
+	.post-type-archive-article_ae {}           /* ae article type archive */
+	.post-type-archive-article_opinion {}      /* opinion article type archive */
+	.post-type-archive-multimedia {
+		background-color: #222222;
+		
+		#main {
+			.article-container {
+				height: 35em;
+			}
+		}		
+	}   /* multimedia article type archive */
+	.post-type-archive-slideshow {
+		#main {
+			.article-container {
+				height: 35em;
+			}
+		}
+	}                                          /* slideshow article type archive */
 .date {}                            /* date archive page */
 	.date-paged-1 {}                /* replace the number to the corresponding page number */
 .search {}                          /* search page */
@@ -155,6 +194,70 @@ HEADER SYTLES
 .header {}
 
 	#logo {}
+
+/* SEARCH BOX STYLES */
+	.social-and-search-container {
+		display: block;
+	}
+
+	#searchform {
+		margin: 2.5em auto 0;
+		
+		fieldset {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: none;
+			display: block;
+		}
+		
+		.screen-reader-text {
+			position:absolute;
+			left:-10000px;
+			top:auto;
+			width:1px;
+			height:1px;
+			overflow:hidden;
+		}
+		
+		#s {
+			/* -webkit-appearance: none;
+			-webkit-border-radius: 0px;
+			.rounded-left(4px); */
+			.rounded(4px);
+			border: 1px solid #CCCCCC;
+			margin-bottom: 0;
+			vertical-align: middle;
+			width: 99%;
+			/* position: relative;
+			float: left;*/ 
+			padding: 0.5em 0.5% 0.5em;
+		}
+	
+		
+		#searchsubmit {
+			display: none;
+			-webkit-appearance: none;
+			-webkit-border-radius: 0px;
+			.rounded-right(4px);
+			padding: 0.35% 0.5% 0.35%;
+			margin-bottom: 0;
+			margin-left: -3px;
+			text-align: center;
+			text-shadow: 0 1px 1px rgba(255,255,255,.75);
+			vertical-align: middle;
+			cursor: pointer;
+			border: 1px solid #CCCCCC;
+			background-color: #777;
+			width: 20%;
+			position: relative;
+			float:right;
+		}
+	}
+	
+	.outer-line {
+		margin-bottom: 0;
+	}
 	
 /*********************
 NAVIGATION STYLES
@@ -176,7 +279,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
+				background-color: #b70000;
 					
 			}
 		}
@@ -255,7 +358,7 @@ NAVIGATION STYLES
 
 
 /* Cancel FlexNav for 768+ */
-.menu-button {
+.js .menu-button {
 	display: none;
 }
 
@@ -266,7 +369,8 @@ NAVIGATION STYLES
 #menu-top-navigation {
 	font-weight: 600;
 	text-transform: uppercase;
-	background-color: #eee;
+	background-color: #000000;
+	margin: 0;
 	/* border-bottom: 1px solid #ccc; */
 	
 	li {
@@ -277,6 +381,8 @@ NAVIGATION STYLES
 		a {
 			border-bottom: 0;
 			margin: 0;
+			background-color: black;
+			padding-top: 0.5em;
 			
 					
 			/*
@@ -284,7 +390,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
+				background-color: @tucherry;
+				color: black;
 					
 			}
 		}
@@ -370,6 +477,11 @@ SIDEBARS & ASIDES
 
 .sidebar {
 	margin-top: 2.2em;
+}
+
+	#sidebar1 {
+	padding-top: 0;
+	border-top: none;
 }
 
 	.widgettitle {

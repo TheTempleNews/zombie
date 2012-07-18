@@ -21,8 +21,6 @@ body {
 	// 16px/24px
 	font-size: 87.5%;
 	line-height: 1.5;
-	
-	
 	color: #565656;
 }
 
@@ -33,8 +31,7 @@ body {
 
 /* a horizontal rule appearing in both the header and footer */
 .outer-line {
-	border-bottom: .25em solid @tucherry;
-	margin: .5em 0 .5em;
+	border-bottom: .25em solid #b70000;
 }
 
 /* a horizontal @niceborders rule that spans a third of its container's width = 2em + 1px */
@@ -50,24 +47,33 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-/* ADVERTS */
+.ttn-network-banner,
+	.ad-container {
+		border-bottom: @niceborders;
+		border-top: @niceborders;
+		padding: 0.5em 0;
+	}
+	
+.ad-container {
+	margin-bottom: 2em;
+}
+
+
 .ad {
 	text-align: center;
 	font-family: @sans-serif;
 	font-weight: 700;
 }
 
-.rectangle-ad {
+.rectangle-ad-container {
+	border-bottom: none;
+	border-top: none;
+}
+
+/*.rectangle-ad {
 	display: block;
 	background-color: black;
 	height: 250px;
-}
-
-.blog-link-banner,
-.banner-ad {
-	display: block;
-	background-color: black;
-	height: 100px;
 }
 
 
@@ -157,7 +163,7 @@ style a page via class
 		}
 		
 		.dek {
-			display: none;
+			/* display: none; */
 		}
 	}
 	
@@ -166,6 +172,9 @@ style a page via class
 	#section-box-featured .section-box-title {
 		display: none;
 	}
+	
+	
+	
 }                          /* home page */
 .blog {}                                       /* blog template page */
 .archive {
@@ -254,7 +263,105 @@ style a page via class
 	.post-type-archive-article_living {}       /* living article type archive */
 	.post-type-archive-article_ae {}           /* ae article type archive */
 	.post-type-archive-article_opinion {}      /* opinion article type archive */
-	.post-type-archive-article_multimedia {}   /* multimedia article type archive */
+	.post-type-archive-multimedia {
+		background-color: #222222;
+		font-family: @sans-serif;
+		
+		#main {
+			background-color: #222222;
+			
+			
+			
+			article.top-multimedia-article {
+				
+				a {
+					display: inherit
+				}
+			}
+			
+			.article-container {
+				background-color: #000000;
+				margin-bottom: 1em;
+				
+				article {
+					margin: 1em;
+				}
+				
+					h2.multimedia-headline {
+						font-family: @sans-serif;
+					}
+					
+					.multimedia-byline {
+						font-weight: 700;
+					}
+					
+					.multimedia-dek {
+						font-style: normal;
+					}
+				
+					a{
+						display: block;
+						color: white;
+						
+						&:hover,
+						&:active {
+							color: #b70000;
+						}
+					}
+					
+						.video-thumbnail-container {
+							
+						}
+						
+						header,
+						section {
+							
+						}
+			}
+			
+			#post-type-loop-top {
+				height: auto;
+			}
+		}
+				
+		
+		
+	}   /* multimedia article type archive */
+	.post-type-archive-slideshow {
+		background-color: #222222;
+		
+		#main {
+			background-color: #222222;
+			
+			.article-container {
+				background-color: #000000;
+				margin-bottom: 1em;
+				
+				article {
+					margin: 1em;
+				}
+				
+					a{
+						display: block;
+					}
+					
+						.slideshows-thumbnail-container {
+							
+						}
+						
+						header,
+						section {
+							
+						}
+			}
+			
+			#post-type-loop-top {
+				height: auto;
+			}
+		}
+
+		
+	}                                          /* slideshow article type archive */
 .date {}                                       /* date archive page */
 	.date-paged-1 {}                           /* replace the number to the corresponding page number */
 .search {}                                     /* search page */
@@ -306,6 +413,67 @@ style a page via class
 		}
 	}
 }                        /* single post page */
+	.single-multimedia {
+		background-color: #222222;
+		font-family: @sans-serif;
+	
+		#main {
+			background-color: #222222;
+			
+			
+			
+			article.top-multimedia-article {
+				
+				a {
+					display: inherit
+				}
+			}
+			
+			.article-container {
+				background-color: #000000;
+				margin-bottom: 1em;
+				
+				article {
+					margin: 1em;
+				}
+				
+					single-title {
+						font-family: @sans-serif;
+					}
+					
+					.multimedia-byline {
+						font-weight: 700;
+					}
+					
+					.multimedia-dek {
+						font-style: normal;
+					}
+				
+					a{
+						display: block;
+						color: white;
+						
+						&:hover,
+						&:active {
+							color: @tucherry;
+						}
+					}
+					
+						.video-thumbnail-container {
+							
+						}
+						
+						header,
+						section {
+							
+						}
+			}
+			
+			#post-type-loop-top {
+				height: auto;
+			}
+		}
+	}
 	.postid-1 {}                               /* individual post page by id (i.e. body.postid-73) */
 	.single-paged-1 {}                         /* individual paged single (i.e. body.single-paged-3) */
 .attachment {}                                 /* attatchment page */
@@ -358,7 +526,7 @@ LINK STYLES
 *********************/
 
 a, a:visited { 
-	color: @tucherry;
+	color: #b70000;
 	text-decoration: none;
 
 	/* on hover */
@@ -485,60 +653,8 @@ HEADER STYLES
 		padding-bottom: 0.75em;
 	}
 	
-	/* SEARCH BOX STYLES */
-	#searchform {
-		margin: 0.5em auto;
-		
-		fieldset {
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			border: none;
-			display: block;
-		}
-		
-		.screen-reader-text {
-			position:absolute;
-			left:-10000px;
-			top:auto;
-			width:1px;
-			height:1px;
-			overflow:hidden;
-		}
-		
-		#s {
-			/* -webkit-appearance: none;
-			-webkit-border-radius: 0px;
-			.rounded-left(4px); */
-			.rounded(4px);
-			border: 1px solid #CCCCCC;
-			margin-bottom: 0;
-			vertical-align: middle;
-			width: 99%;
-			/* position: relative;
-			float: left;*/ 
-			padding: 0.5em 0.5% 0.5em;
-		}
-	
-		
-		#searchsubmit {
-			display: none;
-			-webkit-appearance: none;
-			-webkit-border-radius: 0px;
-			.rounded-right(4px);
-			padding: 0.35% 0.5% 0.35%;
-			margin-bottom: 0;
-			margin-left: -3px;
-			text-align: center;
-			text-shadow: 0 1px 1px rgba(255,255,255,.75);
-			vertical-align: middle;
-			cursor: pointer;
-			border: 1px solid #CCCCCC;
-			background-color: #777;
-			width: 20%;
-			position: relative;
-			float:right;
-		}
+	.social-and-search-container {
+		display: none;
 	}
 	
 	
@@ -1449,7 +1565,7 @@ FOOTER STYLES
 	} /* end .footer-links */
 	
 	/* left column */
-	#footer-column-left {
+	#footer-column-center {
 		text-align: center;
 		
 		#footer-links-sections,

@@ -1448,8 +1448,7 @@ body {
 }
 /* a horizontal rule appearing in both the header and footer */
 .outer-line {
-  border-bottom: 0.25em solid #9e1b34;
-  margin: .5em 0 .5em;
+  border-bottom: .25em solid #b70000;
 }
 /* a horizontal @niceborders rule that spans a third of its container's width = 2em + 1px */
 .hoz-rule-third {
@@ -1461,23 +1460,31 @@ body {
 /***********************
 ADVERTS AND SOCIAL MEDIA
 ************************/
-/* ADVERTS */
+.ttn-network-banner,
+.ad-container {
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  padding: 0.5em 0;
+}
+.ad-container {
+  margin-bottom: 2em;
+}
 .ad {
   text-align: center;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
-.rectangle-ad {
-  display: block;
-  background-color: black;
-  height: 250px;
+.rectangle-ad-container {
+  border-bottom: none;
+  border-top: none;
 }
-.blog-link-banner,
-.banner-ad {
-  display: block;
-  background-color: black;
-  height: 100px;
+/*.rectangle-ad {
+	display: block;
+	background-color: black;
+	height: 250px;
 }
+
+
 /* SOCIAL */
 /* .sociable {
 *	width: 230px;
@@ -1602,7 +1609,8 @@ style a page via class
   text-decoration: none;
 }
 .home article .dek {
-  display: none;
+  /* display: none; */
+
 }
 .home #section-box-featured-multimedia,
 .home #section-box-print,
@@ -1715,7 +1723,64 @@ style a page via class
 /* living article type archive */
 /* ae article type archive */
 /* opinion article type archive */
+.post-type-archive-multimedia {
+  background-color: #222222;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.post-type-archive-multimedia #main {
+  background-color: #222222;
+}
+.post-type-archive-multimedia #main article.top-multimedia-article a {
+  display: inherit;
+}
+.post-type-archive-multimedia #main .article-container {
+  background-color: #000000;
+  margin-bottom: 1em;
+}
+.post-type-archive-multimedia #main .article-container article {
+  margin: 1em;
+}
+.post-type-archive-multimedia #main .article-container h2.multimedia-headline {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.post-type-archive-multimedia #main .article-container .multimedia-byline {
+  font-weight: 700;
+}
+.post-type-archive-multimedia #main .article-container .multimedia-dek {
+  font-style: normal;
+}
+.post-type-archive-multimedia #main .article-container a {
+  display: block;
+  color: white;
+}
+.post-type-archive-multimedia #main .article-container a:hover,
+.post-type-archive-multimedia #main .article-container a:active {
+  color: #b70000;
+}
+.post-type-archive-multimedia #main #post-type-loop-top {
+  height: auto;
+}
 /* multimedia article type archive */
+.post-type-archive-slideshow {
+  background-color: #222222;
+}
+.post-type-archive-slideshow #main {
+  background-color: #222222;
+}
+.post-type-archive-slideshow #main .article-container {
+  background-color: #000000;
+  margin-bottom: 1em;
+}
+.post-type-archive-slideshow #main .article-container article {
+  margin: 1em;
+}
+.post-type-archive-slideshow #main .article-container a {
+  display: block;
+}
+.post-type-archive-slideshow #main #post-type-loop-top {
+  height: auto;
+}
+/* slideshow article type archive */
 /* date archive page */
 /* replace the number to the corresponding page number */
 /* search page */
@@ -1761,6 +1826,43 @@ style a page via class
   padding-left: 0.5em;
 }
 /* single post page */
+.single-multimedia {
+  background-color: #222222;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.single-multimedia #main {
+  background-color: #222222;
+}
+.single-multimedia #main article.top-multimedia-article a {
+  display: inherit;
+}
+.single-multimedia #main .article-container {
+  background-color: #000000;
+  margin-bottom: 1em;
+}
+.single-multimedia #main .article-container article {
+  margin: 1em;
+}
+.single-multimedia #main .article-container single-title {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.single-multimedia #main .article-container .multimedia-byline {
+  font-weight: 700;
+}
+.single-multimedia #main .article-container .multimedia-dek {
+  font-style: normal;
+}
+.single-multimedia #main .article-container a {
+  display: block;
+  color: white;
+}
+.single-multimedia #main .article-container a:hover,
+.single-multimedia #main .article-container a:active {
+  color: #9e1b34;
+}
+.single-multimedia #main #post-type-loop-top {
+  height: auto;
+}
 /* individual post page by id (i.e. body.postid-73) */
 /* individual paged single (i.e. body.single-paged-3) */
 /* attatchment page */
@@ -1808,7 +1910,7 @@ LINK STYLES
 *********************/
 a,
 a:visited {
-  color: #9e1b34;
+  color: #b70000;
   text-decoration: none;
   /* on hover */
 
@@ -1944,63 +2046,8 @@ HEADER STYLES
 #inner-header {
   padding-bottom: 0.75em;
 }
-/* SEARCH BOX STYLES */
-#searchform {
-  margin: 0.5em auto;
-}
-#searchform fieldset {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  display: block;
-}
-#searchform .screen-reader-text {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-#searchform #s {
-  /* -webkit-appearance: none;
-			-webkit-border-radius: 0px;
-			.rounded-left(4px); */
-
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #CCCCCC;
-  margin-bottom: 0;
-  vertical-align: middle;
-  width: 99%;
-  /* position: relative;
-			float: left;*/
-  padding: 0.5em 0.5% 0.5em;
-}
-#searchform #searchsubmit {
+.social-and-search-container {
   display: none;
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -moz-border-radius-topright: 4px;
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 0.35% 0.5% 0.35%;
-  margin-bottom: 0;
-  margin-left: -3px;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid #CCCCCC;
-  background-color: #777;
-  width: 20%;
-  position: relative;
-  float: right;
 }
 /*********************
 NAVIGATION STYLES
@@ -2655,11 +2702,11 @@ FOOTER STYLES
 }
 /* end .footer-links */
 /* left column */
-#footer-column-left {
+#footer-column-center {
   text-align: center;
 }
-#footer-column-left #footer-links-sections,
-#footer-column-left #footer-links-meta {
+#footer-column-center #footer-links-sections,
+#footer-column-center #footer-links-meta {
   display: table;
   margin: 1em auto;
   padding: 0;
@@ -2667,17 +2714,17 @@ FOOTER STYLES
   position: relative;
   z-index: 99;
 }
-#footer-column-left ul {
+#footer-column-center ul {
   width: 100%;
 }
-#footer-column-left ul li {
+#footer-column-center ul li {
   display: inline;
   list-style: none;
 }
-#footer-column-left ul li a {
+#footer-column-center ul li a {
   display: inline;
 }
-#footer-column-left .footer-social-container {
+#footer-column-center .footer-social-container {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 700;
@@ -2697,17 +2744,17 @@ FOOTER STYLES
   bottom: 0.85em;
   position: relative;
 }
-#footer-column-left .footer-social-container a {
+#footer-column-center .footer-social-container a {
   text-decoration: none;
 }
-#footer-column-left .footer-social-container .footer-social {
+#footer-column-center .footer-social-container .footer-social {
   position: relative;
   top: 0.85em;
   background: black;
   display: inline;
   padding: 0 0.5em;
 }
-#footer-column-left .footer-social-container .footer-social a {
+#footer-column-center .footer-social-container .footer-social a {
   color: #CCCCCC;
 }
 /* end left column */
@@ -2831,9 +2878,39 @@ you can add resource intensive styles.
   WORDPRESS BODY CLASSES
   style a page via class
   ********************/
+  .home .slide-image {
+    float: left;
+    position: relative;
+  }
+  .home #section-box-featured-multimedia,
+  .home #section-box-print,
+  .home #section-box-featured .section-box-title {
+    display: block;
+  }
   /* home page */
   /* blog page */
   /* archive page */
+  .post-type-archive .top-news-article {
+    border-bottom: 1px solid #cccccc;
+    padding: 1em 0;
+  }
+  /* post type archive */
+  /* news article type archive */
+  /* sports article type archive */
+  /* living article type archive */
+  /* ae article type archive */
+  /* opinion article type archive */
+  .post-type-archive-multimedia {
+    background-color: #222222;
+  }
+  .post-type-archive-multimedia #main .article-container {
+    height: 35em;
+  }
+  /* multimedia article type archive */
+  .post-type-archive-slideshow #main .article-container {
+    height: 35em;
+  }
+  /* slideshow article type archive */
   /* date archive page */
   /* replace the number to the corresponding page number */
   /* search page */
@@ -3055,6 +3132,70 @@ you can add resource intensive styles.
   /*********************
   HEADER SYTLES
   *********************/
+  /* SEARCH BOX STYLES */
+  .social-and-search-container {
+    display: block;
+  }
+  #searchform {
+    margin: 2.5em auto 0;
+  }
+  #searchform fieldset {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block;
+  }
+  #searchform .screen-reader-text {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  #searchform #s {
+    /* -webkit-appearance: none;
+  			-webkit-border-radius: 0px;
+  			.rounded-left(4px); */
+  
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 99%;
+    /* position: relative;
+  			float: left;*/
+    padding: 0.5em 0.5% 0.5em;
+  }
+  #searchform #searchsubmit {
+    display: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-topright: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0.35% 0.5% 0.35%;
+    margin-bottom: 0;
+    margin-left: -3px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #CCCCCC;
+    background-color: #777;
+    width: 20%;
+    position: relative;
+    float: right;
+  }
+  .outer-line {
+    margin-bottom: 0;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -3088,7 +3229,7 @@ you can add resource intensive styles.
   }
   .nav li a:hover,
   .nav li a:focus {
-    background-color: #dedede;
+    background-color: #b70000;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
@@ -3128,7 +3269,7 @@ you can add resource intensive styles.
   }
   /* end .nav */
   /* Cancel FlexNav for 768+ */
-  .menu-button {
+  .js .menu-button {
     display: none;
   }
   .js #menu-top-navigation {
@@ -3137,7 +3278,8 @@ you can add resource intensive styles.
   #menu-top-navigation {
     font-weight: 600;
     text-transform: uppercase;
-    background-color: #eee;
+    background-color: #000000;
+    margin: 0;
     /* border-bottom: 1px solid #ccc; */
   
   }
@@ -3155,6 +3297,8 @@ you can add resource intensive styles.
   #menu-top-navigation li a {
     border-bottom: 0;
     margin: 0;
+    background-color: black;
+    padding-top: 0.5em;
     /*
   			you can use hover styles here even though this size
   			has the possibility of being a mobile device.
@@ -3163,7 +3307,8 @@ you can add resource intensive styles.
   }
   #menu-top-navigation li a:hover,
   #menu-top-navigation li a:focus {
-    background-color: #dedede;
+    background-color: #9e1b34;
+    color: black;
   }
   #menu-top-navigation li ul.sub-menu,
   #menu-top-navigation li ul.children {
@@ -3215,6 +3360,10 @@ you can add resource intensive styles.
   *********************/
   .sidebar {
     margin-top: 2.2em;
+  }
+  #sidebar1 {
+    padding-top: 0;
+    border-top: none;
   }
   .widgettitle {
     border-bottom: 1px solid #CCCCCC;

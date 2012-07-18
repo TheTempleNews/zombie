@@ -47,10 +47,8 @@
 								
 											<?php $firstpost = ''; ?>
 								
-											<article id="post-<?php the_ID(); ?>" <?php post_class( 'twelvecol first last clearfix' ); ?> role="article">
+											<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-slideshows-article clearfix' ); ?> role="article">
 											
-												<a href="<?php the_permalink(); ?>" class="article-link" style="display: block;">
-												
 													<?php
 													/* At least one of these options should work. But somethng about Juicebox won't let it work.
 													// Get the slideshow's Juicebox shortcode
@@ -73,9 +71,9 @@
 													
 													 ?>
 			
-													<header>
+													<header class="clearfix">
 														<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-														<h1 class="slideshows-headline slideshows-top-headline headline top-headline"><?php the_title(); ?></h1>
+														<h1 class="slideshows-headline slideshows-top-headline headline top-headline"><a href="<?php the_permalink(); ?>" class="article-link" style="display: block;"><?php the_title(); ?></a></h1>
 														<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
 													</header>
 			
@@ -113,30 +111,34 @@
 												<?php 
 												// this is the second part of the operation that determines first or last class based on column divisions. see above.
 												$k = $style_classes[$style_index++ % $styles_count]; ?>
-		
-												<article id="post-<?php the_ID(); ?>" <?php post_class( 'fourcol clearfix ' . $k ); ?> role="article">
 												
-													<a href="<?php the_permalink(); ?>" class="article-link" style="display: block;">
-
-														<?php if ( has_post_thumbnail() ) : ?>
-															<div class="slideshows-thumbnail-container">
-																<?php the_post_thumbnail('zom-landscape-396'); ?>
-															</div>
-														<?php endif; ?>
-					
-														<header>
-															<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-															<h1 class="slideshows-headline headline"><?php the_title(); ?></h1>
-															<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
-														</header>
-					
-														<section class="slideshows-dek dek">
-															<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
-														</section> <!-- end slideshows-dek -->
+												<div class="article-container fourcol clearfix <?php echo $k ?>">
+		
+													<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 													
-													</a> <!-- end article-link -->
-				
-												</article> <!-- end article -->
+														<a href="<?php the_permalink(); ?>" class="article-link" style="display: block;">
+	
+															<?php if ( has_post_thumbnail() ) : ?>
+																<div class="slideshows-thumbnail-container">
+																	<?php the_post_thumbnail('zom-landscape-396'); ?>
+																</div>
+															<?php endif; ?>
+						
+															<header>
+																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
+																<h2 class="slideshows-headline headline"><?php the_title(); ?></h2>
+																<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
+															</header>
+						
+															<section class="slideshows-dek dek">
+																<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+															</section> <!-- end slideshows-dek -->
+														
+														</a> <!-- end article-link -->
+					
+													</article> <!-- end article -->
+												
+												</div> <!-- end article-container -->
 								
 										<?php } // end non-first posts
 							
@@ -190,9 +192,7 @@
 						
 						<?php if ( is_paged() ){ ?>
 						
-								<?php 
-								// this is the second part of the operation that determines first or last class based on column divisions. see above.
-								$k = $style_classes[$style_index++ % $styles_count]; ?>
+								
 						
 								<div id="slideshows-mgallery" class="mgallery eightcol last clearfix">
 							
@@ -201,28 +201,36 @@
 										<?php // begin the loop again
 								
 										if (have_posts()) : while (have_posts()) : the_post(); ?>
+										
+												<?php 
+												// this is the second part of the operation that determines first or last class based on column divisions. see above.
+												$k = $style_classes[$style_index++ % $styles_count]; ?>
+												
+												<div class="article-container fourcol clearfix <?php echo $k ?>">
 		
-												<article id="post-<?php the_ID(); ?>" <?php post_class( 'fourcol clearfix ' . $k ); ?> role="article">
-				
-													<?php if ( has_post_thumbnail() ) : ?>
-				
-														<div class="slideshows-thumb mgallery-thumb">
-															<?php the_post_thumbnail('zom-landscape-396'); ?>
-														</div>
-				
-													<?php endif; ?>
-				
-													<header>
-														<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-														<h1 class="slideshows-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-														<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc"datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
-													</header>
-				
-													<section class="slideshows-dek dek">
-														<?php get_post_meta($post->ID, 'media_summary', true); ?>
-													</section> <!-- end slideshows-dek -->
-				
-												</article> <!-- end article -->
+													<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
+					
+														<?php if ( has_post_thumbnail() ) : ?>
+					
+															<div class="slideshows-thumb mgallery-thumb">
+																<?php the_post_thumbnail('zom-landscape-396'); ?>
+															</div>
+					
+														<?php endif; ?>
+					
+														<header>
+															<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
+															<h2 class="slideshows-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+															<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc"datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+														</header>
+					
+														<section class="slideshows-dek dek">
+															<?php get_post_meta($post->ID, 'media_summary', true); ?>
+														</section> <!-- end slideshows-dek -->
+					
+													</article> <!-- end article -->
+												
+												</div> <!-- end article-container -->
 							
 										<?php endwhile; // close while_posts() loop but continue past the pagination area to see the real end
 								

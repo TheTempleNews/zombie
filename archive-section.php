@@ -19,7 +19,7 @@
 
 					    ?>
 					    
-<h1 class="archive-main-title" class="first last twelvecol"><?php post_type_archive_title(); ?>
+<h1 class="archive-main-title" class="first last twelvecol"><a href="<?php echo get_post_type_archive_link( $post_type ); ?>"><?php post_type_archive_title(); ?></a>
 							<?php if ( is_post_type_archive() ) : ?>
 								<span class="archive-breadcrumb"><?php
 									if ( is_year() || is_day() || is_month() ) { ?>
@@ -73,7 +73,7 @@
 										<?php endif; ?>
 
 										<header>
-											<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
+											<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
 											<h1 class="headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 											<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 										</header>
@@ -121,9 +121,9 @@
 											<?php endif; ?>
 		
 											<header>
-												<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
+												<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
 												<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 											</header>
 		
 											<section class="dek">
@@ -171,7 +171,21 @@
 
 
 							<aside id="post-type-aside" class="fourcol first">
-						
-							
-						
+								
+								
+								<!-- SECTION FIRST SLIDESHOW -->
+								<!-- <section class="archive-section-box section-box threecol">
+									<h2 class="section-box-title">Most Recent Slideshow</h2>
+								
+										<?php // ttn_display_featured_media('slideshow') ?>
+								
+								</section> <!-- end #section-box-multimedia -->
+								
+								
 							</aside>
+
+
+
+
+
+
