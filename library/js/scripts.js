@@ -40,7 +40,6 @@ jQuery(document).ready(function($) {
     
     /* if is below 481px */
     if (responsive_viewport < 481) {
-		console.log("viewport is smaller than 481");
     
 		flexNav();
 
@@ -48,7 +47,6 @@ jQuery(document).ready(function($) {
     
     /* if is larger than 481px */
     if (responsive_viewport > 481) {
-		console.log("viewport is larger than 481");
         
 		flexNav();
 
@@ -56,7 +54,6 @@ jQuery(document).ready(function($) {
     
     /* if is above 768px */
     if (responsive_viewport > 768) {
-		console.log("viewport is larger than 768");
 	
 		/* show top nav */
 		$('#menu-top-navigation').show();
@@ -67,7 +64,7 @@ jQuery(document).ready(function($) {
         });
 		
 		// masonry.js
-			var $container = $('#inner-content');
+		/*	var $container = $('#inner-content');
 		
 			$container.masonry({
 				// options
@@ -77,7 +74,7 @@ jQuery(document).ready(function($) {
 				columnWidth: function( containerWidth ) {
 					return containerWidth / 10;
 				}
-			});
+			}); */
 
 		
 
@@ -86,7 +83,12 @@ jQuery(document).ready(function($) {
     
     /* off the bat large screen actions */
     if (responsive_viewport > 1030) {
-		console.log("viewport is larger than 1030");
+
+    }
+    
+    /* 300x250 sidebar ad display-related js (see style.less for info) - should load appropriate 300x250 ad js above this size */
+    if (responsive_viewport > 1140) {
+
     }
     
 	
