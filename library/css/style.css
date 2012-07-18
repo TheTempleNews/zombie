@@ -345,7 +345,8 @@ img{margin:0 0 1.5em 0;max-width:100%;}
 img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"]{height:auto;}
 img.size-full,img.size-large{max-width:100%;width:auto;height:auto;}
 .header{background-color:black;}
-#logo{margin:0;width:70%;position:relative;float:left;}#logo img{max-width:100%;margin:0;}
+#logo{position:relative;float:left;width:100%;margin-left:0;margin-right:0;}#logo img{max-width:65%;margin:0;position:relative;top:1em;z-index:999;}
+#logo #site-tagline{margin:0.5em 0;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;color:white;}
 #inner-header{padding-bottom:0.75em;}
 .social-and-search-container{display:none;}
 .nav{border:1px solid #ccc;border-bottom:0;font-family:'Open Sans',sans-serif;text-rendering:optimizelegibility;padding:0;}.nav li{}.nav li a{display:block;text-decoration:none;padding:10px 10px;background-color:#eee;}

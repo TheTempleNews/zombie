@@ -25,7 +25,7 @@
 		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		 <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+SC:400,700,400italic|Open+Sans:300,400,700,600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+SC:400,700,400italic|Open+Sans:300,400,700,600' rel='stylesheet' type='text/css'>
 		
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
@@ -66,35 +66,34 @@
 						
 						<?php endif; */ // end if is NOT handheld (desktop) ?>
 
-						<div id="logo" class="eightcol first">
+						<div id="logo">
 
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss.png" /></a>
-							
-							<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
 							
 							
 							<!-- if you'd like to use the site description you can un-comment it below -->
-							<?php bloginfo('description'); ?>
+							<span id="site-tagline"><?php bloginfo('description'); ?></span>
 							
-							
-							
-						</div>
+						
 						
 						<!-- menu button -->
 						<div class="menu-button icon-reorder last">
 							MENU
 						</div>
 						
-						<div class="social-and-search-container last">
+						<?php //echo bones_wpsearch(); ?>
+						
+						<!-- <div class="social-and-search-container last">
 								
 								<div class="first threecol">
 								
 								</div>
 								
-								<?php //echo bones_wpsearch(); ?>
+								
 				
 						</div> <!-- end social-and-search-container -->
 						
+						</div>
 						
 
 					</div><!-- end #outer-header .wrap -->
