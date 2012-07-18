@@ -653,10 +653,7 @@ HEADER STYLES
 		}
 		
 		#site-tagline {
-			margin: 0.5em 0;
-			font-family: @sans-serif;
-			font-weight: 700;
-			color: white;
+			display: none;
 		}
 	}
 	
@@ -668,6 +665,68 @@ HEADER STYLES
 		display: none;
 	}
 	
+/* SEARCH BOX STYLES */
+	.social-and-search-container {
+		display: block;
+	}
+
+	#searchform {
+		margin: 1.5em auto 1em;
+		width: 100%;
+		
+		fieldset {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: none;
+			display: block;
+		}
+		
+		.screen-reader-text {
+			position:absolute;
+			left:-10000px;
+			top:auto;
+			width:1px;
+			height:1px;
+			overflow:hidden;
+		}
+		
+		#s {
+			-webkit-appearance: none;
+			-webkit-border-radius: 0px;
+			.rounded-left(4px);
+			.rounded(4px);
+			border: 1px solid #CCCCCC;
+			margin-bottom: 0;
+			vertical-align: middle;
+			width: 70%;
+			position: relative;
+			float: left;
+			padding: 0.5em 0.5em;
+			display: inline-block;
+		}
+	
+		
+		#searchsubmit {
+			display: block;
+			-webkit-appearance: none;
+			-webkit-border-radius: 0px;
+			.rounded(4px);
+			padding: 0.5em;
+			margin-bottom: 0;
+			margin-left: -3px;
+			text-align: center;
+			text-shadow: 0 1px 1px rgba(255,255,255,.75);
+			vertical-align: middle;
+			cursor: pointer;
+			border: 1px solid #CCCCCC;
+			background-color: #777;
+			width: 20%;
+			position: relative;
+			float:right;
+		}
+	}
+
 	
 
 	

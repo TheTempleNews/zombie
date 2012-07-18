@@ -81,7 +81,7 @@
 							MENU
 						</div>
 						
-						<?php //echo bones_wpsearch(); ?>
+						<?php echo bones_wpsearch(); ?>
 						
 						<!-- <div class="social-and-search-container last">
 								
