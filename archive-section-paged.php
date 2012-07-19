@@ -53,7 +53,7 @@
 						
 						?>
 												
-						<div id="post-type-loop-main" class="eightcol last">
+						<div id="post-type-loop-main" class="ninecol last">
 				
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -114,6 +114,20 @@
 							
 					
 							</div> <!-- end #post-type-loop-main -->
+							
+							<aside id="post-type-aside" class="threecol first">
+								
+								
+								<!-- SECTION FIRST SLIDESHOW -->
+								<!-- <section class="archive-section-box section-box threecol">
+									<h2 class="section-box-title">Most Recent Slideshow</h2>
+								
+										<?php // ttn_display_featured_media('slideshow') ?>
+								
+								</section> <!-- end #section-box-multimedia -->
+								
+								
+							</aside>
 
 						
     				</div> <!-- end #main -->
