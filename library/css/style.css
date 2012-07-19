@@ -284,7 +284,7 @@ ul.icons li .icon-large:before,ul.icons li .icon-large:before{vertical-align:ini
 .icon-user-md:before{content:"\f200";}
 body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-size:87.5%;line-height:1.5;color:#565656;}
 #outer-header,#outer-footer{padding:0 auto;}
-.outer-line{border-bottom:.25em solid #b70000;}
+.outer-line{border-bottom:.25em solid #cc0000;}
 .hoz-rule-third{width:33.3333333%;border-bottom:1px solid #cccccc;padding:0;margin:1em auto;}
 .ttn-network-banner,.ad-container{border-bottom:1px solid #cccccc;border-top:1px solid #cccccc;padding:0.5em 0;}
 .ad-container{margin-bottom:2em;}

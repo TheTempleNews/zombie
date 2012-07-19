@@ -34,38 +34,48 @@
 												
 												if ($featured_video->have_posts()) : while ($featured_video->have_posts()) : $featured_video->the_post();
 												
-												// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
-												// Get the video URL and put it in the $video variable
-												$videoID = get_post_meta($post->ID, 'video_link', true);
-												// Check if there is in fact a video URL
-												if ($videoID) {
-													echo '<div class="video-container clearfix">';
-													// Echo the embed code via oEmbed
-													echo wp_oembed_get( $videoID ); 
-													echo '</div>';
-												} ?>
-		
-												<header class="clearfix">
-													<h3 class="multimedia-headline multimedia-top-headline headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-												</header>
-		
-												<section class="multimedia-summary media-summary clearfix">
-													<?php echo get_post_meta($post->ID, 'media_summary', true); ?>
-												</section> <!-- end multimedia-dek -->
+													// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
+													// Get the video URL and put it in the $video variable
+													$videoID = get_post_meta($post->ID, 'video_link', true);
+													// Check if there is in fact a video URL
+													if ($videoID) {
+														echo '<div class="video-container clearfix">';
+														// Echo the embed code via oEmbed
+														echo wp_oembed_get( $videoID ); 
+														echo '</div>';
+													} ?>
 												
-												<?php endwhile; endif; ?>
+												<?php endwhile; endif; wp_reset_postdata(); ?>
 		
 											</article> <!-- end article -->
 							
 							</section> <!-- end #section-box-multimedia -->
 					
-							<!-- PRINT EDITION 
-							<section id="section-box-print" class="section-box threecol last">
-								<h2 class="section-box-title">Print Edition</h2>
+							<!-- PRINT EDITION and BLOGROLL -->
+							<section id="section-box-print-blogroll" class="section-box sixcol last">
+								
+								<div id="links-print-edition" class="links-box sixcol first">
+								
+									<?php
+									$print_thumb = new WP_Query('post_type=print_edition&posts_per_page=1');
+									if ($print_thumb->have_posts()) : while ($print_thumb->have_posts()) : $print_thumb->the_post();
+									?>
+
+									<a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives"><?php the_post_thumbnail('ttn-print-thumb'); ?></a>
+								
+									<?php endwhile; endif; wp_reset_postdata(); ?>
+									
+									<span><a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives">Read the Print Edition here!</a></span>
+								
+								</div>
+								
+								<div id="links-top" class="links-box sixcol last">
+								
+									<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
+								
+								</div>
 							
-									<!-- print edition stuff goes here -->
-							
-							<!-- </section> <!-- end #section-box-print -->
+							</section> <!-- end #section-box-print -->
 
 						</div> <!-- end #media-container -->
 
