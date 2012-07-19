@@ -608,6 +608,34 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER SYTLES
 *********************/
+#top-header #logo {
+  position: relative;
+  top: 0.8em;
+  z-index: 999;
+}
+#top-header #tagline-social-container {
+  display: inline-block;
+  margin-left: 1em;
+  position: relative;
+  top: -0.4em;
+}
+#top-header #tagline-social-container .header-social {
+  /* this is .h1 styling but ie.less won't compile because it doesn't understand that class reference */
+
+  text-rendering: optimizelegibility;
+  font-weight: 700;
+  font-size: 3.000em;
+  line-height: 0.7em;
+}
+#top-header #tagline-social-container .header-social a {
+  color: #666666;
+}
+#top-header #tagline-social-container #site-tagline {
+  margin: 0.5em 0;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: white;
+}
 /* SEARCH BOX STYLES */
 .social-and-search-container {
   display: block;

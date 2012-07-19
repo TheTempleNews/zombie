@@ -192,8 +192,40 @@ HEADER SYTLES
 *********************/
 
 .header {}
-
-	#logo {}
+	
+	#top-header {
+		#logo {
+			position: relative;
+			top: 0.8em;
+			z-index: 999;
+		}
+		
+		#tagline-social-container {
+			display: inline-block;
+			margin-left: 1em;
+			position: relative;
+			top: -0.4em;
+			
+			.header-social {
+				/* this is .h1 styling but ie.less won't compile because it doesn't understand that class reference */
+				text-rendering : optimizelegibility;
+				font-weight: 700;
+				font-size: 3.000em; 
+				line-height: 0.7em; 
+				
+				a {
+					color: #666666;
+				}
+			}
+		
+			#site-tagline {
+				margin: 0.5em 0;
+				font-family: @sans-serif;
+				font-weight: 700;
+				color: white;
+			}
+		}
+	}
 
 /* SEARCH BOX STYLES */
 	.social-and-search-container {

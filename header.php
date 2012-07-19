@@ -66,34 +66,34 @@
 						
 						<?php endif; */ // end if is NOT handheld (desktop) ?>
 
-						<div id="logo">
+						<div id="top-header">
 
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
 							
 							
-							<!-- if you'd like to use the site description you can un-comment it below -->
-							<span id="site-tagline"><?php bloginfo('description'); ?></span>
+							<div id="tagline-social-container">
 							
-						
-						
-						<!-- menu button -->
-						<div class="menu-button icon-reorder last">
-							MENU
-						</div>
-						
-						<?php echo bones_wpsearch(); ?>
-						
-						<!-- <div class="social-and-search-container last">
+								<div class="header-social clearfix">
 								
-								<div class="first threecol">
+									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
+									<a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="icon-twitter"></i></a>
+									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
 								
 								</div>
 								
-								
-				
-						</div> <!-- end social-and-search-container -->
+								<!-- if you'd like to use the site description you can un-comment it below -->
+								<span id="site-tagline"><?php bloginfo('description'); ?></span>
+							</div>
 						
-						</div>
+						
+							<!-- menu button -->
+							<div class="menu-button icon-reorder last">
+								MENU
+							</div>
+							
+							<?php echo bones_wpsearch(); ?>
+						
+						</div> <!-- end #top-header -->
 						
 
 					</div><!-- end #outer-header .wrap -->
