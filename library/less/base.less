@@ -31,7 +31,7 @@ body {
 
 /* a horizontal rule appearing in both the header and footer */
 .outer-line {
-	border-bottom: .25em solid #cc0000;
+	border-bottom: .25em solid @thatred;
 }
 
 /* a horizontal @niceborders rule that spans a third of its container's width = 2em + 1px */
@@ -63,6 +63,10 @@ ADVERTS AND SOCIAL MEDIA
 	text-align: center;
 	font-family: @sans-serif;
 	font-weight: 700;
+}
+
+#ad-topnavbar {
+	margin-bottom: 2em;
 }
 
 .rectangle-ad-container {
@@ -129,7 +133,7 @@ style a page via class
 		font-weight: 600;
 
 		a, a:visited {
-			color: @tucherry;
+			color: @thatred;
 			display: block;
 		}
 	}
@@ -455,7 +459,7 @@ style a page via class
 						
 						&:hover,
 						&:active {
-							color: @tucherry;
+							color: @thatred;
 						}
 					}
 					
@@ -476,6 +480,41 @@ style a page via class
 	}
 	.postid-1 {}                               /* individual post page by id (i.e. body.postid-73) */
 	.single-paged-1 {}                         /* individual paged single (i.e. body.single-paged-3) */
+	.single-print_edition,
+	.page-id-34727 {
+		font-family: @sans-serif;
+		
+		#print-edition-title,
+		.hentry h2, .hentry .h2,
+		.hentry h3, .hentry .h3 {
+			font-family: @sans-serif;
+		}
+		
+		#print-edition-title {
+			font-size: 3em;
+		}
+		
+		.vol-years,
+		.issues-semester {
+			font-weight: 300;
+			font-size: 75%;
+		}
+	
+		aside#print-edition-aside li.pagenav {
+			font-size: 1.5em;
+		}
+		
+		.pagenav {
+			list-style: none;
+		
+			ul {
+				list-style: none;
+				margin: 0;
+				font-size: 75%;
+				
+			}
+		}
+	}
 .attachment {}                                 /* attatchment page */
 	.attachmentid-1 {}                         /* individual attatchment page (i.e. body.attachmentid-763) */
 	.attachment-mime-type {}                   /* style mime type pages */

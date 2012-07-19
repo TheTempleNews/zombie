@@ -9,11 +9,11 @@
 						<div id="footer-column-left" class="fourcol first clearfix">
 						
 							<div id="broadcecilad" class="ttn-network-banner">
-										<a href="http://broadandcecil.temple-news.com"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo.png" alt="broadcecil-logo" /></a>
+										<a href="http://broadandcecil.temple-news.com"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-black.png" alt="broadcecil-logo" /></a>
 							</div>
 							
 							<div id="thecherryad" class="ttn-network-banner">
-										<a><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo.png" alt="thecherry-logo" /></a>
+										<a><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-black.png" alt="thecherry-logo" /></a>
 							</div>
 							
 														
@@ -23,7 +23,7 @@
 
 						<div id="footer-column-center" class="fourcol clearfix">
 							
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500.png" /></a>
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
 							
 							<nav id="footer-links-sections" class="footer-links" role="navigation">
 								
@@ -62,7 +62,7 @@
 
 						<div id="footer-column-right" class="fourcol last clearfix">
 							
-	    					<p class="footer-about">The Temple News has been the paper of record for the Temple University community since it first printed as Temple University Weekly on Sept. 19, 1921. The award-winning student publication, editorially independent of Temple, now publishes every Tuesday. The Temple News distributes 8,000 printed copies, free of charge, to the university’s four primary locations in the Delaware Valley.</p>
+	    					<p class="footer-about">The Temple News has been the paper of record for the Temple University community since it first printed as Temple University Weekly on Sept. 19, 1921. The award-winning student publication, editorially independent of Temple, now publishes every Tuesday and daily online. The Temple News distributes 5,000 printed copies, free of charge, to the university’s primary locations in the Delaware Valley.</p>
 	
 							<p class="attribution">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.<br />
 								Powered by <a href="http://www.wordpress.org/" rel="nofollow">WordPress</a>.<br />

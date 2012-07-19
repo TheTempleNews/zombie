@@ -20,7 +20,14 @@
 				<?php if ( !is_handheld() ) : ?>
 				<div class="ad-container fourcol last clearfix">
 					<div class="ad rectangle-ad twelvecol first last">
-						<!-- put a dumb ad here -->&nbsp;
+						
+						<!-- NSSidebarRect -->
+						<div id='div-gpt-ad-1342714724220-4' style='width:300px; height:100px; margin:0px auto;'>
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-4'); });
+						</script>
+						</div>
+						
 					</div>
 				</div>
 				<?php endif; ?>

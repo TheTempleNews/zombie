@@ -31,7 +31,37 @@
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
 		
-		<!-- drop Google Analytics Here -->
+		<!-- advertisement fnord -->
+		<script type='text/javascript'>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + 
+		'//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+		})();
+		</script>
+		
+		<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.defineSlot('/4602070/NSLeaderboard', [728, 90], 'div-gpt-ad-1342714724220-0').addService(googletag.pubads());
+		googletag.defineSlot('/4602070/NSNewsBoxL', [300, 250], 'div-gpt-ad-1342714724220-1').addService(googletag.pubads());
+		googletag.defineSlot('/4602070/NSOpinionBar', [728, 90], 'div-gpt-ad-1342714724220-2').addService(googletag.pubads());
+		googletag.defineSlot('/4602070/NSSideBarMidBox', [300, 250], 'div-gpt-ad-1342714724220-3').addService(googletag.pubads());
+		googletag.defineSlot('/4602070/NSSidebarRect', [300, 100], 'div-gpt-ad-1342714724220-4').addService(googletag.pubads());
+		googletag.defineSlot('/4602070/NSSportsBoxR', [300, 250], 'div-gpt-ad-1342714724220-5').addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+		});
+		</script>
+		<!-- end advertisement -->
+		
+		<!-- drop Google Analytics Here -->		
 		<!-- end analytics -->
 		
 	</head>
@@ -47,24 +77,22 @@
 					<div class="wrap clearfix">
 						
 						<!-- DESKTOP-ONLY ADS -->
-						<?php /* if ( !is_handheld() ) : ?>
-						<div id="ad-topnavbar" class="ad ad-container twelvecol first last">
+						<?php if ( !is_handheld() ) : ?>
+						<div id="ad-topnavbar" class="ad">
 
-						    <!-- THIS IS AN ADVERTISEMENT FNORD -->
-
-						           <!-- Leaderboard -->
-							<div style="width: 728px; height: 90px; margin: auto;" id="div-gpt-ad-1334976460364-0">
-								<script type="text/javascript">
-									googletag.cmd.push(function() { googletag.display('div-gpt-ad-1334976460364-0'); });
-								</script>
-							<iframe width="728" scrolling="no" height="90" frameborder="0" id="google_ads_iframe_/4602070/Leaderboard_0" name="google_ads_iframe_/4602070/Leaderboard_0" marginwidth="0" marginheight="0" style="max-width: 100%; border: 0px none;"></iframe>
-							<iframe width="0" scrolling="no" height="0" frameborder="0" id="google_ads_iframe_/4602070/Leaderboard_0__hidden__" name="google_ads_iframe_/4602070/Leaderboard_0__hidden__" marginwidth="0" marginheight="0" style="border: 0px none; visibility: hidden; display: none;"></iframe></div>
-
-						      <p>ADVERTISEMENT</p>  
+						<!-- THIS IS AN ADVERTISEMENT FNORD -->
+						<!-- NSLeaderboard -->
+						<div id='div-gpt-ad-1342714724220-0' style='width:728px; height:90px; margin:0px auto;'>
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-0'); });
+						</script>
+						</div>
+						
+						<!-- <p>ADVERTISEMENT</p> -->
 
 						</div> <!-- end #ad-topnavbar -->
 						
-						<?php endif; */ // end if is NOT handheld (desktop) ?>
+						<?php endif; // end if is NOT handheld (desktop) ?>
 
 						<div id="top-header">
 

@@ -98,12 +98,12 @@
 							<div class="ad-container rectangle-ad-container twelvecol first last clearfix">
 								<div class="ad adsense rectangle-ad">
 									
-									<!-- MediumRectangle -->
-<div id='div-gpt-ad-1334976460364-1' style='width:300px; height:250px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1334976460364-1'); });
-</script>
-</div>	
+									<!-- NSNewsBoxL -->
+									<div id='div-gpt-ad-1342714724220-1' style='width:300px; height:250px; margin:0px auto;'>
+									<script type='text/javascript'>
+									googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-1'); });
+									</script>
+									</div>	
 	
 								</div>
 								
@@ -140,12 +140,12 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1334976460364-1');
 							<div class="ad-container rectangle-ad-container twelvecol first last">
 								<div class="ad rectangle-ad adsense">
 									
-									<!-- MediumRectangle2 -->
-<div id='div-gpt-ad-1334976460364-2' style='width:300px; height:250px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1334976460364-2'); });
-</script>
-</div>	
+									<!-- NSSportsBoxR -->
+									<div id='div-gpt-ad-1342714724220-5' style='width:300px; height:250px; margin:0px auto;'>
+									<script type='text/javascript'>
+									googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-5'); });
+									</script>
+									</div>
 									
 								</div>
 								
@@ -170,15 +170,16 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1334976460364-2');
 
 						<!-- DESKTOP-ONLY ADS -->
 						<?php if ( !is_handheld() ) : ?>
-						<div class="advert-container sixcol last clearfix">
-							<div class="advert banner-ad twelvecol first last">
-								<!-- put a dumb ad here -->
+						<div class="ad-container twelvecol first last clearfix">
+							<div class="advert banner-ad">
+							
+							<!-- NSOpinionBar -->
+							<div id='div-gpt-ad-1342714724220-2' style='width:728px; height:90px; margin:0px auto;'>
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-2'); });
+							</script>
 							</div>
-						</div>
-
-						<div class="advert-container sixcol first clearfix">
-							<div class="advert banner-ad twelvecol first last">
-								<!-- put a dumb ad here -->
+							
 							</div>
 						</div>
 						<?php endif; ?>

@@ -8,7 +8,7 @@
 						
 						<h1 class="single-section-name" class="first last twelvecol">Multimedia</h1>
 						
-							<section id="multimedia-mgallery" class="mgallery eightcol last clearfix">
+							<section id="multimedia-mgallery" class="mgallery ninecol last clearfix">
 							
 								<article id="multimedia-mgallery-top" class="multimedia-article mgallery-top-article twelvecol first last clearfix">
 								
@@ -69,7 +69,7 @@
 							
 							</section> <!-- end section#multimedia-mgallery -->
 							
-							<div id="multimedia-sidebar" class="fourcol first clearfix">
+							<div id="multimedia-sidebar" class="threecol first clearfix">
 							
 								<!-- nav to be added here at a later date. for now we leave this empty -->
 							

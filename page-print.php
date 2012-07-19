@@ -23,13 +23,13 @@
 						$obj = $wp_post_types[$post_type];
 						$post_type_name = $obj->labels->singular_name; 
 						
-						$vol_years = '';
 						
-						if ( get_post_meta($post->ID, 'print_vol', true) == 90 ) {
-							$vol_years = 2011 . "&ndash;" . 2012;
-						} elseif ( get_post_meta($post->ID, 'print_vol', true) == 91 ) {
-							$vol_years = 2012 . "&ndash;" . 2013;
-						}
+						// the query to pull in the most recent issue page to this static page
+						$query = new WP_Query( array(
+								'post_type'      => 'print_edition',
+								'posts_per_page' => 1
+							)
+						);
 						
 						?>
 			
@@ -39,18 +39,26 @@
 			
 					<div id="main" class="eightcol first clearfix" role="main">
 						
-						<h1 class="single-section-name" class="first last twelvecol"><?php echo $post_type_name; ?></h1>
+						<h1 class="single-section-name" class="first last twelvecol">Print Edition</h1>
 						
 						<div id="print-edition-main" class="ninecol last">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+							
+								<?php $vol_years = '';
+						
+								if ( get_post_meta($post->ID, 'print_vol', true) == 90 ) {
+									$vol_years = 2011 . "&ndash;" . 2012;
+								} elseif ( get_post_meta($post->ID, 'print_vol', true) == 91 ) {
+									$vol_years = 2012 . "&ndash;" . 2013;
+								} ?>
 						
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							
 									<header class="article-header">
 										
 										<h2 class="print-edition-title">
-											Volume <?php echo get_post_meta($post->ID, 'print_vol', true); ?><span class="vol-years"><?php echo " / " . $vol_years; ?></span><br />
+											Volume <?php echo get_post_meta($post->ID, 'print_vol', true); ?><span class="vol-years"> / <?php echo $vol_years; ?></span><br />
 											Issues <?php echo get_post_meta($post->ID, 'print_issueno', true); if ( get_post_meta($post->ID, 'print_semester', true) ) { ?><span class="issues-semester"> / <?php get_post_meta($post->ID, 'print_semester', true) ?></span><?php } //don't remove this! ?>
 										</h2>
 							

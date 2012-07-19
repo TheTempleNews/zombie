@@ -289,6 +289,7 @@ body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-s
 .ttn-network-banner,.ad-container{border-bottom:1px solid #cccccc;border-top:1px solid #cccccc;padding:0.5em 0;}
 .ad-container{margin-bottom:2em;}
 .ad{text-align:center;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
+#ad-topnavbar{margin-bottom:2em;}
 .rectangle-ad-container{border-bottom:none;border-top:none;}
 .sharexy{position:relative;float:right;margin:0;padding:0;}
 .home .section-box{margin-bottom:2em;}
@@ -330,6 +331,11 @@ body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-s
 .single-multimedia #main .article-container .multimedia-dek{font-style:normal;}
 .single-multimedia #main .article-container a{display:block;color:white;}.single-multimedia #main .article-container a:hover,.single-multimedia #main .article-container a:active{color:#9e1b34;}
 .single-multimedia #main #post-type-loop-top{height:auto;}
+.single-print_edition,.page-id-34727{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}.single-print_edition #print-edition-title,.page-id-34727 #print-edition-title,.single-print_edition .hentry h2,.page-id-34727 .hentry h2,.single-print_edition .hentry .h2,.page-id-34727 .hentry .h2,.single-print_edition .hentry h3,.page-id-34727 .hentry h3,.single-print_edition .hentry .h3,.page-id-34727 .hentry .h3{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
+.single-print_edition #print-edition-title,.page-id-34727 #print-edition-title{font-size:3em;}
+.single-print_edition .vol-years,.page-id-34727 .vol-years,.single-print_edition .issues-semester,.page-id-34727 .issues-semester{font-weight:300;font-size:75%;}
+.single-print_edition aside#print-edition-aside li.pagenav,.page-id-34727 aside#print-edition-aside li.pagenav{font-size:1.5em;}
+.single-print_edition .pagenav,.page-id-34727 .pagenav{list-style:none;}.single-print_edition .pagenav ul,.page-id-34727 .pagenav ul{list-style:none;margin:0;font-size:75%;}
 #container{border:1em solid black;}
 .wrap{width:90%;margin:0 auto;border:0;}
 a,a:visited{color:#b70000;text-decoration:none;}a:hover,a:visited:hover,a:focus,a:visited:focus{color:#CCCCCC;}
