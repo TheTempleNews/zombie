@@ -61,7 +61,7 @@
 									if ($print_thumb->have_posts()) : while ($print_thumb->have_posts()) : $print_thumb->the_post();
 									?>
 
-									<a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives"><?php the_post_thumbnail('ttn-print-thumb'); ?></a>
+										<a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives"><?php the_post_thumbnail('ttn-print-thumb'); ?></a>
 								
 									<?php endwhile; endif; wp_reset_postdata(); ?>
 									

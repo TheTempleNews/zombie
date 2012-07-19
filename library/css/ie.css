@@ -609,15 +609,18 @@ LAYOUT & GRID STYLES
 HEADER SYTLES
 *********************/
 #top-header #logo {
-  position: relative;
-  top: 0.8em;
-  z-index: 999;
+  /*
+			the logo above the red line is too cluttered.
+			position: relative;
+			top: 0.8em;
+			z-index: 999; */
+
 }
 #top-header #tagline-social-container {
   display: inline-block;
   margin-left: 1em;
   position: relative;
-  top: -0.4em;
+  top: -0.8em;
 }
 #top-header #tagline-social-container .header-social {
   /* this is .h1 styling but ie.less won't compile because it doesn't understand that class reference */
@@ -640,7 +643,7 @@ HEADER SYTLES
 /* SEARCH BOX STYLES */
 #searchform {
   float: right;
-  margin: 0;
+  margin: 0 0 1em 0;
   position: relative;
   width: 33%;
 }
