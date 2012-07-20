@@ -360,8 +360,21 @@ style a page via class
 }
 .home #section-box-featured-multimedia,
 .home #section-box-print,
-.home #section-box-featured .section-box-title {
+.home #section-box-featured .section-box-title,
+.home #section-box-print-blogroll {
   display: block;
+}
+.home #links-print-edition span {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+.home #menu-top-links {
+  list-style: none;
+  margin: 0;
+  text-align: right;
+}
+.home #menu-top-links li {
+  width: 100%;
 }
 /* home page */
 /* blog page */
@@ -874,6 +887,30 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+.ad,
+.ad-container,
+#ad-topnavbar,
+.rectangle-ad-container {
+  display: block;
+}
+.ad-container {
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  padding: 0.5em 0;
+  margin-bottom: 2em;
+}
+.ad {
+  text-align: center;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+#ad-topnavbar {
+  margin-bottom: 2em;
+}
+.rectangle-ad-container {
+  border-bottom: none;
+  border-top: none;
+}
 /* 
 you can call the larger styles if you want, but there's really no need 
 */

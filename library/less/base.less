@@ -47,31 +47,29 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-.ttn-network-banner,
-	.ad-container {
-		border-bottom: @niceborders;
-		border-top: @niceborders;
-		padding: 0.5em 0;
-	}
+.ttn-network-banner {
+	border-bottom: @niceborders;
+	border-top: @niceborders;
+	padding: 0.5em 0;
+	
+}
+
 	
 .ad-container {
-	margin-bottom: 2em;
+	display: none;
 }
 
 
 .ad {
-	text-align: center;
-	font-family: @sans-serif;
-	font-weight: 700;
+	display: none;
 }
 
 #ad-topnavbar {
-	margin-bottom: 2em;
+	display: none;
 }
 
 .rectangle-ad-container {
-	border-bottom: none;
-	border-top: none;
+display: none;
 }
 
 /*.rectangle-ad {
@@ -138,6 +136,21 @@ style a page via class
 		}
 	}
 	
+	#links-print-edition span {
+		font-family: @sans-serif;
+		font-weight: 700;
+	}
+	
+	#menu-top-links {
+		list-style: none;
+		margin: 0;
+		text-align: right;
+		
+		li {
+			width: 100%;
+		}
+	}
+	
 	article {
 		margin-bottom: 1.5em;
 		
@@ -173,7 +186,8 @@ style a page via class
 	
 	#section-box-featured-multimedia,
 	#section-box-print,
-	#section-box-featured .section-box-title {
+	#section-box-featured .section-box-title,
+	#section-box-print-blogroll {
 		display: none;
 	}
 	
@@ -1618,15 +1632,23 @@ FOOTER STYLES
 		font-size: 85.7%;
 	}
 	
+	label {
+		font-weight: normal;
+	}
+	
 	a:hover,
 	a:focus {
 		color: white;
 	}
+	
+	.ttn-network-banner {
+		border: none;
+	}
 }
 	
 	#outer-footer {
-		border-top: .25em solid @tucherry;
-		border-bottom: .25em solid @tucherry;
+		border-top: .25em solid @thatred;
+		border-bottom: .25em solid @thatred;
 	}
 	
 	#inner-footer {

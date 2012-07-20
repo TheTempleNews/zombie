@@ -65,7 +65,7 @@
 								
 									<?php endwhile; endif; wp_reset_postdata(); ?>
 									
-									<span><a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives">Read the Print Edition here!</a></span>
+									<span><a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives">Read&nbsp;the&nbsp;Print&nbsp;Edition&nbsp;here!</a></span>
 								
 								</div>
 								
@@ -88,7 +88,7 @@
 									<?php the_zombie_loop(news); ?>
 									
 									<div id="broadcecilad" class="ttn-network-banner">
-										<a><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo.png" alt="broadcecil-logo" /></a>
+										<a href="http://broadandcecil.temple-news.com/" title="Broad & Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo.png" alt="broadcecil-logo" /></a>
 									</div>
 									
 							</section> <!-- end #section-box-news -->
@@ -130,7 +130,7 @@
 									<?php the_zombie_loop(sports); ?>
 									
 									<div id="thecherryad" class="ttn-network-banner">
-										<a><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo.png" alt="thecherry-logo" /></a>
+										<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo.png" alt="thecherry-logo" /></a>
 									</div>
 									
 							</section> <!-- end #section-box-sports -->
@@ -187,7 +187,7 @@
 
 
 						<!-- OPINION SECTION -->
-						<section id="section-box-opinion" class="section-container section-box twelvecol first last clearfix">
+						<section id="section-box-opinion" class="section-container section-box sixcol first clearfix">
 							
 							<?php the_zombie_loop(opinion); ?>
 							
@@ -196,18 +196,23 @@
 						
 						
 						
-						<?php if ( !is_handheld() ) : ?>
-						<div class="advert-container twelvecol first last clearfix">
-							<div class="ad rectangle-ad sixcol first">
-								<!-- put a 500x100 ad here -->&nbsp;
-							</div>
 						
-							<div class="ad rectangle-ad sixcol first">
-								<!-- put a 500x100 ad here -->&nbsp;
-							</div>
-						</div>
-						<?php endif; ?>
+						<!-- TOP STUFF (PLACEHOLDER) -->
+						<div class="section-container section-box sixcol last clearfix">
+						<?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
 
+						<?php dynamic_sidebar( 'sidebar2' ); ?>
+
+						<?php else : ?>
+
+						<!-- This content shows up if there are no widgets defined in the backend.
+						
+						<div class="alert help">
+							<p>Please activate some Widgets.</p>
+						</div> -->
+
+						<?php endif; ?>
+						</div>
 
 
 						<!-- MULTIMEDIA SECTION -->

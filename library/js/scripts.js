@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
-	
+	$(".fittext").fitText();
  
 }); /* end of as page load scripts */
 
