@@ -4,10 +4,11 @@
 			
 				<div id="inner-content" class="wrap clearfix">
 					
-						<div id="media-container" class="section-container first last clearfix" role="featured">
+						<div id="media-container" class="section-container first sixcol clearfix" role="featured">
+						<div id="media-contained">
 							
 							<!-- FEATURED CONTENT -->
-							<section id="section-box-featured" class="section-box sixcol first">
+							<section id="section-box-featured" class="section-box clearfix">
 
 								<h2 class="section-box-title">Featured Content</h2>
 
@@ -17,7 +18,7 @@
 							</section> <!-- end #section-box-featured -->
 							
 							<!-- FEATURED MULTIMEDIA -->
-							<section id="section-box-featured-multimedia" class="section-box sixcol last">
+							<section id="section-box-featured-multimedia" class="section-box clearfix">
 								<h2 class="section-box-title">Featured Multimedia</h2>
 							
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
@@ -52,7 +53,7 @@
 							</section> <!-- end #section-box-multimedia -->
 					
 							<!-- PRINT EDITION and BLOGROLL -->
-							<section id="section-box-print-blogroll" class="section-box sixcol last">
+							<section id="section-box-print-blogroll" class="section-box clearfix">
 								
 								<div id="links-print-edition" class="links-box sixcol first">
 								
@@ -75,27 +76,11 @@
 								
 								</div>
 							
-							</section> <!-- end #section-box-print -->
-
-						</div> <!-- end #media-container -->
-
-
-						<div class="sixcol first clearfix">
-						
-							<!-- NEWS SECTION -->
-							<section id="section-box-news" class="section-container section-box twelvecol first last clearfix">
-									
-									<?php the_zombie_loop(news); ?>
-									
-									<div id="broadcecilad" class="ttn-network-banner">
-										<a href="http://broadandcecil.temple-news.com/" title="Broad & Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo.png" alt="broadcecil-logo" /></a>
-									</div>
-									
-							</section> <!-- end #section-box-news -->
+							</section> <!-- end #section-box-print-blogroll -->
 							
 							<!-- DESKTOP-ONLY ADS -->
 							<?php if ( !is_handheld() ) : ?>
-							<div class="ad-container rectangle-ad-container twelvecol first last clearfix">
+							<div class="ad-container rectangle-ad-container clearfix">
 								<div class="ad adsense rectangle-ad">
 									
 									<!-- NSNewsBoxL -->
@@ -109,32 +94,24 @@
 								
 							</div>
 							<?php endif; ?>
-							
-							<!-- LIVING SECTION -->
-							<section id="section-box-living" class="section-container section-box twelvecol first last clearfix">
-								
-								<?php the_zombie_loop(living); ?>
-								
-							</section> <!-- end #section-box-living -->
-							
-							
-						
-						</div> <!-- news and stff container -->
+
+						</div>
+						</div> <!-- end #media-container -->
 
 
-						<div class="sixcol last clearfix">
+						<div id="column-news-sports" class="sixcol last clearfix">
 						
-							<!-- SPORTS SECTION -->
-							<section id="section-box-sports" class="section-container section-box twelvecol first last clearfix">
-								
-									<?php the_zombie_loop(sports); ?>
+							<!-- NEWS SECTION -->
+							<section id="section-box-news" class="section-container section-box clearfix">
 									
-									<div id="thecherryad" class="ttn-network-banner">
-										<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo.png" alt="thecherry-logo" /></a>
+									<?php the_zombie_loop(news); ?>
+									
+									<div id="broadcecilad" class="ttn-network-banner">
+										<a href="http://broadandcecil.temple-news.com/" title="Broad & Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo.png" alt="broadcecil-logo" /></a>
 									</div>
 									
-							</section> <!-- end #section-box-sports -->
-	
+							</section> <!-- end #section-box-news -->
+							
 							<!-- DESKTOP-ONLY ADS -->
 							<?php if ( !is_handheld() ) : ?>
 							<div class="ad-container rectangle-ad-container twelvecol first last">
@@ -152,21 +129,40 @@
 							</div>
 							<?php endif; ?>
 							
-							<!-- A&E SECTION -->
-							<section id="section-box-ae" class="section-container section-box twelvecol first last clearfix">
+							<!-- SPORTS SECTION -->
+							<section id="section-box-sports" class="section-container section-box twelvecol first last clearfix">
 								
-								<?php the_zombie_loop(ae); ?>
-								
-							</section> <!-- end #section-box-ae -->
-
-						</div> <!-- sports and stuff -->
-
+									<?php the_zombie_loop(sports); ?>
+									
+									<div id="thecherryad" class="ttn-network-banner">
+										<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo.png" alt="thecherry-logo" /></a>
+									</div>
+									
+							</section> <!-- end #section-box-sports -->
+	
+							
+							
+						</div> <!-- end #column-news-sports -->
+							
+							
+							
+						<!-- LIVING SECTION -->
+						<section id="section-box-living" class="section-container section-box sixcol first clearfix">
+							
+							<?php the_zombie_loop(living); ?>
+							
+						</section> <!-- end #section-box-living -->
+							
+							
 						
 
-
-
+						<!-- A&E SECTION -->
+						<section id="section-box-ae" class="section-container section-box sixcol first clearfix">
+							
+							<?php the_zombie_loop(ae); ?>
+							
+						</section> <!-- end #section-box-ae -->
 						
-
 
 						<!-- DESKTOP-ONLY ADS -->
 						<?php if ( !is_handheld() ) : ?>
