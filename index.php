@@ -3,103 +3,8 @@
 			<div id="content">
 			
 				<div id="inner-content" class="wrap clearfix">
-					
-						<div id="media-container" class="section-container first sixcol clearfix" role="featured">
-						<div id="media-contained">
-							
-							<!-- FEATURED CONTENT -->
-							<section id="section-box-featured" class="section-box clearfix">
-
-								<h2 class="section-box-title">Featured Content</h2>
-
-									<!-- featured content stuff goes here -->
-									<?php ttx_slider(); ?>
-
-							</section> <!-- end #section-box-featured -->
-							
-							<!-- FEATURED MULTIMEDIA -->
-							<section id="section-box-featured-multimedia" class="section-box clearfix">
-								<h2 class="section-box-title">Featured Multimedia</h2>
-							
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
-									
-												
-												
-												<?php
-												$featured_video = new WP_Query( array(
-														'cat' => 3,
-														'post_type' => 'multimedia',
-														'posts_per_page' => 1
-													)
-												);
-												
-												if ($featured_video->have_posts()) : while ($featured_video->have_posts()) : $featured_video->the_post();
-												
-													// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
-													// Get the video URL and put it in the $video variable
-													$videoID = get_post_meta($post->ID, 'video_link', true);
-													// Check if there is in fact a video URL
-													if ($videoID) {
-														echo '<div class="video-container clearfix">';
-														// Echo the embed code via oEmbed
-														echo wp_oembed_get( $videoID ); 
-														echo '</div>';
-													} ?>
-												
-												<?php endwhile; endif; wp_reset_postdata(); ?>
-		
-											</article> <!-- end article -->
-							
-							</section> <!-- end #section-box-multimedia -->
-					
-							<!-- PRINT EDITION and BLOGROLL -->
-							<section id="section-box-print-blogroll" class="section-box clearfix">
-								
-								<div id="links-print-edition" class="links-box sixcol first">
-								
-									<?php
-									$print_thumb = new WP_Query('post_type=print_edition&posts_per_page=1');
-									if ($print_thumb->have_posts()) : while ($print_thumb->have_posts()) : $print_thumb->the_post();
-									?>
-
-										<a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives"><?php the_post_thumbnail('ttn-print-thumb'); ?></a>
-								
-									<?php endwhile; endif; wp_reset_postdata(); ?>
-									
-									<span><a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives">Read&nbsp;the&nbsp;Print&nbsp;Edition&nbsp;here!</a></span>
-								
-								</div>
-								
-								<div id="links-top" class="links-box sixcol last">
-								
-									<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
-								
-								</div>
-							
-							</section> <!-- end #section-box-print-blogroll -->
-							
-							<!-- DESKTOP-ONLY ADS -->
-							<?php if ( !is_handheld() ) : ?>
-							<div class="ad-container rectangle-ad-container clearfix">
-								<div class="ad adsense rectangle-ad">
-									
-									<!-- NSNewsBoxL -->
-									<div id='div-gpt-ad-1342714724220-1' style='width:300px; height:250px; margin:0px auto;'>
-									<script type='text/javascript'>
-									googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-1'); });
-									</script>
-									</div>	
-	
-								</div>
-								
-							</div>
-							<?php endif; ?>
-
-						</div>
-						</div> <!-- end #media-container -->
-
-
-						<div id="column-news-sports" class="sixcol last clearfix">
+				
+										<div id="column-right" class="sixcol last clearfix">
 						
 							<!-- NEWS SECTION -->
 							<section id="section-box-news" class="section-container section-box clearfix">
@@ -130,7 +35,7 @@
 							<?php endif; ?>
 							
 							<!-- SPORTS SECTION -->
-							<section id="section-box-sports" class="section-container section-box twelvecol first last clearfix">
+							<section id="section-box-sports" class="section-container section-box clearfix">
 								
 									<?php the_zombie_loop(sports); ?>
 									
@@ -140,37 +45,140 @@
 									
 							</section> <!-- end #section-box-sports -->
 	
-							
-							
-						</div> <!-- end #column-news-sports -->
-							
-							
-							
-						<!-- LIVING SECTION -->
-						<section id="section-box-living" class="section-container section-box sixcol first clearfix">
-							
-							<?php the_zombie_loop(living); ?>
-							
-						</section> <!-- end #section-box-living -->
-							
-							
-						
+	
+	
+							<!-- OPINION SECTION -->
+							<section id="section-box-opinion" class="section-container section-box clearfix">
+								
+								<?php the_zombie_loop(opinion); ?>
+								
+							</section> <!-- end #section-box-opinion -->
 
-						<!-- A&E SECTION -->
-						<section id="section-box-ae" class="section-container section-box sixcol first clearfix">
 							
-							<?php the_zombie_loop(ae); ?>
+						</div> <!-- end #column-right -->
+					
+						<div id="column-left" class="section-container first sixcol clearfix" role="featured">
+							<div id="media-contained">
+								
+								<!-- FEATURED CONTENT -->
+								<section id="section-box-featured" class="section-box clearfix">
+	
+									<h2 class="section-box-title">Featured Content</h2>
+	
+										<!-- featured content stuff goes here -->
+										<?php ttx_slider(); ?>
+	
+								</section> <!-- end #section-box-featured -->
+								
+								<!-- FEATURED MULTIMEDIA -->
+								<section id="section-box-featured-multimedia" class="section-box clearfix">
+									<h2 class="section-box-title">Featured Multimedia</h2>
+								
+										<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
+										
+													
+													
+													<?php
+													$featured_video = new WP_Query( array(
+															'cat' => 3,
+															'post_type' => 'multimedia',
+															'posts_per_page' => 1
+														)
+													);
+													
+													if ($featured_video->have_posts()) : while ($featured_video->have_posts()) : $featured_video->the_post();
+													
+														// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
+														// Get the video URL and put it in the $video variable
+														$videoID = get_post_meta($post->ID, 'video_link', true);
+														// Check if there is in fact a video URL
+														if ($videoID) {
+															echo '<div class="video-container clearfix">';
+															// Echo the embed code via oEmbed
+															echo wp_oembed_get( $videoID ); 
+															echo '</div>';
+														} ?>
+													
+													<?php endwhile; endif; wp_reset_postdata(); ?>
+			
+												</article> <!-- end article -->
+								
+								</section> <!-- end #section-box-multimedia -->
+						
+								<!-- PRINT EDITION and BLOGROLL -->
+								<section id="section-box-print-blogroll" class="section-box clearfix">
+									
+									<div id="links-print-edition" class="links-box sixcol first">
+									
+										<?php
+										$print_thumb = new WP_Query('post_type=print_edition&posts_per_page=1');
+										if ($print_thumb->have_posts()) : while ($print_thumb->have_posts()) : $print_thumb->the_post();
+										?>
+	
+											<a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives"><?php the_post_thumbnail('ttn-print-thumb'); ?></a>
+									
+										<?php endwhile; endif; wp_reset_postdata(); ?>
+										
+										<span><a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives">Read&nbsp;the&nbsp;Print&nbsp;Edition&nbsp;here!</a></span>
+									
+									</div>
+									
+									<div id="links-top" class="links-box sixcol last">
+									
+										<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
+									
+									</div>
+								
+								</section> <!-- end #section-box-print-blogroll -->
+							</div><!-- end #media-contained --> 
+								
+								
+							<!-- DESKTOP-ONLY ADS -->
+							<?php if ( !is_handheld() ) : ?>
+							<div class="ad-container rectangle-ad-container clearfix">
+								<div class="ad adsense rectangle-ad">
+									
+									<!-- NSNewsBoxL -->
+									<div id='div-gpt-ad-1342714724220-1' style='width:300px; height:250px; margin:0px auto;'>
+									<script type='text/javascript'>
+									googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-1'); });
+									</script>
+									</div>	
+	
+								</div>
+								
+							</div>
+							<?php endif; ?>
+								
+							<!-- LIVING SECTION -->
+							<section id="section-box-living" class="section-container section-box clearfix">
+								
+								<?php the_zombie_loop(living); ?>
+								
+							</section> <!-- end #section-box-living -->
+								
+								
 							
-						</section> <!-- end #section-box-ae -->
+	
+							<!-- A&E SECTION -->
+							<section id="section-box-ae" class="section-container section-box clearfix">
+								
+								<?php the_zombie_loop(ae); ?>
+								
+							</section> <!-- end #section-box-ae -->
+	
+						
+						</div> <!-- end #column-left -->
+
+
+
+							
+							
+							
 						
 						
 						
-						<!-- OPINION SECTION -->
-						<section id="section-box-opinion" class="section-container section-box sixcol first clearfix">
-							
-							<?php the_zombie_loop(opinion); ?>
-							
-						</section> <!-- end #section-box-opinion -->
+						
 						
 						
 
