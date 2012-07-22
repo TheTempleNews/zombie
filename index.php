@@ -166,7 +166,7 @@
 						
 						
 						<!-- OPINION SECTION -->
-						<section id="section-box-opinion" class="section-container section-box sixcol last clearfix">
+						<section id="section-box-opinion" class="section-container section-box sixcol first clearfix">
 							
 							<?php the_zombie_loop(opinion); ?>
 							
