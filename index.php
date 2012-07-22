@@ -163,6 +163,16 @@
 							
 						</section> <!-- end #section-box-ae -->
 						
+						
+						
+						<!-- OPINION SECTION -->
+						<section id="section-box-opinion" class="section-container section-box sixcol last clearfix">
+							
+							<?php the_zombie_loop(opinion); ?>
+							
+						</section> <!-- end #section-box-opinion -->
+						
+						
 
 						<!-- DESKTOP-ONLY ADS -->
 						<?php if ( !is_handheld() ) : ?>
@@ -182,20 +192,15 @@
 
 
 
-						<!-- OPINION SECTION -->
-						<section id="section-box-opinion" class="section-container section-box sixcol first clearfix">
-							
-							<?php the_zombie_loop(opinion); ?>
-							
-						</section> <!-- end #section-box-opinion -->
 						
 						
 						
 						
 						
-						<!-- TOP STUFF (PLACEHOLDER) -->
+						
+						<!-- TOP STUFF (PLACEHOLDER) 
 						<div class="section-container section-box sixcol last clearfix">
-						<?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
+						<?php /* if ( is_active_sidebar( 'sidebar2' ) ) : ?>
 
 						<?php dynamic_sidebar( 'sidebar2' ); ?>
 
@@ -207,8 +212,8 @@
 							<p>Please activate some Widgets.</p>
 						</div> -->
 
-						<?php endif; ?>
-						</div>
+						<?php endif; */ ?>
+						</div> -->
 
 
 						<!-- MULTIMEDIA SECTION -->
