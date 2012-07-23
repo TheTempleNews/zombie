@@ -18,10 +18,14 @@ GENERAL STYLES
 body {
 	font-family: @serif;
 	
-	// 16px/24px
+	// 14px/20px
 	font-size: 87.5%;
-	line-height: 1.5;
+	line-height: 1.429;
 	color: #565656;
+	
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering:optimizeLegibility;
 }
 
 #outer-header,
@@ -50,7 +54,7 @@ ADVERTS AND SOCIAL MEDIA
 .ttn-network-banner {
 	border-bottom: @niceborders;
 	border-top: @niceborders;
-	padding: 0.5em 0;
+	padding: @14-lhem/2 0;
 	
 }
 
@@ -72,37 +76,6 @@ ADVERTS AND SOCIAL MEDIA
 display: none;
 }
 
-/*.rectangle-ad {
-	display: block;
-	background-color: black;
-	height: 250px;
-}
-
-
-/* SOCIAL */
-/* .sociable {
-*	width: 230px;
-*	position: relative;
-*	float: right;
-*	
-*	.sociable_tagline {
-*		border-bottom: 1px solid #CCCCCC;
-*		font-family: sans-serif;
-*		margin: 0 3px 0.5em;
-*		text-transform: uppercase;
-*	}
-*	
-*	ul {
-*		width: 100%;
-*		
-*		li {
-*			position: relative;
-*			float: right;
-*		}
-*	}
-*}
-*/
-
 .sharexy {
 	position:relative;
 	float:right;
@@ -118,7 +91,7 @@ style a page via class
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {
 	.section-box {
-		margin-bottom: 2em;
+		margin-bottom: (@14-lhem * 2);
 	}
 	
 	.section-box-title {
