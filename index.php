@@ -15,24 +15,26 @@
 										<a href="http://broadandcecil.temple-news.com/" title="Broad & Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo.png" alt="broadcecil-logo" /></a>
 									</div>
 									
+									<!-- DESKTOP-ONLY ADS -->
+									<?php if ( !is_handheld() ) : ?>
+									<div class="ad-container rectangle-ad-container twelvecol first last">
+										<div class="ad rectangle-ad adsense">
+											
+											<!-- NSSportsBoxR -->
+											<div id='div-gpt-ad-1342714724220-5' style='width:300px; height:250px; margin:0px auto;'>
+											<script type='text/javascript'>
+											googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-5'); });
+											</script>
+											</div>
+											
+										</div>
+										
+									</div>
+									<?php endif; ?>
+									
 							</section> <!-- end #section-box-news -->
 							
-							<!-- DESKTOP-ONLY ADS -->
-							<?php if ( !is_handheld() ) : ?>
-							<div class="ad-container rectangle-ad-container twelvecol first last">
-								<div class="ad rectangle-ad adsense">
-									
-									<!-- NSSportsBoxR -->
-									<div id='div-gpt-ad-1342714724220-5' style='width:300px; height:250px; margin:0px auto;'>
-									<script type='text/javascript'>
-									googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-5'); });
-									</script>
-									</div>
-									
-								</div>
-								
-							</div>
-							<?php endif; ?>
+							
 							
 							<!-- SPORTS SECTION -->
 							<section id="section-box-sports" class="section-container section-box clearfix">
@@ -56,6 +58,11 @@
 
 							
 						</div> <!-- end #column-right -->
+						
+						
+						
+						
+						
 					
 						<div id="column-left" class="section-container first sixcol clearfix" role="featured">
 							<div id="media-contained">
@@ -170,18 +177,6 @@
 						
 						</div> <!-- end #column-left -->
 
-
-
-							
-							
-							
-						
-						
-						
-						
-						
-						
-
 						<!-- DESKTOP-ONLY ADS -->
 						<?php if ( !is_handheld() ) : ?>
 						<div class="ad-container twelvecol first last clearfix">
@@ -198,13 +193,6 @@
 						</div>
 						<?php endif; ?>
 
-
-
-						
-						
-						
-						
-						
 						
 						<!-- TOP STUFF (PLACEHOLDER) 
 						<div class="section-container section-box sixcol last clearfix">
