@@ -286,7 +286,7 @@ body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-s
 #outer-header,#outer-footer{padding:0 auto;}
 .outer-line{border-bottom:0.25em solid #cc0000;}
 .hoz-rule-third{width:33.3333333%;border-bottom:0.0714em solid #cccccc;padding:0;margin:1em auto;}
-.ttn-network-banner{border-top:0.0714em solid #cccccc;padding:0.7145em 0;}
+.ttn-network-banner{border-top:0.0714em solid #cccccc;padding:0.7145em 0;}.ttn-network-banner img{margin:0 auto;display:block;}
 .ad-container,#ad-topnavbar,.rectangle-ad-container{display:none;}
 .sharexy{position:relative;float:right;margin:0;padding:0;}
 .home .section-box-title{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;text-rendering:optimizelegibility;font-weight:700;color:#aaaaaa;margin:0 0 0.67em 0;font-size:1.250em;line-height:1.5em;border-top:0.0714em solid #cccccc;border-bottom:0.0714em solid #cccccc;padding:0.5em 0;margin-bottom:1.5em;text-transform:uppercase;font-weight:600;}.home .section-box-title a{text-decoration:none;}
