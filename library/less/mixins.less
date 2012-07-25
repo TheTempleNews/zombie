@@ -153,8 +153,11 @@ span.amp {
 BORDERS
 *********************/
 
-@niceborders-s: 0.0714em solid #CCCCCC; /* border is ~1px for 87.5% font-size */
-@niceborders-l: 0.0625em solid #CCCCCC; /* border is ~1px for 100% font-size */
+@1px-s: 0.0714em; /* ~1px for 87.5% font-size */
+@1px-l: 0.0625em; /* ~1px for 100% font-size */
+
+@niceborders-s: @1px-s solid #CCCCCC; /* border is ~1px for 87.5% font-size */
+@niceborders-l: @1px-l solid #CCCCCC; /* border is ~1px for 100% font-size */
 
 /*********************
 BORDER RADIUS
