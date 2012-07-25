@@ -21,7 +21,6 @@ body {
 	// 16px/24px
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
 }
 
 .hoz-rule-third { border-bottom: @niceborders-l; }
@@ -31,7 +30,10 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-.ttn-network-banner { border-top: @niceborders-l; }
+.ttn-network-banner {
+	border-top: @niceborders-l;
+	padding: (@lhem-l/2-@1px-l) 0;
+}
 
 
 /********************
@@ -56,6 +58,8 @@ style a page via class
 	.section-box-title {
 		border-top: @niceborders-l;
 		border-bottom: @niceborders-l;
+		padding: (@lhem-s/2-@1px-s) 0;
+		margin-bottom: @lhem-s;
 	}
 	
 	#links-print-edition span {
@@ -71,11 +75,23 @@ style a page via class
 		li {
 			width: 100%;
 		}
-	}	
+	}
+	
+	article {
+		margin-bottom: @lhem-s;
+		
+		.featured-image-container-thumb {
+			width: 22.928176794%;
+			margin: 0 @lhem-s;
+		}
+	}
 }                            /* home page */
 .blog {}                            /* blog page */
 .archive {
-	.archive-main-title { border-bottom: @niceborders-l; }
+	.archive-main-title {
+		border-bottom: @niceborders-l;
+		padding: (@lhem-s/2-@1px-s/2) 0;
+	}
 
 }                         /* archive page */
 .post-type-archive {

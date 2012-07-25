@@ -53,7 +53,7 @@ ADVERTS AND SOCIAL MEDIA
 
 .ttn-network-banner {
 	border-top: @niceborders-s;
-	padding: @lhem-s/2 0;
+	padding: (@lhem-s/2-@1px-s) 0;
 	
 	img {
 		margin: 0 auto;
@@ -85,8 +85,8 @@ style a page via class
 		.h5;
 		border-top: @niceborders-s;
 		border-bottom: @niceborders-s;
-		padding: 0.5em 0;
-		margin-bottom: 1.5em;
+		padding: (@lhem-s/2-@1px-s) 0;
+		margin-bottom: @lhem-s;
 		text-transform: uppercase;
 		font-weight: 600;
 
@@ -112,11 +112,11 @@ style a page via class
 	}
 	
 	article {
-		margin-bottom: 1.5em;
+		margin-bottom: @lhem-s;
 		
 		.featured-image-container-thumb {
 			width: 22.928176794%;
-			margin: 0.375em 1em 1em 0;
+			margin: 0 @lhem-s;
 			position: relative;
 			float: left;
 			
@@ -158,7 +158,7 @@ style a page via class
 .archive {
 	.archive-main-title {
 		border-bottom: @niceborders-s;
-		padding: 0.5em 0;
+		padding: (@lhem-s/2-@1px-s/2) 0;
 		
 		.archive-breadcrumb {
 			font-weight: 300;
