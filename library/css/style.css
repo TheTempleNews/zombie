@@ -323,6 +323,7 @@ body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-s
 .post-type-archive-slideshow #main #post-type-loop-top{height:auto;}
 .single .single-section-name{border-bottom:1px solid #cccccc;padding:0.5em 0;margin-bottom:1.5em;}
 .single .post-category-list-container{font-size:1.000em;line-height:1.500em;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;color:#AAAAAA;line-height:1.500em;}.single .post-category-list-container a{color:#AAAAAA;}
+.single .dek{font-style:italic;}
 .single .byline{font-size:1.250em;line-height:1.5em;font-style:italic;}.single .byline .authors,.single .byline time{font-style:normal;}
 .single .byline .authors{font-family:'Alegreya SC';border-right:1px solid #CCCCCC;padding-right:0.5em;}.single .byline .authors a{color:#999999;}
 .single .byline time{padding-left:0.5em;}
@@ -386,7 +387,7 @@ img.size-full,img.size-large{max-width:100%;width:auto;height:auto;}
 .post-content video,.post-content object{max-width:100%;}
 .post-content pre,.post-content code{background:#eee;border:1px solid #cecece;padding:10px;}
 .post-category-list-container{font-size:1.000em;line-height:1.500em;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;color:#AAAAAA;line-height:1.500em;}.post-category-list-container a{color:#AAAAAA;}
-.dek{font-weight:400;font-style:italic;}
+.dek{font-weight:400;}
 .wp-caption{background:#eee;padding:5px;max-width:100%;}.wp-caption img{margin-bottom:0;width:100%;}
 .wp-caption p.wp-caption-text{font-size:0.85em;margin:4px 0 7px;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;text-align:left;}
 .page-navigation,.wp-prev-next{margin:1.1em 0 2.2em;}
