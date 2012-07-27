@@ -13,8 +13,6 @@
 						    <header class="article-header">
 							
 							    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-							
-							    <p class="meta"><?php _e("Posted", "zombietheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "zombietheme"); ?> <?php the_author_posts_link(); ?>.</p>
 						
 						    </header> <!-- end article header -->
 					
@@ -24,11 +22,9 @@
 						
 						    <footer class="article-footer">
 			
-							    <?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+							    <?php // the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 							
 						    </footer> <!-- end article footer -->
-						    
-						    <?php comments_template(); ?>
 					
 					    </article> <!-- end article -->
 					
