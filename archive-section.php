@@ -64,7 +64,7 @@
 							
 									
 	
-										<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
+										<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' top-archive-article clearfix' ); ?> role="article">
 	
 											<?php if ( has_post_thumbnail() ) : ?>
 												<div class="featured-image-container featured-image-container-full twelvecol first last">
@@ -74,7 +74,7 @@
 	
 											<header>
 												<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
-												<h1 class="headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+												<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 											</header>
 	
