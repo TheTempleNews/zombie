@@ -9,11 +9,11 @@
 						<div id="footer-column-left" class="fourcol first clearfix">
 						
 							<div id="broadcecilad" class="ttn-network-banner">
-										<a href="http://broadandcecil.temple-news.com"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-black.png" alt="broadcecil-logo" /></a>
+										<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-black.png" alt="broadcecil-logo" /></a>
 							</div>
 							
-							<div id="thecherryad" class="ttn-network-banner">
-										<a><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-black.png" alt="thecherry-logo" /></a>
+							<div id="thecherryad" class="ttn-network-banner" title="The Cherry">
+										<a href="http://thecherry.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-black.png" alt="thecherry-logo" /></a>
 							</div>
 							
 														
