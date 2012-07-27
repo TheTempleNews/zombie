@@ -339,7 +339,6 @@ body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-s
 .single-print_edition .vol-years,.page-id-34727 .vol-years,.single-print_edition .issues-semester,.page-id-34727 .issues-semester{font-weight:300;font-size:75%;}
 .single-print_edition aside#print-edition-aside li.pagenav,.page-id-34727 aside#print-edition-aside li.pagenav{font-size:1.5em;}
 .single-print_edition .pagenav,.page-id-34727 .pagenav{list-style:none;}.single-print_edition .pagenav ul,.page-id-34727 .pagenav ul{list-style:none;margin:0;font-size:75%;}
-#container{border:1em solid black;}
 .wrap{width:90%;margin:0 auto;border:0;}
 a,a:visited{color:#b70000;text-decoration:none;}a:hover,a:visited:hover,a:focus,a:visited:focus{color:#CCCCCC;}
 a:link,a:visited:link{-webkit-tap-highlight-color:rgba(63, 63, 63, 0.5);}
