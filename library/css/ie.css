@@ -98,9 +98,3 @@ body{font-size:100%;line-height:1.5;}
 .widget{padding:0 10px;margin:2.2em 0;}.widget ul li{margin-bottom:0.75em;}
 .widget ul li ul{margin-top:0.75em;padding-left:1em;}
 .footer-links ul li{}
-.ad,.ad-container,#ad-topnavbar,.rectangle-ad-container{display:block;}
-.ad-container{padding:1.429em 0;}
-.ad{text-align:center;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
-#ad-topnavbar{margin-bottom:2em;}
-#broadcecilad{border-bottom:0.0625em solid #cccccc;}
-#section-box-print-blogroll{border-bottom:0.0625em solid #cccccc;padding-bottom:1.429em;}
