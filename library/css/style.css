@@ -331,7 +331,7 @@ body{font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;font-s
 .single-multimedia #main .article-container .multimedia-dek{font-style:normal;}
 .single-multimedia #main .article-container a{display:block;color:white;}.single-multimedia #main .article-container a:hover,.single-multimedia #main .article-container a:active{color:#cc0000;}
 .single-multimedia #main #post-type-loop-top{height:auto;}
-.page-template-default{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}.page-template-default .page-title{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
+.page-template-default{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .page-id-34727 #print-edition-title,.page-id-34727 .hentry h2,.page-id-34727 .hentry .h2,.page-id-34727 .hentry h3,.page-id-34727 .hentry .h3{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .page-id-34727 #print-edition-title{font-size:3em;}
 .page-id-34727 .vol-years,.page-id-34727 .issues-semester{font-weight:300;font-size:75%;}
@@ -376,6 +376,7 @@ img.size-full,img.size-large{max-width:100%;width:auto;height:auto;}
 .hentry footer{border-bottom:1px solid #CCCCCC;padding-bottom:1em;}
 .hentry h1,.hentry .h1,.hentry h2,.hentry .h2,.hentry h3,.hentry .h3,.hentry h4,.hentry .h4,.hentry h5,.hentry .h5{font-family:'Alegreya',Georgia,serif;text-rendering:optimizelegibility;font-weight:700;}.hentry h1 a,.hentry .h1 a,.hentry h2 a,.hentry .h2 a,.hentry h3 a,.hentry .h3 a,.hentry h4 a,.hentry .h4 a,.hentry h5 a,.hentry .h5 a{text-decoration:none;}
 .single-title{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;text-rendering:optimizelegibility;font-weight:700;color:#aaaaaa;margin:0 0 0.67em 0;font-size:1.875em;line-height:1.6em;font-family:'Alegreya',"Georgia",Cambria,Times New Roman,Times,serif;}.single-title a{text-decoration:none;}
+.page-title{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .meta{color:#999;}
 .post-content{}
 .post-content blockquote{display:block;font-style:italic;text-align:right;font-size:1.5em;margin:0;padding:0;}
