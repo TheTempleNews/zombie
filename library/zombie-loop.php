@@ -60,7 +60,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h1 class="headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+							<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 						</header>
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="featured-image-container featured-image-container-full twelvecol first last">
@@ -71,7 +71,9 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 							<?php the_excerpt(); ?>
 						</section> <!-- end dek -->
 					</article> <!-- end article -->
-				<?php $count++; } else { // ALL OTHERS ?>
+				<?php $count++; } else {
+				
+				// ALL OTHERS ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 						<?php // disable small thumbnails because of a disproportionate amount of images in sections
 						if ( has_post_thumbnail() ) : ?>
@@ -94,7 +96,9 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		
 			// ...good shot!
 			wp_reset_postdata(); 
-			
+		
+		/* this was the experimental attempt to make opinion a horizontal layout
+		but the index.php style changed so this was abandoned */	
 		/* if ( $post_type == 'article_opinion' ) {
 			
 			

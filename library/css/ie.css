@@ -23,6 +23,7 @@ body{font-size:100%;line-height:1.5;}
 .hoz-rule-third{border-bottom:0.0625em solid #cccccc;}
 .ttn-network-banner{border-top:0.0625em solid #cccccc;padding:0.6875em 0;}
 .home .slide-image{float:left;position:relative;}
+.home .column-inner{margin:0 3em;}
 .home #section-box-featured-multimedia,.home #section-box-print,.home #section-box-featured .section-box-title,.home #section-box-print-blogroll{display:block;}
 .home .section-box-title{border-top:0.0625em solid #cccccc;border-bottom:0.0625em solid #cccccc;padding:0.6431em 0;margin-bottom:1.429em;}
 .home #links-print-edition span{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
@@ -49,6 +50,7 @@ body{font-size:100%;line-height:1.5;}
 .onecol,.twocol,.threecol,.fourcol,.fivecol,.sixcol,.sevencol,.eightcol,.ninecol,.tencol,.elevencol,.twelvecol{position:relative;float:left;margin-left:2.762430939%;}
 .first{margin-left:0;}
 .last{float:right;}
+.two-column-container{background:url("../images/1px-cccccc.png") repeat-y scroll 50% center transparent;margin-bottom:3em;}
 .push_one{left:8.563535911%;}
 .push_two{left:17.127071822%;}
 .push_three{left:25.690607733%;}
