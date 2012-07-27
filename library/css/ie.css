@@ -92,8 +92,3 @@ span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif
 .widget{padding:0 10px;margin:2.2em 0;}.widget ul li{margin-bottom:0.75em;}
 .widget ul li ul{margin-top:0.75em;padding-left:1em;}
 .footer-links ul li{}
-.ad,.ad-container,#ad-topnavbar,.rectangle-ad-container{display:block;}
-.ad-container{border-bottom:1px solid #cccccc;border-top:1px solid #cccccc;padding:0.5em 0;margin-bottom:2em;}
-.ad{text-align:center;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
-#ad-topnavbar{margin-bottom:2em;}
-.rectangle-ad-container{border-bottom:none;border-top:none;}
