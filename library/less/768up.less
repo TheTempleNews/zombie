@@ -87,7 +87,7 @@ style a page via class
 		
 		.featured-image-container-thumb {
 			width: 22.928176794%;
-			margin: 0 @lhem-s;
+			margin: 0 @lhem-s @lhem-s 0;
 		}
 	}
 }                            /* home page */
@@ -97,12 +97,11 @@ style a page via class
 		border-bottom: @niceborders-l;
 		padding: (@lhem-s/2-@1px-s/2) 0;
 	}
-
 }                         /* archive page */
 .post-type-archive {
-	.top-news-article {
+	.top-archive-article {
 		border-bottom: @niceborders-l;
-		padding: 1em 0;
+		margin: 0 0 (@lhem-s*2) 0;
 	}
 }                          /* post type archive */
 	.post-type-archive-article_news {}         /* news article type archive */
@@ -116,16 +115,26 @@ style a page via class
 		#main {
 			.article-container {
 				height: 35em;
-			}
-		}		
+				margin-bottom: @lhem-s;
+				
+				article {
+					margin: @lhem-s;
+				}
+			} /* end .article-container */
+		}	/* end #main */	
 	}   /* multimedia article type archive */
 	.post-type-archive-slideshow {
 		#main {
 			.article-container {
 				height: 35em;
-			}
-		}
-	}                                          /* slideshow article type archive */
+				margin-bottom: @lhem-s;
+				
+				article {
+					margin: @lhem-s;
+				}
+			} /* end .article-container */
+		} /* end #main */
+	} /* slideshow article type archive */
 .date {}                            /* date archive page */
 	.date-paged-1 {}                /* replace the number to the corresponding page number */
 .search {}                          /* search page */
@@ -134,7 +143,11 @@ style a page via class
 	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
 .error404 {}                        /* 404 page */
 .single {
-	.single-section-name { border-bottom: @niceborders-l; }
+	.single-section-name {
+		border-bottom: @niceborders-l;
+		padding: (@lhem-s/2) 0;
+		margin-bottom: @lhem-s;
+	}
 }                          /* single post page */
 	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
 	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */

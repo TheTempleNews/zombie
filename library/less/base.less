@@ -148,7 +148,7 @@ style a page via class
 		
 		.featured-image-container-thumb {
 			width: 22.928176794%;
-			margin: 0 @lhem-s;
+			margin: 0 @lhem-s @lhem-s 0;
 			position: relative;
 			float: left;
 			
@@ -192,12 +192,14 @@ style a page via class
 		border-bottom: @niceborders-s;
 		padding: (@lhem-s/2-@1px-s/2) 0;
 		
+		/* this is inactive when dated archives are disabled */
 		.archive-breadcrumb {
 			font-weight: 300;
 			font-size: 75%;
 		}
 	}
 	
+	/* this doesn't exist... */
 	.archives-meta-content {
 		/* position: relative;
 		bottom: -23em;
@@ -210,12 +212,13 @@ style a page via class
 		}
 	}
 	
+	
 	article {
 		margin-bottom: 1.5em;
 		
 		.featured-image-container-thumb {
 			width: 22.928176794%;
-			margin: 0.375em 1em 1em 0;
+			margin: 0 @lhem-s @lhem-s 0;
 			position: relative;
 			float: left;
 			
@@ -240,6 +243,7 @@ style a page via class
 		
 	}
 	
+	/* probably won't be active - this is for dated archives */
 	#smart-archives-block {
 		font-family: @sans-serif;
 		list-style: none;
@@ -263,9 +267,9 @@ style a page via class
 	}
 }                       /* archive page */
 .post-type-archive {
-	.top-news-article {
+	.top-archive-article {
 		border-bottom: @niceborders-s;
-		padding: 1em 0;
+		margin: 0 0 (@lhem-s*2) 0;
 	}
 }                          /* post type archive */
 	.post-type-archive-article_news {}         /* news article type archive */
@@ -291,10 +295,10 @@ style a page via class
 			
 			.article-container {
 				background-color: #000000;
-				margin-bottom: 1em;
+				margin-bottom: @lhem-s;
 				
 				article {
-					margin: 1em;
+					margin: @lhem-s;
 				}
 				
 					h2.multimedia-headline {
@@ -345,10 +349,10 @@ style a page via class
 			
 			.article-container {
 				background-color: #000000;
-				margin-bottom: 1em;
+				margin-bottom: @lhem-s;
 				
 				article {
-					margin: 1em;
+					margin: @lhem-s;
 				}
 				
 					a{
@@ -382,8 +386,8 @@ style a page via class
 .single {
 	.single-section-name {
 		border-bottom: @niceborders-s;
-		padding: 0.5em 0;
-		margin-bottom: 1.5em;
+		padding: (@lhem-s/2) 0;
+		margin-bottom: @lhem-s;
 	}
 	
 	.post-category-list-container {
