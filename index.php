@@ -84,7 +84,7 @@
 							<!-- FEATURED CONTENT -->
 							<section id="section-box-featured" class="section-box clearfix">
 	
-								<h2 class="section-box-title">Featured Content</h2>
+								<h2 class="section-box-title h6">Featured Content</h2>
 	
 									<!-- featured content stuff goes here -->
 									<?php ttx_slider(); ?>
@@ -95,7 +95,7 @@
 							
 							<!-- FEATURED MULTIMEDIA -->
 							<section id="section-box-featured-multimedia" class="section-box clearfix">
-								<h2 class="section-box-title">Featured Multimedia</h2>
+								<h2 class="section-box-title h6">Featured Multimedia</h2>
 							
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 									
