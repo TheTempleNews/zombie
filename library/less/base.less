@@ -114,13 +114,11 @@ style a page via class
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {	
 	.section-box-title {
-		.h5;
-		border-top: @niceborders-s;
+		/* border-top: @niceborders-s; */
 		border-bottom: @niceborders-s;
 		padding: (@lhem-s/2-@1px-s) 0;
 		margin-bottom: @lhem-s;
-		text-transform: uppercase;
-		font-weight: 600;
+		font-weight: 700;
 
 		a, a:visited {
 			color: @thatred;
@@ -160,19 +158,17 @@ style a page via class
 		}
 		
 		.headline {
-			.h5;
-			margin-top: 0;
+			.h4;
 			font-family: @serif;
 		}
 		
 		.top-headline {
 			.h3;
-			margin-top: 0;
 			font-family: @serif;
 		}
 		
 		.dek {
-			/* display: none; */
+			display: none;
 		}
 	}
 	
@@ -230,14 +226,12 @@ style a page via class
 		}
 		
 		.headline {
-			.h5;
-			margin-top: 0;
+			.h4;
 			font-family: @serif;
 		}
 		
 		.top-headline {
 			.h3;
-			margin-top: 0;
 			font-family: @serif;
 		}
 		
@@ -590,7 +584,7 @@ h6, .h6 { // 14px/20px
 	line-height: 1.428571429;
 	margin: 0;
 	text-transform: uppercase;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.02em;
 	font-weight: 300;
 }
 
@@ -1051,8 +1045,7 @@ POSTS & CONTENT STYLES
 		.post-category-list-container {
 			.h6;
 			font-family: @sans-serif;
-			font-weight: 400;
-			text-transform: uppercase;
+			font-weight: 300;
 			color: #AAAAAA;
 
 			a {
