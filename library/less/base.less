@@ -20,7 +20,7 @@ body {
 	
 	// 14px/20px
 	font-size: 87.5%;
-	line-height: 1.429;
+	line-height: 1.428571429;
 	color: #565656;
 	
 	-webkit-font-smoothing: antialiased;
@@ -534,15 +534,15 @@ a, a:visited {
 
 
 /******************************************************************
-H1, H2, H3, H4, H5 STYLES
+H1, H2, H3, H4, H5, H6 STYLES
 ******************************************************************/
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
 	font-family: @sans-serif; 
 	text-rendering : optimizelegibility;
-	font-weight: 700;
 	color: #aaaaaa;
-	margin: 0 0 0.67em 0;
+	margin: 0;
+	font-weight: 700;
 	 
 	/* 
 	if you're going to use webfonts, be sure to check your weights 
@@ -555,35 +555,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
-h1, .h1 { // 48px/72px
-	font-size: 3.000em; 
-	line-height: 1.5em; 
+h1, .h1 { // 48px/48px
+	font-size: 3.429em; 
+	line-height: 1; 
+	margin: 0.4em 0; 
 }
 
 h2, .h2 { // 36px/48px
-	font-size: 2.250em; 
-	line-height: 1.333em; 
-	// margin-bottom: 0.375em; 
+	font-size: 2.571em; 
+	line-height: 1.333333;
+	margin: 0.3em 0; 
 }
 
-h3, .h3 { // 30px/48px
-	font-size: 1.875em; 
-	line-height: 1.6em;
+h3, .h3 { // 24px/24px
+	font-size: 1.714em; 
+	line-height: 1;
+	margin: 0.3em 0;
 }
 
-h4, .h4 { // 24px/36px
-	font-size: 1.500em; 
-	line-height: 1.5em;
+h4, .h4 { // 20px/24px
+	font-size: 1.429em; 
+	line-height: 1.2;
+	margin: 0.25em 0;
 }
 
-h5, .h5 { // 20px/30px
-	font-size: 1.250em; 
-	line-height: 1.5em; 
+h5, .h5 { // 16px/24px
+	font-size: 1.143em;
+	line-height: 1.5;
+	margin: 0.2em 0;
 }
 
-h6, .h6 { // 16px/24px
+h6, .h6 { // 14px/20px
 	font-size: 1.000em;
-	line-height: 1.500em;
+	line-height: 1.428571429;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
+	font-weight: 300;
 }
 
 
@@ -925,7 +933,6 @@ POSTS & CONTENT STYLES
 			h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { 
 				font-family: 'Alegreya', Georgia, serif; 
 				text-rendering : optimizelegibility;
-				font-weight: 700; 
 				/* 
 				if you're going to use webfonts, be sure to check your weights 
 				http://css-tricks.com/watch-your-font-weight/
