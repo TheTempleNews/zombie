@@ -148,6 +148,16 @@ style a page via class
 		padding: (@lhem-s/2) 0;
 		margin-bottom: @lhem-s;
 	}
+	
+	.authors {
+		.sc;
+		border-right: @niceborders-s;
+		padding-right: (@lhem-s/2);	
+	}
+	
+	time {
+		padding-left: (@lhem-s/2);
+	}
 }                          /* single post page */
 	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
 	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
@@ -252,7 +262,13 @@ LAYOUT & GRID STYLES
 	
 	
 	
+/*********************
+IMAGE STYLES
+*********************/
 
+img { 
+	margin: 0 0 @lhem-s 0; 
+}
 
 
 
@@ -534,13 +550,165 @@ NAVIGATION STYLES
 	}
 }
 
+
+
+/*************************
+FLEX TETRODO STYLES
+**************************/
+
+#section-box-featured {
+	margin-bottom: (@lhem-s*2);
+}
+
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content { 
+	margin-top: @lhem-s; 
+}
+
+	.hentry {
+
+		footer {
+			border-bottom: @niceborders-s;
+			padding-bottom: @lhem-s;
+			margin-bottom: (@lhem-s*2);
+		}
+	}
 	
+	#post-content {
+		
+		dd {
+			margin-bottom: @lhem-s;
+		}
+		
+		pre, code {
+			border: @niceborders-s;
+		}
+		
+		.wp-caption {
+			padding: (@lhem-s/4);
+			
+			/* this is the caption itself */
+			p.wp-caption-text {
+				margin: (@lhem-s/4);
+			}
+			
+		} /* end .wp-caption */
+
+	}
+			
+			
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+		
+.commentlist {
+	
+	li { 
+		margin-bottom: @lhem-s; 
+		padding: (@lhem-s/2) (@1px-s*10); 
+	}
+	
+	li[class*=depth-] { 
+		margin-top: @lhem-s; 
+	}
+	
+	li:not(.depth-1) { 
+		margin-right: -(@1px-s*10); 
+		margin-left: -(@1px-s*10);
+	}
+			
+	/* vcard */
+	.vcard { 
+		margin-left: (@1px-s*50); 
+		
+		img.photo {}
+		
+		img.avatar {
+			left: (@1px-s*10); 
+			padding: (@1px-s*2); 
+			border: @niceborders-s; 	
+		}
+			
+	} /* end .commentlist .vcard */
+	
+	/* comment content */
+	.comment_content { 
+		margin-left: (@1px-s*50); 
+			
+		p {
+			margin: (@lhem-s/2) 0 @lhem-s; 
+			line-height: @lh-s; 	
+		}
+		
+	} /* end .commentlist .comment_content */
+	
+	/* comment reply link */
+	.comment-reply-link { 
+		padding: (@1px-s*5); 
+		margin-bottom: (@1px-s*10);
+	} /* end .commentlist .comment-reply-link */
+					
+} /* end .commentlist */
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+
+.respond-form { 
+	margin: @lhem-s (@1px-s*10); 
+	padding-bottom: (@lhem-s*2); 
+	
+	form {
+	
+		li {
+			margin-bottom: (@lhem-s/2);
+		}
+		
+		input[type=text], 
+		input[type=email], 
+		input[type=url], 
+		textarea { 
+			padding: (@1px-s*3) (@1px-s*6); 
+			border: (@1px-s*2) solid #ccc; 
+			line-height: @lhem-s; 
+		}
+		
+		textarea {
+			height: (@1px-s*150); 
+		}
+		
+	}
+}
+	
+	/* comment form title */
+	#comment-form-title { 
+		margin: 0 0 @lhem-s; 
+	}
+		
+	/* allowed tags */
+	#allowed_tags { 
+		margin: @lhem-s (@1px-s*10) (@lhem-s/2) 0; 
+	}		
+	
+	/* no comments */
+	.nocomments { 
+		margin: 0 (@1px-s*20) @lhem-s; 
+	}	
+
+
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	margin-top: (@lhem-l*2);
 }
 
 	#sidebar1 {
@@ -549,17 +717,17 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: 1px solid #CCCCCC;
-		margin-bottom: 0.75em;
+		border-bottom: @niceborders-l;
+		margin-bottom: (@lhem-l/2);
 	}
 
 	.widget {
 		padding: 0 10px;
-		margin: 2.2em 0;
+		margin: (@lhem-l*2) 0;
 		
 		ul {
 			li {
-				margin-bottom: 0.75em;
+				margin-bottom: (@lhem-l/2);
 				
 				&:first-child {}
 				&:last-child {}
@@ -567,8 +735,8 @@ SIDEBARS & ASIDES
 				/* deep nesting */
 				
 				ul {
-					margin-top: 0.75em;
-					padding-left: 1em;
+					margin-top: (@lhem-l/2);
+					padding-left: @lhem-l;
 				}
 			}
 		}
@@ -667,24 +835,25 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/* 
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
+.footer {
+	padding-top: @lhem-s;
+	
+	p {
+		font-size: 0.875em; /* 14px */
 	}
-} /* end .footer-links */
-			
+}
+	
+	#inner-footer {
+		margin: @lhem-s auto;
+	}
+	
+	/* left column */
+	#footer-column-center {
+		text-align: center;
+		
+		#footer-links-sections,
+		#footer-links-meta {
+			margin: @lhem-s auto;
+		}
+	} /* end left column */
+	
