@@ -50,7 +50,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		);
 	
 		?>
-			<h2 class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
+			<h2 id="<?php echo $ttn_section; ?>-section-box-title" class="section-box-title h6"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
 			// ZOMBIE SWARM!
 			if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
@@ -60,13 +60,16 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-						</header>
-						<?php if ( has_post_thumbnail() ) : ?>
+						<?php if ( has_post_thumbnail() ) { ?>
+								<h3 class="headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							</header>
 							<div class="featured-image-container featured-image-container-full twelvecol first last">
 								<?php the_post_thumbnail('zom-landscape-576'); ?>
 							</div>
-						<?php endif; ?>
+						<?php } else { ?>
+							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							</header>	
+						<?php } ?> 
 						<section class="dek">
 							<?php the_excerpt(); ?>
 						</section> <!-- end dek -->
@@ -83,7 +86,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 						<?php endif; ?>
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						</header>
 						<section class="dek">
 							<?php the_excerpt(); ?>
