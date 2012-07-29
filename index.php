@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="wrap clearfix">
 			
-			<div class="two-column-container clearfix">
+			<div class="three-column-container clearfix">
 			
 			
 			
@@ -18,9 +18,9 @@
 						
 						
 						<!-- FEATURED CONTENT -->
-						<section id="section-box-featured" class="section-box clearfix">
+						<section id="section-box-featured-content" class="section-box section-box-featured clearfix">
 
-							<h2 class="section-box-title">Featured Content</h2>
+							<h2 class="section-box-featured-title">Featured Content</h2>
 
 								<!-- featured content stuff goes here -->
 								<?php ttx_slider(); ?>
@@ -30,8 +30,8 @@
 						
 						
 						<!-- FEATURED MULTIMEDIA -->
-						<section id="section-box-featured-multimedia" class="section-box clearfix">
-							<h2 class="section-box-title">Featured Multimedia</h2>
+						<section id="section-box-featured-multimedia" class="section-box section-box-featured clearfix">
+							<h2 class="section-box-featured-title">Featured Multimedia</h2>
 						
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 								
@@ -66,11 +66,11 @@
 				
 				
 				
-						<!-- PRINT EDITION and BLOGROLL -->
-						<section id="section-box-print-blogroll" class="section-box clearfix">
+						<!-- PRINT EDITION -->
+						<section id="section-box-print" class="section-box section-box-featured clearfix">
 							
-							<div id="links-print-edition" class="links-box sixcol first">
-							
+							<h2 class="section-box-featured-title">Print Edition</h2>
+
 								<?php
 								$print_thumb = new WP_Query('post_type=print_edition&posts_per_page=1');
 								if ($print_thumb->have_posts()) : while ($print_thumb->have_posts()) : $print_thumb->the_post();
@@ -79,20 +79,20 @@
 									<a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives"><?php the_post_thumbnail('ttn-print-thumb'); ?></a>
 							
 								<?php endwhile; endif; wp_reset_postdata(); ?>
-								
-								<span><a href="<?php get_site_url(); ?>/print" title="The Temple News Print Edition" alt="Link to The Temple News print archives">Read&nbsp;the&nbsp;Print&nbsp;Edition&nbsp;here!</a></span>
 							
-							</div> <!-- end #links-print-edition -->
-							
-							<div id="links-top" class="links-box sixcol last">
+						</section> <!-- end #section-box-print -->
+						
+						
+						<!-- FEATURED LINKS -->
+						<section id="section-box-featured-links" class="section-box section-box-featured clearfix">
+						
+							<h2 class="section-box-featured-title">Featured Links</h2>
 							
 								<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
 							
-							</div>
-						
-						</section> <!-- end #section-box-print-blogroll -->
-							
-							
+						</section> <!-- end #section-box-featured-links -->
+					
+					
 					
 					</div> <!-- end column-center-inner -->
 				
@@ -210,7 +210,7 @@
 				
 				</div> <!-- column-right -->
 		
-			</div> <!-- end .two-column-container -->
+			</div> <!-- end .three-column-container -->
 
 
 
