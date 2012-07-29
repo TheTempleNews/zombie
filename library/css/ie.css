@@ -106,7 +106,7 @@ img{margin:0 0 1.5em 0;}
 #menu-top-navigation .menu-parent-item a{position:relative;display:block;z-index:0;}
 #section-box-featured{margin-bottom:3em;}
 #content{margin-top:1.5em;}
-p{margin:1.5em 0;}
+p{margin-bottom:1.5em;}
 .hentry footer{border-bottom:0.0625em solid #cccccc;padding-bottom:1.5em;margin-bottom:3em;}
 #post-content{}#post-content dd{margin-bottom:1.5em;}
 #post-content pre,#post-content code{border:0.0625em solid #cccccc;}
