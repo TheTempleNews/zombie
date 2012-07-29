@@ -49,13 +49,15 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 			)
 		);
 	
+		global $post;
+	
 		?>
 			<h2 class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
 			// ZOMBIE SWARM!
 			if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
 				
-				$display_feat_img = get_post_meta( the_ID(), 'show_first_featured_image', true );
+				$display_feat_img = get_post_meta( $post->ID, 'show_first_featured_image', true );
 				
 				// TOP ARTICLE
 				if ( $count == 1 ) { ?>

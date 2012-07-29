@@ -40,6 +40,8 @@
 						// sets up counter to display first post differently (see TOP ARTICLE)
 						$firstpost = 'firstpost';
 						
+						global $post;
+						
 						// i set this query up not knowing offset and pagination don't get along. not used.
 						/* $main_query = new WP_Query( array(
 							'post_type'                => $post_type,
@@ -62,7 +64,7 @@
 							
 									<?php
 										$firstpost = '';
-										$display_feat_img = get_post_meta( the_ID(), 'show_first_featured_image', true );
+										$display_feat_img = get_post_meta( $post->ID, 'show_first_featured_image', true );
 									?>
 	
 										<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
