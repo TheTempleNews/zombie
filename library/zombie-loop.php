@@ -60,16 +60,13 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-						<?php if ( has_post_thumbnail() ) { ?>
-								<h3 class="headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							</header>
+							<h3 class="headline<?php if ( has_post_thumbnail() ) { echo ' top-headline'; } ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						</header>
+						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="featured-image-container featured-image-container-full twelvecol first last">
 								<?php the_post_thumbnail('zom-landscape-576'); ?>
 							</div>
-						<?php } else { ?>
-							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							</header>	
-						<?php } ?> 
+						<?php endif; ?>
 						<section class="dek">
 							<?php the_excerpt(); ?>
 						</section> <!-- end dek -->
