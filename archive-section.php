@@ -60,17 +60,22 @@
 						
 								if ( $firstpost == 'firstpost' ) { ?>
 							
-									<?php $firstpost = ''; ?>
-							
-									
+									<?php
+										$firstpost = '';
+										$display_feat_img = get_post_meta( the_ID(), 'show_first_featured_image', true );
+									?>
 	
 										<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
 	
-											<?php if ( has_post_thumbnail() ) : ?>
+											<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
 												<div class="featured-image-container featured-image-container-full twelvecol first last">
 													<?php the_post_thumbnail('zom-landscape-792'); ?>
 												</div>
-											<?php endif; ?>
+											<?php } elseif ( has_post_thumbnail() && $display_feat_img == false ) { ?>
+												<div class="featured-image-container featured-image-container-thumb twocol first">
+													<?php the_post_thumbnail('zom-thumb-96'); ?>
+												</div>
+											<?php } ?>
 	
 											<header>
 												<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
