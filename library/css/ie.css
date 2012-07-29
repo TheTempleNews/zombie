@@ -25,11 +25,13 @@ body{font-size:100%;line-height:1.5;}
 .home .slide-image{float:left;position:relative;}
 .home .column-inner{margin:0 3em;}
 .home #section-box-featured-multimedia,.home #section-box-print,.home #section-box-featured .section-box-title,.home #section-box-print-blogroll{display:block;}
-.home .section-box-title{border-bottom:0.0625em solid #cccccc;padding:0.75em 0;margin-bottom:1.4375em;}
+.home .section-box-title{border-bottom:0.0625em solid #cccccc;padding:0.75em 0;margin-bottom:2.9375em;}
 .home #links-print-edition span{font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
 .home #menu-top-links{list-style:none;margin:0;text-align:right;}.home #menu-top-links li{width:100%;}
 .home article{margin-bottom:1.5em;}.home article .featured-image-container-thumb{width:22.928176794%;margin:0 1.5em 1.5em 0;}
-.home article .dek{display:block;}
+.home article .headline{font-size:1.5em;line-height:1;margin:0.5em 0;}
+.home article .top-headline{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;}
+.home article .dek{display:block;}.home article .dek p{margin-top:0;}
 .archive .archive-main-title{border-bottom:0.0625em solid #cccccc;padding:0.71875em 0;}
 .post-type-archive .top-archive-article{border-bottom:0.0625em solid #cccccc;margin:0 0 3em 0;}
 .post-type-archive-multimedia{background-color:#222222;}.post-type-archive-multimedia #main{}.post-type-archive-multimedia #main .article-container{height:35em;margin-bottom:1.5em;}.post-type-archive-multimedia #main .article-container article{margin:1.5em;}
@@ -104,10 +106,12 @@ img{margin:0 0 1.5em 0;}
 #menu-top-navigation .menu-parent-item a{position:relative;display:block;z-index:0;}
 #section-box-featured{margin-bottom:3em;}
 #content{margin-top:1.5em;}
+p{margin:1.5em 0;}
 .hentry footer{border-bottom:0.0625em solid #cccccc;padding-bottom:1.5em;margin-bottom:3em;}
 #post-content{}#post-content dd{margin-bottom:1.5em;}
 #post-content pre,#post-content code{border:0.0625em solid #cccccc;}
 #post-content .wp-caption{padding:0.375em;}#post-content .wp-caption p.wp-caption-text{margin:0.375em;}
+.post-category-list-container{font-size:1.000em;line-height:1.500;margin:0;text-transform:uppercase;letter-spacing:0.01em;font-weight:300;}
 .commentlist{}.commentlist li{margin-bottom:1.5em;padding:0.75em 0.625em;}
 .commentlist li[class*=depth-]{margin-top:1.5em;}
 .commentlist li:not(.depth-1){margin-right:-0.625em;margin-left:-0.625em;}

@@ -63,8 +63,8 @@ style a page via class
 	.section-box-title {
 		/* border-top: @niceborders-l; */
 		border-bottom: @niceborders-l;
-		padding: (@lhem-l/2-@1px-l) 0;
-		margin-bottom: @lhem-l;
+		padding: (@lhem-l/2) 0;
+		margin-bottom: (@lhem-l*2)-@1px-l;
 	}
 	
 	#links-print-edition span {
@@ -90,8 +90,20 @@ style a page via class
 			margin: 0 @lhem-l @lhem-l 0;
 		}
 		
+		.headline {
+			.h4;
+		}
+		
+		.top-headline {
+			.h3;
+		}
+		
 		.dek {
 			display: block;
+			
+			p {
+				margin-top: 0;
+			}
 		}
 	}
 }                            /* home page */
@@ -619,6 +631,10 @@ POSTS & CONTENT STYLES
 	margin-top: @lhem-l; 
 }
 
+	p {
+		margin: @lhem-l 0;
+	}
+
 	.hentry {
 
 		footer {
@@ -648,6 +664,10 @@ POSTS & CONTENT STYLES
 			
 		} /* end .wp-caption */
 
+	} /* end post-content */
+	
+	.post-category-list-container {
+		.h6;
 	}
 			
 			

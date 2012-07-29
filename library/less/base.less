@@ -116,8 +116,8 @@ style a page via class
 	.section-box-title {
 		/* border-top: @niceborders-s; */
 		border-bottom: @niceborders-s;
-		padding: (@lhem-s/2-@1px-s) 0;
-		margin-bottom: @lhem-s;
+		padding: (@lhem-s/2) 0;
+		margin-bottom: (@lhem-s*2)-@1px-s;
 		font-weight: 700;
 
 		a, a:visited {
@@ -143,6 +143,19 @@ style a page via class
 	
 	article {
 		margin-bottom: @lhem-s;
+		
+		header,
+		.dek,
+		.post-category-list-container,
+		.headline,
+		.featured-image-container {
+			.clearfix;
+			
+			&:after {
+				clear: none;
+			}
+			
+		}
 		
 		.featured-image-container-thumb {
 			width: 22.928176794%;
@@ -912,6 +925,10 @@ POSTS & CONTENT STYLES
 #content { 
 	margin-top: @lhem-s; 
 }
+
+		p {
+			margin: @lhem-s 0;
+		}
 	
 		.hentry {
 		
