@@ -49,11 +49,15 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 			)
 		);
 	
+		global $post;
+	
 		?>
 			<h2 id="<?php echo $ttn_section; ?>-section-box-title" class="section-box-title h6"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
 			// ZOMBIE SWARM!
 			if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
+				
+				$display_feat_img = get_post_meta( $post->ID, 'show_first_featured_image', true );
 				
 				// TOP ARTICLE
 				if ( $count == 1 ) { ?>
@@ -62,11 +66,15 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 							<h3 class="headline<?php if ( has_post_thumbnail() ) { echo ' top-headline'; } ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						</header>
-						<?php if ( has_post_thumbnail() ) : ?>
+						<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
 							<div class="featured-image-container featured-image-container-full twelvecol first last">
 								<?php the_post_thumbnail('zom-landscape-576'); ?>
 							</div>
-						<?php endif; ?>
+						<?php } elseif ( has_post_thumbnail() && $display_feat_img == false ) { ?>
+							<div class="featured-image-container featured-image-container-thumb twocol first">
+								<?php the_post_thumbnail('zom-thumb-96'); ?>
+							</div>
+						<?php } ?>
 						<section class="dek">
 							<?php the_excerpt(); ?>
 						</section> <!-- end dek -->
@@ -226,7 +234,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 	
 	
 	/**********************
-	** SECTION PAGE LOOP **
+	** SECTION PAGE LOOP **    I'm pretty sure this is never used... 
 	***********************/
 	
 	if ( is_post_type_archive( $post_type ) ) :
@@ -249,14 +257,18 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 				// TOP ARTICLE on first page
 				if ( $count == 1 && !is_paged() ) { ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
-						<?php if ( has_post_thumbnail() ) : ?>
+						<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
 							<div class="featured-image-container featured-image-container-full twelvecol first last">
 								<?php the_post_thumbnail('zom-landscape-792'); ?>
 							</div>
-						<?php endif; ?>
+						<?php } elseif ( has_post_thumbnail() && $display_feat_img == false ) { ?>
+							<div class="featured-image-container featured-image-container-thumb twocol first">
+								<?php the_post_thumbnail('zom-thumb-96'); ?>
+							</div>
+						<?php } ?>
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h1 class="headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+							<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 						</header>
 						<section class="dek">
 							<?php the_excerpt(); ?>
