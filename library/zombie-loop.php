@@ -128,7 +128,8 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 				$query = new WP_Query( array(
 					'posts_per_page'		=> $show_posts,
 					'post_type'             => $post_type,
-					'category__not_in'		=> 3
+					'category__not_in'		=> 3,
+					'cat'                   => 26
 					)
 				);
 				
