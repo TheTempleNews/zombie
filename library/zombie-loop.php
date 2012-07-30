@@ -225,7 +225,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 						<?php } ?>
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						</header>
 						<section class="dek">
 							<?php the_excerpt(); ?>
@@ -240,7 +240,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<?php endif; ?>
 					<header>
 						<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-						<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+						<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 					</header>
 					<section class="dek">
 						<?php the_excerpt(); ?>
