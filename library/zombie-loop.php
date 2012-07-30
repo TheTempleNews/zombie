@@ -50,7 +50,8 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		);
 	
 		global $post;
-	
+		
+		if ( $post_type !== 'article_opinion' ) {
 		?>
 			<h2 class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
@@ -105,13 +106,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 			// ...good shot!
 			wp_reset_postdata(); 
 		
-		/* this was the experimental attempt to make opinion a horizontal layout
-		but the index.php style changed so this was abandoned */	
-		/* if ( $post_type == 'article_opinion' ) {
-			
-			
-	
-		?>
+		} // end the stuff for everything but opinion
 			<h2 class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
 			
