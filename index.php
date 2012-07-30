@@ -235,7 +235,7 @@
 			<!-- OPINION SECTION -->
 			<section id="section-box-opinion" class="section-container section-box twelvecol first last clearfix">
 				
-				<?php the_zombie_loop(opinion); ?>
+				<?php the_zombie_loop( opinion, 6 ); ?>
 				
 			</section> <!-- end #section-box-opinion -->
 
