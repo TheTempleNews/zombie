@@ -50,7 +50,8 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		);
 	
 		global $post;
-	
+		
+		if ( $post_type !== 'article_opinion' ) {
 		?>
 			<h2 id="<?php echo $ttn_section; ?>-section-box-title" class="section-box-title h6"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
@@ -105,20 +106,19 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 			// ...good shot!
 			wp_reset_postdata(); 
 		
-		/* this was the experimental attempt to make opinion a horizontal layout
-		but the index.php style changed so this was abandoned */	
-		/* if ( $post_type == 'article_opinion' ) {
-			
-			
-	
-		?>
+		} // end the stuff for everything but opinion
+		
+		
+		
+		
+		
+		/* OPINION SECTION (HOZ) */	
+		if ( $post_type == 'article_opinion' ) { ?>
 			<h2 class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
-			
-				
 				// set class to first or last depending on position in n column layout where number of keys == n
 				// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
-				$style_classes = array('first', '', '', 'last');
+				$style_classes = array('first', '', '', '', '', 'last'); // 6 articles per row
 				$styles_count = count($style_classes);
 				$style_index = 0;
 				
@@ -128,108 +128,43 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 				$query = new WP_Query( array(
 					'posts_per_page'		=> $show_posts,
 					'post_type'             => $post_type,
-					'category__not_in'		=> 3
+					'category__not_in'		=> 3,
+					'cat'                   => 26
 					)
 				);
 				
-								?>
-			
-				
-				<div id="multimedia-mgallery" class="mgallery twelvecol first last clearfix">
-				
-					<div id="post-type-loop-top" class="multimedia-mgallery-top fourcol first clearfix">
-			
-						<?php // begin the loop
-						// ZOMBIE SWARM!
-						if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
+				if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
 
-					
-						if ( $firstpost == 'firstpost' ) { ?>
+					// this is the second part of the operation that determines first or last class based on column divisions. see above.
+					$k = $style_classes[$style_index++ % $styles_count];
+					?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' twocol clearfix ' . $k ); ?> role="article">
+							<?php if ( has_post_thumbnail() ) { ?>
+								<div class="featured-image-container featured-image-container-thumb">
+									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('zom-thumb-96'); ?></a>
+								</div>
+							<?php } ?>
+						<header>
+							<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
+							<h2 class="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						</header>
+						<section class="dek">
+							<?php the_excerpt(); ?>
+						</section> <!-- end dek -->
+					</article> <!-- end article -->
+				<?php
 				
-							<?php $firstpost = ''; ?>
+				endwhile; endif; // kill loop
 				
-							<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . 'twelvecol first last clearfix' ); ?> role="article">
-								
-								
-								<?php if ( has_post_thumbnail() ) : ?>
-									<div class="featured-image-container featured-image-container-full twelvecol first last">
-										<?php the_post_thumbnail('zom-landscape-576'); ?>
-										</div>
-								<?php endif; ?>
-
-								<header class="clearfix">
-									<!-- <div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div> -->
-									<h2 class="home-multimedia-headline multimedia-headline home-multimedia-top-headline multimedia-top-headline headline top-headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-									<p class="home-multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="home-multimedia-authors multimeda-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ) ?></time>
-								</header>
-
-								<section class="dek">
-									<?php the_excerpt(); ?>
-								</section> <!-- end multimedia-dek -->
-
-							</article> <!-- end article -->
-
-						<?php } // end first post
-				
-						endwhile; endif; // close loop
-				
-						rewind_posts(); // start the loop over again ?>
-					
-					</div> <!-- end #post-type-loop-top -->
-				
-				
-					<div id="post-type-loop-main" class="eightcol last">
-	
-						<?php // begin the loop again
-				
-						$firstpost = 'firstpost';
-				
-						if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-				
-						if ( $firstpost == 'firstpost' ) {
-							$firstpost = '';
-						} 
-				
-						else { // all non-first posts format ?>
-								
-								<?php 
-								// this is the second part of the operation that determines first or last class based on column divisions. see above.
-								$k = $style_classes[$style_index++ % $styles_count]; ?>
-
-								<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . 'threecol clearfix ' . $k ); ?> role="article">
-									<a href="<?php the_permalink(); ?>" class="article-link">
-									
-										<?php if ( has_post_thumbnail() ) : ?>
-											<div class="featured-image-container featured-image-container-full twelvecol first last">
-												<?php the_post_thumbnail('zom-landscape-396'); ?>
-											</div>
-										<?php endif; ?>
-	
-										<header>
-											<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-											<h2 class="home-multimedia-headline multimedia-headline headline"><?php the_title(); ?></h2>
-											<p class="home-multimedia-byline multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="home-multimedia-authors multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
-										</header>
-	
-										<section class="dek">
-											<?php the_excerpt(); ?>
-										</section> <!-- dek -->
-									
-									</a> <!-- end article-link -->
-
-								</article> <!-- end article -->
-				
-						<?php } // end non-first posts
-			
-						endwhile; endif; // kill loop ?>
-			
-					</div> <!-- end #post-type-loop-main -->
-				
-				</div> <!-- end #multimedia-mgallery -->
-			
-		<?php } */
+		} // end opinion section
 		
-	endif; // end is_front_page()
+	endif; // end is_front_page() 
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -268,7 +203,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 						<?php } ?>
 						<header>
 							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						</header>
 						<section class="dek">
 							<?php the_excerpt(); ?>
@@ -283,7 +218,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<?php endif; ?>
 					<header>
 						<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-						<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+						<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 					</header>
 					<section class="dek">
 						<?php the_excerpt(); ?>

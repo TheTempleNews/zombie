@@ -48,15 +48,11 @@ style a page via class
 		float:left;
 		position: relative;
 	}
-	
-	.column-inner {
-		margin: 0 3em;
-	}
 
 	#section-box-featured-multimedia,
 	#section-box-print,
 	#section-box-featured .section-box-title,
-	#section-box-print-blogroll {
+	#section-box-featured-links {
 		display: block;
 	}
 	
@@ -106,6 +102,32 @@ style a page via class
 			}
 		}
 	}
+
+	#section-box-opinion {
+		
+		.featured-image-container-thumb {
+			height: (@lhem-l*8); /* will need to be adjusted in typography branch */
+			width: auto;
+			margin: 0;
+			position: static;
+			float: none;
+			
+			a {
+				display: block;
+				margin: @lhem-l auto;
+				
+				img {
+					display: block;
+					margin: @lhem-l auto;
+					width: auto;
+				}
+			}
+		}
+		
+		article {
+			text-align: center;
+		}
+	} /* end .home #section-box-opinion */
 }                            /* home page */
 .blog {}                            /* blog page */
 .archive {
@@ -213,16 +235,30 @@ LAYOUT & GRID STYLES
 		If you want to use 1140, the original values are commented
 		out on each line.
 	*/
-	.onecol    { width:  5.801104972%;  }       /* 4.85%;  } /* grid_1  */
+	
+	@onecol    :  5.801104972%;
+	@twocol    : 14.364640883%;
+	@threecol  : 22.928176794%;
+	@fourcol   : 31.491712705%;
+	@fivecol   : 40.055248616%;
+	@sixcol    : 48.618784527%;
+	@sevencol  : 57.182320438%;
+	@eightcol  : 65.745856349%;
+	@ninecol   : 74.309392260%;
+	@tencol    : 82.872928171%;
+	@elevencol : 91.436464082%;
+	@twelvecol : 99.999999993%;
+	
+	.onecol    { width:  5.801104972%; }       /* 4.85%;  } /* grid_1  */
 	.twocol    { width: 14.364640883%; }       /* 13.45%; } /* grid_2  */
 	.threecol  { width: 22.928176794%; }       /* 22.05%; } /* grid_3  */
 	.fourcol   { width: 31.491712705%; }       /* 30.75%; } /* grid_4  */
 	.fivecol   { width: 40.055248616%; }       /* 39.45%; } /* grid_5  */
 	.sixcol    { width: 48.618784527%; }       /* 48%;    } /* grid_6  */
-	.sevencol  { width: 57.182320438%; } /* 56.75%; } /* grid_7  */
-	.eightcol  { width: 65.745856349%; }  /* 65.4%;  } /* grid_8  */
-	.ninecol   { width: 74.309392260%; }        /* 74.05%; } /* grid_9  */
-	.tencol    { width: 82.872928171%; }  /* 82.7%;  } /* grid_10 */
+	.sevencol  { width: 57.182320438%; }       /* 56.75%; } /* grid_7  */
+	.eightcol  { width: 65.745856349%; }       /* 65.4%;  } /* grid_8  */
+	.ninecol   { width: 74.309392260%; }       /* 74.05%; } /* grid_9  */
+	.tencol    { width: 82.872928171%; }       /* 82.7%;  } /* grid_10 */
 	.elevencol { width: 91.436464082%; }       /* 91.35%; } /* grid_11 */
 	.twelvecol { width: 99.999999993%; }       /* 100%;   } /* grid_12 */
 	
@@ -249,32 +285,45 @@ LAYOUT & GRID STYLES
 	}
 	
 	/* push classes */
-	.push_one    { left:  (5.801104972% + @grid_margin-left); }       /* 4.85%;  } /* grid_1  */
-	.push_two    { left: (14.364640883% + @grid_margin-left); }       /* 13.45%; } /* grid_2  */
-	.push_three  { left: (22.928176794% + @grid_margin-left); }       /* 22.05%; } /* grid_3  */
-	.push_four   { left: (31.491712705% + @grid_margin-left); }       /* 30.75%; } /* grid_4  */
-	.push_five   { left: (40.055248616% + @grid_margin-left); }       /* 39.45%; } /* grid_5  */
-	.push_six    { left: (48.618784527% + @grid_margin-left); }       /* 48%;    } /* grid_6  */
-	.push_seven  { left: (57.182320438% + @grid_margin-left); } /* 56.75%; } /* grid_7  */
-	.push_eight  { left: (65.745856349% + @grid_margin-left); }  /* 65.4%;  } /* grid_8  */
-	.push_nine   { left: (74.309392260% + @grid_margin-left); }        /* 74.05%; } /* grid_9  */
-	.push_ten    { left: (82.872928171% + @grid_margin-left); }  /* 82.7%;  } /* grid_10 */
-	.push_eleven { left: (91.436464082% + @grid_margin-left); }       /* 91.35%; } /* grid_11 */
-	.push_twelve { left: (99.999999993% + @grid_margin-left); }       /* 100%;   } /* grid_12 */
+	.push_one    { margin-left:  (5.801104972% + @grid_margin-left); }       /* 4.85%;  } /* grid_1  */
+	.push_two    { margin-left: (14.364640883% + @grid_margin-left); }       /* 13.45%; } /* grid_2  */
+	.push_three  { margin-left: (22.928176794% + @grid_margin-left); }       /* 22.05%; } /* grid_3  */
+	.push_four   { margin-left: (31.491712705% + @grid_margin-left); }       /* 30.75%; } /* grid_4  */
+	.push_five   { margin-left: (40.055248616% + @grid_margin-left); }       /* 39.45%; } /* grid_5  */
+	.push_six    { margin-left: (48.618784527% + @grid_margin-left); }       /* 48%;    } /* grid_6  */
+	.push_seven  { margin-left: (57.182320438% + @grid_margin-left); } /* 56.75%; } /* grid_7  */
+	.push_eight  { margin-left: (65.745856349% + @grid_margin-left); }  /* 65.4%;  } /* grid_8  */
+	.push_nine   { margin-left: (74.309392260% + @grid_margin-left); }        /* 74.05%; } /* grid_9  */
+	.push_ten    { margin-left: (82.872928171% + @grid_margin-left); }  /* 82.7%;  } /* grid_10 */
+	.push_eleven { margin-left: (91.436464082% + @grid_margin-left); }       /* 91.35%; } /* grid_11 */
+	.push_twelve { margin-left: (99.999999993% + @grid_margin-left); }       /* 100%;   } /* grid_12 */
 
-	/* pull classes */
-	.pull_one    { left:  -(5.801104972% + @grid_margin-left); }       /* 4.85%;  } /* grid_1  */
-	.pull_two    { left: -(14.364640883% + @grid_margin-left); }       /* 13.45%; } /* grid_2  */
-	.pull_three  { left: -(22.928176794% + @grid_margin-left); }       /* 22.05%; } /* grid_3  */
-	.pull_four   { left: -(31.491712705% + @grid_margin-left); }       /* 30.75%; } /* grid_4  */
-	.pull_five   { left: -(40.055248616% + @grid_margin-left); }       /* 39.45%; } /* grid_5  */
-	.pull_six    { left: -(48.618784527% + @grid_margin-left); }       /* 48%;    } /* grid_6  */
-	.pull_seven  { left: -(57.182320438% + @grid_margin-left); } /* 56.75%; } /* grid_7  */
-	.pull_eight  { left: -(65.745856349% + @grid_margin-left); }  /* 65.4%;  } /* grid_8  */
-	.pull_nine   { left: -(74.309392260% + @grid_margin-left); }        /* 74.05%; } /* grid_9  */
-	.pull_ten    { left: -(82.872928171% + @grid_margin-left); }  /* 82.7%;  } /* grid_10 */
-	.pull_eleven { left: -(91.436464082% + @grid_margin-left); }       /* 91.35%; } /* grid_11 */
-	.pull_twelve { left: -(99.999999993% + @grid_margin-left); }       /* 100%;   } /* grid_12 */
+	/* pull classes */	
+	.pull_one    { margin-left:  -(5.801104972% + @grid_margin-left); }       /* 4.85%;  } /* grid_1  */
+	.pull_two    { margin-left: -(14.364640883% + @grid_margin-left); }       /* 13.45%; } /* grid_2  */
+	.pull_three  { margin-left: -(22.928176794% + @grid_margin-left); }       /* 22.05%; } /* grid_3  */
+	.pull_four   { margin-left: -(31.491712705% + @grid_margin-left); }       /* 30.75%; } /* grid_4  */
+	.pull_five   { margin-left: -(40.055248616% + @grid_margin-left); }       /* 39.45%; } /* grid_5  */
+	.pull_six    { margin-left: -(48.618784527% + @grid_margin-left); }       /* 48%;    } /* grid_6  */
+	.pull_seven  { margin-left: -(57.182320438% + @grid_margin-left); } /* 56.75%; } /* grid_7  */
+	.pull_eight  { margin-left: -(65.745856349% + @grid_margin-left); }  /* 65.4%;  } /* grid_8  */
+	.pull_nine   { margin-left: -(74.309392260% + @grid_margin-left); }        /* 74.05%; } /* grid_9  */
+	.pull_ten    { margin-left: -(82.872928171% + @grid_margin-left); }  /* 82.7%;  } /* grid_10 */
+	.pull_eleven { margin-left: -(91.436464082% + @grid_margin-left); }       /* 91.35%; } /* grid_11 */
+	.pull_twelve { margin-left: -(99.999999993% + @grid_margin-left); }       /* 100%;   } /* grid_12 */
+	
+	   .pull_one.first { margin-left:  -(5.801104972%); }       /* 4.85%;  } /* grid_1  */
+	   .pull_two.first { margin-left: -(14.364640883%); }       /* 13.45%; } /* grid_2  */
+	 .pull_three.first { margin-left: -(22.928176794%); }       /* 22.05%; } /* grid_3  */
+	  .pull_four.first { margin-left: -(31.491712705%); }       /* 30.75%; } /* grid_4  */
+	  .pull_five.first { margin-left: -(40.055248616%); }       /* 39.45%; } /* grid_5  */
+	   .pull_six.first { margin-left: -(48.618784527%); }       /* 48%;    } /* grid_6  */
+	 .pull_seven.first { margin-left: -(57.182320438%); }       /* 56.75%; } /* grid_7  */
+	 .pull_eight.first { margin-left: -(65.745856349%); }       /* 65.4%;  } /* grid_8  */
+	  .pull_nine.first { margin-left: -(74.309392260%); }       /* 74.05%; } /* grid_9  */
+	   .pull_ten.first { margin-left: -(82.872928171%); }       /* 82.7%;  } /* grid_10 */
+	.pull_eleven.first { margin-left: -(91.436464082%); }       /* 91.35%; } /* grid_11 */
+	.pull_twelve.first { margin-left: -(99.999999993%); }       /* 100%;   } /* grid_12 */
 	
 	
 	
@@ -330,7 +379,6 @@ IMAGE STYLES
 img { 
 	margin: 0 0 @lhem-l 0; 
 }
-
 
 
 /*********************
