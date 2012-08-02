@@ -143,6 +143,16 @@ p{margin-bottom:1.5em;}
 .widgettitle{border-bottom:0.0625em solid #cccccc;margin-bottom:0.75em;}
 .widget{padding:0 10px;margin:3em 0;}.widget ul li{margin-bottom:0.75em;}
 .widget ul li ul{margin-top:0.75em;padding-left:1.5em;}
+.widget_twitter div{padding:0;font-family:'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:75%;line-height:1;list-style:none;}.widget_twitter div ul{list-style:none;padding:0;}
+.widget_twitter div ul li{margin-bottom:5px;}
+.widget_twitter div .follow-button,.widget_twitter div .xavisys-link{margin:0 10px 10px 25px;}
+.widget_twitter div .entry-meta{display:block;font-size:80%;}
+.widget_twitter div .intent-meta a{background:url(../images/everything-spritev2.png);display:inline-block;height:16px;text-indent:-9999px;width:16px;}.widget_twitter div .intent-meta a.in-reply-to{background-position:0 center;}
+.widget_twitter div .intent-meta a:hover.in-reply-to{background-position:-16px center;}
+.widget_twitter div .intent-meta a.favorite{background-position:-32px center;}
+.widget_twitter div .intent-meta a:hover.favorite{background-position:-48px center;}
+.widget_twitter div .intent-meta a.retweet{background-position:-80px center;}
+.widget_twitter div .intent-meta a:hover.retweet{background-position:-96px center;}
 .footer{padding-top:1.5em;}.footer p{font-size:0.875em;}
 #inner-footer{margin:1.5em auto;}
 #footer-column-center{text-align:center;}#footer-column-center #footer-links-sections,#footer-column-center #footer-links-meta{margin:1.5em auto;}
