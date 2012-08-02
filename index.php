@@ -124,7 +124,7 @@
 						
 						<!-- DESKTOP-ONLY ADS -->
 						<?php if ( !is_handheld() ) : ?>
-						<div class="ad-container rectangle-ad-container twelvecol first last">
+						<div class="ad-container rectangle-ad-container clearfix">
 							<div class="ad rectangle-ad adsense">
 								
 								<!-- NSSportsBoxR -->
