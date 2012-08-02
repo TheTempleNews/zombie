@@ -20,7 +20,7 @@
 				
 				<!-- DESKTOP-ONLY ADS -->
 				<?php if ( !is_handheld() ) : ?>
-				<div class="ad-container fourcol last clearfix">
+				<div class="ad-container clearfix">
 					<div class="ad rectangle-ad twelvecol first last">
 						
 						<!-- NSSidebarRect -->
