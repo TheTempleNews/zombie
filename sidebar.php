@@ -1,4 +1,6 @@
-				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
+			<div id="sidebar" class="sidebar fourcol last clearfix" role="complementary">
+
+				<div id="sidebar1">
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
@@ -14,7 +16,9 @@
 
 					<?php endif; ?>
 
-				</div>
+				</div> <!-- end sidebar1 -->
+				
+				
 				
 				<!-- DESKTOP-ONLY ADS -->
 				<?php if ( !is_handheld() ) : ?>
@@ -32,7 +36,9 @@
 				</div>
 				<?php endif; ?>
 				
-				<div id="sidebar2" class="sidebar fourcol last clearfix" role="complementary">
+				
+				
+				<div id="sidebar2">
 
 					<?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
 
@@ -48,4 +54,6 @@
 
 					<?php endif; ?>
 
-				</div>
+				</div> <!-- end sidebar2 -->
+				
+			</div> <!-- end sidebar -->
