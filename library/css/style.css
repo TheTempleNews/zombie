@@ -3559,8 +3559,17 @@ you can add resource intensive styles.
   .widget_twitter div {
     padding: 0;
     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 75%;
+    /* 12px */
+  
+    line-height: 1;
+    list-style: none;
     /* end .intent-meta */
   
+  }
+  .widget_twitter div ul {
+    list-style: none;
+    padding: 0;
   }
   .widget_twitter div ul li {
     margin-bottom: 5px;
@@ -3574,7 +3583,7 @@ you can add resource intensive styles.
     font-size: 80%;
   }
   .widget_twitter div .intent-meta a {
-    background: url(images/everything-spritev2.png);
+    background: url(../images/everything-spritev2.png);
     /** from Twitter resources */
   
     display: inline-block;
