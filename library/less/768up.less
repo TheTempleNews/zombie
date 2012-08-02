@@ -647,6 +647,61 @@ SIDEBARS & ASIDES
 	.widget_text {}
 	.textwidget p {}
 	
+	/* twitter widget pro */
+	/* http://bluedogwebservices.com/wordpress-plugin/twitter-widget-pro/ */
+	.widget_twitter div {
+	    padding:0;
+	    font-family: @sans-serif;
+	    
+	    ul li {
+		    margin-bottom:5px;
+		}
+		
+		.follow-button,
+		.xavisys-link {
+			margin:0 10px 10px 25px;
+		}
+		
+		.entry-meta {
+		    display:block;
+		    font-size:80%;
+		}
+		
+		.intent-meta {
+			a {
+			    background: url(images/everything-spritev2.png); /** from Twitter resources */
+			    display: inline-block;
+			    height: 16px;
+			    text-indent: -9999px;
+			    width: 16px;
+			    
+			    &.in-reply-to {
+				    background-position: 0 center;
+			    }
+			    
+			    &:hover.in-reply-to {
+		    	    background-position: -16px center;
+			    }
+			    
+			    &.favorite {
+				    background-position: -32px center;
+			    }
+			    
+			    &:hover.favorite {
+		    	    background-position: -48px center;
+			    }
+			    
+			    &.retweet {
+		    	    background-position: -80px center;
+			    }
+			    
+			    &:hover.retweet {
+		    	    background-position: -96px center;
+			    }
+			}
+		} /* end .intent-meta */
+	} /* end twitter widget pro */
+	
 
 /*********************
 FOOTER STYLES
