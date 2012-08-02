@@ -1,5 +1,3 @@
-			<div id="sidebar" class="sidebar fourcol last clearfix" role="complementary">
-
 				<div id="sidebar1">
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
@@ -55,5 +53,3 @@
 					<?php endif; ?>
 
 				</div> <!-- end sidebar2 -->
-				
-			</div> <!-- end sidebar -->

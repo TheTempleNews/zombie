@@ -80,7 +80,11 @@ taxonomy-shoes.php
 			
 				    </div> <!-- end #main -->
     
-				    <?php get_sidebar(); // sidebar 1 ?>
+				    <aside id="sidebar" class="sidebar fourcol last clearfix" role="complementary">
+    
+						<?php get_sidebar(); // primary sidebar ?>
+					
+					</aside>
 				    
 				</div> <!-- end #inner-content -->
     
