@@ -77,6 +77,11 @@ style a page via class
 			width: 100%;
 		}
 	}
+	article {
+		.featured-image-container-thumb {
+			width: 96px
+		}
+	}
 	
 	article {
 		margin-bottom: @lhem-l;
@@ -105,27 +110,20 @@ style a page via class
 
 	#section-box-opinion {
 		
-		.featured-image-container-thumb {
-			height: (@lhem-l*8); /* will need to be adjusted in typography branch */
-			width: auto;
-			margin: 0;
-			position: static;
-			float: none;
-			
-			a {
-				display: block;
-				margin: @lhem-l auto;
-				
-				img {
-					display: block;
-					margin: @lhem-l auto;
-					width: auto;
-				}
-			}
-		}
-		
 		article {
 			text-align: center;
+			
+			.featured-image-container-thumb {
+				width: auto;
+				margin: @lhem-l auto;
+				position: static;
+				float: none;
+				
+				& a,
+				& img {
+					display: block;
+				}
+			}
 		}
 	} /* end .home #section-box-opinion */
 }                            /* home page */
