@@ -23,8 +23,8 @@ span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif
 .home .slide-image{float:left;position:relative;}
 .home #section-box-featured-multimedia,.home #section-box-print,.home #section-box-featured .section-box-title,.home #section-box-featured-links{display:block;}
 .home #menu-top-links{list-style:none;margin:0;text-align:right;}.home #menu-top-links li{width:100%;}
-.home #section-box-opinion .featured-image-container-thumb{height:9.000em;width:auto;margin:0;position:static;float:none;}.home #section-box-opinion .featured-image-container-thumb a{display:block;margin:1.5em auto;}.home #section-box-opinion .featured-image-container-thumb a img{display:block;margin:1.5em auto;width:auto;}
-.home #section-box-opinion article{text-align:center;}
+.home article .featured-image-container-thumb{width:96px;}
+.home #section-box-opinion article{text-align:center;}.home #section-box-opinion article .featured-image-container-thumb{height:9.000em;width:auto;margin:1.5em auto;position:static;float:none;}
 .post-type-archive .top-news-article{border-bottom:1px solid #cccccc;padding:1em 0;}
 .post-type-archive-multimedia{background-color:#222222;}.post-type-archive-multimedia #main .article-container{height:35em;}
 .post-type-archive-slideshow #main .article-container{height:35em;}

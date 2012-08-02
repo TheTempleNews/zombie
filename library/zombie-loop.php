@@ -86,7 +86,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 						<?php // disable small thumbnails because of a disproportionate amount of images in sections
 						if ( has_post_thumbnail() ) : ?>
-							<div class="featured-image-container featured-image-container-thumb twocol first">
+							<div class="featured-image-container featured-image-container-thumb">
 								<?php the_post_thumbnail('zom-thumb-96'); ?>
 							</div>
 						<?php endif; ?>
