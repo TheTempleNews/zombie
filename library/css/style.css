@@ -3844,6 +3844,16 @@ you can add resource intensive styles.
     padding-top: 0;
     border-top: none;
   }
+  #widgetized-front-center {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #widgetized-front-center .widget_tptn_pop ul,
+  #widgetized-front-center .widget_tptn_pop_daily ul {
+    list-style: none;
+    padding: 0;
+    font-size: 75%;
+    line-height: 1.333;
+  }
   .widgettitle {
     border-bottom: 0.0625em solid #cccccc;
     margin-bottom: 0.75em;
@@ -3876,29 +3886,67 @@ you can add resource intensive styles.
   /* http://bluedogwebservices.com/wordpress-plugin/twitter-widget-pro/ */
   .widget_twitter div {
     padding: 0;
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 75%;
-    /* 12px */
-  
-    line-height: 1;
-    list-style: none;
     /* end .intent-meta */
   
   }
   .widget_twitter div ul {
     list-style: none;
     padding: 0;
+    font-size: 75%;
+    /* 12px */
+  
+    line-height: 1.333;
   }
   .widget_twitter div ul li {
-    margin-bottom: 5px;
+    /* for IE */
+  
+    zoom: 1;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 0.0625em solid #cccccc;
+    display: block;
+  }
+  .widget_twitter div ul li:before,
+  .widget_twitter div ul li:after {
+    content: "";
+    display: table;
+  }
+  .widget_twitter div ul li:after {
+    clear: both;
   }
   .widget_twitter div .follow-button,
   .widget_twitter div .xavisys-link {
     margin: 0 10px 10px 25px;
   }
-  .widget_twitter div .entry-meta {
+  .widget_twitter div .entry-content,
+  .widget_twitter div .entry-meta,
+  .widget_twitter div .intent-meta {
     display: block;
+    margin: auto 1.6em;
+  }
+  .widget_twitter div .entry-content {
+    /* for IE */
+  
+    zoom: 1;
+    padding: 0 0 5px;
+  }
+  .widget_twitter div .entry-content:before,
+  .widget_twitter div .entry-content:after {
+    content: "";
+    display: table;
+  }
+  .widget_twitter div .entry-content:after {
+    clear: both;
+  }
+  .widget_twitter div .entry-meta {
     font-size: 80%;
+    line-height: 1.6;
+    text-align: right;
+    font-weight: 700;
+    float: right;
+  }
+  .widget_twitter div .intent-meta {
+    float: left;
   }
   .widget_twitter div .intent-meta a {
     background: url(../images/everything-spritev2.png);
