@@ -1,8 +1,8 @@
-				<div id="sidebar1">
+				<div id="widgetized-front-center-1">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					<?php if ( is_active_sidebar( 'widgetized-front-center-1' ) ) : ?>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<?php dynamic_sidebar( 'widgetized-front-center-1' ); ?>
 
 					<?php else : ?>
 
@@ -14,7 +14,7 @@
 
 					<?php endif; ?>
 
-				</div> <!-- end sidebar1 -->
+				</div> <!-- end widgetized-front-center-1 -->
 				
 				
 				
@@ -23,12 +23,7 @@
 				<div class="ad-container clearfix">
 					<div class="ad rectangle-ad twelvecol first last">
 						
-						<!-- NSSidebarRect -->
-						<div id='div-gpt-ad-1342714724220-4' style='width:300px; height:100px; margin:0px auto;'>
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-4'); });
-						</script>
-						</div>
+						
 						
 					</div>
 				</div>
@@ -36,11 +31,11 @@
 				
 				
 				
-				<div id="sidebar2">
+				<div id="widgetized-front-center-2">
 
-					<?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
+					<?php if ( is_active_sidebar( 'widgetized-front-center-2' ) ) : ?>
 
-						<?php dynamic_sidebar( 'sidebar2' ); ?>
+						<?php dynamic_sidebar( 'widgetized-front-center-2' ); ?>
 
 					<?php else : ?>
 
@@ -52,4 +47,4 @@
 
 					<?php endif; ?>
 
-				</div> <!-- end sidebar2 -->
+				</div> <!-- end widgetized-front-center-2 -->

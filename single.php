@@ -86,8 +86,12 @@
 						<?php endif; ?>
 			
 					</div> <!-- end #main -->
+					
+					<aside id="sidebar" class="sidebar fourcol last clearfix" role="complementary">
     
-					<?php get_sidebar(); // sidebar 1 ?>
+						<?php get_sidebar(); // primary sidebar ?>
+					
+					</aside>
 
 				</div> <!-- end #inner-content -->
     

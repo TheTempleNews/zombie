@@ -91,6 +91,14 @@
 								<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
 							
 						</section> <!-- end #section-box-featured-links -->
+						
+						
+						
+						<div id="widgetized-front-center" class="clearfix" role="complementary">
+    
+						<?php get_sidebar('home'); // front and center sidebar ?>
+					
+						</div>
 					
 					
 					

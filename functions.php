@@ -127,8 +127,8 @@ function custom_image_sizes_choose( $sizes ) {
 function bones_register_sidebars() {
     register_sidebar(array(
     	'id' => 'sidebar1',
-    	'name' => 'Sidebar 1',
-    	'description' => 'The first (primary) sidebar.',
+    	'name' => 'Primary Sidebar (First)',
+    	'description' => 'The first primary sidebar.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
@@ -137,8 +137,28 @@ function bones_register_sidebars() {
 
 	register_sidebar(array(
     	'id' => 'sidebar2',
-    	'name' => 'Sidebar 2',
-    	'description' => 'The second (secondary) sidebar.',
+    	'name' => 'Primary Sidebar (Second)',
+    	'description' => 'The second primary sidebar.',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '<h4 class="widgettitle">',
+    	'after_title' => '</h4>',
+    ));
+    
+    register_sidebar(array(
+    	'id' => 'widgetized-front-center-1',
+    	'name' => 'Homepage Center Widgets (First)',
+    	'description' => 'The first widgetized area for the home page center column.',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '<h4 class="widgettitle">',
+    	'after_title' => '</h4>',
+    ));
+    
+    register_sidebar(array(
+    	'id' => 'widgetized-front-center-2',
+    	'name' => 'Homepage Center Widgets (Second)',
+    	'description' => 'The second widgetized area for the home page center column.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
