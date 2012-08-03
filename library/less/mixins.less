@@ -268,6 +268,16 @@ BOX SHADOW
 }
 
 /*********************
+TEXT SHADOW
+*********************/
+
+.textShadow(@x: 3px, @y: 3px, @radius: 4px, @color: rgba(0,0,0,0.3)) {
+	text-shadow: @x @y @radius @color;
+        filter: dropshadow(color=@color, offx=@x, offy=@y);
+}
+
+
+/*********************
 BUTTONS
 *********************/
 

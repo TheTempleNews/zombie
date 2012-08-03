@@ -606,6 +606,9 @@ BOX SHADOW
 *********************/
 /* .boxShadow(0 0 4px #444); */
 /*********************
+TEXT SHADOW
+*********************/
+/*********************
 BUTTONS
 *********************/
 .button,
@@ -3123,6 +3126,8 @@ you can add resource intensive styles.
     border-bottom: 0.0625em solid #cccccc;
     padding: 0.75em 0;
     margin-bottom: 1.4375em;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
   }
   .home #links-print-edition span {
     font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3769,6 +3774,14 @@ you can add resource intensive styles.
   **************************/
   #section-box-featured {
     margin-bottom: 3em;
+  }
+  .flexslider .headline {
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
+  }
+  .flexslider .dek {
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
   }
   /*********************
   POSTS & CONTENT STYLES
