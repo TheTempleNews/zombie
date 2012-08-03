@@ -64,7 +64,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 				if ( $count == 1 ) { ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
 						<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
-							<div class="featured-image-container featured-image-container-full twelvecol first last">
+							<div class="featured-image-container featured-image-container-full">
 								<?php the_post_thumbnail('zom-landscape-576'); ?>
 							</div>
 						<?php } elseif ( has_post_thumbnail() && $display_feat_img == false ) { ?>

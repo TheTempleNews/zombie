@@ -31,7 +31,7 @@ body{font-size:100%;line-height:1.5;}
 .home #menu-top-links{list-style:none;margin:0;text-align:right;}.home #menu-top-links li{width:100%;}
 .home article .featured-image-container-thumb{width:96px;}
 .home article{margin-bottom:1.5em;}.home article .featured-image-container-thumb{width:96px;margin:0 1.5em 1.5em 0;}
-.home article .headline{font-size:1.5em;line-height:1;margin:0.5em 0;}
+.home article .headline{font-size:1.5em;line-height:1;margin:0.5em 0;margin:0 0 0.25em;}
 .home article .top-headline{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;}
 .home article .dek{display:block;}.home article .dek p{margin-top:0;}
 .home #section-box-opinion article{text-align:center;}.home #section-box-opinion article .featured-image-container-thumb{width:auto;margin:1.5em auto;position:static;float:none;}.home #section-box-opinion article .featured-image-container-thumb a,.home #section-box-opinion article .featured-image-container-thumb img{display:block;}

@@ -1600,6 +1600,20 @@ style a page via class
 .home article .featured-image-container:after {
   clear: none;
 }
+.home article .featured-image-container-full img {
+  display: block;
+  /* for IE */
+
+  zoom: 1;
+}
+.home article .featured-image-container-full img:before,
+.home article .featured-image-container-full img:after {
+  content: "";
+  display: table;
+}
+.home article .featured-image-container-full img:after {
+  clear: both;
+}
 .home article .featured-image-container-thumb {
   width: 22.928176794%;
   margin: 0 1.429em 1.429em 0;
@@ -1626,6 +1640,7 @@ style a page via class
   line-height: 1.2;
   margin: 0.25em 0;
   font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  margin: 0 0 0.25em;
 }
 .home article .headline a {
   text-decoration: none;
@@ -3116,6 +3131,7 @@ you can add resource intensive styles.
     font-size: 1.5em;
     line-height: 1;
     margin: 0.5em 0;
+    margin: 0 0 0.25em;
   }
   .home article .top-headline {
     font-size: 2.25em;
