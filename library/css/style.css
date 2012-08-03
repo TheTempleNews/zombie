@@ -1652,8 +1652,9 @@ style a page via class
 }
 .home #section-box-featured-multimedia,
 .home #section-box-print,
-.home #section-box-featured .section-box-title,
-.home #section-box-featured-links {
+.home #section-box-featured-content .section-box-featured-title,
+.home #section-box-featured-links,
+.home #widgetized-front-center {
   display: none;
 }
 /* home page */
