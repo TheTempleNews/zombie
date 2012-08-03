@@ -25,7 +25,7 @@
 		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+SC:400,700,400italic|Open+Sans:300,400,700,600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
 		
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
