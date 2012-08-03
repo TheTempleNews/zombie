@@ -367,6 +367,16 @@ function zombie_register_required_plugins() {
 			'required'	=> true,
 		),
 		array(
+			'name'		=> 'Duplicate Widget',
+			'slug'		=> 'duplicate-widget',
+			'required'	=> true,
+		),
+		array(
+			'name'		=> 'Twitter Widget Pro',
+			'slug'		=> 'twitter-widget-pro',
+			'required'	=> true,
+		),
+		array(
 			'name'		=> 'Dev4Press Uodater',
 			'slug'		=> 'dev4press-updater',
 			'source'    => get_stylesheet_directory() . '/library/plugins/dev4press-updater.1.8.7.zip',
@@ -389,7 +399,7 @@ function zombie_register_required_plugins() {
 			'slug'		=> 'hello-zombie',
 			'source'    => get_stylesheet_directory() . '/library/plugins/hello-zombie.zip',
 			'required'	=> false,
-		),
+		)
 	);
 
 	// Change this to your theme text domain, used for internationalising strings
