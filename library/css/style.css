@@ -1600,11 +1600,15 @@ style a page via class
 .home article .featured-image-container:after {
   clear: none;
 }
+.home article .featured-image-container-full {
+  margin: 0 0 .75em;
+}
 .home article .featured-image-container-full img {
   display: block;
   /* for IE */
 
   zoom: 1;
+  margin: 0;
 }
 .home article .featured-image-container-full img:before,
 .home article .featured-image-container-full img:after {
