@@ -83,16 +83,6 @@
 						</section> <!-- end #section-box-print -->
 						
 						
-						<!-- FEATURED LINKS -->
-						<section id="section-box-featured-links" class="section-box section-box-featured clearfix">
-						
-							<h2 class="section-box-featured-title section-box-title">Featured Links</h2>
-							
-								<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
-							
-						</section> <!-- end #section-box-featured-links -->
-						
-						
 						
 						<div id="widgetized-front-center" class="clearfix" role="complementary">
     
