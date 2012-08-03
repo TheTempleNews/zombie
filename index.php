@@ -20,7 +20,7 @@
 						<!-- FEATURED CONTENT -->
 						<section id="section-box-featured-content" class="section-box section-box-featured clearfix">
 
-							<h2 class="section-box-featured-title">Featured Content</h2>
+							<h2 class="section-box-featured-title section-box-title">Featured Content</h2>
 
 								<!-- featured content stuff goes here -->
 								<?php ttx_slider(); ?>
@@ -31,7 +31,7 @@
 						
 						<!-- FEATURED MULTIMEDIA -->
 						<section id="section-box-featured-multimedia" class="section-box section-box-featured clearfix">
-							<h2 class="section-box-featured-title">Featured Multimedia</h2>
+							<h2 class="section-box-featured-title section-box-title">Featured Multimedia</h2>
 						
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 								
@@ -69,7 +69,7 @@
 						<!-- PRINT EDITION -->
 						<section id="section-box-print" class="section-box section-box-featured clearfix">
 							
-							<h2 class="section-box-featured-title">Print Edition</h2>
+							<h2 class="section-box-featured-title section-box-title">Print Edition</h2>
 
 								<?php
 								$print_thumb = new WP_Query('post_type=print_edition&posts_per_page=1');
@@ -86,7 +86,7 @@
 						<!-- FEATURED LINKS -->
 						<section id="section-box-featured-links" class="section-box section-box-featured clearfix">
 						
-							<h2 class="section-box-featured-title">Featured Links</h2>
+							<h2 class="section-box-featured-title section-box-title">Featured Links</h2>
 							
 								<?php zombie_top_links(); // Adjust using Menus in Wordpress Admin ?>
 							

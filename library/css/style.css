@@ -1522,21 +1522,34 @@ style a page via class
 .home .section-box-title {
   /* border-top: @niceborders-s; */
 
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  color: #aaaaaa;
+  /* 
+	if you're going to use webfonts, be sure to check your weights 
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+  /* removing text decoration from all headline links */
+
+  font-size: 1.000em;
+  line-height: 1.428571429;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 300;
   border-bottom: 0.0714em solid #cccccc;
   padding: 0.7145em 0;
   margin-bottom: 1.3576000000000001em;
   font-weight: 700;
 }
+.home .section-box-title a {
+  text-decoration: none;
+}
 .home .section-box-title a,
 .home .section-box-title a:visited {
   color: #cc0000;
   display: block;
-}
-.home .section-box-featured .section-box-featured-title {
-  border-bottom: 1px solid #CCCCCC;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1em;
 }
 .home .section-box-featured#section-box-featured-content {
   margin-bottom: 2.858em;
@@ -2281,6 +2294,9 @@ FLEX TETRODO STYLES
 #section-box-featured {
   margin-bottom: 2.858em;
 }
+.flexslider {
+  border: none;
+}
 .flexslider .headline {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -2294,9 +2310,10 @@ FLEX TETRODO STYLES
 
   /* removing text decoration from all headline links */
 
-  font-size: 1.429em;
-  line-height: 1.2;
-  margin: 0.25em 0;
+  font-size: 1.714em;
+  line-height: 1;
+  margin: 0.3em 0;
+  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
 }
 .flexslider .headline a {
   text-decoration: none;
@@ -3072,6 +3089,9 @@ you can add resource intensive styles.
   .home #section-box-featured-links,
   .home #widgetized-front-center {
     display: block;
+  }
+  .home .section-box-featured .section-box-featured-title {
+    font-weight: 300;
   }
   .home .section-box-featured#section-box-featured-content {
     margin-bottom: 3em;
