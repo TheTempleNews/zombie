@@ -21,7 +21,7 @@ span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif
 .post-content .aligncenter,.post-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both;}
 body{font-size:100%;line-height:1.5;}
 .hoz-rule-third{border-bottom:0.0625em solid #cccccc;}
-.ttn-network-banner{border-top:0.0625em solid #cccccc;padding:0.6875em 0;}
+.ttn-network-banner{border-top:0.0625em solid #cccccc;border-bottom:0.0625em solid #cccccc;padding:0.6875em 0;margin:0 0 1.5em;}
 .home{}.home .slide-image{float:left;position:relative;}
 .home #section-box-featured-multimedia,.home #section-box-print,.home #section-box-featured-content .section-box-featured-title,.home #section-box-featured-links,.home #widgetized-front-center{display:block;}
 .home .section-box-featured .section-box-featured-title{font-weight:300;}
@@ -164,3 +164,8 @@ p{margin-bottom:1.5em;}
 .footer{padding-top:1.5em;}.footer p{font-size:0.875em;}
 #inner-footer{margin:1.5em auto;}
 #footer-column-center{text-align:center;}#footer-column-center #footer-links-sections,#footer-column-center #footer-links-meta{margin:1.5em auto;}
+.ad,.ad-container,#ad-topnavbar,.rectangle-ad-container{display:block;}
+.ad-container{padding:1.429em 0;}
+.ad{text-align:center;font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
+#ad-topnavbar{margin-bottom:2em;}
+#section-box-print-blogroll{border-bottom:0.0625em solid #cccccc;padding-bottom:1.429em;}

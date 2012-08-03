@@ -1466,7 +1466,9 @@ ADVERTS AND SOCIAL MEDIA
 ************************/
 .ttn-network-banner {
   border-top: 0.0714em solid #cccccc;
+  border-bottom: 0.0714em solid #cccccc;
   padding: 0.6431em 0;
+  margin: 0 0 1.429em;
 }
 .ttn-network-banner img {
   margin: 0 auto;
@@ -3075,7 +3077,9 @@ you can add resource intensive styles.
   ************************/
   .ttn-network-banner {
     border-top: 0.0625em solid #cccccc;
+    border-bottom: 0.0625em solid #cccccc;
     padding: 0.6875em 0;
+    margin: 0 0 1.5em;
   }
   /********************
   WORDPRESS BODY CLASSES
@@ -4108,9 +4112,6 @@ at any lower resolution they will not fit.
   }
   #ad-topnavbar {
     margin-bottom: 2em;
-  }
-  #broadcecilad {
-    border-bottom: 0.0625em solid #cccccc;
   }
   #section-box-print-blogroll {
     border-bottom: 0.0625em solid #cccccc;
