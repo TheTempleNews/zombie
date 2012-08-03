@@ -2843,6 +2843,9 @@ SIDEBARS & ASIDES
 .widget_polls-widget .wp-polls-ul li i {
   font-style: normal;
 }
+.widget_polls-widget .wp-polls-ul li label {
+  font-weight: 400;
+}
 /*********************
 FOOTER STYLES
 *********************/
