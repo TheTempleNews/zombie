@@ -3097,7 +3097,6 @@ you can add resource intensive styles.
   }
   .home #section-box-featured-multimedia,
   .home #section-box-print,
-  .home #section-box-featured-content .section-box-featured-title,
   .home #section-box-featured-links,
   .home #widgetized-front-center {
     display: block;

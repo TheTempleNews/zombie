@@ -23,7 +23,7 @@ body{font-size:100%;line-height:1.5;}
 .hoz-rule-third{border-bottom:0.0625em solid #cccccc;}
 .ttn-network-banner{border-top:0.0625em solid #cccccc;border-bottom:0.0625em solid #cccccc;padding:0.6875em 0;margin:0 0 1.5em;}
 .home{}.home .slide-image{float:left;position:relative;}
-.home #section-box-featured-multimedia,.home #section-box-print,.home #section-box-featured-content .section-box-featured-title,.home #section-box-featured-links,.home #widgetized-front-center{display:block;}
+.home #section-box-featured-multimedia,.home #section-box-print,.home #section-box-featured-links,.home #widgetized-front-center{display:block;}
 .home .section-box-featured .section-box-featured-title{font-weight:300;}
 .home .section-box-featured#section-box-featured-content{margin-bottom:3em;}
 .home .section-box-title{border-bottom:0.0625em solid #cccccc;padding:0.75em 0;margin-bottom:1.4375em;}
