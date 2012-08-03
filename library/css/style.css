@@ -2089,8 +2089,7 @@ HEADER STYLES
   position: relative;
   float: left;
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 1.429em 0 0;
 }
 #top-header #logo {
   max-width: 65%;
@@ -3549,6 +3548,9 @@ you can add resource intensive styles.
     font-size: 87.5%;
     line-height: 1.428571429;
   }
+  #top-header {
+    margin: 1.5em 0 0;
+  }
   #top-header #logo {
     /*
   			the logo above the red line is too cluttered.
@@ -4112,9 +4114,6 @@ at any lower resolution they will not fit.
     text-align: center;
     font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-  }
-  #ad-topnavbar {
-    margin-bottom: 2em;
   }
   #section-box-print-blogroll {
     border-bottom: 0.0625em solid #cccccc;

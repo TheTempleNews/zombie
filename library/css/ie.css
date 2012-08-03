@@ -103,7 +103,7 @@ h5,.h5{font-size:1.250em;line-height:1.2;margin:0.5em 0;}
 h6,.h6{font-size:1.000em;line-height:1.500;margin:0;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;}
 img{margin:0 0 1.5em 0;}
 .header{font-size:87.5%;line-height:1.428571429;}
-#top-header #logo{}
+#top-header{margin:1.5em 0 0;}#top-header #logo{}
 #top-header #tagline-social-container{display:inline-block;margin-left:1em;position:relative;top:-0.8em;}#top-header #tagline-social-container .header-social{text-rendering:optimizelegibility;font-weight:600;font-size:3.000em;line-height:0.7em;}#top-header #tagline-social-container .header-social a{color:#666666;}
 #top-header #tagline-social-container #site-tagline{margin:0.5em 0;font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:600;color:white;}
 #searchform{float:right;margin:0 0 1em 0;position:relative;width:33%;}
@@ -167,5 +167,4 @@ p{margin-bottom:1.5em;}
 .ad,.ad-container,#ad-topnavbar,.rectangle-ad-container{display:block;}
 .ad-container{padding:1.429em 0;}
 .ad{text-align:center;font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;}
-#ad-topnavbar{margin-bottom:2em;}
 #section-box-print-blogroll{border-bottom:0.0625em solid #cccccc;padding-bottom:1.429em;}
