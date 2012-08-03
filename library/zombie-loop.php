@@ -63,10 +63,6 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 				// TOP ARTICLE
 				if ( $count == 1 ) { ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
-						<header>
-							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-							<h3 class="headline<?php if ( has_post_thumbnail() ) { echo ' top-headline'; } ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-						</header>
 						<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
 							<div class="featured-image-container featured-image-container-full twelvecol first last">
 								<?php the_post_thumbnail('zom-landscape-576'); ?>
@@ -76,6 +72,10 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 								<?php the_post_thumbnail('zom-thumb-96'); ?>
 							</div>
 						<?php } ?>
+						<header>
+							<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
+							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+						</header>
 						<section class="dek">
 							<?php the_excerpt(); ?>
 						</section> <!-- end dek -->
