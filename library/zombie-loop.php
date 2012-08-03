@@ -65,11 +65,11 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' clearfix' ); ?> role="article">
 						<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
 							<div class="featured-image-container featured-image-container-full">
-								<?php the_post_thumbnail('zom-landscape-576'); ?>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
 							</div>
 						<?php } elseif ( has_post_thumbnail() && $display_feat_img == false ) { ?>
 							<div class="featured-image-container featured-image-container-thumb twocol first">
-								<?php the_post_thumbnail('zom-thumb-96'); ?>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-thumb-96'); ?></a>
 							</div>
 						<?php } ?>
 						<header>
@@ -87,7 +87,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 						<?php // disable small thumbnails because of a disproportionate amount of images in sections
 						if ( has_post_thumbnail() ) : ?>
 							<div class="featured-image-container featured-image-container-thumb">
-								<?php the_post_thumbnail('zom-thumb-96'); ?>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-thumb-96'); ?></a>
 							</div>
 						<?php endif; ?>
 						<header>
@@ -141,7 +141,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' twocol clearfix ' . $k ); ?> role="article">
 							<?php if ( has_post_thumbnail() ) { ?>
 								<div class="featured-image-container featured-image-container-thumb">
-									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('zom-thumb-96'); ?></a>
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-thumb-96'); ?></a>
 								</div>
 							<?php } ?>
 						<header>
