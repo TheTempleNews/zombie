@@ -3572,6 +3572,12 @@ you can add resource intensive styles.
   /*********************
   HEADER SYTLES
   *********************/
+  .header {
+    /* keeps header the same proportions no matter what size the viewport */
+  
+    font-size: 87.5%;
+    line-height: 1.428571429;
+  }
   #top-header #logo {
     /*
   			the logo above the red line is too cluttered.
