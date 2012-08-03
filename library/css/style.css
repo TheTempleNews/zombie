@@ -1524,7 +1524,7 @@ style a page via class
 
   border-bottom: 0.0714em solid #cccccc;
   padding: 0.7145em 0;
-  margin-bottom: 2.7866em;
+  margin-bottom: 1.3576000000000001em;
   font-weight: 700;
 }
 .home .section-box-title a,
@@ -1538,8 +1538,8 @@ style a page via class
   font-weight: 600;
   font-size: 1em;
 }
-.home .section-box-featured #section-box-featured-content {
-  margin-bottom: 4em;
+.home .section-box-featured#section-box-featured-content {
+  margin-bottom: 2.858em;
 }
 .home #section-box-opinion .featured-image-container-thumb {
   max-width: 96px;
@@ -3068,16 +3068,20 @@ you can add resource intensive styles.
   }
   .home #section-box-featured-multimedia,
   .home #section-box-print,
-  .home #section-box-featured .section-box-title,
-  .home #section-box-featured-links {
+  .home #section-box-featured-content .section-box-featured-title,
+  .home #section-box-featured-links,
+  .home #widgetized-front-center {
     display: block;
+  }
+  .home .section-box-featured#section-box-featured-content {
+    margin-bottom: 3em;
   }
   .home .section-box-title {
     /* border-top: @niceborders-l; */
   
     border-bottom: 0.0625em solid #cccccc;
     padding: 0.75em 0;
-    margin-bottom: 2.9375em;
+    margin-bottom: 1.4375em;
   }
   .home #links-print-edition span {
     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
