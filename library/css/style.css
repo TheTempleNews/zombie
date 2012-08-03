@@ -3091,6 +3091,16 @@ you can add resource intensive styles.
     /* end .home #section-box-opinion */
   
   }
+  .home #column-center {
+    -webkit-box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: -1.5em;
+  }
+  .home #column-center #column-center-inner {
+    padding: 1.5em;
+  }
   .home .slide-image {
     float: left;
     position: relative;
@@ -3546,6 +3556,9 @@ you can add resource intensive styles.
   
     font-size: 87.5%;
     line-height: 1.428571429;
+    -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.8);
   }
   #top-header {
     margin: 1.5em 0 0;

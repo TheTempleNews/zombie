@@ -46,6 +46,16 @@ style a page via class
 .rtl {}
 .home {
 
+	#column-center {
+		.boxShadow( @radius: 12px, @spread: 4px );
+		position: relative;
+		top: -1.5em;
+		
+		#column-center-inner {
+			padding: @lhem-l;
+		}
+	}
+
 	.slide-image {
 		float:left;
 		position: relative;
@@ -401,6 +411,7 @@ HEADER SYTLES
 	/* keeps header the same proportions no matter what size the viewport */
 	font-size: 87.5%;
 	line-height: 1.428571429;
+	.boxShadow( @spread: 4px, @color: rgba(0,0,0,0.8) );
 }
 	
 	#top-header {
