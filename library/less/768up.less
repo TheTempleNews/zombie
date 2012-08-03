@@ -892,10 +892,21 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 
 
 	/* links widget */
-	.widget_links {}
-	.widget_links ul {}
-	.widget_links ul li {}
-	.widget_links ul li a {}
+	.widget_links {
+		
+		ul {
+			.h4;
+			font-weight: 600;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			text-align: center;
+			
+			li {
+				margin: 0;
+			}
+		}
+	}
 	
 	/* meta widget */
 	.widget_meta {}
@@ -924,9 +935,6 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 	.widget_archive option {}
 	
 	/* tag-cloud widget */
-	.widget_links {}
-	.widget_links li:after {}
-	.widget_links li:before {}
 	.widget_tag_cloud {}
 	.widget_tag_cloud a {}
 	.widget_tag_cloud a:after {}

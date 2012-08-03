@@ -1522,14 +1522,10 @@ style a page via class
 .home .section-box-title {
   /* border-top: @niceborders-s; */
 
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
+  font-weight: 700;
   /* removing text decoration from all headline links */
 
   font-size: 1.000em;
@@ -1541,7 +1537,7 @@ style a page via class
   border-bottom: 0.0714em solid #cccccc;
   padding: 0.7145em 0;
   margin-bottom: 1.3576000000000001em;
-  font-weight: 700;
+  font-weight: 600;
 }
 .home .section-box-title a {
   text-decoration: none;
@@ -1619,16 +1615,11 @@ style a page via class
   margin: 0;
 }
 .home article .headline {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.429em;
@@ -1640,16 +1631,11 @@ style a page via class
   text-decoration: none;
 }
 .home article .top-headline {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.714em;
@@ -1714,16 +1700,11 @@ style a page via class
   margin: 0;
 }
 .archive article .headline {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.429em;
@@ -1735,16 +1716,11 @@ style a page via class
   text-decoration: none;
 }
 .archive article .top-headline {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.714em;
@@ -1756,7 +1732,7 @@ style a page via class
   text-decoration: none;
 }
 .archive #smart-archives-block {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   list-style: none;
   margin: 0 auto;
   padding: 0 0 1em;
@@ -1786,7 +1762,7 @@ style a page via class
 /* opinion article type archive */
 .post-type-archive-multimedia {
   background-color: #222222;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .post-type-archive-multimedia #main {
   background-color: #222222;
@@ -1802,10 +1778,10 @@ style a page via class
   margin: 1.429em;
 }
 .post-type-archive-multimedia #main .article-container h2.multimedia-headline {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .post-type-archive-multimedia #main .article-container .multimedia-byline {
-  font-weight: 700;
+  font-weight: 600;
 }
 .post-type-archive-multimedia #main .article-container .multimedia-dek {
   font-style: normal;
@@ -1899,7 +1875,7 @@ style a page via class
 /* replace the number to the corresponding page number */
 /* custom page template page */
 .page-template-default {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* default page template */
 /* individual page template (i.e. body.page-template-contact-php */
@@ -1912,7 +1888,7 @@ style a page via class
 .page-id-34727 .hentry .h2,
 .page-id-34727 .hentry h3,
 .page-id-34727 .hentry .h3 {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .page-id-34727 #print-edition-title {
   font-size: 3em;
@@ -1996,16 +1972,11 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
 }
@@ -2236,7 +2207,7 @@ and more scalable.
   color: #777;
   position: relative;
   font-size: 100%;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   border-bottom: 2px solid #777;
 }
@@ -2298,16 +2269,11 @@ FLEX TETRODO STYLES
   border: none;
 }
 .flexslider .headline {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.714em;
@@ -2319,16 +2285,11 @@ FLEX TETRODO STYLES
   text-decoration: none;
 }
 .flexslider .dek {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.143em;
@@ -2410,16 +2371,11 @@ p {
 }
 /* end .hentry */
 .single-title {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   margin: 0;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.714em;
@@ -2431,7 +2387,7 @@ p {
   text-decoration: none;
 }
 .page-title {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -2486,11 +2442,6 @@ p {
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.000em;
@@ -2498,7 +2449,7 @@ p {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #AAAAAA;
 }
@@ -2528,7 +2479,7 @@ p {
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 0.35725em;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
 }
 /* end .wp-caption */
@@ -2610,11 +2561,11 @@ COMMENT STYLES
 #comments,
 .comment-nav,
 .commentlist {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* h3 comment title */
 #comments {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* number of comments span */
 
 }
@@ -2831,15 +2782,10 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 .widgettitle {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 1.000em;
@@ -2854,6 +2800,9 @@ SIDEBARS & ASIDES
 }
 .widgettitle a {
   text-decoration: none;
+}
+.widget {
+  margin: 1.429em 0;
 }
 .widget ul li {
   /* deep nesting */
@@ -2882,7 +2831,7 @@ FOOTER STYLES
   padding-top: 1.429em;
 }
 .footer p {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.857em;
   /* 12px */
 
@@ -2955,15 +2904,10 @@ FOOTER STYLES
   display: inline;
 }
 #footer-column-center .footer-social-container {
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
   font-weight: 700;
-  /* 
-	if you're going to use webfonts, be sure to check your weights 
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
   /* removing text decoration from all headline links */
 
   font-size: 3.429em;
@@ -3147,8 +3091,8 @@ you can add resource intensive styles.
     margin-bottom: 1.4375em;
   }
   .home #links-print-edition span {
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
   }
   .home #menu-top-links {
     list-style: none;
@@ -3560,7 +3504,7 @@ you can add resource intensive styles.
     line-height: 1.500;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.03em;
     font-weight: 300;
   }
   /*********************
@@ -3596,7 +3540,7 @@ you can add resource intensive styles.
     /* this is .h1 styling but ie.less won't compile because it doesn't understand that class reference */
   
     text-rendering: optimizelegibility;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 3.000em;
     line-height: 0.7em;
   }
@@ -3605,8 +3549,8 @@ you can add resource intensive styles.
   }
   #top-header #tagline-social-container #site-tagline {
     margin: 0.5em 0;
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
     color: white;
   }
   /* end #top-header */
@@ -3824,7 +3768,7 @@ you can add resource intensive styles.
     line-height: 1.500;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.03em;
     font-weight: 300;
   }
   /******************************************************************
@@ -3908,9 +3852,9 @@ you can add resource intensive styles.
   .nocomments {
     margin: 0 1.25em 1.5em;
   }
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
+  /***********************************
+  SIDEBARS & ASIDES & WIDGETIZED AREAS
+  ************************************/
   .sidebar {
     margin-top: 3em;
   }
@@ -3919,7 +3863,7 @@ you can add resource intensive styles.
     border-top: none;
   }
   #widgetized-front-center {
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   #widgetized-front-center .widget_tptn_pop ul,
   #widgetized-front-center .widget_tptn_pop_daily ul {
@@ -3935,7 +3879,7 @@ you can add resource intensive styles.
   }
   .widget {
     padding: 0 10px;
-    margin: 3em 0;
+    margin: 1.5em 0;
   }
   .widget ul li {
     margin-bottom: 0.75em;
@@ -3947,6 +3891,19 @@ you can add resource intensive styles.
     padding-left: 1.5em;
   }
   /* links widget */
+  .widget_links ul {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0.5em 0;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  .widget_links ul li {
+    margin: 0;
+  }
   /* meta widget */
   /* pages widget */
   /* recent-posts widget */
@@ -4017,7 +3974,7 @@ you can add resource intensive styles.
     font-size: 80%;
     line-height: 1.6;
     text-align: right;
-    font-weight: 700;
+    font-weight: 600;
     float: right;
   }
   .widget_twitter div .intent-meta {
@@ -4126,7 +4083,7 @@ at any lower resolution they will not fit.
   }
   .ad {
     text-align: center;
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
   }
   #ad-topnavbar {
