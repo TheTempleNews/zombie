@@ -1558,6 +1558,12 @@ style a page via class
 .home #section-box-opinion .featured-image-container-thumb {
   max-width: 96px;
 }
+.home #section-box-multimedia {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.home #section-box-multimedia #multimedia-mgallery .headline {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .home #menu-top-links {
   list-style: none;
   margin: 0;
@@ -3182,6 +3188,9 @@ you can add resource intensive styles.
     font-size: 1.250em;
     line-height: 1.2;
     margin: 0.5em 0;
+  }
+  .home #section-box-multimedia {
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   /* home page */
   /* blog page */

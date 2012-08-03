@@ -36,6 +36,7 @@ body{font-size:100%;line-height:1.5;}
 .home article .dek{display:block;}.home article .dek p{margin-top:0;}
 .home #section-box-opinion article{text-align:center;}.home #section-box-opinion article .featured-image-container-thumb{width:auto;margin:1.5em auto;position:static;float:none;}.home #section-box-opinion article .featured-image-container-thumb a,.home #section-box-opinion article .featured-image-container-thumb img{display:block;}
 .home #section-box-opinion article .headline{font-size:1.250em;line-height:1.2;margin:0.5em 0;}
+.home #section-box-multimedia{font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .archive .archive-main-title{border-bottom:0.0625em solid #cccccc;padding:0.71875em 0;}
 .post-type-archive .top-archive-article{border-bottom:0.0625em solid #cccccc;margin:0 0 3em 0;}
 .post-type-archive-multimedia{background-color:#222222;}.post-type-archive-multimedia #main{}.post-type-archive-multimedia #main .article-container{height:35em;margin-bottom:1.5em;}.post-type-archive-multimedia #main .article-container article{margin:1.5em;}
