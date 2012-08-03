@@ -3141,9 +3141,6 @@ you can add resource intensive styles.
   .home #menu-top-links li {
     width: 100%;
   }
-  .home article .featured-image-container-thumb {
-    width: 96px;
-  }
   .home article {
     margin-bottom: 1.5em;
   }
@@ -3180,6 +3177,11 @@ you can add resource intensive styles.
   .home #section-box-opinion article .featured-image-container-thumb a,
   .home #section-box-opinion article .featured-image-container-thumb img {
     display: block;
+  }
+  .home #section-box-opinion article .headline {
+    font-size: 1.250em;
+    line-height: 1.2;
+    margin: 0.5em 0;
   }
   /* home page */
   /* blog page */
