@@ -3274,6 +3274,20 @@ you can add resource intensive styles.
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
     filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
   }
+  .home .section-box-title a:hover {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
+    position: relative;
+    top: -1px;
+    left: -1px;
+  }
+  .home .section-box-title a:active {
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
   .home #links-print-edition span {
     font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
