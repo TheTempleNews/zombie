@@ -1524,6 +1524,10 @@ WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
+.home {
+  /* end article */
+
+}
 .home .section-box-title {
   /* border-top: @niceborders-s; */
 
@@ -1577,6 +1581,8 @@ style a page via class
 }
 .home article {
   margin-bottom: 1.429em;
+  /* end .featured-image-container-thumb */
+
 }
 .home article header,
 .home article .dek,
@@ -1694,6 +1700,8 @@ style a page via class
 .archive {
   /* this doesn't exist... */
 
+  /* end article */
+
   /* probably won't be active - this is for dated archives */
 
 }
@@ -1733,16 +1741,75 @@ style a page via class
   line-height: 1.5em;
 }
 .archive article {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.429em;
+  /* end .featured-image-container-thumb */
+
+}
+.archive article header,
+.archive article .dek,
+.archive article .post-category-list-container,
+.archive article .headline,
+.archive article .featured-image-container {
+  /* for IE */
+
+  zoom: 1;
+}
+.archive article header:before,
+.archive article .dek:before,
+.archive article .post-category-list-container:before,
+.archive article .headline:before,
+.archive article .featured-image-container:before,
+.archive article header:after,
+.archive article .dek:after,
+.archive article .post-category-list-container:after,
+.archive article .headline:after,
+.archive article .featured-image-container:after {
+  content: "";
+  display: table;
+}
+.archive article header:after,
+.archive article .dek:after,
+.archive article .post-category-list-container:after,
+.archive article .headline:after,
+.archive article .featured-image-container:after {
+  clear: both;
+}
+.archive article header:after,
+.archive article .dek:after,
+.archive article .post-category-list-container:after,
+.archive article .headline:after,
+.archive article .featured-image-container:after {
+  clear: none;
+}
+.archive article .featured-image-container-full {
+  margin: 0 0 .75em;
+}
+.archive article .featured-image-container-full img {
+  display: block;
+  /* for IE */
+
+  zoom: 1;
+  margin: 0;
+}
+.archive article .featured-image-container-full img:before,
+.archive article .featured-image-container-full img:after {
+  content: "";
+  display: table;
+}
+.archive article .featured-image-container-full img:after {
+  clear: both;
 }
 .archive article .featured-image-container-thumb {
   width: 22.928176794%;
   margin: 0 1.429em 1.429em 0;
+  max-width: 96px;
   position: relative;
   float: left;
 }
-.archive article .featured-image-container-thumb img {
-  width: 100%;
+.archive article .featured-image-container-thumb a {
+  display: block;
+}
+.archive article .featured-image-container-thumb a img {
   height: auto;
   margin: 0;
 }
@@ -1758,6 +1825,7 @@ style a page via class
   line-height: 1.2;
   margin: 0.25em 0;
   font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  margin: 0 0 0.3em;
 }
 .archive article .headline a {
   text-decoration: none;
@@ -1777,6 +1845,15 @@ style a page via class
 }
 .archive article .top-headline a {
   text-decoration: none;
+}
+.archive article .byline {
+  margin: 0.7145em 0;
+}
+.archive article .dek {
+  display: block;
+}
+.archive article .dek p {
+  margin: 0 0 1.429em;
 }
 .archive #smart-archives-block {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3225,6 +3302,10 @@ you can add resource intensive styles.
   }
   /* home page */
   /* blog page */
+  .archive {
+    /* end article */
+  
+  }
   .archive .archive-main-title {
     font-size: 2.25em;
     line-height: 1.333333;
@@ -3232,6 +3313,101 @@ you can add resource intensive styles.
     border-bottom: 0.0625em solid #cccccc;
     padding: 0;
     margin: auto 0 1.5em;
+  }
+  .archive article {
+    margin-bottom: 1.5em;
+    /* end .featured-image-container-thumb */
+  
+  }
+  .archive article header,
+  .archive article .dek,
+  .archive article .post-category-list-container,
+  .archive article .headline,
+  .archive article .featured-image-container {
+    /* for IE */
+  
+    zoom: 1;
+  }
+  .archive article header:before,
+  .archive article .dek:before,
+  .archive article .post-category-list-container:before,
+  .archive article .headline:before,
+  .archive article .featured-image-container:before,
+  .archive article header:after,
+  .archive article .dek:after,
+  .archive article .post-category-list-container:after,
+  .archive article .headline:after,
+  .archive article .featured-image-container:after {
+    content: "";
+    display: table;
+  }
+  .archive article header:after,
+  .archive article .dek:after,
+  .archive article .post-category-list-container:after,
+  .archive article .headline:after,
+  .archive article .featured-image-container:after {
+    clear: both;
+  }
+  .archive article header:after,
+  .archive article .dek:after,
+  .archive article .post-category-list-container:after,
+  .archive article .headline:after,
+  .archive article .featured-image-container:after {
+    clear: none;
+  }
+  .archive article .featured-image-container-full {
+    margin: 0 0 .75em;
+  }
+  .archive article .featured-image-container-full img {
+    display: block;
+    /* for IE */
+  
+    zoom: 1;
+    margin: 0;
+  }
+  .archive article .featured-image-container-full img:before,
+  .archive article .featured-image-container-full img:after {
+    content: "";
+    display: table;
+  }
+  .archive article .featured-image-container-full img:after {
+    clear: both;
+  }
+  .archive article .featured-image-container-thumb {
+    width: 22.928176794%;
+    margin: 0 1.5em 1.5em 0;
+    max-width: 96px;
+    position: relative;
+    float: left;
+  }
+  .archive article .featured-image-container-thumb a {
+    display: block;
+  }
+  .archive article .featured-image-container-thumb a img {
+    height: auto;
+    margin: 0;
+  }
+  .archive article .headline {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0.5em 0;
+    font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+    margin: 0;
+  }
+  .archive article .top-headline {
+    font-size: 2.25em;
+    line-height: 1.333333;
+    margin: 0.333333em 0;
+    font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  }
+  .archive article .byline {
+    margin: 0.75em 0;
+  }
+  .archive article .dek {
+    display: block;
+  }
+  .archive article .dek p {
+    margin: 0 0 1.5em;
   }
   /* archive page */
   .post-type-archive .top-archive-article {

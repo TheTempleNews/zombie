@@ -213,9 +213,7 @@ style a page via class
 					margin: 0;
 				}
 			}
-			
-			
-		}
+		} /* end .featured-image-container-thumb */
 		
 		.headline {
 			.h4;
@@ -231,7 +229,7 @@ style a page via class
 		.dek {
 			display: none;
 		}
-	}
+	} /* end article */
 	
 	#section-box-featured-multimedia,
 	#section-box-print,
@@ -274,24 +272,51 @@ style a page via class
 	
 	
 	article {
-		margin-bottom: 1.5em;
+		margin-bottom: @lhem-s;
 		
-		.featured-image-container-thumb {
-			width: 22.928176794%;
-			margin: 0 @lhem-s @lhem-s 0;
-			position: relative;
-			float: left;
+		header,
+		.dek,
+		.post-category-list-container,
+		.headline,
+		.featured-image-container {
+			.clearfix;
+			
+			&:after {
+				clear: none;
+			}
+		}
+		
+		.featured-image-container-full {
+			margin: 0 0 .75em;
 			
 			img {
-				width: 100%;
-				height: auto;
+				display: block;
+				.clearfix;
 				margin: 0;
 			}
 		}
 		
+		.featured-image-container-thumb {
+			width: 22.928176794%;
+			margin: 0 @lhem-s @lhem-s 0;
+			max-width: 96px;
+			position: relative;
+			float: left;
+			
+			a {
+				display: block;
+				
+				img {
+					height: auto;
+					margin: 0;
+				}
+			}
+		} /* end .featured-image-container-thumb */
+		
 		.headline {
 			.h4;
 			font-family: @serif;
+			margin: 0 0 0.3em;
 		}
 		
 		.top-headline {
@@ -299,7 +324,18 @@ style a page via class
 			font-family: @serif;
 		}
 		
-	}
+		.byline {
+			margin: (@lhem-s/2) 0;
+		}
+		
+		.dek {
+			display: block;
+			
+			p {
+				margin: 0 0 @lhem-s;
+			}
+		}
+	} /* end article */
 	
 	/* probably won't be active - this is for dated archives */
 	#smart-archives-block {
