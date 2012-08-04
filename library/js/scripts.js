@@ -78,6 +78,12 @@ jQuery(document).ready(function($) {
             $(this).attr('src',$(this).attr('data-gravatar'));
         });
         
+        /* set .article-container elements in mgallery to the maximum height of one of those elements */
+        var maxHeight = 0;
+		$('#post-type-loop-main .article-container')
+			.each(function() { maxHeight = Math.max(maxHeight, $(this).height()); })
+			.height(maxHeight);
+        
     }
 
 
