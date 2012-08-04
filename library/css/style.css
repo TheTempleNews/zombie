@@ -4155,9 +4155,8 @@ at any lower resolution they will not fit.
     font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
   }
-  #section-box-print-blogroll {
+  .three-column-container {
     border-bottom: 0.0625em solid #cccccc;
-    padding-bottom: 1.429em;
   }
 }
 /* end of media query */
