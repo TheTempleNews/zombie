@@ -93,7 +93,7 @@
 													
 												</header>
 		
-												<section class="multimedia-summary media-summary clearfix">
+												<section class="multimedia-dek media-dek clearfix">
 												
 													<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 													
