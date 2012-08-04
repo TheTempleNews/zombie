@@ -37,7 +37,7 @@ body{font-size:100%;line-height:1.5;}
 .home #section-box-opinion article{text-align:center;}.home #section-box-opinion article .featured-image-container-thumb{width:auto;margin:1.5em auto;position:static;float:none;}.home #section-box-opinion article .featured-image-container-thumb a,.home #section-box-opinion article .featured-image-container-thumb img{display:block;}
 .home #section-box-opinion article .headline{font-size:1.250em;line-height:1.2;margin:0.5em 0;}
 .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main header{margin:0 0 1em;}
-.archive .archive-main-title{border-bottom:0.0625em solid #cccccc;padding:0.71875em 0;}
+.archive .archive-main-title{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;border-bottom:0.0625em solid #cccccc;padding:0;margin:auto 0 1.5em;}
 .post-type-archive .top-archive-article{border-bottom:0.0625em solid #cccccc;margin:0 0 3em 0;}
 .post-type-archive-multimedia{background-color:#222222;}.post-type-archive-multimedia #main{}.post-type-archive-multimedia #main .article-container{height:35em;margin-bottom:1.5em;}.post-type-archive-multimedia #main .article-container article{margin:1.5em;}
 .post-type-archive-slideshow{}.post-type-archive-slideshow #main{}.post-type-archive-slideshow #main .article-container{height:35em;margin-bottom:1.5em;}.post-type-archive-slideshow #main .article-container article{margin:1.5em;}
@@ -127,7 +127,7 @@ img{margin:0 0 1.5em 0;}
 #content{margin:1.5em auto 9em;}
 p{margin-bottom:1.5em;}
 .hentry footer{border-bottom:0.0625em solid #cccccc;padding-bottom:1.5em;margin-bottom:3em;}
-.single-section-name{border-bottom:0.0625em solid #cccccc;padding:0.75em 0;margin-bottom:1.5em;}
+.single-section-name{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;border-bottom:0.0625em solid #cccccc;padding:0;margin:auto 0 1.5em;}
 #post-content{}#post-content dd{margin-bottom:1.5em;}
 #post-content pre,#post-content code{border:0.0625em solid #cccccc;}
 #post-content .wp-caption{padding:0.375em;}#post-content .wp-caption p.wp-caption-text{margin:0.375em;}

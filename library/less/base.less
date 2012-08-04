@@ -247,8 +247,10 @@ style a page via class
 .blog {}                                       /* blog template page */
 .archive {
 	.archive-main-title {
+		.h3;
 		border-bottom: @niceborders-s;
-		padding: (@lhem-s/2-@1px-s/2) 0;
+		padding: 0;
+		margin: auto 0 @lhem-s;
 		
 		/* this is inactive when dated archives are disabled */
 		.archive-breadcrumb {
@@ -1006,9 +1008,10 @@ POSTS & CONTENT STYLES
 		} /* end .hentry */
 		
 		.single-section-name {
+			.h3;
 			border-bottom: @niceborders-s;
-			padding: (@lhem-s/2) 0;
-			margin-bottom: @lhem-s;
+			padding: 0;
+			margin: auto 0 @lhem-s;
 		}
 		
 		.single-title, 
