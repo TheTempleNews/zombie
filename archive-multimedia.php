@@ -82,7 +82,7 @@
 												} ?>
 		
 												<header class="clearfix">
-													<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
+													<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 													<h2 class="multimedia-headline multimedia-top-headline headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 													<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p><p><time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time></p>
 												</header>
