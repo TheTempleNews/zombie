@@ -1535,7 +1535,6 @@ style a page via class
 
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   font-weight: 700;
   /* removing text decoration from all headline links */
 
@@ -1676,7 +1675,6 @@ style a page via class
 .home article .headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -1693,7 +1691,6 @@ style a page via class
 .home article .top-headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -1729,7 +1726,6 @@ style a page via class
 .archive .archive-main-title {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -1837,7 +1833,6 @@ style a page via class
 .archive article .headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -1854,7 +1849,6 @@ style a page via class
 .archive article .top-headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -1955,11 +1949,13 @@ style a page via class
   clear: both;
 }
 .post-type-archive-multimedia .article-container article a {
-  color: white;
+  color: #CCCCCC;
 }
-.post-type-archive-multimedia .article-container article a:hover,
-.post-type-archive-multimedia .article-container article a:active {
+.post-type-archive-multimedia .article-container article a:hover {
   color: #b70000;
+}
+.post-type-archive-multimedia .article-container article a:active {
+  color: #CCCCCC;
 }
 .post-type-archive-multimedia #post-type-loop-top {
   height: auto;
@@ -1995,7 +1991,6 @@ style a page via class
 .single .single-title {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -2023,9 +2018,6 @@ style a page via class
   font-family: 'Alegreya SC';
   border-right: 0.0714em solid #cccccc;
   padding-right: 0.7145em;
-}
-.single .byline .authors a {
-  color: #999999;
 }
 .single .byline time {
   padding-left: 0.7145em;
@@ -2126,6 +2118,10 @@ a:focus,
 a:visited:focus {
   color: #CCCCCC;
 }
+a:active,
+a:visited:active {
+  color: #b70000;
+}
 a:link,
 a:visited:link {
   /* 
@@ -2134,6 +2130,24 @@ a:visited:link {
 		for mobile devices.
 		*/
   -webkit-tap-highlight-color: rgba(63, 63, 63, 0.5);
+}
+.headline a,
+.headline a:visited {
+  color: #565656;
+  /* on hover */
+
+  /* on click */
+
+}
+.headline a:hover,
+.headline a:visited:hover,
+.headline a:focus,
+.headline a:visited:focus {
+  color: #b70000;
+}
+.headline a:active,
+.headline a:visited:active {
+  color: #CCCCCC;
 }
 /******************************************************************
 H1, H2, H3, H4, H5, H6 STYLES
@@ -2152,7 +2166,6 @@ h6,
 .h6 {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -2448,7 +2461,6 @@ FLEX TETRODO STYLES
 .flexslider .headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -2464,7 +2476,6 @@ FLEX TETRODO STYLES
 .flexslider .dek {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -2550,7 +2561,6 @@ p {
 .single-section-name {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
@@ -2619,7 +2629,6 @@ p {
 /* inline category list, generally above headlines */
 .post-category-list-container {
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   font-weight: 700;
   /* removing text decoration from all headline links */
 
@@ -2630,13 +2639,19 @@ p {
   letter-spacing: 0.02em;
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  color: #AAAAAA;
+  color: #CCCCCC;
 }
 .post-category-list-container a {
   text-decoration: none;
 }
 .post-category-list-container a {
-  color: #AAAAAA;
+  color: #CCCCCC;
+}
+.post-category-list-container a:hover {
+  color: #b70000;
+}
+.post-category-list-container a:active {
+  color: #565656;
 }
 /* AKA "the excerpt" */
 .dek {
@@ -2675,7 +2690,6 @@ PAGE NAVI STYLES
 .bones_page_navi {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   font-weight: 700;
   /* removing text decoration from all headline links */
 
@@ -3033,6 +3047,9 @@ FOOTER STYLES
 .footer-links a {
   color: #CCCCCC;
 }
+.footer-links a:hover {
+  color: #b70000;
+}
 /* end .footer-links */
 /* left column */
 #footer-column-center {
@@ -3060,7 +3077,6 @@ FOOTER STYLES
 #footer-column-center .footer-social-container {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  color: #aaaaaa;
   margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */

@@ -436,11 +436,13 @@ style a page via class
 					}
 				
 					a {
-						color: white;
+						color: #CCCCCC;
 						
-						&:hover,
-						&:active {
+						&:hover {
 							color: #b70000;
+						}
+						&:active {
+							color: #CCCCCC;
 						}
 					}
 				} /* end article */		
@@ -517,9 +519,6 @@ style a page via class
 			.sc;
 			border-right: @niceborders-s;
 			padding-right: (@lhem-s/2);
-			
-			a { color: #999999; }
-			
 		}
 		
 		time {
@@ -628,7 +627,7 @@ a, a:visited {
 	
 	/* on click */
 	&:active {
-		
+		color: #b70000;
 	}
 	
 	/* mobile tap color */
@@ -642,6 +641,22 @@ a, a:visited {
 	}
 }
 
+.headline {
+	a, a:visited {
+		color: #565656;
+		
+		/* on hover */
+		&:hover, &:focus {
+			color: #b70000;
+		}
+		
+		/* on click */
+		&:active {
+			color: #CCCCCC;
+		}
+	}
+}
+
 
 /******************************************************************
 H1, H2, H3, H4, H5, H6 STYLES
@@ -650,7 +665,6 @@ H1, H2, H3, H4, H5, H6 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
 	font-family: @sans-serif; 
 	text-rendering : optimizelegibility;
-	color: #aaaaaa;
 	margin: 0;
 	font-weight: 700;
 	
@@ -1174,10 +1188,17 @@ POSTS & CONTENT STYLES
 			.h6;
 			font-family: @sans-serif;
 			font-weight: 300;
-			color: #AAAAAA;
+			color: #CCCCCC;
 
 			a {
-				color: #AAAAAA;
+				color: #CCCCCC;
+				
+				&:hover {
+					color: #b70000;
+				}
+				&:active {
+					color: #565656;
+				}
 			}
 		}
 		
@@ -1729,6 +1750,10 @@ FOOTER STYLES
 		
 		a {
 			color: #CCCCCC;
+			
+			&:hover {
+				color: #b70000;
+			}
 		}		
 	} /* end .footer-links */
 	
