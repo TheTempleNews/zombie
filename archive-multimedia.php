@@ -110,7 +110,7 @@
 									</div> <!-- end #post-type-loop-top -->
 								
 								
-									<div id="post-type-loop-main" class="twelvecol first last clearfix">
+									<div id="post-type-loop-main" class="multimedia-mgallery-main">
 					
 										<?php // begin the loop again
 								
