@@ -125,7 +125,7 @@ img{margin:0 0 1.5em 0;}
 #section-box-featured{margin-bottom:3em;}
 .flexslider .headline{text-shadow:3px 3px 4px rgba(0, 0, 0, 0.3);filter:dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);}
 .flexslider .dek{text-shadow:3px 3px 4px rgba(0, 0, 0, 0.3);filter:dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);}
-#content{margin-top:1.5em;}
+#content{margin:1.5em auto 9em;}
 p{margin-bottom:1.5em;}
 .hentry footer{border-bottom:0.0625em solid #cccccc;padding-bottom:1.5em;margin-bottom:3em;}
 #post-content{}#post-content dd{margin-bottom:1.5em;}

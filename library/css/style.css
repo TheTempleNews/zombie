@@ -2355,7 +2355,7 @@ FLEX TETRODO STYLES
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.429em;
+  margin: 1.429em auto 8.574em;
 }
 p {
   margin-bottom: 1.429em;
@@ -3801,7 +3801,7 @@ you can add resource intensive styles.
   POSTS & CONTENT STYLES
   *********************/
   #content {
-    margin-top: 1.5em;
+    margin: 1.5em auto 9em;
   }
   p {
     margin-bottom: 1.5em;
