@@ -70,7 +70,7 @@
 											<header>
 												<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 												<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span>&ensp;<time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+												<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors sc"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span>&ensp;<time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 											</header>
 
 											<section class="dek">
