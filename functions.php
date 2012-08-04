@@ -539,6 +539,7 @@ function ttn_article_published_link() {
 <?php
 
 // add_action( 'pre_get_posts', 'ttn_article_loop_include_cat' );
+add_action( 'pre_get_posts', 'ttn_multimedia_paged' );
 /**
  * Modify Query
  * 
@@ -589,6 +590,12 @@ function ttn_cat_loop_include_cpt( $query ) {
 		$query->set( 'post_type', $inc_cat );
 	}
 	
+}
+
+function ttn_multimedia_paged( $query ) {
+	if ( $query->is_main_query() && is_post_type_archive('multimedia') && is_paged() ) {
+		$query->set( 'posts_per_page', 9 );
+	}
 }
 ?>
 <?php
