@@ -95,7 +95,7 @@
 		
 												<section class="multimedia-summary media-summary clearfix">
 												
-													<?php echo get_post_meta($post->ID, 'media_summary', true); ?>
+													<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 													
 												</section> <!-- end multimedia-dek -->
 		
@@ -154,7 +154,7 @@
 						
 															<section class="multimedia-dek dek">
 															
-																<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+																<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 																
 															</section> <!-- end multimedia-dek -->
 					
@@ -257,7 +257,7 @@
 						
 															<section class="multimedia-dek dek">
 															
-																<?php get_post_meta($post->ID, 'media_summary', true); ?>
+																<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 																
 															</section> <!-- end multimedia-dek -->
 					
