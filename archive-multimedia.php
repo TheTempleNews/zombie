@@ -238,6 +238,8 @@
 								<div id="multimedia-mgallery" class="mgallery ninecol last clearfix">
 							
 									<div id="post-type-loop-main" class="twelvecol first last clearfix">
+									
+										<div class="mgallery-row clearfix">
 					
 										<?php // begin the loop again
 								
@@ -283,7 +285,16 @@
 												
 												</div> <!-- end article-container -->
 								
-										<?php endwhile; // close while_posts() loop but continue past the pagination area to see the real end
+										<?php
+										if ( $row_count % 3 == 0 && $row_count !== 9 ) {
+											echo '</div><div class="mgallery-row clearfix">';
+										} elseif ( $row_count == 9 ) {
+											echo '</div>';
+										}
+										
+										$row_count++;
+										
+										endwhile; // close while_posts() loop but continue past the pagination area to see the real end
 								
 										if (function_exists('bones_page_navi')) { // if experimental feature is active 
 		
