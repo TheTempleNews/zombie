@@ -49,6 +49,9 @@
 								$styles_count = count($style_classes);
 								$style_index = 0;
 								
+								// sets up counter for grid row divs in mgallery main
+								$row_count = 1;
+								
 								// sets up counter to display first post differently (see TOP ARTICLE)
 								$firstpost = 'firstpost'; ?>
 						
@@ -111,6 +114,8 @@
 								
 								
 									<div id="post-type-loop-main" class="multimedia-mgallery-main">
+									
+										<div class="mgallery-row clearfix">
 					
 										<?php // begin the loop again
 								
@@ -162,10 +167,21 @@
 												
 												</div> <!-- end article-container -->
 								
-										<?php } // end non-first posts
+										<?php
+										if ( $row_count % 3 == 0 && $row_count !== 9 ) {
+											echo '</div><div class="mgallery-row clearfix">';
+										} elseif ( $row_count == 9 ) {
+											echo '</div>';
+										}
+										
+										$row_count++;
+										
+										} // end non-first posts
 							
 										endwhile; // close while_posts() loop but continue past the pagination area to see the real end
-								
+										?>
+										
+										<?php
 										if (function_exists('bones_page_navi')) { // if experimental feature is active 
 		
 												bones_page_navi(); // use the page navi function 
@@ -194,6 +210,8 @@
 											</article>
 							
 										<?php endif; // kill loop ?>
+										
+										
 									
 							
 									</div> <!-- end #post-type-loop-main -->
