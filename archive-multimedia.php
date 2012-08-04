@@ -84,7 +84,7 @@
 												<header class="clearfix">
 													<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 													<h2 class="multimedia-headline multimedia-top-headline headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-													<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p><p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time></p>
+													<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 												</header>
 		
 												<section class="multimedia-summary media-summary clearfix">
@@ -134,7 +134,7 @@
 															<header>
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
 																<h2 class="multimedia-headline headline"><?php the_title(); ?></h2>
-																<p class="multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span></p><p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time></p>
+																<p class="multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span></p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
 															</header>
 						
 															<section class="multimedia-dek dek">
@@ -231,7 +231,7 @@
 															<header>
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
 																<h2 class="multimedia-headline headline"><?php the_title(); ?></h2>
-																<p class="multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span></p><p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time></p>
+																<p class="multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span></p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
 															</header>
 						
 															<section class="multimedia-dek dek">
