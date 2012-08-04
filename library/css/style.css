@@ -1992,6 +1992,22 @@ style a page via class
 /* no results search page */
 /* individual paged search (i.e. body.search-paged-3) */
 /* 404 page */
+.single .single-title {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  color: #aaaaaa;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 1.714em;
+  line-height: 1;
+  margin: 0.3em 0;
+  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+}
+.single .single-title a {
+  text-decoration: none;
+}
 .single .dek {
   font-style: italic;
 }
@@ -2547,22 +2563,6 @@ p {
   margin: auto 0 1.429em;
 }
 .single-section-name a {
-  text-decoration: none;
-}
-.single-title {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  color: #aaaaaa;
-  margin: 0;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 1.714em;
-  line-height: 1;
-  margin: 0.3em 0;
-  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
-}
-.single-title a {
   text-decoration: none;
 }
 .page-title {
@@ -3532,6 +3532,11 @@ you can add resource intensive styles.
   /* no results search page */
   /* individual paged search (i.e. body.search-paged-3) */
   /* 404 page */
+  .single .single-title {
+    font-size: 2.25em;
+    line-height: 1.333333;
+    margin: 0.333333em 0;
+  }
   .single .authors {
     font-family: 'Alegreya SC';
     border-right: 0.0625em solid #cccccc;

@@ -61,6 +61,7 @@ body{font-size:100%;line-height:1.5;}
 .post-type-archive-multimedia #main .article-container article .multimedia-dek:after{clear:both;}
 .post-type-archive-multimedia #main .article-container article a{color:white;}.post-type-archive-multimedia #main .article-container article a:hover,.post-type-archive-multimedia #main .article-container article a:active{color:#b70000;}
 .post-type-archive-slideshow{}.post-type-archive-slideshow #main{}.post-type-archive-slideshow #main .article-container{height:35em;margin-bottom:1.5em;}.post-type-archive-slideshow #main .article-container article{margin:1.5em;}
+.single .single-title{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;}
 .single .authors{font-family:'Alegreya SC';border-right:0.0625em solid #cccccc;padding-right:0.75em;}
 .single time{padding-left:0.75em;}
 .wrap{max-width:1140px;}
