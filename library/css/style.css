@@ -1564,6 +1564,9 @@ style a page via class
 .home #section-box-multimedia #multimedia-mgallery .headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .headline {
+  letter-spacing: 0.02em;
+}
 .home #menu-top-links {
   list-style: none;
   margin: 0;
@@ -3189,8 +3192,8 @@ you can add resource intensive styles.
     line-height: 1.2;
     margin: 0.5em 0;
   }
-  .home #section-box-multimedia {
-    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main header {
+    margin: 0 0 1em;
   }
   /* home page */
   /* blog page */
