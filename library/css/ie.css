@@ -155,12 +155,15 @@ p{margin-bottom:1.5em;}
 #comment-form-title{margin:0 0 1.5em;}
 #allowed_tags{margin:1.5em 0.625em 0.75em 0;}
 .nocomments{margin:0 1.25em 1.5em;}
-.sidebar{margin-top:3em;}
-#sidebar1{padding-top:0;border-top:none;}
+.sidebar{display:block;font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}
+#sidebar1{padding-top:0;border-top:none;}#sidebar1 .widget:first-child{margin:0 auto auto;}
 #widgetized-front-center{font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;}#widgetized-front-center .widget_tptn_pop ul,#widgetized-front-center .widget_tptn_pop_daily ul{list-style:none;padding:0;font-size:75%;line-height:1.333;}
-.widgettitle{border-bottom:0.0625em solid #cccccc;padding:0.75em 0;margin-bottom:1.4375em;}
+.widgettitle{font-size:1.000em;line-height:1.500;margin:0;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;border-bottom:0.0625em solid #cccccc;padding:0.75em 0;margin-bottom:1.4375em;}
 .widget{padding:0 10px;margin:1.5em 0;}.widget ul li{margin-bottom:0.75em;}
 .widget ul li ul{margin-top:0.75em;padding-left:1.5em;}
+.widget_polls-widget ul li{display:none;}
+.widget_polls-widget .wp-polls-ul li{display:block;}.widget_polls-widget .wp-polls-ul li i{font-style:normal;}
+.widget_polls-widget .wp-polls-ul li label{font-weight:400;}
 .widget_links ul{font-size:1.5em;line-height:1;margin:0.5em 0;font-weight:600;padding:0;margin:0;list-style:none;text-align:center;}.widget_links ul li{margin:0;}
 .widget_twitter div{padding:0;}.widget_twitter div ul{list-style:none;padding:0;font-size:75%;line-height:1.333;}.widget_twitter div ul li{zoom:1;margin-bottom:0.75em;padding-bottom:0.75em;border-bottom:0.0625em solid #cccccc;display:block;}.widget_twitter div ul li:before,.widget_twitter div ul li:after{content:"";display:table;}
 .widget_twitter div ul li:after{clear:both;}

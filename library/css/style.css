@@ -2917,49 +2917,8 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.widgettitle {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  color: #aaaaaa;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 1.000em;
-  line-height: 1.428571429;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  border-bottom: 0.0714em solid #cccccc;
-  padding: 0.7145em 0;
-  margin-bottom: 1.3576000000000001em;
-  font-weight: 300;
-}
-.widgettitle a {
-  text-decoration: none;
-}
-.widget {
-  margin: 1.429em 0;
-}
-.widget ul li {
-  /* deep nesting */
-
-}
-#sidebar1 {
-  padding-top: 2.858em;
-  border-top: 0.1428em solid #666666;
-}
-/* polls widget */
-.widget_polls-widget ul li {
+.sidebar {
   display: none;
-}
-.widget_polls-widget .wp-polls-ul li {
-  display: block;
-}
-.widget_polls-widget .wp-polls-ul li i {
-  font-style: normal;
-}
-.widget_polls-widget .wp-polls-ul li label {
-  font-weight: 400;
 }
 /*********************
 FOOTER STYLES
@@ -4135,11 +4094,15 @@ you can add resource intensive styles.
   SIDEBARS & ASIDES & WIDGETIZED AREAS
   ************************************/
   .sidebar {
-    margin-top: 3em;
+    display: block;
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   #sidebar1 {
     padding-top: 0;
     border-top: none;
+  }
+  #sidebar1 .widget:first-child {
+    margin: 0 auto auto;
   }
   #widgetized-front-center {
     font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -4152,6 +4115,12 @@ you can add resource intensive styles.
     line-height: 1.333;
   }
   .widgettitle {
+    font-size: 1.000em;
+    line-height: 1.500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 300;
     border-bottom: 0.0625em solid #cccccc;
     padding: 0.75em 0;
     margin-bottom: 1.4375em;
@@ -4168,6 +4137,19 @@ you can add resource intensive styles.
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1.5em;
+  }
+  /* polls widget */
+  .widget_polls-widget ul li {
+    display: none;
+  }
+  .widget_polls-widget .wp-polls-ul li {
+    display: block;
+  }
+  .widget_polls-widget .wp-polls-ul li i {
+    font-style: normal;
+  }
+  .widget_polls-widget .wp-polls-ul li label {
+    font-weight: 400;
   }
   /* links widget */
   .widget_links ul {

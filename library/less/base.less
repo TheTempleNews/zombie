@@ -1631,60 +1631,7 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
-
-	.widgettitle {
-		.h6;
-		border-bottom: @niceborders-s;
-		padding: (@lhem-s/2) 0;
-		margin-bottom: (@lhem-s)-@1px-s;
-		font-weight: 300;
-	}
-
-	.widget {
-		margin: @lhem-s 0;
-		
-		ul {
-		
-			li {
-			
-				&:first-child {}
-				
-				&:last-child {}
-				
-				a {}
-				
-				/* deep nesting */
-				ul {}
-			
-			}
-		
-		}
-	
-	}
-	
-#sidebar1 {
-	padding-top: (@lhem-s*2);
-	border-top: (@1px-s*2) solid #666;
-}
-
-/* polls widget */
-.widget_polls-widget {
-	
-	ul li {
-		display: none;
-	}
-	
-	.wp-polls-ul li {
-		display: block;
-		
-		i { font-style: normal; }
-		
-		label {
-			font-weight: 400;
-		}
-	}
-}
+.sidebar { display: none; }
 
 /*********************
 FOOTER STYLES

@@ -949,12 +949,17 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 ************************************/
 
 .sidebar {
-	margin-top: (@lhem-l*2);
+	display: block;
+	font-family: @sans-serif;
 }
 
 	#sidebar1 {
 		padding-top: 0;
 		border-top: none;
+	
+		.widget:first-child {
+			margin: 0 auto auto;
+		}
 	}
 	
 	#widgetized-front-center {
@@ -974,6 +979,8 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 	}
 	
 	.widgettitle {
+		.h6;
+		font-weight: 300;
 		border-bottom: @niceborders-l;
 		padding: (@lhem-l/2) 0;
 		margin-bottom: (@lhem-l)-@1px-l;
@@ -999,7 +1006,24 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 			}
 		}
 	}
-
+	
+	/* polls widget */
+	.widget_polls-widget {
+		
+		ul li {
+			display: none;
+		}
+		
+		.wp-polls-ul li {
+			display: block;
+			
+			i { font-style: normal; }
+			
+			label {
+				font-weight: 400;
+			}
+		}
+	}
 
 	/* links widget */
 	.widget_links {
