@@ -84,7 +84,8 @@
 												<header class="clearfix">
 													<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 													<h2 class="multimedia-headline multimedia-top-headline headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-													<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+													<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+													<time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 												</header>
 		
 												<section class="multimedia-summary media-summary clearfix">
@@ -123,25 +124,23 @@
 												<div class="article-container fourcol clearfix <?php echo $k ?>">
 		
 													<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-														<a href="<?php the_permalink(); ?>" class="article-link">
 														
 															<?php if ( has_post_thumbnail() ) : ?>
 																<div class="video-thumbnail-container">
-																	<?php the_post_thumbnail('zom-landscape-396'); ?>
+																	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-396'); ?></a>
 																</div>
 															<?php endif; ?>
 						
 															<header>
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-																<h2 class="multimedia-headline headline"><?php the_title(); ?></h2>
-																<p class="multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span></p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
+																<h2 class="multimedia-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+																<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+																<time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
 															</header>
 						
 															<section class="multimedia-dek dek">
 																<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 															</section> <!-- end multimedia-dek -->
-														
-														</a> <!-- end article-link -->
 					
 													</article> <!-- end article -->
 												
@@ -217,28 +216,25 @@
 												<div class="article-container fourcol clearfix <?php echo $k ?>">
 		
 													<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-													
-														<a href="<?php the_permalink(); ?>" class="article-link">
 					
 															<?php if ( has_post_thumbnail() ) : ?>
 						
 																<div class="multimedia-thumb mgallery-thumb">
-																	<?php the_post_thumbnail('zom-landscape-396'); ?>
+																	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-396'); ?></a>
 																</div>
 						
 															<?php endif; ?>
 						
 															<header>
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-																<h2 class="multimedia-headline headline"><?php the_title(); ?></h2>
-																<p class="multimedia-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="multimedia-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span></p><time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
+																<h2 class="multimedia-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+																<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+																<time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
 															</header>
 						
 															<section class="multimedia-dek dek">
 																<?php get_post_meta($post->ID, 'media_summary', true); ?>
 															</section> <!-- end multimedia-dek -->
-														
-														</a> <!-- end article-link -->
 					
 													</article> <!-- end article -->
 												
