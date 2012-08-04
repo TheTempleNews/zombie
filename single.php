@@ -39,7 +39,7 @@
 						
 								<header class="article-header">
 									
-									<div class="post-category-list-container"><?php the_category_no_link(); ?></div>
+									<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 									
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
