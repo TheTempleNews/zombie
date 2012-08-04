@@ -1858,11 +1858,6 @@ style a page via class
 /* no results search page */
 /* individual paged search (i.e. body.search-paged-3) */
 /* 404 page */
-.single .single-section-name {
-  border-bottom: 0.0714em solid #cccccc;
-  padding: 0.7145em 0;
-  margin-bottom: 1.429em;
-}
 .single .dek {
   font-style: italic;
 }
@@ -2402,6 +2397,11 @@ p {
   text-decoration: none;
 }
 /* end .hentry */
+.single-section-name {
+  border-bottom: 0.0714em solid #cccccc;
+  padding: 0.7145em 0;
+  margin-bottom: 1.429em;
+}
 .single-title {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -3252,11 +3252,6 @@ you can add resource intensive styles.
   /* no results search page */
   /* individual paged search (i.e. body.search-paged-3) */
   /* 404 page */
-  .single .single-section-name {
-    border-bottom: 0.0625em solid #cccccc;
-    padding: 0.75em 0;
-    margin-bottom: 1.5em;
-  }
   .single .authors {
     font-family: 'Alegreya SC';
     border-right: 0.0625em solid #cccccc;
@@ -3811,6 +3806,11 @@ you can add resource intensive styles.
     border-bottom: 0.0625em solid #cccccc;
     padding-bottom: 1.5em;
     margin-bottom: 3em;
+  }
+  .single-section-name {
+    border-bottom: 0.0625em solid #cccccc;
+    padding: 0.75em 0;
+    margin-bottom: 1.5em;
   }
   #post-content {
     /* end .wp-caption */

@@ -19,7 +19,7 @@
 
 					    ?>
 					    
-<h1 class="archive-main-title" class="first last twelvecol"><a href="<?php echo get_post_type_archive_link( $post_type ); ?>"><?php post_type_archive_title(); ?></a>
+<h1 class="single-section-name archive-main-title" class="first last twelvecol"><a href="<?php echo get_post_type_archive_link( $post_type ); ?>"><?php post_type_archive_title(); ?></a>
 							<?php if ( is_post_type_archive() ) : ?>
 								<span class="archive-breadcrumb"><?php
 									if ( is_year() || is_day() || is_month() ) { ?>
