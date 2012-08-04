@@ -1908,38 +1908,60 @@ style a page via class
 .post-type-archive-multimedia {
   background-color: #222222;
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* end .article-container */
+
 }
 .post-type-archive-multimedia #main {
   background-color: #222222;
 }
-.post-type-archive-multimedia #main article.top-multimedia-article a {
-  display: inherit;
-}
-.post-type-archive-multimedia #main .article-container {
+.post-type-archive-multimedia .article-container {
   background-color: #000000;
   margin-bottom: 1.429em;
+  /* end article */
 }
-.post-type-archive-multimedia #main .article-container article {
+.post-type-archive-multimedia .article-container article {
   margin: 1.429em;
 }
-.post-type-archive-multimedia #main .article-container h2.multimedia-headline {
+.post-type-archive-multimedia .article-container article .video-container {
+  margin: 0 0 1.429em;
+}
+.post-type-archive-multimedia .article-container article header,
+.post-type-archive-multimedia .article-container article section {
+  margin: 0 0 1.429em;
+}
+.post-type-archive-multimedia .article-container article .multimedia-headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 0.7145em;
 }
-.post-type-archive-multimedia #main .article-container .multimedia-byline {
-  font-weight: 600;
+.post-type-archive-multimedia .article-container article .multimedia-byline,
+.post-type-archive-multimedia .article-container article time {
+  font-weight: 700;
 }
-.post-type-archive-multimedia #main .article-container .multimedia-dek {
+.post-type-archive-multimedia .article-container article .multimedia-byline {
+  margin: 0;
+}
+.post-type-archive-multimedia .article-container article .multimedia-dek {
+  /* for IE */
+
+  zoom: 1;
   font-style: normal;
 }
-.post-type-archive-multimedia #main .article-container a {
-  display: block;
+.post-type-archive-multimedia .article-container article .multimedia-dek:before,
+.post-type-archive-multimedia .article-container article .multimedia-dek:after {
+  content: "";
+  display: table;
+}
+.post-type-archive-multimedia .article-container article .multimedia-dek:after {
+  clear: both;
+}
+.post-type-archive-multimedia .article-container article a {
   color: white;
 }
-.post-type-archive-multimedia #main .article-container a:hover,
-.post-type-archive-multimedia #main .article-container a:active {
+.post-type-archive-multimedia .article-container article a:hover,
+.post-type-archive-multimedia .article-container article a:active {
   color: #b70000;
 }
-.post-type-archive-multimedia #main #post-type-loop-top {
+.post-type-archive-multimedia #post-type-loop-top {
   height: auto;
 }
 /* multimedia article type archive */
@@ -3424,11 +3446,51 @@ you can add resource intensive styles.
   
   }
   .post-type-archive-multimedia #main .article-container {
-    height: 35em;
+    background-color: #000000;
     margin-bottom: 1.5em;
+    /* end article */
   }
   .post-type-archive-multimedia #main .article-container article {
     margin: 1.5em;
+  }
+  .post-type-archive-multimedia #main .article-container article .video-container {
+    margin: 0 0 1.5em;
+  }
+  .post-type-archive-multimedia #main .article-container article header,
+  .post-type-archive-multimedia #main .article-container article section {
+    margin: 0 0 1.5em;
+  }
+  .post-type-archive-multimedia #main .article-container article .multimedia-headline {
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 0 0.75em;
+  }
+  .post-type-archive-multimedia #main .article-container article .multimedia-byline,
+  .post-type-archive-multimedia #main .article-container article time {
+    font-weight: 700;
+  }
+  .post-type-archive-multimedia #main .article-container article .multimedia-byline {
+    margin: 0;
+  }
+  .post-type-archive-multimedia #main .article-container article .multimedia-dek {
+    /* for IE */
+  
+    zoom: 1;
+    font-style: normal;
+  }
+  .post-type-archive-multimedia #main .article-container article .multimedia-dek:before,
+  .post-type-archive-multimedia #main .article-container article .multimedia-dek:after {
+    content: "";
+    display: table;
+  }
+  .post-type-archive-multimedia #main .article-container article .multimedia-dek:after {
+    clear: both;
+  }
+  .post-type-archive-multimedia #main .article-container article a {
+    color: white;
+  }
+  .post-type-archive-multimedia #main .article-container article a:hover,
+  .post-type-archive-multimedia #main .article-container article a:active {
+    color: #b70000;
   }
   /* multimedia article type archive */
   .post-type-archive-slideshow {

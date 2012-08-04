@@ -277,12 +277,53 @@ style a page via class
 		
 		#main {
 			.article-container {
-				height: 35em;
+				background-color: #000000;
 				margin-bottom: @lhem-l;
 				
 				article {
 					margin: @lhem-l;
-				}
+					
+					.video-container {
+						margin: 0 0 @lhem-l;
+					}
+					
+					.video-thumbnail-container {
+						
+					}
+					
+					header,
+					section {
+						margin: 0 0 @lhem-l;
+					}
+					
+					.multimedia-headline {
+						font-family: @sans-serif;
+						margin: 0 0 (@lhem-l/2);
+					}
+					
+					.multimedia-byline,
+					time {
+						font-weight: 700;
+					}
+					
+					.multimedia-byline {
+						margin: 0;
+					}
+					
+					.multimedia-dek {
+						.clearfix;
+						font-style: normal;
+					}
+				
+					a {
+						color: white;
+						
+						&:hover,
+						&:active {
+							color: #b70000;
+						}
+					}
+				} /* end article */		
 			} /* end .article-container */
 		}	/* end #main */	
 	}   /* multimedia article type archive */

@@ -394,15 +394,7 @@ style a page via class
 		
 		#main {
 			background-color: #222222;
-			
-			
-			
-			article.top-multimedia-article {
-				
-				a {
-					display: inherit
-				}
-			}
+		}
 			
 			.article-container {
 				background-color: #000000;
@@ -410,22 +402,40 @@ style a page via class
 				
 				article {
 					margin: @lhem-s;
-				}
-				
-					h2.multimedia-headline {
+					
+					.video-container {
+						margin: 0 0 @lhem-s;
+					}
+					
+					.video-thumbnail-container {
+						
+					}
+					
+					header,
+					section {
+						margin: 0 0 @lhem-s;
+					}
+					
+					.multimedia-headline {
 						font-family: @sans-serif;
+						margin: 0 0 (@lhem-s/2);
+					}
+					
+					.multimedia-byline,
+					time {
+						font-weight: 700;
 					}
 					
 					.multimedia-byline {
-						font-weight: 600;
+						margin: 0;
 					}
 					
 					.multimedia-dek {
+						.clearfix;
 						font-style: normal;
 					}
 				
-					a{
-						display: block;
+					a {
 						color: white;
 						
 						&:hover,
@@ -433,23 +443,12 @@ style a page via class
 							color: #b70000;
 						}
 					}
-					
-						.video-thumbnail-container {
-							
-						}
-						
-						header,
-						section {
-							
-						}
-			}
+				} /* end article */		
+			} /* end .article-container */
 			
 			#post-type-loop-top {
 				height: auto;
 			}
-		}
-				
-		
 		
 	}   /* multimedia article type archive */
 	.post-type-archive-slideshow {
