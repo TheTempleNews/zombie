@@ -6,7 +6,7 @@
 				
 				    <div id="main" class="twelvecol first clearfix" role="main">
 				    
-				    <h1 class="archive-main-title" class="first last twelvecol"><?php post_type_archive_title(); ?>
+				    <h1 class="single-section-name archive-main-title" class="first last twelvecol"><?php post_type_archive_title(); ?>
 								<?php if ( is_post_type_archive() ) : ?>
 									<span class="archive-breadcrumb"><?php
 										if ( is_year() || is_day() || is_month() ) { ?>
