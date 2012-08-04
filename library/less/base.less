@@ -148,19 +148,36 @@ style a page via class
 		font-family: @sans-serif;
 		
 		#multimedia-mgallery {
+		
+			article {
+				border-bottom: @niceborders-s;
+			}
 			
 			.headline {
 				font-family: @sans-serif;
 			}
 			
 			.multimedia-mgallery-main {
+			
+				.video-container {
+					margin: 0 0 (@lhem-s/2);
+				}
+			
+				.video-thumbnail-container {
+					margin: 0 0 (@lhem-s/2);
+					
+					img {
+						margin: 0;
+						display: block;
+					}
+				}
 				
 				.headline {
 					letter-spacing: 0.02em;
 				}
-			}
-		}
-	}
+			} /* end .multimedia-mgallery-main */
+		} /* end #multimedia-mgallery */
+	} /* end #section-box-multimedia */
 	
 	
 	#menu-top-links {

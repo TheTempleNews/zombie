@@ -1525,6 +1525,8 @@ style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
 .home {
+  /* end #section-box-multimedia */
+
   /* end article */
 
 }
@@ -1564,9 +1566,28 @@ style a page via class
 }
 .home #section-box-multimedia {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* end #multimedia-mgallery */
+
+}
+.home #section-box-multimedia #multimedia-mgallery {
+  /* end .multimedia-mgallery-main */
+
+}
+.home #section-box-multimedia #multimedia-mgallery article {
+  border-bottom: 0.0714em solid #cccccc;
 }
 .home #section-box-multimedia #multimedia-mgallery .headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-container {
+  margin: 0 0 0.7145em;
+}
+.home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-thumbnail-container {
+  margin: 0 0 0.7145em;
+}
+.home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-thumbnail-container img {
+  margin: 0;
+  display: block;
 }
 .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .headline {
   letter-spacing: 0.02em;
@@ -3256,8 +3277,23 @@ you can add resource intensive styles.
     line-height: 1.2;
     margin: 0.5em 0;
   }
+  .home #section-box-multimedia #multimedia-mgallery article {
+    border-bottom: none;
+  }
+  .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-container {
+    margin: 0 0 0.75em;
+  }
+  .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-thumbnail-container {
+    margin: 0 0 0.75em;
+  }
+  .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-thumbnail-container img {
+    margin: 0;
+  }
   .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main header {
-    margin: 0 0 1em;
+    margin: 0 0 1.5em;
+  }
+  .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main header .headline {
+    margin: 0;
   }
   /* home page */
   /* blog page */

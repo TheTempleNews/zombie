@@ -155,10 +155,30 @@ style a page via class
 		
 		#multimedia-mgallery {
 		
+			article {
+				border-bottom: none;
+			}
+		
 			.multimedia-mgallery-main {
+			
+				.video-container {
+					margin: 0 0 (@lhem-l/2);
+				}
+			
+				.video-thumbnail-container {
+					margin: 0 0 (@lhem-l/2);
+					
+					img {
+						margin: 0;
+					}
+				}
 				
 				header {
-					margin: 0 0 1em;
+					margin: 0 0 @lhem-l;
+					
+					.headline {
+						margin: 0;
+					}
 				}
 				
 			}
