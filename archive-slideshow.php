@@ -74,7 +74,7 @@
 													<header class="clearfix">
 														<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 														<h1 class="slideshows-headline slideshows-top-headline headline top-headline"><a href="<?php the_permalink(); ?>" class="article-link" style="display: block;"><?php the_title(); ?></a></h1>
-														<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
+														<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span>&ensp;<time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
 													</header>
 			
 													<section class="slideshows-summary media-summary">
@@ -127,7 +127,7 @@
 															<header>
 																<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 																<h2 class="slideshows-headline headline"><?php the_title(); ?></h2>
-																<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
+																<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span>&ensp;<time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
 															</header>
 						
 															<section class="slideshows-dek dek">
@@ -221,7 +221,7 @@
 														<header>
 															<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
 															<h2 class="slideshows-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-															<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc"datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+															<p class="slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="slideshows-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span>&ensp;<time class="sc"datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
 														</header>
 					
 														<section class="slideshows-dek dek">
