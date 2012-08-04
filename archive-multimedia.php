@@ -82,14 +82,21 @@
 												} ?>
 		
 												<header class="clearfix">
+												
 													<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
+													
 													<h2 class="multimedia-headline multimedia-top-headline headline top-headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+													
 													<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+													
 													<time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+													
 												</header>
 		
 												<section class="multimedia-summary media-summary clearfix">
+												
 													<?php echo get_post_meta($post->ID, 'media_summary', true); ?>
+													
 												</section> <!-- end multimedia-dek -->
 		
 											</article> <!-- end article -->
@@ -127,19 +134,28 @@
 														
 															<?php if ( has_post_thumbnail() ) : ?>
 																<div class="video-thumbnail-container">
+																
 																	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-396'); ?></a>
+																	
 																</div>
 															<?php endif; ?>
 						
 															<header>
+															
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
+																
 																<h2 class="multimedia-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+																
 																<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+																
 																<time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
+																
 															</header>
 						
 															<section class="multimedia-dek dek">
+															
 																<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+																
 															</section> <!-- end multimedia-dek -->
 					
 													</article> <!-- end article -->
@@ -220,20 +236,29 @@
 															<?php if ( has_post_thumbnail() ) : ?>
 						
 																<div class="multimedia-thumb mgallery-thumb">
+																
 																	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-396'); ?></a>
+																	
 																</div>
 						
 															<?php endif; ?>
 						
 															<header>
+															
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
+																
 																<h2 class="multimedia-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+																
 																<p class="multimedia-byline byline"><?php _e("by", "zombietheme"); ?> <span class="multimedia-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+																
 																<time datetime="<?php the_time('c'); ?>" pubdate><?php the_time( 'd F Y' ); ?></time>
+																
 															</header>
 						
 															<section class="multimedia-dek dek">
+															
 																<?php get_post_meta($post->ID, 'media_summary', true); ?>
+																
 															</section> <!-- end multimedia-dek -->
 					
 													</article> <!-- end article -->
