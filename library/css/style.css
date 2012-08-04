@@ -2942,13 +2942,14 @@ FOOTER STYLES
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   color: #aaaaaa;
+  margin: 0;
   font-weight: 700;
   /* removing text decoration from all headline links */
 
-  font-size: 3.429em;
-  line-height: 1;
-  margin: 0.4em 0;
-  margin: 0;
+  font-size: 2.571em;
+  line-height: 1.333333;
+  margin: 0.3em 0;
+  margin: 1.5rem 0;
   background: url("../images/1px-cccccc.png") repeat-x scroll 0 center transparent;
 }
 #footer-column-center .footer-social-container a {
