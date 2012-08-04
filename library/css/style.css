@@ -3448,6 +3448,9 @@ you can add resource intensive styles.
   .post-type-archive-multimedia #main .article-container {
     background-color: #000000;
     margin-bottom: 1.5em;
+    -webkit-box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
     /* end article */
   }
   .post-type-archive-multimedia #main .article-container article {
