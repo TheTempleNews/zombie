@@ -1236,9 +1236,15 @@ PAGE NAVI STYLES
 ******************************************************************/
 .page-navigation, 
 .wp-prev-next { 
-	margin: 1.1em 0 2.2em; 
+	margin: @lhem-s 0 (@lhem-s*2);
+	font-family: @sans-serif;
 }
 	.bones_page_navi {
+		.h4;
+	    float: right;
+	    font-weight: 300;
+	    margin: 0;
+	    padding: 0;
 	
 		li {
 			float: left; 
@@ -1262,7 +1268,7 @@ PAGE NAVI STYLES
 		/* current page link */	
 		li.bpn-current { 
 			padding: 3px 6px; 
-			border-bottom: 2px solid #f01d4f; 
+			border-bottom: 2px solid @thatred; 
 			position: relative; 
 		
 			a {
@@ -1277,11 +1283,16 @@ PAGE NAVI STYLES
 		/* common styles for page-navi links */
 		li.bpn-prev-link, 
 		li.bpn-next-link {
-			font-weight: 700; 
+			// font-weight: 600; 
 		
 			a {
 				padding: 0;
 			}
+		}
+		
+		li.bpn-first-page-link,
+		li.bpn-last-page-link {
+			// font-weight: 600;
 		}
 		
 		/* remove the bg on end links */
