@@ -462,7 +462,9 @@ function the_category_but($excl='', $spacer=' &#124 '){
 				$html .= '<span class="post-category-list">';
 				$html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
 				$html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a></span>';
-				if($thecount>=1) {
+				if($thecount>=1 && !is_home()) {
+					$html .= $spacer;
+				} elseif($thecount>1 && is_home()) {
 					$html .= $spacer;
 				}
 			$thecount--;
