@@ -6,22 +6,10 @@
 
 
 
-						<div id="footer-column-left" class="fourcol first clearfix">
-						
-							<div id="broadcecilad" class="ttn-network-banner">
-										<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-black.png" alt="broadcecil-logo" /></a>
-							</div>
-							
-							<div id="thecherryad" class="ttn-network-banner" title="The Cherry">
-										<a href="http://thecherry.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-black.png" alt="thecherry-logo" /></a>
-							</div>
-							
-														
-						</div>
 
 
 
-						<div id="footer-column-center" class="fourcol clearfix">
+						<div id="footer-column-center" class="fourcol clearfix push_four">
 							
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
 							
@@ -56,6 +44,21 @@
 			                </nav>
 
 							
+						</div>
+
+
+
+						<div id="footer-column-left" class="fourcol first clearfix pull_eight">
+						
+							<div id="broadcecilad" class="ttn-network-banner">
+										<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-black.png" alt="broadcecil-logo" /></a>
+							</div>
+							
+							<div id="thecherryad" class="ttn-network-banner" title="The Cherry">
+										<a href="http://thecherry.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-black.png" alt="thecherry-logo" /></a>
+							</div>
+							
+														
 						</div>
 
 
