@@ -53,7 +53,9 @@ body{font-size:100%;line-height:1.5;}
 .archive article .byline{margin:0.75em 0;}
 .archive article .dek{display:block;}.archive article .dek p{margin:0 0 1.5em;}
 .post-type-archive .top-archive-article{border-bottom:0.0625em solid #cccccc;margin:0 0 3em 0;}
-.post-type-archive-multimedia{background-color:#222222;}.post-type-archive-multimedia #main{}.post-type-archive-multimedia #main .article-container{background-color:#000000;margin-bottom:1.5em;-webkit-box-shadow:5px 5px 7px 0 rgba(0, 0, 0, 0.5);-moz-box-shadow:5px 5px 7px 0 rgba(0, 0, 0, 0.5);box-shadow:5px 5px 7px 0 rgba(0, 0, 0, 0.5);}.post-type-archive-multimedia #main .article-container article{margin:1.5em;}.post-type-archive-multimedia #main .article-container article .video-container{margin:0 0 1.5em;}
+.post-type-archive-multimedia{background-color:#222222;}.post-type-archive-multimedia #main{}.post-type-archive-multimedia #main .mgallery-row{zoom:1;}.post-type-archive-multimedia #main .mgallery-row:before,.post-type-archive-multimedia #main .mgallery-row:after{content:"";display:table;}
+.post-type-archive-multimedia #main .mgallery-row:after{clear:both;}
+.post-type-archive-multimedia #main .article-container{background-color:#000000;margin-bottom:1.5em;-webkit-box-shadow:5px 5px 7px 0 rgba(0, 0, 0, 0.5);-moz-box-shadow:5px 5px 7px 0 rgba(0, 0, 0, 0.5);box-shadow:5px 5px 7px 0 rgba(0, 0, 0, 0.5);}.post-type-archive-multimedia #main .article-container article{margin:1.5em;}.post-type-archive-multimedia #main .article-container article .video-container{margin:0 0 1.5em;}
 .post-type-archive-multimedia #main .article-container article header,.post-type-archive-multimedia #main .article-container article section{margin:0 0 1.5em;}
 .post-type-archive-multimedia #main .article-container article .multimedia-headline{font-family:'Source Sans Pro','Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;margin:0 0 0.75em;}
 .post-type-archive-multimedia #main .article-container article .multimedia-byline,.post-type-archive-multimedia #main .article-container article time{font-weight:700;}

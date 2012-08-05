@@ -3508,6 +3508,19 @@ you can add resource intensive styles.
     /* end .article-container */
   
   }
+  .post-type-archive-multimedia #main .mgallery-row {
+    /* for IE */
+  
+    zoom: 1;
+  }
+  .post-type-archive-multimedia #main .mgallery-row:before,
+  .post-type-archive-multimedia #main .mgallery-row:after {
+    content: "";
+    display: table;
+  }
+  .post-type-archive-multimedia #main .mgallery-row:after {
+    clear: both;
+  }
   .post-type-archive-multimedia #main .article-container {
     background-color: #000000;
     margin-bottom: 1.5em;

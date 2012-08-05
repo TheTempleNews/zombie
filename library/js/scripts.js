@@ -27,7 +27,13 @@ jQuery(document).ready(function($) {
 			$(this).find('.sub-menu').slideToggle('fast');
 		});
 	}
-
+	/*
+	var maxHeight = 0;
+	$('#post-type-loop-main .article-container')
+		.each(function() { maxHeight = Math.max(maxHeight, $(this).height()); })
+		.height(maxHeight);
+	*/
+	
     /*
     Responsive jQuery is a tricky thing.
     There's a bunch of different ways to handle
@@ -77,27 +83,6 @@ jQuery(document).ready(function($) {
         $('.comment img[data-gravatar]').each(function(){
             $(this).attr('src',$(this).attr('data-gravatar'));
         });
-        
-        /* set .article-container elements in mgallery to the maximum height of one of those elements */
-        //set the starting bigestHeight variable
-        /* var biggestHeight = 0;
-        //check each of them
-        $('#post-type-loop-main .article-container').each(function(){
-        //if the height of the current element is bigger then the current biggestHeight value
-	    if($(this).height() > biggestHeight){
-	        //update the biggestHeight with the height of the current elements
-	        biggestHeight = $(this).height();
-	    }
-	});
-	    //when checking for biggestHeight is done set that height to all the elements
-	    $('#post-type-loop-main .article-container').height(biggestHeight);
-        	
-	        /* // this fails in webkit browsers
-	         var maxHeight = 0;
-			$('#post-type-loop-main .article-container')
-				.each(function() { maxHeight = Math.max(maxHeight, $(this).height()); })
-				.height(maxHeight); */
-        
     }
 
 
@@ -121,6 +106,19 @@ jQuery(document).ready(function($) {
 	$(".fittext").fitText();
  
 }); /* end of as page load scripts */
+
+jQuery(window).load(function() {
+
+/* set .article-container elements in mgallery to the maximum height of one of those elements
+THIS MUST BE PERFORMED ON WINDOW LOAD! */
+
+var maxHeight = 0;
+$('#post-type-loop-main .article-container')
+	.each(function() { maxHeight = Math.max(maxHeight, $(this).height()); })
+	.height(maxHeight);
+
+}); /* end onload scripts */
+
 
 
 /*! A fix for the iOS orientationchange zoom bug.
