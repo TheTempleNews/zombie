@@ -2025,10 +2025,30 @@ style a page via class
 /* single post page */
 .single-multimedia {
   background-color: #222222;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .single-multimedia #main {
   background-color: #222222;
 }
+.single-multimedia .single-title {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.single-multimedia .dek {
+  font-style: normal;
+}
+.single-multimedia .byline {
+  font-style: normal;
+}
+.single-multimedia .byline .authors {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.single-multimedia section.post-content {
+  margin: 0 0 2.858em;
+}
+.single-multimedia section.post-content .single-video {
+  margin: 0 0 1.429em;
+}
+/* end single multimedia */
 /* individual post page by id (i.e. body.postid-73) */
 /* individual paged single (i.e. body.single-paged-3) */
 /* attatchment page */
@@ -3576,6 +3596,13 @@ you can add resource intensive styles.
     padding-left: 0.75em;
   }
   /* single post page */
+  .single-multimedia .post-content {
+    margin: 0 0 3em;
+  }
+  .single-multimedia .single-video {
+    margin: 0 0 1.5em;
+  }
+  /* end single multimedia */
   /* individual post page by id (i.e. body.postid-73) */
   /* individual paged single (i.e. body.single-paged-3) */
   /* attatchment page */

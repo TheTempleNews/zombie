@@ -526,13 +526,40 @@ style a page via class
 		}
 	}
 }                        /* single post page */
+
+
 	.single-multimedia {
 		background-color: #222222;
+		font-family: @sans-serif;
 	
 		#main {
 			background-color: #222222;
 		}
-	}
+		
+		.single-title {
+			font-family: @sans-serif;
+		}
+		
+		.dek {
+			font-style: normal;
+		}
+		
+		.byline {
+			font-style: normal;
+		
+			.authors {
+				font-family: @sans-serif;
+			}
+		}
+		
+		section.post-content {
+			margin: 0 0 (@lhem-s*2);
+			
+			.single-video {
+				margin: 0 0 @lhem-s;
+			}
+		}
+	} /* end single multimedia */
 	.postid-1 {}                               /* individual post page by id (i.e. body.postid-73) */
 	.single-paged-1 {}                         /* individual paged single (i.e. body.single-paged-3) */
 	.single-print_edition,

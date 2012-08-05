@@ -27,7 +27,7 @@
 										<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 									</section> <!-- end dek -->
 									
-									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+									<p class="byline"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 						
 								</header> <!-- end article header -->
 					
@@ -47,8 +47,8 @@
 										} ?>
 									</div>
 									
-									<div class="single-multimedia-summary single-media-summary">
-										<?php echo get_post_meta($post->ID, 'media_summary', true); ?>
+									<div class="single-multimedia-dek single-media-dek">
+										<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 									</div>
 									
 								</section> <!-- end article section -->

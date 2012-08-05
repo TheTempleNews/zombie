@@ -65,6 +65,8 @@ body{font-size:100%;line-height:1.5;}
 .single .single-title{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;}
 .single .authors{font-family:'Alegreya SC';border-right:0.0625em solid #cccccc;padding-right:0.75em;}
 .single time{padding-left:0.75em;}
+.single-multimedia .post-content{margin:0 0 3em;}
+.single-multimedia .single-video{margin:0 0 1.5em;}
 .wrap{max-width:1140px;}
 .onecol{width:5.801104972%;}
 .twocol{width:14.364640883%;}
