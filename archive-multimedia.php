@@ -98,7 +98,7 @@
 		
 												<section class="multimedia-dek media-dek clearfix">
 												
-													<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
+													<p class="clearfix"><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 													
 												</section> <!-- end multimedia-dek -->
 		
@@ -135,7 +135,7 @@
 												
 												<div class="article-container fourcol clearfix <?php echo $k ?>">
 		
-													<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+													<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 														
 															<?php if ( has_post_thumbnail() ) : ?>
 																<div class="video-thumbnail-container">
@@ -251,7 +251,7 @@
 										
 												<div class="article-container fourcol clearfix <?php echo $k ?>">
 		
-													<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+													<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 					
 															<?php if ( has_post_thumbnail() ) : ?>
 						
