@@ -2659,13 +2659,13 @@ p {
   letter-spacing: 0.02em;
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  color: #CCCCCC;
+  color: #999999;
 }
 .post-category-list-container a {
   text-decoration: none;
 }
 .post-category-list-container a {
-  color: #CCCCCC;
+  color: #999999;
 }
 .post-category-list-container a:hover {
   color: #b70000;
