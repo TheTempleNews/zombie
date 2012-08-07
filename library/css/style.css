@@ -4240,14 +4240,16 @@ you can add resource intensive styles.
   #section-box-featured {
     margin-bottom: 3em;
   }
-  .flexslider .headline {
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
-  }
-  .flexslider .dek {
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
-  }
+  /* .flexslider {
+  
+  	.headline {
+  		.textShadow();
+  	}
+  	
+  	.dek {
+  		.textShadow();
+  	}
+  } */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
