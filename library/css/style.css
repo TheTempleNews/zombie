@@ -1963,21 +1963,64 @@ style a page via class
 /* multimedia article type archive */
 .post-type-archive-slideshow {
   background-color: #222222;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* end .article-container */
+
 }
 .post-type-archive-slideshow #main {
   background-color: #222222;
 }
-.post-type-archive-slideshow #main .article-container {
+.post-type-archive-slideshow .article-container {
   background-color: #000000;
   margin-bottom: 1.429em;
+  /* end article */
 }
-.post-type-archive-slideshow #main .article-container article {
+.post-type-archive-slideshow .article-container article {
   margin: 1.429em;
+  /* .video-container {
+						margin: 0 0 @lhem-s;
+					} */
+
 }
-.post-type-archive-slideshow #main .article-container a {
-  display: block;
+.post-type-archive-slideshow .article-container article header,
+.post-type-archive-slideshow .article-container article section {
+  margin: 0 0 1.429em;
 }
-.post-type-archive-slideshow #main #post-type-loop-top {
+.post-type-archive-slideshow .article-container article .slideshows-headline {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 0.7145em;
+}
+.post-type-archive-slideshow .article-container article .slideshows-byline,
+.post-type-archive-slideshow .article-container article time {
+  font-weight: 700;
+}
+.post-type-archive-slideshow .article-container article .slideshows-byline {
+  margin: 0;
+}
+.post-type-archive-slideshow .article-container article .slideshows-dek {
+  /* for IE */
+
+  zoom: 1;
+  font-style: normal;
+}
+.post-type-archive-slideshow .article-container article .slideshows-dek:before,
+.post-type-archive-slideshow .article-container article .slideshows-dek:after {
+  content: "";
+  display: table;
+}
+.post-type-archive-slideshow .article-container article .slideshows-dek:after {
+  clear: both;
+}
+.post-type-archive-slideshow .article-container article a {
+  color: #CCCCCC;
+}
+.post-type-archive-slideshow .article-container article a:hover {
+  color: #b70000;
+}
+.post-type-archive-slideshow .article-container article a:active {
+  color: #CCCCCC;
+}
+.post-type-archive-slideshow #post-type-loop-top {
   height: auto;
 }
 /* slideshow article type archive */
@@ -3573,19 +3616,76 @@ you can add resource intensive styles.
   }
   /* multimedia article type archive */
   .post-type-archive-slideshow {
+    background-color: #222222;
     /* end #main */
-  
   }
   .post-type-archive-slideshow #main {
     /* end .article-container */
   
   }
+  .post-type-archive-slideshow #main .mgallery-row {
+    /* for IE */
+  
+    zoom: 1;
+  }
+  .post-type-archive-slideshow #main .mgallery-row:before,
+  .post-type-archive-slideshow #main .mgallery-row:after {
+    content: "";
+    display: table;
+  }
+  .post-type-archive-slideshow #main .mgallery-row:after {
+    clear: both;
+  }
   .post-type-archive-slideshow #main .article-container {
-    height: 35em;
+    background-color: #000000;
     margin-bottom: 1.5em;
+    -webkit-box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
+    /* end article */
   }
   .post-type-archive-slideshow #main .article-container article {
     margin: 1.5em;
+    /* .video-container {
+  						margin: 0 0 @lhem-l;
+  					} */
+  
+  }
+  .post-type-archive-slideshow #main .article-container article header,
+  .post-type-archive-slideshow #main .article-container article section {
+    margin: 0 0 1.5em;
+  }
+  .post-type-archive-slideshow #main .article-container article .slideshows-headline {
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 0 0.75em;
+  }
+  .post-type-archive-slideshow #main .article-container article .slideshows-byline,
+  .post-type-archive-slideshow #main .article-container article time {
+    font-weight: 700;
+  }
+  .post-type-archive-slideshow #main .article-container article .slideshows-byline {
+    margin: 0;
+  }
+  .post-type-archive-slideshow #main .article-container article .slideshows-dek {
+    /* for IE */
+  
+    zoom: 1;
+    font-style: normal;
+  }
+  .post-type-archive-slideshow #main .article-container article .slideshows-dek:before,
+  .post-type-archive-slideshow #main .article-container article .slideshows-dek:after {
+    content: "";
+    display: table;
+  }
+  .post-type-archive-slideshow #main .article-container article .slideshows-dek:after {
+    clear: both;
+  }
+  .post-type-archive-slideshow #main .article-container article a {
+    color: white;
+  }
+  .post-type-archive-slideshow #main .article-container article a:hover,
+  .post-type-archive-slideshow #main .article-container article a:active {
+    color: #b70000;
   }
   /* slideshow article type archive */
   /* date archive page */

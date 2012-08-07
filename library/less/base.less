@@ -455,9 +455,11 @@ style a page via class
 	}   /* multimedia article type archive */
 	.post-type-archive-slideshow {
 		background-color: #222222;
+		font-family: @sans-serif;
 		
 		#main {
 			background-color: #222222;
+		}
 			
 			.article-container {
 				background-color: #000000;
@@ -465,27 +467,51 @@ style a page via class
 				
 				article {
 					margin: @lhem-s;
-				}
-				
-					a{
-						display: block;
+					
+					/* .video-container {
+						margin: 0 0 @lhem-s;
+					} */
+					
+					header,
+					section {
+						margin: 0 0 @lhem-s;
 					}
 					
-						.slideshows-thumbnail-container {
-							
-						}
+					.slideshows-headline {
+						font-family: @sans-serif;
+						margin: 0 0 (@lhem-s/2);
+					}
+					
+					.slideshows-byline,
+					time {
+						font-weight: 700;
+					}
+					
+					.slideshows-byline {
+						margin: 0;
+					}
+					
+					.slideshows-dek {
+						.clearfix;
+						font-style: normal;
+					}
+				
+					a {
+						color: #CCCCCC;
 						
-						header,
-						section {
-							
+						&:hover {
+							color: #b70000;
 						}
-			}
+						&:active {
+							color: #CCCCCC;
+						}
+					}
+				} /* end article */		
+			} /* end .article-container */
 			
 			#post-type-loop-top {
 				height: auto;
 			}
-		}
-
 		
 	}                                          /* slideshow article type archive */
 .date {}                                       /* date archive page */

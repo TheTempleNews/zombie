@@ -348,16 +348,61 @@ style a page via class
 		}	/* end #main */	
 	}   /* multimedia article type archive */
 	.post-type-archive-slideshow {
+		background-color: #222222;
+		
 		#main {
+		
+			.mgallery-row {
+				.clearfix;
+			}
+			
 			.article-container {
-				height: 35em;
+				background-color: #000000;
 				margin-bottom: @lhem-l;
+				.boxShadow( @x: 5px, @y: 5px, @radius: 7px );
 				
 				article {
 					margin: @lhem-l;
-				}
+					
+					/* .video-container {
+						margin: 0 0 @lhem-l;
+					} */
+					
+					header,
+					section {
+						margin: 0 0 @lhem-l;
+					}
+					
+					.slideshows-headline {
+						font-family: @sans-serif;
+						margin: 0 0 (@lhem-l/2);
+					}
+					
+					.slideshows-byline,
+					time {
+						font-weight: 700;
+					}
+					
+					.slideshows-byline {
+						margin: 0;
+					}
+					
+					.slideshows-dek {
+						.clearfix;
+						font-style: normal;
+					}
+				
+					a {
+						color: white;
+						
+						&:hover,
+						&:active {
+							color: #b70000;
+						}
+					}
+				} /* end article */		
 			} /* end .article-container */
-		} /* end #main */
+		}	/* end #main */	
 	} /* slideshow article type archive */
 .date {}                            /* date archive page */
 	.date-paged-1 {}                /* replace the number to the corresponding page number */
