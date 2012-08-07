@@ -54,8 +54,10 @@
 		googletag.defineSlot('/4602070/NSNewsBoxL', [300, 250], 'div-gpt-ad-1342714724220-1').addService(googletag.pubads());
 		googletag.defineSlot('/4602070/NSOpinionBar', [728, 90], 'div-gpt-ad-1342714724220-2').addService(googletag.pubads());
 		googletag.defineSlot('/4602070/NSSideBarMidBox', [300, 250], 'div-gpt-ad-1342714724220-3').addService(googletag.pubads());
-		googletag.defineSlot('/4602070/NSSidebarRect', [300, 100], 'div-gpt-ad-1342714724220-4').addService(googletag.pubads());
+		// das ist broken?
+		// googletag.defineSlot('/4602070/NSSidebarRect', [300, 100], 'div-gpt-ad-1342714724220-4').addService(googletag.pubads());
 		googletag.defineSlot('/4602070/NSSportsBoxR', [300, 250], 'div-gpt-ad-1342714724220-5').addService(googletag.pubads());
+		googletag.defineSlot('/4602070/NSSiderBarRect2', [300, 100], 'div-gpt-ad-1344222885940-0').addService(googletag.pubads());
 		googletag.pubads().enableSingleRequest();
 		googletag.enableServices();
 		});
