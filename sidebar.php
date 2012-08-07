@@ -30,13 +30,12 @@
 						</script>
 						</div> -->
 						
-						<!-- NSSiderBarRect2 -->
-						<div id='div-gpt-ad-1344222885940-0' style='width:300px; height:100px;'>
+						<!-- NSSideBarMidBox -->
+						<div id='div-gpt-ad-1344368320426-0' style='width:300px; height:250px; margin: 0 auto;'>
 						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344222885940-0'); });
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344368320426-0'); });
 						</script>
 						</div>
-
 						
 					</div>
 					
