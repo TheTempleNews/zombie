@@ -234,7 +234,7 @@
 														<header>
 															<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
 															<h2 class="slideshows-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-															<p class="slideshows-byline byline"><?php _e("by", "zombietheme"); ?> <span class="slideshows-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> | <time datetime="<?php echo the_time('c'); ?>" pubdate><?php echo ttn_article_published_link(); ?></time>
+															<p class="slideshows-byline byline"><?php _e("by", "zombietheme"); ?> <span class="slideshows-authors authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> | <time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 														</header>
 					
 														<section class="slideshows-dek dek">
