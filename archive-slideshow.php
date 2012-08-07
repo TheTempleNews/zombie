@@ -76,7 +76,7 @@
 			
 													<header class="clearfix">
 														<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
-														<h1 class="slideshows-headline slideshows-top-headline headline top-headline"><a href="<?php the_permalink(); ?>" class="article-link" style="display: block;"><?php the_title(); ?></a></h1>
+														<h1 class="slideshows-headline slideshows-top-headline headline top-headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 														<p class="slideshows-byline byline"><?php _e("by", "zombietheme"); ?> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> | <time datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
 													</header>
 			
@@ -84,7 +84,6 @@
 														<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 													</section> <!-- end slideshows-dek -->
 												
-												</a> <!-- end article-link -->
 		
 											</article> <!-- end article -->
 		
@@ -121,7 +120,6 @@
 		
 													<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 													
-														<a href="<?php the_permalink(); ?>" class="article-link" style="display: block;">
 	
 															<?php if ( has_post_thumbnail() ) : ?>
 																<div class="slideshows-thumbnail-container">
@@ -131,7 +129,7 @@
 						
 															<header>
 																<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
-																<h2 class="slideshows-headline headline"><?php the_title(); ?></h2>
+																<h2 class="slideshows-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 																<p class="slideshows-byline byline"><?php _e("by", "zombietheme"); ?> <span class="slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> | <time datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time>
 															</header>
 						
@@ -139,7 +137,6 @@
 																<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 															</section> <!-- end slideshows-dek -->
 														
-														</a> <!-- end article-link -->
 					
 													</article> <!-- end article -->
 												
