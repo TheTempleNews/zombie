@@ -27,7 +27,7 @@
 										<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 									</section> <!-- end dek -->
 									
-									<p class="byline"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+									<p class="byline"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 						
 								</header> <!-- end article header -->
 					

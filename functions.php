@@ -335,7 +335,8 @@ function ttn_article_published_link() {
 <?php
 
 // add_action( 'pre_get_posts', 'ttn_article_loop_include_cat' );
-add_action( 'pre_get_posts', 'ttn_multimedia_paged' );
+add_action('pre_get_posts', 'ttn_multimedia_paged');
+add_action('pre_get_posts', 'ttn_author_archive_inc_cpt');
 /**
  * Modify Query
  * 
@@ -391,6 +392,19 @@ function ttn_cat_loop_include_cpt( $query ) {
 function ttn_multimedia_paged( $query ) {
 	if ( $query->is_main_query() && is_post_type_archive('multimedia') && is_paged() ) {
 		$query->set( 'posts_per_page', 9 );
+	}
+}
+
+// Adds all public post types to author archive query
+function ttn_author_archive_inc_cpt( $query ) {
+	// Gets a list of the names of all public post types for use in a query
+	$post_types_args = Array(
+		'public'    => true
+	);
+	$post_types = get_post_types( $post_types_args );
+
+	if ( $query->is_main_query() && is_author() ) {
+		$query->set( 'post_type', $post_types );
 	}
 }
 ?>
