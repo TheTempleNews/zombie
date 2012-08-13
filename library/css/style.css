@@ -1736,15 +1736,15 @@ style a page via class
   border-bottom: 0.0714em solid #cccccc;
   padding: 0;
   margin: auto 0 1.429em;
-  /* this is inactive when dated archives are disabled */
-
 }
 .archive .archive-main-title a {
   text-decoration: none;
 }
 .archive .archive-main-title .archive-breadcrumb {
   font-weight: 300;
-  font-size: 75%;
+  font-size: 0.714em;
+  /* 10px */
+
 }
 .archive .archives-meta-content {
   /* position: relative;
@@ -1841,7 +1841,7 @@ style a page via class
   line-height: 1.2;
   margin: 0.25em 0;
   font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
-  margin: 0 0 0.3em;
+  margin: 0 0 1.429em;
 }
 .archive article .headline a {
   text-decoration: none;
@@ -3436,6 +3436,12 @@ you can add resource intensive styles.
     border-bottom: 0.0625em solid #cccccc;
     padding: 0;
     margin: auto 0 1.5em;
+  }
+  .archive .archive-main-title .archive-breadcrumb {
+    font-weight: 300;
+    font-size: 0.750em;
+    /* 12px */
+  
   }
   .archive article {
     margin-bottom: 1.5em;

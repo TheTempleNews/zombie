@@ -11,7 +11,7 @@
 								get_userdata(intval($author));
 						?>
 					
-						<h1 id="archive-main-title">Archives <span class="archive-breadcrumb"> / author / <?php echo strtolower($curauth->display_name); ?></span></h1>
+						<h1 class="archive-main-title">Archives <span class="archive-breadcrumb"> / author / <?php echo strtolower($curauth->display_name); ?></span></h1>
 						
 						
 						
@@ -22,7 +22,7 @@
 						
 						    <header class="article-header">
 							
-							    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
 							    <p class="meta"><?php _e("Posted", "zombietheme"); ?> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time> <?php _e("by", "zombietheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "zombietheme"); ?> <?php the_category(', '); ?>.</p>
 						
