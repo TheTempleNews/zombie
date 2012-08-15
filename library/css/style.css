@@ -2085,10 +2085,7 @@ style a page via class
 .single-multimedia .byline .authors {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.single-multimedia section.post-content {
-  margin: 0 0 2.858em;
-}
-.single-multimedia section.post-content .single-video {
+.single-multimedia .single-video {
   margin: 0 0 1.429em;
 }
 /* end single multimedia */
@@ -2656,6 +2653,7 @@ p {
 }
 /* post content */
 .post-content {
+  margin: 0 0 2.858em;
   /*
 			image alignment on a screen this size may be
 			a bit difficult. It's set to start aligning 
@@ -3715,9 +3713,6 @@ you can add resource intensive styles.
     padding-left: 0.75em;
   }
   /* single post page */
-  .single-multimedia .post-content {
-    margin: 0 0 3em;
-  }
   .single-multimedia .single-video {
     margin: 0 0 1.5em;
   }
@@ -4279,6 +4274,7 @@ you can add resource intensive styles.
     margin: auto 0 1.5em;
   }
   #post-content {
+    margin: 0 0 3em;
     /* end .wp-caption */
   
   }

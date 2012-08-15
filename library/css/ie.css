@@ -75,7 +75,6 @@ body{font-size:100%;line-height:1.5;}
 .single .single-title{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;}
 .single .authors{font-family:'Alegreya SC';border-right:0.0625em solid #cccccc;padding-right:0.75em;}
 .single time{padding-left:0.75em;}
-.single-multimedia .post-content{margin:0 0 3em;}
 .single-multimedia .single-video{margin:0 0 1.5em;}
 .wrap{max-width:1140px;}
 .onecol{width:5.801104972%;}
@@ -160,7 +159,7 @@ img{margin:0 0 1.5em 0;}
 p{margin-bottom:1.5em;}
 .hentry footer{border-bottom:0.0625em solid #cccccc;padding-bottom:1.5em;margin-bottom:3em;}
 .single-section-name{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;border-bottom:0.0625em solid #cccccc;padding:0;margin:auto 0 1.5em;}
-#post-content{}#post-content dd{margin-bottom:1.5em;}
+#post-content{margin:0 0 3em;}#post-content dd{margin-bottom:1.5em;}
 #post-content pre,#post-content code{border:0.0625em solid #cccccc;}
 #post-content .wp-caption{padding:0.375em;}#post-content .wp-caption p.wp-caption-text{margin:0.375em;}
 .post-category-list-container{font-size:1.000em;line-height:1.500;margin:0;text-transform:uppercase;letter-spacing:0.03em;font-weight:300;}
