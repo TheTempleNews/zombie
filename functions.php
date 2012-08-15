@@ -519,5 +519,14 @@ function namespace_add_custom_types( $query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
-
+?>
+<?php
+// Automatically add FitVids to oembed YouTube videos
+function zombie_embed_filter( $output, $data, $url ) {
+ 
+	$return = '<div class="video-container">' . $output . '</div>';
+	return $return;
+ 
+}
+add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
 ?>
