@@ -24,10 +24,10 @@
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
 									<section class="dek">
-										<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+										<p><?php echo get_post_meta($post->ID, 'media_dek', true); ?></p>
 									</section> <!-- end dek -->
 									
-									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+									<p class="byline"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 						
 								</header> <!-- end article header -->
 					

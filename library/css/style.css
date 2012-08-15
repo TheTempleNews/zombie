@@ -2066,26 +2066,33 @@ style a page via class
   padding-left: 0.7145em;
 }
 /* single post page */
-.single-multimedia {
+.single-multimedia,
+.single-slideshow {
   background-color: #222222;
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.single-multimedia #main {
+.single-multimedia #main,
+.single-slideshow #main {
   background-color: #222222;
 }
-.single-multimedia .single-title {
+.single-multimedia .single-title,
+.single-slideshow .single-title {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.single-multimedia .dek {
+.single-multimedia .dek,
+.single-slideshow .dek {
   font-style: normal;
 }
-.single-multimedia .byline {
+.single-multimedia .byline,
+.single-slideshow .byline {
   font-style: normal;
 }
-.single-multimedia .byline .authors {
+.single-multimedia .byline .authors,
+.single-slideshow .byline .authors {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.single-multimedia .single-video {
+.single-multimedia .single-video,
+.single-slideshow .single-video {
   margin: 0 0 1.429em;
 }
 /* end single multimedia */
