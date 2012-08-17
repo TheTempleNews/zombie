@@ -65,7 +65,48 @@
 						</section> <!-- end #section-box-multimedia -->
 				
 				
-				
+						
+						<!-- FEATURED SLIDESHOW -->
+						<section id="section-box-featured-slideshow" class="section-box section-box-featured clearfix">
+							<h2 class="section-box-featured-title section-box-title">Featured Slideshow</h2>
+						
+								<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-slideshow-article clearfix' ); ?> role="article">
+								
+											<?php
+											$featured_slideshow = new WP_Query( array(
+													'cat' => 3,
+													'post_type' => 'slideshow',
+													'posts_per_page' => 1
+												)
+											);
+											
+											if ($featured_slideshow->have_posts()) : while ($featured_slideshow->have_posts()) : $featured_slideshow->the_post();
+											?>
+											
+											<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+												<?php
+												 wooslider( array(
+												 	'slider_type'       => 'attachments',
+												 	'smoothheight'      => true,
+												 	'animation_loop'    => true,
+												 	'control_nav'       => false,
+												 	'direction_nav'     => false,
+												 	'size'              => 'zom-landscape-576',
+												 	'slideshow_speed'   => 2
+												 ));
+												?>
+											</a>
+											
+											
+											<?php endwhile; endif; wp_reset_postdata(); ?>
+	
+								</article> <!-- end article -->
+						
+						</section> <!-- end #section-box-featured-slideshow -->
+						
+						
+						
+						<?php /*
 						<!-- PRINT EDITION -->
 						<section id="section-box-print" class="section-box section-box-featured clearfix">
 							
@@ -81,6 +122,7 @@
 								<?php endwhile; endif; wp_reset_postdata(); ?>
 							
 						</section> <!-- end #section-box-print -->
+						*/ ?>
 						
 						
 						
@@ -411,11 +453,19 @@
 					
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'twelvecol first last clearfix' ); ?> role="article">
 									
-									<?php
-									
-									the_content();
-									
-									?>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+										<?php
+										 wooslider( array(
+										 	'slider_type'       => 'attachments',
+										 	'smoothheight'      => true,
+										 	'animation_loop'    => true,
+										 	'control_nav'       => false,
+										 	'direction_nav'     => false,
+										 	'size'              => 'zom-landscape-576',
+										 	'slideshow_speed'   => 2
+										 ));
+										?>
+									</a>
 
 									<header class="clearfix">
 										<!-- <div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div> -->
