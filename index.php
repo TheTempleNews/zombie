@@ -110,7 +110,7 @@
 						<!-- NEWS SECTION -->
 						<section id="section-box-news" class="section-container section-box clearfix">
 								
-								<?php the_zombie_loop(news); ?>
+								<?php the_zombie_loop('news'); ?>
 								
 								<div id="broadcecilad" class="ttn-network-banner">
 									<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
@@ -142,7 +142,7 @@
 						<!-- LIVING SECTION -->
 						<section id="section-box-living" class="section-container section-box clearfix">
 							
-							<?php the_zombie_loop(living); ?>
+							<?php the_zombie_loop('living'); ?>
 							
 						</section> <!-- end #section-box-living -->
 					
@@ -168,7 +168,7 @@
 						<!-- SPORTS SECTION -->
 						<section id="section-box-sports" class="section-container section-box clearfix">
 							
-								<?php the_zombie_loop(sports); ?>
+								<?php the_zombie_loop('sports'); ?>
 								
 								<div id="thecherryad" class="ttn-network-banner">
 									<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
@@ -200,7 +200,7 @@
 						<!-- A&E SECTION -->
 						<section id="section-box-ae" class="section-container section-box clearfix">
 							
-							<?php the_zombie_loop(ae); ?>
+							<?php the_zombie_loop('ae'); ?>
 							
 						</section> <!-- end #section-box-ae -->
 					
@@ -235,7 +235,7 @@
 			<!-- OPINION SECTION -->
 			<section id="section-box-opinion" class="section-container section-box twelvecol first last clearfix">
 				
-				<?php the_zombie_loop( opinion, 6 ); ?>
+				<?php the_zombie_loop( 'opinion', 6 ); ?>
 				
 			</section> <!-- end #section-box-opinion -->
 
@@ -248,7 +248,6 @@
 					
 					<?php // no reason to change this stuff
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$cat_link = get_category_link($cat_id);
 					$top_article_class = 'top-' . $post_type;
 					
 					// set class to first or last depending on position in n column layout where number of keys == n

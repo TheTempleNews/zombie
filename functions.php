@@ -230,7 +230,7 @@ function bones_comments($comment, $args, $depth) {
 /************* SEARCH FORM LAYOUT *****************/
 
 // Search Form
-function bones_wpsearch($form) {
+function bones_wpsearch( $form = '' ) {
 	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
 	<fieldset id="searchform-fields">
 	<label class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</label>
