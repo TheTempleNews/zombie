@@ -34,9 +34,7 @@
 							<h2 class="section-box-featured-title section-box-title">Featured Multimedia</h2>
 						
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
-								
-											
-											
+
 											<?php
 											$featured_video = new WP_Query( array(
 													'cat' => 3,
@@ -56,9 +54,12 @@
 													// Echo the embed code via oEmbed
 													echo wp_oembed_get( $videoID ); 
 													echo '</div>';
-												} ?>
+												}
+												
+											echo '<h1 class="headline">' . '<a href="' . get_post_permalink() . '" rel="bookmark" title="' . the_title_attribute('echo=0') . '">' . get_the_title() . '</a></h1>';
 											
-											<?php endwhile; endif; wp_reset_postdata(); ?>
+											endwhile; endif; wp_reset_postdata();
+											?>
 	
 										</article> <!-- end article -->
 						
@@ -96,6 +97,8 @@
 												 ));
 												?>
 											</a>
+											
+											<?php echo '<h1 class="headline">' . '<a href="' . get_post_permalink() . '" rel="bookmark" title="' . the_title_attribute('echo=0') . '">' . get_the_title() . '</a></h1>'; ?>
 											
 											
 											<?php endwhile; endif; wp_reset_postdata(); ?>
