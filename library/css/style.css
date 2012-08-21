@@ -1578,9 +1578,6 @@ style a page via class
 .home #section-box-multimedia #multimedia-mgallery .headline {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-container {
-  margin: 0 0 0.7145em;
-}
 .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-thumbnail-container {
   margin: 0 0 0.7145em;
 }
@@ -1707,6 +1704,7 @@ style a page via class
   display: none;
 }
 .home #section-box-featured-multimedia,
+.home #section-box-featured-slideshow,
 .home #section-box-print,
 .home #section-box-featured-content .section-box-featured-title,
 .home #section-box-featured-links,
@@ -1916,9 +1914,6 @@ style a page via class
 .post-type-archive-multimedia .article-container article {
   margin: 1.429em;
 }
-.post-type-archive-multimedia .article-container article .video-container {
-  margin: 0 0 1.429em;
-}
 .post-type-archive-multimedia .article-container article header,
 .post-type-archive-multimedia .article-container article section {
   margin: 0 0 1.429em;
@@ -1977,10 +1972,6 @@ style a page via class
 }
 .post-type-archive-slideshow .article-container article {
   margin: 1.429em;
-  /* .video-container {
-						margin: 0 0 @lhem-s;
-					} */
-
 }
 .post-type-archive-slideshow .article-container article header,
 .post-type-archive-slideshow .article-container article section {
@@ -2292,7 +2283,7 @@ h6,
   font-weight: 300;
 }
 /*********************
-IMAGE STYLES
+IMAGE & VIDEO STYLES
 *********************/
 img {
   margin: 0 0 1.429em 0;
@@ -2315,6 +2306,9 @@ img.size-large {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 
+}
+.video-container {
+  margin: 0 0 0.7145em;
 }
 /*********************
 HEADER STYLES
@@ -3322,6 +3316,7 @@ you can add resource intensive styles.
     position: relative;
   }
   .home #section-box-featured-multimedia,
+  .home #section-box-featured-slideshow,
   .home #section-box-print,
   .home #section-box-featured-links,
   .home #widgetized-front-center {
@@ -3332,6 +3327,13 @@ you can add resource intensive styles.
   }
   .home .section-box-featured#section-box-featured-content {
     margin-bottom: 3em;
+  }
+  .home .section-box-featured#section-box-featured-multimedia .headline,
+  .home .section-box-featured#section-box-featured-slideshow .headline {
+    font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .home .section-box-featured#section-box-featured-slideshow a {
+    display: block;
   }
   .home .section-box-title {
     /* border-top: @niceborders-l; */
@@ -3412,9 +3414,6 @@ you can add resource intensive styles.
   }
   .home #section-box-multimedia #multimedia-mgallery article {
     border-bottom: none;
-  }
-  .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-container {
-    margin: 0 0 0.75em;
   }
   .home #section-box-multimedia #multimedia-mgallery .multimedia-mgallery-main .video-thumbnail-container {
     margin: 0 0 0.75em;
@@ -3586,9 +3585,6 @@ you can add resource intensive styles.
   .post-type-archive-multimedia #main .article-container article {
     margin: 1.5em;
   }
-  .post-type-archive-multimedia #main .article-container article .video-container {
-    margin: 0 0 1.5em;
-  }
   .post-type-archive-multimedia #main .article-container article header,
   .post-type-archive-multimedia #main .article-container article section {
     margin: 0 0 1.5em;
@@ -3657,10 +3653,6 @@ you can add resource intensive styles.
   }
   .post-type-archive-slideshow #main .article-container article {
     margin: 1.5em;
-    /* .video-container {
-  						margin: 0 0 @lhem-l;
-  					} */
-  
   }
   .post-type-archive-slideshow #main .article-container article header,
   .post-type-archive-slideshow #main .article-container article section {
@@ -4021,10 +4013,13 @@ you can add resource intensive styles.
     font-weight: 300;
   }
   /*********************
-  IMAGE STYLES
+  IMAGE & VIDEO STYLES
   *********************/
   img {
     margin: 0 0 1.5em 0;
+  }
+  .video-container {
+    margin: 0 0 0.75em;
   }
   /*********************
   HEADER SYTLES

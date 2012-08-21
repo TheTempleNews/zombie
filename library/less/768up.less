@@ -60,8 +60,13 @@ style a page via class
 		float:left;
 		position: relative;
 	}
+	
+	.wooslider {
+		
+	}
 
 	#section-box-featured-multimedia,
+	#section-box-featured-slideshow,
 	#section-box-print,
 	#section-box-featured-links,
 	#widgetized-front-center {
@@ -76,6 +81,20 @@ style a page via class
 	
 		&#section-box-featured-content {
 			margin-bottom: (@lhem-l*2);
+		}
+		
+		&#section-box-featured-multimedia,
+		&#section-box-featured-slideshow {
+			
+			.headline {
+				font-family: @sans-serif;
+			}
+		}
+		
+		&#section-box-featured-slideshow {
+			a {
+				display: block;
+			}
 		}
 	}
 	
@@ -174,10 +193,6 @@ style a page via class
 			}
 		
 			.multimedia-mgallery-main {
-			
-				.video-container {
-					margin: 0 0 (@lhem-l/2);
-				}
 			
 				.video-thumbnail-container {
 					margin: 0 0 (@lhem-l/2);
@@ -308,10 +323,6 @@ style a page via class
 				article {
 					margin: @lhem-l;
 					
-					.video-container {
-						margin: 0 0 @lhem-l;
-					}
-					
 					.video-thumbnail-container {
 						
 					}
@@ -368,10 +379,6 @@ style a page via class
 				
 				article {
 					margin: @lhem-l;
-					
-					/* .video-container {
-						margin: 0 0 @lhem-l;
-					} */
 					
 					header,
 					section {
@@ -616,11 +623,15 @@ h6, .h6 { // 16px/24px
 	
 	
 /*********************
-IMAGE STYLES
+IMAGE & VIDEO STYLES
 *********************/
 
 img { 
 	margin: 0 0 @lhem-l 0; 
+}
+
+.video-container {
+	margin: 0 0 (@lhem-l/2);
 }
 
 

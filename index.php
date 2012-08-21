@@ -87,7 +87,7 @@
 											<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 												<?php
 												 wooslider( array(
-												 	'slider_type'       => 'attachments',
+												 	'slider_type'       => 'attachments-hoz',
 												 	'smoothheight'      => true,
 												 	'animation_loop'    => true,
 												 	'control_nav'       => false,
@@ -459,7 +459,7 @@
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 										<?php
 										 wooslider( array(
-										 	'slider_type'       => 'attachments',
+										 	'slider_type'       => 'attachments-hoz',
 										 	'smoothheight'      => true,
 										 	'animation_loop'    => true,
 										 	'control_nav'       => false,
