@@ -473,7 +473,6 @@
 									<header class="clearfix">
 										<!-- <div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div> -->
 										<h2 class="home-slideshows-headline slideshows-headline home-slideshows-top-headline slideshows-top-headline headline top-headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-										<?php /* <p class="home-slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="home-slideshows-authors slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ) ?></time> */ ?>
 									</header>
 
 									<section class="home-slideshows-summary home-media-summary slideshows-summary media-summary clearfix">
