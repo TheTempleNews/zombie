@@ -321,116 +321,6 @@ style a page via class
 	.post-type-archive-article_living {}       /* living article type archive */
 	.post-type-archive-article_ae {}           /* ae article type archive */
 	.post-type-archive-article_opinion {}      /* opinion article type archive */
-	.post-type-archive-multimedia {
-		background-color: #222222;
-		
-		#main {
-		
-			.mgallery-row {
-				.clearfix;
-			}
-			
-			.article-container {
-				background-color: #000000;
-				margin-bottom: @lhem-l;
-				.boxShadow( @x: 5px, @y: 5px, @radius: 7px );
-				
-				article {
-					margin: @lhem-l;
-					
-					.video-thumbnail-container {
-						
-					}
-					
-					header,
-					section {
-						margin: 0 0 @lhem-l;
-					}
-					
-					.multimedia-headline {
-						font-family: @sans-serif;
-						margin: 0 0 (@lhem-l/2);
-					}
-					
-					.multimedia-byline,
-					time {
-						font-weight: 700;
-					}
-					
-					.multimedia-byline {
-						margin: 0;
-					}
-					
-					.multimedia-dek {
-						.clearfix;
-						font-style: normal;
-					}
-				
-					a {
-						color: white;
-						
-						&:hover,
-						&:active {
-							color: #b70000;
-						}
-					}
-				} /* end article */		
-			} /* end .article-container */
-		}	/* end #main */	
-	}   /* multimedia article type archive */
-	.post-type-archive-slideshow {
-		background-color: #222222;
-		
-		#main {
-		
-			.mgallery-row {
-				.clearfix;
-			}
-			
-			.article-container {
-				background-color: #000000;
-				margin-bottom: @lhem-l;
-				.boxShadow( @x: 5px, @y: 5px, @radius: 7px );
-				
-				article {
-					margin: @lhem-l;
-					
-					header,
-					section {
-						margin: 0 0 @lhem-l;
-					}
-					
-					.slideshows-headline {
-						font-family: @sans-serif;
-						margin: 0 0 (@lhem-l/2);
-					}
-					
-					.slideshows-byline,
-					time {
-						font-weight: 700;
-					}
-					
-					.slideshows-byline {
-						margin: 0;
-					}
-					
-					.slideshows-dek {
-						.clearfix;
-						font-style: normal;
-					}
-				
-					a {
-						color: white;
-						
-						&:hover,
-						&:active {
-							color: #b70000;
-						}
-					}
-				} /* end article */		
-			} /* end .article-container */
-		}	/* end #main */	
-	} /* slideshow article type archive */
 .date {}                            /* date archive page */
 	.date-paged-1 {}                /* replace the number to the corresponding page number */
 .search {}                          /* search page */
@@ -485,6 +375,38 @@ style a page via class
 .logged-in {}                       /* if user is logged in */
 .paged {}                           /* paged items like search results or archives */
 	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+	
+	
+	
+.post-type-archive-multimedia,
+.post-type-archive-slideshow,
+.single-multimedia,
+.single-slideshow {
+	#main {
+	
+		.mgallery-row {
+			.clearfix;
+		}
+		
+		.article-container {
+			margin-bottom: @lhem-l;
+			.boxShadow( @x: 5px, @y: 5px, @radius: 7px );
+			
+			article {
+				margin: @lhem-l;
+				
+				header,
+				section {
+					margin: 0 0 @lhem-l;
+				}
+				
+				.headline {
+					margin: 0 0 (@lhem-l/2);
+				}
+			} /* end article */		
+		} /* end .article-container */
+	}
+} /* common styles btwn multimedia and slideshows section archives */
 
 /*********************
 LAYOUT & GRID STYLES

@@ -399,120 +399,6 @@ style a page via class
 	.post-type-archive-article_living {}       /* living article type archive */
 	.post-type-archive-article_ae {}           /* ae article type archive */
 	.post-type-archive-article_opinion {}      /* opinion article type archive */
-	.post-type-archive-multimedia {
-		background-color: #222222;
-		font-family: @sans-serif;
-		
-		#main {
-			background-color: #222222;
-		}
-			
-			.article-container {
-				background-color: #000000;
-				margin-bottom: @lhem-s;
-				
-				article {
-					margin: @lhem-s;
-					
-					header,
-					section {
-						margin: 0 0 @lhem-s;
-					}
-					
-					.multimedia-headline {
-						font-family: @sans-serif;
-						margin: 0 0 (@lhem-s/2);
-					}
-					
-					.multimedia-byline,
-					time {
-						font-weight: 700;
-					}
-					
-					.multimedia-byline {
-						margin: 0;
-					}
-					
-					.multimedia-dek {
-						.clearfix;
-						font-style: normal;
-					}
-				
-					a {
-						color: #CCCCCC;
-						
-						&:hover {
-							color: #b70000;
-						}
-						&:active {
-							color: #CCCCCC;
-						}
-					}
-				} /* end article */		
-			} /* end .article-container */
-			
-			#post-type-loop-top {
-				height: auto;
-			}
-		
-	}   /* multimedia article type archive */
-	.post-type-archive-slideshow {
-		background-color: #222222;
-		font-family: @sans-serif;
-		
-		#main {
-			background-color: #222222;
-		}
-			
-			.article-container {
-				background-color: #000000;
-				margin-bottom: @lhem-s;
-				
-				article {
-					margin: @lhem-s;
-					
-					header,
-					section {
-						margin: 0 0 @lhem-s;
-					}
-					
-					.slideshows-headline {
-						font-family: @sans-serif;
-						margin: 0 0 (@lhem-s/2);
-					}
-					
-					.slideshows-byline,
-					time {
-						font-weight: 700;
-					}
-					
-					.slideshows-byline {
-						margin: 0;
-					}
-					
-					.slideshows-dek {
-						.clearfix;
-						font-style: normal;
-					}
-				
-					a {
-						color: #CCCCCC;
-						
-						&:hover {
-							color: #b70000;
-						}
-						&:active {
-							color: #CCCCCC;
-						}
-					}
-				} /* end article */		
-			} /* end .article-container */
-			
-			#post-type-loop-top {
-				height: auto;
-			}
-		
-	}                                          /* slideshow article type archive */
 .date {}                                       /* date archive page */
 	.date-paged-1 {}                           /* replace the number to the corresponding page number */
 .search {}                                     /* search page */
@@ -555,12 +441,6 @@ style a page via class
 
 	.single-multimedia,
 	.single-slideshow {
-		background-color: #222222;
-		font-family: @sans-serif;
-	
-		#main {
-			background-color: #222222;
-		}
 		
 		.single-title {
 			font-family: @sans-serif;
@@ -641,6 +521,69 @@ style a page via class
 .logged-in {}                                  /* if user is logged in */
 .paged {}                                      /* paged items like search results or archives */
 	.paged-1 {}                                /* individual paged (i.e. body.paged-3) */
+	
+
+
+.post-type-archive-multimedia,
+.post-type-archive-slideshow,
+.single-multimedia,
+.single-slideshow {
+	background-color: #1A1A1A;
+	font-family: @sans-serif;
+	
+	#main {
+		background-color: #1A1A1A;
+	}
+	
+		.article-container {
+			background-color: #000000;
+			margin-bottom: @lhem-s;
+			
+			article {
+				margin: @lhem-s;
+				
+				header,
+				section {
+					margin: 0 0 @lhem-s;
+				}
+				
+				.headline {
+					font-family: @sans-serif;
+					margin: 0 0 (@lhem-s/2);
+				}
+				
+				.byline,
+				time {
+					font-weight: 700;
+				}
+				
+				.byline {
+					margin: 0;
+				}
+				
+				.media-dek {
+					.clearfix;
+					font-style: normal;
+				}
+			
+				a {
+					color: #CCCCCC;
+					
+					&:hover {
+						color: #b70000;
+					}
+					&:active {
+						color: #CCCCCC;
+					}
+				}
+			} /* end article */		
+		} /* end .article-container */
+		
+		#post-type-loop-top {
+			height: auto;
+		}
+
+} /* common styles btwn multimedia and slideshows section archives */
 
 /*********************
 LAYOUT & GRID STYLES
