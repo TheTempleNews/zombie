@@ -2043,12 +2043,13 @@ style a page via class
 .single-multimedia #main,
 .single-slideshow #main {
   background-color: #1A1A1A;
+  color: #CCCCCC;
 }
 .post-type-archive-multimedia .article-container,
 .post-type-archive-slideshow .article-container,
 .single-multimedia .article-container,
 .single-slideshow .article-container {
-  background-color: #000000;
+  background-color: #2B2B2B;
   margin-bottom: 1.429em;
   /* end article */
 }
@@ -2140,6 +2141,7 @@ style a page via class
 .single-multimedia #post-type-loop-top,
 .single-slideshow #post-type-loop-top {
   height: auto;
+  background-color: #393939;
 }
 /* common styles btwn multimedia and slideshows section archives */
 /*********************
@@ -3627,6 +3629,13 @@ you can add resource intensive styles.
   /* if user is logged in */
   /* paged items like search results or archives */
   /* individual paged (i.e. body.paged-3) */
+  .post-type-archive-multimedia,
+  .post-type-archive-slideshow,
+  .single-multimedia,
+  .single-slideshow {
+    /* end #main */
+  
+  }
   .post-type-archive-multimedia #main,
   .post-type-archive-slideshow #main,
   .single-multimedia #main,
@@ -3668,6 +3677,12 @@ you can add resource intensive styles.
     -moz-box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
     /* end article */
+  }
+  .post-type-archive-multimedia #main .article-container:hover,
+  .post-type-archive-slideshow #main .article-container:hover,
+  .single-multimedia #main .article-container:hover,
+  .single-slideshow #main .article-container:hover {
+    background-color: #393939;
   }
   .post-type-archive-multimedia #main .article-container article,
   .post-type-archive-slideshow #main .article-container article,
