@@ -459,19 +459,19 @@
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 										<?php
 										 wooslider( array(
-										 	'slider_type'       => 'attachments-hoz',
-										 	'smoothheight'      => true,
-										 	'animation_loop'    => true,
-										 	'control_nav'       => false,
-										 	'direction_nav'     => false,
-										 	'size'              => 'zom-landscape-576',
-										 	'slideshow_speed'   => 2
+										 	'slider_type'         => 'attachments-hoz',
+										 	'smoothheight'        => true,
+										 	'animation_loop'      => true,
+										 	'control_nav'         => false,
+										 	'direction_nav'       => false,
+										 	'size'                => 'zom-landscape-576',
+										 	'slideshow_speed'     => 2,
+										 	'animation_duration'  => 1
 										 ));
 										?>
 									</a>
 
 									<header class="clearfix">
-										<!-- <div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div> -->
 										<h2 class="home-slideshows-headline slideshows-headline home-slideshows-top-headline slideshows-top-headline headline top-headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 									</header>
 
