@@ -5,6 +5,10 @@
 				<div id="inner-content" class="wrap clearfix">
 			
 				    <div id="main" class="eightcol first clearfix" role="main">
+				    	
+				    	<?php if ( is_subpage() == 34902 ) { ?>
+					    	<h1 class="single-section-name archive-main-title"><a href="<?php echo home_url(); ?>/classifieds/">Classifieds</a></h1>
+				    	<?php } ?>
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

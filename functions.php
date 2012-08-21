@@ -530,3 +530,17 @@ function zombie_embed_filter( $output, $data, $url ) {
 }
 add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
 ?>
+<?php
+// Hackish subpage conditional tag. Returns parent ID if is subpage.
+// http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
+function is_subpage() {
+    global $post;                              // load details about this page
+
+    if ( is_page() && $post->post_parent ) {   // test to see if the page has a parent
+        return $post->post_parent;             // return the ID of the parent post
+
+    } else {                                   // there is no parent so ...
+        return false;                          // ... the answer to the question is false
+    }
+}
+?>

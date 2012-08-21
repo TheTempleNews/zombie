@@ -600,12 +600,31 @@ style a page via class
 .page-template {}                              /* custom page template page */
 	.page-template-default {
 		font-family: @sans-serif;
+		
+		.hentry {
+			h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { 
+				font-family: @sans-serif;
+				text-rendering : optimizelegibility;
+				/* 
+				if you're going to use webfonts, be sure to check your weights 
+				http://css-tricks.com/watch-your-font-weight/
+				*/
+	
+				/* removing text decoration from all headline links */
+				a {
+					text-decoration: none;
+				}
+			}
+		}
 	} /* default page template */
 	.page-template-page-php {}                 /* individual page template (i.e. body.page-template-contact-php */
 	.page-paged-1 {}                           /* replace the number to the corresponding page number */
 	.page-parent {}                            /* parent page template */
 	.page-child {}                             /* child page template */
 	.parent-pageid-1 {}                        /* replace the number to the corresponding page number */
+	.parent-pageid-34902 {
+		
+	} /* classifieds styles */
 	.page-id-34727 {
 		#print-edition-title,
 		.hentry h2, .hentry .h2,

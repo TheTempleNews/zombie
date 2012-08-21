@@ -2114,12 +2114,45 @@ style a page via class
 .page-template-default {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.page-template-default .hentry h1,
+.page-template-default .hentry .h1,
+.page-template-default .hentry h2,
+.page-template-default .hentry .h2,
+.page-template-default .hentry h3,
+.page-template-default .hentry .h3,
+.page-template-default .hentry h4,
+.page-template-default .hentry .h4,
+.page-template-default .hentry h5,
+.page-template-default .hentry .h5 {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  /* 
+				if you're going to use webfonts, be sure to check your weights 
+				http://css-tricks.com/watch-your-font-weight/
+				*/
+
+  /* removing text decoration from all headline links */
+
+}
+.page-template-default .hentry h1 a,
+.page-template-default .hentry .h1 a,
+.page-template-default .hentry h2 a,
+.page-template-default .hentry .h2 a,
+.page-template-default .hentry h3 a,
+.page-template-default .hentry .h3 a,
+.page-template-default .hentry h4 a,
+.page-template-default .hentry .h4 a,
+.page-template-default .hentry h5 a,
+.page-template-default .hentry .h5 a {
+  text-decoration: none;
+}
 /* default page template */
 /* individual page template (i.e. body.page-template-contact-php */
 /* replace the number to the corresponding page number */
 /* parent page template */
 /* child page template */
 /* replace the number to the corresponding page number */
+/* classifieds styles */
 .page-id-34727 #print-edition-title,
 .page-id-34727 .hentry h2,
 .page-id-34727 .hentry .h2,
