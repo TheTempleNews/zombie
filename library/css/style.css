@@ -3227,6 +3227,15 @@ tweeners.
     /* at this larger size, we can start to align images */
   
   }
+  .post-content img {
+    max-width: 50%;
+  }
+  .post-content .wp-caption {
+    max-width: 50%;
+  }
+  .post-content .wp-caption img {
+    max-width: 100%;
+  }
   .post-content .alignleft,
   .post-content img.alignleft {
     margin-right: 1.5em;
