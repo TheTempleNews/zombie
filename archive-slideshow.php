@@ -81,7 +81,7 @@
 													</header>
 			
 													<section class="slideshows-dek media-dek">
-														<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+														<?php echo gdtt_get_post_meta($post->ID, 'media_dek', true); ?>
 													</section> <!-- end slideshows-dek -->
 												
 		
