@@ -87,13 +87,14 @@
 											<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 												<?php
 												 wooslider( array(
-												 	'slider_type'       => 'attachments-hoz',
-												 	'smoothheight'      => true,
-												 	'animation_loop'    => true,
-												 	'control_nav'       => false,
-												 	'direction_nav'     => false,
-												 	'size'              => 'zom-landscape-576',
-												 	'slideshow_speed'   => 2
+												 	'slider_type'         => 'attachments-hoz',
+												 	'smoothheight'        => true,
+												 	'animation_loop'      => true,
+												 	'control_nav'         => false,
+												 	'direction_nav'       => false,
+												 	'size'                => 'zom-landscape-576',
+												 	'slideshow_speed'     => 2,
+												 	'animation_duration'  => 1
 												 ));
 												?>
 											</a>
