@@ -367,18 +367,14 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			?>
 			<div class="tgmpa wrap">
-
 				<?php screen_icon( apply_filters( 'tgmpa_default_screen_icon', 'themes' ) ); ?>
 				<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 				<?php $plugin_table->prepare_items(); ?>
-
 				<?php if ( isset( $this->message ) ) _e( wp_kses_post( $this->message ), $this->domain ); ?>
-
 				<form id="tgmpa-plugins" action="" method="post">
             		<input type="hidden" name="tgmpa-page" value="<?php echo $this->menu; ?>" />
             		<?php $plugin_table->display(); ?>
         		</form>
-
 			</div>
 			<?php
 
