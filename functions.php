@@ -542,3 +542,37 @@ function is_subpage() {
     }
 }
 ?>
+<?php
+// Removes the indicated top-level admin menu items for every role except Administrator
+// http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
+function remove_menus() {
+    global $menu;
+    global $current_user;
+    get_currentuserinfo();
+	
+	$user_id = get_current_user_id();
+	$user_info = get_userdata( $user_id );
+	$user_role = $user_info->roles[1];
+	
+	echo $user_role;
+ 
+    if ($user_role !== 'administrator') {
+        $restricted = array(__('Posts'),
+                            __('Pages'),
+                            __('Appearance'),
+                            __('Plugins'),
+                            __('Tools'),
+                            __('Settings')
+        );
+        end ($menu);
+        while (prev($menu)) {
+            $value = explode(' ',$menu[key($menu)][0]);
+            if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
+        } // end while
+ 
+    } // end if
+}
+
+add_action('admin_menu', 'remove_menus');
+
+?>
