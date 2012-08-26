@@ -553,8 +553,6 @@ function remove_menus() {
 	$user_id = get_current_user_id();
 	$user_info = get_userdata( $user_id );
 	$user_role = $user_info->roles[1];
-	
-	echo $user_role;
  
     if ($user_role !== 'administrator') {
         $restricted = array(__('Posts'),
