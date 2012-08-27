@@ -574,3 +574,16 @@ function remove_menus() {
 add_action('admin_menu', 'remove_menus');
 
 ?>
+<?php
+// Adds Editor to the roles allowed to approve new users, using the plugin New User Approve
+// From the dev @ http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
+function nua_add_cap() {
+	$editor = get_role( 'editor' );
+	
+	// $editor->add_cap('new_user_approve_minimum_cap');
+	
+	return 'edit_posts';
+}
+// add_action('admin_init','nua_add_cap');
+add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
+?>
