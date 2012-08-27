@@ -202,7 +202,9 @@ function zombie_register_required_plugins() {
 		)
 	);
 
-	tgmpa( $plugins, $config );
+	if ( current_user_can('manage_network') ) {
+		tgmpa( $plugins, $config );
+	}
 
 }
 ?>

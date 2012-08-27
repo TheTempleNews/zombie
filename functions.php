@@ -296,12 +296,36 @@ function zombie_section_name($post) {
 
 /* Uses RegEx to remove those inline thumb dimensions automatically set up by WP in the HTML 
 Solution by goldenapples @ http://wordpress.stackexchange.com/questions/5568/filter-to-remove-image-dimension-attributes */
-add_filter( 'post_thumbnail_html', 'zombie_remove_thumb_dimensions', 10 );
-add_filter( 'image_send_to_editor', 'zombie_remove_thumb_dimensions', 10 );
+//add_filter( 'post_thumbnail_html', 'zombie_remove_thumb_dimensions', 10 );
+//add_filter( 'image_send_to_editor', 'zombie_remove_thumb_dimensions', 10 );
 
 function zombie_remove_thumb_dimensions( $html ) {
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     return $html;
+}
+
+add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
+function my_img_caption_shortcode_filter($val, $attr, $content = null)
+{
+	extract(shortcode_atts(array(
+		'id'	=> '',
+		'align'	=> '',
+		'width'	=> '',
+		'caption' => ''
+	), $attr));
+
+	if ( 1 > (int) $width || empty($caption) )
+		return $val;
+
+	$capid = '';
+	if ( $id ) {
+		$id = esc_attr($id);
+		$capid = 'id="figcaption_'. $id . '" ';
+		$id = 'id="' . $id . '" aria-labelledby="figcaption_' . $id . '" ';
+	}
+
+	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<p ' . $capid
+	. 'class="wp-caption-text">' . $caption . '</p></div>';
 }
 ?>
 <?php
