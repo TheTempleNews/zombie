@@ -58,7 +58,7 @@ require_once('library/admin.php'); // this comes turned off by default
 	- in case the above option doesn't work (it doesn't)
 */
 // include 'library/metabox-demo.php';
-include 'library/metabox-functions.php';
+//include 'library/metabox-functions.php';
 /*
 7. THE ZOMBIE LOOP
 	- contains custom loops
@@ -69,7 +69,7 @@ require_once('library/inc/zombie-loop.php');
 /*
 8. TGM PLUGIN ACTIVATION
 */
-require_once('library/inc/tgm-plugin-activation.php');
+//require_once('library/inc/tgm-plugin-activation.php');
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
@@ -294,19 +294,11 @@ function zombie_section_name($post) {
 	endforeach;	
 }
 
-/* Uses RegEx to remove those inline thumb dimensions automatically set up by WP in the HTML 
-Solution by goldenapples @ http://wordpress.stackexchange.com/questions/5568/filter-to-remove-image-dimension-attributes */
-//add_filter( 'post_thumbnail_html', 'zombie_remove_thumb_dimensions', 10 );
-//add_filter( 'image_send_to_editor', 'zombie_remove_thumb_dimensions', 10 );
 
-function zombie_remove_thumb_dimensions( $html ) {
-    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-    return $html;
-}
+
 
 add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
-function my_img_caption_shortcode_filter($val, $attr, $content = null)
-{
+function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
 		'id'	=> '',
 		'align'	=> '',
@@ -327,8 +319,9 @@ function my_img_caption_shortcode_filter($val, $attr, $content = null)
 	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<p ' . $capid
 	. 'class="wp-caption-text">' . $caption . '</p></div>';
 }
-?>
-<?php
+
+
+
 
 // "Linking post published dates to their archives" by Justin Tadlock
 // http://justintadlock.com/archives/2010/08/06/linking-post-published-dates-to-their-archives
@@ -355,8 +348,7 @@ function ttn_article_published_link() {
 	return $out;
 }
 
-?>
-<?php
+
 
 // add_action( 'pre_get_posts', 'ttn_article_loop_include_cat' );
 add_action('pre_get_posts', 'ttn_multimedia_paged');
@@ -431,8 +423,7 @@ function ttn_author_archive_inc_cpt( $query ) {
 		$query->set( 'post_type', $post_types );
 	}
 }
-?>
-<?php
+
 
 function ttn_display_featured_media( $content_type ) {
 
@@ -521,8 +512,7 @@ function ttn_display_featured_media( $content_type ) {
 	
 }
 
-?>
-<?php
+
 function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
     echo $category->cat_name . ' | ';
@@ -530,8 +520,7 @@ function the_category_no_link() {
 	
 }
 
-?>
-<?php
+
 function namespace_add_custom_types( $query ) {
   if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
@@ -541,8 +530,10 @@ function namespace_add_custom_types( $query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
-?>
-<?php
+
+
+
+
 // Automatically add FitVids to oembed YouTube videos
 function zombie_embed_filter( $output, $data, $url ) {
  
@@ -551,8 +542,10 @@ function zombie_embed_filter( $output, $data, $url ) {
  
 }
 add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
-?>
-<?php
+
+
+
+
 // Hackish subpage conditional tag. Returns parent ID if is subpage.
 // http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
 function is_subpage() {
@@ -565,8 +558,10 @@ function is_subpage() {
         return false;                          // ... the answer to the question is false
     }
 }
-?>
-<?php
+
+
+
+
 // Removes the indicated top-level admin menu items for every role except Administrator
 // http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
 function remove_menus() {
@@ -597,10 +592,11 @@ function remove_menus() {
 
 add_action('admin_menu', 'remove_menus');
 
-?>
-<?php
+
+
+
 // Adds Editor to the roles allowed to approve new users, using the plugin New User Approve
-// From the dev @ http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
+// From the dev: http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
 function nua_add_cap() {
 	$editor = get_role( 'editor' );
 	
@@ -610,4 +606,5 @@ function nua_add_cap() {
 }
 // add_action('admin_init','nua_add_cap');
 add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
+
 ?>

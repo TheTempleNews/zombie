@@ -236,5 +236,4 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 	
 	endif; // end is_category()
 }
-
 ?>

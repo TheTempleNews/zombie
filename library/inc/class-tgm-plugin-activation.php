@@ -364,7 +364,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			/** Return early if processing a plugin installation action */
 			if ( isset( $_POST[sanitize_key( 'action' )] ) && 'tgmpa-bulk-install' == $_POST[sanitize_key( 'action' )] && $plugin_table->process_bulk_actions() || $this->do_plugin_install() )
 				return;
-
 			?>
 			<div class="tgmpa wrap">
 				<?php screen_icon( apply_filters( 'tgmpa_default_screen_icon', 'themes' ) ); ?>
@@ -2086,3 +2085,4 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 		}
 	}
 }
+?>

@@ -262,3 +262,4 @@ function YOUR_PREFIX_register_meta_boxes()
 // (in case using the meta box class in another plugin)
 // This is also helpful for some conditionals like checking page template, categories, etc.
 add_action( 'admin_init', 'YOUR_PREFIX_register_meta_boxes' );
+?>
