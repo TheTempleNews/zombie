@@ -607,4 +607,3 @@ function nua_add_cap() {
 // add_action('admin_init','nua_add_cap');
 add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
 
-?>

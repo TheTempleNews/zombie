@@ -1,5 +1,6 @@
 <?php
-/* Welcome to Bones :)
+/*
+Welcome to Bones :)
 This is the core Bones file where most of the
 main functions & features reside. If you have 
 any custom functions, it's best to put them
@@ -497,4 +498,3 @@ function bones_excerpt_more($more) {
 	// edit here if you like
 	return '...  <a href="'. get_permalink($post->ID) . '" title="Read '.get_the_title($post->ID).'">Read more &raquo;</a>';
 }
-?>
