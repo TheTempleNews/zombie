@@ -53,7 +53,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		
 		if ( $post_type !== 'article_opinion' ) {
 		?>
-			<h2 id="<?php echo $ttn_section; ?>-section-box-title" class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section); ?>"><?php echo $cat_name; ?></a></h2>
+			<h2 id="<?php echo $ttn_section; ?>-section-box-title" class="section-box-title"><a href="<?php echo esc_url(site_url() . '/' . $ttn_section . '/'); ?>"><?php echo $cat_name; ?></a></h2>
 			<?php		
 			// ZOMBIE SWARM!
 			if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
