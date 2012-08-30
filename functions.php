@@ -67,7 +67,12 @@ require_once('library/bones.php'); // if you remove this, bones will break
 */
 require_once('library/inc/zombie-loop.php');
 /*
-8. TGM PLUGIN ACTIVATION
+8. FLEX TETRODO
+	- flexslider plugin for featured content slider
+*/
+require_once('library/inc/flex-tetrodo/flex-tetrodo.php');
+/*
+9. TGM PLUGIN ACTIVATION
 */
 //require_once('library/inc/tgm-plugin-activation.php');
 
