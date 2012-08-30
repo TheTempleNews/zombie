@@ -38,7 +38,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
     - adding custom login css
     - changing text in footer of admin
 */
-//require_once('library/admin.php'); // this comes turned off by default
+require_once('library/admin.php'); // this comes turned off by default
 /*
 4. library/translation/translation.php
     - adding support for other languages
@@ -70,7 +70,7 @@ require_once('library/inc/zombie-loop.php');
 8. FLEX TETRODO
 	- flexslider plugin for featured content slider
 */
-//require_once('library/inc/flex-tetrodo/flex-tetrodo.php');
+require_once('library/inc/flex-tetrodo/flex-tetrodo.php');
 /*
 9. TGM PLUGIN ACTIVATION
 */

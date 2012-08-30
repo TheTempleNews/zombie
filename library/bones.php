@@ -132,8 +132,8 @@ function bones_scripts_and_styles() {
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 	// adding flex tetrodo slider based on flexslider
-	//wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), '', true );
-	//wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), 'screen');
+	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), '', true );
+	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), 'screen');
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
@@ -144,10 +144,10 @@ function bones_scripts_and_styles() {
     using the google cdn. That way it stays cached
     and your site will load faster.
     */
-    // wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'jquery' );
 
-	//wp_enqueue_script('flex-tetrodo-js');
-	//wp_enqueue_style('flex-tetrodo-css');
+	wp_enqueue_script('flex-tetrodo-js');
+	wp_enqueue_style('flex-tetrodo-css');
 	
     wp_enqueue_script( 'bones-js' ); 
     
