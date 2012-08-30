@@ -86,8 +86,6 @@ require_once('library/inc/zombie-loop.php');
 
 add_image_size( 'zom-thumb-96', 96, 96, true );
 
-add_image_size( 'ttn-print-thumb', 400, 350, true );
-
 // all have 1.50000000 ratio
 add_image_size( 'zom-landscape-396', 396, 264, true );
 add_image_size( 'zom-landscape-576', 576, 384, true );
