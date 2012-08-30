@@ -8,11 +8,11 @@
 						
 						<?php
 						if ( !is_paged() ) {
-							include_once('archive-section.php');
+							include('archive-section.php');
 						}
 						
 						if ( is_paged() ){
-							include_once('archive-section-paged.php');
+							include('archive-section-paged.php');
 						}
 						
 						?>
