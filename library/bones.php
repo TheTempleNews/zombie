@@ -405,7 +405,7 @@ function bones_related_posts() {
         if($related_posts) {
         	foreach ($related_posts as $post) : setup_postdata($post); ?>
 	           	<li class="related_post"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-	        <?php endforeach; } 
+				<?php endforeach; } 
 	    else { ?>
             <li class="no_related_post">No Related Posts Yet!</li>
 		<?php }
