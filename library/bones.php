@@ -498,3 +498,4 @@ function bones_excerpt_more($more) {
 	// edit here if you like
 	return '...  <a href="'. get_permalink($post->ID) . '" title="Read '.get_the_title($post->ID).'">Read more &raquo;</a>';
 }
+?>

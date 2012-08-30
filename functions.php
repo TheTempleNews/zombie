@@ -38,7 +38,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
     - adding custom login css
     - changing text in footer of admin
 */
-require_once('library/admin.php'); // this comes turned off by default
+//require_once('library/admin.php'); // this comes turned off by default
 /*
 4. library/translation/translation.php
     - adding support for other languages
@@ -202,10 +202,11 @@ function bones_comments($comment, $args, $depth) {
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
 			<header class="comment-author vcard">
-			    <?php /*
-			        this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
+			    <?php
+				/* this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
 			        echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-			    */ ?>
+			    */
+				?>
 			    <!-- custom gravatar call -->
 			    <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>&s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
 			    <!-- end custom gravatar call -->
@@ -240,8 +241,7 @@ function bones_wpsearch( $form = '' ) {
 	</form>';
 	return $form;
 } // don't remove this bracket!
-?>
-<?php
+
 // List a post's categories but exclude the categories specified in the argument
 // Developed by ocshawn (http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015)
 function the_category_but($excl='', $spacer=' &#124 '){
@@ -267,8 +267,7 @@ function the_category_but($excl='', $spacer=' &#124 '){
 	      }
       }
 }
-?>
-<?php
+
 function zombie_section_name($post) {
 	global $post;
 	$custom_fields = get_post_custom( $post->ID );
