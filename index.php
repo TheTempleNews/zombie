@@ -161,7 +161,7 @@
 								
 								<?php the_zombie_loop('news'); ?>
 								
-								<div id="broadcecilad" class="ttn-network-banner">
+								<div id="broadcecilad-main" class="broadcecilad ttn-network-banner">
 									<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
 								</div>
 								
@@ -219,7 +219,7 @@
 							
 								<?php the_zombie_loop('sports'); ?>
 								
-								<div id="thecherryad" class="ttn-network-banner">
+								<div id="thecherryad-main" class="thecherryad ttn-network-banner">
 									<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
 								</div>
 								

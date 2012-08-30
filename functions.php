@@ -247,7 +247,7 @@ function bones_wpsearch( $form = '' ) {
 
 // List a post's categories but exclude the categories specified in the argument
 // Developed by ocshawn (http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015)
-function the_category_but($excl='', $spacer=' &#124 '){
+function the_category_but($excl='', $spacer=' &#124; '){
    $categories = get_the_category();
       if(!empty($categories)){
       	$exclude = $excl;
