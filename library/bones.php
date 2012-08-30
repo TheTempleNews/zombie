@@ -130,18 +130,6 @@ function bones_scripts_and_styles() {
     
     //adding scripts file in the footer
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
-
-	// add masonry.js
-	// wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', array( 'jquery' ), '', true );
-	
-	// add jquery easing
-	//wp_register_script( 'jquery-easing', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easing.1.3.js', 'jquery', '', true );
-	
-	// add elastislide.js - jquery carousel plugin
-	//wp_register_script( 'elastislide', get_stylesheet_directory_uri() . '/library/js/libs/jquery.elastislide.js', array('jquery','jquery-easing'), '', true );
-	
-	// add fittext, for menu button and wherever else...
-	//wp_register_script('fittext', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array('jquery'), '', true);
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
@@ -152,11 +140,7 @@ function bones_scripts_and_styles() {
     using the google cdn. That way it stays cached
     and your site will load faster.
     */
-    //wp_enqueue_script( 'jquery' );
-	//wp_enqueue_script( 'masonry' );
-	//wp_enqueue_script('jquery-easing');
-	//wp_enqueue_script('elastislide');
-	//wp_enqueue_script('fittext');
+    // wp_enqueue_script( 'jquery' );
 	
     wp_enqueue_script( 'bones-js' ); 
     
