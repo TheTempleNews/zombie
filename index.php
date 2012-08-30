@@ -425,7 +425,6 @@
 					
 					<?php // no reason to change this stuff
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$cat_link = get_category_link($cat_id);
 					$top_article_class = 'top-' . $post_type;
 					
 					// set class to first or last depending on position in n column layout where number of keys == n
