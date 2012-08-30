@@ -26,30 +26,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 * Practically stolen from FlexSlider. http://www.woothemes.com/flexslider/
 
+# LOG
+
+0.1.1 - Integrated with Zombie theme.
+
+0.1 - First version.
+
 
 */
-
-
-/************
-ON ACTIVATION
-*************/
-
-// Check WP version
-global $wp_version;
-
-if ( !version_compare( $wp_version, 3.2, ">=" )) {
-	die("Flex Tetrodo needs at least WordPress 3.2 running! Upgrade your WordPress installation!");
-}
-
-function ttx_activate() {
-	error_log("Zombie does not think unless you tell him to think.");
-}
-
-register_activation_hook(__FILE__, "ttx_activate");
-
-
-
-
 
 // Define constants
 define('TTX_PREFIX', "ttx_");
