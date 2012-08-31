@@ -4,7 +4,7 @@ function ttn_display_featured_media( $content_type ) {
 
 	$post_type = get_post_type();
 	
-	if ( $post_type == "article_ae" ) {
+	if ( $post_type == "article_news" ) {
 		$cat_id     = 4;
 	} elseif ( $post_type == "article_sports" ) {
 		$cat_id     = 10;
