@@ -298,7 +298,7 @@ function zombie_section_name($post) {
 
 
 
-
+// Customizes the output of image captions
 add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
 function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
@@ -322,33 +322,6 @@ function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	. 'class="wp-caption-text">' . $caption . '</p></div>';
 }
 
-
-
-
-// "Linking post published dates to their archives" by Justin Tadlock
-// http://justintadlock.com/archives/2010/08/06/linking-post-published-dates-to-their-archives
-add_shortcode( 'entry-link-published', 'ttn_article_published_link' );
-
-function ttn_article_published_link() {
-
-	/* Get the year, month, and day of the current post. */
-	$year = get_the_time( 'Y' );
-	$month = get_the_time( 'm' );
-	$day = get_the_time( 'd' );
-	$out = '';
-
-
-	/* Add a link to the daily archive. */
-	$out .= '<a href="' . get_day_link( $year, $month, $day ) . '" title="Archive for ' . esc_attr( get_the_time( 'd F Y' ) ) . '">' . $day . '</a>';
-	
-	/* Add a link to the monthly archive. */
-	$out .= ' <a href="' . get_month_link( $year, $month ) . '" title="Archive for ' . esc_attr( get_the_time( 'F Y' ) ) . '">' . get_the_time( 'F' ) . '</a>';
-
-	/* Add a link to the yearly archive. */
-	$out .= ' <a href="' . get_year_link( $year ) . '" title="Archive for ' . esc_attr( $year ) . '">' . $year . '</a>';
-
-	return $out;
-}
 
 
 
@@ -427,92 +400,6 @@ function ttn_author_archive_inc_cpt( $query ) {
 }
 
 
-function ttn_display_featured_media( $content_type ) {
-
-	$post_type = get_post_type();
-	
-	if ( $post_type == "article_ae" ) {
-		$cat_id     = 4;
-	} elseif ( $post_type == "article_sports" ) {
-		$cat_id     = 10;
-	} elseif ( $post_type == "article_living" ) {
-		$cat_id     = 11;
-	} elseif ( $post_type == "article_ae" ) {
-		$cat_id     = 2341;
-	} elseif ( $post_type == "article_opinion" ) {
-		$cat_id     = 5;
-	} elseif ( $post_type == "multimedia" ) {
-		$cat_id     = 194;
-	} elseif ( $post_type == "slideshows" ) {
-		$cat_id     = 39;
-	}
-	
-	$html = '';
-	global $post;
-	
-	// 
-	if ( is_home() ) {
-		
-		$query = new WP_Query( array(
-			'post_type'        => $content_type,
-			'posts_per_page'   => 1
-			)
-		);
-	
-		$html .= '<div class="featured-' . $content_type . '">';
-			
-			// If you're asking for the top video
-			if ( $content_type == 'multimedia') {
-				
-				 if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
-				 		
-					 	// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
-						// Get the video URL and put it in the $video variable
-						$videoID = get_post_meta($post->ID, 'video_link', true);
-						// Check if there is in fact a video URL
-						if ($videoID) {
-						
-							$html .= '<div class="video-container clearfix">';
-							// Echo the embed code via oEmbed
-							$html .= wp_oembed_get( $videoID ); 
-							$html .= '</div>';
-							
-						}
-				 
-				 endwhile; endif; // close multimedia loop
-				
-			} // end multimedia
-			
-			if ( $content_type == 'slideshow') {
-				
-				 if ( $query -> have_posts() ) : while ( $query -> have_posts() ) : $query -> the_post();
-				 		
-									 		
-					    $gallery_shortcode = '[gallery id="' . intval( $post->post_parent ) . '"]';
-					    //print apply_filters( 'the_content', $gallery_shortcode );
-				 
-					 	$html .= '<div class="slideshow-container" clearfix">';
-					 	// $html .= apply_filters( 'the_content', $gallery_shortcode );
-					 	$html .= do_shortcode($gallery_shortcode);
-					 	$html .= '</div>';
-					 	
-					 	//$juicy = new Juicebox;
-					 	//echo $juicy->shortcode_handler('[juicebox gallery_id="4"]');
-					 	//echo $juicy->get_gallery_path();
-				 
-				 
-				 endwhile; endif; // close slideshow loop
-				
-			} // end slideshow
-			
-		$html .= '</div>'; // end featured div
-		
-	} // end is_home()
-	
-	
-	echo $html;
-	
-}
 
 
 function the_category_no_link() {
@@ -522,7 +409,11 @@ function the_category_no_link() {
 	
 }
 
-// This adds custom post types to archives. It also breaks bulk editing of taxonomy.
+
+
+
+// This adds custom post types to archives. It also breaks bulk editing of taxonomy if !is_admin() is not included. See comments in CSS-Tricks article.
+// http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/
 function namespace_add_custom_types( $query ) {
   if( !is_admin() && is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
