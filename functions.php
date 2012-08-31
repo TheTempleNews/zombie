@@ -45,34 +45,19 @@ require_once('library/admin.php'); // this comes turned off by default
 */
 // require_once('library/translation/translation.php'); // this comes turned off by default
 /*
-5. CUSTOM METABOXES AND FIELDS FOR WORDPRESS 
-	- add Custom Metaboxes and Fields for WordPress
-	  http://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
-	- library/metabox/init.php
-	- library/metabox/metabox-functions.php
-*/
-// require_once('library/metabox/init.php'); // this is very important
-// require_once('library/metabox/metabox-functions.php'); // this is equally important
-/*
-6. META BOX SCRIPT FOR WP
-	- in case the above option doesn't work (it doesn't)
-*/
-// include 'library/metabox-demo.php';
-//include 'library/metabox-functions.php';
-/*
-7. THE ZOMBIE LOOP
+5. THE ZOMBIE LOOP
 	- contains custom loops
 		- for home
 		- for sections
 */
 require_once('library/inc/zombie-loop.php');
 /*
-8. FLEX TETRODO
+6. FLEX TETRODO
 	- flexslider plugin for featured content slider
 */
 require_once('library/inc/flex-tetrodo/flex-tetrodo.php');
 /*
-9. TGM PLUGIN ACTIVATION
+7. TGM PLUGIN ACTIVATION
 */
 //require_once('library/inc/tgm-plugin-activation.php');
 
