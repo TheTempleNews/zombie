@@ -517,14 +517,14 @@ function ttn_display_featured_media( $content_type ) {
 
 function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
-    echo $category->cat_name . ' | ';
-}
+    	echo $category->cat_name . ' | ';
+	}
 	
 }
 
-
+// This adds custom post types to archives. It also breaks bulk editing of taxonomy.
 function namespace_add_custom_types( $query ) {
-  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+  if( !is_admin() && is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
      'post', 'article_news', 'article_sports', 'article_living', 'article_ae', 'article_opinion', 'multimedia','slideshows'
 		));
