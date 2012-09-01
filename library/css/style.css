@@ -3222,6 +3222,13 @@ tweeners.
   upon your base.scss styles.
   
   ******************************************************************/
+  /**************************
+   * WORDPRESS BODY CLASSES 
+   **************************/
+  .single-multimedia .post-content img,
+  .single-slideshow .post-content img {
+    max-width: 100%;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
