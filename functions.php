@@ -80,6 +80,9 @@ add_image_size( 'zom-landscape-1080', 1080, 720, true );
 add_image_size( 'zom-portrait-384', 384, 576, true );    // max ~50% of #main
 add_image_size( 'zom-portrait-1080', 720, 1080, true );
 
+// columnist headshot size
+add_image_size( 'zom-columnist-200', 200, 300, true );
+
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you
@@ -108,7 +111,8 @@ function custom_image_sizes_choose( $sizes ) {
 	$custom_sizes = array(
 		'zom-landscape-396' => 'Landscape Half',
 		// 'zombie-landscape-768' => 'Landscape Full',
-		'zom-portrait-384'  => 'Portrait Half'
+		'zom-portrait-384'  => 'Portrait Half',
+		'zom-columnist-200' => 'Columnist Headshot'
 	);
 	return array_merge( $sizes, $custom_sizes );
 }
