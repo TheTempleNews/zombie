@@ -23,6 +23,9 @@
 						$obj = $wp_post_types[$post_type];
 						$post_type_name = $obj->labels->singular_name; 
 						
+						// boolean var for custom field - determines whether the full featured image will display above the body of a single article
+						$display_full_feat_img = get_post_meta( $post->ID, 'show_full_featured_image_in_article', true );
+						
 						?>
 			
 			<div id="content">
@@ -52,6 +55,18 @@
 								</header> <!-- end article header -->
 					
 								<section class="post-content clearfix" itemprop="articleBody">
+									
+									<?php if ( has_post_thumbnail() && $display_full_feat_img == true ) { ?>
+										<div class="single-featured-image-full-container">
+											<div class="single-featured-image-full">
+												<?php the_post_thumbnail('zom-landscape-792'); ?>
+											</div>
+											<div class="single-featured-image-full-caption">
+												<?php the_post_thumbnail_caption(); ?>
+											</div>
+										</div>
+									<?php } ?>
+									
 									<?php the_content(); ?>
 								</section> <!-- end article section -->
 						
