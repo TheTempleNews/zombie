@@ -80,6 +80,9 @@ add_image_size( 'zom-landscape-1080', 1080, 720, true );
 add_image_size( 'zom-portrait-384', 384, 576, true );    // max ~50% of #main
 add_image_size( 'zom-portrait-1080', 720, 1080, true );
 
+// columnist headshot size
+add_image_size( 'zom-columnist-200', 200, 300, true );
+
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you
@@ -108,7 +111,8 @@ function custom_image_sizes_choose( $sizes ) {
 	$custom_sizes = array(
 		'zom-landscape-396' => 'Landscape Half',
 		// 'zombie-landscape-768' => 'Landscape Full',
-		'zom-portrait-384'  => 'Portrait Half'
+		'zom-portrait-384'  => 'Portrait Half',
+		'zom-columnist-200' => 'Columnist Headshot'
 	);
 	return array_merge( $sizes, $custom_sizes );
 }
@@ -482,4 +486,38 @@ function nua_add_cap() {
 }
 // add_action('admin_init','nua_add_cap');
 add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
+
+
+
+// to display the caption or any other post thumbnail metadata
+// http://wordpress.org/support/topic/display-caption-with-the_post_thumbnail?replies=10
+function the_post_thumbnail_caption() {
+  global $post;
+
+  $thumb_id = get_post_thumbnail_id($post->id);
+
+  $args = array(
+	'post_type' => 'attachment',
+	'post_status' => null,
+	'post_parent' => $post->ID,
+	'include'  => $thumb_id
+	); 
+
+   $thumbnail_image = get_posts($args);
+
+   if ($thumbnail_image && isset($thumbnail_image[0])) {
+     //show thumbnail title
+     //echo $thumbnail_image[0]->post_title; 
+
+     //Uncomment to show the thumbnail caption
+     echo $thumbnail_image[0]->post_excerpt; 
+
+     //Uncomment to show the thumbnail description
+     //echo $thumbnail_image[0]->post_content; 
+
+     //Uncomment to show the thumbnail alt field
+     //$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+     //if(count($alt)) echo $alt;
+  }
+}
 

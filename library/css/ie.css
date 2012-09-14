@@ -1352,6 +1352,10 @@ p {
 #post-content code {
   border: 0.0625em solid #cccccc;
 }
+#post-content .single-featured-image-full-container {
+  border-bottom: 0.0625em solid #cccccc;
+  padding-bottom: 0.75em;
+}
 #post-content .wp-caption {
   padding: 0.375em;
   /* this is the caption itself */

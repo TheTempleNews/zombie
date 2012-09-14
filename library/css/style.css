@@ -2714,6 +2714,16 @@ p {
   color: #787878;
   margin-bottom: 1.429em;
 }
+.post-content .single-featured-image-full-container {
+  border-bottom: 0.0714em solid #cccccc;
+  padding-bottom: 0.7145em;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+}
+.post-content .single-featured-image-full-container img {
+  max-width: 100%;
+  margin: 0;
+}
 .post-content video,
 .post-content object {
   max-width: 100%;
@@ -4305,6 +4315,10 @@ you can add resource intensive styles.
   #post-content pre,
   #post-content code {
     border: 0.0625em solid #cccccc;
+  }
+  #post-content .single-featured-image-full-container {
+    border-bottom: 0.0625em solid #cccccc;
+    padding-bottom: 0.75em;
   }
   #post-content .wp-caption {
     padding: 0.375em;
