@@ -60,6 +60,11 @@ require_once('library/inc/flex-tetrodo/flex-tetrodo.php');
 7. TGM PLUGIN ACTIVATION
 */
 //require_once('library/inc/tgm-plugin-activation.php');
+/*
+8. ZOMBIE CONFIGURATION (library/inc/zombie-conf.php)
+*/
+require_once('library/inc/zombie-conf.php');
+
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 

@@ -4,6 +4,22 @@
 	
 		<div id="inner-content" class="wrap clearfix">
 			
+			
+			<?php if (HOME_TOP_PROMO == true) {
+				
+				$year = date('Y');
+				
+				echo '<div class="home-top-promo">';
+				
+				if (NEW_LUNCHIES == true) { ?>
+					<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo $year; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo $year; ?>.png" alt="Lunchies <?php echo $year; ?>" /></a>
+				<?php } // end lunchies banner
+				
+				echo '</div>';
+				
+			} // end top promo?>
+			
+			
 			<div class="three-column-container clearfix">
 			
 			
