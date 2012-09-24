@@ -2812,6 +2812,8 @@ p {
 }
 .lunchies-sidebar ul.rank-eds-list li.rank-eds-item {
   font-family: 'CubanoRegular';
+  position: relative;
+  margin: 0 0 1.429em;
 }
 .lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle {
   background: white;
@@ -2822,7 +2824,7 @@ p {
   border-radius: 40px;
   position: absolute;
   z-index: 999;
-  top: 0;
+  top: -20px;
   left: -20px;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
