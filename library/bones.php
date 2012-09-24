@@ -134,6 +134,9 @@ function bones_scripts_and_styles() {
 	// adding flex tetrodo slider based on flexslider
 	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), '', true );
 	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), 'screen');
+	
+	// FitText 1.0 http://fittextjs.com/
+	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), '', true );
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
@@ -148,6 +151,8 @@ function bones_scripts_and_styles() {
 
 	wp_enqueue_script('flex-tetrodo-js');
 	wp_enqueue_style('flex-tetrodo-css');
+	
+	wp_enqueue_script('fittext-js');
 	
     wp_enqueue_script( 'bones-js' ); 
     

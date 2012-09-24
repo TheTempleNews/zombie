@@ -40,7 +40,7 @@ Template Name: Lunchies
 							
 						</div> <!-- /.lunchies-map -->
 						
-						
+						<h2 id="headline-voters-map" class="fittext">You put them on the map</h2>
 						
 						<div class="rank-voters-container">
 							
