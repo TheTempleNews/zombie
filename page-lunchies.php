@@ -19,47 +19,51 @@ Template Name: Lunchies
 					
 					<div class="lunchies-main first eightcol">
 						
-						<?php // The Map
+						<div class="lunchies-map">
 						
-						$args = array(
-							'post_type'     => 'food_vendor',
-							'category_name' => 'voters-ranking',
-							'year'          => LUNCHIES_YEAR,
-							'posts_per_page' => 10
-						);
+							<?php // The Map
 						
-						$map_args = array(
-							'map_post_type'           => 'food_vendor',
-							'map_content'             => 'global',
-							'auto_info_open'          => false,
-							'marker_select_highlight' => true,
-							'marker_select_center'    => true,
-							'remove_geo_mashup_logo'  => false,
-							'postal_code'             => array(19122,19121)
-						);
+							$args = array(
+								'post_type'     => 'food_vendor',
+								'category_name' => 'voters-ranking',
+								'year'          => LUNCHIES_YEAR,
+								'posts_per_page' => 10
+							);
 						
-						$lunchies_rank_voters_query = new WP_Query($args);
+							$map_args = array(
+								'map_post_type'           => 'food_vendor',
+								'map_content'             => 'global',
+								'auto_info_open'          => false,
+								'marker_select_highlight' => true,
+								'marker_select_center'    => true,
+								'remove_geo_mashup_logo'  => false,
+								'postal_code'             => array(19122,19121)
+							);
 						
-						echo GeoMashup::map($map_args);
+							$lunchies_rank_voters_query = new WP_Query($args);
 						
-						
-						
-						/* while ( $lunchies_rank_voters_query->have_posts() ) : $lunchies_rank_voters_query->the_post();
-						
-						
-						the_title();
-						
-						endwhile; */
-						
-						//foreach($lunchies_rank_voters_query as $post) : setup_postdata($post); ?>
+							echo GeoMashup::map($map_args);
 						
 						
 						
-						<?php //endforeach; ?>
+							/* while ( $lunchies_rank_voters_query->have_posts() ) : $lunchies_rank_voters_query->the_post();
+						
+						
+							the_title();
+						
+							endwhile; */
+						
+							//foreach($lunchies_rank_voters_query as $post) : setup_postdata($post); ?>
 						
 						
 						
-					</div>
+							<?php //endforeach; ?>
+						
+						</div> <!-- /.lunchies-map -->
+						
+						
+						
+					</div> <!-- /.lunchies-main -->
 					
 					
 					
@@ -85,7 +89,7 @@ Template Name: Lunchies
 							</li>
 						</ul>
 					
-					</div> <!-- /.rank-eds-list -->
+					</div> <!-- /.lunchies-sidebar -->
 				    
 				</div> <!-- end #inner-content -->
     

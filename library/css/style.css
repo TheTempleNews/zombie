@@ -2799,9 +2799,16 @@ p {
 /* gallery caption styles *//*******************
  * LUNCHIES STYLES *
  *******************/
+/* /.lunchies-main */
+.lunchies-sidebar {
+  /* /.rank-eds-list */
+
+}
 .lunchies-sidebar ul.rank-eds-list {
   list-style: none;
   padding: 0;
+  /* /.rank-eds-item */
+
 }
 .lunchies-sidebar ul.rank-eds-list li.rank-eds-item {
   font-family: 'CubanoRegular';
@@ -2886,6 +2893,7 @@ p {
 .lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-img img {
   margin: 0;
 }
+/* /.lunchies-sidebar */
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
