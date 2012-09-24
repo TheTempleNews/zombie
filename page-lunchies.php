@@ -66,9 +66,26 @@ Template Name: Lunchies
 					
 					<div class="lunchies-sidebar last fourcol">
 						
+						<ul class="rank-eds-list">
+							<li class="rank-eds-item">
+								
+								<div class="rank-eds-item-head">
+									<div class="rank-eds-item-outer-circle">
+										<div class="rank-eds-item-inner-circle">
+											<span class="rank-eds-item-rank">1</span>
+										</div>
+									</div>
+									<h3 class="rank-eds-item-title">Sexy Green Truck</h3>
+								</div>
+								
+								<div class="rank-eds-item-img">
+									<img src="http://cambelt.co/360x240" />
+								</div>
+								
+							</li>
+						</ul>
 					
-					
-					</div>
+					</div> <!-- /.rank-eds-list -->
 				    
 				</div> <!-- end #inner-content -->
     

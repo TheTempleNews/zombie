@@ -1284,6 +1284,91 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+			
+			
+			
+/*******************
+ * LUNCHIES STYLES *
+ *******************/
+
+.lunchies-sidebar {
+	
+	ul.rank-eds-list {
+		list-style: none;
+		
+		padding: 0;
+		
+		li.rank-eds-item {
+			font-family: 'CubanoRegular';
+			
+			.rank-eds-item-outer-circle {
+				background: white;
+				width: 80px;
+				height: 80px;
+				-moz-border-radius: 40px;
+				-webkit-border-radius: 40px;
+				border-radius: 40px;
+				
+				position: absolute;
+				z-index: 999;
+				top: 0;
+				left: -20px;
+
+				.boxShadow();
+				
+				.rank-eds-item-inner-circle {
+					background: rgba(0,0,0,0.5);
+					width: 60px;
+					height: 60px;
+					-moz-border-radius: 30px;
+					-webkit-border-radius: 30px;
+					border-radius: 30px;
+					
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					
+				
+					.rank-eds-item-rank {
+						.h2;
+						font-family: inherit;
+						font-weight: normal;
+						text-align: center;
+						
+						position: relative;
+						left: 0.5em;
+						
+						/* Adjust the positioning for the tenth item to compensate for the extra digit */
+						&:nth-child(10) {
+							left: 0.25em;
+						}
+					}
+				}
+			}
+			
+			.rank-eds-item-title {
+				.h4;
+				padding: 0.5em 0 0.5em 3em;
+				font-family: inherit;
+				font-weight: normal;
+				letter-spacing: 0.04em;
+				background: white;
+				.boxShadow();
+				margin: 0;
+				position: relative;
+			}
+			
+			.rank-eds-item-img {
+				padding: 0 10px 10px;
+				background: white;
+				
+				img {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
 
 /******************************************************************
 PAGE NAVI STYLES

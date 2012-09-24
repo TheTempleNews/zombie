@@ -71,6 +71,14 @@ TYPOGRAPHY
 .sc {
   font-family: 'Alegreya SC';
 }
+/* lunchies font */
+@font-face {
+  font-family: 'CubanoRegular';
+  src: url('../fonts/cubano-regular-webfont.eot');
+  src: url('../fonts/cubano-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/cubano-regular-webfont.woff') format('woff'), url('../fonts/cubano-regular-webfont.ttf') format('truetype'), url('../fonts/cubano-regular-webfont.svg#CubanoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* mobile: line-height in ems for 14px as 20px */
 /* desktop: line-height in ems for 16px as 24px */
 /* desktop body: line-height in ems for 20px as 30px */
