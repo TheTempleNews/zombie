@@ -122,6 +122,23 @@ function custom_image_sizes_choose( $sizes ) {
 	return array_merge( $sizes, $custom_sizes );
 }
 
+
+/************** LUNCHIES FUNCTIONS ****************/
+
+// Returns the year of the most recent food_vendor post type - the most recent should always be at the time of the last lunchies issue
+function lunchies_year() {
+	$query = get_posts('post_type=food_vendor');
+	$most_recent = $query[0];
+	$most_recent_post_date = $most_recent->post_date;
+	$output = date( 'Y', strtotime( $most_recent_post_date ) );
+	
+	return $output;	
+}
+
+define('LUNCHIES_YEAR', lunchies_year());
+
+
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas

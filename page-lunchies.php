@@ -2,9 +2,6 @@
 /*
 Template Name: Lunchies
 */
-
-$year = date('Y');
-
 ?>
 
 <?php get_header(); ?>
@@ -14,7 +11,7 @@ $year = date('Y');
 				<div id="inner-content" class="wrap clearfix">
 				
 					<div class="lunchies-top-promo">
-				    	<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo $year; ?>.png" alt="Lunchies <?php echo $year; ?>" />
+				    	<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
 					</div>
 					
 					
@@ -22,7 +19,18 @@ $year = date('Y');
 					
 					<div class="lunchies-main first eightcol">
 						
+						<?php // The Map
 						
+						$args = array(
+							'post_type'     => 'food_vendor',
+							'category_name' => 'voters-ranking',
+							'year'          => $year
+						);
+						
+						
+						echo LUNCHIES_YEAR;
+						
+						?>
 						
 					</div>
 					
