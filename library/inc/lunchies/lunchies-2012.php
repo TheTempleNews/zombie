@@ -126,10 +126,6 @@
 								
 								<p class="byline fittext"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
-								<section class="dek">
-									<?php the_excerpt(); ?>
-								</section> <!-- end dek -->
-
 							</header> <!-- end article header -->
 							
 							<section class="post-content clearfix" itemprop="articleBody">
