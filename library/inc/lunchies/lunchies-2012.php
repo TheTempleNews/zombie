@@ -1,6 +1,6 @@
 					<?php // Article: Food-truck veteran reflects on 27 years of business
 
-					$query = new WP_Query('p=35787&post_type=article_living'); ?>
+					$query = new WP_Query('p=36867&post_type=article_living'); ?>
 
 
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -36,7 +36,7 @@
 					
 					<?php // Article: Dining on any budget
 
-					$query = new WP_Query('p=35802&post_type=article_living'); ?>
+					$query = new WP_Query('p=36855&post_type=article_living'); ?>
 
 
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -73,7 +73,7 @@
 					
 					<?php // Article: Namesake greets customers in more than one way
 					
-					$query = new WP_Query('p=35793&post_type=article_living'); ?>
+					$query = new WP_Query('p=36864&post_type=article_living'); ?>
 					
 					<div class="first fourcol clearfix">
 					
@@ -108,7 +108,7 @@
 					
 					<?php // Article:  Rookie trucks put twist on traditional food items
 					
-					$query = new WP_Query('p=35796&post_type=article_living'); ?>
+					$query = new WP_Query('p=36862&post_type=article_living'); ?>
 					
 					<div class="fourcol clearfix">
 					
@@ -150,9 +150,9 @@
 					
 					
 					
-					<?php // Article:  Rookie trucks put twist on traditional food items
+					<?php // Article: Nardolilli: Couple serves up low prices and personality
 					
-					$query = new WP_Query('p=35799&post_type=article_living'); ?>
+					$query = new WP_Query('p=36858&post_type=article_living'); ?>
 					
 					<div class="last fourcol clearfix">
 					
