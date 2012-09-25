@@ -87,6 +87,7 @@ jQuery(document).ready(function($) {
 
 		/* fitText  */
 		$(".fittext").fitText(0.95);
+		$(".slabtextthis").slabText();
     }
 
 
@@ -95,6 +96,7 @@ jQuery(document).ready(function($) {
     /* off the bat large screen actions */
     if (responsive_viewport > 1030) {
 		$(".fittext").fitText(1);
+		$(".slabtextthis").slabText();
     }
 
 
@@ -103,6 +105,7 @@ jQuery(document).ready(function($) {
     /* 300x250 sidebar ad display-related js (see style.less for info) - should load appropriate 300x250 ad js above this size */
     if (responsive_viewport > 1140) {
 		$(".fittext").fitText(1);
+		$(".slabtextthis").slabText();
     }
     
 	

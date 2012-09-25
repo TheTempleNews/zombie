@@ -1301,8 +1301,9 @@ POSTS & CONTENT STYLES
 	}
 	
 	#headline-voters-map {
-		font-family: 'OstrichSansBold', @sans-serif;
+		font-family: 'OstrichSansBold', @headline;
 		font-weight: normal;
+		text-align: center;
 	}
 	
 	.rank-voters-list {
@@ -1322,7 +1323,7 @@ POSTS & CONTENT STYLES
 				.rank-voters-item-rank {
 					.h1;
 					margin: 0;
-					font-family: @headline;
+					font-family: 'OstrichSansBlack', @headline;
 					font-weight: normal;
 					text-align: center;
 					width: 100%;
@@ -1331,7 +1332,7 @@ POSTS & CONTENT STYLES
 		
 				.rank-voters-item-percent {
 					.h4;
-					font-family: @headline;
+					font-family: 'OstrichSansBlack', @headline;
 					font-weight: normal;
 					text-align: center;
 					width: 100%;
@@ -1348,9 +1349,37 @@ POSTS & CONTENT STYLES
 			}
 		} /* /.rank-voters-item */
 	} /* /.rank-voters-list */
+	
+	.lunchies-articles {
+		font-family: @serif;
+		
+		article {
+			margin: 0 0 @lhem-s;
+			
+			h3.headline {
+				.h2;
+				font-family: 'OstrichSansBlack', @headline;
+				font-weight: normal;
+			}
+
+			.dek {
+				font-style: italic;
+			}
+			
+			.post-content {
+				img { display: none; }
+			}
+		}
+	}
 } /* /.lunchies-main */
 
 .lunchies-sidebar {
+	
+	#headline-eds-list {
+		text-align: center;
+		font-family: 'OstrichSansBold', @headline;
+		font-weight: normal;
+	}
 	
 	ul.rank-eds-list {
 		list-style: none;

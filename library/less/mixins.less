@@ -162,11 +162,11 @@ TYPOGRAPHY
 	/* League Gothic */
 		@font-face {
 		    font-family: 'LeagueGothicRegular';
-		    src: url('League_Gothic-webfont.eot');
-		    src: url('League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('League_Gothic-webfont.woff') format('woff'),
-		         url('League_Gothic-webfont.ttf') format('truetype'),
-		         url('League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+		    src: url('../fonts/League_Gothic-webfont.eot');
+		    src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../fonts/League_Gothic-webfont.woff') format('woff'),
+		         url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+		         url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
 		    font-weight: normal;
 		    font-style: normal;
 
@@ -197,6 +197,28 @@ TYPOGRAPHY
 	width: 100%;
 	display: block;
 }
+
+/* slabtext */
+.slabtexted .slabtext
+        {
+        display:-moz-inline-box;
+        display:inline-block;
+        white-space:nowrap;
+        }
+.slabtextinactive .slabtext
+        {
+        display:inline;
+        white-space:normal;
+        font-size:1em !important;
+        letter-spacing:inherit !important;
+        word-spacing:inherit !important;
+        *letter-spacing:0 !important;
+        *word-spacing:0 !important;
+        }
+.slabtextdone .slabtext
+        {
+        display:block;
+        }
 
 /* 
 use the best ampersand 

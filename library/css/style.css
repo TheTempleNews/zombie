@@ -559,8 +559,8 @@ TYPOGRAPHY
 /* League Gothic */
 @font-face {
   font-family: 'LeagueGothicRegular';
-  src: url('League_Gothic-webfont.eot');
-  src: url('League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('League_Gothic-webfont.woff') format('woff'), url('League_Gothic-webfont.ttf') format('truetype'), url('League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  src: url('../fonts/League_Gothic-webfont.eot');
+  src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/League_Gothic-webfont.woff') format('woff'), url('../fonts/League_Gothic-webfont.ttf') format('truetype'), url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -575,6 +575,24 @@ TYPOGRAPHY
 /* fittext */
 .fittext {
   width: 100%;
+  display: block;
+}
+/* slabtext */
+.slabtexted .slabtext {
+  display: -moz-inline-box;
+  display: inline-block;
+  white-space: nowrap;
+}
+.slabtextinactive .slabtext {
+  display: inline;
+  white-space: normal;
+  font-size: 1em !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  *letter-spacing: 0 !important;
+  *word-spacing: 0 !important;
+}
+.slabtextdone .slabtext {
   display: block;
 }
 /* 
@@ -2844,8 +2862,9 @@ p {
 
 }
 .lunchies-main #headline-voters-map {
-  font-family: 'OstrichSansBold', 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, serif;
   font-weight: normal;
+  text-align: center;
 }
 .lunchies-main .rank-voters-list {
   list-style: none;
@@ -2875,7 +2894,7 @@ p {
   line-height: 1;
   margin: 0.4em 0;
   margin: 0;
-  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, serif;
   font-weight: normal;
   text-align: center;
   width: 100%;
@@ -2893,7 +2912,7 @@ p {
   font-size: 1.429em;
   line-height: 1.2;
   margin: 0.25em 0;
-  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, serif;
   font-weight: normal;
   text-align: center;
   width: 100%;
@@ -2908,10 +2927,43 @@ p {
 .lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info .rank-voters-item-title {
   margin: 0;
 }
+.lunchies-main .lunchies-articles {
+  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+}
+.lunchies-main .lunchies-articles article {
+  margin: 0 0 1.429em;
+}
+.lunchies-main .lunchies-articles article h3.headline {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 2.571em;
+  line-height: 1.333333;
+  margin: 0.3em 0;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, serif;
+  font-weight: normal;
+}
+.lunchies-main .lunchies-articles article h3.headline a {
+  text-decoration: none;
+}
+.lunchies-main .lunchies-articles article .dek {
+  font-style: italic;
+}
+.lunchies-main .lunchies-articles article .post-content img {
+  display: none;
+}
 /* /.lunchies-main */
 .lunchies-sidebar {
   /* /.rank-eds-list */
 
+}
+.lunchies-sidebar #headline-eds-list {
+  text-align: center;
+  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, serif;
+  font-weight: normal;
 }
 .lunchies-sidebar ul.rank-eds-list {
   list-style: none;

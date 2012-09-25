@@ -48,6 +48,8 @@
 							<header class="article-header">
 									
 								<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								
+								<p class="byline fittext"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
 							</header> <!-- end article header -->
 							
@@ -82,6 +84,12 @@
 									
 								<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								
+								<section class="dek">
+									<?php the_excerpt(); ?>
+								</section> <!-- end dek -->
+								
+								<p class="byline fittext"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+
 								<section class="dek">
 									<?php the_excerpt(); ?>
 								</section> <!-- end dek -->
@@ -127,6 +135,8 @@
 								<section class="dek">
 									<?php the_excerpt(); ?>
 								</section> <!-- end dek -->
+								
+								<p class="byline fittext"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
 							</header> <!-- end article header -->
 							

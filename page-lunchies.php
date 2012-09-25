@@ -135,8 +135,9 @@ Template Name: Lunchies
 						</div>
 						
 						
-						
-						<?php include('library/inc/lunchies/lunchies-2012.php'); ?>
+						<div class="lunchies-articles clearfix">
+						<?php include('library/inc/lunchies/lunchies-' . LUNCHIES_YEAR . '.php'); ?>
+						</div>
 						
 						
 						
@@ -146,6 +147,8 @@ Template Name: Lunchies
 					
 					
 					<div class="lunchies-sidebar last fourcol">
+						
+						<h2 id="headline-eds-list" class="fittext slabtextthis">Our Top Ten</h2>
 						
 						<ul class="rank-eds-list">
 						
