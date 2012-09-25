@@ -1304,6 +1304,50 @@ POSTS & CONTENT STYLES
 		font-family: 'OstrichSansBold', @sans-serif;
 		font-weight: normal;
 	}
+	
+	.rank-voters-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		.rank-voters-item {
+			padding: 0 0 @lhem-s;
+		
+			.rank-voters-item-rank-container {
+				float: left;
+				width: 14.364640883%; // twocol
+			    padding: 0 1em 1em 0;
+			    text-align: center;
+		
+				.rank-voters-item-rank {
+					.h1;
+					margin: 0;
+					font-family: @headline;
+					font-weight: normal;
+					text-align: center;
+					width: 100%;
+				
+				}
+		
+				.rank-voters-item-percent {
+					.h4;
+					font-family: @headline;
+					font-weight: normal;
+					text-align: center;
+					width: 100%;
+				}
+			} /* /.rank-voters-rank-container */
+		
+			.rank-voters-item-info {
+				float: left;
+				width: 80%;
+		
+				.rank-voters-item-title {
+					margin: 0;
+				}
+			}
+		} /* /.rank-voters-item */
+	} /* /.rank-voters-list */
 } /* /.lunchies-main */
 
 .lunchies-sidebar {
@@ -1314,6 +1358,7 @@ POSTS & CONTENT STYLES
 		
 		li.rank-eds-item {
 			font-family: 'CubanoRegular';
+			font-weight: normal;
 			position: relative;
 			margin: 0 0 @lhem-s;
 			

@@ -63,11 +63,23 @@ Template Name: Lunchies
 									// Begin first column of the voters' ranking loop
 									foreach($lunchies_rank_voters_first_query as $post) : setup_postdata($post); ?>
 								
-									<li class="rank-voters-item">
+									<li class="rank-voters-item clearfix">
 										<div class="rank-voters-item-rank-container">
 											<div class="rank-voters-item-rank"><?php echo get_post_meta( $post->ID, 'lunchies_rank_voter', true ); ?></div>
 											<div class="rank-voters-item-percent"><?php echo get_post_meta( $post->ID, 'lunchies_vote_percent', true ) . '%'; ?></div>
-											<h3 class="rank-voters-item-title"><?php the_title(); ?></h3>
+										</div>
+										
+										<div class="rank-voters-item-info">
+											<h3 class="rank-voters-item-title fittext"><?php the_title(); ?></h3>
+											
+											<?php if ( get_post_meta( $post->ID, 'address_street' ) == true ) { ?>
+												<span class="rank-voters-item-address-1"><?php echo get_post_meta( $post->ID, 'address_street', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'address_street_2' ) == true ) { ?>
+												<span class="rank-voters-item-address-2"><?php echo get_post_meta( $post->ID, 'address_street_2', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_pricerange' ) == true ) { ?>
+												<span class="rank-voters-item-pricerange"><strong>Price Range: </strong><?php echo get_post_meta( $post->ID, 'lunchies_pricerange', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_signature' ) == true ) { ?>
+												<span class="rank-voters-item-signature"><strong>Signature Item: </strong><?php echo get_post_meta( $post->ID, 'lunchies_signature', true ); ?></span><?php } ?>
 										</div>
 									</li>
 								
@@ -96,11 +108,23 @@ Template Name: Lunchies
 									// Begin 2nd column of the voters' ranking loop
 									foreach($lunchies_rank_voters_2nd_query as $post) : setup_postdata($post); ?>
 								
-									<li class="rank-voters-item">
+									<li class="rank-voters-item clearfix">
 										<div class="rank-voters-item-rank-container">
 											<div class="rank-voters-item-rank"><?php echo get_post_meta( $post->ID, 'lunchies_rank_voter', true ); ?></div>
 											<div class="rank-voters-item-percent"><?php echo get_post_meta( $post->ID, 'lunchies_vote_percent', true ) . '%'; ?></div>
-											<h3 class="rank-voters-item-title"><?php the_title(); ?></h3>
+										</div>
+										
+										<div class="rank-voters-item-info">
+											<h3 class="rank-voters-item-title fittext"><?php the_title(); ?></h3>
+											
+											<?php if ( get_post_meta( $post->ID, 'address_street' ) == true ) { ?>
+												<span class="rank-voters-item-address-1"><?php echo get_post_meta( $post->ID, 'address_street', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'address_street_2' ) == true ) { ?>
+												<span class="rank-voters-item-address-2"><?php echo get_post_meta( $post->ID, 'address_street_2', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_pricerange' ) == true ) { ?>
+												<span class="rank-voters-item-pricerange"><strong>Price Range: </strong><?php echo get_post_meta( $post->ID, 'lunchies_pricerange', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_signature' ) == true ) { ?>
+												<span class="rank-voters-item-signature"><strong>Signature Item: </strong><?php echo get_post_meta( $post->ID, 'lunchies_signature', true ); ?></span><?php } ?>
 										</div>
 									</li>
 								

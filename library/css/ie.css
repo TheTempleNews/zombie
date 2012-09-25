@@ -67,10 +67,6 @@ http://0to255.com/
 /*********************
 TYPOGRAPHY
 *********************/
-/* smallcaps */
-.sc {
-  font-family: 'Alegreya SC';
-}
 /* lunchies fonts */
 /* Cubano Regular */
 @font-face {
@@ -122,6 +118,19 @@ TYPOGRAPHY
   src: url('../fonts/ostrich-dashed-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ostrich-dashed-webfont.woff') format('woff'), url('../fonts/ostrich-dashed-webfont.ttf') format('truetype'), url('../fonts/ostrich-dashed-webfont.svg#OstrichSansDashedMedium') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+/* League Gothic */
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url('League_Gothic-webfont.eot');
+  src: url('League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('League_Gothic-webfont.woff') format('woff'), url('League_Gothic-webfont.ttf') format('truetype'), url('League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Mixins */
+/* smallcaps */
+.sc {
+  font-family: 'Alegreya SC';
 }
 /* mobile: line-height in ems for 14px as 20px */
 /* desktop: line-height in ems for 16px as 24px */

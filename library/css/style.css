@@ -504,10 +504,6 @@ http://0to255.com/
 /*********************
 TYPOGRAPHY
 *********************/
-/* smallcaps */
-.sc {
-  font-family: 'Alegreya SC';
-}
 /* lunchies fonts */
 /* Cubano Regular */
 @font-face {
@@ -559,6 +555,19 @@ TYPOGRAPHY
   src: url('../fonts/ostrich-dashed-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ostrich-dashed-webfont.woff') format('woff'), url('../fonts/ostrich-dashed-webfont.ttf') format('truetype'), url('../fonts/ostrich-dashed-webfont.svg#OstrichSansDashedMedium') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+/* League Gothic */
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url('League_Gothic-webfont.eot');
+  src: url('League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('League_Gothic-webfont.woff') format('woff'), url('League_Gothic-webfont.ttf') format('truetype'), url('League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Mixins */
+/* smallcaps */
+.sc {
+  font-family: 'Alegreya SC';
 }
 /* mobile: line-height in ems for 14px as 20px */
 /* desktop: line-height in ems for 16px as 24px */
@@ -2830,9 +2839,74 @@ p {
 /* gallery caption styles *//*******************
  * LUNCHIES STYLES *
  *******************/
+.lunchies-main {
+  /* /.rank-voters-list */
+
+}
 .lunchies-main #headline-voters-map {
   font-family: 'OstrichSansBold', 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
+}
+.lunchies-main .rank-voters-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* /.rank-voters-item */
+
+}
+.lunchies-main .rank-voters-list .rank-voters-item {
+  padding: 0 0 1.429em;
+  /* /.rank-voters-rank-container */
+
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container {
+  float: left;
+  width: 14.364640883%;
+  padding: 0 1em 1em 0;
+  text-align: center;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-rank {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 3.429em;
+  line-height: 1;
+  margin: 0.4em 0;
+  margin: 0;
+  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-rank a {
+  text-decoration: none;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-percent {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 1.429em;
+  line-height: 1.2;
+  margin: 0.25em 0;
+  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-percent a {
+  text-decoration: none;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info {
+  float: left;
+  width: 80%;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info .rank-voters-item-title {
+  margin: 0;
 }
 /* /.lunchies-main */
 .lunchies-sidebar {
@@ -2847,6 +2921,7 @@ p {
 }
 .lunchies-sidebar ul.rank-eds-list li.rank-eds-item {
   font-family: 'CubanoRegular';
+  font-weight: normal;
   position: relative;
   margin: 0 0 1.429em;
 }
