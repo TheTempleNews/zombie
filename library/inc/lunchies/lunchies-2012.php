@@ -14,7 +14,7 @@
 							<div class="last sixcol clearfix">
 								<header class="article-header">
 				
-									<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 								</header> <!-- end article header -->
 		
@@ -47,7 +47,7 @@
 
 							<header class="article-header">
 									
-								<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 							</header> <!-- end article header -->
 							
@@ -80,7 +80,7 @@
 
 							<header class="article-header">
 									
-								<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								
 								<section class="dek">
 									<?php the_excerpt(); ?>
@@ -118,7 +118,7 @@
 
 							<header class="article-header">
 									
-								<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								
 								<div class="featured-image-container">
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-columnist-200'); ?></a>

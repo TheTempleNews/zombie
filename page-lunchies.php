@@ -42,7 +42,7 @@ Template Name: Lunchies
 						
 						<h2 id="headline-voters-map" class="fittext">You put them on the map</h2>
 						
-						<div class="rank-voters-container">
+						<div class="rank-voters-container clearfix">
 							
 							<div class="rank-voters-firstcol first sixcol clearfix">
 								<ul class="rank-voters-list-first rank-voters-list">
@@ -134,7 +134,11 @@ Template Name: Lunchies
 							
 						</div>
 						
+						
+						
 						<?php include('library/inc/lunchies/lunchies-2012.php'); ?>
+						
+						
 						
 					</div> <!-- /.lunchies-main -->
 					
