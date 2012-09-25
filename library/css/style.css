@@ -2861,6 +2861,10 @@ p {
   /* /.rank-voters-list */
 
 }
+.lunchies-main .lunchies-map .gm-map {
+  font-family: 'CubanoRegular';
+  font-weight: normal;
+}
 .lunchies-main #headline-voters-map {
   font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, serif;
   font-weight: normal;

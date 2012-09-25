@@ -148,7 +148,7 @@ Template Name: Lunchies
 					
 					<div class="lunchies-sidebar last fourcol">
 						
-						<h2 id="headline-eds-list" class="fittext slabtextthis">Our Top Ten</h2>
+						<h2 id="headline-eds-list" class="slabtextthis">Our Top Ten</h2>
 						
 						<ul class="rank-eds-list">
 						

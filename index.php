@@ -18,8 +18,6 @@
 			} // end top promo?>
 			
 			
-			<?php echo GeoMashup::map() ?>
-			
 			<div class="three-column-container clearfix">
 			
 			
