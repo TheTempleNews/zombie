@@ -19,6 +19,13 @@ Template Name: Lunchies
 					
 					<div class="lunchies-main first eightcol">
 						
+						<div class="lunchies-summary">
+							<p>Every year, The Temple News dedicates an issue to appreciate the food trucks and vendors that are a staple of Main Campus culture. Whether it’s the no-name carts that make sure the food speaks for itself, the “Buszes” that are slowly monopolizing Norris Street, or one of the veteran food spots on the 12th Street Food Vendor Pad, there are options for everyone.</p>
+							<p>In this year’s Lunchies, you will learn about new trucks that have opened in the last year, find out how to eat on any budget and spend a day with the couple that runs the Five Dollar Foot Long truck. Most importantly, once you flip the page you’ll be introduced to the winner of this year’s Lunchies Awards and the rest of the Top 10, which features new trucks that have knocked a few Lunchies regulars off our list this year.</p>
+							<p>Join The Temple News as it continues to be the eyes, ears and taste buds of the Temple community.</p>
+							<p>—Luis Fernando Rodriguez, Living Editor</p>
+						</div>
+						
 						<div class="lunchies-map">
 						
 							<?php // The Map
@@ -76,6 +83,10 @@ Template Name: Lunchies
 												<span class="rank-voters-item-address-1"><?php echo get_post_meta( $post->ID, 'address_street', true ); ?></span><br /><?php } ?>
 											<?php if ( get_post_meta( $post->ID, 'address_street_2' ) == true ) { ?>
 												<span class="rank-voters-item-address-2"><?php echo get_post_meta( $post->ID, 'address_street_2', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_owner' ) == true ) { ?>
+												<span class="rank-voters-item-lunchies-owner"><strong>Owner: </strong><?php echo get_post_meta( $post->ID, 'lunchies_owner', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_founded' ) == true ) { ?>
+												<span class="rank-voters-item-lunchies-founded"><strong>Founded: </strong><?php echo get_post_meta( $post->ID, 'lunchies_founded', true ); ?></span><br /><?php } ?>
 											<?php if ( get_post_meta( $post->ID, 'lunchies_pricerange' ) == true ) { ?>
 												<span class="rank-voters-item-pricerange"><strong>Price Range: </strong><?php echo get_post_meta( $post->ID, 'lunchies_pricerange', true ); ?></span><br /><?php } ?>
 											<?php if ( get_post_meta( $post->ID, 'lunchies_signature' ) == true ) { ?>
@@ -121,6 +132,10 @@ Template Name: Lunchies
 												<span class="rank-voters-item-address-1"><?php echo get_post_meta( $post->ID, 'address_street', true ); ?></span><br /><?php } ?>
 											<?php if ( get_post_meta( $post->ID, 'address_street_2' ) == true ) { ?>
 												<span class="rank-voters-item-address-2"><?php echo get_post_meta( $post->ID, 'address_street_2', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_owner' ) == true ) { ?>
+												<span class="rank-voters-item-lunchies-owner"><strong>Owner: </strong><?php echo get_post_meta( $post->ID, 'lunchies_owner', true ); ?></span><br /><?php } ?>
+											<?php if ( get_post_meta( $post->ID, 'lunchies_founded' ) == true ) { ?>
+												<span class="rank-voters-item-lunchies-founded"><strong>Founded: </strong><?php echo get_post_meta( $post->ID, 'lunchies_founded', true ); ?></span><br /><?php } ?>
 											<?php if ( get_post_meta( $post->ID, 'lunchies_pricerange' ) == true ) { ?>
 												<span class="rank-voters-item-pricerange"><strong>Price Range: </strong><?php echo get_post_meta( $post->ID, 'lunchies_pricerange', true ); ?></span><br /><?php } ?>
 											<?php if ( get_post_meta( $post->ID, 'lunchies_signature' ) == true ) { ?>

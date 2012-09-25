@@ -34,6 +34,42 @@
 					
 					
 					
+					<?php // Article: Dining on any budget
+
+					$query = new WP_Query('p=35802&post_type=article_living'); ?>
+
+
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+	
+						<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							
+							<div class="featured-image-container featured-image-container-full first sixcol clearfix">
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+							</div>
+							
+							<div class="last sixcol clearfix">
+								<header class="article-header">
+				
+									<h3 class="headline fittext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+								</header> <!-- end article header -->
+		
+							
+
+								<section class="dek">
+									<?php the_excerpt(); ?>
+								</section> <!-- end dek -->
+							</div>
+
+						</article> <!-- end article -->
+	
+					<?php endwhile;
+
+					// Reset Post Data
+					wp_reset_postdata(); ?>					
+					
+					
+					
 					
 					<?php // Article: Namesake greets customers in more than one way
 					
