@@ -37,7 +37,6 @@ Template Name: Lunchies
 								'marker_select_highlight' => true,
 								'marker_select_center'    => true,
 								'remove_geo_mashup_logo'  => false,
-								'postal_code'             => array(19122,19121)
 							);
 							
 							// Invoke the map
