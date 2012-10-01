@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap clearfix">
 			
-					<div id="main" class="ninecol first clearfix" role="main">
+					<div id="main" class="eightcol first clearfix" role="main">
 				
 						<h1 class="archive-title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
 
@@ -64,7 +64,11 @@
 			
 				    </div> <!-- end #main -->
     			
-    			    <?php get_sidebar(); // sidebar 1 ?>
+    			    <aside id="sidebar" class="sidebar fourcol last clearfix" role="complementary">
+    
+						<?php get_sidebar(); // primary sidebar ?>
+					
+					</aside>
     			
     			</div> <!-- end #inner-content -->
     
