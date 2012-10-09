@@ -1406,28 +1406,31 @@ p {
   padding: 0;
   margin: auto 0 1.5em;
 }
-#post-content {
+.post-content {
   margin: 0 0 3em;
   /* end .wp-caption */
 
 }
-#post-content dd {
+.post-content dd {
   margin-bottom: 1.5em;
 }
-#post-content pre,
-#post-content code {
+.post-content pre,
+.post-content code {
   border: 0.0625em solid #cccccc;
 }
-#post-content .single-featured-image-full-container {
-  border-bottom: 0.0625em solid #cccccc;
+.post-content .single-featured-image-full-container {
+  border-bottom: none;
   padding-bottom: 0.75em;
+  font-size: 0.875em;
+  /* 14px */
+
 }
-#post-content .wp-caption {
+.post-content .wp-caption {
   padding: 0.375em;
   /* this is the caption itself */
 
 }
-#post-content .wp-caption p.wp-caption-text {
+.post-content .wp-caption p.wp-caption-text {
   margin: 0.375em;
 }
 /* end post-content */
