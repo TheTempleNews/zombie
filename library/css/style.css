@@ -1739,7 +1739,7 @@ style a page via class
 }
 .home article .featured-image-container-thumb {
   width: 22.928176794%;
-  margin: 0 1.429em 1.429em 0;
+  margin: 0 1.429em 0 0;
   max-width: 96px;
   position: relative;
   float: left;
@@ -3871,7 +3871,7 @@ you can add resource intensive styles.
   }
   .archive article .featured-image-container-thumb {
     width: 22.928176794%;
-    margin: 0 1.5em 1.5em 0;
+    margin: 0 1.5em 0 0;
     max-width: 96px;
     position: relative;
     float: left;
