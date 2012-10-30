@@ -256,8 +256,10 @@ function bones_wpsearch( $form = '' ) {
 	return $form;
 } // don't remove this bracket!
 
-// List a post's categories but exclude the categories specified in the argument
-// Developed by ocshawn (http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015)
+/**
+ * List a post's categories but exclude the categories specified in the argument
+ * @link http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015
+ */
 function the_category_but($excl='', $spacer=' &#124; '){
    $categories = get_the_category();
       if(!empty($categories)){
@@ -279,6 +281,7 @@ function the_category_but($excl='', $spacer=' &#124; '){
 	      }
       }
 }
+
 
 function zombie_section_name($post) {
 	global $post;
@@ -306,8 +309,9 @@ function zombie_section_name($post) {
 }
 
 
-
-// Customizes the output of image captions
+/**
+ * Customizes the output of image captions
+ */ 
 add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
 function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
@@ -395,7 +399,10 @@ function ttn_multimedia_paged( $query ) {
 	}
 }
 
-// Adds all public post types to author archive query
+
+/**
+ * Adds all public post types to author archive query.
+ */
 function ttn_author_archive_inc_cpt( $query ) {
 	// Gets a list of the names of all public post types for use in a query
 	$post_types_args = Array(
@@ -409,8 +416,12 @@ function ttn_author_archive_inc_cpt( $query ) {
 }
 
 
-
-
+/**
+ * Displays a list of an article's categories without links.
+ *
+ * Similar to the_category().
+ * 
+ */
 function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
     	echo $category->cat_name . ' | ';
@@ -419,10 +430,13 @@ function the_category_no_link() {
 }
 
 
-
-
-// This adds custom post types to archives. It also breaks bulk editing of taxonomy if !is_admin() is not included. See comments in CSS-Tricks article.
-// http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/
+/**
+ * This adds custom post types to archives.
+ *
+ * It also breaks bulk editing of taxonomy if !is_admin() is not included.
+ *
+ * @see http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/ See comments in CSS-Tricks article
+ */
 function namespace_add_custom_types( $query ) {
   if( !is_admin() && is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
@@ -435,8 +449,9 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 
 
-
-// Automatically add FitVids to oembed YouTube videos
+/**
+ * Automatically add FitVids to oembed YouTube videos.
+ */
 function zombie_embed_filter( $output, $data, $url ) {
  
 	$return = '<div class="video-container">' . $output . '</div>';
@@ -447,9 +462,10 @@ add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
 
 
 
-
-// Hackish subpage conditional tag. Returns parent ID if is subpage.
-// http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
+/**
+ * Hackish subpage conditional tag. Returns parent ID if is subpage.
+ * @see http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
+ */
 function is_subpage() {
     global $post;                              // load details about this page
 
@@ -463,9 +479,10 @@ function is_subpage() {
 
 
 
-
-// Removes the indicated top-level admin menu items for every role except Administrator
-// http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
+/**
+ * Removes the indicated top-level admin menu items for every role except Administrator.
+ * @see http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
+ */
 function remove_menus() {
     global $menu;
     global $current_user;
@@ -496,9 +513,10 @@ add_action('admin_menu', 'remove_menus');
 
 
 
-
-// Adds Editor to the roles allowed to approve new users, using the plugin New User Approve
-// From the dev: http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
+/**
+ * Adds Editor to the roles allowed to approve new users, using the plugin New User Approve.
+ * @see http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
+ */
 function nua_add_cap() {
 	$editor = get_role( 'editor' );
 	
@@ -510,9 +528,10 @@ function nua_add_cap() {
 add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
 
 
-
-// to display the caption or any other post thumbnail metadata
-// http://wordpress.org/support/topic/display-caption-with-the_post_thumbnail?replies=10
+/**
+ * To display the caption or any other post thumbnail metadata.
+ * @see http://wordpress.org/support/topic/display-caption-with-the_post_thumbnail?replies=10
+ */
 function the_post_thumbnail_caption() {
   global $post;
 
@@ -543,8 +562,8 @@ function the_post_thumbnail_caption() {
   }
 }
 /**
- * Fixes issue where Editors cannot edit users (a capability added by User Role Editor plugin (?))
- * http://wordpress.org/support/topic/plugin-user-role-editor-not-able-to-add-ability-to-edit-users?replies=4
+ * Fixes issue where Editors cannot edit users (a capability added by User Role Editor plugin (?)).
+ * @see http://wordpress.org/support/topic/plugin-user-role-editor-not-able-to-add-ability-to-edit-users?replies=4
  */
 	function mc_admin_users_caps( $caps, $cap, $user_id, $args ){
 
