@@ -23,7 +23,9 @@ Post Template: Flipboard Grid
 			
 				<div id="inner-content" class="wrap clearfix">
 				
-					
+					<div class="si-banner-container">
+						<?php get_the_post_thumbnail('large', array('class' => "si-banner")); ?>
+					</div>
 				    
 				</div> <!-- end #inner-content -->
     
