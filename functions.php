@@ -88,6 +88,9 @@ add_image_size( 'zom-portrait-1080', 720, 1080, true );
 // columnist headshot size
 add_image_size( 'zom-columnist-200', 200, 300, true );
 
+// full-width banner
+add_image_size( 'zom-full-banner', 1140, 500, true );
+
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you

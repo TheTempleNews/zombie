@@ -3062,6 +3062,15 @@ p {
   margin: 0;
 }
 /* /.lunchies-sidebar */
+/*****************************
+ * SPECIAL ISSUE PAGE STYLES *
+ *****************************/
+.si-banner-container {
+  width: 100%;
+}
+.si-banner-container .si-banner {
+  max-width: 100%;
+}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
