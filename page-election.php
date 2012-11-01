@@ -47,7 +47,7 @@ Template Name: Election
 
 						<header>
 							<div class="post-category-list-container"><?php the_category_but(18223); ?></div>
-							<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							<h3 class="election-headline headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors sc"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> | <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
 						</header>
 
