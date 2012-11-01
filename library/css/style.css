@@ -3094,6 +3094,13 @@ p {
 /*****************************
  * SPECIAL ISSUE PAGE STYLES *
  *****************************/
+.home-top-promo a {
+  display: block;
+}
+.home-top-promo img {
+  position: relative;
+  z-index: -99;
+}
 .si-banner-container {
   width: 100%;
 }
@@ -4603,6 +4610,9 @@ you can add resource intensive styles.
   *********************/
   #content {
     margin: 1.5em auto 9em;
+  }
+  #content.has-banner {
+    margin-top: 0;
   }
   p {
     margin-bottom: 1.5em;

@@ -151,7 +151,7 @@ img{margin:0 0 1.5em 0;}
 #menu-top-navigation .menu-parent-item{background:none;border-bottom:none;}
 #menu-top-navigation .menu-parent-item a{position:relative;display:block;z-index:0;}
 #section-box-featured{margin-bottom:3em;}
-#content{margin:1.5em auto 9em;}
+#content{margin:1.5em auto 9em;}#content.has-banner{margin-top:0;}
 p{margin-bottom:1.5em;}
 .hentry footer{border-bottom:0.0625em solid #cccccc;padding-bottom:1.5em;margin-bottom:3em;}
 .single-section-name{font-size:2.25em;line-height:1.333333;margin:0.333333em 0;border-bottom:0.0625em solid #cccccc;padding:0;margin:auto 0 1.5em;}
