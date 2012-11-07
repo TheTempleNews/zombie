@@ -20,4 +20,4 @@
 	define( 'NEW_LUNCHIES', false );
 	
 	// Set this to true to display Election banner. HOME_TOP_PROMO must be set to true.
-	define( 'ELECTION_ISSUE', true );
+	define( 'ELECTION_ISSUE', false );
