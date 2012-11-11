@@ -436,6 +436,11 @@ style a page via class
 			padding-left: (@lhem-s/2);
 		}
 	}
+	
+	#related-posts-container {
+		
+		
+	}
 }                        /* single post page */
 
 
@@ -1077,21 +1082,6 @@ POSTS & CONTENT STYLES
 				padding-bottom: @lhem-s;
 				margin-bottom: (@lhem-s*2);
 			}
-			
-			/* content headers are serifed */
-			h1, .h1, h2, .h2, h3, .h3, h4, .h4 { 
-				font-family: @serif; 
-				text-rendering : optimizelegibility;
-				/* 
-				if you're going to use webfonts, be sure to check your weights 
-				http://css-tricks.com/watch-your-font-weight/
-				*/
-
-				/* removing text decoration from all headline links */
-				a {
-					text-decoration: none;
-				}
-			}
 		
 		} /* end .hentry */
 		
@@ -1131,6 +1121,21 @@ POSTS & CONTENT STYLES
 		/* post content */
 		.post-content {
 			margin: 0 0 (@lhem-s*2);
+			
+			/* content headers are serifed */
+			h1, .h1, h2, .h2, h3, .h3, h4, .h4 { 
+				font-family: @serif; 
+				text-rendering : optimizelegibility;
+				/* 
+				if you're going to use webfonts, be sure to check your weights 
+				http://css-tricks.com/watch-your-font-weight/
+				*/
+
+				/* removing text decoration from all headline links */
+				a {
+					text-decoration: none;
+				}
+			}
 			
 			p {}
 			
