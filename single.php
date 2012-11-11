@@ -122,7 +122,7 @@
 									    'threshold' => 1,
 
 									    // Display options:
-									    'template' => 'yarpp-single.php', // either the name of a file in your active theme or the boolean false to use the builtin template
+									    'template' => 'yarpp-template-single.php', // either the name of a file in your active theme or the boolean false to use the builtin template
 									    'limit' => 5, // maximum number of results
 									    'order' => 'score DESC'
 									),
