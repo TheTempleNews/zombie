@@ -2049,6 +2049,18 @@ style a page via class
 .single .byline time {
   padding-left: 0.7145em;
 }
+.single #related-posts-container {
+  background-color: #EEEEEE;
+  padding: 1.429em;
+  margin-bottom: 2.858em;
+}
+.single #related-posts-container ol {
+  list-style: none;
+  padding: 0;
+}
+.single #related-posts-container ol h4 {
+  font-weight: 300;
+}
 /* single post page */
 .single-multimedia .single-title,
 .single-slideshow .single-title {
@@ -3982,6 +3994,13 @@ you can add resource intensive styles.
   }
   .single time {
     padding-left: 0.75em;
+  }
+  .single #related-posts-container {
+    -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+    padding: 1.5em;
+    margin-bottom: 3em;
   }
   /* single post page */
   .single-multimedia .single-video {

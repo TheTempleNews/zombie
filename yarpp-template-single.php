@@ -4,7 +4,7 @@ This template gives you some random other post in case there are no related post
 Author: montchr / mitcho
 */ ?>
 <div id="related-posts-container">
-	<h3 id="related-posts-headline">Related Posts</h3>
+	<h3 id="related-posts-headline" class="h6">Related Posts</h3>
 	<?php if (have_posts()):?>
 	<ol id="related-posts-list">
 		<?php while (have_posts()) : the_post(); ?>
