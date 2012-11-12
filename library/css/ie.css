@@ -171,8 +171,8 @@ p{margin-bottom:1.5em;}
 .commentlist .comment_content{margin-left:3.125em;}.commentlist .comment_content p{margin:0.75em 0 1.5em;line-height:1.429;}
 .commentlist .comment-reply-link{padding:0.3125em;margin-bottom:0.625em;}
 .respond-form{margin:1.5em 0.625em;padding-bottom:3em;}.respond-form form li{margin-bottom:0.75em;}
-.respond-form form input[type=text],.respond-form form input[type=email],.respond-form form input[type=url],.respond-form form textarea{padding:0.1875em 0.375em;border:0.125em solid #cccccc;line-height:1.5em;}
-.respond-form form textarea{height:9.375em;}
+.respond-form form input[type=text],.respond-form form input[type=email],.respond-form form input[type=url],.respond-form form textarea{padding:0.1875em 0.375em;border:0.125em solid #cccccc;line-height:1.5em;margin:0 1.5em;}
+.respond-form form textarea{height:9.375em;margin:1.5em 0;}
 #comment-form-title{margin:0 0 1.5em;}
 #allowed_tags{margin:1.5em 0.625em 0.75em 0;}
 .nocomments{margin:0 1.25em 1.5em;}

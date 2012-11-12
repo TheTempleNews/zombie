@@ -2893,7 +2893,14 @@ p {
 /* end .wp-caption */
 /* image gallery styles */
 /* end .gallery */
-/* gallery caption styles *//*******************
+/* gallery caption styles *//* FORM STYLES */
+form {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+form label {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*******************
  * LUNCHIES STYLES *
  *******************/
 .lunchies-main {
@@ -3379,6 +3386,8 @@ COMMENT FORM STYLES
   background: #efefef;
   border: 0.1428em solid #cccccc;
   line-height: 1.429em;
+  margin: 0 1.429em;
+  float: left;
   /* form validation */
 
 }
@@ -3410,6 +3419,7 @@ COMMENT FORM STYLES
   resize: none;
   width: 97.3%;
   height: 10.71em;
+  margin: 1.429em 0;
 }
 /* comment submit button */
 #submit {
@@ -4809,9 +4819,11 @@ you can add resource intensive styles.
     padding: 0.1875em 0.375em;
     border: 0.125em solid #cccccc;
     line-height: 1.5em;
+    margin: 0 1.5em;
   }
   .respond-form form textarea {
     height: 9.375em;
+    margin: 1.5em 0;
   }
   /* comment form title */
   #comment-form-title {

@@ -1300,6 +1300,17 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+	/* FORM STYLES */
+	form {
+		font-family: @sans-serif;
+		
+		label {
+			font-family: @sans-serif;
+		}
+		
+	}	
+		
 			
 			
 			
@@ -1873,7 +1884,9 @@ COMMENT FORM STYLES
 			padding: (@1px-s*3) (@1px-s*6); 
 			background: #efefef; 
 			border: (@1px-s*2) solid #ccc; 
-			line-height: @lhem-s; 
+			line-height: @lhem-s;
+			margin: 0 @lhem-s;
+			float: left;
 		
 			&:focus {
 				background: #fff; 
@@ -1901,7 +1914,8 @@ COMMENT FORM STYLES
 		textarea {
 			resize: none; 
 			width: 97.3%; 
-			height: (@1px-s*150); 
+			height: (@1px-s*150);
+			margin: @lhem-s 0; 
 		}
 		
 	}

@@ -72,7 +72,8 @@ TL;DR When updating WP core, the comment button will look different.
 	<?php
 	
 	$fields = array(
-		'class_submit' => 'button'
+		'class_submit'            => 'button',
+		'comment_notes_after'     => ''
 	);
 	
 	 comment_form($fields); ?>
