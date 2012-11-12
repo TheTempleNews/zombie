@@ -436,6 +436,22 @@ style a page via class
 			padding-left: (@lhem-s/2);
 		}
 	}
+	
+	#related-posts-container {
+		background-color: #EEEEEE;
+		padding: @lhem-s;
+		margin-bottom: (@lhem-s*2);
+		
+		ol {
+			list-style: none;
+			padding: 0;
+			
+			h4 {
+				font-weight: 300;
+			}
+		}
+		
+	}
 }                        /* single post page */
 
 
@@ -1077,21 +1093,6 @@ POSTS & CONTENT STYLES
 				padding-bottom: @lhem-s;
 				margin-bottom: (@lhem-s*2);
 			}
-			
-			/* content headers are serifed */
-			h1, .h1, h2, .h2, h3, .h3, h4, .h4 { 
-				font-family: @serif; 
-				text-rendering : optimizelegibility;
-				/* 
-				if you're going to use webfonts, be sure to check your weights 
-				http://css-tricks.com/watch-your-font-weight/
-				*/
-
-				/* removing text decoration from all headline links */
-				a {
-					text-decoration: none;
-				}
-			}
 		
 		} /* end .hentry */
 		
@@ -1131,6 +1132,21 @@ POSTS & CONTENT STYLES
 		/* post content */
 		.post-content {
 			margin: 0 0 (@lhem-s*2);
+			
+			/* content headers are serifed */
+			h1, .h1, h2, .h2, h3, .h3, h4, .h4 { 
+				font-family: @serif; 
+				text-rendering : optimizelegibility;
+				/* 
+				if you're going to use webfonts, be sure to check your weights 
+				http://css-tricks.com/watch-your-font-weight/
+				*/
+
+				/* removing text decoration from all headline links */
+				a {
+					text-decoration: none;
+				}
+			}
 			
 			p {}
 			
@@ -1460,6 +1476,39 @@ POSTS & CONTENT STYLES
 		} /* /.rank-eds-item */
 	} /* /.rank-eds-list */
 } /* /.lunchies-sidebar */
+
+
+
+/*****************************
+ * SPECIAL ISSUE PAGE STYLES *
+ *****************************/
+
+.home-top-promo {
+	
+	a {
+		display: block;
+	}
+	
+	img {
+		position: relative;
+		z-index: -99;
+	}
+}
+
+.si-banner-container {
+	width: 100%;
+	
+	.si-banner {
+		max-width: 100%;
+	}
+}
+
+.page-id-38224 {
+	h3.election-headline {
+		font-family: 'LeagueGothicRegular', Impact, serif;
+		font-weight: normal;
+	}
+}
 
 /******************************************************************
 PAGE NAVI STYLES

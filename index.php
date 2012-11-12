@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			
-	<div id="content">
+	<div id="content" class="<?php if (HOME_TOP_PROMO == true) { echo 'has-banner'; } ?>">
 	
 		<div id="inner-content" class="wrap clearfix">
 			
@@ -12,6 +12,15 @@
 				if (NEW_LUNCHIES == true) { ?>
 					<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
 				<?php } // end lunchies banner
+				
+				if (ELECTION_ISSUE == true) { ?>
+					<?php
+					$banner = wp_get_attachment_image_src( get_post_thumbnail_id(38224), 'zom-full-banner' );
+					$banner_url = $banner['0'];
+					?>
+					
+					<a href="http://temple-news.com/election/" title="Election Issue"><img src="<?php echo $banner_url ?>" class="si-banner" /></a>
+				<?php } // end election banner
 				
 				echo '</div>';
 				

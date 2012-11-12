@@ -564,6 +564,35 @@ TYPOGRAPHY
   font-weight: normal;
   font-style: normal;
 }
+/* Mensch */
+@font-face {
+  font-family: 'MenschRegular';
+  src: url('../fonts/mensch-wf.eot');
+  src: url('../fonts/mensch-wf.eot?#iefix') format('embedded-opentype'), url('../fonts/mensch-wf.woff') format('woff'), url('../fonts/mensch-wf.ttf') format('truetype'), url('../fonts/mensch-wf.svg#MenschMenschRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MenschBold';
+  src: url('../fonts/mensch-bold-wf.eot');
+  src: url('../fonts/mensch-bold-wf.eot?#iefix') format('embedded-opentype'), url('../fonts/mensch-bold-wf.woff') format('woff'), url('../fonts/mensch-bold-wf.ttf') format('truetype'), url('../fonts/mensch-bold-wf.svg#MenschMenschBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MenschBoldInline';
+  src: url('../fonts/mensch-inline-wf.eot');
+  src: url('../fonts/mensch-inline-wf.eot?#iefix') format('embedded-opentype'), url('../fonts/mensch-inline-wf.woff') format('woff'), url('../fonts/mensch-inline-wf.ttf') format('truetype'), url('../fonts/mensch-inline-wf.svg#MenschMenschBoldInline') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MenschThin';
+  src: url('../fonts/mensch-thin-wf.eot');
+  src: url('../fonts/mensch-thin-wf.eot?#iefix') format('embedded-opentype'), url('../fonts/mensch-thin-wf.woff') format('woff'), url('../fonts/mensch-thin-wf.ttf') format('truetype'), url('../fonts/mensch-thin-wf.svg#MenschMenschThin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Mixins */
 /* smallcaps */
 .sc {
@@ -2020,6 +2049,18 @@ style a page via class
 .single .byline time {
   padding-left: 0.7145em;
 }
+.single #related-posts-container {
+  background-color: #EEEEEE;
+  padding: 1.429em;
+  margin-bottom: 2.858em;
+}
+.single #related-posts-container ol {
+  list-style: none;
+  padding: 0;
+}
+.single #related-posts-container ol h4 {
+  font-weight: 300;
+}
 /* single post page */
 .single-multimedia .single-title,
 .single-slideshow .single-title {
@@ -2680,42 +2721,10 @@ POSTS & CONTENT STYLES
 p {
   margin-bottom: 1.429em;
 }
-.hentry {
-  /* content headers are serifed */
-
-}
 .hentry footer {
   border-bottom: 0.0714em solid #cccccc;
   padding-bottom: 1.429em;
   margin-bottom: 2.858em;
-}
-.hentry h1,
-.hentry .h1,
-.hentry h2,
-.hentry .h2,
-.hentry h3,
-.hentry .h3,
-.hentry h4,
-.hentry .h4 {
-  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
-  text-rendering: optimizelegibility;
-  /* 
-				if you're going to use webfonts, be sure to check your weights 
-				http://css-tricks.com/watch-your-font-weight/
-				*/
-
-  /* removing text decoration from all headline links */
-
-}
-.hentry h1 a,
-.hentry .h1 a,
-.hentry h2 a,
-.hentry .h2 a,
-.hentry h3 a,
-.hentry .h3 a,
-.hentry h4 a,
-.hentry .h4 a {
-  text-decoration: none;
 }
 /* end .hentry */
 .single-section-name {
@@ -2754,6 +2763,8 @@ p {
 /* post content */
 .post-content {
   margin: 0 0 2.858em;
+  /* content headers are serifed */
+
   /*
 			image alignment on a screen this size may be
 			a bit difficult. It's set to start aligning 
@@ -2763,6 +2774,34 @@ p {
 
   /* for the full width featured images in single posts */
 
+}
+.post-content h1,
+.post-content .h1,
+.post-content h2,
+.post-content .h2,
+.post-content h3,
+.post-content .h3,
+.post-content h4,
+.post-content .h4 {
+  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  text-rendering: optimizelegibility;
+  /* 
+				if you're going to use webfonts, be sure to check your weights 
+				http://css-tricks.com/watch-your-font-weight/
+				*/
+
+  /* removing text decoration from all headline links */
+
+}
+.post-content h1 a,
+.post-content .h1 a,
+.post-content h2 a,
+.post-content .h2 a,
+.post-content h3 a,
+.post-content .h3 a,
+.post-content h4 a,
+.post-content .h4 a {
+  text-decoration: none;
 }
 .post-content blockquote {
   display: block;
@@ -3062,6 +3101,26 @@ p {
   margin: 0;
 }
 /* /.lunchies-sidebar */
+/*****************************
+ * SPECIAL ISSUE PAGE STYLES *
+ *****************************/
+.home-top-promo a {
+  display: block;
+}
+.home-top-promo img {
+  position: relative;
+  z-index: -99;
+}
+.si-banner-container {
+  width: 100%;
+}
+.si-banner-container .si-banner {
+  max-width: 100%;
+}
+.page-id-38224 h3.election-headline {
+  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-weight: normal;
+}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -3687,7 +3746,7 @@ you can add resource intensive styles.
   }
   .home .section-box-title a:hover {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
+    filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=4px, offy=4px);
     position: relative;
     top: -1px;
     left: -1px;
@@ -3935,6 +3994,13 @@ you can add resource intensive styles.
   }
   .single time {
     padding-left: 0.75em;
+  }
+  .single #related-posts-container {
+    -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+    padding: 1.5em;
+    margin-bottom: 3em;
   }
   /* single post page */
   .single-multimedia .single-video {
@@ -4561,6 +4627,9 @@ you can add resource intensive styles.
   *********************/
   #content {
     margin: 1.5em auto 9em;
+  }
+  #content.has-banner {
+    margin-top: 0;
   }
   p {
     margin-bottom: 1.5em;
