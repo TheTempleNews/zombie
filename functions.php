@@ -640,6 +640,8 @@ function the_post_thumbnail_caption() {
 
 /**
  * Displays a list of the 5 most recent posts from a network site.
+ *
+ * http://codex.wordpress.org/Function_Reference/fetch_feed
  */
 	function ttn_network_feed( $domain ) {
 
