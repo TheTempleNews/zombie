@@ -28,7 +28,7 @@ span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif
 .post-content .aligncenter,.post-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both;}
 body{font-size:100%;line-height:1.5;}
 .hoz-rule-third{border-bottom:0.0625em solid #cccccc;}
-.ttn-network-banner{border-top:0.0625em solid #cccccc;border-bottom:0.0625em solid #cccccc;padding:0.6875em 0;margin:0 0 1.5em;}
+.ttn-network-banner,.ttn-network-feed{border-top:0.0625em solid #cccccc;border-bottom:0.0625em solid #cccccc;padding:0.6875em 0;margin:0 0 1.5em;}
 .home{}.home #column-center{-webkit-box-shadow:0 0 12px 4px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 0 12px 4px rgba(0, 0, 0, 0.5);box-shadow:0 0 12px 4px rgba(0, 0, 0, 0.5);position:relative;top:-1.5em;}.home #column-center #column-center-inner{padding:1.5em;}
 .home .slide-image{float:left;position:relative;}
 .home #section-box-featured-multimedia,.home #section-box-featured-slideshow,.home #section-box-print,.home #section-box-featured-links,.home #widgetized-front-center{display:block;}

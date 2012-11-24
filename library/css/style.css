@@ -1562,13 +1562,15 @@ body {
 /***********************
 ADVERTS AND SOCIAL MEDIA
 ************************/
-.ttn-network-banner {
+.ttn-network-banner,
+.ttn-network-feed {
   border-top: 0.0714em solid #cccccc;
   border-bottom: 0.0714em solid #cccccc;
   padding: 0.6431em 0;
   margin: 0 0 1.429em;
 }
-.ttn-network-banner img {
+.ttn-network-banner img,
+.ttn-network-feed img {
   margin: 0 auto;
   display: block;
 }
@@ -3742,7 +3744,8 @@ you can add resource intensive styles.
   /***********************
   ADVERTS AND SOCIAL MEDIA
   ************************/
-  .ttn-network-banner {
+  .ttn-network-banner,
+  .ttn-network-feed {
     border-top: 0.0625em solid #cccccc;
     border-bottom: 0.0625em solid #cccccc;
     padding: 0.6875em 0;

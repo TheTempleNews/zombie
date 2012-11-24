@@ -189,23 +189,12 @@
 								
 								<?php the_zombie_loop('news'); ?>
 
-								<div id="broadcecil-feed" class="network-feed-container">
+								<div id="broadcecil-feed" class="ttn-network-feed">
 									<h3 class="broadcecil-feed-title network-feed-title">Broad &amp; Cecil</h3>
 									<h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News.</h4>
 
-									<?php if ( is_active_sidebar( 'widgetized-broadcecil' ) ) : ?>
+									<?php ttn_network_feed('broadandcecil'); ?>
 
-										<?php dynamic_sidebar( 'widgetized-broadcecil' ); ?>
-
-									<?php else : ?>
-
-										<!-- This content shows up if there are no widgets defined in the backend. 
-										
-										<div class="alert help">
-											<p>Please activate some Widgets.</p>
-										</div> -->
-
-									<?php endif; ?>
 								</div> <!-- end #broadcecil-feed -->
 								
 								<!--
@@ -268,23 +257,12 @@
 							
 								<?php the_zombie_loop('sports'); ?>
 
-								<div id="thecherry-feed" class="network-feed-container">
+								<div id="thecherry-feed" class="ttn-network-feed">
 									<h3 class="thecherry-feed-title network-feed-title">The Cherry</h3>
 									<h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News.</h4>
 
-									<?php if ( is_active_sidebar( 'widgetized-thecherry' ) ) : ?>
+									<?php ttn_network_feed('thecherry'); ?>
 
-										<?php dynamic_sidebar( 'widgetized-thecherry' ); ?>
-										
-									<?php else : ?>
-
-										<!-- This content shows up if there are no widgets defined in the backend. 
-										
-										<div class="alert help">
-											<p>Please activate some Widgets.</p>
-										</div> -->
-
-									<?php endif; ?>
 								</div> <!-- end #thecherry-feed -->								
 								
 								<!--
