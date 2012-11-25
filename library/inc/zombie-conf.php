@@ -12,6 +12,9 @@
  *
  */
 
+/* Version Number */
+	define( 'ZOM_VERSION', '1.3.10' );
+
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
 	define( 'HOME_TOP_PROMO', false );
