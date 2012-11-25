@@ -51,15 +51,70 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-.ttn-network-banner {
+.ttn-network-banner,
+.ttn-network-feed {
 	border-top: @niceborders-s;
 	border-bottom: @niceborders-s;
-	padding: (@lhem-s/2-@1px-s) 0;
 	margin: 0 0 @lhem-s;
-	
+}
+
+.ttn-network-banner {
+	padding: (@lhem-s/2-@1px-s) 0;
+
 	img {
 		margin: 0 auto;
 		display: block;
+	}
+}
+
+.ttn-network-feed {
+
+	.network-feed-title,
+	.network-feed-subtitle {
+		text-align: right;
+	}
+
+	.network-feed-title {
+		.h1;
+		font-family: @headline;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		margin-bottom: 0;
+	}
+
+	.network-feed-subtitle {
+		.h6;
+		font-weight: 500;
+		text-transform: none;
+	}
+
+	ul {
+		font-family: @sans-serif;
+
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: @lhem-s/2 0;
+
+			.ttn-network-feed-timestamp {
+				margin: 0;
+				text-transform: uppercase;
+				color: #999999;
+			}
+
+			a {
+				color: #565656;
+				font-weight: 700;
+
+				&:hover,
+				&:active {
+					color: @thatred;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 

@@ -185,6 +185,26 @@ function bones_register_sidebars() {
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
     ));
+
+    register_sidebar(array(
+    	'id' => 'widgetized-broadcecil',
+    	'name' => 'Broad & Cecil RSS',
+    	'description' => 'This should be used to display an RSS feed from Broad & Cecil.',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '',
+    	'after_title' => '',
+    ));
+
+    register_sidebar(array(
+    	'id' => 'widgetized-thecherry',
+    	'name' => 'The Cherry RSS',
+    	'description' => 'This should be used to display an RSS feed from The Cherry.',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '',
+    	'after_title' => '',
+    ));
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 
@@ -617,3 +637,43 @@ function the_post_thumbnail_caption() {
 
 	}
 	add_filter( 'admin_head', 'mc_edit_permission_check', 1, 4 );
+
+/**
+ * Displays a list of the 5 most recent posts from a network site.
+ *
+ * http://codex.wordpress.org/Function_Reference/fetch_feed
+ */
+	function ttn_network_feed( $domain ) {
+
+		$feed_url = 'http://' . $domain . '.temple-news.com/feed/';
+
+		// Get RSS Feed(s)
+		include_once(ABSPATH . WPINC . '/feed.php');
+		// Get a SimplePie feed object from the specified feed source.
+		$rss = fetch_feed( $feed_url );
+		if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
+		    // Figure out how many total items there are, but limit it to 5. 
+		    $maxitems = $rss->get_item_quantity(5); 
+
+		    // Build an array of all the items, starting with element 0 (first element).
+		    $rss_items = $rss->get_items(0, $maxitems); 
+		endif;
+
+		$output = '';
+
+		$output .= '<ul>';
+		   	if ($maxitems == 0) $output .= '<li>No items.</li>';
+		    else
+		    // Loop through each feed item and display each item as a hyperlink.
+		    foreach ( $rss_items as $item ) :
+		    	$output .= '<li>';
+		    		$output .= '<p class="ttn-network-feed-timestamp">' . $item->get_date('d F Y') . '</p>';
+		        	$output .= '<a href="' . esc_url( $item->get_permalink() ) . '" title="Posted ' . $item->get_date('d F Y | H:i') . '">';
+		       		$output .= esc_html( $item->get_title() );
+		       		$output .= '</a>';
+		    	$output .= '</li>';
+		    endforeach;
+		$output .= '</ul>';
+
+		echo $output;
+	}

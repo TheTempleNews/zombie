@@ -30,11 +30,42 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-.ttn-network-banner {
-	border-top: @niceborders-l;
-	border-bottom: @niceborders-l;
-	padding: (@lhem-l/2-@1px-l) 0;
+.ttn-network-banner,
+.ttn-network-feed {
+	border-top: none;
+	border-bottom: none;
 	margin: 0 0 @lhem-l;
+}
+
+.ttn-network-banner {
+
+}
+
+.ttn-network-feed {
+	padding: (@lhem-l/2-@1px-l) 1em;
+	.boxShadow-curved();
+
+	.network-feed-title {
+		.h1;
+	}
+
+	.network-feed-subtitle {
+		.h6;
+		font-weight: 500;
+		text-transform: none;
+	}
+
+	ul {
+		font-size: 87.5%;
+		line-height: @lh-l;
+
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: @lhem-l 0;
+		}
+	}
 }
 
 

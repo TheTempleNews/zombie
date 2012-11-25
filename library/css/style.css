@@ -1562,15 +1562,80 @@ body {
 /***********************
 ADVERTS AND SOCIAL MEDIA
 ************************/
-.ttn-network-banner {
+.ttn-network-banner,
+.ttn-network-feed {
   border-top: 0.0714em solid #cccccc;
   border-bottom: 0.0714em solid #cccccc;
-  padding: 0.6431em 0;
   margin: 0 0 1.429em;
+}
+.ttn-network-banner {
+  padding: 0.6431em 0;
 }
 .ttn-network-banner img {
   margin: 0 auto;
   display: block;
+}
+.ttn-network-feed .network-feed-title,
+.ttn-network-feed .network-feed-subtitle {
+  text-align: right;
+}
+.ttn-network-feed .network-feed-title {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 3.429em;
+  line-height: 1;
+  margin: 0.4em 0;
+  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.ttn-network-feed .network-feed-title a {
+  text-decoration: none;
+}
+.ttn-network-feed .network-feed-subtitle {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 1.000em;
+  line-height: 1.428571429;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  font-weight: 500;
+  text-transform: none;
+}
+.ttn-network-feed .network-feed-subtitle a {
+  text-decoration: none;
+}
+.ttn-network-feed ul {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  list-style: none;
+}
+.ttn-network-feed ul li {
+  margin: 0.7145em 0;
+}
+.ttn-network-feed ul li .ttn-network-feed-timestamp {
+  margin: 0;
+  text-transform: uppercase;
+  color: #999999;
+}
+.ttn-network-feed ul li a {
+  color: #565656;
+  font-weight: 700;
+}
+.ttn-network-feed ul li a:hover,
+.ttn-network-feed ul li a:active {
+  color: #cc0000;
+  text-decoration: none;
 }
 .ad,
 .ad-container,
@@ -3742,11 +3807,67 @@ you can add resource intensive styles.
   /***********************
   ADVERTS AND SOCIAL MEDIA
   ************************/
-  .ttn-network-banner {
-    border-top: 0.0625em solid #cccccc;
-    border-bottom: 0.0625em solid #cccccc;
-    padding: 0.6875em 0;
+  .ttn-network-banner,
+  .ttn-network-feed {
+    border-top: none;
+    border-bottom: none;
     margin: 0 0 1.5em;
+  }
+  .ttn-network-feed {
+    padding: 0.6875em 1em;
+    background: #ffffff;
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  }
+  .ttn-network-feed:before,
+  .ttn-network-feed:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .ttn-network-feed:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+  }
+  .ttn-network-feed .network-feed-title {
+    font-size: 3.429em;
+    line-height: 1;
+    margin: 0.2em 0;
+  }
+  .ttn-network-feed .network-feed-subtitle {
+    font-size: 1.000em;
+    line-height: 1.500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 300;
+    font-weight: 500;
+    text-transform: none;
+  }
+  .ttn-network-feed ul {
+    font-size: 87.5%;
+    line-height: 1.5;
+    padding: 0;
+    list-style: none;
+  }
+  .ttn-network-feed ul li {
+    margin: 1.5em 0;
   }
   /********************
   WORDPRESS BODY CLASSES
