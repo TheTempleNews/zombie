@@ -191,7 +191,7 @@
 
 								<div id="broadcecil-feed" class="ttn-network-feed">
 									<h3 class="broadcecil-feed-title network-feed-title">Broad &amp; Cecil</h3>
-									<h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News.</h4>
+									<h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News</h4>
 
 									<?php ttn_network_feed('broadandcecil'); ?>
 
@@ -259,7 +259,7 @@
 
 								<div id="thecherry-feed" class="ttn-network-feed">
 									<h3 class="thecherry-feed-title network-feed-title">The Cherry</h3>
-									<h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News.</h4>
+									<h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News</h4>
 
 									<?php ttn_network_feed('thecherry'); ?>
 
