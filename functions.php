@@ -667,7 +667,8 @@ function the_post_thumbnail_caption() {
 		    // Loop through each feed item and display each item as a hyperlink.
 		    foreach ( $rss_items as $item ) :
 		    	$output .= '<li>';
-		        	$output .= '<a href="' . esc_url( $item->get_permalink() ) . '" title="Posted ' . $item->get_date('j F Y | g:i a') . '">';
+		    		$output .= '<p class="ttn-network-feed-timestamp">' . $item->get_date('d F Y') . '</p>';
+		        	$output .= '<a href="' . esc_url( $item->get_permalink() ) . '" title="Posted ' . $item->get_date('d F Y | H:i') . '">';
 		       		$output .= esc_html( $item->get_title() );
 		       		$output .= '</a>';
 		    	$output .= '</li>';

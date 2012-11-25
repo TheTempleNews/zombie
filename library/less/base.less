@@ -91,14 +91,29 @@ ADVERTS AND SOCIAL MEDIA
 
 	ul {
 		font-family: @sans-serif;
-		font-size: 85.7%;
-		line-height: @lh-s;
 
 		padding: 0;
 		list-style: none;
 
 		li {
 			margin: @lhem-s/2 0;
+
+			.ttn-network-feed-timestamp {
+				margin: 0;
+				text-transform: uppercase;
+				color: #999999;
+			}
+
+			a {
+				color: #565656;
+				font-weight: 700;
+
+				&:hover,
+				&:active {
+					color: @thatred;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }

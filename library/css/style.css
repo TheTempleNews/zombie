@@ -1617,13 +1617,25 @@ ADVERTS AND SOCIAL MEDIA
 }
 .ttn-network-feed ul {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 85.7%;
-  line-height: 1.429;
   padding: 0;
   list-style: none;
 }
 .ttn-network-feed ul li {
   margin: 0.7145em 0;
+}
+.ttn-network-feed ul li .ttn-network-feed-timestamp {
+  margin: 0;
+  text-transform: uppercase;
+  color: #999999;
+}
+.ttn-network-feed ul li a {
+  color: #565656;
+  font-weight: 700;
+}
+.ttn-network-feed ul li a:hover,
+.ttn-network-feed ul li a:active {
+  color: #cc0000;
+  text-decoration: none;
 }
 .ad,
 .ad-container,
@@ -3855,7 +3867,7 @@ you can add resource intensive styles.
     list-style: none;
   }
   .ttn-network-feed ul li {
-    margin: 0.75em 0;
+    margin: 1.5em 0;
   }
   /********************
   WORDPRESS BODY CLASSES
