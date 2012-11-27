@@ -1597,6 +1597,14 @@ ADVERTS AND SOCIAL MEDIA
 .ttn-network-feed .network-feed-title a {
   text-decoration: none;
 }
+.ttn-network-feed .network-feed-title a {
+  color: #565656;
+}
+.ttn-network-feed .network-feed-title a:hover,
+.ttn-network-feed .network-feed-title a:active {
+  color: #cc0000;
+  text-decoration: none;
+}
 .ttn-network-feed .network-feed-subtitle {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;

@@ -190,7 +190,7 @@
 								<?php the_zombie_loop('news'); ?>
 
 								<div id="broadcecil-feed" class="ttn-network-feed">
-									<h3 class="broadcecil-feed-title network-feed-title">Broad &amp; Cecil</h3>
+									<h3 class="broadcecil-feed-title network-feed-title"><a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil">Broad &amp; Cecil</a></h3>
 									<h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News</h4>
 
 									<?php ttn_network_feed('broadandcecil'); ?>
@@ -258,7 +258,7 @@
 								<?php the_zombie_loop('sports'); ?>
 
 								<div id="thecherry-feed" class="ttn-network-feed">
-									<h3 class="thecherry-feed-title network-feed-title">The Cherry</h3>
+									<h3 class="thecherry-feed-title network-feed-title"><a href="http://thecherry.temple-news.com/">The Cherry</a></h3>
 									<h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News</h4>
 
 									<?php ttn_network_feed('thecherry'); ?>
