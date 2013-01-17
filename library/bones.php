@@ -374,25 +374,32 @@ function zombie_footer_links_misc_fallback() {
 	/* you can put a default here if you like */ 
 }
 
-// add parent classes for menu items
-// http://codex.wordpress.org/Function_Reference/wp_nav_menu#How_to_add_a_parent_class_for_menu_item
-add_filter('wp_nav_menu_objects', function ($items) {
-    $hasSub = function ($menu_item_id, &$items) {
-        foreach ($items as $item) {
-            if ($item->menu_item_parent && $item->menu_item_parent==$menu_item_id) {
-                return true;
-            }
-        }
-        return false;
-    };
 
-    foreach ($items as &$item) {
-        if ($hasSub($item->ID, &$items)) {
-            $item->classes[] = 'menu-parent-item'; // all elements of field "classes" of a menu item get join together and render to class attribute of <li> element in HTML
+/**
+ * Add parent classes for menu items
+ *
+ * @see http://codex.wordpress.org/Function_Reference/wp_nav_menu#How_to_add_a_parent_class_for_menu_item
+ * @version 1.0.1
+ *
+ */
+add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+function add_menu_parent_class( $items ) {
+    
+    $parents = array();
+    foreach ( $items as $item ) {
+        if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
+            $parents[] = $item->menu_item_parent;
         }
     }
+    
+    foreach ( $items as $item ) {
+        if ( in_array( $item->ID, $parents ) ) {
+            $item->classes[] = 'menu-parent-item'; 
+        }
+    }
+    
     return $items;    
-});
+}
 
 /*********************
 RELATED POSTS FUNCTION
