@@ -2527,6 +2527,15 @@ img.size-large {
 .video-container {
   margin: 0 0 0.7145em;
 }
+.columnist-headshot-container {
+  max-width: 25%;
+  margin: 0 0 1.429em 1.429em;
+  float: right;
+}
+.columnist-headshot-container img.columnist-headshot {
+  max-width: 100%;
+  height: auto;
+}
 /*********************
 HEADER STYLES
 *********************/
@@ -4577,6 +4586,9 @@ you can add resource intensive styles.
   }
   .video-container {
     margin: 0 0 0.75em;
+  }
+  .columnist-headshot-container {
+    margin: 0 0 1.5em 1.5em;
   }
   /*********************
   HEADER SYTLES

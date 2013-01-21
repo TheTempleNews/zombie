@@ -677,3 +677,60 @@ function the_post_thumbnail_caption() {
 
 		echo $output;
 	}
+
+/**
+ * Generates columnist headshot if post is a column or commentary
+ * 
+ * Must be used within The Loop
+ *
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @version 1.0.0
+ * @since 1.4.0
+ * @deprecated 1.4.0 Because the output of the User Photo plugin is not as controllable as the builtin featured image.
+ *
+ * @return string|bool
+ * @param string $context 
+ */
+function zom_columnist_headshot($context) {
+
+	// An array of category slugs for columns and commentaries
+	$column_categories = array(
+		'columns',
+		'columns-arts-entertainment',
+		'columns-living',
+		'commentary', // Opinion commentary
+		'commentaries' // Sports commentary
+	);
+
+	// Return true if post is a column or commentary
+	$is_column = in_category($column_categories);
+
+	// Columnist headshot displays if post is a column/commentary
+	if ($is_column == true) {
+
+		// $CONTEXT: If the context is within a single article...
+		if ( $context == 'article' ) {
+			echo '<div class="columnist-headshot-container">';
+				if ( function_exists('userphoto_the_author_photo') ) :
+					userphoto_the_author_photo( // display the user photo
+						'', // before
+						'', // after
+						array( // attributes
+							'width' => '',
+							'height' => '',
+							'class' => 'columnist-headshot'
+						)
+					);
+				endif;
+			echo '</div> <!-- end .columnist-headshot-container -->';
+		} // end if article context
+
+	} // end columnist headshot block
+
+	return $column_categories;
+	return $is_column;
+}
+
+
+
+
