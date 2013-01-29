@@ -731,6 +731,15 @@ function zom_columnist_headshot($context) {
 	return $is_column;
 }
 
-
+/**
+ * Replaces en dashes with em dashes.
+ *
+ * @author Chris Montgomery <mont.chr@gmail.com
+ * @since 1.3.12
+ */
+add_filter('the_content', 'zom_filter_en_dashes');
+function zom_filter_en_dashes($content){
+   return preg_replace("/\\b\\s(–)\\s/u", " — ", $content);
+}
 
 
