@@ -575,10 +575,12 @@
 												<h2 class="home-slideshows-headline slideshows-headline headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 												<?php /* <p class="home-slideshows-byline slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="home-slideshows-authors slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time> */ ?>
 											</header>
-		
+											
+											<?php /* disabled because deks are usually not provided by photo desk - montchr 2013.02.11
 											<section class="slideshows-dek dek">
 												<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 											</section> <!-- end slideshows-dek -->
+											*/ ?>
 	
 									</article> <!-- end article -->
 					
