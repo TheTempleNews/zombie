@@ -764,5 +764,3 @@ add_shortcode("blockquote", "zom_blockquote");
 
 
 
-
-
