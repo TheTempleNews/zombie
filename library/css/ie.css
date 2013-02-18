@@ -1523,6 +1523,22 @@ p {
   /* 14px */
 
 }
+.post-content blockquote.blockquote-full {
+  float: left;
+  width: 33.333%;
+  margin: 0 0.75em 0.75em 0;
+  background: #EEE;
+  padding: 1em;
+}
+.post-content blockquote.blockquote-full hr {
+  display: block;
+}
+.post-content blockquote.blockquote-full p {
+  margin: 0;
+}
+.post-content blockquote.blockquote-full .blockquote-cite {
+  font-size: 0.625em;
+}
 .post-content .wp-caption {
   padding: 0.375em;
   /* this is the caption itself */

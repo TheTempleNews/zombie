@@ -2893,6 +2893,17 @@ p {
   margin: 0;
   padding: 0;
 }
+.post-content blockquote.blockquote-full p {
+  margin-bottom: 0;
+}
+.post-content blockquote.blockquote-full hr {
+  display: none;
+}
+.post-content blockquote.blockquote-full .blockquote-cite {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.667em;
+  font-style: normal;
+}
 .post-content dd {
   margin-left: 0;
   font-size: 0.9em;
@@ -4865,6 +4876,22 @@ you can add resource intensive styles.
     font-size: 0.875em;
     /* 14px */
   
+  }
+  .post-content blockquote.blockquote-full {
+    float: left;
+    width: 33.333%;
+    margin: 0 0.75em 0.75em 0;
+    background: #EEE;
+    padding: 1em;
+  }
+  .post-content blockquote.blockquote-full hr {
+    display: block;
+  }
+  .post-content blockquote.blockquote-full p {
+    margin: 0;
+  }
+  .post-content blockquote.blockquote-full .blockquote-cite {
+    font-size: 0.625em;
   }
   .post-content .wp-caption {
     padding: 0.375em;
