@@ -12,11 +12,15 @@
  *
  */
 
+/* Version Number */
+	define( 'ZOM_VERSION', '1.3.13' );
+
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
 	define( 'HOME_TOP_PROMO', false );
 
-	// Set this to true to display Lunchies banner. HOME_TOP_BANNER must be set to true.
+	// Set this to true to display Lunchies banner. HOME_TOP_PROMO must be set to true.
 	define( 'NEW_LUNCHIES', false );
 	
-	
+	// Set this to true to display Election banner. HOME_TOP_PROMO must be set to true.
+	define( 'ELECTION_ISSUE', false );

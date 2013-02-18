@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			
-	<div id="content">
+	<div id="content" class="<?php if (HOME_TOP_PROMO == true) { echo 'has-banner'; } ?>">
 	
 		<div id="inner-content" class="wrap clearfix">
 			
@@ -12,6 +12,15 @@
 				if (NEW_LUNCHIES == true) { ?>
 					<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
 				<?php } // end lunchies banner
+				
+				if (ELECTION_ISSUE == true) { ?>
+					<?php
+					$banner = wp_get_attachment_image_src( get_post_thumbnail_id(38224), 'zom-full-banner' );
+					$banner_url = $banner['0'];
+					?>
+					
+					<a href="http://temple-news.com/election/" title="Election Issue"><img src="<?php echo $banner_url ?>" class="si-banner" /></a>
+				<?php } // end election banner
 				
 				echo '</div>';
 				
@@ -179,10 +188,20 @@
 						<section id="section-box-news" class="section-container section-box clearfix">
 								
 								<?php the_zombie_loop('news'); ?>
+
+								<div id="broadcecil-feed" class="ttn-network-feed">
+									<h3 class="broadcecil-feed-title network-feed-title"><a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil">Broad &amp; Cecil</a></h3>
+									<h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News</h4>
+
+									<?php ttn_network_feed('broadandcecil'); ?>
+
+								</div> <!-- end #broadcecil-feed -->
 								
+								<!--
 								<div id="broadcecilad-main" class="broadcecilad ttn-network-banner">
 									<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
 								</div>
+								-->
 								
 						</section> <!-- end #section-box-news -->
 						
@@ -237,10 +256,20 @@
 						<section id="section-box-sports" class="section-container section-box clearfix">
 							
 								<?php the_zombie_loop('sports'); ?>
+
+								<div id="thecherry-feed" class="ttn-network-feed">
+									<h3 class="thecherry-feed-title network-feed-title"><a href="http://thecherry.temple-news.com/">The Cherry</a></h3>
+									<h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News</h4>
+
+									<?php ttn_network_feed('thecherry'); ?>
+
+								</div> <!-- end #thecherry-feed -->								
 								
+								<!--
 								<div id="thecherryad-main" class="thecherryad ttn-network-banner">
 									<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
 								</div>
+								-->
 								
 						</section> <!-- end #section-box-sports -->
 						
@@ -546,10 +575,12 @@
 												<h2 class="home-slideshows-headline slideshows-headline headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 												<?php /* <p class="home-slideshows-byline slideshows-byline byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="home-slideshows-authors slideshows-authors authors"><?php if(function_exists('coauthors')) coauthors(); else the_author(); ?></span> <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php echo get_the_time( 'd F Y' ); ?></time> */ ?>
 											</header>
-		
+											
+											<?php /* disabled because deks are usually not provided by photo desk - montchr 2013.02.11
 											<section class="slideshows-dek dek">
 												<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
 											</section> <!-- end slideshows-dek -->
+											*/ ?>
 	
 									</article> <!-- end article -->
 					

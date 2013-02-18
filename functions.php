@@ -88,6 +88,9 @@ add_image_size( 'zom-portrait-1080', 720, 1080, true );
 // columnist headshot size
 add_image_size( 'zom-columnist-200', 200, 300, true );
 
+// full-width banner
+add_image_size( 'zom-full-banner', 1140, 500, true );
+
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you
@@ -182,6 +185,26 @@ function bones_register_sidebars() {
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
     ));
+
+    register_sidebar(array(
+    	'id' => 'widgetized-broadcecil',
+    	'name' => 'Broad & Cecil RSS',
+    	'description' => 'This should be used to display an RSS feed from Broad & Cecil.',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '',
+    	'after_title' => '',
+    ));
+
+    register_sidebar(array(
+    	'id' => 'widgetized-thecherry',
+    	'name' => 'The Cherry RSS',
+    	'description' => 'This should be used to display an RSS feed from The Cherry.',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+    	'before_title' => '',
+    	'after_title' => '',
+    ));
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 
@@ -256,8 +279,10 @@ function bones_wpsearch( $form = '' ) {
 	return $form;
 } // don't remove this bracket!
 
-// List a post's categories but exclude the categories specified in the argument
-// Developed by ocshawn (http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015)
+/**
+ * List a post's categories but exclude the categories specified in the argument
+ * @link http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015
+ */
 function the_category_but($excl='', $spacer=' &#124; '){
    $categories = get_the_category();
       if(!empty($categories)){
@@ -279,6 +304,7 @@ function the_category_but($excl='', $spacer=' &#124; '){
 	      }
       }
 }
+
 
 function zombie_section_name($post) {
 	global $post;
@@ -306,8 +332,9 @@ function zombie_section_name($post) {
 }
 
 
-
-// Customizes the output of image captions
+/**
+ * Customizes the output of image captions
+ */ 
 add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
 function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
@@ -395,7 +422,10 @@ function ttn_multimedia_paged( $query ) {
 	}
 }
 
-// Adds all public post types to author archive query
+
+/**
+ * Adds all public post types to author archive query.
+ */
 function ttn_author_archive_inc_cpt( $query ) {
 	// Gets a list of the names of all public post types for use in a query
 	$post_types_args = Array(
@@ -409,8 +439,12 @@ function ttn_author_archive_inc_cpt( $query ) {
 }
 
 
-
-
+/**
+ * Displays a list of an article's categories without links.
+ *
+ * Similar to the_category().
+ * 
+ */
 function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
     	echo $category->cat_name . ' | ';
@@ -419,10 +453,13 @@ function the_category_no_link() {
 }
 
 
-
-
-// This adds custom post types to archives. It also breaks bulk editing of taxonomy if !is_admin() is not included. See comments in CSS-Tricks article.
-// http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/
+/**
+ * This adds custom post types to archives.
+ *
+ * It also breaks bulk editing of taxonomy if !is_admin() is not included.
+ *
+ * @see http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/ See comments in CSS-Tricks article
+ */
 function namespace_add_custom_types( $query ) {
   if( !is_admin() && is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
@@ -435,8 +472,9 @@ add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 
 
-
-// Automatically add FitVids to oembed YouTube videos
+/**
+ * Automatically add FitVids to oembed YouTube videos.
+ */
 function zombie_embed_filter( $output, $data, $url ) {
  
 	$return = '<div class="video-container">' . $output . '</div>';
@@ -447,9 +485,10 @@ add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
 
 
 
-
-// Hackish subpage conditional tag. Returns parent ID if is subpage.
-// http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
+/**
+ * Hackish subpage conditional tag. Returns parent ID if is subpage.
+ * @see http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
+ */
 function is_subpage() {
     global $post;                              // load details about this page
 
@@ -463,9 +502,10 @@ function is_subpage() {
 
 
 
-
-// Removes the indicated top-level admin menu items for every role except Administrator
-// http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
+/**
+ * Removes the indicated top-level admin menu items for every role except Administrator.
+ * @see http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
+ */
 function remove_menus() {
     global $menu;
     global $current_user;
@@ -496,9 +536,10 @@ add_action('admin_menu', 'remove_menus');
 
 
 
-
-// Adds Editor to the roles allowed to approve new users, using the plugin New User Approve
-// From the dev: http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
+/**
+ * Adds Editor to the roles allowed to approve new users, using the plugin New User Approve.
+ * @see http://wordpress.org/support/topic/plugin-new-user-approve-how-do-i-make-it-so-a-user-with-editor-permission-can-approve-users?replies=4
+ */
 function nua_add_cap() {
 	$editor = get_role( 'editor' );
 	
@@ -510,9 +551,10 @@ function nua_add_cap() {
 add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
 
 
-
-// to display the caption or any other post thumbnail metadata
-// http://wordpress.org/support/topic/display-caption-with-the_post_thumbnail?replies=10
+/**
+ * To display the caption or any other post thumbnail metadata.
+ * @see http://wordpress.org/support/topic/display-caption-with-the_post_thumbnail?replies=10
+ */
 function the_post_thumbnail_caption() {
   global $post;
 
@@ -543,8 +585,8 @@ function the_post_thumbnail_caption() {
   }
 }
 /**
- * Fixes issue where Editors cannot edit users (a capability added by User Role Editor plugin (?))
- * http://wordpress.org/support/topic/plugin-user-role-editor-not-able-to-add-ability-to-edit-users?replies=4
+ * Fixes issue where Editors cannot edit users (a capability added by User Role Editor plugin (?)).
+ * @see http://wordpress.org/support/topic/plugin-user-role-editor-not-able-to-add-ability-to-edit-users?replies=4
  */
 	function mc_admin_users_caps( $caps, $cap, $user_id, $args ){
 
@@ -595,3 +637,130 @@ function the_post_thumbnail_caption() {
 
 	}
 	add_filter( 'admin_head', 'mc_edit_permission_check', 1, 4 );
+
+/**
+ * Displays a list of the 5 most recent posts from a network site.
+ *
+ * http://codex.wordpress.org/Function_Reference/fetch_feed
+ */
+	function ttn_network_feed( $domain ) {
+
+		$feed_url = 'http://' . $domain . '.temple-news.com/feed/';
+
+		// Get RSS Feed(s)
+		include_once(ABSPATH . WPINC . '/feed.php');
+		// Get a SimplePie feed object from the specified feed source.
+		$rss = fetch_feed( $feed_url );
+		if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
+		    // Figure out how many total items there are, but limit it to 5. 
+		    $maxitems = $rss->get_item_quantity(5); 
+
+		    // Build an array of all the items, starting with element 0 (first element).
+		    $rss_items = $rss->get_items(0, $maxitems); 
+		endif;
+
+		$output = '';
+
+		$output .= '<ul>';
+		   	if ($maxitems == 0) $output .= '<li>No items.</li>';
+		    else
+		    // Loop through each feed item and display each item as a hyperlink.
+		    foreach ( $rss_items as $item ) :
+		    	$output .= '<li>';
+		    		$output .= '<p class="ttn-network-feed-timestamp">' . $item->get_date('d F Y') . '</p>';
+		        	$output .= '<a href="' . esc_url( $item->get_permalink() ) . '" title="Posted ' . $item->get_date('d F Y | H:i') . '">';
+		       		$output .= esc_html( $item->get_title() );
+		       		$output .= '</a>';
+		    	$output .= '</li>';
+		    endforeach;
+		$output .= '</ul>';
+
+		echo $output;
+	}
+
+/**
+ * Generates columnist headshot if post is a column or commentary
+ * 
+ * Must be used within The Loop
+ *
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @version 1.0.0
+ * @since 1.4.0
+ * @deprecated 1.4.0 Because the output of the User Photo plugin is not as controllable as the builtin featured image.
+ *
+ * @return string|bool
+ * @param string $context 
+ */
+function zom_columnist_headshot($context) {
+
+	// An array of category slugs for columns and commentaries
+	$column_categories = array(
+		'columns',
+		'columns-arts-entertainment',
+		'columns-living',
+		'commentary', // Opinion commentary
+		'commentaries' // Sports commentary
+	);
+
+	// Return true if post is a column or commentary
+	$is_column = in_category($column_categories);
+
+	// Columnist headshot displays if post is a column/commentary
+	if ($is_column == true) {
+
+		// $CONTEXT: If the context is within a single article...
+		if ( $context == 'article' ) {
+			echo '<div class="columnist-headshot-container">';
+				if ( function_exists('userphoto_the_author_photo') ) :
+					userphoto_the_author_photo( // display the user photo
+						'', // before
+						'', // after
+						array( // attributes
+							'width' => '',
+							'height' => '',
+							'class' => 'columnist-headshot'
+						)
+					);
+				endif;
+			echo '</div> <!-- end .columnist-headshot-container -->';
+		} // end if article context
+
+	} // end columnist headshot block
+
+	return $column_categories;
+	return $is_column;
+}
+
+/**
+ * Shortcode for blockquotes with attribution.
+ *
+ * Usage: [blockquote who="Chris Montgomery" what="TTN Web Editor"]This is a quote![/blockquote]
+ * Make sure opening and closing quotation marks are removed!
+ * 
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @see http://wplifeguard.com/how-to-use-wordpress-shortcode/
+ *
+ */
+function zom_blockquote($atts, $content = null) {
+	extract(shortcode_atts(array(
+		"who" => 'Unknown',
+		"what" => 'what'
+	), $atts));
+	
+	// If the "who" is not defined, only display the content (within curly quotes)
+	if ( $who == 'Unknown' ) {
+		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p></blockquote>';
+
+	// If the "who" is defined, but their "what" is not, display the who below a horizontal rule, preceded by an em dash
+	} elseif ( $what == 'what' ) {
+		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p><hr /><p class="blockquote-cite">—'.$who.'</p></blockquote>';
+
+	// If both the "who" and their "what" are defined, display both below a horizontal rule, preceded by an em dash, separated by ' / '. This is the preferred method.
+	} else {
+		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p><hr /><p class="blockquote-cite">—'.$who.' / '.$what.'</p></blockquote>';
+	}
+}
+add_shortcode("blockquote", "zom_blockquote");
+
+
+

@@ -30,11 +30,42 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-.ttn-network-banner {
-	border-top: @niceborders-l;
-	border-bottom: @niceborders-l;
-	padding: (@lhem-l/2-@1px-l) 0;
+.ttn-network-banner,
+.ttn-network-feed {
+	border-top: none;
+	border-bottom: none;
 	margin: 0 0 @lhem-l;
+}
+
+.ttn-network-banner {
+
+}
+
+.ttn-network-feed {
+	padding: (@lhem-l/2-@1px-l) 1em;
+	.boxShadow-curved();
+
+	.network-feed-title {
+		.h1;
+	}
+
+	.network-feed-subtitle {
+		.h6;
+		font-weight: 500;
+		text-transform: none;
+	}
+
+	ul {
+		font-size: 87.5%;
+		line-height: @lh-l;
+
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: @lhem-l 0;
+		}
+	}
 }
 
 
@@ -343,6 +374,12 @@ style a page via class
 	time {
 		padding-left: (@lhem-l/2);
 	}
+	
+	#related-posts-container {
+		.boxShadow(@x: 3px, @y: 3px, @radius: 6px);
+		padding: @lhem-l;
+		margin-bottom: (@lhem-l*2);
+	}
 }                          /* single post page */
 
 
@@ -573,6 +610,10 @@ img {
 
 .video-container {
 	margin: 0 0 (@lhem-l/2);
+}
+
+.columnist-headshot-container {
+	margin: 0 0 @lhem-l @lhem-l;
 }
 
 
@@ -889,6 +930,10 @@ POSTS & CONTENT STYLES
 
 #content { 
 	margin: @lhem-l auto (@lhem-l*6);
+	
+	&.has-banner {
+		margin-top: 0;
+	}
 }
 
 	p {
@@ -926,6 +971,28 @@ POSTS & CONTENT STYLES
 			border-bottom: none;
 			padding-bottom: (@lhem-l/2);
 			font-size: 0.875em; /* 14px */
+		}
+
+		blockquote {
+			&.blockquote-full {
+				float: left;
+				width: 33.333%;
+				margin: 0 @lhem-l/2 @lhem-l/2 0;
+				background: #EEE;
+				padding: 1em;
+
+				hr {
+					display: block;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				.blockquote-cite {
+					font-size: 0.625em;
+				}
+			}
 		}
 		
 		.wp-caption {
@@ -1033,10 +1100,12 @@ COMMENT FORM STYLES
 			padding: (@1px-l*3) (@1px-l*6); 
 			border: (@1px-l*2) solid #ccc; 
 			line-height: @lhem-l; 
+			margin: 0 @lhem-l;
 		}
 		
 		textarea {
 			height: (@1px-l*150); 
+			margin: @lhem-l 0;
 		}
 		
 	}

@@ -51,15 +51,80 @@ body {
 ADVERTS AND SOCIAL MEDIA
 ************************/
 
-.ttn-network-banner {
+.ttn-network-banner,
+.ttn-network-feed {
 	border-top: @niceborders-s;
 	border-bottom: @niceborders-s;
-	padding: (@lhem-s/2-@1px-s) 0;
 	margin: 0 0 @lhem-s;
-	
+}
+
+.ttn-network-banner {
+	padding: (@lhem-s/2-@1px-s) 0;
+
 	img {
 		margin: 0 auto;
 		display: block;
+	}
+}
+
+.ttn-network-feed {
+
+	.network-feed-title,
+	.network-feed-subtitle {
+		text-align: right;
+	}
+
+	.network-feed-title {
+		.h1;
+		font-family: @headline;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		margin-bottom: 0;
+		
+		a {
+			color: #565656;
+
+			&:hover,
+			&:active {
+				color: @thatred;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.network-feed-subtitle {
+		.h6;
+		font-weight: 500;
+		text-transform: none;
+	}
+	
+	ul {
+		font-family: @sans-serif;
+
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: @lhem-s/2 0;
+
+			.ttn-network-feed-timestamp {
+				margin: 0;
+				text-transform: uppercase;
+				color: #999999;
+			}
+
+			a {
+				color: #565656;
+				font-weight: 700;
+
+				&:hover,
+				&:active {
+					color: @thatred;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 
@@ -436,6 +501,22 @@ style a page via class
 			padding-left: (@lhem-s/2);
 		}
 	}
+	
+	#related-posts-container {
+		background-color: #EEEEEE;
+		padding: @lhem-s;
+		margin-bottom: (@lhem-s*2);
+		
+		ol {
+			list-style: none;
+			padding: 0;
+			
+			h4 {
+				font-weight: 300;
+			}
+		}
+		
+	}
 }                        /* single post page */
 
 
@@ -753,6 +834,18 @@ img.size-large {
 
 .video-container {
 	margin: 0 0 (@lhem-s/2);
+}
+
+.columnist-headshot-container {
+	max-width: 25%;
+	margin: 0 0 @lhem-s @lhem-s;
+	float: right;
+
+
+	img.columnist-headshot {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 /*********************
@@ -1077,21 +1170,6 @@ POSTS & CONTENT STYLES
 				padding-bottom: @lhem-s;
 				margin-bottom: (@lhem-s*2);
 			}
-			
-			/* content headers are serifed */
-			h1, .h1, h2, .h2, h3, .h3, h4, .h4 { 
-				font-family: @serif; 
-				text-rendering : optimizelegibility;
-				/* 
-				if you're going to use webfonts, be sure to check your weights 
-				http://css-tricks.com/watch-your-font-weight/
-				*/
-
-				/* removing text decoration from all headline links */
-				a {
-					text-decoration: none;
-				}
-			}
 		
 		} /* end .hentry */
 		
@@ -1132,6 +1210,21 @@ POSTS & CONTENT STYLES
 		.post-content {
 			margin: 0 0 (@lhem-s*2);
 			
+			/* content headers are serifed */
+			h1, .h1, h2, .h2, h3, .h3, h4, .h4 { 
+				font-family: @serif; 
+				text-rendering : optimizelegibility;
+				/* 
+				if you're going to use webfonts, be sure to check your weights 
+				http://css-tricks.com/watch-your-font-weight/
+				*/
+
+				/* removing text decoration from all headline links */
+				a {
+					text-decoration: none;
+				}
+			}
+			
 			p {}
 			
 			
@@ -1165,6 +1258,24 @@ POSTS & CONTENT STYLES
 				padding: 0;
 				
 				&:before {}
+
+				&.blockquote-full {
+					p {
+						margin-bottom: 0;
+					}
+
+					hr {
+						display: none;
+					}
+
+					.blockquote-cite {
+						font-family: @sans-serif;
+						font-size: 0.667em;
+						font-style: normal;
+					}
+				}
+
+				
 			
 			}
 			
@@ -1284,6 +1395,17 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+	/* FORM STYLES */
+	form {
+		font-family: @sans-serif;
+		
+		label {
+			font-family: @sans-serif;
+		}
+		
+	}	
+		
 			
 			
 			
@@ -1460,6 +1582,39 @@ POSTS & CONTENT STYLES
 		} /* /.rank-eds-item */
 	} /* /.rank-eds-list */
 } /* /.lunchies-sidebar */
+
+
+
+/*****************************
+ * SPECIAL ISSUE PAGE STYLES *
+ *****************************/
+
+.home-top-promo {
+	
+	a {
+		display: block;
+	}
+	
+	img {
+		position: relative;
+		z-index: -99;
+	}
+}
+
+.si-banner-container {
+	width: 100%;
+	
+	.si-banner {
+		max-width: 100%;
+	}
+}
+
+.page-id-38224 {
+	h3.election-headline {
+		font-family: 'LeagueGothicRegular', Impact, serif;
+		font-weight: normal;
+	}
+}
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1824,7 +1979,9 @@ COMMENT FORM STYLES
 			padding: (@1px-s*3) (@1px-s*6); 
 			background: #efefef; 
 			border: (@1px-s*2) solid #ccc; 
-			line-height: @lhem-s; 
+			line-height: @lhem-s;
+			margin: 0 @lhem-s;
+			float: left;
 		
 			&:focus {
 				background: #fff; 
@@ -1852,14 +2009,17 @@ COMMENT FORM STYLES
 		textarea {
 			resize: none; 
 			width: 97.3%; 
-			height: (@1px-s*150); 
+			height: (@1px-s*150);
+			margin: @lhem-s 0; 
 		}
 		
 	}
 }
 	
 	/* comment submit button */
-	#submit {}
+	#submit {
+		.button;
+	}
 	
 	/* comment form title */
 	#comment-form-title { 
