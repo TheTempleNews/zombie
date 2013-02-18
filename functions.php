@@ -731,6 +731,38 @@ function zom_columnist_headshot($context) {
 	return $is_column;
 }
 
+/**
+ * Shortcode for blockquotes with attribution.
+ *
+ * Usage: [blockquote who="Chris Montgomery" what="TTN Web Editor"]This is a quote![/blockquote]
+ * Make sure opening and closing quotation marks are removed!
+ * 
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @see http://wplifeguard.com/how-to-use-wordpress-shortcode/
+ *
+ */
+function zom_blockquote($atts, $content = null) {
+	extract(shortcode_atts(array(
+		"who" => 'Unknown',
+		"what" => 'what'
+	), $atts));
+	
+	// If the "who" is not defined, only display the content (within curly quotes)
+	if ( $who == 'Unknown' ) {
+		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p></blockquote>';
+
+	// If the "who" is defined, but their "what" is not, display the who below a horizontal rule, preceded by an em dash
+	} elseif ( $what == 'what' ) {
+		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p><hr /><p class="blockquote-cite">—'.$who.'</p></blockquote>';
+
+	// If both the "who" and their "what" are defined, display both below a horizontal rule, preceded by an em dash, separated by ' / '. This is the preferred method.
+	} else {
+		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p><hr /><p class="blockquote-cite">—'.$who.' / '.$what.'</p></blockquote>';
+	}
+}
+add_shortcode("blockquote", "zom_blockquote");
+
+
 
 
 

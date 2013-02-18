@@ -972,6 +972,28 @@ POSTS & CONTENT STYLES
 			padding-bottom: (@lhem-l/2);
 			font-size: 0.875em; /* 14px */
 		}
+
+		blockquote {
+			&.blockquote-full {
+				float: left;
+				width: 33.333%;
+				margin: 0 @lhem-l/2 @lhem-l/2 0;
+				background: #EEE;
+				padding: 1em;
+
+				hr {
+					display: block;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				.blockquote-cite {
+					font-size: 0.625em;
+				}
+			}
+		}
 		
 		.wp-caption {
 			padding: (@lhem-l/4);
