@@ -129,17 +129,17 @@ function bones_scripts_and_styles() {
     }
     
     //adding scripts file in the footer
-    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), ZOM_VERSION, true );
 
 	// adding flex tetrodo slider based on flexslider
-	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), '', true );
-	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), 'screen');
+	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), ZOM_VERSION, true );
+	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), ZOM_VERSION, 'screen');
 	
-	// FitText 1.0 http://fittextjs.com/
-	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), '', true );
+	// FitText 1.1 http://fittextjs.com/
+	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
 	
 	// SlabText
-	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext.min.js', array( 'jquery' ), '', true );
+	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext.min.js', array( 'jquery' ), ZOM_VERSION, true );
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
