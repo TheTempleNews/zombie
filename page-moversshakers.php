@@ -58,10 +58,7 @@ Template Name: Movers & Shakers
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'moversshakers-article sixcol clearfix ' . $k ); ?> role="article">
 
 										<div class="moversshakers-featured-image-container featured-image-container">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-												<?php //the_post_thumbnail('zom-landscape-576'); ?>
-												<img src="http://lorempixel.com/576/384" />
-											</a>
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-792'); ?></a>
 										</div> <!-- end .moversshakers-featured-image-container -->
 
 										<header class="moversshakers-article-header">
