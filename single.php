@@ -48,17 +48,7 @@
 
 								echo '</div>';
 								
-							} elseif (in_category('movers-shakers')) {
-
-								echo '<div class="single-top-promo">';
-
-								if (MOVERS_AND_SHAKERS == true) { /* ?>
-									<div class="special-issue-type-banner-container top-promo-block clearfix">
-		<h2 class="moversshakers-type-banner special-issue-type-banner fittext"><a href="http://temple-news.com/movers-shakers/">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></a></h2>
-									</div>
-								<?php */ } // end movers and shakers banner
-							
-							} // end movers and shakers conditional ?>
+							} ?>
 					
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
