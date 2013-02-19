@@ -1589,7 +1589,7 @@ ADVERTS AND SOCIAL MEDIA
   font-size: 3.429em;
   line-height: 1;
   margin: 0.4em 0;
-  font-family: 'LeagueGothicRegular', Impact, serif;
+  font-family: 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -3005,7 +3005,7 @@ form label {
   font-weight: normal;
 }
 .lunchies-main #headline-voters-map {
-  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
   text-align: center;
 }
@@ -3037,7 +3037,7 @@ form label {
   line-height: 1;
   margin: 0.4em 0;
   margin: 0;
-  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
   text-align: center;
   width: 100%;
@@ -3055,7 +3055,7 @@ form label {
   font-size: 1.429em;
   line-height: 1.2;
   margin: 0.25em 0;
-  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
   text-align: center;
   width: 100%;
@@ -3086,7 +3086,7 @@ form label {
   font-size: 2.571em;
   line-height: 1.333333;
   margin: 0.3em 0;
-  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
 }
 .lunchies-main .lunchies-articles article h3.headline a {
@@ -3105,7 +3105,7 @@ form label {
 }
 .lunchies-sidebar #headline-eds-list {
   text-align: center;
-  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, serif;
+  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
 }
 .lunchies-sidebar ul.rank-eds-list {
