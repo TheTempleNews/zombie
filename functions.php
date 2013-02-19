@@ -126,9 +126,13 @@ function custom_image_sizes_choose( $sizes ) {
 }
 
 
-/************** LUNCHIES FUNCTIONS ****************/
+/************** SPECIAL ISSUE FUNCTIONS ****************/
 
-// Returns the year of the most recent food_vendor post type - the most recent should always be at the time of the last lunchies issue
+/**
+ * Returns the year of the most recent food_vendor post type.
+ *
+ * The most recent should always be at the time of the last lunchies issue.
+ */
 function lunchies_year() {
 	$query = get_posts('post_type=food_vendor');
 	$most_recent = $query[0];
@@ -137,9 +141,45 @@ function lunchies_year() {
 	
 	return $output;	
 }
-
 define('LUNCHIES_YEAR', lunchies_year());
 
+/**
+ * Returns the year of the most recent Movers & Shakers article.
+ *
+ * The most recent should always be at the time of the last Movers & Shakers issue.
+ */
+function ttn_movers_shakers_year() {
+	$args = array(
+		'post_type'     => 'article_living',
+		//'category_name' => 'movers-shakers'
+	);
+	$query = get_posts($args);
+	$most_recent = $query[0];
+	$most_recent_post_date = $most_recent->post_date;
+	$output = date( 'Y', strtotime( $most_recent_post_date ) );
+	
+	return $output;	
+}
+define('MOVERS_SHAKERS_YEAR', ttn_movers_shakers_year());
+
+/**
+ * Displays the name of a Mover & Shaker.
+ * 
+ * Will only work when a single 'movers-shakers-people' item exists per post.
+ * 
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @since 1.4.0
+ * @see the_category_no_link()
+ *
+ * @param mixed $post
+ */
+function ttn_movers_shakers_name_no_link() {
+	//global $post;
+	$persons = the_terms( the_ID(), 'movers-shakers-people' );
+	foreach( $persons as $person) {
+    	echo $person;
+	}
+}
 
 
 /************* ACTIVE SIDEBARS ********************/
@@ -449,9 +489,7 @@ function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
     	echo $category->cat_name . ' | ';
 	}
-	
 }
-
 
 /**
  * This adds custom post types to archives.

@@ -7,7 +7,7 @@
 			
 			<?php if (HOME_TOP_PROMO == true) {
 				
-				echo '<div class="home-top-promo">';
+				echo '<div class="home-top-promo clearfix">';
 				
 				if (NEW_LUNCHIES == true) { ?>
 					<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
@@ -21,6 +21,10 @@
 					
 					<a href="http://temple-news.com/election/" title="Election Issue"><img src="<?php echo $banner_url ?>" class="si-banner" /></a>
 				<?php } // end election banner
+
+				if (MOVERS_AND_SHAKERS == true) {
+					include_once('library/inc/movers-shakers-top-promo.php');
+				}
 				
 				echo '</div>';
 				
