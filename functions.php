@@ -126,9 +126,13 @@ function custom_image_sizes_choose( $sizes ) {
 }
 
 
-/************** LUNCHIES FUNCTIONS ****************/
+/************** SPECIAL ISSUE FUNCTIONS ****************/
 
-// Returns the year of the most recent food_vendor post type - the most recent should always be at the time of the last lunchies issue
+/**
+ * Returns the year of the most recent food_vendor post type.
+ *
+ * The most recent should always be at the time of the last lunchies issue.
+ */
 function lunchies_year() {
 	$query = get_posts('post_type=food_vendor');
 	$most_recent = $query[0];
@@ -137,9 +141,22 @@ function lunchies_year() {
 	
 	return $output;	
 }
-
 define('LUNCHIES_YEAR', lunchies_year());
 
+/**
+ * Returns the year of the most recent Movers & Shakers article.
+ *
+ * The most recent should always be at the time of the last Movers & Shakers issue.
+ */
+function ttn_movers_shakers_year() {
+	$query = get_posts('post_type=movers_shakers');
+	$most_recent = $query[0];
+	$most_recent_post_date = $most_recent->post_date;
+	$output = date( 'Y', strtotime( $most_recent_post_date ) );
+	
+	return $output;	
+}
+define('MOVERS_SHAKERS_YEAR', ttn_movers_shakers_year());
 
 
 /************* ACTIVE SIDEBARS ********************/
