@@ -10,13 +10,10 @@ Template Name: Movers & Shakers
 			
 				<div id="inner-content" class="wrap clearfix">
 				
-					<div id="moversshakers-top-promo">
+					<div id="moversshakers-page-header">
 						<h2 id="moversshakers-page-title" class="special-issue-page-title fittext">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></h2>
-					</div>
-					
-					<div id="moversshakers-main">
-						
-						<div id="moversshakers-summary">
+
+						<div id="moversshakers-page-summary">
 
 							<?php // Easy. Just pull the description from the page. But it's not future friendly... how can full collections of special issues be considered a full package, archived together?
 
@@ -26,7 +23,10 @@ Template Name: Movers & Shakers
 
 							endwhile; endif; ?>
 							
-						</div>
+						</div> <!-- end #moversshakers-summary -->
+					</div> <!-- end #moversshakers-header -->
+					
+					<div id="moversshakers-main">
 						
 						<div id="moversshakers-articles">
 
@@ -63,7 +63,7 @@ Template Name: Movers & Shakers
 											</a>
 										</div> <!-- end .moversshakers-featured-image-container -->
 
-										<header class="moversshakers-header">
+										<header class="moversshakers-article-header">
 
 											<h3 class="moversshakers-name"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_terms( $post->ID, 'movers-shakers-people' ); ?></a></h3>
 

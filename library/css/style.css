@@ -3497,6 +3497,48 @@ very heavy because they're imported at the first media query.
   font-family: 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
 }
+/***************************
+ * MOVERS & SHAKERS STYLES *
+ ***************************/
+#moversshakers-page-header {
+  text-align: center;
+}
+#moversshakers-page-header #moversshakers-page-title {
+  font-family: 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: black;
+}
+#moversshakers-page-header #moversshakers-page-summary {
+  color: black;
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 1.143em;
+  line-height: 1.5;
+  margin: 0.2em 0;
+  font-weight: normal;
+  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+}
+#moversshakers-page-header #moversshakers-page-summary a {
+  text-decoration: none;
+}
+#moversshakers-main {
+  /* end #moversshakers-articles */
+
+}
+#moversshakers-main #moversshakers-articles {
+  /* end .moversshakers-article */
+
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article {
+  /* end .moversshakers-header */
+
+}
+/* end #moversshakers-main */
 /*******************
  * LUNCHIES STYLES *
  *******************/
