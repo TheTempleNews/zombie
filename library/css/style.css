@@ -3538,6 +3538,41 @@ very heavy because they're imported at the first media query.
   /* end .moversshakers-header */
 
 }
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-featured-image-container img {
+  margin: 0;
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header {
+  /* for IE */
+
+  zoom: 1;
+  width: 100%;
+  padding: 0.5em;
+  background-color: blue;
+  position: relative;
+  z-index: 99;
+  top: -1em;
+  left: -0.5em;
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header:before,
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header:after {
+  content: "";
+  display: table;
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header:after {
+  clear: both;
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header .moversshakers-name {
+  margin: 0;
+  text-align: center;
+  font-family: 'CubanoRegular';
+  font-weight: normal;
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header .moversshakers-dek {
+  padding: 0 1em 0.5em;
+}
+#moversshakers-main #moversshakers-articles .moversshakers-article .moversshakers-article-header .moversshakers-dek p {
+  margin: 0;
+}
 /* end #moversshakers-main */
 /*******************
  * LUNCHIES STYLES *

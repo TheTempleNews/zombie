@@ -70,17 +70,39 @@ very heavy because they're imported at the first media query.
 #moversshakers-main {
 	#moversshakers-articles {
 		.moversshakers-article {
+
 			.moversshakers-featured-image-container {
+
+				img {
+					margin: 0;
+				}
 
 			}
 
 			.moversshakers-article-header {
-				.moversshakers-name {
+				.clearfix;
+				width: 100%;
+				padding: 0.5em;
+				background-color: blue;
 
+				position: relative;
+				z-index: 99;
+				top: -1em;
+				left: -0.5em;
+
+				.moversshakers-name {
+					margin: 0;
+					text-align: center;
+					font-family: 'CubanoRegular';
+					font-weight: normal;
 				}
 
 				.moversshakers-dek {
+					padding: 0 1em 0.5em;
 
+					p {
+						margin: 0;
+					}
 				}
 			} /* end .moversshakers-header */
 		} /* end .moversshakers-article */
