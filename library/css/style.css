@@ -2993,234 +2993,6 @@ form {
 form label {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/*******************
- * LUNCHIES STYLES *
- *******************/
-.lunchies-main {
-  /* /.rank-voters-list */
-
-}
-.lunchies-main .lunchies-map .gm-map {
-  font-family: 'CubanoRegular';
-  font-weight: normal;
-}
-.lunchies-main #headline-voters-map {
-  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, sans-serif;
-  font-weight: normal;
-  text-align: center;
-}
-.lunchies-main .rank-voters-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  /* /.rank-voters-item */
-
-}
-.lunchies-main .rank-voters-list .rank-voters-item {
-  padding: 0 0 1.429em;
-  /* /.rank-voters-rank-container */
-
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container {
-  float: left;
-  width: 14.364640883%;
-  padding: 0 1em 1em 0;
-  text-align: center;
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-rank {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 3.429em;
-  line-height: 1;
-  margin: 0.4em 0;
-  margin: 0;
-  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
-  font-weight: normal;
-  text-align: center;
-  width: 100%;
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-rank a {
-  text-decoration: none;
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-percent {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  margin: 0;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 1.429em;
-  line-height: 1.2;
-  margin: 0.25em 0;
-  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
-  font-weight: normal;
-  text-align: center;
-  width: 100%;
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-percent a {
-  text-decoration: none;
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info {
-  float: left;
-  width: 80%;
-}
-.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info .rank-voters-item-title {
-  margin: 0;
-}
-.lunchies-main .lunchies-articles {
-  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
-}
-.lunchies-main .lunchies-articles article {
-  margin: 0 0 1.429em;
-}
-.lunchies-main .lunchies-articles article h3.headline {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  margin: 0;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 2.571em;
-  line-height: 1.333333;
-  margin: 0.3em 0;
-  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
-  font-weight: normal;
-}
-.lunchies-main .lunchies-articles article h3.headline a {
-  text-decoration: none;
-}
-.lunchies-main .lunchies-articles article .dek {
-  font-style: italic;
-}
-.lunchies-main .lunchies-articles article .post-content img {
-  display: none;
-}
-/* /.lunchies-main */
-.lunchies-sidebar {
-  /* /.rank-eds-list */
-
-}
-.lunchies-sidebar #headline-eds-list {
-  text-align: center;
-  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, sans-serif;
-  font-weight: normal;
-}
-.lunchies-sidebar ul.rank-eds-list {
-  list-style: none;
-  padding: 0;
-  /* /.rank-eds-item */
-
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item {
-  font-family: 'CubanoRegular';
-  font-weight: normal;
-  position: relative;
-  margin: 0 0 1.429em;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle {
-  background: white;
-  width: 80px;
-  height: 80px;
-  -moz-border-radius: 40px;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
-  position: absolute;
-  z-index: 999;
-  top: -20px;
-  left: -20px;
-  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle {
-  background: rgba(0, 0, 0, 0.5);
-  width: 60px;
-  height: 60px;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle .rank-eds-item-rank {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  margin: 0;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 2.571em;
-  line-height: 1.333333;
-  margin: 0.3em 0;
-  font-family: inherit;
-  font-weight: normal;
-  text-align: center;
-  position: relative;
-  left: 0.5em;
-  /* Adjust the positioning for the tenth item to compensate for the extra digit */
-
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle .rank-eds-item-rank a {
-  text-decoration: none;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle .rank-eds-item-rank:nth-child(10) {
-  left: 0.25em;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-title {
-  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-rendering: optimizelegibility;
-  font-weight: 700;
-  /* removing text decoration from all headline links */
-
-  font-size: 1.429em;
-  line-height: 1.2;
-  margin: 0.25em 0;
-  padding: 0.5em 0 0.5em 3em;
-  font-family: inherit;
-  font-weight: normal;
-  letter-spacing: 0.04em;
-  background: white;
-  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
-  margin: 0;
-  position: relative;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-title a {
-  text-decoration: none;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-img {
-  padding: 0 10px 10px;
-  background: white;
-}
-.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-img img {
-  margin: 0;
-}
-/* /.lunchies-sidebar */
-/*****************************
- * SPECIAL ISSUE PAGE STYLES *
- *****************************/
-.home-top-promo a {
-  display: block;
-}
-.home-top-promo img {
-  position: relative;
-  z-index: -99;
-}
-.si-banner-container {
-  width: 100%;
-}
-.si-banner-container .si-banner {
-  max-width: 100%;
-}
-.page-id-38224 h3.election-headline {
-  font-family: 'LeagueGothicRegular', Impact, serif;
-  font-weight: normal;
-}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -3693,6 +3465,246 @@ FOOTER STYLES
   color: #CCCCCC;
 }
 /* end left column */
+/* special issue styles */
+/******************************************************************
+Site Name: The Temple News
+Author: Chris Montgomery
+
+Stylesheet: Special Issues Stylesheet
+
+Let's keep things organized and keep our special issue styles
+in a separate file (this one). These still shouldn't be anything
+very heavy because they're imported at the first media query.
+
+******************************************************************/
+/*****************************
+ * SPECIAL ISSUE PAGE STYLES *
+ *****************************/
+.home-top-promo a {
+  display: block;
+}
+.home-top-promo img {
+  position: relative;
+  z-index: -99;
+}
+.si-banner-container {
+  width: 100%;
+}
+.si-banner-container .si-banner {
+  max-width: 100%;
+}
+.page-id-38224 h3.election-headline {
+  font-family: 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+}
+/*******************
+ * LUNCHIES STYLES *
+ *******************/
+.lunchies-main {
+  /* /.rank-voters-list */
+
+}
+.lunchies-main .lunchies-map .gm-map {
+  font-family: 'CubanoRegular';
+  font-weight: normal;
+}
+.lunchies-main #headline-voters-map {
+  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+.lunchies-main .rank-voters-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* /.rank-voters-item */
+
+}
+.lunchies-main .rank-voters-list .rank-voters-item {
+  padding: 0 0 1.429em;
+  /* /.rank-voters-rank-container */
+
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container {
+  float: left;
+  width: 14.364640883%;
+  padding: 0 1em 1em 0;
+  text-align: center;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-rank {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 3.429em;
+  line-height: 1;
+  margin: 0.4em 0;
+  margin: 0;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-rank a {
+  text-decoration: none;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-percent {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 1.429em;
+  line-height: 1.2;
+  margin: 0.25em 0;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-rank-container .rank-voters-item-percent a {
+  text-decoration: none;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info {
+  float: left;
+  width: 80%;
+}
+.lunchies-main .rank-voters-list .rank-voters-item .rank-voters-item-info .rank-voters-item-title {
+  margin: 0;
+}
+.lunchies-main .lunchies-articles {
+  font-family: 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+}
+.lunchies-main .lunchies-articles article {
+  margin: 0 0 1.429em;
+}
+.lunchies-main .lunchies-articles article h3.headline {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 2.571em;
+  line-height: 1.333333;
+  margin: 0.3em 0;
+  font-family: 'OstrichSansBlack', 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+}
+.lunchies-main .lunchies-articles article h3.headline a {
+  text-decoration: none;
+}
+.lunchies-main .lunchies-articles article .dek {
+  font-style: italic;
+}
+.lunchies-main .lunchies-articles article .post-content img {
+  display: none;
+}
+/* /.lunchies-main */
+.lunchies-sidebar {
+  /* /.rank-eds-list */
+
+}
+.lunchies-sidebar #headline-eds-list {
+  text-align: center;
+  font-family: 'OstrichSansBold', 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+}
+.lunchies-sidebar ul.rank-eds-list {
+  list-style: none;
+  padding: 0;
+  /* /.rank-eds-item */
+
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item {
+  font-family: 'CubanoRegular';
+  font-weight: normal;
+  position: relative;
+  margin: 0 0 1.429em;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle {
+  background: white;
+  width: 80px;
+  height: 80px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  position: absolute;
+  z-index: 999;
+  top: -20px;
+  left: -20px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle {
+  background: rgba(0, 0, 0, 0.5);
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle .rank-eds-item-rank {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 2.571em;
+  line-height: 1.333333;
+  margin: 0.3em 0;
+  font-family: inherit;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  left: 0.5em;
+  /* Adjust the positioning for the tenth item to compensate for the extra digit */
+
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle .rank-eds-item-rank a {
+  text-decoration: none;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-outer-circle .rank-eds-item-inner-circle .rank-eds-item-rank:nth-child(10) {
+  left: 0.25em;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-title {
+  font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 700;
+  /* removing text decoration from all headline links */
+
+  font-size: 1.429em;
+  line-height: 1.2;
+  margin: 0.25em 0;
+  padding: 0.5em 0 0.5em 3em;
+  font-family: inherit;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  background: white;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  margin: 0;
+  position: relative;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-title a {
+  text-decoration: none;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-img {
+  padding: 0 10px 10px;
+  background: white;
+}
+.lunchies-sidebar ul.rank-eds-list li.rank-eds-item .rank-eds-item-img img {
+  margin: 0;
+}
+/* /.lunchies-sidebar */
 /******************************************************************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's 
