@@ -162,6 +162,25 @@ function ttn_movers_shakers_year() {
 }
 define('MOVERS_SHAKERS_YEAR', ttn_movers_shakers_year());
 
+/**
+ * Displays the name of a Mover & Shaker.
+ * 
+ * Will only work when a single 'movers-shakers-people' item exists per post.
+ * 
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @since 1.4.0
+ * @see the_category_no_link()
+ *
+ * @param mixed $post
+ */
+function ttn_movers_shakers_name_no_link() {
+	//global $post;
+	$persons = the_terms( the_ID(), 'movers-shakers-people' );
+	foreach( $persons as $person) {
+    	echo $person;
+	}
+}
+
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -470,9 +489,7 @@ function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
     	echo $category->cat_name . ' | ';
 	}
-	
 }
-
 
 /**
  * This adds custom post types to archives.

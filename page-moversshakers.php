@@ -63,7 +63,21 @@ Template Name: Movers & Shakers
 
 										<header class="moversshakers-article-header">
 
-											<h3 class="moversshakers-name"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_terms( $post->ID, 'movers-shakers-people' ); ?></a></h3>
+											<?php
+											$movers_shakers_people = get_the_terms( $post->ID, 'movers-shakers-people' );
+
+											if ( $movers_shakers_people && !is_wp_error($movers_shakers_people)) {
+												$people = array();
+
+												foreach ( $movers_shakers_people as $person ) {
+													$people[] = $person->name;
+												}
+
+												$mover_shaker_name = join(",", $people);
+											}
+											?>
+
+											<h3 class="moversshakers-name"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo $mover_shaker_name; ?></a></h3>
 
 											<div class="moversshakers-dek dek">
 												<?php the_excerpt(); ?>

@@ -26,6 +26,12 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
+
+		<?php
+		// Load font Source Sans Pro 900 on Movers & Shakers page
+		if ( is_page('movers-shakers') ) : ?>
+			<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900' rel='stylesheet' type='text/css'>
+		<?php endif; ?>
 		
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
