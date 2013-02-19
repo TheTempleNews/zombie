@@ -39,8 +39,9 @@ Template Name: Movers & Shakers
 									$style_index = 0;
 								
 									$movers_shakers_args = array(
-										'post_type'      => 'movers_shakers',
-										'year'           => MOVERS_SHAKERS_YEAR, // will only pull posts from the year of the most recent 'movers_shakers' post
+										'post_type'      => 'article_living',
+										'category_name'  => 'movers-shakers',
+										'year'           => MOVERS_SHAKERS_YEAR, // will only pull posts from the year of the most recent post in the "movers-shakers" category
 										'orderby'        => 'rand', // shaking things up a bit
 										'posts_per_page' => 16 // it will never be 16
 									);

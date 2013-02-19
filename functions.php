@@ -149,7 +149,11 @@ define('LUNCHIES_YEAR', lunchies_year());
  * The most recent should always be at the time of the last Movers & Shakers issue.
  */
 function ttn_movers_shakers_year() {
-	$query = get_posts('post_type=movers_shakers');
+	$args = array(
+		'post_type'     => 'article_living',
+		//'category_name' => 'movers-shakers'
+	);
+	$query = get_posts($args);
 	$most_recent = $query[0];
 	$most_recent_post_date = $most_recent->post_date;
 	$output = date( 'Y', strtotime( $most_recent_post_date ) );
