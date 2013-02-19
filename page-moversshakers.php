@@ -11,35 +11,56 @@ Template Name: Movers & Shakers
 				<div id="inner-content" class="wrap clearfix">
 				
 					<div id="moversshakers-top-promo">
-						<h2></h2>
+						<h2 id="moversshakers-page-title" class="special-issue-page-title fittext">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></h2>
 					</div>
 					
 					<div id="moversshakers-main">
 						
 						<div id="moversshakers-summary">
+
+							<?php // Easy. Just pull the description from the page. But it's not future friendly... how can full collections of special issues be considered a full package, archived together?
+
+							if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+							the_content();
+
+							endwhile; endif; ?>
 							
 						</div>
 						
 						<div id="moversshakers-articles">
 
 									<?php
+
+									// set class to first or last depending on position in three column layout
+									// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+									$style_classes = array('first', 'last');
+									$styles_count = count($style_classes);
+									$style_index = 0;
 								
 									$movers_shakers_args = array(
 										'post_type'      => 'movers_shakers',
 										'year'           => MOVERS_SHAKERS_YEAR, // will only pull posts from the year of the most recent 'movers_shakers' post
 										'orderby'        => 'rand', // shaking things up a bit
-										//'posts_per_page' => 5,
+										'posts_per_page' => 16 // it will never be 16
 									);
 								
 									$movers_shakers_query = get_posts($movers_shakers_args);
 								
 									//
-									foreach($movers_shakers_query as $post) : setup_postdata($post); ?>
+									foreach($movers_shakers_query as $post) : setup_postdata($post);
+
+									// this is the second part of the operation that determines first or last class based on column divisions. see above.
+									$k = $style_classes[$style_index++ % $styles_count];
+									?>
 								
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'moversshakers-article sixcol clearfix ' . $k ); ?> role="article">
 
 										<div class="moversshakers-featured-image-container featured-image-container">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+												<?php //the_post_thumbnail('zom-landscape-576'); ?>
+												<img src="http://lorempixel.com/576/384" />
+											</a>
 										</div> <!-- end .moversshakers-featured-image-container -->
 
 										<header class="moversshakers-header">
