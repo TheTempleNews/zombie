@@ -30,6 +30,8 @@ jQuery(document).ready(function($) {
 
 	/* fitText  */
 	$("#moversshakers-page-title.fittext").fitText(0.8);
+	$(".moversshakers-type-banner.fittext").fitText(1);
+	$(".moversshakers-type-banner.fittext").fitText(0.75);
 	
 	/*
 	var maxHeight = 0;
@@ -71,6 +73,7 @@ jQuery(document).ready(function($) {
 
 		/* fitText */
 		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
 		
 		// fittext for menu button
 		//$(".menu-button").fitText();
@@ -95,6 +98,7 @@ jQuery(document).ready(function($) {
 		$(".fittext").fitText(0.95);
 		$(".slabtextthis").slabText();
 		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }
 
 
@@ -105,6 +109,7 @@ jQuery(document).ready(function($) {
 		$(".fittext").fitText(1);
 		$(".slabtextthis").slabText();
 		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }
 
 
@@ -117,6 +122,7 @@ jQuery(document).ready(function($) {
 
 		/* fitText  */
 		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }
     
 	

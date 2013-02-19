@@ -11,7 +11,7 @@ Template Name: Movers & Shakers
 				<div id="inner-content" class="wrap clearfix">
 				
 					<div id="moversshakers-page-header">
-						<h2 id="moversshakers-page-title" class="special-issue-page-title fittext">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></h2>
+						<h2 id="moversshakers-page-title" class="moversshakers-type-banner special-issue-page-title fittext">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></h2>
 
 						<div id="moversshakers-page-summary">
 
