@@ -40,7 +40,7 @@ Template Name: Lunchies
 							);
 							
 							// Invoke the map
-							//echo GeoMashup::map($map_args);
+							echo GeoMashup::map($map_args);
 						
 							?>
 							
