@@ -13,29 +13,29 @@
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						
-						    <header class="article-header">
-							
-							    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							
-							    <p class="meta"><?php _e("Posted", "zombietheme"); ?> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time> <?php _e("by", "zombietheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "zombietheme"); ?> <?php the_category(', '); ?>.</p>
-						
-						    </header> <!-- end article header -->
-					
-						    <section class="post-content clearfix">
-						
-							    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-						
-							    <?php the_excerpt(); ?>
-					
-						    </section> <!-- end article section -->
-						
-						    <footer class="article-footer">
-							
-						    </footer> <!-- end article footer -->
-					
-					    </article> <!-- end article -->
+							<article id="post-<?php the_ID(); ?>" <?php post_class( $top_article_class . ' top-archive-article clearfix' ); ?> role="article">
+
+								<?php if ( has_post_thumbnail() && $display_feat_img == true ) { ?>
+									<div class="featured-image-container featured-image-container-full twelvecol first last">
+										<?php the_post_thumbnail('zom-landscape-792'); ?>
+									</div>
+								<?php } elseif ( has_post_thumbnail() && $display_feat_img == false ) { ?>
+									<div class="featured-image-container featured-image-container-thumb twocol first">
+										<?php the_post_thumbnail('zom-thumb-96'); ?>
+									</div>
+								<?php } ?>
+
+								<header>
+									<div class="post-category-list-container"><?php the_category_but( $cat_id ); ?></div>
+									<h1 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors sc"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> | <time class="sc" datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>
+								</header>
+
+								<section class="dek">
+									<?php the_excerpt(); ?>
+								</section> <!-- end dek -->
+
+							</article> <!-- end article -->
 					
 					    <?php endwhile; ?>	
 					
