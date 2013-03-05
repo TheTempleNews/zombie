@@ -13,7 +13,7 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.4.1' );
+	define( 'ZOM_VERSION', '1.4.2' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
@@ -26,5 +26,8 @@
 	define( 'ELECTION_ISSUE', false );
 
 	// Set this to true to display Movers & Shakers banner. HOME_TOP_PROMO must be set to true.
-	define( 'MOVERS_AND_SHAKERS', true );
+	define( 'MOVERS_AND_SHAKERS', false );
+
+	// Set this to true to display Weekenders banner. HOME_TOP_PROMO must be set to true.
+	define( 'WEEKENDER', true );
 

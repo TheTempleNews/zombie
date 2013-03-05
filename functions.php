@@ -129,6 +129,25 @@ function custom_image_sizes_choose( $sizes ) {
 /************** SPECIAL ISSUE FUNCTIONS ****************/
 
 /**
+ * Returns the year of the most recent Living article in the Weekender category.
+ *
+ * The most recent should always be at the time of the last Weekender issue.
+ */
+function ttn_weekender_year() {
+	$args = array(
+		'post_type'     => 'article_living',
+		'category_name' => 'weekender'
+	);
+	$query = get_posts($args);
+	$most_recent = $query[0];
+	$most_recent_post_date = $most_recent->post_date;
+	$output = date( 'Y', strtotime( $most_recent_post_date ) );
+	
+	return $output;	
+}
+define('WEEKENDER_YEAR', ttn_weekender_year());
+
+/**
  * Returns the year of the most recent food_vendor post type.
  *
  * The most recent should always be at the time of the last lunchies issue.
