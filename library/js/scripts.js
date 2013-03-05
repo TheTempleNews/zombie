@@ -27,6 +27,11 @@ jQuery(document).ready(function($) {
 			$(this).find('.sub-menu').slideToggle('fast');
 		});
 	}
+
+	/* fitText  */
+	$("#moversshakers-page-title.fittext").fitText(0.8);
+	$(".moversshakers-type-banner.fittext").fitText(1);
+	$(".moversshakers-type-banner.fittext").fitText(0.75);
 	
 	/*
 	var maxHeight = 0;
@@ -65,6 +70,10 @@ jQuery(document).ready(function($) {
     if (responsive_viewport > 481) {
         
 		flexNav();
+
+		/* fitText */
+		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
 		
 		// fittext for menu button
 		//$(".menu-button").fitText();
@@ -88,6 +97,8 @@ jQuery(document).ready(function($) {
 		/* fitText  */
 		$(".fittext").fitText(0.95);
 		$(".slabtextthis").slabText();
+		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }
 
 
@@ -97,6 +108,8 @@ jQuery(document).ready(function($) {
     if (responsive_viewport > 1030) {
 		$(".fittext").fitText(1);
 		$(".slabtextthis").slabText();
+		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }
 
 
@@ -106,6 +119,10 @@ jQuery(document).ready(function($) {
     if (responsive_viewport > 1140) {
 		$(".fittext").fitText(1);
 		$(".slabtextthis").slabText();
+
+		/* fitText  */
+		$("#moversshakers-page-title.fittext").fitText(0.8);
+		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }
     
 	
