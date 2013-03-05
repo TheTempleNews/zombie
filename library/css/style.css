@@ -4031,8 +4031,13 @@ tweeners.
     /* at this larger size, we can start to align images */
   
   }
-  .post-content img {
+  .post-content img[class*="align"],
+  .post-content img[class*="wp-image-"],
+  .post-content img[class*="attachment-"] {
     max-width: 50%;
+  }
+  .post-content .single-featured-image-full-container img {
+    max-width: 100%;
   }
   .post-content .wp-caption {
     max-width: 50%;
