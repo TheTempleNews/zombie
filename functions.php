@@ -517,15 +517,15 @@ function the_category_no_link() {
  *
  * @see http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/ See comments in CSS-Tricks article
  */
-function namespace_add_custom_types( $query ) {
+function ttn_add_custom_types( $query ) {
   if( !is_admin() && is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
-     'post', 'article_news', 'article_sports', 'article_living', 'article_ae', 'article_opinion', 'multimedia','slideshows'
+     'post', 'nav_menu_item', 'article_news', 'article_sports', 'article_living', 'article_ae', 'article_opinion', 'multimedia','slideshows'
 		));
 	  return $query;
 	}
 }
-add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+add_filter( 'pre_get_posts', 'ttn_add_custom_types' );
 
 
 
