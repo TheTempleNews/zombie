@@ -134,6 +134,10 @@ function bones_scripts_and_styles() {
 	// adding flex tetrodo slider based on flexslider
 	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), ZOM_VERSION, true );
 	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), ZOM_VERSION, 'screen');
+
+    // Google Analytics Advanced Content Tracking
+    // see http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
+    wp_register_script( 'ga-tracking', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ga.scrolltracking-ck.js', array( 'jquery' ), ZOM_VERSION, true );
 	
 	// FitText 1.1 http://fittextjs.com/
 	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
@@ -145,12 +149,6 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'bones-modernizr' ); 
     wp_enqueue_style( 'bones-stylesheet' ); 
     wp_enqueue_style('bones-ie-only');
-    /*
-    I reccomend using a plugin to call jQuery
-    using the google cdn. That way it stays cached
-    and your site will load faster.
-    */
-    wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_script('flex-tetrodo-js');
 	wp_enqueue_style('flex-tetrodo-css');
@@ -159,6 +157,11 @@ function bones_scripts_and_styles() {
 	wp_enqueue_script('slabtext-js');
 	
     wp_enqueue_script( 'bones-js' ); 
+
+    // if the current page being displayed is single, load the scroll tracker for GA
+    if ( is_single() ) {
+        wp_enqueue_script( 'ga-tracking' );
+    }
     
   }
 }
