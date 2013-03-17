@@ -13,11 +13,11 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.4.3' );
+	define( 'ZOM_VERSION', '1.4.4' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
-	define( 'HOME_TOP_PROMO', true );
+	define( 'HOME_TOP_PROMO', false );
 
 	// Set this to true to display Lunchies banner. HOME_TOP_PROMO must be set to true.
 	define( 'NEW_LUNCHIES', false );
@@ -29,5 +29,5 @@
 	define( 'MOVERS_AND_SHAKERS', false );
 
 	// Set this to true to display Weekenders banner. HOME_TOP_PROMO must be set to true.
-	define( 'WEEKENDER', true );
+	define( 'WEEKENDER', false );
 
