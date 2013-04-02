@@ -572,7 +572,7 @@ ADVERTS AND SOCIAL MEDIA
   font-size: 4.500rem;
 }
 .bar-guide-text-banner {
-  font-size: 8.5rem;
+  font-size: 4.5rem;
 }
 .single-top-promo .bar-guide-text-banner {
   font-size: 3.5rem;
@@ -580,6 +580,9 @@ ADVERTS AND SOCIAL MEDIA
 .bar-guide .fittext,
 .bar-guide .slabtextthis {
   text-align: left;
+}
+.bar-guide #bar-guide-map iframe {
+  height: 600px;
 }
 .bar-guide article .headline {
   text-align: left;
@@ -1917,6 +1920,9 @@ be seen on the Desktop.
   font-size: 7.125rem;
 }
 .bar-guide-text-banner {
+  font-size: 4.5rem;
+}
+.single-top-promo .bar-guide-text-banner {
   font-size: 4.5rem;
 }
 /******************************************************************

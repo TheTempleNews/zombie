@@ -3966,13 +3966,14 @@ very heavy because they're imported at the first media query.
  * BAR GUIDE STYLES *
  *******************/
 .bar-guide-text-banner {
-  font-size: 5.143em;
-  /* 72px */
+  font-size: 2.571rem;
+  /* 36px @ 14px rem */
 
   font-family: 'ChunkFive', 'LeagueGothicRegular', Impact, sans-serif, 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: black;
   text-align: center;
+  text-transform: uppercase;
 }
 .bar-guide #special-issue-description {
   font-size: 1.5em;
@@ -3991,6 +3992,12 @@ very heavy because they're imported at the first media query.
 .bar-guide .fittext,
 .bar-guide .slabtextthis {
   text-transform: uppercase;
+}
+.bar-guide #bar-guide-map {
+  margin-bottom: 2.2em;
+}
+.bar-guide #bar-guide-map iframe {
+  height: 350px;
 }
 .bar-guide article {
   font-size: 1.286em;
@@ -4236,7 +4243,7 @@ you can add resource intensive styles.
     font-size: 4.500rem;
   }
   .bar-guide-text-banner {
-    font-size: 8.5rem;
+    font-size: 4.5rem;
   }
   .single-top-promo .bar-guide-text-banner {
     font-size: 3.5rem;
@@ -4244,6 +4251,9 @@ you can add resource intensive styles.
   .bar-guide .fittext,
   .bar-guide .slabtextthis {
     text-align: left;
+  }
+  .bar-guide #bar-guide-map iframe {
+    height: 600px;
   }
   .bar-guide article .headline {
     text-align: left;
@@ -5591,6 +5601,9 @@ you can add resource intensive styles.
     font-size: 7.125rem;
   }
   .bar-guide-text-banner {
+    font-size: 4.5rem;
+  }
+  .single-top-promo .bar-guide-text-banner {
     font-size: 4.5rem;
   }
 }
