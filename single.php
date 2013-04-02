@@ -37,19 +37,9 @@
 						<h1 class="single-section-name" class="first last twelvecol"><?php echo $post_type_name; ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-							
-							<?php if (in_category('the-lunchies')) {
-								
-								echo '<div class="single-top-promo">';
 
-								if (NEW_LUNCHIES == true) { ?>
-									<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
-								<?php } // end lunchies banner
+							<?php ttn_special_issue_banner(); ?>
 
-								echo '</div>';
-								
-							} ?>
-					
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 								<header class="article-header">

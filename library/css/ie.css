@@ -381,7 +381,7 @@ upon your base.scss styles.
 /*****************************
  * SPECIAL ISSUE PAGE STYLES *
  *****************************/
-.weekender-type-banner {
+.weekender-text-banner {
   font-size: 3.429rem;
 }
 /**************************
@@ -562,7 +562,7 @@ ADVERTS AND SOCIAL MEDIA
 /*****************************
  * SPECIAL ISSUE PAGE STYLES *
  *****************************/
-.weekender-type-banner {
+.weekender-text-banner {
   font-size: 4.500rem;
 }
 /********************
@@ -1888,7 +1888,7 @@ be seen on the Desktop.
 /*****************************
  * SPECIAL ISSUE PAGE STYLES *
  *****************************/
-.weekender-type-banner {
+.weekender-text-banner {
   font-size: 7.125rem;
 }
 /******************************************************************

@@ -1695,7 +1695,7 @@ ADVERTS AND SOCIAL MEDIA
 /*****************************
  * SPECIAL ISSUE PAGE STYLES *
  *****************************/
-.weekender-type-banner {
+.weekender-text-banner {
   font-size: 2.571rem;
 }
 /********************
@@ -3499,7 +3499,7 @@ very heavy because they're imported at the first media query.
   text-transform: uppercase;
   font-size: 72px;
 }
-.weekender-type-banner {
+.weekender-text-banner {
   font-family: 'BlackoutMidnight', 'LeagueGothicRegular', Impact, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
@@ -3560,7 +3560,7 @@ very heavy because they're imported at the first media query.
 .home-top-promo #movers-and-shakers-top-promo:after {
   clear: both;
 }
-.home-top-promo #movers-and-shakers-top-promo .special-issue-type-banner-container {
+.home-top-promo #movers-and-shakers-top-promo .special-issue-text-banner-container {
   margin: 0;
   position: relative;
   left: 1em;
@@ -3983,7 +3983,7 @@ tweeners.
   /*****************************
    * SPECIAL ISSUE PAGE STYLES *
    *****************************/
-  .weekender-type-banner {
+  .weekender-text-banner {
     font-size: 3.429rem;
   }
   /**************************
@@ -4174,7 +4174,7 @@ you can add resource intensive styles.
   /*****************************
    * SPECIAL ISSUE PAGE STYLES *
    *****************************/
-  .weekender-type-banner {
+  .weekender-text-banner {
     font-size: 4.500rem;
   }
   /********************
@@ -5510,7 +5510,7 @@ you can add resource intensive styles.
   /*****************************
    * SPECIAL ISSUE PAGE STYLES *
    *****************************/
-  .weekender-type-banner {
+  .weekender-text-banner {
     font-size: 7.125rem;
   }
 }

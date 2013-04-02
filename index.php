@@ -3,44 +3,8 @@
 	<div id="content" class="<?php if (HOME_TOP_PROMO == true) { echo 'has-banner'; } ?>">
 	
 		<div id="inner-content" class="wrap clearfix">
-			
-			
-			<?php if (HOME_TOP_PROMO == true) : ?>
-				
-				<div class="home-top-promo clearfix">
-				
-					<?php if (NEW_LUNCHIES == true) { ?>
 
-						<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
-
-					<?php } elseif (ELECTION_ISSUE == true) {
-						$banner = wp_get_attachment_image_src( get_post_thumbnail_id(38224), 'zom-full-banner' );
-						$banner_url = $banner['0'];
-						?>
-						
-						<a href="http://temple-news.com/election/" title="Election Issue"><img src="<?php echo $banner_url ?>" class="si-banner" /></a>
-
-					<?php } elseif (MOVERS_AND_SHAKERS == true) {
-						include_once('library/inc/movers-shakers-top-promo.php');
-					} elseif (WEEKENDER == true) {
-						$weekender_id = get_cat_ID( 'weekender' );
-						$weekender_link = get_category_link( $weekender_id );
-						?>
-
-						<div id="weekender-top-promo">
-
-							<div class="special-issue-type-banner-container clearfix">
-								<h2 class="weekender-type-banner special-issue-type-banner fittext"><a href="<?php echo esc_url( $weekender_link ); ?>">The Weekender <?php echo WEEKENDER_YEAR; ?></a></h2>
-							</div>
-
-						</div>
-
-					<?php } ?>
-				
-				</div>
-				
-			<?php endif; // end top promo ?>
-			
+			<?php ttn_special_issue_banner(); ?>
 			
 			<div class="three-column-container clearfix">
 			
