@@ -3966,8 +3966,8 @@ very heavy because they're imported at the first media query.
  * BAR GUIDE STYLES *
  *******************/
 .bar-guide-text-banner {
-  font-size: 2.571rem;
-  /* 36px @ 14px rem */
+  font-size: 2rem;
+  /* 28px @ 14px rem */
 
   font-family: 'ChunkFive', 'LeagueGothicRegular', Impact, sans-serif, 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
