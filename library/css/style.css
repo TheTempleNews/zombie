@@ -4009,7 +4009,8 @@ very heavy because they're imported at the first media query.
   font-weight: normal;
   text-align: center;
 }
-.bar-guide article .dek {
+.bar-guide article .dek,
+.bar-guide article .single-media-dek {
   font-style: italic;
 }
 .bar-guide article .authors {

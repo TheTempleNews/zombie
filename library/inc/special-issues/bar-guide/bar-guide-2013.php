@@ -80,6 +80,51 @@
 
 								<?php endwhile; // end article: Barcade scores with customers ?>
 
+
+
+
+								<?php // Multimedia: Bar Guide Video
+
+								$query = new WP_Query('p=42518&post_type=multimedia'); ?>
+
+								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+								<article id="post-<?php the_ID(); ?>" <?php post_class('eightcol last push_four clearfix'); ?> role="article">
+
+									<section class="post-content multimedia-post">
+										
+										<div class="single-video single-multimedia single-mgallery">
+										<?php
+											// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
+											// Get the video URL and put it in the $video variable
+											$videoID = get_post_meta($post->ID, 'video_link', true);
+											// Check if there is in fact a video URL
+											if ($videoID) {
+												echo '<div class="video-container">';
+												// Echo the embed code via oEmbed
+												echo wp_oembed_get( $videoID ); 
+												echo '</div>';
+										} ?>
+										</div>
+										
+									</section> <!-- end .post-content -->
+
+									<header class="article-header">
+
+										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+										<div class="single-multimedia-dek single-media-dek">
+											<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+										</div>
+									
+										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+								
+									</header> <!-- end article header -->
+
+								</article> <!-- end article -->
+
+								<?php endwhile; // end Multimedia: Bar Guide Video ?>
+
 							</div> <!-- end .article-group-inner -->
 
 						</div> <!-- end .article-group -->
