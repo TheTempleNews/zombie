@@ -7,7 +7,7 @@
 						<div class="article-group">
 
 							<div class="group-headline first fourcol">
-								<h2 class="slabtext">Philly bars speak to inner child</h2>
+								<h1 class="slabtextthis"><span class="slabtext">Philly bars </span><span class="slabtext">speak to </span><span class="slabtext">inner child</span></h1>
 							</div>
 
 							<div class="article-group-inner">
@@ -87,7 +87,7 @@
 						<div class="article-group">
 
 							<div class="group-headline first fourcol">
-								<h2 class="slabtext">Snapshots: Meet the Mixers &amp; Shakers</h2>
+								<h2 class="slabtextthis"><span class="slabtext">Snapshots: </span><span class="slabtext">Meet the </span><span class="slabtext">Mixers &amp; Shakers</span></h2>
 							</div>
 
 							<div class="article-group-inner">
@@ -212,7 +212,7 @@
 
 									<header class="article-header">
 
-										<h3 class="headline slabtext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -301,7 +301,7 @@
 
 									<header class="article-header">
 
-										<h3 class="headline slabtext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -331,7 +331,7 @@
 
 									<header class="article-header">
 
-										<h3 class="headline slabtext"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 										<div class="dek">
 											<?php the_excerpt(); ?>

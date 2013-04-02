@@ -32,6 +32,9 @@ jQuery(document).ready(function($) {
 	$("#moversshakers-page-title.fittext").fitText(0.8);
 	$(".moversshakers-type-banner.fittext").fitText(1);
 	$(".moversshakers-type-banner.fittext").fitText(0.75);
+
+	/* slabText */
+	$(".slabtextthis").slabText();
 	
 	/*
 	var maxHeight = 0;
@@ -96,7 +99,6 @@ jQuery(document).ready(function($) {
 
 		/* fitText  */
 		$(".fittext").fitText(0.95);
-		$(".slabtextthis").slabText();
 		$("#moversshakers-page-title.fittext").fitText(0.8);
 		$(".moversshakers-type-banner.fittext").fitText(0.75);
     }

@@ -143,7 +143,7 @@ function bones_scripts_and_styles() {
 	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
 	
 	// SlabText
-	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext.min.js', array( 'jquery' ), ZOM_VERSION, true );
+	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext-ck.js', array( 'jquery' ), ZOM_VERSION, true );
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
