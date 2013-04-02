@@ -3981,7 +3981,7 @@ very heavy because they're imported at the first media query.
 
 }
 .bar-guide .slabtextthis {
-  font-family: 'LeagueGothicRegular', Impact, sans-serif;
+  font-family: 'ChunkFive', 'LeagueGothicRegular', Impact, sans-serif, 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: black;
   text-align: center;
@@ -4005,7 +4005,7 @@ very heavy because they're imported at the first media query.
 
 }
 .bar-guide article .headline {
-  font-family: 'ChunkFive', 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'ChunkFive', 'LeagueGothicRegular', Impact, sans-serif, 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-align: center;
 }
