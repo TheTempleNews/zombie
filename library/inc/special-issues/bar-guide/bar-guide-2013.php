@@ -4,10 +4,12 @@
 
 						</div> <!-- end #bar-guide-map -->
 
-						<div class="article-group">
+						<div class="article-group clearfix">
 
 							<div class="group-headline first fourcol">
-								<h1 class="slabtextthis"><span class="slabtext">Philly bars </span><span class="slabtext">speak to </span><span class="slabtext">inner child</span></h1>
+								<h1 class="slabtextthis">
+									<span class="slabtext">Philly bars </span><span class="slabtext">speak to </span><span class="slabtext">inner child</span>
+								</h1>
 							</div>
 
 							<div class="article-group-inner">
@@ -19,14 +21,14 @@
 								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol clearfix'); ?> role="article">
-						
-									<div class="featured-image-container featured-image-container-full">
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-									</div> <!-- end .featured-image-container -->
 
 									<header class="article-header">
 
 										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+										<div class="featured-image-container featured-image-container-full">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+										</div> <!-- end .featured-image-container -->
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -53,14 +55,14 @@
 								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol last clearfix'); ?> role="article">
-						
-									<div class="featured-image-container featured-image-container-full">
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-									</div> <!-- end .featured-image-container -->
 
 									<header class="article-header">
 
 										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+										<div class="featured-image-container featured-image-container-full">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+										</div> <!-- end .featured-image-container -->
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -84,10 +86,10 @@
 
 
 
-						<div class="article-group">
+						<div class="article-group clearfix">
 
 							<div class="group-headline first fourcol">
-								<h2 class="slabtextthis"><span class="slabtext">Snapshots: </span><span class="slabtext">Meet the </span><span class="slabtext">Mixers &amp; Shakers</span></h2>
+								<h2 class="slabtextthis"><span class="slabtext">Snapshots: </span><span class="slabtext">Meet the </span><span class="slabtext">Mixers <span class="amp">&amp;</span> Shakers</span></h2>
 							</div>
 
 							<div class="article-group-inner">
@@ -99,14 +101,14 @@
 								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol clearfix'); ?> role="article">
-						
-									<div class="featured-image-container featured-image-container-full">
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-									</div> <!-- end .featured-image-container -->
 
 									<header class="article-header">
 
 										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+										<div class="featured-image-container featured-image-container-full">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+										</div> <!-- end .featured-image-container -->
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -134,13 +136,13 @@
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol last clearfix'); ?> role="article">
 
-									<div class="featured-image-container featured-image-container-full">
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-									</div> <!-- end .featured-image-container -->
-
 									<header class="article-header">
 
 										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+										<div class="featured-image-container featured-image-container-full">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+										</div> <!-- end .featured-image-container -->
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -212,7 +214,11 @@
 
 									<header class="article-header">
 
-										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+
+											<span class="slabtext">City's modern </span><span class="slabtext">speakeasies offer </span><span class="slabtext">nostalgia <span class="amp">&amp;</span> exclusivity</span>
+
+										</a></h3>
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -301,7 +307,9 @@
 
 									<header class="article-header">
 
-										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+											<span class="slabtext">Patrons say </span><span class="slabtext">"Cheese!" </span><span class="slabtext">at Tigerbeats</span>
+										</a></h3>
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
@@ -331,7 +339,7 @@
 
 									<header class="article-header">
 
-										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><span class="slabtext">Beer <span class="amp">&amp;</span> billiards </span><span class="slabtext">offered in </span><span class="slabtext">Old City</span></a></h3>
 
 										<div class="dek">
 											<?php the_excerpt(); ?>
