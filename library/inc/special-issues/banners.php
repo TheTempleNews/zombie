@@ -98,7 +98,9 @@
 
 					<?php } elseif (in_category( 'bar-guide' && NEW_BAR_GUIDE == true )) { ?>
 
-
+						<div class="special-issue-text-banner-container clearfix">
+							<h2 class="bar-guide-text-banner special-issue-text-banner fittext"><a href="http://temple-news.com/bar-guide/">Bar Guide <?php echo BAR_GUIDE_YEAR; ?></a></h2>
+						</div>
 
 					<?php } // end bar guide banner ?>
 

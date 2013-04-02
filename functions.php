@@ -749,5 +749,31 @@ function zom_blockquote($atts, $content = null) {
 }
 add_shortcode("blockquote", "zom_blockquote");
 
+/**
+ * Get the first paragraph of the post content.
+ *
+ * Must be used within The Loop.
+ *
+ * @author J. Shamsul Bahri
+ * @see http://jshamsul.com/2012/02/08/wordpress-get-first-paragraph-from-post/
+ * @since 1.4.5
+ *
+ * @return string
+ */
+function get_the_content_first_graf() {
+    $content = get_the_content();
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]&gt;', $content);
+    $content_explode = explode("</p>", $content);
 
+    $c = 0; $p = count($content_explode); $return_data = "";
+    while($c < $p) {
+        $test = strip_tags($content_explode[$c]);
+        if($test != '') {
+            $return_data = $return_data . $content_explode[$c] . "</p>\n";
+            break;
+        };
+    }
+    return $return_data;
+}
 
