@@ -161,6 +161,12 @@ TYPOGRAPHY
   src: url('../fonts/blackout_midnight-webfont.eot');
   src: url('../fonts/blackout_midnight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/blackout_midnight-webfont.woff') format('woff'), url('../fonts/blackout_midnight-webfont.ttf') format('truetype'), url('../fonts/blackout_midnight-webfont.svg#BlackoutBlackoutMidnight') format('svg');
 }
+/* Chunk Five */
+@font-face {
+  font-family: 'ChunkFive';
+  src: url('../fonts/Chunkfive-webfont.eot');
+  src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Chunkfive-webfont.woff') format('woff'), url('../fonts/Chunkfive-webfont.ttf') format('truetype'), url('../fonts/Chunkfive-webfont.svg#ChunkfiveChunkFive') format('svg');
+}
 /* Mixins */
 /* smallcaps */
 .sc {
@@ -565,6 +571,25 @@ ADVERTS AND SOCIAL MEDIA
 .weekender-text-banner {
   font-size: 4.500rem;
 }
+.bar-guide-text-banner {
+  font-size: 8.5rem;
+}
+.single-top-promo .bar-guide-text-banner {
+  font-size: 3.5rem;
+}
+.bar-guide .fittext,
+.bar-guide .slabtextthis {
+  text-align: left;
+}
+.bar-guide article .headline {
+  text-align: left;
+}
+.bar-guide article .headshot {
+  display: block;
+  float: left;
+  padding-right: 1em;
+}
+/* end .bar-guide */
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1890,6 +1915,9 @@ be seen on the Desktop.
  *****************************/
 .weekender-text-banner {
   font-size: 7.125rem;
+}
+.bar-guide-text-banner {
+  font-size: 4.5rem;
 }
 /******************************************************************
 Site Name: The Temple News

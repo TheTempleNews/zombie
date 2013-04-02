@@ -598,6 +598,12 @@ TYPOGRAPHY
   src: url('../fonts/blackout_midnight-webfont.eot');
   src: url('../fonts/blackout_midnight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/blackout_midnight-webfont.woff') format('woff'), url('../fonts/blackout_midnight-webfont.ttf') format('truetype'), url('../fonts/blackout_midnight-webfont.svg#BlackoutBlackoutMidnight') format('svg');
 }
+/* Chunk Five */
+@font-face {
+  font-family: 'ChunkFive';
+  src: url('../fonts/Chunkfive-webfont.eot');
+  src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Chunkfive-webfont.woff') format('woff'), url('../fonts/Chunkfive-webfont.ttf') format('truetype'), url('../fonts/Chunkfive-webfont.svg#ChunkfiveChunkFive') format('svg');
+}
 /* Mixins */
 /* smallcaps */
 .sc {
@@ -3956,7 +3962,59 @@ very heavy because they're imported at the first media query.
   margin: 0;
 }
 /* /.lunchies-sidebar */
-/******************************************************************
+/*******************
+ * BAR GUIDE STYLES *
+ *******************/
+.bar-guide-text-banner {
+  font-size: 5.143em;
+  /* 72px */
+
+  font-family: 'ChunkFive', 'LeagueGothicRegular', Impact, sans-serif, 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+.bar-guide #special-issue-description {
+  font-size: 1.5em;
+  /* 21px / 24px */
+
+}
+.bar-guide .slabtextthis {
+  font-family: 'LeagueGothicRegular', Impact, sans-serif;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+.bar-guide .slabtextthis a {
+  color: black;
+}
+.bar-guide .fittext,
+.bar-guide .slabtextthis {
+  text-transform: uppercase;
+}
+.bar-guide article {
+  font-size: 1.286em;
+  /* 18px / 21px */
+
+}
+.bar-guide article .headline {
+  font-family: 'ChunkFive', 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+.bar-guide article .dek {
+  font-style: italic;
+}
+.bar-guide article .authors {
+  font-family: 'Alegreya SC';
+}
+.bar-guide article .first-graf img {
+  display: none;
+}
+.bar-guide article .headshot {
+  display: none;
+}
+/* end .bar-guide *//******************************************************************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's 
 larger than an iPhone but smaller than a tablet. Let's call them
@@ -4177,6 +4235,25 @@ you can add resource intensive styles.
   .weekender-text-banner {
     font-size: 4.500rem;
   }
+  .bar-guide-text-banner {
+    font-size: 8.5rem;
+  }
+  .single-top-promo .bar-guide-text-banner {
+    font-size: 3.5rem;
+  }
+  .bar-guide .fittext,
+  .bar-guide .slabtextthis {
+    text-align: left;
+  }
+  .bar-guide article .headline {
+    text-align: left;
+  }
+  .bar-guide article .headshot {
+    display: block;
+    float: left;
+    padding-right: 1em;
+  }
+  /* end .bar-guide */
   /********************
   WORDPRESS BODY CLASSES
   style a page via class
@@ -5513,6 +5590,9 @@ you can add resource intensive styles.
   .weekender-text-banner {
     font-size: 7.125rem;
   }
+  .bar-guide-text-banner {
+    font-size: 4.5rem;
+  }
 }
 /* end of media query */
 /******************************************************************
@@ -5571,6 +5651,9 @@ This is for the larger monitors and possibly full screen viewers.
   ******************************************************************/
   #searchform {
     top: 2em;
+  }
+  .bar-guide-text-banner {
+    font-size: 6rem;
   }
 }
 /* end of media query */
