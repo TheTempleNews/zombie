@@ -132,18 +132,9 @@ be set to display none.
 	a, a:visited { 
 		color: #444 !important; 
 		text-decoration: underline; 
-		
-		/* show links on printed pages */
-		&:after { 
-			content: " (" attr(href) ")"; 
-		}
-		
-		/* show title too */
-		abbr[title]:after { 
-			content: " (" attr(title) ")"; 
-		}
 	} 
 	
+
 	.ir a:after, 
 	a[href^="javascript:"]:after, 
 	a[href^="#"]:after { 
@@ -166,6 +157,23 @@ be set to display none.
 	img { 
 		max-width: 100% !important; 
 	}
+
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
     
     @page { 
     	margin: 0.5cm;
@@ -180,13 +188,27 @@ be set to display none.
     h3 { 
     	page-break-after: avoid; 
     }
+
+    #outer-footer {
+   		border-bottom: none;
+    }
+
+    /* Any element with this class will be preceded by a page break */
+    .page-break {
+    	display: block;
+    	page-break-before: always;
+    }
     
     /* hide content people who print don't need to see */
     .sidebar,
     .page-navigation, 
     .wp-prev-next,
     .respond-form,
-    nav {
+    .comment-reply-link,
+    nav,
+    header.header,
+    footer.footer,
+    footer.article-footer {
     	display: none;
     }
 }
