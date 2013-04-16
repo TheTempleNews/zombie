@@ -86,20 +86,20 @@
 
 					<?php
 					// Lunchies Banner
-					if ( in_category('the-lunchies') && NEW_LUNCHIES == true ) { ?>
+					if ( in_category('the-lunchies') ) { ?>
 
 						<div id="lunchies-top-promo"> 
 
 							<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php the_time('Y'); ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
 							</a>
 
 						</div> <!-- end #lunchies-top-promo -->
 
-					<?php } elseif ( in_category('bar-guide') && NEW_BAR_GUIDE == true ) { ?>
+					<?php } elseif ( in_category('bar-guide') ) { ?>
 
 						<div class="special-issue-text-banner-container clearfix">
-							<h2 class="bar-guide-text-banner special-issue-text-banner fittext"><a href="http://temple-news.com/bar-guide/">Bar Guide <?php echo BAR_GUIDE_YEAR; ?></a></h2>
+							<h2 class="bar-guide-text-banner special-issue-text-banner fittext"><a href="http://temple-news.com/bar-guide/">Bar Guide <?php the_time('Y'); ?></a></h2>
 						</div>
 
 					<?php } // end bar guide banner ?>
