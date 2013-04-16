@@ -4041,6 +4041,13 @@ very heavy because they're imported at the first media query.
   /* end .post */
 
 }
+#main.the-essayist a {
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -ms-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
 #main.the-essayist h1,
 #main.the-essayist .h1,
 #main.the-essayist h2,
@@ -4142,18 +4149,43 @@ very heavy because they're imported at the first media query.
   margin-top: 0;
   line-height: 1.5;
   padding-bottom: 0;
+  margin-bottom: 0;
+}
+#main.the-essayist #special-issue-description,
+#main.the-essayist article {
+  margin-bottom: 4.286em;
 }
 #main.the-essayist #special-issue-description {
   font-size: 1.286rem;
 }
 #main.the-essayist article {
-  margin-bottom: 2.2em;
+  /* end .byline */
+
 }
 #main.the-essayist article h3.headline {
   padding-bottom: 0;
   margin: 0;
   line-height: 1.2;
   text-align: center;
+}
+#main.the-essayist article .byline {
+  text-align: center;
+  font-size: 1.429em;
+  margin-bottom: 0;
+  /* end a */
+
+}
+#main.the-essayist article .byline a {
+  color: #111111;
+}
+#main.the-essayist article .byline a:hover,
+#main.the-essayist article .byline a:active {
+  color: #cc0000;
+}
+#main.the-essayist article .dek {
+  font-size: 1.143em;
+  color: #AAA;
+  font-style: italic;
 }
 /* end #main.the-essayist */
 /******************************************************************
@@ -4387,11 +4419,40 @@ you can add resource intensive styles.
   .single-top-promo .bar-guide-text-banner {
     font-size: 3.5rem;
   }
+  #main.the-essayist {
+    /* end .post */
+  
+  }
   #main.the-essayist h2.essayist-text-banner {
     font-size: 160px;
   }
+  #main.the-essayist #special-issue-description,
+  #main.the-essayist article {
+    margin-bottom: 4.5em;
+  }
   #main.the-essayist #special-issue-description {
     font-size: 1.5rem;
+  }
+  #main.the-essayist article {
+    /* end .byline */
+  
+  }
+  #main.the-essayist article .byline {
+    text-align: center;
+    font-size: 1.875em;
+    margin-bottom: 0;
+    /* end a */
+  
+  }
+  #main.the-essayist article .byline a {
+    color: #111111;
+  }
+  #main.the-essayist article .byline a:hover,
+  #main.the-essayist article .byline a:active {
+    color: #cc0000;
+  }
+  #main.the-essayist article .dek {
+    font-size: 1.25em;
   }
   /* end .the-essayist */
   .bar-guide .fittext,

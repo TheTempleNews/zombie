@@ -589,11 +589,40 @@ ADVERTS AND SOCIAL MEDIA
 .single-top-promo .bar-guide-text-banner {
   font-size: 3.5rem;
 }
+#main.the-essayist {
+  /* end .post */
+
+}
 #main.the-essayist h2.essayist-text-banner {
   font-size: 160px;
 }
+#main.the-essayist #special-issue-description,
+#main.the-essayist article {
+  margin-bottom: 4.5em;
+}
 #main.the-essayist #special-issue-description {
   font-size: 1.5rem;
+}
+#main.the-essayist article {
+  /* end .byline */
+
+}
+#main.the-essayist article .byline {
+  text-align: center;
+  font-size: 1.875em;
+  margin-bottom: 0;
+  /* end a */
+
+}
+#main.the-essayist article .byline a {
+  color: #111111;
+}
+#main.the-essayist article .byline a:hover,
+#main.the-essayist article .byline a:active {
+  color: #cc0000;
+}
+#main.the-essayist article .dek {
+  font-size: 1.25em;
 }
 /* end .the-essayist */
 .bar-guide .fittext,
