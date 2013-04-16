@@ -4225,6 +4225,21 @@ very heavy because they're imported at the first media query.
 #main.the-essayist.essay .post-content {
   font-size: 1.143em;
 }
+#main.the-essayist.essay .post-content hr {
+  padding: 0;
+  border: none;
+  color: #111111;
+  text-align: center;
+}
+#main.the-essayist.essay .post-content hr:after {
+  content: "⁂";
+  display: inline-block;
+  position: relative;
+  top: 0;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
 /* end #main.the-essayist */
 /******************************************************************
 LARGER MOBILE DEVICES

@@ -252,8 +252,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 			.rank-voters-item-rank-container {
 				float: left;
 				width: 14.364640883%; // twocol
-			    padding: 0 1em 1em 0;
-			    text-align: center;
+				padding: 0 1em 1em 0;
+				text-align: center;
 		
 				.rank-voters-item-rank {
 					.h1;
@@ -491,8 +491,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 	a {
 		-webkit-transition: all 250ms linear;
 		-moz-transition: all 250ms linear;
-        -ms-transition: all 250ms linear;
-        -o-transition: all 250ms linear;
+		-ms-transition: all 250ms linear;
+		-o-transition: all 250ms linear;
 		transition: all 250ms linear;
 	}
 
@@ -600,6 +600,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 
 		.post-content {
 			font-size: 1.143em; // 16px @ 14px base
+
+			hr {
+				padding: 0;
+				border: none;
+				//border-top: 1px solid @blackIsh;
+				color: @blackIsh;
+				text-align: center;
+			}
+			hr:after {
+				content: "⁂";
+				display: inline-block;
+				position: relative; 
+				top: 0;
+				font-size: 1.5em;
+				padding: 0 0.25em;
+				background: white;
+			}
 		}
 
 	} /* end .essay */

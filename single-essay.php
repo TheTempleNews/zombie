@@ -27,6 +27,7 @@
 		<link rel="pingback" href="http://temple-news.dev/xmlrpc.php">
 
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 
 				
 		<!-- wordpress head functions -->
@@ -286,6 +287,7 @@
 <p>The proof of his hatred and resentment toward the media lies in various subtexts of the tiles that read such cryptic messages such as: “MURDER EVERY JOURNALIST! I BEG YOU.”</p>
 <p>“There were moments where you get into the tiler’s head,” Smith said.</p>
 <p>His resentment from others caused him to become a recluse of sorts, refusing to answer the door, phone calls and neighbors who had claimed he would do his grocery shopping at 2 a.m. or 3 a.m. This made the team’s journey increasingly difficult.</p>
+<hr />
 <p>Even though the three had no proof from Verna himself that he’s behind this, they remain confident because of their work.</p>
 <p>“I was the most skeptical person working on the movie,” Smith said. “There would be periods of six months where we would run out of leads. Then suddenly, kind of magically, these new leads would come in. Just when we would get frustrated, almost unbearably, a new lead would come along.”</p>
 <p>The biggest clue that gave Verna away was his car. The tiles seemed to appear in the middle of busy streets, and that’s because Verna’s car didn’t have floorboards, claimed neighbors, which allowed him to go essentially unnoticed.</p>
