@@ -88,43 +88,71 @@ ADVERTS AND SOCIAL MEDIA
 	}
 }
 
+
+
+
 #main.the-essayist {
 
-	h2.essayist-text-banner {
-		font-size: 160px;
-	}
+	&.essayist-archive,
+	&.essay {
 
-	#special-issue-description,
-	article {
-		margin-bottom: 4.5em; // 72px @ 16px base
-	}
+		article {
 
-	#special-issue-description {
-		font-size: 1.5rem; // 24px @ 16px base
-	}
+			.byline {
+				text-align: center;
+				font-size: 1.875em; // 30px @ 16px base
+				margin-bottom: 0;
 
-	article {
+				a {
+					color: @blackIsh;
 
-		.byline {
+					&:hover,
+					&:active {
+						color: @thatred;
+					}
+				} /* end a */
+			} /* end .byline */
+
+			.dek {
+				font-size: 1.25em; // 20px @ 16px base
+			}
+		} /* end .post */
+	} /* end essayist-archive and essay */
+
+	&.essayist-archive {
+
+		h2.essayist-text-banner {
+			font-size: 160px;
+		}
+
+		#special-issue-description,
+		article {
+			margin-bottom: 4.5em; // 72px @ 16px base
+		}
+
+		#special-issue-description {
+			font-size: 1.5rem; // 24px @ 16px base
+		}
+	} /* end essayist-archive */
+
+	&.essay {
+
+		header {
+			margin: 0 auto;
+			float: none;
 			text-align: center;
-			font-size: 1.875em; // 30px @ 16px base
-			margin-bottom: 0;
+		}
 
-			a {
-				color: @blackIsh;
-
-				&:hover,
-				&:active {
-					color: @thatred;
-				}
-			} /* end a */
-		} /* end .byline */
-
-		.dek {
+		.post-content {
 			font-size: 1.25em; // 20px @ 16px base
 		}
-	} /* end .post */
+
+	} /* end essay */
 } /* end .the-essayist */
+
+
+
+
 
 .bar-guide {
 

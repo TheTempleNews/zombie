@@ -4035,10 +4035,19 @@ very heavy because they're imported at the first media query.
  * THE ESSAYIST STYLES *
  ***********************/
 #main.the-essayist {
+  margin-top: 3em;
   font-family: "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
   line-height: 1.5;
   color: black;
-  /* end .post */
+  /* end .archive + .essay */
+
+  /* The Essayist Archive */
+
+  /* end .essayist-archive */
+
+  /* The Essayist Essay */
+
+  /* end .essay */
 
 }
 #main.the-essayist a {
@@ -4142,50 +4151,79 @@ very heavy because they're imported at the first media query.
 #main.the-essayist .h6 a:active:focus {
   color: #cc0000;
 }
-#main.the-essayist h2.essayist-text-banner {
+#main.the-essayist.essayist-archive,
+#main.the-essayist.essay {
+  /* end article */
+
+}
+#main.the-essayist.essayist-archive h2.essayist-text-banner,
+#main.the-essayist.essay h2.essayist-text-banner {
   font-family: "KristiMedium", "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
-  font-size: 96px;
   text-align: center;
   margin-top: 0;
   line-height: 1.5;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-#main.the-essayist #special-issue-description,
-#main.the-essayist article {
-  margin-bottom: 4.286em;
-}
-#main.the-essayist #special-issue-description {
-  font-size: 1.286rem;
-}
-#main.the-essayist article {
+#main.the-essayist.essayist-archive article,
+#main.the-essayist.essay article {
   /* end .byline */
 
 }
-#main.the-essayist article h3.headline {
+#main.the-essayist.essayist-archive article h3.headline,
+#main.the-essayist.essay article h3.headline {
   padding-bottom: 0;
   margin: 0;
   line-height: 1.2;
   text-align: center;
 }
-#main.the-essayist article .byline {
+#main.the-essayist.essayist-archive article .byline,
+#main.the-essayist.essay article .byline {
   text-align: center;
   font-size: 1.429em;
   margin-bottom: 0;
   /* end a */
 
 }
-#main.the-essayist article .byline a {
+#main.the-essayist.essayist-archive article .byline a,
+#main.the-essayist.essay article .byline a {
   color: #111111;
 }
-#main.the-essayist article .byline a:hover,
-#main.the-essayist article .byline a:active {
+#main.the-essayist.essayist-archive article .byline a:hover,
+#main.the-essayist.essay article .byline a:hover,
+#main.the-essayist.essayist-archive article .byline a:active,
+#main.the-essayist.essay article .byline a:active {
   color: #cc0000;
 }
-#main.the-essayist article .dek {
+#main.the-essayist.essayist-archive article .dek,
+#main.the-essayist.essay article .dek {
   font-size: 1.143em;
-  color: #AAA;
   font-style: italic;
+}
+#main.the-essayist.essayist-archive h2.essayist-text-banner {
+  font-size: 96px;
+}
+#main.the-essayist.essayist-archive .dek {
+  color: #AAA;
+}
+#main.the-essayist.essayist-archive #special-issue-description,
+#main.the-essayist.essayist-archive article {
+  margin-bottom: 4.286em;
+}
+#main.the-essayist.essayist-archive #special-issue-description {
+  font-size: 1.286rem;
+}
+#main.the-essayist.essay .special-issue-text-banner-container {
+  padding-bottom: 2.5em;
+  border-bottom: 1px solid #EEE;
+}
+#main.the-essayist.essay .authors {
+  font-family: inherit;
+  padding-right: 0;
+  border: none;
+}
+#main.the-essayist.essay .post-content {
+  font-size: 1.143em;
 }
 /* end #main.the-essayist */
 /******************************************************************
@@ -4218,7 +4256,11 @@ tweeners.
   .weekender-text-banner {
     font-size: 3.429rem;
   }
-  #main.the-essayist h2.essayist-text-banner {
+  #main.the-essayist {
+    /* end archive */
+  
+  }
+  #main.the-essayist.essayist-archive h2.essayist-text-banner {
     font-size: 120px;
   }
   /* end .the-essayist */
@@ -4420,38 +4462,61 @@ you can add resource intensive styles.
     font-size: 3.5rem;
   }
   #main.the-essayist {
+    /* end essayist-archive and essay */
+  
+    /* end essayist-archive */
+  
+    /* end essay */
+  
+  }
+  #main.the-essayist.essayist-archive,
+  #main.the-essayist.essay {
     /* end .post */
   
   }
-  #main.the-essayist h2.essayist-text-banner {
-    font-size: 160px;
-  }
-  #main.the-essayist #special-issue-description,
-  #main.the-essayist article {
-    margin-bottom: 4.5em;
-  }
-  #main.the-essayist #special-issue-description {
-    font-size: 1.5rem;
-  }
-  #main.the-essayist article {
+  #main.the-essayist.essayist-archive article,
+  #main.the-essayist.essay article {
     /* end .byline */
   
   }
-  #main.the-essayist article .byline {
+  #main.the-essayist.essayist-archive article .byline,
+  #main.the-essayist.essay article .byline {
     text-align: center;
     font-size: 1.875em;
     margin-bottom: 0;
     /* end a */
   
   }
-  #main.the-essayist article .byline a {
+  #main.the-essayist.essayist-archive article .byline a,
+  #main.the-essayist.essay article .byline a {
     color: #111111;
   }
-  #main.the-essayist article .byline a:hover,
-  #main.the-essayist article .byline a:active {
+  #main.the-essayist.essayist-archive article .byline a:hover,
+  #main.the-essayist.essay article .byline a:hover,
+  #main.the-essayist.essayist-archive article .byline a:active,
+  #main.the-essayist.essay article .byline a:active {
     color: #cc0000;
   }
-  #main.the-essayist article .dek {
+  #main.the-essayist.essayist-archive article .dek,
+  #main.the-essayist.essay article .dek {
+    font-size: 1.25em;
+  }
+  #main.the-essayist.essayist-archive h2.essayist-text-banner {
+    font-size: 160px;
+  }
+  #main.the-essayist.essayist-archive #special-issue-description,
+  #main.the-essayist.essayist-archive article {
+    margin-bottom: 4.5em;
+  }
+  #main.the-essayist.essayist-archive #special-issue-description {
+    font-size: 1.5rem;
+  }
+  #main.the-essayist.essay header {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
+  #main.the-essayist.essay .post-content {
     font-size: 1.25em;
   }
   /* end .the-essayist */

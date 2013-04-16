@@ -479,6 +479,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
  ***********************/
 
 #main.the-essayist {
+	margin-top: 3em;
 
 	@essayistFonts: "Vollkorn", @serif;
 	@bodyColor: @blackIsh;
@@ -517,54 +518,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 		}
 	}
 
-	h2.essayist-text-banner {
-		font-family: "KristiMedium", @essayistFonts;
-		font-size: 96px;
-		text-align: center;
-		margin-top: 0;
-		line-height: 1.5;
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
+	&.essayist-archive,
+	&.essay {
 
-	#special-issue-description,
-	article {
-		margin-bottom: 4.286em; // 60px @ 14px base
-	}
-
-	#special-issue-description {
-		font-size: 1.286rem; // 18px @ 14px base
-	}
-
-	article {
-
-		h3.headline {
-			padding-bottom: 0;
-			margin: 0;
-			line-height: 1.2;
+		h2.essayist-text-banner {
+			font-family: "KristiMedium", @essayistFonts;
 			text-align: center;
+			margin-top: 0;
+			line-height: 1.5;
+			padding-bottom: 0;
+			margin-bottom: 0;
 		}
 
-		.byline {
-			text-align: center;
-			font-size: 1.429em; // 20px @ 14px base
-			margin-bottom: 0;
+		article {
 
-			a {
-				color: @blackIsh;
+			h3.headline {
+				padding-bottom: 0;
+				margin: 0;
+				line-height: 1.2;
+				text-align: center;
+			}
 
-				&:hover,
-				&:active {
-					color: @thatred;
-				}
-			} /* end a */
-		} /* end .byline */
+			.byline {
+				text-align: center;
+				font-size: 1.429em; // 20px @ 14px base
+				margin-bottom: 0;
+
+				a {
+					color: @blackIsh;
+
+					&:hover,
+					&:active {
+						color: @thatred;
+					}
+				} /* end a */
+			} /* end .byline */
+
+			.dek {
+				font-size: 1.143em; // 16px @ 14px base
+				font-style: italic;
+			}
+		} /* end article */
+
+	} /* end .archive + .essay */
+
+	/* The Essayist Archive */
+	&.essayist-archive {
+
+		h2.essayist-text-banner {
+			font-size: 96px;
+		}
 
 		.dek {
-			font-size: 1.143em; // 16px @ 14px base
-			color: #AAA;
-			font-style: italic;
+		color: #AAA;
 		}
-	} /* end .post */
+
+		#special-issue-description,
+		article {
+			margin-bottom: 4.286em; // 60px @ 14px base
+		}
+
+		#special-issue-description {
+			font-size: 1.286rem; // 18px @ 14px base
+		}
+
+	} /* end .essayist-archive */
+
+	/* The Essayist Essay */
+	&.essay {
+
+		.special-issue-text-banner-container {
+			padding-bottom: 2.5em;
+			border-bottom: 1px solid #EEE;
+		}
+
+		.authors {
+			font-family: inherit;
+			padding-right: 0;
+			border: none;
+		}
+
+		.post-content {
+			font-size: 1.143em; // 16px @ 14px base
+		}
+
+	} /* end .essay */
 } /* end #main.the-essayist */
 
