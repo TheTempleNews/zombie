@@ -21,35 +21,35 @@ right up top and clean.
 add_action('after_setup_theme','bones_ahoy', 15);
 
 function bones_ahoy() {
-    
-    // launching operation cleanup
-    add_action('init', 'bones_head_cleanup');
-    // remove WP version from RSS
-    add_filter('the_generator', 'bones_rss_version');
-    // remove pesky injected css for recent comments widget
-    add_filter( 'wp_head', 'bones_remove_wp_widget_recent_comments_style', 1 );
-    // clean up comment styles in the head
-    add_action('wp_head', 'bones_remove_recent_comments_style', 1);
-    // clean up gallery output in wp
-    add_filter('gallery_style', 'bones_gallery_style');
+	
+	// launching operation cleanup
+	add_action('init', 'bones_head_cleanup');
+	// remove WP version from RSS
+	add_filter('the_generator', 'bones_rss_version');
+	// remove pesky injected css for recent comments widget
+	add_filter( 'wp_head', 'bones_remove_wp_widget_recent_comments_style', 1 );
+	// clean up comment styles in the head
+	add_action('wp_head', 'bones_remove_recent_comments_style', 1);
+	// clean up gallery output in wp
+	add_filter('gallery_style', 'bones_gallery_style');
 
-    // enqueue base scripts and styles
-    add_action('wp_enqueue_scripts', 'bones_scripts_and_styles', 999);
-    // ie conditional wrapper
-    add_filter( 'style_loader_tag', 'bones_ie_conditional', 10, 2 );
-    
-    // launching this stuff after theme setup
-    add_action('after_setup_theme','bones_theme_support');	
-    // adding sidebars to Wordpress (these are created in functions.php)
-    add_action( 'widgets_init', 'bones_register_sidebars' );
-    // adding the bones search form (created in functions.php)
-    add_filter( 'get_search_form', 'bones_wpsearch' );
-    
-    // cleaning up random code around images
-    add_filter('the_content', 'bones_filter_ptags_on_images');
-    // cleaning up excerpt
-    add_filter('excerpt_more', 'bones_excerpt_more');
-    
+	// enqueue base scripts and styles
+	add_action('wp_enqueue_scripts', 'bones_scripts_and_styles', 999);
+	// ie conditional wrapper
+	add_filter( 'style_loader_tag', 'bones_ie_conditional', 10, 2 );
+	
+	// launching this stuff after theme setup
+	add_action('after_setup_theme','bones_theme_support');	
+	// adding sidebars to Wordpress (these are created in functions.php)
+	add_action( 'widgets_init', 'bones_register_sidebars' );
+	// adding the bones search form (created in functions.php)
+	add_filter( 'get_search_form', 'bones_wpsearch' );
+	
+	// cleaning up random code around images
+	add_filter('the_content', 'bones_filter_ptags_on_images');
+	// cleaning up excerpt
+	add_filter('excerpt_more', 'bones_excerpt_more');
+	
 } /* end bones ahoy */
 
 /*********************
@@ -88,7 +88,7 @@ function bones_rss_version() { return ''; }
 // remove injected CSS for recent comments widget
 function bones_remove_wp_widget_recent_comments_style() {
    if ( has_filter('wp_head', 'wp_widget_recent_comments_style') ) {
-      remove_filter('wp_head', 'wp_widget_recent_comments_style' );
+	  remove_filter('wp_head', 'wp_widget_recent_comments_style' );
    }
 }
 	
@@ -96,7 +96,7 @@ function bones_remove_wp_widget_recent_comments_style() {
 function bones_remove_recent_comments_style() {
   global $wp_widget_factory;
   if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
-    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+	remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
   }
 }
 
@@ -114,41 +114,41 @@ SCRIPTS & ENQEUEING
 function bones_scripts_and_styles() {
   if (!is_admin()) {
   
-    // modernizr (without media query polyfill)
-    wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+	// modernizr (without media query polyfill)
+	wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
  
-    // register main stylesheet
-    wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), ZOM_VERSION, 'all' );
+	// register main stylesheet
+	wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), ZOM_VERSION, 'all' );
 
-    // ie-only style sheet
-    wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), ZOM_VERSION );
-    
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-      wp_enqueue_script( 'comment-reply' );
-    }
-    
-    //adding scripts file in the footer
-    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), ZOM_VERSION, true );
+	// ie-only style sheet
+	wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), ZOM_VERSION );
+	
+	// comment reply script for threaded comments
+	if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+	  wp_enqueue_script( 'comment-reply' );
+	}
+	
+	//adding scripts file in the footer
+	wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), ZOM_VERSION, true );
 
 	// adding flex tetrodo slider based on flexslider
 	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), ZOM_VERSION, true );
 	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), ZOM_VERSION, 'screen');
 
-    // Google Analytics Advanced Content Tracking
-    // see http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
-    wp_register_script( 'ga-tracking', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ga.scrolltracking-ck.js', array( 'jquery' ), ZOM_VERSION, true );
+	// Google Analytics Advanced Content Tracking
+	// see http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
+	wp_register_script( 'ga-tracking', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ga.scrolltracking-ck.js', array( 'jquery' ), ZOM_VERSION, true );
 	
 	// FitText 1.1 http://fittextjs.com/
 	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
 	
 	// SlabText
 	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext-ck.js', array( 'jquery' ), ZOM_VERSION, true );
-    
-    // enqueue styles and scripts
-    wp_enqueue_script( 'bones-modernizr' ); 
-    wp_enqueue_style( 'bones-stylesheet' ); 
-    wp_enqueue_style('bones-ie-only');
+	
+	// enqueue styles and scripts
+	wp_enqueue_script( 'bones-modernizr' ); 
+	wp_enqueue_style( 'bones-stylesheet' ); 
+	wp_enqueue_style('bones-ie-only');
 
 	wp_enqueue_script('flex-tetrodo-js');
 	wp_enqueue_style('flex-tetrodo-css');
@@ -156,15 +156,21 @@ function bones_scripts_and_styles() {
 	wp_enqueue_script('fittext-js');
 	wp_enqueue_script('slabtext-js');
 	
-    wp_enqueue_script( 'bones-js' ); 
+	wp_enqueue_script( 'bones-js' ); 
 
-    // if the current page being displayed is single, load the scroll tracker for GA
-    if ( is_single() ) {
-        wp_enqueue_script( 'ga-tracking' );
-    }
-    
-  }
-}
+	// if the current page being displayed is single, load the scroll tracker for GA
+	if ( is_single() ) {
+		wp_enqueue_script( 'ga-tracking' );
+	}
+
+	// conditional font loading
+	if ( is_page_template('page-essays.php') || get_post_type( $the_post = false )) {
+		wp_register_style( 'font-vollkorn','//fonts.googleapis.com/css?family=Vollkorn:400italic,400' );
+        wp_enqueue_style( 'font-vollkorn' );
+	}
+
+  } // endif is_admin
+} // endif
 
 // adding the conditional wrapper around ie stylesheet
 // source: http://code.garyjones.co.uk/ie-conditional-style-sheets-wordpress/
@@ -189,13 +195,13 @@ function bones_theme_support() {
 	
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
-	    array( 
-	    'default-image' => '',  // background image default
-	    'default-color' => '', // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
+		array( 
+		'default-image' => '',  // background image default
+		'default-color' => '', // background color default (dont add the #)
+		'wp-head-callback' => '_custom_background_cb',
+		'admin-head-callback' => '',
+		'admin-preview-callback' => ''
+		)
 	);      
 	
 	// rss thingy           
@@ -243,19 +249,19 @@ MENUS & NAVIGATION
 // the main menu 
 function bones_main_nav() {
 	// display the wp3 menu if available
-    wp_nav_menu(array( 
-    	'container' => false,                           // remove nav container
-    	'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
-    	'menu' => 'The Main Menu',                           // nav name
-    	'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
-    	'menu_id' => 'menu-top-navigation',				// id for nav ul
-    	'theme_location' => 'main-nav',                 // where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-        'depth' => 0,                                   // limit the depth of the nav
-    	'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
+	wp_nav_menu(array( 
+		'container' => false,                           // remove nav container
+		'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
+		'menu' => 'The Main Menu',                           // nav name
+		'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
+		'menu_id' => 'menu-top-navigation',				// id for nav ul
+		'theme_location' => 'main-nav',                 // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
 	));
 } /* end bones main nav */
 
@@ -266,18 +272,18 @@ function bones_main_nav() {
 // menu of sections
 function zombie_footer_links_sections() { 
 	// display the wp3 menu if available
-    wp_nav_menu(array( 
-    	'container' => '',                              // remove nav container
-    	'container_class' => 'footer-links footer-links-sections-container clearfix',   // class of container (should you choose to use it)
-    	'menu' => 'Footer Links: Sections',                       // nav name
-    	'menu_class' => 'nav footer-nav footer-nav-sections clearfix',      // adding custom nav class
-    	'theme_location' => 'footer-links-center-top',             // where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-        'depth' => 0,                                   // limit the depth of the nav
-    	'fallback_cb' => 'zombie_footer_links_sections_fallback'  // fallback function
+	wp_nav_menu(array( 
+		'container' => '',                              // remove nav container
+		'container_class' => 'footer-links footer-links-sections-container clearfix',   // class of container (should you choose to use it)
+		'menu' => 'Footer Links: Sections',                       // nav name
+		'menu_class' => 'nav footer-nav footer-nav-sections clearfix',      // adding custom nav class
+		'theme_location' => 'footer-links-center-top',             // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'zombie_footer_links_sections_fallback'  // fallback function
 	));
 } /* end bones footer links sections */
 
@@ -285,71 +291,71 @@ function zombie_footer_links_sections() {
 // About TTN
 function zombie_footer_links_meta() { 
 	// display the wp3 menu if available
-    wp_nav_menu(array( 
-    	'container' => '',                              // remove nav container
-    	'container_class' => 'footer-links footer-links-meta-container clearfix',   // class of container (should you choose to use it)
-    	'menu' => 'Footer Links: Meta',                       // nav name
-    	'menu_class' => 'nav footer-nav footer-nav-meta clearfix',      // adding custom nav class
-    	'theme_location' => 'footer-links-center-bottom',             // where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-        'depth' => 0,                                   // limit the depth of the nav
-    	'fallback_cb' => 'zombie_footer_links_meta_fallback'  // fallback function
+	wp_nav_menu(array( 
+		'container' => '',                              // remove nav container
+		'container_class' => 'footer-links footer-links-meta-container clearfix',   // class of container (should you choose to use it)
+		'menu' => 'Footer Links: Meta',                       // nav name
+		'menu_class' => 'nav footer-nav footer-nav-meta clearfix',      // adding custom nav class
+		'theme_location' => 'footer-links-center-bottom',             // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'zombie_footer_links_meta_fallback'  // fallback function
 	));
 } /* end bones footer links meta */
 
 
 function zombie_footer_links_social() { 
 	// display the wp3 menu if available
-    wp_nav_menu(array( 
-    	'container' => '',                              // remove nav container
-    	'container_class' => 'footer-links footer-links-social-container clearfix',   // class of container (should you choose to use it)
-    	'menu' => 'Footer Links: Social Media',                       // nav name
-    	'menu_class' => 'nav footer-nav footer-nav-social clearfix',      // adding custom nav class
-    	'theme_location' => 'footer-links-right',             // where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-        'depth' => 0,                                   // limit the depth of the nav
-    	'fallback_cb' => 'zombie_footer_links_social_fallback'  // fallback function
+	wp_nav_menu(array( 
+		'container' => '',                              // remove nav container
+		'container_class' => 'footer-links footer-links-social-container clearfix',   // class of container (should you choose to use it)
+		'menu' => 'Footer Links: Social Media',                       // nav name
+		'menu_class' => 'nav footer-nav footer-nav-social clearfix',      // adding custom nav class
+		'theme_location' => 'footer-links-right',             // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'zombie_footer_links_social_fallback'  // fallback function
 	));
 } /* end bones footer links social */
 
 
 function zombie_footer_links_misc() { 
 	// display the wp3 menu if available
-    wp_nav_menu(array( 
-    	'container' => '',                              // remove nav container
-    	'container_class' => 'footer-links footer-links-misc-container clearfix',   // class of container (should you choose to use it)
-    	'menu' => 'Footer Links: Misc',                       // nav name
-    	'menu_class' => 'nav footer-nav footer-nav-misc clearfix',      // adding custom nav class
-    	'theme_location' => 'footer-links-center-middle',             // where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-        'depth' => 0,                                   // limit the depth of the nav
-    	'fallback_cb' => 'zombie_footer_links_misc_fallback'  // fallback function
+	wp_nav_menu(array( 
+		'container' => '',                              // remove nav container
+		'container_class' => 'footer-links footer-links-misc-container clearfix',   // class of container (should you choose to use it)
+		'menu' => 'Footer Links: Misc',                       // nav name
+		'menu_class' => 'nav footer-nav footer-nav-misc clearfix',      // adding custom nav class
+		'theme_location' => 'footer-links-center-middle',             // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'zombie_footer_links_misc_fallback'  // fallback function
 	));
 } /* end bones footer links misc */
 
 function zombie_top_links() { 
 	// display the wp3 menu if available
-    wp_nav_menu(array( 
-    	'container' => '',                              // remove nav container
-    	'container_class' => 'top-links clearfix',   // class of container (should you choose to use it)
-    	'menu' => 'Top Links',                       // nav name
-    	'menu_class' => 'nav top-links clearfix',      // adding custom nav class
-    	'theme_location' => 'top-links',             // where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-        'depth' => 0,                                   // limit the depth of the nav
-    	'fallback_cb' => 'zombie_top_links_fallback'  // fallback function
+	wp_nav_menu(array( 
+		'container' => '',                              // remove nav container
+		'container_class' => 'top-links clearfix',   // class of container (should you choose to use it)
+		'menu' => 'Top Links',                       // nav name
+		'menu_class' => 'nav top-links clearfix',      // adding custom nav class
+		'theme_location' => 'top-links',             // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'zombie_top_links_fallback'  // fallback function
 	));
 } /* end bones footer links misc */
 
@@ -387,21 +393,21 @@ function zombie_footer_links_misc_fallback() {
  */
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 function add_menu_parent_class( $items ) {
-    
-    $parents = array();
-    foreach ( $items as $item ) {
-        if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
-            $parents[] = $item->menu_item_parent;
-        }
-    }
-    
-    foreach ( $items as $item ) {
-        if ( in_array( $item->ID, $parents ) ) {
-            $item->classes[] = 'menu-parent-item'; 
-        }
-    }
-    
-    return $items;    
+	
+	$parents = array();
+	foreach ( $items as $item ) {
+		if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
+			$parents[] = $item->menu_item_parent;
+		}
+	}
+	
+	foreach ( $items as $item ) {
+		if ( in_array( $item->ID, $parents ) ) {
+			$item->classes[] = 'menu-parent-item'; 
+		}
+	}
+	
+	return $items;    
 }
 
 /*********************
@@ -415,18 +421,18 @@ function bones_related_posts() {
 	$tags = wp_get_post_tags($post->ID);
 	if($tags) {
 		foreach($tags as $tag) { $tag_arr .= $tag->slug . ','; }
-        $args = array(
-        	'tag' => $tag_arr,
-        	'numberposts' => 5, /* you can change this to show more */
-        	'post__not_in' => array($post->ID)
-     	);
-        $related_posts = get_posts($args);
-        if($related_posts) {
-        	foreach ($related_posts as $post) : setup_postdata($post); ?>
-	           	<li class="related_post"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+		$args = array(
+			'tag' => $tag_arr,
+			'numberposts' => 5, /* you can change this to show more */
+			'post__not_in' => array($post->ID)
+		);
+		$related_posts = get_posts($args);
+		if($related_posts) {
+			foreach ($related_posts as $post) : setup_postdata($post); ?>
+				<li class="related_post"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 				<?php endforeach; } 
-	    else { ?>
-            <li class="no_related_post">No Related Posts Yet!</li>
+		else { ?>
+			<li class="no_related_post">No Related Posts Yet!</li>
 		<?php }
 	}
 	wp_reset_query();

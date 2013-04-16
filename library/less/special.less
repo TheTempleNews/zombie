@@ -571,6 +571,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 
 		.dek {
 		color: #AAA;
+		text-align: center;
 		}
 
 		#special-issue-description,
@@ -607,18 +608,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 				//border-top: 1px solid @blackIsh;
 				color: @blackIsh;
 				text-align: center;
-			}
-			hr:after {
-				content: "⁂";
-				display: inline-block;
-				position: relative; 
-				top: 0;
-				font-size: 1.5em;
-				padding: 0 0.25em;
-				background: white;
-			}
-		}
 
+				&:after {
+					content: "⁂";
+					display: inline-block;
+					position: relative; 
+					top: 0;
+					font-size: 1.5em;
+					padding: 0 0.25em;
+					background: white;
+				}
+			}
+		} /* end .post-content */
 	} /* end .essay */
 } /* end #main.the-essayist */
 

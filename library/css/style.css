@@ -4205,6 +4205,7 @@ very heavy because they're imported at the first media query.
 }
 #main.the-essayist.essayist-archive .dek {
   color: #AAA;
+  text-align: center;
 }
 #main.the-essayist.essayist-archive #special-issue-description,
 #main.the-essayist.essayist-archive article {
@@ -4212,6 +4213,10 @@ very heavy because they're imported at the first media query.
 }
 #main.the-essayist.essayist-archive #special-issue-description {
   font-size: 1.286rem;
+}
+#main.the-essayist.essay {
+  /* end .post-content */
+
 }
 #main.the-essayist.essay .special-issue-text-banner-container {
   padding-bottom: 2.5em;
