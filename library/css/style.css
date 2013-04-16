@@ -4038,6 +4038,8 @@ very heavy because they're imported at the first media query.
   font-family: "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
   line-height: 1.5;
   color: black;
+  /* end .post */
+
 }
 #main.the-essayist h1,
 #main.the-essayist .h1,
@@ -4143,6 +4145,15 @@ very heavy because they're imported at the first media query.
 }
 #main.the-essayist #special-issue-description {
   font-size: 1.286rem;
+}
+#main.the-essayist article {
+  margin-bottom: 2.2em;
+}
+#main.the-essayist article h3.headline {
+  padding-bottom: 0;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
 }
 /* end #main.the-essayist */
 /******************************************************************
