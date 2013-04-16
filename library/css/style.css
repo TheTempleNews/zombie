@@ -4141,6 +4141,9 @@ very heavy because they're imported at the first media query.
   line-height: 1.5;
   padding-bottom: 0;
 }
+#main.the-essayist #special-issue-description {
+  font-size: 1.286rem;
+}
 /* end #main.the-essayist */
 /******************************************************************
 LARGER MOBILE DEVICES
@@ -4375,6 +4378,9 @@ you can add resource intensive styles.
   }
   #main.the-essayist h2.essayist-text-banner {
     font-size: 160px;
+  }
+  #main.the-essayist #special-issue-description {
+    font-size: 1.5rem;
   }
   /* end .the-essayist */
   .bar-guide .fittext,

@@ -592,6 +592,9 @@ ADVERTS AND SOCIAL MEDIA
 #main.the-essayist h2.essayist-text-banner {
   font-size: 160px;
 }
+#main.the-essayist #special-issue-description {
+  font-size: 1.5rem;
+}
 /* end .the-essayist */
 .bar-guide .fittext,
 .bar-guide .slabtextthis {
