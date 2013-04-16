@@ -4135,7 +4135,11 @@ very heavy because they're imported at the first media query.
 }
 #main.the-essayist h2.essayist-text-banner {
   font-family: "KristiMedium", "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  font-size: 96px;
   text-align: center;
+  margin-top: 0;
+  line-height: 1.5;
+  padding-bottom: 0;
 }
 /* end #main.the-essayist */
 /******************************************************************
@@ -4168,6 +4172,10 @@ tweeners.
   .weekender-text-banner {
     font-size: 3.429rem;
   }
+  #main.the-essayist h2.essayist-text-banner {
+    font-size: 120px;
+  }
+  /* end .the-essayist */
   /**************************
    * WORDPRESS BODY CLASSES 
    **************************/
@@ -4365,6 +4373,10 @@ you can add resource intensive styles.
   .single-top-promo .bar-guide-text-banner {
     font-size: 3.5rem;
   }
+  #main.the-essayist h2.essayist-text-banner {
+    font-size: 160px;
+  }
+  /* end .the-essayist */
   .bar-guide .fittext,
   .bar-guide .slabtextthis {
     text-align: left;

@@ -398,6 +398,10 @@ upon your base.scss styles.
 .weekender-text-banner {
   font-size: 3.429rem;
 }
+#main.the-essayist h2.essayist-text-banner {
+  font-size: 120px;
+}
+/* end .the-essayist */
 /**************************
  * WORDPRESS BODY CLASSES 
  **************************/
@@ -585,6 +589,10 @@ ADVERTS AND SOCIAL MEDIA
 .single-top-promo .bar-guide-text-banner {
   font-size: 3.5rem;
 }
+#main.the-essayist h2.essayist-text-banner {
+  font-size: 160px;
+}
+/* end .the-essayist */
 .bar-guide .fittext,
 .bar-guide .slabtextthis {
   text-align: left;
