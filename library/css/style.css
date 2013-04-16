@@ -604,6 +604,14 @@ TYPOGRAPHY
   src: url('../fonts/Chunkfive-webfont.eot');
   src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Chunkfive-webfont.woff') format('woff'), url('../fonts/Chunkfive-webfont.ttf') format('truetype'), url('../fonts/Chunkfive-webfont.svg#ChunkfiveChunkFive') format('svg');
 }
+/* Kristi */
+@font-face {
+  font-family: 'KristiMedium';
+  src: url('../fonts/Kristi-webfont.eot');
+  src: url('../fonts/Kristi-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Kristi-webfont.woff') format('woff'), url('../fonts/Kristi-webfont.ttf') format('truetype'), url('../fonts/Kristi-webfont.svg#KristiMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Mixins */
 /* smallcaps */
 .sc {
@@ -4022,7 +4030,115 @@ very heavy because they're imported at the first media query.
 .bar-guide article .headshot {
   display: none;
 }
-/* end .bar-guide *//******************************************************************
+/* end .bar-guide */
+/***********************
+ * THE ESSAYIST STYLES *
+ ***********************/
+#main.the-essayist {
+  font-family: "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  line-height: 1.5;
+  color: black;
+}
+#main.the-essayist h1,
+#main.the-essayist .h1,
+#main.the-essayist h2,
+#main.the-essayist .h2,
+#main.the-essayist h3,
+#main.the-essayist .h3,
+#main.the-essayist h4,
+#main.the-essayist .h4,
+#main.the-essayist h5,
+#main.the-essayist .h5,
+#main.the-essayist h6,
+#main.the-essayist .h6 {
+  font-family: "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  padding: 0 0 0.5em;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #111111;
+}
+#main.the-essayist h1 a,
+#main.the-essayist .h1 a,
+#main.the-essayist h2 a,
+#main.the-essayist .h2 a,
+#main.the-essayist h3 a,
+#main.the-essayist .h3 a,
+#main.the-essayist h4 a,
+#main.the-essayist .h4 a,
+#main.the-essayist h5 a,
+#main.the-essayist .h5 a,
+#main.the-essayist h6 a,
+#main.the-essayist .h6 a,
+#main.the-essayist h1 a:active,
+#main.the-essayist .h1 a:active,
+#main.the-essayist h2 a:active,
+#main.the-essayist .h2 a:active,
+#main.the-essayist h3 a:active,
+#main.the-essayist .h3 a:active,
+#main.the-essayist h4 a:active,
+#main.the-essayist .h4 a:active,
+#main.the-essayist h5 a:active,
+#main.the-essayist .h5 a:active,
+#main.the-essayist h6 a:active,
+#main.the-essayist .h6 a:active {
+  color: #111111;
+}
+#main.the-essayist h1 a:hover,
+#main.the-essayist .h1 a:hover,
+#main.the-essayist h2 a:hover,
+#main.the-essayist .h2 a:hover,
+#main.the-essayist h3 a:hover,
+#main.the-essayist .h3 a:hover,
+#main.the-essayist h4 a:hover,
+#main.the-essayist .h4 a:hover,
+#main.the-essayist h5 a:hover,
+#main.the-essayist .h5 a:hover,
+#main.the-essayist h6 a:hover,
+#main.the-essayist .h6 a:hover,
+#main.the-essayist h1 a:active:hover,
+#main.the-essayist .h1 a:active:hover,
+#main.the-essayist h2 a:active:hover,
+#main.the-essayist .h2 a:active:hover,
+#main.the-essayist h3 a:active:hover,
+#main.the-essayist .h3 a:active:hover,
+#main.the-essayist h4 a:active:hover,
+#main.the-essayist .h4 a:active:hover,
+#main.the-essayist h5 a:active:hover,
+#main.the-essayist .h5 a:active:hover,
+#main.the-essayist h6 a:active:hover,
+#main.the-essayist .h6 a:active:hover,
+#main.the-essayist h1 a:focus,
+#main.the-essayist .h1 a:focus,
+#main.the-essayist h2 a:focus,
+#main.the-essayist .h2 a:focus,
+#main.the-essayist h3 a:focus,
+#main.the-essayist .h3 a:focus,
+#main.the-essayist h4 a:focus,
+#main.the-essayist .h4 a:focus,
+#main.the-essayist h5 a:focus,
+#main.the-essayist .h5 a:focus,
+#main.the-essayist h6 a:focus,
+#main.the-essayist .h6 a:focus,
+#main.the-essayist h1 a:active:focus,
+#main.the-essayist .h1 a:active:focus,
+#main.the-essayist h2 a:active:focus,
+#main.the-essayist .h2 a:active:focus,
+#main.the-essayist h3 a:active:focus,
+#main.the-essayist .h3 a:active:focus,
+#main.the-essayist h4 a:active:focus,
+#main.the-essayist .h4 a:active:focus,
+#main.the-essayist h5 a:active:focus,
+#main.the-essayist .h5 a:active:focus,
+#main.the-essayist h6 a:active:focus,
+#main.the-essayist .h6 a:active:focus {
+  color: #cc0000;
+}
+#main.the-essayist h2.essayist-text-banner {
+  font-family: "KristiMedium", "Vollkorn", 'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
+  text-align: center;
+}
+/* end #main.the-essayist */
+/******************************************************************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's 
 larger than an iPhone but smaller than a tablet. Let's call them

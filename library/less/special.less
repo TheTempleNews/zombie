@@ -472,3 +472,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 	}
 
 } /* end .bar-guide */
+
+
+/***********************
+ * THE ESSAYIST STYLES *
+ ***********************/
+
+#main.the-essayist {
+
+	@essayistFonts: "Vollkorn", @serif;
+	@bodyColor: @blackIsh;
+
+	font-family: @essayistFonts;
+	line-height: 1.5;
+	color: black;
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		font-family: @essayistFonts;
+		padding: 0 0 0.5em;
+		line-height: 1.2;
+		font-weight: normal;
+		color: @bodyColor;
+
+		a, a:active {
+			color: @bodyColor;
+
+			&:hover,
+			&:focus {
+				color: @thatred;
+			}
+		}
+	}
+
+	h2.essayist-text-banner {
+	font-family: "KristiMedium", @essayistFonts;
+	text-align: center;
+	}
+} /* end #main.the-essayist */
+
