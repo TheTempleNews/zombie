@@ -4469,6 +4469,9 @@ you can add resource intensive styles.
   .ttn-network-feed ul li {
     margin: 1.5em 0;
   }
+  .ad-container .ad > div {
+    margin: 0 auto;
+  }
   /*****************************
    * SPECIAL ISSUE PAGE STYLES *
    *****************************/
