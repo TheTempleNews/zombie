@@ -59,9 +59,9 @@ Template Name: Music Issue
 
 							?>
 
-								<article id="post-42483" class="sixcol <?php echo $k; ?> clearfix" role="article">
+								<article id="post-42483" class="box sixcol <?php echo $k; ?> clearfix" role="article">
 
-									<header class="article-header">
+									<header class="box article-header">
 
 										<h3 class="headline h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									
@@ -98,9 +98,9 @@ Template Name: Music Issue
 								}
 							?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('sixcol push_three clearfix'); ?> role="article">
+								<article id="post-<?php the_ID(); ?>" <?php post_class('box sixcol push_three clearfix'); ?> role="article">
 
-									<header class="article-header">
+									<header class="box article-header">
 
 										<h3 class="headline h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									

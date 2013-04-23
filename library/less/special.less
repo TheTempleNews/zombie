@@ -635,6 +635,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 #content.music-issue {
 	background-image: url(../images/bkg/dark-mono2.png);
 	text-shadow: 0.1em 0.1em rgba(0,0,0,0.3);
+	color: #9A9A9A;
 
 	a {
 		color: @darkMonoBlue;
@@ -669,8 +670,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 
 	.box {
 		background-color: @darkMonoOverlay;
+		padding: 1em;
+		margin-bottom: 2em;
 
 		& .box {
+			margin-bottom: 0;
 			border: 1px solid #333;
 			-webkit-border-radius: 3px;
 			   -moz-border-radius: 3px;
