@@ -169,6 +169,11 @@ function bones_scripts_and_styles() {
         wp_enqueue_style( 'font-vollkorn' );
 	}
 
+	if ( is_page( 'music-issue' )) {
+		wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', ('jquery'), ZOM_VERSION, true );
+		wp_enqueue_script( 'masonry' );
+	}
+
   } // endif is_admin
 } // endif
 

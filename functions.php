@@ -777,17 +777,42 @@ function get_the_content_first_graf() {
     return $return_data;
 }
 
-/*
-function fb_change_mce_options($initArray) {
-    $ext = 'script[charset|defer|language|src|type]';
+/**
+ * Set Masonry grid class based on custom field value.
+ * 
+ * @author Chris Montgomery
+ *
+ * @param int $width Override number of columns with an integer between 1 and 12
+ * @param str $namespace Namespace to prepend $output
+ * @return str $output
+ *
+ */
+function ttn_gs_column_width( $width, $namespace ) {
+	global $post;
+	$output = '';
 
-    if ( isset( $initArray['extended_valid_elements'] ) ) {
-        $initArray['extended_valid_elements'] .= ',' . $ext;
-    } else {
-        $initArray['extended_valid_elements'] = $ext;
-    }
+	if ( !$width ) {
+		$width = get_post_meta( get_the_ID(), 'gs_column_width', true );
+	}
 
-    return $initArray;
+	//echo $width;
+	//print_r($width);
+
+	if ( $namespace ) {
+		$prefix = $namespace . '-';
+	}
+	
+
+	if ( $width == 12 ) { // twelve columns
+		$output = $prefix . 'twelvecol';
+	} elseif ( $width == 6 ) { // six columns
+		$output = $prefix . 'sixcol';
+	} elseif ( $width == 4 ) { // four columns
+		$output = $prefix . 'fourcol';
+	}
+
+	return $output;
 }
-add_filter('tiny_mce_before_init', 'fb_change_mce_options');
-*/
+
+
+

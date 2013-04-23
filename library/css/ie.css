@@ -1340,6 +1340,29 @@ LAYOUT & GRID STYLES
   margin-left: -99.999999993%;
 }
 /* 100%;   } /* grid_12 */
+/* Masonry */
+.mason .mason-twelvecol {
+  width: 99.999999993%;
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+  margin-left: 0;
+}
+.mason .mason-sixcol {
+  width: 48.618784527%;
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+  margin-left: 0;
+}
+.mason .mason-fourcol {
+  width: 31.491712705%;
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+  margin-left: 0;
+}
+/* end .mason */
 /******************************************************************
 H1, H2, H3, H4, H5, H6 STYLES
 ******************************************************************/

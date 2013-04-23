@@ -28,15 +28,9 @@ Template Name: Music Issue
 			
 					<div id="main" class="clearfix" role="main">
 
-						<section id="" class="twelvecol first last clearfix">
+						<section class="mason twelvecol first last clearfix">
 
 							<?php
-
-							// set class to first or last depending on position in two column layout
-							// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
-							$style_classes = array('first', 'last');
-							$styles_count = count($style_classes);
-							$style_index = 0;
 
 							$args = array(
 								'post_type'     => 'article_ae',
@@ -48,12 +42,9 @@ Template Name: Music Issue
 
 							if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
 
-								// this is the second part of the operation that determines first or last class based on column divisions. see above.
-								$k = $style_classes[$style_index++ % $styles_count];
-
 							?>
 
-								<article id="post-42483" class="box sixcol <?php echo $k; ?> clearfix" role="article">
+								<article id="post-42483" class="box free-mason <?php echo ttn_gs_column_width(6, 'mason'); ?> clearfix" role="article">
 
 									<?php if ( has_post_thumbnail() ) { ?>
 										<div class="featured-image-container box">
