@@ -72,6 +72,14 @@
 
 						</div> <!-- end #bar-guide-top-promo -->
 
+					<?php } elseif (MUSIC_ISSUE == true) { ?>
+						<div id="music-issue-top-promo">
+
+							<div class="special-issue-text-banner-container clearfix">
+								<h2 class="music-issue-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/music-issue/">Music Issue <?php MUSIC_ISSUE_YEAR ?></a></h2>
+							</div>
+
+						</div> <!-- end #music-issue-top-promo -->
 					<?php } // END IT ALL! ?>
 				
 				</div> <!-- end .home-top-promo -->

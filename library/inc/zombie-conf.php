@@ -13,14 +13,14 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.4.6' );
+	define( 'ZOM_VERSION', '1.4.7' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
-	define( 'HOME_TOP_PROMO', false );
+	define( 'HOME_TOP_PROMO', true );
 
 	// Set this to true to display a banner at the top of the single article
-	define( 'SINGLE_TOP_PROMO', true );
+	define( 'SINGLE_TOP_PROMO', false );
 
 	// Set this to true to display Lunchies banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
 	define( 'NEW_LUNCHIES', false );
@@ -36,3 +36,6 @@
 
 	// Set this to true to display Bar Guide banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
 	define( 'BAR_GUIDE', false );
+
+	// Set this to true to display Music Issue banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
+	define( 'MUSIC_ISSUE', true );
