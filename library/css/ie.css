@@ -1625,10 +1625,10 @@ FLEX TETRODO STYLES
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin: 1.5em auto 9em;
+  padding: 1.5em inherit 9em;
 }
 #content.has-banner {
-  margin-top: 0;
+  padding-top: 0;
 }
 p {
   margin-bottom: 1.5em;
