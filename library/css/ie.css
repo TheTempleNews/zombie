@@ -1625,7 +1625,7 @@ FLEX TETRODO STYLES
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  padding: 1.5em inherit 9em;
+  padding: 1.5em 0 9em;
 }
 #content.has-banner {
   padding-top: 0;
