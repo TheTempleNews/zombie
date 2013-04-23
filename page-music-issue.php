@@ -7,26 +7,26 @@ Template Name: Music Issue
 <?php get_header(); ?>
 
 			<div id="content" class="music-issue music-issue-archive has-banner clearfix">
+
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+					<header id="page-header">
+
+						<div class="special-issue-text-banner-container wrap clearfix">
+							<h2 class="music-issue-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/essays/"><?php the_title(); ?></a></h2>
+						</div>
+
+						<div id="special-issue-description">
+							<?php the_content(); ?>
+						</div> <!-- end #special-issue-description -->
+
+					</header> <!-- end #page-header -->
+
+				<?php endwhile; endif; ?>
 			
 				<div id="inner-content" class="wrap clearfix">
 			
 					<div id="main" class="clearfix" role="main">
-
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<header id="page-header" class="twelvecol first last clearfix">
-
-								<div class="special-issue-text-banner-container clearfix">
-									<h2 class="music-issue-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/essays/"><?php the_title(); ?></a></h2>
-								</div>
-
-								<div id="special-issue-description">
-									<?php the_content(); ?>
-								</div> <!-- end #special-issue-description -->
-
-							</header> <!-- end #page-header -->
-
-						<?php endwhile; endif; ?>
 
 						<section id="" class="twelvecol first last clearfix">
 
