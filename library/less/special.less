@@ -634,6 +634,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 
 #content.music-issue {
 	background-image: url(../images/bkg/dark-mono2.png);
+	text-shadow: 0.1em 0.1em rgba(0,0,0,0.3);
+
+	a {
+		color: @darkMonoBlue;
+		-webkit-transition: all 500ms linear;
+		   -moz-transition: all 500ms linear;
+		    -ms-transition: all 500ms linear;
+		     -o-transition: all 500ms linear;
+		        transition: all 500ms linear;
+
+		&:visited {
+			color: @darkMonoBlue;
+		}
+
+		&:hover, &:active {
+			color: @thatred;
+		}
+	}
 
 	#page-header {
 
@@ -641,8 +659,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 			font-family: "ClutcheeRegular", @headline;
 			text-align: center;
 			font-weight: normal;
+			color: @darkMonoBlue;
+
+			a {
+				color: @darkMonoBlue;
+			}
 		}
 	} /* end #page-header */
+
+	.box {
+		background-color: @darkMonoOverlay;
+
+		& .box {
+			border: 1px solid #333;
+			-webkit-border-radius: 3px;
+			   -moz-border-radius: 3px;
+			        border-radius: 3px;
+		}
+	} /* end .box */
 
 
 } /* end #main.main-issue */
