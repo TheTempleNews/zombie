@@ -38,21 +38,15 @@ Template Name: Music Issue
 							$styles_count = count($style_classes);
 							$style_index = 0;
 
-							$featured_essays_args = array(
-								'post_type' => 'essay',
-								'meta_query' => array(
-									array(
-										'key' => 'feature',
-										'value' => true,
-										'compare' => '='
-									)
-								),
-								'posts_per_page' => 2
+							$args = array(
+								'post_type'     => 'article_ae',
+								'category_name' => 'music-issue-music',
+								'year'          => MUSIC_ISSUE_YEAR
 							);
 
-							$featured_essays = new WP_Query($featured_essays_args);
+							$query = new WP_Query($args);
 
-							if ($featured_essays->have_posts()) : while ($featured_essays->have_posts()) : $featured_essays->the_post();
+							if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
 
 								// this is the second part of the operation that determines first or last class based on column divisions. see above.
 								$k = $style_classes[$style_index++ % $styles_count];
@@ -61,52 +55,13 @@ Template Name: Music Issue
 
 								<article id="post-42483" class="box sixcol <?php echo $k; ?> clearfix" role="article">
 
-									<header class="box article-header">
+									<?php if ( has_post_thumbnail() ) { ?>
+										<div class="featured-image-container box">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+										</div>
+									<?php } ?>
 
-										<h3 class="headline h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									
-										<p class="byline"><i>by</i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-
-									</header> <!-- end article header -->
-							
-									<section class="dek">
-										<?php the_excerpt(); ?>
-									</section> <!-- end .dek -->
-							
-								</article> <!-- end article -->
-
-							<?php endwhile; endif; 
-
-							wp_reset_postdata();
-
-							$is_featured = '';
-
-							$essays_args = array(
-								'post_type' => 'essay',
-								//'meta_key' => 'feature',
-								//'meta_value' => false
-							);
-
-							$essays = new WP_Query($essays_args);
-
-							if ($essays->have_posts()) : while ($essays->have_posts()) : $essays->the_post();
-
-								$is_featured = get_post_meta($post->ID, 'feature');
-
-								if ($is_featured) {
-									continue;
-								}
-							?>
-
-								<article id="post-<?php the_ID(); ?>" <?php post_class('box sixcol push_three clearfix'); ?> role="article">
-
-									<header class="box article-header">
-
-										<h3 class="headline h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									
-										<p class="byline"><i>by</i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-
-									</header> <!-- end article header -->
+									<h1 class="headline h2 box"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 							
 									<section class="dek">
 										<?php the_excerpt(); ?>

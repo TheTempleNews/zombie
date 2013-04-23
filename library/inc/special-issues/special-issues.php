@@ -73,6 +73,25 @@ function ttn_bar_guide_year() {
 define('BAR_GUIDE_YEAR', ttn_bar_guide_year());
 
 /**
+ * Returns the year of the most recent Music Issue article.
+ *
+ * The most recent should always be at the time of the last Music Issue.
+ */
+function ttn_music_issue_year() {
+	$args = array(
+		'post_type'     => 'article_ae',
+		'category_name' => 'music-issue-music'
+	);
+	$query = get_posts($args);
+	$most_recent = $query[0];
+	$most_recent_post_date = $most_recent->post_date;
+	$output = date( 'Y', strtotime( $most_recent_post_date ) );
+	
+	return $output;	
+}
+define('MUSIC_ISSUE_YEAR', ttn_music_issue_year());
+
+/**
  * Displays the name of a Mover & Shaker.
  * 
  * Will only work when a single 'movers-shakers-people' item exists per post.
