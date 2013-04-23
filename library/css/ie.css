@@ -175,6 +175,14 @@ TYPOGRAPHY
   font-weight: normal;
   font-style: normal;
 }
+/* Clutchee */
+@font-face {
+  font-family: 'ClutcheeRegular';
+  src: url('../fonts/clutchee-webfont.eot');
+  src: url('../fonts/clutchee-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/clutchee-webfont.woff') format('woff'), url('../fonts/clutchee-webfont.ttf') format('truetype'), url('../fonts/clutchee-webfont.svg#ClutcheeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Mixins */
 /* smallcaps */
 .sc {
@@ -406,6 +414,9 @@ upon your base.scss styles.
   font-size: 120px;
 }
 /* end .the-essayist */
+.music-issue-text-banner {
+  font-size: 3.143em;
+}
 /**************************
  * WORDPRESS BODY CLASSES 
  **************************/
@@ -592,6 +603,9 @@ ADVERTS AND SOCIAL MEDIA
 }
 .bar-guide-text-banner {
   font-size: 4.5rem;
+}
+.music-issue-text-banner {
+  font-size: 4.500em;
 }
 .single-top-promo .bar-guide-text-banner {
   font-size: 3.5rem;
@@ -1999,6 +2013,9 @@ be seen on the Desktop.
 }
 .bar-guide-text-banner {
   font-size: 4.5rem;
+}
+.music-issue-text-banner {
+  font-size: 6.000em;
 }
 .single-top-promo .bar-guide-text-banner {
   font-size: 4.5rem;

@@ -17,7 +17,7 @@ Template Name: Music Issue
 							<header id="page-header" class="twelvecol clearfix">
 
 								<div class="special-issue-text-banner-container clearfix">
-									<h2 class="music-issue-text-banner special-issue-text-banner headline"><a href="<?php echo home_url(); ?>/essays/"><?php the_title(); ?></a></h2>
+									<h2 class="music-issue-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/essays/"><?php the_title(); ?></a></h2>
 								</div>
 
 								<div id="special-issue-description">
