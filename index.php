@@ -55,10 +55,8 @@
 												$videoID = get_post_meta($post->ID, 'video_link', true);
 												// Check if there is in fact a video URL
 												if ($videoID) {
-													echo '<div class="video-container clearfix">';
 													// Echo the embed code via oEmbed
 													echo wp_oembed_get( $videoID ); 
-													echo '</div>';
 												}
 												
 											echo '<h1 class="headline">' . '<a href="' . get_post_permalink() . '" rel="bookmark" title="' . the_title_attribute('echo=0') . '">' . get_the_title() . '</a></h1>';
@@ -363,10 +361,8 @@
 									$videoID = get_post_meta($post->ID, 'video_link', true);
 									// Check if there is in fact a video URL
 									if ($videoID) {
-										echo '<div class="video-container clearfix">';
 										// Echo the embed code via oEmbed
 										echo wp_oembed_get( $videoID ); 
-										echo '</div>';
 									} ?>
 
 									<header class="clearfix">

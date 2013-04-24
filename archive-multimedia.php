@@ -78,10 +78,8 @@
 												$videoID = gdtt_get_post_meta($post->ID, 'video_link', true);
 												// Check if there is in fact a video URL
 												if ($videoID) {
-													echo '<div class="video-container clearfix">';
 													// Echo the embed code via oEmbed
 													echo wp_oembed_get( $videoID ); 
-													echo '</div>';
 												} ?>
 		
 												<header class="clearfix">

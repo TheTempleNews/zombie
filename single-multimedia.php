@@ -35,15 +35,13 @@
 									
 									<div class="single-video single-multimedia single-mgallery">
 										<?php
-												// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
+												// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/
 												// Get the video URL and put it in the $video variable
 												$videoID = get_post_meta($post->ID, 'video_link', true);
 												// Check if there is in fact a video URL
 												if ($videoID) {
-													echo '<div class="video-container">';
 													// Echo the embed code via oEmbed
 													echo wp_oembed_get( $videoID ); 
-													echo '</div>';
 										} ?>
 									</div>
 									
