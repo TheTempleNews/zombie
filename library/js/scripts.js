@@ -28,6 +28,9 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+	/* FitVids */
+	$(".video-container").fitVids();
+
 	/* fitText  */
 	$("#moversshakers-page-title.fittext").fitText(0.8);
 	$(".moversshakers-text-banner.fittext").fitText(1);
@@ -49,7 +52,7 @@ jQuery(document).ready(function($) {
 			gutterWidth: 0
 		});
 	});
-	
+
 
 	/*
 	var maxHeight = 0;
