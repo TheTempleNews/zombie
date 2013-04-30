@@ -1,19 +1,13 @@
-<?php
-/*
-Template Name: Music Issue
-*/
-?>
-
 <?php get_header(); ?>
 
-			<div id="content" class="music-issue music-issue-archive has-banner clearfix">
+			<div id="content" class="the-american the-american-archive has-banner clearfix">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<header id="page-header">
 
 						<div class="special-issue-text-banner-container wrap clearfix">
-							<h2 class="music-issue-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/music-issue/"><?php the_title(); ?></a></h2>
+							<h2 class="the-american-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/the-american/"><?php the_title(); ?></a></h2>
 						</div>
 
 						<div id="special-issue-description">
@@ -33,9 +27,9 @@ Template Name: Music Issue
 							<?php
 
 							$args = array(
-								'post_type'     => 'article_ae',
-								'category_name' => 'music-issue-music',
-								'year'          => MUSIC_ISSUE_YEAR
+								'post_type'     => 'article_sports',
+								'category_name' => 'the-american-sports',
+								'year'          => 2013
 							);
 
 							$query = new WP_Query($args);
@@ -44,7 +38,7 @@ Template Name: Music Issue
 
 							?>
 
-								<article id="post-42483" class="box free-mason <?php echo ttn_gs_column_width(6, 'mason'); ?> clearfix" role="article">
+								<article id="post-<?php echo $post->ID ?>" class="box free-mason <?php echo ttn_gs_column_width(6, 'mason'); ?> clearfix" role="article">
 
 									<?php if ( has_post_thumbnail() ) { ?>
 										<div class="featured-image-container box">
