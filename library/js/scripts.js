@@ -36,9 +36,7 @@ jQuery(document).ready(function($) {
 	$(".moversshakers-text-banner.fittext").fitText(1);
 	//$(".moversshakers-text-banner.fittext").fitText(0.75);
 
-	$(".the-american-text-banner.fittext").fitText(1.75, {
-		maxFontSize: '36px'
-	});
+	$(".the-american-text-banner.fittext").fitText(1.75);
 
 	/* slabText */
 	$(".slabtextthis").slabText();
@@ -128,7 +126,6 @@ jQuery(document).ready(function($) {
 		});
 
 		/* fitText  */
-		$(".fittext").fitText(0.95);
 		$("#moversshakers-page-title.fittext").fitText(0.8);
 		$(".moversshakers-text-banner.fittext").fitText(0.75);
 		$("h2.essayist-text-banner.fittext").fitText(1.5, {
@@ -141,7 +138,6 @@ jQuery(document).ready(function($) {
 
 	/* off the bat large screen actions */
 	if (responsive_viewport > 1030) {
-		$(".fittext").fitText(1);
 		$(".slabtextthis").slabText();
 		$("#moversshakers-page-title.fittext").fitText(0.8);
 		$(".moversshakers-text-banner.fittext").fitText(0.75);
@@ -155,7 +151,6 @@ jQuery(document).ready(function($) {
 
 	/* 300x250 sidebar ad display-related js (see style.less for info) - should load appropriate 300x250 ad js above this size */
 	if (responsive_viewport > 1140) {
-		$(".fittext").fitText(1);
 		$(".slabtextthis").slabText();
 
 		/* fitText  */
