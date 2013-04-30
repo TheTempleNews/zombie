@@ -22,6 +22,47 @@
 			
 					<div id="main" class="clearfix" role="main">
 
+						<section class="featured-article twelvecol first last clearfix">
+
+							<?php
+
+							// Get Joey's story - this is a really bad way to do things.
+							$featured_args = array(
+								'p' => 43872
+								'post_type'     => 'article_sports',
+								'category_name' => 'the-american-sports',
+								'year'          => 2013,
+							);
+
+							$query = new WP_Query($featured_args);
+
+							if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+
+							?>
+
+								<article id="post-<?php echo $post->ID ?>" class="box <?php echo ttn_gs_column_width(6, 'mason'); ?> clearfix" role="article">
+
+									<?php if ( has_post_thumbnail() ) { ?>
+										<div class="featured-image-container eightcol first box">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-792'); ?></a>
+										</div>
+									<?php } ?>
+
+									<header class="fourcol last">
+										<h1 class="headline h2 box"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+										<section class="dek">
+											<?php the_excerpt(); ?>
+										</section> <!-- end .dek -->
+									</header>
+							
+								</article> <!-- end article -->
+
+							<?php endwhile; endif; 
+
+							wp_reset_postdata(); ?>
+
+						</section>
+
 						<section class="mason twelvecol first last clearfix">
 
 							<?php
@@ -30,7 +71,8 @@
 								'post_type'     => 'article_sports',
 								'category_name' => 'the-american-sports',
 								'year'          => 2013,
-								'nopaging'      => true
+								'nopaging'      => true,
+								'post__not_in'  => array(43872)
 							);
 
 							$query = new WP_Query($args);
