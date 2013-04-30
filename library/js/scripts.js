@@ -32,9 +32,11 @@ jQuery(document).ready(function($) {
 	$(".video-container").fitVids();
 
 	/* fitText  */
-	$("#moversshakers-page-title.fittext").fitText(0.8);
+	//$("#moversshakers-page-title.fittext").fitText(0.8);
 	$(".moversshakers-text-banner.fittext").fitText(1);
-	$(".moversshakers-text-banner.fittext").fitText(0.75);
+	//$(".moversshakers-text-banner.fittext").fitText(0.75);
+
+	$(".the-american-text-banner.fittext").fitText(1.75);
 
 	/* slabText */
 	$(".slabtextthis").slabText();

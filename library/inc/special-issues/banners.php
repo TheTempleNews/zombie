@@ -80,6 +80,12 @@
 							</div>
 
 						</div> <!-- end #music-issue-top-promo -->
+					<?php } elseif (THE_AMERICAN == true) { ?>
+
+						<div class="special-issue-text-banner-container wrap clearfix">
+							<h2 class="the-american-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/the-american/">The American Athletic Conference</a></h2>
+						</div>
+
 					<?php } // END IT ALL! ?>
 				
 				</div> <!-- end .home-top-promo -->

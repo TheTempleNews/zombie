@@ -15,11 +15,18 @@ very heavy because they're imported at the first media query.
  * SPECIAL ISSUE PAGE STYLES *
  *****************************/
 
+.the-american-text-banner {
+	font-family: "SFCollegiateRegular", @headline;
+	color: @thatred;
+
+	&.headline a {
+		color: @thatred;
+	}
+}
+
 .music-issue-text-banner {
 	font-size: 2.143em; /* 30px @ 14px */
 	font-family: "ClutcheeRegular", @headline;
-	text-align: center;
-	font-weight: normal;
 	color: @darkMonoBlue;
 	margin-bottom: 0;
 
@@ -30,15 +37,17 @@ very heavy because they're imported at the first media query.
 
 .moversshakers-text-banner {
 	font-family: @headline;
-	font-weight: normal;
 	text-transform: uppercase;
 	font-size: 72px;
 }
 
 .weekender-text-banner {
 	font-family: 'BlackoutMidnight', @headline;
-	font-weight: normal;
 	text-transform: uppercase;
+}
+
+.special-issue-text-banner {
+	font-weight: normal;
 	text-align: center;
 }
 
@@ -698,4 +707,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 
 
 
+/**********************
+ * THE AMERICAN STYLES *
+ **********************/
 
+#content.the-american {
+
+	#page-header {
+		margin: 2em 0;
+	} /* end #page-header */
+
+} /* end .the-american*/

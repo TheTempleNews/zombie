@@ -38,4 +38,7 @@
 	define( 'BAR_GUIDE', false );
 
 	// Set this to true to display Music Issue banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
-	define( 'MUSIC_ISSUE', true );
+	define( 'MUSIC_ISSUE', false );
+
+	// Set this to true to display The American banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
+	define( 'THE_AMERICAN', true );
