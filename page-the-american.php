@@ -28,7 +28,7 @@
 
 							// Get Joey's story - this is a really bad way to do things.
 							$featured_args = array(
-								'p' => 43872
+								'p' => 43872,
 								'post_type'     => 'article_sports',
 								'category_name' => 'the-american-sports',
 								'year'          => 2013,
