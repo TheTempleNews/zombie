@@ -4,9 +4,9 @@
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<header id="page-header">
+					<header id="page-header" class="wrap clearfix">
 
-						<div class="special-issue-text-banner-container wrap clearfix">
+						<div class="special-issue-text-banner-container twelvecol first last clearfix">
 							<h2 class="the-american-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/the-american/"><?php the_title(); ?></a></h2>
 						</div>
 

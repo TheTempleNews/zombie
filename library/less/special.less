@@ -714,7 +714,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 #content.the-american {
 
 	#page-header {
-		margin: 2em 0;
+		margin: 2em auto;
+		display: block;
 	} /* end #page-header */
+
+	article.box {
+		padding: 1em;
+		margin-bottom: 2em;
+		background: @thatred;
+		color: white;
+
+		&:after {
+			background: @thatgrey;
+			width: 25%;
+			margin: 0 auto;
+			border-bottom: 1px solid @thatgrey;
+			content: " ";
+		}
+
+		a, a:visited {
+			color: white;
+			font-family: "SFCollegiateSolidRegular", @headline;
+			font-weight: normal;
+		}
+
+		a:hover {
+			color: black;
+		}
+	} /* end .box */
 
 } /* end .the-american*/

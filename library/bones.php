@@ -147,6 +147,9 @@ function bones_scripts_and_styles() {
 
 	// FitVids
 	wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fitvids-ck.js', array( 'jquery' ), ZOM_VERSION, true );
+
+	// masonry
+	wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', ('jquery'), ZOM_VERSION, true );
 	
 	// enqueue styles and scripts
 	wp_enqueue_script( 'bones-modernizr' ); 
@@ -174,8 +177,7 @@ function bones_scripts_and_styles() {
         wp_enqueue_style( 'font-vollkorn' );
 	}
 
-	if ( is_page( 'music-issue' )) {
-		wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', ('jquery'), ZOM_VERSION, true );
+	if ( is_page( 'music-issue' ) || is_page( 'the-american' )) {
 		wp_enqueue_script( 'masonry' );
 	}
 
