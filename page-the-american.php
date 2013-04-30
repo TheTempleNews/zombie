@@ -29,7 +29,8 @@
 							$args = array(
 								'post_type'     => 'article_sports',
 								'category_name' => 'the-american-sports',
-								'year'          => 2013
+								'year'          => 2013,
+								'nopaging'      => true
 							);
 
 							$query = new WP_Query($args);
