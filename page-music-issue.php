@@ -44,7 +44,7 @@ Template Name: Music Issue
 
 							?>
 
-								<article id="post-42483" class="box free-mason <?php echo ttn_gs_column_width(6, 'mason'); ?> clearfix" role="article">
+								<article id="post-<?php echo $post->ID ?>" class="box free-mason <?php echo ttn_gs_column_width(6, 'mason'); ?> clearfix" role="article">
 
 									<?php if ( has_post_thumbnail() ) { ?>
 										<div class="featured-image-container box">
