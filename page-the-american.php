@@ -60,7 +60,7 @@
 
 						</section> <!-- end #essay-feed -->
 
-						<iframe width='960' height='1300' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0AoFxS8mAGpYldEU3Y0dRdkxPekY5c3Y4SU9TTW5RRVE&single=true&gid=0&output=html'></iframe>
+						<iframe width='85%' height='1300' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0AoFxS8mAGpYldEU3Y0dRdkxPekY5c3Y4SU9TTW5RRVE&single=true&gid=0&output=html'></iframe>
 
 					</div> <!-- end #main -->
 
