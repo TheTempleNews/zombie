@@ -63,7 +63,7 @@ Template Name: Documentary
 
 								<header class="article-header">
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+									<h1 class="page-title fittext" itemprop="headline"><?php the_title(); ?></h1>
 
 								</header> <!-- end article header -->
 

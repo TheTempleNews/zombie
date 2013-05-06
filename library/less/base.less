@@ -625,7 +625,46 @@ style a page via class
 				
 			}
 		}
-	}
+	} /* end print edition */
+
+	.page-template-documentary-php {
+		background-color: #1a1a1a;
+
+		.header {
+			background-color: inherit;
+			text-align: center;
+			margin-top: 2.2em;
+
+			#logo {
+				margin: 0;
+			}
+
+			h3 {
+				.h4;
+				text-transform: uppercase;
+			}
+		}
+
+		.page-title {
+			color: white;
+			text-align: center;
+		}
+
+		.post-content {
+			margin-top: 2.2em;
+		}
+
+		/* "Branded" Documentary Page */
+		&.page-branded {
+
+			.page-title {
+				font-family: "Museo", @sans-serif;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+
+	} /* end documentary template */
 .logged-in {}                                  /* if user is logged in */
 .paged {}                                      /* paged items like search results or archives */
 	.paged-1 {}                                /* individual paged (i.e. body.paged-3) */
