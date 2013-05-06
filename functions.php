@@ -12,10 +12,10 @@ sidebars, comments, ect.
 
 /*
 1. library/bones.php
-    - head cleanup (remove rsd, uri links, junk css, ect)
+	- head cleanup (remove rsd, uri links, junk css, ect)
 	- enqeueing scripts & styles
 	- theme support functions
-    - custom menu output & fallbacks
+	- custom menu output & fallbacks
 	- related post function
 	- page-navi function
 	- removing <p> from around images
@@ -26,22 +26,22 @@ sidebars, comments, ect.
 require_once('library/bones.php'); // if you remove this, bones will break
 /*
 2. library/custom-post-type.php
-    - an example custom post type
-    - example custom taxonomy (like categories)
-    - example custom taxonomy (like tags)
+	- an example custom post type
+	- example custom taxonomy (like categories)
+	- example custom taxonomy (like tags)
 */
 // require_once('library/custom-post-type.php'); // you can disable this if you like
 /*
 3. library/admin.php
-    - removing some default WordPress dashboard widgets
-    - an example custom dashboard widget
-    - adding custom login css
-    - changing text in footer of admin
+	- removing some default WordPress dashboard widgets
+	- an example custom dashboard widget
+	- adding custom login css
+	- changing text in footer of admin
 */
 require_once('library/admin.php'); // this comes turned off by default
 /*
 4. library/translation/translation.php
-    - adding support for other languages
+	- adding support for other languages
 */
 // require_once('library/translation/translation.php'); // this comes turned off by default
 /*
@@ -135,89 +135,89 @@ function custom_image_sizes_choose( $sizes ) {
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-    register_sidebar(array(
-    	'id' => 'sidebar1',
-    	'name' => 'Primary Sidebar (First)',
-    	'description' => 'The first primary sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
+	register_sidebar(array(
+		'id' => 'sidebar1',
+		'name' => 'Primary Sidebar (First)',
+		'description' => 'The first primary sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
 	register_sidebar(array(
-    	'id' => 'sidebar2',
-    	'name' => 'Primary Sidebar (Second)',
-    	'description' => 'The second primary sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
-    register_sidebar(array(
-    	'id' => 'widgetized-front-center-1',
-    	'name' => 'Homepage Center Widgets (First)',
-    	'description' => 'The first widgetized area for the home page center column.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
-    register_sidebar(array(
-    	'id' => 'widgetized-front-center-2',
-    	'name' => 'Homepage Center Widgets (Second)',
-    	'description' => 'The second widgetized area for the home page center column.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
+		'id' => 'sidebar2',
+		'name' => 'Primary Sidebar (Second)',
+		'description' => 'The second primary sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar(array(
+		'id' => 'widgetized-front-center-1',
+		'name' => 'Homepage Center Widgets (First)',
+		'description' => 'The first widgetized area for the home page center column.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar(array(
+		'id' => 'widgetized-front-center-2',
+		'name' => 'Homepage Center Widgets (Second)',
+		'description' => 'The second widgetized area for the home page center column.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-    register_sidebar(array(
-    	'id' => 'widgetized-broadcecil',
-    	'name' => 'Broad & Cecil RSS',
-    	'description' => 'This should be used to display an RSS feed from Broad & Cecil.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '',
-    	'after_title' => '',
-    ));
+	register_sidebar(array(
+		'id' => 'widgetized-broadcecil',
+		'name' => 'Broad & Cecil RSS',
+		'description' => 'This should be used to display an RSS feed from Broad & Cecil.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
 
-    register_sidebar(array(
-    	'id' => 'widgetized-thecherry',
-    	'name' => 'The Cherry RSS',
-    	'description' => 'This should be used to display an RSS feed from The Cherry.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '',
-    	'after_title' => '',
-    ));
-    /* 
-    to add more sidebars or widgetized areas, just copy
-    and edit the above sidebar code. In order to call 
-    your new sidebar just use the following code:
-    
-    Just change the name to whatever your new
-    sidebar's id is, for example:
-    
-    register_sidebar(array(
-    	'id' => 'sidebar2',
-    	'name' => 'Sidebar 2',
-    	'description' => 'The second (secondary) sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
-    To call the sidebar in your template, you can just copy
-    the sidebar.php file and rename it to your sidebar's name.
-    So using the above example, it would be:
-    sidebar-sidebar2.php
-    
-    */
+	register_sidebar(array(
+		'id' => 'widgetized-thecherry',
+		'name' => 'The Cherry RSS',
+		'description' => 'This should be used to display an RSS feed from The Cherry.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
+	/* 
+	to add more sidebars or widgetized areas, just copy
+	and edit the above sidebar code. In order to call 
+	your new sidebar just use the following code:
+	
+	Just change the name to whatever your new
+	sidebar's id is, for example:
+	
+	register_sidebar(array(
+		'id' => 'sidebar2',
+		'name' => 'Sidebar 2',
+		'description' => 'The second (secondary) sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	To call the sidebar in your template, you can just copy
+	the sidebar.php file and rename it to your sidebar's name.
+	So using the above example, it would be:
+	sidebar-sidebar2.php
+	
+	*/
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
@@ -230,27 +230,27 @@ function bones_comments($comment, $args, $depth) {
 			<header class="comment-author vcard">
 				<?php
 				/* this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-			        echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-			    */
+					echo get_avatar($comment,$size='32',$default='<path_to_url>' );
+				*/
 				?>
-			    <!-- custom gravatar call -->
-			    <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>&s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
-			    <!-- end custom gravatar call -->
+				<!-- custom gravatar call -->
+				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>&s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+				<!-- end custom gravatar call -->
 				<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
 				<?php edit_comment_link(__('(Edit)'),'  ','') ?>
 			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
-       			<div class="alert info">
-          			<p><?php _e('Your comment is awaiting moderation.') ?></p>
-          		</div>
+				<div class="alert info">
+					<p><?php _e('Your comment is awaiting moderation.') ?></p>
+				</div>
 			<?php endif; ?>
 			<section class="comment_content clearfix">
 				<?php comment_text(); ?>
 			</section>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
 		</article>
-    <!-- </li> is added by wordpress automatically -->
+	<!-- </li> is added by wordpress automatically -->
 <?php
 } // don't remove this bracket!
 
@@ -274,13 +274,13 @@ function bones_wpsearch( $form = '' ) {
  */
 function the_category_but($excl='', $spacer=' &#124; '){
    $categories = get_the_category();
-      if(!empty($categories)){
-      	$exclude = $excl;
-      	$exclude = explode(",", $exclude);
+	  if(!empty($categories)){
+		$exclude = $excl;
+		$exclude = explode(",", $exclude);
 		$thecount = count(get_the_category()) - count($exclude);
-      	foreach ($categories as $cat) {
-      		$html = '';
-      		if(!in_array($cat->cat_ID, $exclude)) {
+		foreach ($categories as $cat) {
+			$html = '';
+			if(!in_array($cat->cat_ID, $exclude)) {
 				$html .= '<span class="post-category-list">';
 				$html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
 				$html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a></span>';
@@ -288,10 +288,10 @@ function the_category_but($excl='', $spacer=' &#124; '){
 					$html .= $spacer;
 				}
 			$thecount--;
-      		echo $html;
-      		}
-	      }
-      }
+			echo $html;
+			}
+		  }
+	  }
 }
 
 
@@ -436,7 +436,7 @@ function ttn_author_archive_inc_cpt( $query ) {
  */
 function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
-    	echo $category->cat_name . ' | ';
+		echo $category->cat_name . ' | ';
 	}
 }
 
@@ -449,8 +449,8 @@ function the_category_no_link() {
  */
 function ttn_add_custom_types( $query ) {
   if( !is_admin() && is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-    $query->set( 'post_type', array(
-     'post', 'nav_menu_item', 'article_news', 'article_sports', 'article_living', 'article_ae', 'article_opinion', 'multimedia','slideshows'
+	$query->set( 'post_type', array(
+	 'post', 'nav_menu_item', 'article_news', 'article_sports', 'article_living', 'article_ae', 'article_opinion', 'multimedia','slideshows'
 		));
 	  return $query;
 	}
@@ -477,14 +477,14 @@ add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
  * @see http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
  */
 function is_subpage() {
-    global $post;                              // load details about this page
+	global $post;                              // load details about this page
 
-    if ( is_page() && $post->post_parent ) {   // test to see if the page has a parent
-        return $post->post_parent;             // return the ID of the parent post
+	if ( is_page() && $post->post_parent ) {   // test to see if the page has a parent
+		return $post->post_parent;             // return the ID of the parent post
 
-    } else {                                   // there is no parent so ...
-        return false;                          // ... the answer to the question is false
-    }
+	} else {                                   // there is no parent so ...
+		return false;                          // ... the answer to the question is false
+	}
 }
 
 
@@ -494,29 +494,29 @@ function is_subpage() {
  * @see http://speckyboy.com/2011/04/27/20-snippets-and-hacks-to-make-wordpress-user-friendly-for-your-clients/
  */
 function remove_menus() {
-    global $menu;
-    global $current_user;
-    get_currentuserinfo();
+	global $menu;
+	global $current_user;
+	get_currentuserinfo();
 	
 	$user_id = get_current_user_id();
 	$user_info = get_userdata( $user_id );
 	$user_role = $user_info->roles[1];
  
-    if ($user_role !== 'administrator') {
-        $restricted = array(__('Posts'),
-                            __('Pages'),
-                            __('Appearance'),
-                            __('Plugins'),
-                            __('Tools'),
-                            __('Settings')
-        );
-        end ($menu);
-        while (prev($menu)) {
-            $value = explode(' ',$menu[key($menu)][0]);
-            if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
-        } // end while
+	if ($user_role !== 'administrator') {
+		$restricted = array(__('Posts'),
+							__('Pages'),
+							__('Appearance'),
+							__('Plugins'),
+							__('Tools'),
+							__('Settings')
+		);
+		end ($menu);
+		while (prev($menu)) {
+			$value = explode(' ',$menu[key($menu)][0]);
+			if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
+		} // end while
  
-    } // end if
+	} // end if
 }
 
 add_action('admin_menu', 'remove_menus');
@@ -557,18 +557,18 @@ function the_post_thumbnail_caption() {
    $thumbnail_image = get_posts($args);
 
    if ($thumbnail_image && isset($thumbnail_image[0])) {
-     //show thumbnail title
-     //echo $thumbnail_image[0]->post_title; 
+	 //show thumbnail title
+	 //echo $thumbnail_image[0]->post_title; 
 
-     //Uncomment to show the thumbnail caption
-     echo $thumbnail_image[0]->post_excerpt; 
+	 //Uncomment to show the thumbnail caption
+	 echo $thumbnail_image[0]->post_excerpt; 
 
-     //Uncomment to show the thumbnail description
-     //echo $thumbnail_image[0]->post_content; 
+	 //Uncomment to show the thumbnail description
+	 //echo $thumbnail_image[0]->post_content; 
 
-     //Uncomment to show the thumbnail alt field
-     //$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-     //if(count($alt)) echo $alt;
+	 //Uncomment to show the thumbnail alt field
+	 //$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+	 //if(count($alt)) echo $alt;
   }
 }
 /**
@@ -639,27 +639,27 @@ function the_post_thumbnail_caption() {
 		// Get a SimplePie feed object from the specified feed source.
 		$rss = fetch_feed( $feed_url );
 		if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
-		    // Figure out how many total items there are, but limit it to 5. 
-		    $maxitems = $rss->get_item_quantity(5); 
+			// Figure out how many total items there are, but limit it to 5. 
+			$maxitems = $rss->get_item_quantity(5); 
 
-		    // Build an array of all the items, starting with element 0 (first element).
-		    $rss_items = $rss->get_items(0, $maxitems); 
+			// Build an array of all the items, starting with element 0 (first element).
+			$rss_items = $rss->get_items(0, $maxitems); 
 		endif;
 
 		$output = '';
 
 		$output .= '<ul>';
-		   	if ($maxitems == 0) $output .= '<li>No items.</li>';
-		    else
-		    // Loop through each feed item and display each item as a hyperlink.
-		    foreach ( $rss_items as $item ) :
-		    	$output .= '<li>';
-		    		$output .= '<p class="ttn-network-feed-timestamp">' . $item->get_date('d F Y') . '</p>';
-		        	$output .= '<a href="' . esc_url( $item->get_permalink() ) . '" title="Posted ' . $item->get_date('d F Y | H:i') . '">';
-		       		$output .= esc_html( $item->get_title() );
-		       		$output .= '</a>';
-		    	$output .= '</li>';
-		    endforeach;
+			if ($maxitems == 0) $output .= '<li>No items.</li>';
+			else
+			// Loop through each feed item and display each item as a hyperlink.
+			foreach ( $rss_items as $item ) :
+				$output .= '<li>';
+					$output .= '<p class="ttn-network-feed-timestamp">' . $item->get_date('d F Y') . '</p>';
+					$output .= '<a href="' . esc_url( $item->get_permalink() ) . '" title="Posted ' . $item->get_date('d F Y | H:i') . '">';
+					$output .= esc_html( $item->get_title() );
+					$output .= '</a>';
+				$output .= '</li>';
+			endforeach;
 		$output .= '</ul>';
 
 		echo $output;
@@ -761,20 +761,20 @@ add_shortcode("blockquote", "zom_blockquote");
  * @return string
  */
 function get_the_content_first_graf() {
-    $content = get_the_content();
-    $content = apply_filters('the_content', $content);
-    $content = str_replace(']]>', ']]&gt;', $content);
-    $content_explode = explode("</p>", $content);
+	$content = get_the_content();
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	$content_explode = explode("</p>", $content);
 
-    $c = 0; $p = count($content_explode); $return_data = "";
-    while($c < $p) {
-        $test = strip_tags($content_explode[$c]);
-        if($test != '') {
-            $return_data = $return_data . $content_explode[$c] . "</p>\n";
-            break;
-        };
-    }
-    return $return_data;
+	$c = 0; $p = count($content_explode); $return_data = "";
+	while($c < $p) {
+		$test = strip_tags($content_explode[$c]);
+		if($test != '') {
+			$return_data = $return_data . $content_explode[$c] . "</p>\n";
+			break;
+		};
+	}
+	return $return_data;
 }
 
 /**
@@ -814,5 +814,15 @@ function ttn_gs_column_width( $width, $namespace ) {
 	return $output;
 }
 
+/**
+ * Add slug to body classes.
+ */
+function ttn_body_slug( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
 
-
+add_filter( 'body_class', 'ttn_body_slug' );
