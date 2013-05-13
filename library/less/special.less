@@ -140,7 +140,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 		}
 
 	}
-}
+
+	.documentary-banner {
+		text-align: center;
+		margin-bottom: 1.5em;
+
+		h2,
+		h3 {
+			font-family: "Museo", @headline;
+			text-transform: uppercase;
+			color: @thatred;
+
+				a {
+					color: @thatred;
+
+					&:visited {
+						color: @thatred;
+					}
+
+					&:hover {
+						color: black;
+					}
+				}
+		}
+
+		h2 {
+			font-weight: 700;
+			margin-bottom: 0;
+			font-size: 4em; // 56px @ 14px root
+		}
+
+		h3 {
+			.h4;
+			font-family: "Museo", @headline;
+			font-weight: 300;
+		}
+	} /* end documentary-banner */
+} /* end .home-top-promo */
 
 .si-banner-container {
 	width: 100%;

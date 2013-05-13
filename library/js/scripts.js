@@ -37,6 +37,7 @@ jQuery(document).ready(function($) {
 	//$(".moversshakers-text-banner.fittext").fitText(0.75);
 	$(".the-american-text-banner.fittext").fitText(1.75);
 	$(".page-branded .page-title.fittext").fitText(0.5);
+	//$(".documentary-banner .fittext").fitText();
 
 	/* slabText */
 	$(".slabtextthis").slabText();

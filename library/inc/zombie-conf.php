@@ -13,7 +13,7 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.4.8.4' );
+	define( 'ZOM_VERSION', '1.4.9' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
@@ -41,4 +41,7 @@
 	define( 'MUSIC_ISSUE', false );
 
 	// Set this to true to display The American banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
-	define( 'THE_AMERICAN', true );
+	define( 'THE_AMERICAN', false );
+
+	// Set this to true to display Documentary banner. HOME_TOP_PROMO must be set to true.
+	define( 'DOCUMENTARY', true );

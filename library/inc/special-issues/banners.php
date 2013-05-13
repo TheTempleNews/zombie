@@ -86,6 +86,15 @@
 							<h2 class="the-american-text-banner special-issue-text-banner headline fittext"><a href="<?php echo home_url(); ?>/the-american/">The American Athletic Conference</a></h2>
 						</div>
 
+					<?php } elseif (DOCUMENTARY == true) { ?>
+
+						<?php // the link to the "branded" page is not dynamic - because i'm in a rush and i hate my future self (sorry future self) ?>
+
+						<div class="documentary-banner wrap clearfix">
+							<h2 class="headline fittext"><a href="<?php echo home_url(); ?>/documentaries/branded/">Branded</a></h2>
+							<h3 class="headline">The Temple Made Documentary</h3>
+						</div>
+
 					<?php } // END IT ALL! ?>
 				
 				</div> <!-- end .home-top-promo -->
