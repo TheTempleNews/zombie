@@ -24,8 +24,13 @@
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+		
+		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
+		
+		<!-- Typekit -->
+		<script type="text/javascript" src="//use.typekit.net/qno7mfo.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<?php
 		// Load font Source Sans Pro 900 on Movers & Shakers page
