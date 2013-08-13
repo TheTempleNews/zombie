@@ -5,11 +5,14 @@
 				<div id="inner-content" class="wrap clearfix">
 				
 				    <div id="main" class="eightcol first clearfix" role="main">
-					
-						<h1 class="archive-main-title">Archives <span class="archive-breadcrumb"> / category / <?php echo strtolower( single_cat_title('', false) ); ?></span></h1>
-						
-						
-						
+
+				    	<?php if (is_category('training-camp-2013')) { ?>
+				    		<div class="trainingcamp-banner">
+								<h2 class="headline fittext tk-ltc-squareface-sc"><a href="<?php echo home_url(); ?>/category/sports/training-camp-2013/">Training Camp 2013</a></h2>
+						</div>
+				    	<?php } else { ?>
+				    		<h1 class="archive-main-title">Archives <span class="archive-breadcrumb"> / category / <?php echo strtolower( single_cat_title('', false) ); ?></span></h1>
+				    	<?php } // end else ?>
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

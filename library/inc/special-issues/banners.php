@@ -95,6 +95,12 @@
 							<h3 class="headline">The Temple Made Documentary</h3>
 						</div>
 
+					<?php } elseif (TRAININGCAMP === true) { ?>
+
+						<div class="trainingcamp-banner wrap clearfix">
+							<h2 class="headline fittext tk-ltc-squareface-sc"><a href="<?php echo home_url(); ?>/category/sports/training-camp-2013/">Training Camp 2013</a></h2>
+						</div>
+
 					<?php } // END IT ALL! ?>
 				
 				</div> <!-- end .home-top-promo -->
