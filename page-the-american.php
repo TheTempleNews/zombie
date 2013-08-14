@@ -72,7 +72,7 @@
 								'category_name' => 'the-american-sports',
 								'year'          => 2013,
 								'nopaging'      => true,
-								'post__not_in'  => array(43872)
+								'post__not_in'  => array(43872, 'the-american-previews')
 							);
 
 							$query = new WP_Query($args);
@@ -100,6 +100,46 @@
 							<?php endwhile; endif; 
 
 							wp_reset_postdata(); ?>
+
+						</section> <!-- end #essay-feed -->
+
+
+
+						<section class="the-american__previews twelvecol first last clearfix">
+
+							<div class="the-american__previews__inner box">
+								
+								<?php
+	
+								$args = array(
+									'post_type'     => 'article_sports',
+									'category_name' => 'the-american-previews',
+									'year'          => 2013,
+									'nopaging'      => true,
+									'post__not_in'  => array(43872)
+								);
+	
+								$query = new WP_Query($args);
+	
+								if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+	
+								?>
+	
+									<article id="post-<?php echo $post->ID ?>" class="the-american__preview" role="article">
+	
+										<h1 class="headline h3"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+								
+										<section class="dek">
+											<?php the_excerpt(); ?>
+										</section> <!-- end .dek -->
+								
+									</article> <!-- end article -->
+	
+								<?php endwhile; endif; 
+	
+								wp_reset_postdata(); ?>
+
+							</div>
 
 						</section> <!-- end #essay-feed -->
 
