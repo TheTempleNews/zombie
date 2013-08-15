@@ -45,16 +45,19 @@ jQuery(document).ready(function($) {
 	/* masonry */
 	var $masonContainer = $('.mason');
 
-	$masonContainer.imagesLoaded(function(){
-		$masonContainer.masonry({
-			itemSelector: 'article.free-mason',
-			//columnWidth: 60,
-			columnWidth: function( containerWidth ) {
-				return containerWidth / 2;
-			},
-			gutterWidth: 0
-		});
-	});
+//	$masonContainer.imagesLoaded(function(){
+		if (!!$masonContainer.masonry) {
+			$masonContainer.masonry({
+				itemSelector: 'article.free-mason',
+				//columnWidth: 60,
+				columnWidth: function( containerWidth ) {
+					return containerWidth / 2;
+				},
+				gutterWidth: 0
+			});
+		}
+		
+//	});
 
 
 	/*

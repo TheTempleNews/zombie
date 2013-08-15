@@ -137,7 +137,7 @@ function bones_scripts_and_styles() {
 
 	// Google Analytics Advanced Content Tracking
 	// see http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
-	wp_register_script( 'ga-tracking', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ga.scrolltracking-ck.js', array( 'jquery' ), ZOM_VERSION, true );
+	//wp_register_script( 'ga-tracking', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ga.scrolltracking-ck.js', array( 'jquery' ), ZOM_VERSION, true );
 	
 	// FitText 1.1 http://fittextjs.com/
 	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
@@ -167,9 +167,9 @@ function bones_scripts_and_styles() {
 	wp_enqueue_script( 'bones-js' ); 
 
 	// if the current page being displayed is single, load the scroll tracker for GA
-	if ( is_single() ) {
-		wp_enqueue_script( 'ga-tracking' );
-	}
+	// if ( is_single() ) {
+	// 	wp_enqueue_script( 'ga-tracking' );
+	// }
 
 	// conditional font loading
 	if ( is_page_template('page-essays.php') || get_post_type( $the_post = false )) {
