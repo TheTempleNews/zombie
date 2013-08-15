@@ -68,11 +68,12 @@
 							<?php
 
 							$args = array(
-								'post_type'     => 'article_sports',
-								'category_name' => 'the-american-sports',
-								'year'          => 2013,
-								'nopaging'      => true,
-								'post__not_in'  => array(43872, 'the-american-previews')
+								'post_type'         => 'article_sports',
+								'category_name'     => 'the-american-sports',
+								'year'              => 2013,
+								'nopaging'          => true,
+								'post__not_in'      => array(43872),
+								'category__not_in'  => array(25122)
 							);
 
 							$query = new WP_Query($args);
