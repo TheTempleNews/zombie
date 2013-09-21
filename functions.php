@@ -4,7 +4,7 @@ Author: Eddie Machado // Chris Montgomery
 URL: http://themble.com/bones/ // http://www.temple-news.com/
 
 This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images, 
+just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
@@ -95,8 +95,8 @@ add_image_size( 'zom-columnist-200', 200, 300, true );
 // full-width banner
 add_image_size( 'zom-full-banner', 1140, 250, true );
 
-/* 
-to add more sizes, simply copy a line from above 
+/*
+to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
 upload a "featured image" as large as the biggest
 set width or height, all the other sizes will be
@@ -105,7 +105,7 @@ auto-cropped.
 To call a different size, simply change the text
 inside the thumbnail function.
 
-For example, to call the 300 x 300 sized image, 
+For example, to call the 300 x 300 sized image,
 we would use the function:
 <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 for the 600 x 100 image:
@@ -154,7 +154,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'id' => 'widgetized-front-center-1',
 		'name' => 'Homepage Center Widgets (First)',
@@ -164,7 +164,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	register_sidebar(array(
 		'id' => 'widgetized-front-center-2',
 		'name' => 'Homepage Center Widgets (Second)',
@@ -194,14 +194,14 @@ function bones_register_sidebars() {
 		'before_title' => '',
 		'after_title' => '',
 	));
-	/* 
+	/*
 	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call 
+	and edit the above sidebar code. In order to call
 	your new sidebar just use the following code:
-	
+
 	Just change the name to whatever your new
 	sidebar's id is, for example:
-	
+
 	register_sidebar(array(
 		'id' => 'sidebar2',
 		'name' => 'Sidebar 2',
@@ -211,17 +211,17 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-	
+
 	To call the sidebar in your template, you can just copy
 	the sidebar.php file and rename it to your sidebar's name.
 	So using the above example, it would be:
 	sidebar-sidebar2.php
-	
+
 	*/
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
-		
+
 // Comment Layout
 function bones_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
@@ -299,7 +299,7 @@ function zombie_section_name($post) {
 	global $post;
 	$custom_fields = get_post_custom( $post->ID );
 	$selection = $custom_fields['ZOMBIE_METABOX_section-select'];
-	
+
 	foreach ( $selection as $key => $section ) :
 		if ( $section == 'nw' ) {
 			echo "News";
@@ -317,13 +317,13 @@ function zombie_section_name($post) {
 			echo "Opinion";
 			break;
 		}
-	endforeach;	
+	endforeach;
 }
 
 
 /**
  * Customizes the output of image captions
- */ 
+ */
 add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
 function my_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
@@ -355,7 +355,7 @@ add_action('pre_get_posts', 'ttn_multimedia_paged');
 add_action('pre_get_posts', 'ttn_author_archive_inc_cpt');
 /**
  * Modify Query
- * 
+ *
  * @author Bill Erickson
  * @link http://www.billerickson.net/customize-the-wordpress-query/
  * @param object $query data
@@ -365,10 +365,10 @@ add_action('pre_get_posts', 'ttn_author_archive_inc_cpt');
  */
 
 function ttn_article_loop_include_cat( $query ) {
-	
+
 	$post_type = get_query_var('post_type');
 	$inc_cat = '';
-	
+
 	if ( $post_type == "article_news" ) {
 		$inc_cat = 4;
 
@@ -380,10 +380,10 @@ function ttn_article_loop_include_cat( $query ) {
 
 	} elseif ( $post_type == "article_ae" ) {
 		$inc_cat = 2341;
-		
+
 	} elseif ( $post_type == "article_opinion" ) {
 		$inc_cat = 5;
-		
+
 	}
 
 	if ( $query->is_main_query() && $query->is_post_type_archive() ) {
@@ -391,18 +391,18 @@ function ttn_article_loop_include_cat( $query ) {
 	}
 
 	//echo $query->is_post_type_archive();
-	
+
 	echo $post_type;
 	echo get_query_var('cat');
 
 }
 
 function ttn_cat_loop_include_cpt( $query ) {
-	
+
 	if ( $query->is_main_query() ) {
 		$query->set( 'post_type', $inc_cat );
 	}
-	
+
 }
 
 function ttn_multimedia_paged( $query ) {
@@ -432,7 +432,7 @@ function ttn_author_archive_inc_cpt( $query ) {
  * Displays a list of an article's categories without links.
  *
  * Similar to the_category().
- * 
+ *
  */
 function the_category_no_link() {
 	foreach((get_the_category()) as $category) {
@@ -463,10 +463,10 @@ add_filter( 'pre_get_posts', 'ttn_add_custom_types' );
  * Automatically add FitVids to oembed YouTube videos.
  */
 function zombie_embed_filter( $output, $data, $url ) {
- 
+
 	$return = '<div class="video-container">' . $output . '</div>';
 	return $return;
- 
+
 }
 add_filter('oembed_dataparse', 'zombie_embed_filter', 90, 3 );
 
@@ -497,11 +497,11 @@ function remove_menus() {
 	global $menu;
 	global $current_user;
 	get_currentuserinfo();
-	
+
 	$user_id = get_current_user_id();
 	$user_info = get_userdata( $user_id );
 	$user_role = $user_info->roles[1];
- 
+
 	if ($user_role !== 'administrator') {
 		$restricted = array(__('Posts'),
 							__('Pages'),
@@ -515,7 +515,7 @@ function remove_menus() {
 			$value = explode(' ',$menu[key($menu)][0]);
 			if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
 		} // end while
- 
+
 	} // end if
 }
 
@@ -529,9 +529,9 @@ add_action('admin_menu', 'remove_menus');
  */
 function nua_add_cap() {
 	$editor = get_role( 'editor' );
-	
+
 	// $editor->add_cap('new_user_approve_minimum_cap');
-	
+
 	return 'edit_posts';
 }
 // add_action('admin_init','nua_add_cap');
@@ -552,19 +552,19 @@ function the_post_thumbnail_caption() {
 	'post_status' => null,
 	'post_parent' => $post->ID,
 	'include'  => $thumb_id
-	); 
+	);
 
    $thumbnail_image = get_posts($args);
 
    if ($thumbnail_image && isset($thumbnail_image[0])) {
 	 //show thumbnail title
-	 //echo $thumbnail_image[0]->post_title; 
+	 //echo $thumbnail_image[0]->post_title;
 
 	 //Uncomment to show the thumbnail caption
-	 echo $thumbnail_image[0]->post_excerpt; 
+	 echo $thumbnail_image[0]->post_excerpt;
 
 	 //Uncomment to show the thumbnail description
-	 //echo $thumbnail_image[0]->post_content; 
+	 //echo $thumbnail_image[0]->post_content;
 
 	 //Uncomment to show the thumbnail alt field
 	 //$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
@@ -638,12 +638,12 @@ function the_post_thumbnail_caption() {
 		include_once(ABSPATH . WPINC . '/feed.php');
 		// Get a SimplePie feed object from the specified feed source.
 		$rss = fetch_feed( $feed_url );
-		if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
-			// Figure out how many total items there are, but limit it to 5. 
-			$maxitems = $rss->get_item_quantity(5); 
+		if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly
+			// Figure out how many total items there are, but limit it to 5.
+			$maxitems = $rss->get_item_quantity(5);
 
 			// Build an array of all the items, starting with element 0 (first element).
-			$rss_items = $rss->get_items(0, $maxitems); 
+			$rss_items = $rss->get_items(0, $maxitems);
 		endif;
 
 		$output = '';
@@ -667,7 +667,7 @@ function the_post_thumbnail_caption() {
 
 /**
  * Generates columnist headshot if post is a column or commentary
- * 
+ *
  * Must be used within The Loop
  *
  * @author Chris Montgomery <mont.chr@gmail.com>
@@ -676,7 +676,7 @@ function the_post_thumbnail_caption() {
  * @deprecated 1.4.0 Because the output of the User Photo plugin is not as controllable as the builtin featured image.
  *
  * @return string|bool
- * @param string $context 
+ * @param string $context
  */
 function zom_columnist_headshot($context) {
 
@@ -723,7 +723,7 @@ function zom_columnist_headshot($context) {
  *
  * Usage: [blockquote who="Chris Montgomery" what="TTN Web Editor"]This is a quote![/blockquote]
  * Make sure opening and closing quotation marks are removed!
- * 
+ *
  * @author Chris Montgomery <mont.chr@gmail.com>
  * @see http://wplifeguard.com/how-to-use-wordpress-shortcode/
  *
@@ -733,7 +733,7 @@ function zom_blockquote($atts, $content = null) {
 		"who" => 'Unknown',
 		"what" => 'what'
 	), $atts));
-	
+
 	// If the "who" is not defined, only display the content (within curly quotes)
 	if ( $who == 'Unknown' ) {
 		return '<blockquote class="blockquote-full"><p>'.'&ldquo;'.$content.'&rdquo;'.'</p></blockquote>';
@@ -779,7 +779,7 @@ function get_the_content_first_graf() {
 
 /**
  * Set Masonry grid class based on custom field value.
- * 
+ *
  * @author Chris Montgomery
  *
  * @param int $width Override number of columns with an integer between 1 and 12
@@ -801,7 +801,7 @@ function ttn_gs_column_width( $width, $namespace ) {
 	if ( $namespace ) {
 		$prefix = $namespace . '-';
 	}
-	
+
 
 	if ( $width == 12 ) { // twelve columns
 		$output = $prefix . 'twelvecol';
