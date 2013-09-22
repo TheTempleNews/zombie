@@ -406,18 +406,19 @@
 
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'threecol clearfix ' . $k ); ?> role="article">
 
-											<?php if ( has_post_thumbnail() ) : ?>
-												<div class="video-thumbnail-container">
+											<div class="video-thumbnail-container">
 
-													<?php
-													// Use a fallback image for video thumbnails in case
-													// the Video Thumbnails plugin doesn't do its job
-													ttn_get_featured_image_fallback();
-													// the_post_thumbnail('zom-landscape-396');
-													?>
+												<?php
+												// Use a fallback image for video thumbnails in case
+												// the Video Thumbnails plugin doesn't do its job
+												if (has_post_thumbnail()) {
+													the_post_thumbnail('zom-landscape-396');
+												} else {
+													echo '<img width="396" height="264" src="' . get_template_directory_uri() . '/library/images/fallback.png" class="wp-image-fallback" alt="This article has no featured image.">';
+												}
+												?>
 
-												</div>
-											<?php endif; ?>
+											</div>
 
 											<header>
 												<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
@@ -546,11 +547,17 @@
 
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'twocol clearfix ' . $k ); ?> role="article">
 
-											<?php if ( has_post_thumbnail() ) : ?>
-												<div class="slideshows-thumbnail-container">
-													<?php the_post_thumbnail('zom-landscape-396'); ?>
-												</div>
-											<?php endif; ?>
+											<div class="slideshows-thumbnail-container">
+												<?php
+												// Use a fallback image for video thumbnails in case
+												// the Video Thumbnails plugin doesn't do its job
+												if (has_post_thumbnail()) {
+													the_post_thumbnail('zom-landscape-396');
+												} else {
+													echo '<img width="396" height="264" src="' . get_template_directory_uri() . '/library/images/fallback.png" class="wp-image-fallback" alt="This article has no featured image.">';
+												}
+												?>
+											</div>
 
 											<header>
 												<div class="post-category-list-container"><?php // the_category_but( $cat_id ); ?></div>
