@@ -826,3 +826,68 @@ function ttn_body_slug( $classes ) {
 }
 
 add_filter( 'body_class', 'ttn_body_slug' );
+
+/* Function to process your thumbnail & image
+   Copy and paste the code below to your functions.php */
+
+/**
+ * Three-pronged featured image fallback.
+ *
+ * Must be used within The Loop.
+ *
+ * This code first loads the featured image
+ * if it's assigned to the post. If it is not set,
+ * the code will look for the first image attached to the post.
+ * Finally if there is no image associated with the post,
+ * a default 'no image' photo will be loaded,
+ * which should have been created and uploaded beforehand.
+ *
+ * @link https://coderwall.com/p/huidlw
+ *
+ * @param string $size The image size to get
+ * @return string Echoes the URL of an image
+ */
+function ttn_get_featured_image_fallback( $size = 'zom-landscape-396' ) {
+	global $post, $posts;
+	$image_id = get_post_thumbnail_id(); //read featured image data for image url
+	$attached_to_post = wp_get_attachment_image_src( $image_id, $size );
+	$thumbnail =  $attached_to_post[0];
+
+	if($thumbnail == ""):
+		$attachments = get_children( array(
+			'post_parent'    => get_the_ID(),
+			'post_type'      => 'attachment',
+			'numberposts'    => 1,
+			'post_status'    => 'inherit',
+			'post_mime_type' => 'image',
+			'order'          => 'ASC',
+			'orderby'        => 'menu_order ASC'
+			) );
+
+		// check if there's an image attached or not
+		if(!empty($attachments)):
+			foreach ( $attachments as $attachment_id => $attachment ) {
+			  if(wp_get_attachment_image($attachment_id) != ""):
+				  $thumbnail = wp_get_attachment_url( $attachment_id );
+			  endif;
+			}
+
+		// if no attachment
+		else:
+			$first_img = '';
+			ob_start();
+			ob_end_clean();
+			$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+			$first_img = $matches [1] [0];
+
+			if(!empty($first_img)):
+				$thumbnail = $first_img;
+			else:
+				// define default thumbnail, you can use full url here.
+				$thumbnail = bloginfo('template_directory') . "library/images/fallback.png";
+			endif;
+		endif;
+	endif;
+
+	echo $thumbnail;
+}

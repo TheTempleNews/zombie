@@ -408,7 +408,14 @@
 
 											<?php if ( has_post_thumbnail() ) : ?>
 												<div class="video-thumbnail-container">
-													<?php the_post_thumbnail('zom-landscape-396'); ?>
+
+													<?php
+													// Use a fallback image for video thumbnails in case
+													// the Video Thumbnails plugin doesn't do its job
+													ttn_get_featured_image_fallback();
+													// the_post_thumbnail('zom-landscape-396');
+													?>
+
 												</div>
 											<?php endif; ?>
 
