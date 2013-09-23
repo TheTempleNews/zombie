@@ -57,12 +57,10 @@
 
 			<header class="page-header" role="banner">
 
-				<div class="page-header__brand">
-					<h1 class="page-header__brand__title">Lunchies 2013</h1>
+				<h2 class="page-header__presents">The Temple News Presents</h2>
 
-					<div class="page-header__brand__presents">
-						<h2>The Temple News Presents</h2>
-					</div>
+				<div class="page-header__brand">
+					<h1 class="page-header__brand__title  accessibility">Lunchies 2013</h1>
 
 					<div class="page-header__brand__image">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/lunchies-2013-large.png" alt="A hand-drawn food truck in autumnal pastel colors with a yellow banner." title="Lunchies 2013 Truck" />
