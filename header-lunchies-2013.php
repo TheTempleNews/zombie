@@ -65,7 +65,7 @@
 					</div>
 
 					<div class="page-header__brand__image">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/lunchies-2013-large.png" alt="A hand-drawn food truck in autumnal pastel colors with a yellow banner." title="Lunchies 2013 Truck" />
 					</div>
 				</div>
 
