@@ -1,6 +1,14 @@
+<?php
+
+/**
+ *
+ * Lunchies 2013 Footer Template
+ *
+ */
+
+?>
+
 			<footer class="footer" role="contentinfo">
-
-
 
 			</footer> <!-- end footer -->
 

@@ -1,3 +1,13 @@
+<?php
+
+/**
+ *
+ * Lunchies 2013 Header Template
+ *
+ */
+
+?>
+
 <!doctype html>
 
 <!--[if IEMobile 7]><html <?php language_attributes(); ?> class="no-js iem7"><![endif]-->
