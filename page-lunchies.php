@@ -150,7 +150,7 @@ Template Name: Lunchies
 						
 						
 						<div class="lunchies-articles clearfix">
-						<?php include('library/inc/lunchies/lunchies-' . LUNCHIES_YEAR . '.php'); ?>
+						<?php include('library/inc/special-issues/lunchies/lunchies-2012.php'); ?>
 						</div>
 						
 						
