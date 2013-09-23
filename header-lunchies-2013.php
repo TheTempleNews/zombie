@@ -45,6 +45,35 @@
 
 		<div id="container" class="container">
 
-			<header class="header" role="banner">
+			<header class="page-header" role="banner">
+
+				<div class="page-header__brand">
+					<h1 class="page-header__brand__title">Lunchies 2013</h1>
+
+					<div class="page-header__brand__presents">
+						<h2>The Temple News Presents</h2>
+					</div>
+
+					<div class="page-header__brand__image">
+
+					</div>
+				</div>
+
+
+				<nav class="lunchies-nav">
+					<ul class="lunchies-nav__main-nav">
+						<li class="lunchies-nav__main-nav__item"><a href="<?php home_url(); ?>">Home</a></li>
+						<li class="lunchies-nav__main-nav__item"><a href="#toc">Table of Contents</a></li>
+						<li class="lunchies-nav__main-nav__item"><a href="#about">About</a></li>
+						<li class="lunchies-nav__main-nav__item"><a href="#colophon">Colophon</a></li>
+					</ul>
+					<ul class="lunchies-nav__secondary-nav">
+						<li class="lunchies-nav__secondary-nav__item"><a href="#about">About</a></li>
+						<li class="lunchies-nav__secondary-nav__item"><a href="#toc">Table of Contents</a></li>
+					</ul>
+					<ul class="lunchies-nav__to-top">
+						<li><a href="#top">To Top</a></li>
+					</ul>
+				</nav>
 
 			</header> <!-- end header -->
