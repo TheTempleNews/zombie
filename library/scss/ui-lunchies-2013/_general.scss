@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    LUNCHIES 2013: GENERAL
+\*------------------------------------*/
+
+img[width],
+img[height] {
+	max-width: 100%;
+	height: auto;
+}
+
+@include media-query(portable) {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}

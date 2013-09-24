@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    LUNCHIES 2013: PANEL
+\*------------------------------------*/
+
+.panel {
+	@extend %grid;
+}
+
+	.panel__featured-image,
+	.panel__header {
+		@extend %grid__item;
+		@extend %desk--one-half;
+	}
+
+	.panel__featured-image {}
+
+	.panel__header {}
+
+		.panel__header__post-title {}
+
+		.panel__header__dek {}
+
+	.panel__read-more {
+		@extend %grid__item;
+	}
+
+
+
+
+
+.panel--wrapped {}
+
+
+
+
+
+.panel--family-culture-ties-trucks {}
+
+
+
+
+
+.panel--one-freshman-first-time-truck-experience {}
+
+
+
+
+
+.panel--yumtown-debuts-new-fall-item {}
+
+
+
+
+
+.panel--food-pad-restaurant-traces-history-back-almost-30-years {
+	@extend %push--desk--one-half;
+}
+
+
+
+
