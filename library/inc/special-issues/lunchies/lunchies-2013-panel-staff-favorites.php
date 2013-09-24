@@ -17,7 +17,7 @@
 					<li class="staff-favorites-list__item">
 
 						<p class="staff-favorites-list__item__staff-member">
-							<span class="staff-favorites-list__item__staff-member__name"><?php echo get_sub_field('lunchies_staff_fav_staff_name')['display_name']; ?></span><br />
+							<span class="staff-favorites-list__item__staff-member__name"><?php $staff_name = get_sub_field('lunchies_staff_fav_staff_name'); echo $staff_name['display_name']; ?></span><br />
 							<span class="staff-favorites-list__item__staff-member__position"><?php the_sub_field('lunchies_staff_fav_staff_position') ?></span>
 						</p>
 
