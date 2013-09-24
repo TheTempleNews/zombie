@@ -4,7 +4,27 @@
 
 .panel {
 	@extend %grid;
+
+	@include media-query(desk) {
+		height: 100vh;
+		position: relative;
+	}
 }
+
+	.panel__inner {
+		padding: $base-spacing-unit * 4;
+		//padding-top: $base-spacing-unit * 4;
+		//padding-bottom: $base-spacing-unit * 4;
+
+		@include media-query(palm) {
+			padding: $base-spacing-unit * 4 $base-spacing-unit * 2;
+		}
+
+		@include media-query(desk) {
+			position: absolute;
+			top: 20%;
+		}
+	}
 
 	.panel__featured-image,
 	.panel__header {
@@ -31,32 +51,44 @@
 
 
 
-.panel--wrapped {}
+.panel--wrapped {
+	background-color: $color__epsilon;
+}
 
 
 
 
 
-.panel--family-culture-ties-trucks {}
+.panel--family-culture-ties-trucks {
+	background-color: $color__beta;
+}
 
 
 
 
 
-.panel--one-freshman-first-time-truck-experience {}
+.panel--one-freshman-first-time-truck-experience {
+	background-color: $color__gamma;
+}
 
 
 
 
 
-.panel--yumtown-debuts-new-fall-item {}
+.panel--yumtown-debuts-new-fall-item {
+	background-color: $color__alpha;
+}
 
 
 
 
 
 .panel--food-pad-restaurant-traces-history-back-almost-30-years {
-	@extend %push--desk--one-half;
+	background-color: $color__delta;
+
+	.panel__header {
+		@extend %push--desk--one-half;
+	}
 }
 
 
