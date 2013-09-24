@@ -8,7 +8,9 @@
 
 ?>
 
-			<footer class="footer" role="contentinfo">
+			<footer class="page-footer" role="contentinfo">
+
+				<a class="page-footer__home-link" href="<?php home_url(); ?>">Back to temple-news.com</a>
 
 			</footer> <!-- end footer -->
 

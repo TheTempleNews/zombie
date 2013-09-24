@@ -70,6 +70,7 @@ $breakpoints: (
  * Place any variables that should override inuit.css’ defaults here.
  */
 
+$base-spacing-unit: 16px;
 
 
 
@@ -91,3 +92,5 @@ $color__beta: $color-tan;
 $color__gamma: $color-salmon;
 $color__delta: $color-wood;
 $color__epsilon: $color-sea;
+
+$footer-height: $base-spacing-unit * 2;
