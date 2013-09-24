@@ -22,6 +22,9 @@
 
 	.panel__read-more {
 		@extend %grid__item;
+		@extend %desk--one-half;
+		@extend %push--desk--one-half;
+		text-align: right;
 	}
 
 
