@@ -1,8 +1,8 @@
 				<?php if ( is_home() && HOME_TOP_PROMO == true ) : ?>
 
 				<div class="home-top-promo clearfix">
-				
-					<?php if (NEW_LUNCHIES == true) { // lunchies top banner ?>
+
+					<?php if (LUNCHIES_2012 == true) { // lunchies top banner ?>
 
 						<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
 
@@ -11,7 +11,7 @@
 						$banner = wp_get_attachment_image_src( get_post_thumbnail_id(38224), 'zom-full-banner' );
 						$banner_url = $banner['0'];
 						?>
-						
+
 						<a href="http://temple-news.com/election/" title="Election Issue"><img src="<?php echo $banner_url ?>" class="si-banner" /></a>
 
 					<?php } elseif (MOVERS_AND_SHAKERS == true) { // movers and shakers banner ?>
@@ -21,7 +21,7 @@
 							<div class="special-issue-text-banner-container top-promo-block first sixcol clearfix">
 								<h2 class="moversshakers-type-banner special-issue-text-banner fittext"><a href="http://temple-news.com/movers-shakers/">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></a></h2>
 							</div>
-							
+
 							<div class="top-promo-teasers top-promo-block last sixcol clearfix">
 
 								<?php
@@ -64,7 +64,7 @@
 
 					<?php } elseif (BAR_GUIDE == true) { // bar guide issue ?>
 
-						<div id="bar-guide-top-promo"> 
+						<div id="bar-guide-top-promo">
 
 							<div class="special-issue-text-banner-container clearfix">
 								<h2 class="bar-guide-text-banner special-issue-text-banner fittext"><a href="http://temple-news.com/bar-guide/">Bar Guide <?php echo BAR_GUIDE_YEAR; ?></a></h2>
@@ -101,8 +101,14 @@
 							<h2 class="headline fittext tk-ltc-squareface-sc"><a href="<?php echo home_url(); ?>/category/sports/training-camp-2013/">Training Camp 2013</a></h2>
 						</div>
 
-					<?php } // END IT ALL! ?>
-				
+					<?php } elseif (LUNCHIES_2013 === true) { ?>
+
+						<div class="special-issue-banner--lunchies-2013 wrap clearfix">
+							<h2 class="headline fittext"><a href="<?php home_url(); ?>/lunchies-2013/">Lunchies 2013</a></h2>
+						</div>
+
+					<?php }// END IT ALL! ?>
+
 				</div> <!-- end .home-top-promo -->
 
 				<?php endif; // endif is_home() && HOME_TOP_PROMO == true
@@ -117,7 +123,7 @@
 					// Lunchies Banner
 					if ( in_category('the-lunchies') ) { ?>
 
-						<div id="lunchies-top-promo"> 
+						<div id="lunchies-top-promo">
 
 							<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php the_time('Y'); ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />

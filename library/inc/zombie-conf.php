@@ -13,17 +13,17 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.4.10' );
+	define( 'ZOM_VERSION', '1.5.0' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
-	define( 'HOME_TOP_PROMO', false );
+	define( 'HOME_TOP_PROMO', true );
 
 	// Set this to true to display a banner at the top of the single article
 	define( 'SINGLE_TOP_PROMO', false );
 
 	// Set this to true to display Lunchies banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
-	define( 'NEW_LUNCHIES', false );
+	define( 'LUNCHIES_2012', false );
 
 	// Set this to true to display Election banner. HOME_TOP_PROMO or SINGLE_TOP_PROMO must be set to true.
 	define( 'ELECTION_ISSUE', false );
@@ -48,3 +48,5 @@
 
 	// Set this to true to display Training Camp 2013 banner. HOME_TOP_PROMO must be set to true.
 	define( 'TRAININGCAMP', false );
+
+	define( 'LUNCHIES_2013', true );

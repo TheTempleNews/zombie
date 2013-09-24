@@ -38,6 +38,7 @@ jQuery(document).ready(function($) {
 	$(".the-american-text-banner.fittext").fitText(1.75);
 	$(".page-branded .page-title.fittext").fitText(0.5);
 	//$(".documentary-banner .fittext").fitText();
+	$('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
 
 	/* slabText */
 	$(".slabtextthis").slabText();
@@ -56,7 +57,7 @@ jQuery(document).ready(function($) {
 				gutterWidth: 0
 			});
 		}
-		
+
 //	});
 
 
