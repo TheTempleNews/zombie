@@ -2,3 +2,22 @@
     LUNCHIES 2013: HEADER
 \*------------------------------------*/
 
+.page-header {}
+
+	.page-header__presents {
+		text-align: center;
+	}
+
+	.page-header__brand {}
+
+		.page-header__brand__title {}
+
+		.page-header__brand__image {
+			max-width: 1300px;
+			padding: 0 $base-spacing-unit * 2;
+			margin: 0 auto;
+
+			img {
+				text-align: center;
+			}
+		}
