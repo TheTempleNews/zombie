@@ -4,9 +4,6 @@
 
 		<header class="panel__header">
 			<h1 class="panel__header__post-title  post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<div class="panel__header__dek  dek">
-				<?php the_excerpt(); ?>
-			</div>
 		</header><!--
 
 		--><section class="<?php echo 'panel__content  panel--' . ttn_get_the_slug('post') . '__content' ?>">

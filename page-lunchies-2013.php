@@ -38,6 +38,7 @@ require_once('library/inc/special-issues/lunchies/lunchies-2013-functions.php');
 		}
 
 		ttn_lunchies_2013_panel_loop('staff-favorites', 'panel-staff-favorites');
+		ttn_lunchies_2013_panel_loop('lunchies-top-ten', 'panel-top-ten');
 
 		?>
 
