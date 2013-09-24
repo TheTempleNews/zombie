@@ -2,6 +2,27 @@
     LUNCHIES 2013: GENERAL
 \*------------------------------------*/
 
+a {
+	@include vendor(transition, all 500ms ease);
+
+	&,
+	&:visited,
+	&:active,
+	&:hover {
+		text-decoration: none;
+	}
+
+	&,
+	&:visited {
+		color: white;
+	}
+
+	&:active,
+	&:hover {
+		color: black;
+	}
+}
+
 img[width],
 img[height] {
 	max-width: 100%;

@@ -15,6 +15,7 @@
 	}
 
 		.page-footer__home-link {
+			@include a-color(white, $color__alpha);
 			@extend %grid__item;
 			text-align: center;
 			line-height: $footer-height;

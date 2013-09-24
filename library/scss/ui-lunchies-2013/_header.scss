@@ -2,10 +2,15 @@
     LUNCHIES 2013: HEADER
 \*------------------------------------*/
 
-.page-header {}
+.page-header {
+	background-color: $color__zeta;
+	height: 100vh;
+}
 
 	.page-header__presents {
+		@extend .kilo;
 		text-align: center;
+		font-family: $font-stack__presents;
 	}
 
 	.page-header__brand {}
@@ -14,7 +19,7 @@
 
 		.page-header__brand__image {
 			max-width: 1300px;
-			padding: 0 $base-spacing-unit * 2;
+			padding: $base-spacing-unit * 6 $base-spacing-unit * 2 0;
 			margin: 0 auto;
 
 			img {

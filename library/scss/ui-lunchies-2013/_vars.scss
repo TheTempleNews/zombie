@@ -86,11 +86,39 @@ $color-tan: #F7E3B2;
 $color-salmon: #E3967D;
 $color-wood: #57342D;
 $color-sea: #9DBFA4;
+$color-cyan: #00FFFF;
 
 $color__alpha: $color-orange;
 $color__beta: $color-tan;
 $color__gamma: $color-salmon;
 $color__delta: $color-wood;
 $color__epsilon: $color-sea;
+$color__zeta: $color-cyan;
 
 $footer-height: $base-spacing-unit * 2;
+
+
+$font-lato: "Lato";
+$font-josefin: "Josefin Sans";
+$font-proxima: "proxima-nova";
+$font-jubilat: "jubilat";
+$font-omnes: "omnes-pro";
+$font-enzo: "ff-enzo-web";
+$font-source-sans: "source-sans-pro";
+$font-market: "ff-market-web";
+
+$font-stack__sans-serif: $font-proxima, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-stack__presents:                                                $font-market, $font-stack__sans-serif;
+$font-stack__wrapped:                                                 $font-lato, $font-stack__sans-serif;
+$font-stack__family-culture-ties-trucks:                              $font-josefin, $font-stack__sans-serif;
+$font-stack__one-freshman-first-time-truck-experience:                $font-source-sans, $font-stack__sans-serif;
+$font-stack__yumtown-debuts-new-fall-item:                            $font-jubilat, $font-stack__sans-serif;
+$font-stack__food-pad-restaurant-traces-history-back-almost-30-years: $font-omnes, $font-stack__sans-serif;
+$font-stack__staff-favorites:                                         $font-enzo, $font-stack__sans-serif;
+$font-stack__lunchies-top-ten:                                        $font-stack__sans-serif;
+
+/**
+ * Overrides inuit.css
+ */
+$base-font-family: $font-stack__sans-serif;
