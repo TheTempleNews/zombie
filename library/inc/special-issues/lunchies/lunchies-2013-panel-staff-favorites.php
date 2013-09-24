@@ -3,7 +3,7 @@
 	<div class="panel__inner">
 
 		<header class="panel__header">
-			<h1 class="panel__header__post-title  post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+			<h1 class="panel__header__post-title  post-title"><?php the_title(); ?></h1>
 		</header><!--
 
 		--><section class="<?php echo 'panel__content  panel--' . ttn_get_the_slug('post') . '__content' ?>">
