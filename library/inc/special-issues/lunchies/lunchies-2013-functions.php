@@ -20,4 +20,20 @@ function ttn_lunchies_scripts_and_styles() {
 }
 add_action('wp_enqueue_scripts', 'ttn_lunchies_scripts_and_styles', 999);
 
-?>
+/**
+ * Loop for the standard panel.
+ *
+ * @param  string $slug The post slug to retrieve
+ */
+function ttn_lunchies_2013_panel_loop($slug) {
+	$args = array(
+							'post_type' => 'article_living',
+							'name'      => $slug
+	                      );
+	$query = new WP_Query($args);
+
+	if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+		get_template_part( 'library/inc/special-issues/lunchies/lunchies-2013', 'panel' );
+	endwhile;
+	endif;
+}
