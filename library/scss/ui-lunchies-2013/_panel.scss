@@ -94,3 +94,15 @@
 
 
 
+
+.panel--staff-favorites {
+
+	.panel__header {
+		@extend %desk--one-third;
+	}
+}
+
+	.panel--staff-favorites__content {
+		@extend %grid__item;
+		@extend %desk--two-thirds;
+	}
