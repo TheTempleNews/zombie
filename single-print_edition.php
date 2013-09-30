@@ -55,20 +55,20 @@
 									<?php endif; ?>
 
 									<section class="post-content clearfix" itemprop="articleBody">
-										<?php
 
-										the_content();
+										<?php the_content(); ?>
 
-										wp_list_pages( array(
-										              'depth' => 1,
-										              'sort_column' => 'menu_order',
-										              'title_li' => '',
-										              'post_type' => 'print_edition',
-										              'child_of' => get_the_ID()
-										              )
-										);
+										<ul class="page-list">
+											<?php wp_list_pages( array(
+											              'depth' => 1,
+											              'sort_column' => 'menu_order',
+											              'title_li' => '',
+											              'post_type' => 'print_edition',
+											              'child_of' => get_the_ID()
+											              )
+											); ?>
+										</ul>
 
-										?>
 									</section> <!-- end article section -->
 
 									<footer class="article-footer">

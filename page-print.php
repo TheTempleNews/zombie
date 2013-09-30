@@ -41,12 +41,14 @@
 
 									<section class="post-content clearfix" itemprop="articleBody">
 
-										<?php wp_list_pages( array(
-										              'sort_column' => 'menu_order',
-										              'title_li' => '',
-										              'post_type' => 'print_edition',
-										              )
-										); ?>
+										<ul class="page-list">
+											<?php wp_list_pages( array(
+											              'sort_column' => 'menu_order',
+											              'title_li' => '',
+											              'post_type' => 'print_edition',
+											              )
+											); ?>
+										</ul>
 
 									</section> <!-- end article section -->
 
