@@ -23,14 +23,6 @@
 						$obj = $wp_post_types[$post_type];
 						$post_type_name = $obj->labels->singular_name;
 
-
-						// the query to pull in the most recent issue page to this static page
-						$query = new WP_Query( array(
-								'post_type'      => 'print_edition',
-								'posts_per_page' => 1
-							)
-						);
-
 						?>
 
 			<div id="content">
@@ -43,22 +35,18 @@
 
 						<div id="print-edition-main">
 
-							<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 									<section class="post-content clearfix" itemprop="articleBody">
 
-										<?php
-
-										wp_list_pages( array(
+										<?php wp_list_pages( array(
 										              'sort_column' => 'menu_order',
 										              'title_li' => '',
 										              'post_type' => 'print_edition',
 										              )
-										);
-
-										?>
+										); ?>
 
 									</section> <!-- end article section -->
 
