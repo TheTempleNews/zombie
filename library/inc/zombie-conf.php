@@ -13,11 +13,11 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.5.4' );
+	define( 'ZOM_VERSION', '1.5.5' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
-	define( 'HOME_TOP_PROMO', true );
+	define( 'HOME_TOP_PROMO', false );
 
 	// Set this to true to display a banner at the top of the single article
 	define( 'SINGLE_TOP_PROMO', false );
@@ -49,4 +49,4 @@
 	// Set this to true to display Training Camp 2013 banner. HOME_TOP_PROMO must be set to true.
 	define( 'TRAININGCAMP', false );
 
-	define( 'LUNCHIES_2013', true );
+	define( 'LUNCHIES_2013', false );
