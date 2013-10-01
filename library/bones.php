@@ -243,7 +243,7 @@ function bones_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu' ),    // main nav in header
-			'top-links' => __( 'Top Links' ), // links in featured media area
+			'home-top-links' => __( 'Home Top Links' ), // links in featured media area
 			'footer-links-center-top' => __( 'Footer Links: Center Top' ), // secondary nav in footer
 			'footer-links-center-middle' => __( 'Footer Links: Center Middle' ),
 			'footer-links-center-bottom' => __( 'Footer Links: Center Bottom' ),
@@ -354,22 +354,22 @@ function zombie_footer_links_misc() {
 	));
 } /* end bones footer links misc */
 
-function zombie_top_links() {
+function ttn_menu_top_links() {
 	// display the wp3 menu if available
 	wp_nav_menu(array(
-		'container' => '',                              // remove nav container
-		'container_class' => 'top-links clearfix',   // class of container (should you choose to use it)
-		'menu' => 'Top Links',                       // nav name
-		'menu_class' => 'nav top-links clearfix',      // adding custom nav class
-		'theme_location' => 'top-links',             // where it's located in the theme
-		'before' => '',                                 // before the menu
-		'after' => '',                                  // after the menu
-		'link_before' => '',                            // before each link
-		'link_after' => '',                             // after each link
-		'depth' => 0,                                   // limit the depth of the nav
-		'fallback_cb' => 'zombie_top_links_fallback'  // fallback function
+		'container' => '',                                     // remove nav container
+		'container_class' => '',                               // class of container (should you choose to use it)
+		'menu' => 'Homepage Links Menu',                       // nav name
+		'menu_class' => 'nav--stacked',                    // adding custom nav class
+		'theme_location' => 'home-top-links',               // where it's located in the theme
+		'before' => '',                                        // before the menu
+		'after' => '',                                         // after the menu
+		'link_before' => '',                                   // before each link
+		'link_after' => '',                                    // after each link
+		'depth' => 0,                                          // limit the depth of the nav
+		'fallback_cb' => ''                                    // fallback function
 	));
-} /* end bones footer links misc */
+} /* end ttn top links */
 
 
 
