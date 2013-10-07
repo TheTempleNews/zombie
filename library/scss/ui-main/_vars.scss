@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    TTN: VARS
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of inuit.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+$use-grids:         false;
+$use-flexbox:       false;
+$use-columns:       false;
+$use-nav:           false;
+$use-options:       false;
+$use-pagination:    false;
+$use-breadcrumb:    false;
+$use-media:         true;
+$use-marginalia:    false;
+$use-island:        false;
+$use-block-list:    false;
+$use-matrix:        true;
+$use-split:         false;
+$use-this-or-this:  false;
+$use-link-complex:  false;
+$use-flyout:        false;
+$use-arrows:        false;
+$use-sprite:        false;
+$use-icon-text:     true;
+$use-beautons:      false;
+$use-lozenges:      false;
+$use-rules:         false;
+$use-stats:         false;
+$use-greybox:       false;
+
+
+
+
+
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+
+$responsive: true;
+$mobile-first: true;
+$use-silent-classes: true;
+$push: true;
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 1023px)',
+    'lapandup' '(min-width: 481px)',
+    'portable' '(max-width: 1023px)',
+    'desk' '(min-width: 1024px)'
+);
+
+
+
+
+
+/*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Place any variables that should override inuit.css’ defaults here.
+ */
+
+$base-spacing-unit: 16px;
+
+
+
+
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
+
+$font-stack__sans-serif: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/**
+ * Overrides inuit.css
+ */
+$base-font-family: $font-stack__sans-serif;
