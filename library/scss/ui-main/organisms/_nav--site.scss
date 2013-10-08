@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    TTN: ORGANISMS: SITE NAV
+\*------------------------------------*/
+/**
+ * The main navigation organism.
+ */
+
+.menu-toggle {
+	&,
+	& span {
+		@extend .accessibility--desk;
+	}
+}

@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 		// Forked to github.com/montchr/zombie-flexnav/
 
 		// Toggle for nav menu
-		$('.js .menu-button').click(function() {
+		$('.js .menu-toggle').click(function() {
 			$('#menu-top-navigation').slideToggle('fast');
 		});
 		// Toggle click for sub-menus on touch and or small screens

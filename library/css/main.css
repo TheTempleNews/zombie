@@ -24,8 +24,14 @@
  * following variables to `true`.
  */
 /*------------------------------------*\
-    $CSSWIZARDRY-GRIDS
+    $GRIDS
 \*------------------------------------*/
+/**
+ * CSSWizardry-Grids
+ */
+/**
+ * Define a maximum width for the container.
+ */
 /*------------------------------------*\
     $TYPOGRAPHY-AND-VERTICAL-RHYTHM
 \*------------------------------------*/
@@ -785,7 +791,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .media:after, .matrix:after, .multi-list:after {
+.cf:after, .nav:after, .media:after, .matrix:after, .multi-list:after {
   content: "";
   display: table;
   clear: both; }
@@ -1543,6 +1549,120 @@ label,
  * Objects and abstractions
  */
 /*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ *
+ */
+.nav {
+  list-style: none;
+  margin-left: 0; }
+  .nav > li,
+  .nav > li > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--stacked > li {
+  display: list-item; }
+  .nav--stacked > li > a {
+    display: block; }
+
+/**
+ * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ *
+   <ul class="nav  nav--banner">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--banner {
+  text-align: center; }
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
+ *
+   <ul class="nav  nav--block">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--block {
+  line-height: 1;
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap; }
+  .nav--block > li {
+    letter-spacing: normal;
+    word-spacing: normal; }
+    .nav--block > li > a {
+      padding: 8px; }
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ *
+   <ul class="nav  nav--fit">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Thanks to @pimpl for this idea!
+ */
+.nav--fit {
+  display: table;
+  width: 100%; }
+  .nav--fit > li {
+    display: table-cell; }
+    .nav--fit > li > a {
+      display: block; }
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ *
+   `<ul class="nav  nav--keywords>`
+ *
+ */
+.nav--keywords > li:after {
+  content: "\002C" "\00A0"; }
+.nav--keywords > li:last-child:after {
+  display: none; }
+
+/*------------------------------------*\
     $MEDIA
 \*------------------------------------*/
 /**
@@ -1732,6 +1852,57 @@ label,
  */
 .icon-text--rev > .icon-text__icon {
   margin-left: 4px; }
+
+/*------------------------------------*\
+    $RULES
+\*------------------------------------*/
+/**
+ * Horizontal rules, extend `hr`.
+ *
+ * Demo: jsfiddle.net/inuitcss/L6GuZ
+ *
+ */
+.rule {
+  color: #cccccc;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; }
+
+/**
+ * Dotted rules
+ */
+.rule--dotted {
+  border-bottom-style: dotted; }
+
+/**
+ * Dashed rules
+ */
+.rule--dashed {
+  border-bottom-style: dashed; }
+
+/**
+ * Ornamental rules. Places a § over the rule.
+ */
+.rule--ornament {
+  position: relative;
+  /**
+  * Pass in an arbitrary ornament though a data attribute, e.g.:
+  *
+    <hr class="rule  rule--ornament" data-ornament="!">
+  *
+  */ }
+  .rule--ornament:after {
+    content: "\00A7";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    line-height: 0;
+    text-align: center; }
+  .rule--ornament[data-ornament]:after {
+    content: attr(data-ornament); }
 
 /**
  * Style trumps; helper and brand classes
@@ -2487,14 +2658,14 @@ label,
  */
 .brand {
   font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important; }
+  color: #cc0000!important; }
 
 .brand-face {
   font-family: "Helvetica Neue", sans-serif!important; }
 
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important; }
+  color: #cc0000!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -2785,7 +2956,7 @@ label,
     position: absolute !important;
     width: 1px !important; } }
 @media only screen and (max-width: 1023px) {
-  .accessibility--portable,
+  .accessibility--portable, .site-header__branding__social__tagline,
   .visuallyhidden--portable {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -2796,7 +2967,7 @@ label,
     position: absolute !important;
     width: 1px !important; } }
 @media only screen and (min-width: 1024px) {
-  .accessibility--desk,
+  .accessibility--desk, .menu-toggle, .menu-toggle span,
   .visuallyhidden--desk {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -2946,6 +3117,16 @@ label,
  * 2. Remove any margins and paddings that might affect the grid system.
  * 3. Apply a negative `margin-left` to negate the columns’ gutters.
  */
+.site-header__branding {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: -24px;
+  /* [3] */ }
+
 /**
  * 1. Cause columns to stack side-by-side.
  * 2. Space columns apart.
@@ -2953,6 +3134,22 @@ label,
  * 4. Full-width unless told to behave otherwise.
  * 5. Required to combine fluid widths and fixed gutters.
  */
+.site-header__branding__logo, .site-header__branding__social, .site-header__branding__search {
+  display: inline-block;
+  /* [1] */
+  padding-left: 24px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */ }
+
 /**
  * Reversed grids allow you to structure your source in the opposite order to
  * how your rendered layout will appear. Extends `.grid`.
@@ -3083,6 +3280,9 @@ label,
   /**
    * Thirds
    */
+  .site-header__branding__logo {
+    width: 66.666%; }
+
   /**
    * Quarters
    */
@@ -3108,9 +3308,15 @@ label,
   /**
    * Halves
    */
+  .site-header__branding__logo {
+    width: 50%; }
+
   /**
    * Thirds
    */
+  .site-header__branding__search {
+    width: 33.333%; }
+
   /**
    * Quarters
    */
@@ -3120,6 +3326,9 @@ label,
   /**
    * Sixths
    */
+  .site-header__branding__social {
+    width: 16.666%; }
+
   /**
    * Eighths
    */
@@ -3350,6 +3559,22 @@ span.amp {
   display: block; }
 
 /**
+ * Base styles.
+ */
+/*------------------------------------*\
+    TTN: BASE: WIDTHS
+\*------------------------------------*/
+/**
+ * Large-scale layout widths.
+ */
+/**
+ * Container/wrap.
+ */
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+/**
  * Objects.
  */
 /*------------------------------------*\
@@ -3374,4 +3599,50 @@ span.amp {
  *
  * @param color $background-color
  * @param boolean $top-edge If true, display on both top edge and bottom edge. Default is false (bottom only).
+ */
+/*------------------------------------*\
+    TTN: OBJECTS: RULES
+\*------------------------------------*/
+/**
+ * Horizontal rules, extend `hr`.
+ *
+ * ^^Extends ^inuit.css.
+ */
+/**
+ * Thick rules in sitewide header and footer.
+ *
+ * Extends `.rule`.
+ */
+.rule--site {
+  border-bottom-width: 3px;
+  margin-bottom: 13px;
+  margin-bottom: 0.8125rem; }
+
+/**
+ * Organisms.
+ */
+/*------------------------------------*\
+    TTN: ORGANISMS: SITE HEADER
+\*------------------------------------*/
+/**
+ * The main site header at the top of most
+ * pages besides (some) special issue pages.
+ */
+.site-header {
+  background-color: black;
+  position: relative;
+  z-index: 9999; }
+
+.site-header__branding__logo img {
+  margin: 0; }
+
+.site-header__branding__social__tagline {
+  margin: 0;
+  padding: 0; }
+
+/*------------------------------------*\
+    TTN: ORGANISMS: SITE NAV
+\*------------------------------------*/
+/**
+ * The main navigation organism.
  */

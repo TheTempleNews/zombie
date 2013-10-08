@@ -18,7 +18,7 @@
 $use-grids:         false;
 $use-flexbox:       false;
 $use-columns:       false;
-$use-nav:           false;
+$use-nav:           true;
 $use-options:       false;
 $use-pagination:    false;
 $use-breadcrumb:    false;
@@ -36,7 +36,7 @@ $use-sprite:        false;
 $use-icon-text:     true;
 $use-beautons:      false;
 $use-lozenges:      false;
-$use-rules:         false;
+$use-rules:         true;
 $use-stats:         false;
 $use-greybox:       false;
 
@@ -45,9 +45,12 @@ $use-greybox:       false;
 
 
 /*------------------------------------*\
-    $CSSWIZARDRY-GRIDS
+    $GRIDS
 \*------------------------------------*/
 
+/**
+ * CSSWizardry-Grids
+ */
 $responsive: true;
 $mobile-first: true;
 $use-silent-classes: true;
@@ -60,7 +63,10 @@ $breakpoints: (
     'desk' '(min-width: 1024px)'
 );
 
-
+/**
+ * Define a maximum width for the container.
+ */
+$container-width: 1140px;
 
 
 
@@ -91,6 +97,9 @@ $color__red: #cc0000;
 $color__red--cherry: #9e1b34;
 $color__gray--light: #ccc;
 
+$color__primary: $color__red;
+
+$brand-color: $color__red; // ^overrides inuit.css
 
 /**
  * Color palette for Music Issue 2013 color scheme.

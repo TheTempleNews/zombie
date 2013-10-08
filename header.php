@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 
 <!--[if IEMobile 7]><html <?php language_attributes(); ?> class="no-js iem7"><![endif]-->
 <!--[if (gt IEMobile 7)|!(IEMobile)]><html <?php language_attributes(); ?> class="no-js"><![endif]-->
@@ -9,25 +9,25 @@
 
 	<head>
 		<meta charset="utf-8">
-		
+
 		<title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
-		
+
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
+
 		<!-- mobile meta (hooray!) -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		
+
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		
+
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		
+
 		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
-		
+
 		<!-- Typekit -->
 		<script type="text/javascript" src="//use.typekit.net/qno7mfo.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -37,11 +37,11 @@
 		if ( is_page('movers-shakers') ) : ?>
 			<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900' rel='stylesheet' type='text/css'>
 		<?php endif; ?>
-		
+
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-		
+
 		<meta name="google-site-verification" content="ZnmdPLNGk7fPoSfVoEufiCekUIyd7_2nqvYTpsxQVj0" />
 		<!-- advertisement fnord -->
 		<script type='text/javascript'>
@@ -52,13 +52,13 @@
 		gads.async = true;
 		gads.type = 'text/javascript';
 		var useSSL = 'https:' == document.location.protocol;
-		gads.src = (useSSL ? 'https:' : 'http:') + 
+		gads.src = (useSSL ? 'https:' : 'http:') +
 		'//www.googletagservices.com/tag/js/gpt.js';
 		var node = document.getElementsByTagName('script')[0];
 		node.parentNode.insertBefore(gads, node);
 		})();
 		</script>
-		
+
 		<script type='text/javascript'>
 		googletag.cmd.push(function() {
 			googletag.defineSlot('/4602070/NSLeaderboard', [728, 90], 'div-gpt-ad-1342714724220-0').addService(googletag.pubads());
@@ -73,27 +73,20 @@
 		});
 		</script>
 		<!-- end advertisement -->
-		
-		<!-- drop Google Analytics Here -->	
+
+		<!-- drop Google Analytics Here -->
 			<!-- or use Yoast's Google Analytics for WordPress plugin @ http://yoast.com/wordpress/google-analytics/ -->
 		<!-- end analytics -->
-		
+
 	</head>
 
 	<body <?php body_class(); ?>>
+		<header class="site-header" role="banner">
 
-		<div id="container">
-
-			<header class="header" role="banner">
-
-				<div id="outer-header">
-
-					<div class="wrap clearfix">
-						
-						<!-- DESKTOP-ONLY ADS -->
-						<?php if ( !is_handheld() ) : ?>
-						<div id="ad-topnavbar" class="ad">
-
+			<div class="site-header__leaderboard  wrap">
+				<!-- DESKTOP-ONLY ADS -->
+				<?php if ( !is_handheld() ) : ?>
+					<div class="ad--leaderboard  ad">
 						<!-- THIS IS AN ADVERTISEMENT FNORD -->
 						<!-- NSLeaderboard -->
 						<div id='div-gpt-ad-1342714724220-0' style='width:728px; height:90px; margin:0px auto;'>
@@ -101,58 +94,52 @@
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-0'); });
 						</script>
 						</div>
-						
+
 						<!-- <p>ADVERTISEMENT</p> -->
+					</div>
+				<?php endif; // end if is NOT handheld (desktop) ?>
+			</div>
 
-						</div> <!-- end #ad-topnavbar -->
-						
-						<?php endif; // end if is NOT handheld (desktop) ?>
+			<div class="site-header__branding">
+				<div class="wrap">
+					<div class="inner">
 
-						<div id="top-header">
+						<a href="<?php echo home_url(); ?>" class="site-header__branding__logo  logo"  rel="nofollow">
+							<img alt="The Temple News" title="The Temple News" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" />
+						</a><!--
 
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
-							
-							
-							<div id="tagline-social-container">
-							
-								<div class="header-social clearfix">
-								
-									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
-									<a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="icon-twitter"></i></a>
-									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
-								
-								</div>
-								
-								<!-- if you'd like to use the site description you can un-comment it below -->
-								<span id="site-tagline"><?php bloginfo('description'); ?></span>
+						--><div class="site-header__branding__social">
+							<div class="inner">
+								<a class="icon-facebook  social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"></a>
+								<a class="icon-twitter  social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"></a>
+								<a class="icon-rss  social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"></a>
 							</div>
-						
-						
-							<!-- menu button -->
-							<div class="menu-button icon-reorder last">
-								MENU
-							</div>
-							
+
+							<p class="site-header__branding__social__tagline  tagline"><?php bloginfo('description'); ?></p>
+						</div><!--
+
+						--><div class="menu-toggle icon-reorder">
+							<span>MENU</span>
+						</div><!--
+
+						--><div class="site-header__branding__search">
 							<?php echo bones_wpsearch(); ?>
-						
-						</div> <!-- end #top-header -->
-						
+						</div>
 
-					</div><!-- end #outer-header .wrap -->
+					</div> <!-- end .site-header__branding -->
 
-				</div><!-- end #outer-header -->
+				</div><!-- end .site-header__branding .wrap -->
 
-				
+			</div><!-- end .site-header__branding -->
 
-				<div id="inner-header" class="wrap clearfix">
-					
-					<nav role="navigation">
-						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-					</nav>
-					
-					<?php // get_search_form(); ?>
-					
-				
-				</div> <!-- end #inner-header -->
+			<hr class="rule  rule--site  brand-color" />
 
-			</header> <!-- end header -->
+			<nav class="site-nav" role="navigation">
+				<div class="inner  wrap">
+					<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+				</div>
+			</nav>
+
+			</div> <!-- end #inner-header -->
+
+		</header> <!-- end header -->
