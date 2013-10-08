@@ -10,7 +10,7 @@
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
 /**
- * All of inuit.css’ objects and abstractions are initially turned off by
+ * All of inuit.css' objects and abstractions are initially turned off by
  * default. This means that you start any project with as little as possible,
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
@@ -64,29 +64,37 @@ $breakpoints: (
 
 
 
-/*------------------------------------*\
-    $OVERRIDES
-\*------------------------------------*/
-/**
- * Place any variables that should override inuit.css’ defaults here.
- */
-
-$base-spacing-unit: 16px;
-
-
-
-
 
 /*------------------------------------*\
-    $CUSTOM
+    $TYPOGRAPHY-AND-VERTICAL-RHYTHM
 \*------------------------------------*/
-/**
- * Place any of your own variables that sit on top of inuit.css here.
- */
 
-$font-stack__sans-serif: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack__sans-serif: "Source Sans Pro", "Open Sans", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack__serif: "Alegreya", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-stack__serif--smallcaps: "Alegreya SC", $font-stack__serif;
+$font-stack__condensed: "League Gothic", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+
+$base-font-family: $font-stack__serif; // $OVERRIDES inuit.css
+$base-font-family--smallcaps: $font-stack__serif--smallcaps;
+
+$base-spacing-unit: 16px; // $OVERRIDES inuit.css
+
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+
+$color__red: #cc0000;
+$color__red--cherry: #9e1b34;
+$color__gray--light: #ccc;
+
 
 /**
- * Overrides inuit.css
+ * Color palette for Music Issue 2013 color scheme.
  */
-$base-font-family: $font-stack__sans-serif;
+$color--music-issue-2013__blue: #528ba3;
+$color--music-issue-2013__overlay: rgba(80,80,80,0.2);
+$color--music-issue-2013__green: #4fa442;
