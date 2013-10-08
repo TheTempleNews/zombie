@@ -142,7 +142,7 @@
 
 				</div><!-- end #outer-header -->
 
-				<div class="outer-line"></div>
+				
 
 				<div id="inner-header" class="wrap clearfix">
 					
