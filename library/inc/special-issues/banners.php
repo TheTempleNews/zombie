@@ -107,7 +107,13 @@
 							<h2 class="headline fittext"><a href="<?php home_url(); ?>/lunchies-2013/">Lunchies 2013</a></h2>
 						</div>
 
-					<?php }// END IT ALL! ?>
+					<?php } elseif (BREAKING_NEWS === true) { ?>
+
+						<div class="breaking-news-banner alert fittext clearfix">
+							<p><a href="http://broadandcecil.temple-news.com/2013/10/13/police-responding-armed-student/">BREAKING NEWS: Student recovered alive from Willington after 17 hours.</a></p>
+						</div>
+
+					<?php } // END IT ALL! ?>
 
 				</div> <!-- end .home-top-promo -->
 
