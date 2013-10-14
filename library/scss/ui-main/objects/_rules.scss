@@ -17,6 +17,5 @@
  */
 .rule--site {
 	border-bottom-width: 3px;
-	margin-bottom: $base-spacing-unit - 3px;
-    margin-bottom: (($base-spacing-unit - 3px) / $base-font-size)*1rem;
+    margin-bottom: 0;
 }

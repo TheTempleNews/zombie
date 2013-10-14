@@ -3755,6 +3755,22 @@ span.amp {
  * Base styles.
  */
 /*------------------------------------*\
+    TTN: BASE: LINKS
+\*------------------------------------*/
+a, a:visited {
+  color: #cc0000;
+  text-decoration: none;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -ms-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  transition: all 250ms linear; }
+a:hover, a:focus {
+  color: #777777; }
+a:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/*------------------------------------*\
     TTN: BASE: WIDTHS
 \*------------------------------------*/
 /**
@@ -3808,8 +3824,7 @@ span.amp {
  */
 .rule--site {
   border-bottom-width: 3px;
-  margin-bottom: 13px;
-  margin-bottom: 0.8125rem; }
+  margin-bottom: 0; }
 
 /**
  * Molecules.
@@ -4255,3 +4270,15 @@ input[type=color] {
 /**
  * The main navigation organism.
  */
+.site-nav {
+  font-weight: 600;
+  font-family: "Source Sans Pro", "Open Sans", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 8px; }
+  .site-nav ul {
+    margin-bottom: 0; }
+    .site-nav ul li {
+      margin: 0 4px; }
+      .site-nav ul li a:hover, .site-nav ul li a:focus {
+        background-color: #cc0000;
+        color: black; }

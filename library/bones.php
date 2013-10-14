@@ -269,7 +269,7 @@ function bones_main_nav() {
 		'container' => false,                           // remove nav container
 		'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
 		'menu' => 'The Main Menu',                           // nav name
-		'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
+		'menu_class' => 'nav nav--block top-nav clearfix',         // adding custom nav class
 		'menu_id' => 'menu-top-navigation',				// id for nav ul
 		'theme_location' => 'main-nav',                 // where it's located in the theme
 		'before' => '',                                 // before the menu
