@@ -24,12 +24,6 @@
 
 							<h2 class="section-box-featured-title section-box-title">Featured Content</h2>
 
-								<!-- featured content stuff goes here -->
-								<?php
-								if (function_exists('ttx_slider') ) {
-									ttx_slider();
-								} ?>
-
 						</section> <!-- end #section-box-featured -->
 
 
