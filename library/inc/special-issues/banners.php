@@ -110,7 +110,7 @@
 					<?php } elseif (BREAKING_NEWS === true) { ?>
 
 						<div class="breaking-news-banner alert fittext clearfix">
-							<p><a href="http://broadandcecil.temple-news.com/2013/10/13/police-responding-armed-student/">BREAKING NEWS: Armed student barricaded by police on Willington Street.</a></p>
+							<p><a href="http://broadandcecil.temple-news.com/2013/10/13/police-responding-armed-student/">BREAKING NEWS: Student recovered alive from Willington after 17 hours.</a></p>
 						</div>
 
 					<?php } // END IT ALL! ?>
