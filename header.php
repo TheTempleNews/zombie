@@ -118,12 +118,12 @@
 							<p class="site-header__branding__social__tagline  tagline"><?php bloginfo('description'); ?></p>
 						</div><!--
 
-						--><div class="menu-toggle icon-reorder">
+						--><!-- <div class="menu-toggle icon-reorder">
 							<span>MENU</span>
-						</div><!--
+						</div> --><!--
 
 						--><div class="site-header__branding__search">
-							<?php echo bones_wpsearch(); ?>
+							<?php get_search_form( true ); ?>
 						</div>
 
 					</div> <!-- end .site-header__branding -->

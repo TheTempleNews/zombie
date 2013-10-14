@@ -254,20 +254,6 @@ function bones_comments($comment, $args, $depth) {
 <?php
 } // don't remove this bracket!
 
-/************* SEARCH FORM LAYOUT *****************/
-
-// Search Form
-function bones_wpsearch( $form = '' ) {
-	$form = '<form role="search" method="get" class="search-form" action="' . home_url( '/' ) . '" >
-	<fieldset id="searchform-fields">
-	<label class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search','bonestheme').'" />
-	<input type="submit" id="searchsubmit" value="Go" />
-	</fieldset>
-	</form>';
-	return $form;
-} // don't remove this bracket!
-
 /**
  * List a post's categories but exclude the categories specified in the argument
  * @link http://wordpress.org/support/topic/the_category-exclude-categories?replies=13#post-1851015
