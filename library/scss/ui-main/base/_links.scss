@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    TTN: BASE: LINKS
+\*------------------------------------*/
+
+
+a {
+	&,
+	&:visited {
+		color: $color__red;
+		text-decoration: none;
+		@include vendor(transition, all 250ms linear);
+	}
+
+	&:hover,
+	&:focus {
+		color: $color__gray--dark;
+	}
+
+	&:link {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+}
