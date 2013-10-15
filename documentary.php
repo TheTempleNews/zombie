@@ -44,7 +44,7 @@ Template Name: Documentary
 
 			<header class="header wrap" role="banner">
 
-				<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
+				<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-500-emboss-tr.png" /></a>
 
 				<h3>Documentaries</h3>
 

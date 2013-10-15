@@ -119,10 +119,10 @@ function bones_scripts_and_styles() {
 	//
 	// LESS Stylesheet
 	// wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), ZOM_VERSION, 'all' );
-	wp_register_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/library/css/main.css', array(), ZOM_VERSION, 'all' );
+	wp_register_style( 'zombie-main-stylesheet', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array(), '', 'all' );
 
 	// ie-only style sheet
-	wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), ZOM_VERSION );
+	wp_register_style( 'zombie-ie-stylesheet', get_stylesheet_directory_uri() . '/assets/css/ie.min.css', array(), '' );
 
 	// comment reply script for threaded comments
 	if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -130,45 +130,29 @@ function bones_scripts_and_styles() {
 	}
 
 	//adding scripts file in the footer
-	wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery' ), ZOM_VERSION, true );
-
-	// adding flex tetrodo slider based on flexslider
-	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), ZOM_VERSION, true );
-	wp_register_style('flex-tetrodo-css', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/flexslider.css', array(), ZOM_VERSION, 'screen');
-
-	// Google Analytics Advanced Content Tracking
-	// see http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
-	//wp_register_script( 'ga-tracking', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ga.scrolltracking-ck.js', array( 'jquery' ), ZOM_VERSION, true );
+	wp_register_script( 'zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '', true );
 
 	// FitText 1.1 http://fittextjs.com/
-	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
+	//wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fittext.js', array( 'jquery' ), ZOM_VERSION, true );
 
 	// SlabText
-	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext-ck.js', array( 'jquery' ), ZOM_VERSION, true );
+	//wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext-ck.js', array( 'jquery' ), ZOM_VERSION, true );
 
-	// FitVids
-	wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fitvids-ck.js', array( 'jquery' ), ZOM_VERSION, true );
-
-	// masonry
-	wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', ('jquery'), ZOM_VERSION, true );
+	// Masonry
+	wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', ('jquery'), ZOM_VERSION, true );
 
 	// enqueue styles and scripts
 	wp_enqueue_script( 'bones-modernizr' );
 
 	// LESS stylesheet
 	// wp_enqueue_style( 'bones-stylesheet' );
-	wp_enqueue_style( 'main-stylesheet' );
-	wp_enqueue_style('bones-ie-only');
+	wp_enqueue_style( 'zombie-main-stylesheet' );
+	wp_enqueue_style('zombie-ie-stylesheet');
 
-	wp_enqueue_script('flex-tetrodo-js');
-	wp_enqueue_style('flex-tetrodo-css');
+	//wp_enqueue_script('fittext-js');
+	//wp_enqueue_script('slabtext-js');
 
-	wp_enqueue_script('fittext-js');
-	wp_enqueue_script('slabtext-js');
-
-	wp_enqueue_script('fitvids');
-
-	wp_enqueue_script( 'bones-js' );
+	wp_enqueue_script( 'zombie-scripts' );
 
 	// if the current page being displayed is single, load the scroll tracker for GA
 	// if ( is_single() ) {
@@ -182,7 +166,7 @@ function bones_scripts_and_styles() {
 	}
 
 	if ( is_page( 'music-issue' ) || is_page( 'the-american' )) {
-		wp_enqueue_script( 'masonry' );
+		wp_enqueue_script( 'masonry-js' );
 	}
 
   } // endif is_admin
@@ -190,8 +174,8 @@ function bones_scripts_and_styles() {
 
 // adding the conditional wrapper around ie stylesheet
 // source: http://code.garyjones.co.uk/ie-conditional-style-sheets-wordpress/
-function bones_ie_conditional( $tag, $handle ) {
-	if ( 'bones-ie-only' == $handle )
+function zombie_ie_conditional( $tag, $handle ) {
+	if ( 'zombie-ie-stylesheet' == $handle )
 		$tag = '<!--[if lte IE 9]>' . "\n" . $tag . '<![endif]-->' . "\n";
 	return $tag;
 }

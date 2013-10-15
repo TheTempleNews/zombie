@@ -170,7 +170,7 @@
 
 								<!--
 								<div id="broadcecilad-main" class="broadcecilad ttn-network-banner">
-									<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
+									<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
 								</div>
 								-->
 
@@ -238,7 +238,7 @@
 
 								<!--
 								<div id="thecherryad-main" class="thecherryad ttn-network-banner">
-									<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
+									<a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
 								</div>
 								-->
 
@@ -408,7 +408,7 @@
 												if (has_post_thumbnail()) {
 													the_post_thumbnail('zom-landscape-396');
 												} else {
-													echo '<img width="396" height="264" src="' . get_template_directory_uri() . '/library/images/fallback.png" class="wp-image-fallback" alt="This article has no featured image.">';
+													echo '<img width="396" height="264" src="' . get_template_directory_uri() . '/assets/img/fallback.png" class="wp-image-fallback" alt="This article has no featured image.">';
 												}
 												?>
 
@@ -548,7 +548,7 @@
 												if (has_post_thumbnail()) {
 													the_post_thumbnail('zom-landscape-396');
 												} else {
-													echo '<img width="396" height="264" src="' . get_template_directory_uri() . '/library/images/fallback.png" class="wp-image-fallback" alt="This article has no featured image.">';
+													echo '<img width="396" height="264" src="' . get_template_directory_uri() . '/assets/img/fallback.png" class="wp-image-fallback" alt="This article has no featured image.">';
 												}
 												?>
 											</div>

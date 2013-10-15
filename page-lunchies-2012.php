@@ -11,7 +11,7 @@ Template Name: Lunchies
 				<div id="inner-content" class="wrap clearfix">
 
 					<div class="lunchies-top-promo">
-				    	<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
+				    	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
 					</div>
 
 

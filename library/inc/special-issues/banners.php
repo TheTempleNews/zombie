@@ -4,7 +4,7 @@
 
 					<?php if (LUNCHIES_2012 == true) { // lunchies top banner ?>
 
-						<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
+						<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
 
 					<?php } elseif (ELECTION_ISSUE == true) { // election issue top banner
 
@@ -132,7 +132,7 @@
 						<div id="lunchies-top-promo">
 
 							<a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php the_time('Y'); ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/lunchies/lunchies-banner-<?php the_time('Y'); ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
 							</a>
 
 						</div> <!-- end #lunchies-top-promo -->

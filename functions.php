@@ -234,7 +234,7 @@ function bones_comments($comment, $args, $depth) {
 				*/
 				?>
 				<!-- custom gravatar call -->
-				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>&s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>&s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/assets/img/nothing.gif" />
 				<!-- end custom gravatar call -->
 				<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
@@ -870,7 +870,7 @@ function ttn_get_featured_image_fallback( $size = 'zom-landscape-396' ) {
 				$thumbnail = $first_img;
 			else:
 				// define default thumbnail, you can use full url here.
-				$thumbnail = bloginfo('template_directory') . "library/images/fallback.png";
+				$thumbnail = bloginfo('template_directory') . "assets/img/fallback.png";
 			endif;
 		endif;
 	endif;
