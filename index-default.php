@@ -28,7 +28,7 @@
 
 						    </footer> <!-- end article footer -->
 						    
-						    <?php // comments_template(); // uncomment if you want to use them ?>
+						    <?php // comments_template('/templates/comments.php'); // uncomment if you want to use them ?>
 					
 					    </article> <!-- end article -->
 					

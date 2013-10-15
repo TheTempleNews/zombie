@@ -33,7 +33,7 @@
 								</section> <!-- end article section -->
 
 								<section id="comments-section" class="page-break">
-									<?php comments_template(); // comments should go inside the article element ?>
+									<?php comments_template('/templates/comments.php'); // comments should go inside the article element ?>
 								</section>
 					
 							</article> <!-- end article -->

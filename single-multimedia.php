@@ -56,7 +56,7 @@
 
 								</footer> <!-- end article footer -->
 
-								<?php comments_template(); // comments should go inside the article element ?>
+								<?php comments_template('/templates/comments.php'); // comments should go inside the article element ?>
 
 							</article> <!-- end article -->
 

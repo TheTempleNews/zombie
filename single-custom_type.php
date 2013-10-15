@@ -45,7 +45,7 @@ single-bookmarks.php
 							
 						    </footer> <!-- end article footer -->
 						
-						    <?php comments_template(); // you may not need this ?>
+						    <?php comments_template('/templates/comments.php'); // you may not need this ?>
 					
 					    </article> <!-- end article -->
 					
