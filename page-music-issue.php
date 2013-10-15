@@ -4,7 +4,7 @@ Template Name: Music Issue
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 			<div id="content" class="music-issue music-issue-archive has-banner clearfix">
 
@@ -72,4 +72,4 @@ Template Name: Music Issue
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

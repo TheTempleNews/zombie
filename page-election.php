@@ -4,7 +4,7 @@ Template Name: Election
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 			
 			<div id="content">
 			
@@ -65,4 +65,4 @@ Template Name: Election
     
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

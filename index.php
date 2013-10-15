@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 	<div id="content" class="<?php if (HOME_TOP_PROMO == true) { echo 'has-banner'; } ?>">
 
@@ -585,4 +585,4 @@
 
 	</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

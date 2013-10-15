@@ -4,7 +4,7 @@ Template Name: Lunchies
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 			<div id="content">
 
@@ -209,4 +209,4 @@ Template Name: Lunchies
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

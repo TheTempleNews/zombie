@@ -4,7 +4,7 @@ Template Name: Bar Guide
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 			
 			<div id="content">
 			
@@ -34,4 +34,4 @@ Template Name: Bar Guide
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

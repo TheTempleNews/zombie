@@ -97,4 +97,4 @@ Template Name: Documentary
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 			<?php $post_type = get_post_type();
 
@@ -123,4 +123,4 @@
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+

@@ -24,21 +24,9 @@ require_once locate_template('/lib/scripts.php');         // Scripts and stylesh
 require_once locate_template('/lib/custom.php');          // Custom functions
 
 
-/*
-5. THE ZOMBIE LOOP
-	- contains custom loops
-		- for home
-		- for sections
-*/
+
 require_once('library/inc/zombie-loop.php');
-/*
-/*
-8. ZOMBIE CONFIGURATION (library/inc/zombie-conf.php)
-*/
 require_once('library/inc/zombie-conf.php');
-/*
-9. SPECIAL ISSUES FUNCTIONS (library/inc/special-issues/special-issues.php)
-*/
 require_once('library/inc/special-issues/special-issues.php');
 
 

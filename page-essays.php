@@ -4,7 +4,7 @@ Template Name: The Essayist
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 			<div id="content">
 			
@@ -126,4 +126,4 @@ Template Name: The Essayist
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+
