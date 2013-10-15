@@ -23,7 +23,7 @@
 					
 						    <section class="post-content clearfix">
 						
-							    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+							    <?php the_post_thumbnail(); ?>
 						
 							    <?php the_excerpt(); ?>
 					

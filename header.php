@@ -136,7 +136,7 @@
 
 			<nav class="site-nav" role="navigation">
 				<div class="inner  wrap">
-					<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+					<?php zombie_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 				</div>
 			</nav>
 

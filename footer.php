@@ -68,8 +68,7 @@
 							<p class="footer-about">The Temple News has been the paper of record for the Temple University community since it first printed as Temple University Weekly on Sept. 19, 1921. The award-winning student publication, editorially independent of Temple, now publishes every Tuesday and daily online. The Temple News distributes 5,000 printed copies, free of charge, to the university’s primary locations in the Delaware Valley.</p>
 
 							<p class="attribution">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.<br />
-								Powered by <a href="http://www.wordpress.org/" rel="nofollow">WordPress</a>.<br />
-								Built from <a href="http://themble.com/bones/" rel="nofollow">Bones</a>.</p>
+								Powered by <a href="http://www.wordpress.org/" rel="nofollow">WordPress</a>.</p>
 
 						</div>
 

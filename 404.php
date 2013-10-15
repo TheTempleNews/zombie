@@ -10,13 +10,13 @@
 						
 							<header class="article-header">
 							
-								<h1><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h1>
+								<h1><?php _e("Epic 404 - Article Not Found", "zombie"); ?></h1>
 						
 							</header> <!-- end article header -->
 					
 							<section class="post-content">
 							
-								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
+								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "zombie"); ?></p>
 					
 							</section> <!-- end article section -->
 
@@ -28,7 +28,7 @@
 						
 							<footer class="article-header">
 							
-							    <p><?php _e("This is the 404.php template.", "bonestheme"); ?></p>
+							    <p><?php _e("This is the 404.php template.", "zombie"); ?></p>
 							
 							</footer> <!-- end article footer -->
 					
