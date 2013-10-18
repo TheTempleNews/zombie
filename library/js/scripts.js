@@ -14,7 +14,7 @@ slow the page load.
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
-	var timelineBaseURL = '//temple-news.dev';
+	var timelineBaseURL = '//temple-news.com';
 	var timelineTemplateDir = timelineBaseURL + '/wp-content/themes/zombie';
 	var timelineLibDir = timelineTemplateDir + '/library/js/libs/timeline';
 
