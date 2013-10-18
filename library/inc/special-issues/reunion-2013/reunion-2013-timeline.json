@@ -1,0 +1,220 @@
+{
+    "timeline":
+    {
+        "headline": "TTNTimeline",
+        "type": "default",
+        "text": "<p>A watchdog for the Temple University community since 1921.</p>",
+        "date": [
+            {
+                "startDate": "1941",
+                "endDate": "1941",
+                "headline": "A Nation At War",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/fdr-mlk_Page_1.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/fdr-mlk_Page_1-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1961",
+                "endDate": "1961",
+                "headline": "A Visit From MLK Jr.",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/mlk_Page_4.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/mlk_Page_4-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1963",
+                "endDate": "1963",
+                "headline": "The Death of a President",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/jfk.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/jfk-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1970",
+                "endDate": "1972",
+                "headline": "Clark DeLeon, Staff Writer",
+                "text": "<blockquote>The biggest story at the Temple News in my tenure? When the law school students went on strike. <em>The law school students!</em> I covered the story every day during the strike. That was the Temple University I attended. The Law School dean resigned. His name was Ralph Norvelle. He was replaced as dean by a likeable law school administrator named Peter Liacouras.</blockquote><p>&mdash;Clark DeLeon, Staff Writer, 1970&ndash;72</p>",
+                "tag": "Testimonial",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/DSC_34651.jpg",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/DSC_34651-32x32.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1974",
+                "endDate": "1974",
+                "headline": "Mary Ellen Driscoll, Assistant City Editor",
+                "text": "<blockquote>I believe my chat with John Chaney for the 1973-1974 Big Five preview was the first time he was interviewed for the Temple News sports pages.<br>I went to Temple because I wanted to be a Philadelphia sportswriter. The sports staff when I was there included Joe Juliano, Craig Evans, Mike Gibson, Barry Sankey, Jeff Share and the late Bill Koenig and Mike Ferretti. I got into a fight with Wayne Hardin because I’d written that there were boos when he replaced Marty Ginestra &ndash; who led the team into the red zone &ndash; with Steve Joachim, so Steve could get the touchdown.<br>‘Why did you write that they were booing Steve?’<br>‘I didn’t say they were booing Steve, coach. I said they were booing you.’</blockquote><p>&mdash;Mary Ellen Driscoll, Assistant City Editor, 1974</p>",
+                "tag": "Testimonial",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/Driscoll-photo-1-384x576.jpg",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/Driscoll-photo-1-32x32.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1976",
+                "endDate": "1976",
+                "headline": "1970s Politics",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/carter_top-396x264.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/carter_top-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1983",
+                "endDate": "1983",
+                "headline": "1980s Race Relations",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/jesse_top-396x264.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/jesse_top-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "1990",
+                "endDate": "1990",
+                "headline": "The Faculty Strike",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/liacouras-384x576.jpg",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/liacouras-32x32.jpg",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2000",
+                "endDate": "2000",
+                "headline": "Peter Liacouras' Retirement",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/adamany-384x576.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/adamany-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2000",
+                "endDate": "2000",
+                "headline": "Michael Christopher, Editor in Chief",
+                "text": "<blockquote>The first one was in either late 1996 or early 1997. Duncan Sheik came to the university to play a show. He was near the top of the charts with the hit single ‘Barely Breathing,’ which was not only Grammy nominated, but also the most played song on radio in 1997. The Temple Events Committee put on the show but did next to zero publicity for it.<br>Some 35 people showed up. It was a disgrace, and a black eye on the university. Even more galling was the committee telling us not to run a negative story and dispensing not-so-veiled threats that they wouldn’t cooperate with the newspaper if we did. In the end, we ran a huge story on it, along with an interview with Sheik where he voiced his displeasure with the whole situation.</blockquote><p>&mdash;Michael Christopher, Editor in Chief, 2000</p>",
+                "tag": "Testimonial",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/DSC00867-576x384.jpg",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/DSC00867-32x32.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2006",
+                "endDate": "2006",
+                "headline": "John Chaney's Retirement",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/chaney1-384x576.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/chaney1-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2006",
+                "endDate": "2007",
+                "headline": "Christopher Vito, Sports Editor",
+                "text": "<blockquote>It was March 2006 and, as the sports editor, I had heard clamoring for at least a month that this could be the last season in the career of Chaney, Temple’s legendary men’s basketball coach. So my assistant sports editor, John Kopp, and I went to work on what would be an eight-page pullout section. We banked quotes from fellow top NCAA coaches as the season went on in order to build a ‘What they’re saying’ column. We assembled a timeline of Chaney’s career. We prepared a mainbar, reached out to former players for complimentary sidebars and pulled file and present-day photos for a picture page. The finished product, like most seasons the Owls played with Chaney on the bench, was a success.</blockquote><p>&mdash;Christopher Vito, Sports Editor, 2006&ndash;07</p>",
+                "tag": "Testimonial",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/Vito-hed.jpg",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/Vito-hed-32x32.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2008",
+                "endDate": "2009",
+                "headline": "Brittany Diggs, Chief Copy Editor",
+                "text": "<blockquote>The big story at Temple when I was at The Temple News was student tenants facing evictions for living in Yorktown and violating the neighborhood’s occupancy ordinance.<br>Stephen Zook and I covered this story. The ordinance prohibited students from being able to rent multi-unit housing from absentee landlords who owned properties in Yorktown. We attended town hall meetings and interviewed long-time Yorktown residents and Temple students who faced being evicted because of their illegal tenancies.</blockquote><p>&mdash;Brittany Diggs, Chief Copy Editor, 2008&ndash;09</p>",
+                "tag": "Testimonial",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/Screenshot-2013-10-17-20.33.29.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/Screenshot-2013-10-17-20.33.29-32x32.png",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2009",
+                "endDate": "2009",
+                "headline": "Morgan Zalot, News Editor",
+                "text": "<blockquote>One of the big stories when I was at The Temple News was an alleged hate crime involving a Jewish Penn State student being assaulted by a group of Temple students after he left a fraternity party. This was a controversial story that grabbed the attention of larger media outlets and The Temple News covered it just as a larger media outlet would – by covering the police aspect, attending court hearings for the suspects and getting input from the Jewish community at the university, who came together over the issue.</blockquote><p>&mdash;Morgan Zalot, News Editor, 2009</p>",
+                "tag": "Testimonial",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/zalot-Headshot_DN-384x576.jpg",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/zalot-Headshot_DN-32x32.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2012",
+                "endDate": "2012",
+                "headline": "The 2012 Election",
+                "text": "",
+                "tag": "Cover",
+                "classname": "",
+                "asset": {
+                    "media": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/election-384x576.png",
+                    "thumbnail": "http://temple-news.com/wp-content/blogs.dir/1/files/2013/10/election-32x32.png",
+                    "credit": "TTN",
+                    "caption": ""
+                }
+            }
+        ]
+    }
+}
