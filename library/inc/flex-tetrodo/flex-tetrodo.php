@@ -63,8 +63,10 @@ function ttx_script() {
 		});
 	</script>';
 }  
-      
-add_action('wp_footer', 'ttx_script');
+
+if (is_front_page()) {
+	add_action('wp_footer', 'ttx_script');
+}
 
 // Meet Tetrodo!
 function ttx_get_slider() {
