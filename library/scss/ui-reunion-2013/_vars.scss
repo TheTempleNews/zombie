@@ -12,7 +12,7 @@
 
 $responsive: true;
 $mobile-first: true;
-$use-silent-classes: true;
+$use-silent-classes: false;
 $push: true;
 $breakpoints: (
     'palm' '(max-width: 480px)',
@@ -29,3 +29,4 @@ $breakpoints: (
     $CUSTOM
 \*------------------------------------*/
 
+$container-width: 1140px;

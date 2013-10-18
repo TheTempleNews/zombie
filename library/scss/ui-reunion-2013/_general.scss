@@ -1,3 +1,15 @@
 /*------------------------------------*\
     REUNION 2013: GENERAL
 \*------------------------------------*/
+
+.content {
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+.slug-getting-reacquainted {
+	img {
+		clear: both;
+		max-width: 400px !important; // damn wordpress image classes
+	}
+}
