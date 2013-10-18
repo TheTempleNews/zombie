@@ -3,11 +3,50 @@
 \*------------------------------------*/
 
 .content {
+	color: black;
 	max-width: $container-width;
 	margin: 0 auto;
+	font-family: $font-stack--serif;
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+article {
+	margin-bottom: 3em;
+}
+
+ // hierarchical over-specific selector combat
+.page-template-default .hentry h1,
+.page-template-default .hentry h2,
+.page-template-default .hentry h3,
+.article__header__title,
+.headline {
+	font-family: $font-stack--headline;
+	font-weight: normal;
+
+	a {
+		color: black;
+	}
+}
+
+.dek {
+	font-style: italic;
+	font-size: 30px;
+	font-size: 1.875rem;
 }
 
 .slug-getting-reacquainted {
+
+	.article__header {
+		max-width: 800px;
+		text-align: center;
+		margin: 5.5em auto;
+	}
+
+	.article__header__title {
+		font-family: $font-stack--serif !important;  // hierarchical over-specific selector combat
+	}
+
 	img {
 		clear: both;
 		max-width: 400px !important; // damn wordpress image classes

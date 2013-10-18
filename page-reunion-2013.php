@@ -15,8 +15,8 @@ require_once('library/inc/special-issues/reunion-2013/reunion-2013-functions.php
 <main class="content" id="content" role="main">
 	<div class="content__inner" id="content__inner">
 
-		<div class="special-issue-banner--reunion-2013  special-issue-banner  fittext  clearfix">
-			<h1>The Temple News Reunion 2013</h1>
+		<div class="special-issue-banner--reunion-2013  special-issue-banner clearfix">
+			<h2 class="fittext">The Temple News Reunion 2013</h2>
 		</div>
 
 		<div class="reunion-2013-intro">
@@ -33,9 +33,9 @@ require_once('library/inc/special-issues/reunion-2013/reunion-2013-functions.php
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix slug-' . ttn_get_the_slug('post')); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-					<header class="article-header">
-						<h1 class="single-title" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-						<div class="dek">
+					<header class="article__header">
+						<h1 class="article__header__title  headline" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+						<div class="article__header__dek  dek">
 							<?php the_excerpt(); ?>
 						</div> <!-- end dek -->
 					</header> <!-- end article header -->

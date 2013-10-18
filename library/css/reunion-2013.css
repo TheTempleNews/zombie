@@ -1534,10 +1534,48 @@
 \*------------------------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\000035}}
 .content {
+  color: black;
   max-width: 1140px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Alegreya", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-size: 24px;
+  font-size: 1.5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000314}}
+article {
+  margin-bottom: 3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000323}}
+.page-template-default .hentry h1,
+.page-template-default .hentry h2,
+.page-template-default .hentry h3,
+.article__header__title,
+.headline {
+  font-family: "Abril Fatface", "LeagueGothic", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000327}}
+  .page-template-default .hentry h1 a,
+  .page-template-default .hentry h2 a,
+  .page-template-default .hentry h3 a,
+  .article__header__title a,
+  .headline a {
+    color: black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000332}}
+.dek {
+  font-style: italic;
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000340}}
+.slug-getting-reacquainted .article__header {
+  max-width: 800px;
+  text-align: center;
+  margin: 5.5em auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000346}}
+.slug-getting-reacquainted .article__header__title {
+  font-family: "Alegreya", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/montchr\/work\/temple\%20news\/temple-news\.com\/temple-news\.dev\/wp-content\/themes\/zombie\/library\/scss\/ui-reunion-2013\/_general\.scss}line{font-family:\0000350}}
 .slug-getting-reacquainted img {
   clear: both;
   max-width: 400px !important; }
