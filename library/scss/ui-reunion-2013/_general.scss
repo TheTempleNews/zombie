@@ -7,8 +7,12 @@
 	max-width: $container-width;
 	margin: 0 auto;
 	font-family: $font-stack--serif;
-	font-size: 24px;
-	font-size: 1.5rem;
+}
+
+// :/
+#content {
+	padding: 0 16px;
+	padding: 0 1rem;
 }
 
 article {
@@ -40,7 +44,11 @@ article {
 	.article__header {
 		max-width: 800px;
 		text-align: center;
-		margin: 5.5em auto;
+		margin: 2.5em auto;
+
+		@media only screen and (min-width: 768px) {
+			margin: 5.5em auto;
+		}
 	}
 
 	.article__header__title {
@@ -49,6 +57,20 @@ article {
 
 	img {
 		clear: both;
-		max-width: 400px !important; // damn wordpress image classes
+		max-width: 100%;
+
+		@media only screen and (min-width: 768px) {
+			max-width: 400px !important; // damn wordpress image classes
+		}
+	}
+
+	.entry-content p {
+		font-size: 20px;
+		font-size: 1.25rem;
+
+		@media only screen and (min-width: 768px) {
+			font-size: 24px;
+			font-size: 1.5rem;
+		}
 	}
 }

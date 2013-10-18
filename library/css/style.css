@@ -4481,8 +4481,8 @@ very heavy because they're imported at the first media query.
  * is within the /library/scss directory.
  */
 .special-issue-banner--reunion-2013 h2 {
-  font-size: 136px;
-  font-size: 8.5rem;
+  font-size: 36px;
+  font-size: 2.2rem;
   text-align: center;
   font-weight: normal;
   font-family: "Abril Fatface", "LeagueGothic", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
@@ -4836,6 +4836,10 @@ you can add resource intensive styles.
     padding-right: 1em;
   }
   /* end .bar-guide */
+  .special-issue-banner--reunion-2013 h2 {
+    font-size: 136px;
+    font-size: 8.5rem;
+  }
   /********************
   WORDPRESS BODY CLASSES
   style a page via class
