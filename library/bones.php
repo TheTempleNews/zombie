@@ -177,6 +177,11 @@ function bones_scripts_and_styles() {
         wp_enqueue_style( 'font-vollkorn' );
 	}
 
+	// font for reunion 2013
+	if ( REUNION_2013 ) {
+		wp_enqueue_style( 'reunion-2013-fonts', '//fonts.googleapis.com/css?family=Abril+Fatface' );
+	}
+
 	if ( is_page( 'music-issue' ) || is_page( 'the-american' )) {
 		wp_enqueue_script( 'masonry' );
 	}

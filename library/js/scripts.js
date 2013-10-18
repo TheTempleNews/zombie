@@ -14,6 +14,19 @@ slow the page load.
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
+	var timelineBaseURL = '//temple-news.com';
+	var timelineTemplateDir = timelineBaseURL + '/wp-content/themes/zombie';
+	var timelineLibDir = timelineTemplateDir + '/library/js/libs/timeline';
+
+	createStoryJS({
+		width: "100%",
+		height: "800",
+		embed_id: 'timeline-embed',
+		source: timelineTemplateDir + '/library/inc/special-issues/reunion-2013/reunion-2013-timeline.json',
+		css: timelineLibDir + '/css/timeline.css',
+		js: timelineLibDir + '/js/timeline-min.js'
+	});
+
 	function flexNav() {
 		// Based off of Jason Weaver's FlexNav (http://jasonweaver.name/lab/flexiblenavigation/)
 		// Forked to github.com/montchr/zombie-flexnav/
@@ -40,6 +53,7 @@ jQuery(document).ready(function($) {
 	//$(".documentary-banner .fittext").fitText();
 	$('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
 	$('.breaking-news-banner.fittext p').fitText(2.25);
+	$('.special-issue-banner--reunion-2013 h2.fittext').fitText();
 
 	/* slabText */
 	$(".slabtextthis").slabText();

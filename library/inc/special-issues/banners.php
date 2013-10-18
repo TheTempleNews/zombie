@@ -113,6 +113,10 @@
 							<p><a href="http://broadandcecil.temple-news.com/2013/10/13/police-responding-armed-student/">BREAKING NEWS: Student recovered alive from Willington after 17 hours.</a></p>
 						</div>
 
+					<?php } elseif (REUNION_2013 === true) { ?>
+						<div class="special-issue-banner--reunion-2013  special-issue-banner  fittext  clearfix">
+							<h2 class="fittext"><a href="<?php home_url(); ?>/reunion-2013/">The Temple News Reunion 2013</a></h2>
+						</div>
 					<?php } // END IT ALL! ?>
 
 				</div> <!-- end .home-top-promo -->
