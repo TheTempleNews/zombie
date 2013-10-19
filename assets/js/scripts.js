@@ -28,6 +28,13 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+  // Flexslider
+  $('.flexslider').flexslider({
+    animation: 'slide',
+    pauseOnAction: false,
+    pauseOnHover: false,
+  });
+
 	/* FitVids */
 	$(".video-container").fitVids();
 

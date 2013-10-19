@@ -49,13 +49,21 @@ function zombie_scripts() {
 
 	// Masonry
 	// https://github.com/montchr/zombie/issues/39
-	wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.masonry.min.js', ('jquery'), '', true );
+	wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.masonry.min.js', array('jquery'), '', true );
+
+	// FitVids
+	wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.fitvids.min.js', array( 'jquery' ), '', true );
 
 	// Conditional font loading
 	// https://github.com/montchr/zombie/issues/39
 	if ( is_page_template('page-essays.php') || get_post_type( $the_post = false )) {
 		wp_register_style( 'font-vollkorn','//fonts.googleapis.com/css?family=Vollkorn:400italic,400' );
         wp_enqueue_style( 'font-vollkorn' );
+	}
+
+	// font for reunion 2013
+	if ( REUNION_2013 ) {
+		wp_enqueue_style( 'reunion-2013-fonts', '//fonts.googleapis.com/css?family=Abril+Fatface' );
 	}
 
 	// https://github.com/montchr/zombie/issues/39
