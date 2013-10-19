@@ -129,7 +129,7 @@ function bones_scripts_and_styles() {
 	}
 
 	//adding scripts file in the footer
-	wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery' ), ZOM_VERSION, true );
+	wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.min.js', array( 'jquery', 'fitvids', 'fittext-js', 'slabtext-js', 'masonry', 'flex-tetrodo-js' ), ZOM_VERSION, true );
 
 	// adding flex tetrodo slider based on flexslider
 	wp_register_script( 'flex-tetrodo-js', get_stylesheet_directory_uri() . '/library/inc/flex-tetrodo/jquery.flexslider-min.js', array( 'jquery' ), ZOM_VERSION, true );
@@ -146,7 +146,7 @@ function bones_scripts_and_styles() {
 	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.slabtext-ck.js', array( 'jquery' ), ZOM_VERSION, true );
 
 	// FitVids
-	wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fitvids-ck.js', array( 'jquery' ), ZOM_VERSION, true );
+	wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fitvids.min.js', array( 'jquery' ), ZOM_VERSION, true );
 
 	// masonry
 	wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/libs/jquery.masonry.min.js', ('jquery'), ZOM_VERSION, true );
