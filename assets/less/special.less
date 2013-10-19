@@ -838,10 +838,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3313', end
 		.h1;
 		text-align: center;
 		font-weight: normal;
-		font-family: "league-script-no-1";
+		font-family: "league-script-no-1", cursive;
 
 		a {
 			color: #F28A49; // lunchies 2013 $color-orange
+		}
+	}
+}
+
+
+
+
+
+/************************
+ * REUNION 2013 STYLES *
+ ************************/
+
+/**
+ * Just the banner. Everything else
+ * is within the /library/scss directory.
+ */
+.special-issue-banner--reunion-2013 {
+	h2 {
+		font-size: 36px;
+		font-size: 2.2rem;
+		text-align: center;
+		font-weight: normal;
+		font-family: "Abril Fatface", "LeagueGothic", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+
+		a {
+			&:link,
+			&:visited {
+				color: black;
+			}
+
+			&:hover,
+			&:active {
+				color: @thatgrey;
+			}
 		}
 	}
 }

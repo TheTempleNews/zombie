@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Roots includes
+ */
+require_once locate_template('/lib/utils.php');           // Utility functions
+require_once locate_template('/lib/init.php');            // Initial theme setup and constants
+require_once locate_template('/lib/wrapper.php');         // Theme wrapper class
+require_once locate_template('/lib/sidebar.php');         // Sidebar class
+require_once locate_template('/lib/config.php');          // Configuration
+require_once locate_template('/lib/login.php');           // Login page
+require_once locate_template('/lib/activation.php');      // Theme activation
+require_once locate_template('/lib/titles.php');          // Page titles
+require_once locate_template('/lib/cleanup.php');         // Cleanup
+require_once locate_template('/lib/nav.php');             // Custom nav modifications
+require_once locate_template('/lib/gallery.php');         // Custom [gallery] modifications
+require_once locate_template('/lib/comments.php');        // Custom comments modifications
+require_once locate_template('/lib/rewrites.php');        // URL rewriting for assets
+require_once locate_template('/lib/relative-urls.php');   // Root relative URLs
+require_once locate_template('/lib/widgets.php');         // Sidebars and widgets
+require_once locate_template('/lib/scripts.php');         // Scripts and stylesheets
+
+
+require_once locate_template('/lib/custom.php');          // Custom functions
+
+
+
+require_once('library/inc/zombie-loop.php');
+require_once('library/inc/zombie-conf.php');
+require_once('library/inc/special-issues/special-issues.php');
+
+
+<<<<<<< HEAD
+=======
+	return $slug;
+}
+
+
+/**
+* Retrieve a post given its title.
+*
+* @link  http://wordpress.stackexchange.com/questions/11292/how-do-i-get-a-post-page-or-cpt-id-from-a-title-or-slug/11296#11296
+* 
+* @uses $wpdb
+*
+* @param string $post_title Page title
+* @param string $post_type post type ('post','page','any custom type')
+* @param string $output Optional. Output type. OBJECT, ARRAY_N, or ARRAY_A.
+* @return mixed
+*/
+function zombie_get_post_by_title($page_title, $post_type ='post' , $output = OBJECT) {
+    global $wpdb;
+        $post = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $page_title, $post_type));
+        if ( $post )
+            return get_post($post, $output);
+
+    return null;
+}
+>>>>>>> refs/heads/master

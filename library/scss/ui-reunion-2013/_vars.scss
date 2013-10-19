@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    REUNION 2013: VARS
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+
+$responsive: true;
+$mobile-first: true;
+$use-silent-classes: false;
+$push: true;
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 1023px)',
+    'lapandup' '(min-width: 481px)',
+    'portable' '(max-width: 1023px)',
+    'desk' '(min-width: 1024px)'
+);
+
+
+
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+
+$container-width: 1140px;
+
+$font-stack--serif: "Alegreya", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-stack--headline: "Abril Fatface", "LeagueGothic", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
