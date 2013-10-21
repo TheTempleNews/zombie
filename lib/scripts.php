@@ -33,26 +33,16 @@ function zombie_scripts() {
 		wp_enqueue_script('comment-reply');
 	}
 
+	// Register
 	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, null, false);
 	wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '2e3105766034dba1cd3e48a0257d554f', true);
+	wp_register_script('special-issue-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts-special-issues.min.js', array('jquery'), time(), true);
+	wp_register_script('timeline-storyjs', get_stylesheet_directory_uri() . '/assets/js/plugins/timeline/js/storyjs-embed.js', array('jquery'), time(), false);
+
+	// Enqueue
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('zombie-scripts');
-
-	// FitText 1.1 http://fittextjs.com/
-	// https://github.com/montchr/zombie/issues/39
-	wp_register_script( 'fittext-js', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.fittext.min.js', array( 'jquery' ), '', true );
-
-	// SlabText
-	// https://github.com/montchr/zombie/issues/39
-	wp_register_script( 'slabtext-js', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.slabtext.min.js', array( 'jquery' ), '', true );
-
-	// Masonry
-	// https://github.com/montchr/zombie/issues/39
-	wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.masonry.min.js', array('jquery'), '', true );
-
-	// FitVids
-	wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/assets/js/libs/jquery.fitvids.min.js', array( 'jquery' ), '', true );
 
 	// Conditional font loading
 	// https://github.com/montchr/zombie/issues/39

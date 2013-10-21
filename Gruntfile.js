@@ -9,10 +9,9 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        'assets/js/plugins/*.js',
         'assets/js/special-issues/*.js',
-        '!assets/js/scripts.min.js',
-        '!scripts-special-issues.min.js'
+        '!assets/js/*.min.js',
+        '!assets/js/special-issues/*.min.js'
       ]
     },
     compass: {
