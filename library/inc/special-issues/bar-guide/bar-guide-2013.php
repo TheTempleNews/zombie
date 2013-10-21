@@ -1,407 +1,407 @@
-						<div id="bar-guide-map">
+            <div id="bar-guide-map">
 
-							<iframe src="http://batchgeo.com/map/6fb9163ee139543dfd724aea01a1a2d6" frameborder="0" width="100%"></iframe>
+              <iframe src="http://batchgeo.com/map/6fb9163ee139543dfd724aea01a1a2d6" frameborder="0" width="100%"></iframe>
 
-						</div> <!-- end #bar-guide-map -->
+            </div> <!-- end #bar-guide-map -->
 
-						<div class="article-group clearfix">
+            <div class="article-group clearfix">
 
-							<div class="group-headline first fourcol">
-								<h1 class="slabtextthis">
-									<span class="slabtext">Philly bars </span><span class="slabtext">speak to </span><span class="slabtext">inner child</span>
-								</h1>
-							</div>
+              <div class="group-headline first fourcol">
+                <h1 class="slabtextthis">
+                  <span class="slabtext">Philly bars </span><span class="slabtext">speak to </span><span class="slabtext">inner child</span>
+                </h1>
+              </div>
 
-							<div class="article-group-inner">
+              <div class="article-group-inner">
 
-								<?php // Article: Old City’s Sugar’s offers sweet deals
+                <?php // Article: Old City’s Sugar’s offers sweet deals
 
-								$query = new WP_Query('p=42483&post_type=article_ae'); ?>
+                $query = new WP_Query('p=42483&post_type=article_ae'); ?>
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol clearfix'); ?> role="article">
+                <article id="post-<?php the_ID(); ?>" <?php post_class('fourcol clearfix'); ?> role="article">
 
-									<header class="article-header">
+                  <header class="article-header">
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-										<div class="featured-image-container featured-image-container-full">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-										</div> <!-- end .featured-image-container -->
+                    <div class="featured-image-container featured-image-container-full">
+                      <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+                    </div> <!-- end .featured-image-container -->
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
-								<?php endwhile; // end article: Old City’s Sugar’s offers sweet deals ?>
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
+                  </header> <!-- end article header -->
 
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
 
-								<?php // Article: Barcade scores with customers
+                </article> <!-- end article -->
 
-								$query = new WP_Query('p=42477&post_type=article_ae'); ?>
+                <?php endwhile; // end article: Old City’s Sugar’s offers sweet deals ?>
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol last clearfix'); ?> role="article">
 
-									<header class="article-header">
+                <?php // Article: Barcade scores with customers
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                $query = new WP_Query('p=42477&post_type=article_ae'); ?>
 
-										<div class="featured-image-container featured-image-container-full">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-										</div> <!-- end .featured-image-container -->
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class('fourcol last clearfix'); ?> role="article">
 
-								<?php endwhile; // end article: Barcade scores with customers ?>
+                  <header class="article-header">
 
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
+                    <div class="featured-image-container featured-image-container-full">
+                      <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+                    </div> <!-- end .featured-image-container -->
 
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
-								<?php // Multimedia: Bar Guide Video
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
-								$query = new WP_Query('p=42518&post_type=multimedia'); ?>
+                  </header> <!-- end article header -->
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('eightcol last push_four clearfix'); ?> role="article">
+                </article> <!-- end article -->
 
-									<section class="post-content multimedia-post">
-										
-										<div class="single-video single-multimedia single-mgallery">
-										<?php
-											// http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/				
-											// Get the video URL and put it in the $video variable
-											$videoID = get_post_meta($post->ID, 'video_link', true);
-											// Check if there is in fact a video URL
-											if ($videoID) {
-												echo '<div class="video-container">';
-												// Echo the embed code via oEmbed
-												echo wp_oembed_get( $videoID ); 
-												echo '</div>';
-										} ?>
-										</div>
-										
-									</section> <!-- end .post-content -->
+                <?php endwhile; // end article: Barcade scores with customers ?>
 
-									<header class="article-header">
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-										<div class="single-multimedia-dek single-media-dek">
-											<?php echo get_post_meta($post->ID, 'media_dek', true); ?>
-										</div>
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
 
-								</article> <!-- end article -->
+                <?php // Multimedia: Bar Guide Video
 
-								<?php endwhile; // end Multimedia: Bar Guide Video ?>
+                $query = new WP_Query('p=42518&post_type=multimedia'); ?>
 
-							</div> <!-- end .article-group-inner -->
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-						</div> <!-- end .article-group -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class('eightcol last push_four clearfix'); ?> role="article">
 
+                  <section class="post-content multimedia-post">
 
+                    <div class="single-video single-multimedia single-mgallery">
+                    <?php
+                      // http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/
+                      // Get the video URL and put it in the $video variable
+                      $videoID = get_post_meta($post->ID, 'video_link', true);
+                      // Check if there is in fact a video URL
+                      if ($videoID) {
+                        echo '<div class="video-container">';
+                        // Echo the embed code via oEmbed
+                        echo wp_oembed_get( $videoID );
+                        echo '</div>';
+                    } ?>
+                    </div>
 
-						<div class="article-group clearfix">
+                  </section> <!-- end .post-content -->
 
-							<div class="group-headline first fourcol">
-								<h2 class="slabtextthis"><span class="slabtext">Snapshots: </span><span class="slabtext">Meet the </span><span class="slabtext">Mixers <span class="amp">&amp;</span> Shakers</span></h2>
-							</div>
+                  <header class="article-header">
 
-							<div class="article-group-inner">
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-								<?php // Article: Snapshot: Miki Neuman
+                    <div class="single-multimedia-dek single-media-dek">
+                      <?php echo get_post_meta($post->ID, 'media_dek', true); ?>
+                    </div>
 
-								$query = new WP_Query('p=42466&post_type=article_ae'); ?>
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                  </header> <!-- end article header -->
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol clearfix'); ?> role="article">
+                </article> <!-- end article -->
 
-									<header class="article-header">
+                <?php endwhile; // end Multimedia: Bar Guide Video ?>
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+              </div> <!-- end .article-group-inner -->
 
-										<div class="featured-image-container featured-image-container-full">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-										</div> <!-- end .featured-image-container -->
+            </div> <!-- end .article-group -->
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
 
-								<?php endwhile; // end article: Snapshot: Miki Neuman ?>
 
+            <div class="article-group clearfix">
 
+              <div class="group-headline first fourcol">
+                <h2 class="slabtextthis"><span class="slabtext">Snapshots: </span><span class="slabtext">Meet the </span><span class="slabtext">Mixers <span class="amp">&amp;</span> Shakers</span></h2>
+              </div>
 
-								<?php // Article: Snapshot: Alex Slater
+              <div class="article-group-inner">
 
-								$query = new WP_Query('p=42457&post_type=article_ae'); ?>
+                <?php // Article: Snapshot: Miki Neuman
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                $query = new WP_Query('p=42466&post_type=article_ae'); ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('fourcol last clearfix'); ?> role="article">
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-									<header class="article-header">
+                <article id="post-<?php the_ID(); ?>" <?php post_class('fourcol clearfix'); ?> role="article">
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                  <header class="article-header">
 
-										<div class="featured-image-container featured-image-container-full">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
-										</div> <!-- end .featured-image-container -->
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                    <div class="featured-image-container featured-image-container-full">
+                      <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+                    </div> <!-- end .featured-image-container -->
 
-								<?php endwhile; // end article: Snapshot: Alex Slater ?>
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
+                  </header> <!-- end article header -->
 
-								<?php // Article: Thompson: Bartender gets served memorable customers
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
 
-								$query = new WP_Query('p=42454&post_type=article_ae'); ?>
+                </article> <!-- end article -->
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php endwhile; // end article: Snapshot: Miki Neuman ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('eightcol last push_four clearfix'); ?> role="article">
 
-									<div class="headshot featured-image-container featured-image-container-full">
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-columnist-200'); ?></a>
-									</div> <!-- end .featured-image-container -->
 
-									<header class="article-header">
+                <?php // Article: Snapshot: Alex Slater
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                $query = new WP_Query('p=42457&post_type=article_ae'); ?>
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-								<?php endwhile; // end article: Thompson: Bartender gets served memorable customers ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('fourcol last clearfix'); ?> role="article">
 
-							</div> <!-- end .article-group-inner -->
+                  <header class="article-header">
 
-						</div> <!-- end .article-group -->
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
+                    <div class="featured-image-container featured-image-container-full">
+                      <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-576'); ?></a>
+                    </div> <!-- end .featured-image-container -->
 
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
-						<div class="article-group first sixcol clearfix">
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
-							<div class="article-group-inner">
+                  </header> <!-- end article header -->
 
-								<?php // Article: City’s modern speakeasies offer nostalgia, exclusivity
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
 
-								$query = new WP_Query('p=42442&post_type=article_ae'); ?>
+                </article> <!-- end article -->
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php endwhile; // end article: Snapshot: Alex Slater ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-									<header class="article-header">
 
-										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                <?php // Article: Thompson: Bartender gets served memorable customers
 
-											<span class="slabtext">City's modern </span><span class="slabtext">speakeasies offer </span><span class="slabtext">nostalgia <span class="amp">&amp;</span> exclusivity</span>
+                $query = new WP_Query('p=42454&post_type=article_ae'); ?>
 
-										</a></h3>
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class('eightcol last push_four clearfix'); ?> role="article">
 
-								<?php endwhile; // end article: City’s modern speakeasies offer nostalgia, exclusivity ?>
+                  <div class="headshot featured-image-container featured-image-container-full">
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-columnist-200'); ?></a>
+                  </div> <!-- end .featured-image-container -->
 
+                  <header class="article-header">
 
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-								<?php // Article: Walking Tall and Speaking Easy
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
-								$query = new WP_Query('p=42447&post_type=article_ae'); ?>
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                  </header> <!-- end article header -->
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('sixcol first clearfix'); ?> role="article">
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
 
-									<header class="article-header">
+                </article> <!-- end article -->
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                <?php endwhile; // end article: Thompson: Bartender gets served memorable customers ?>
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-								
-									</header> <!-- end article header -->
-							
-								</article> <!-- end article -->
+              </div> <!-- end .article-group-inner -->
 
-								<?php endwhile; // end article: Walking Tall and Speaking Easy ?>
+            </div> <!-- end .article-group -->
 
 
 
-								<?php // Article: Three to See
+            <div class="article-group first sixcol clearfix">
 
-								$query = new WP_Query('p=42450&post_type=article_ae'); ?>
+              <div class="article-group-inner">
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php // Article: City’s modern speakeasies offer nostalgia, exclusivity
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('sixcol last clearfix'); ?> role="article">
+                $query = new WP_Query('p=42442&post_type=article_ae'); ?>
 
-									<header class="article-header">
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-										<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-								
-									</header> <!-- end article header -->
-							
-								</article> <!-- end article -->
+                  <header class="article-header">
 
-								<?php endwhile; // end article: Three to See ?>
+                    <h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 
-							</div> <!-- end .article-group-inner -->
+                      <span class="slabtext">City's modern </span><span class="slabtext">speakeasies offer </span><span class="slabtext">nostalgia <span class="amp">&amp;</span> exclusivity</span>
 
-						</div> <!-- end .article-group -->
+                    </a></h3>
 
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
 
+                  </header> <!-- end article header -->
 
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
 
+                </article> <!-- end article -->
 
-						<div class="article-group sixcol last clearfix">
+                <?php endwhile; // end article: City’s modern speakeasies offer nostalgia, exclusivity ?>
 
-							<div class="article-group-inner">
 
-								<?php // Article: Patrons say, “Cheese!” at Tigerbeats
 
-								$query = new WP_Query('p=42474&post_type=article_ae'); ?>
+                <?php // Article: Walking Tall and Speaking Easy
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                $query = new WP_Query('p=42447&post_type=article_ae'); ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('sixcol first clearfix'); ?> role="article">
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-									<header class="article-header">
+                <article id="post-<?php the_ID(); ?>" <?php post_class('sixcol first clearfix'); ?> role="article">
 
-										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-											<span class="slabtext">Patrons say </span><span class="slabtext">"Cheese!" </span><span class="slabtext">at Tigerbeats</span>
-										</a></h3>
+                  <header class="article-header">
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-								<?php endwhile; // end article: Patrons say, “Cheese!” at Tigerbeats ?>
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
 
+                  </header> <!-- end article header -->
 
+                </article> <!-- end article -->
 
-								<?php // Article: Beer and billiards offered in Old City
+                <?php endwhile; // end article: Walking Tall and Speaking Easy ?>
 
-								$query = new WP_Query('p=42471&post_type=article_ae'); ?>
 
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-								<article id="post-<?php the_ID(); ?>" <?php post_class('sixcol last clearfix'); ?> role="article">
+                <?php // Article: Three to See
 
-									<header class="article-header">
+                $query = new WP_Query('p=42450&post_type=article_ae'); ?>
 
-										<h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><span class="slabtext">Beer <span class="amp">&amp;</span> billiards </span><span class="slabtext">offered in </span><span class="slabtext">Old City</span></a></h3>
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-										<div class="dek">
-											<?php the_excerpt(); ?>
-										</div> <!-- end dek -->
-									
-										<p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
-								
-									</header> <!-- end article header -->
-							
-									<section class="first-graf">
-										<?php echo get_the_content_first_graf(); ?>
-									</section> <!-- end .first-graf -->
-							
-								</article> <!-- end article -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class('sixcol last clearfix'); ?> role="article">
 
-								<?php endwhile; // end article: Beer and billiards offered in Old City ?>
+                  <header class="article-header">
 
-							</div> <!-- end .article-group-inner -->
+                    <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-						</div> <!-- end .article-group -->
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
+
+                  </header> <!-- end article header -->
+
+                </article> <!-- end article -->
+
+                <?php endwhile; // end article: Three to See ?>
+
+              </div> <!-- end .article-group-inner -->
+
+            </div> <!-- end .article-group -->
+
+
+
+
+
+
+            <div class="article-group sixcol last clearfix">
+
+              <div class="article-group-inner">
+
+                <?php // Article: Patrons say, “Cheese!” at Tigerbeats
+
+                $query = new WP_Query('p=42474&post_type=article_ae'); ?>
+
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+                <article id="post-<?php the_ID(); ?>" <?php post_class('sixcol first clearfix'); ?> role="article">
+
+                  <header class="article-header">
+
+                    <h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                      <span class="slabtext">Patrons say </span><span class="slabtext">"Cheese!" </span><span class="slabtext">at Tigerbeats</span>
+                    </a></h3>
+
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
+
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+
+                  </header> <!-- end article header -->
+
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
+
+                </article> <!-- end article -->
+
+                <?php endwhile; // end article: Patrons say, “Cheese!” at Tigerbeats ?>
+
+
+
+                <?php // Article: Beer and billiards offered in Old City
+
+                $query = new WP_Query('p=42471&post_type=article_ae'); ?>
+
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+                <article id="post-<?php the_ID(); ?>" <?php post_class('sixcol last clearfix'); ?> role="article">
+
+                  <header class="article-header">
+
+                    <h3 class="headline slabtextthis"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><span class="slabtext">Beer <span class="amp">&amp;</span> billiards </span><span class="slabtext">offered in </span><span class="slabtext">Old City</span></a></h3>
+
+                    <div class="dek">
+                      <?php the_excerpt(); ?>
+                    </div> <!-- end dek -->
+
+                    <p class="byline"><i><?php _e("by", "zombietheme"); ?></i> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span></p>
+
+                  </header> <!-- end article header -->
+
+                  <section class="first-graf">
+                    <?php echo get_the_content_first_graf(); ?>
+                  </section> <!-- end .first-graf -->
+
+                </article> <!-- end article -->
+
+                <?php endwhile; // end article: Beer and billiards offered in Old City ?>
+
+              </div> <!-- end .article-group-inner -->
+
+            </div> <!-- end .article-group -->

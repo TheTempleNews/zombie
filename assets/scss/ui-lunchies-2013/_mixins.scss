@@ -9,13 +9,13 @@
  * hover/active will be the same color.
  */
 @mixin a-color($unhovered: $color__alpha, $hovered: black) {
-	&,
-	&:visited {
-		color: $unhovered;
-	}
+  &,
+  &:visited {
+    color: $unhovered;
+  }
 
-	&:hover,
-	&:active {
-		color: $hovered;
-	}
+  &:hover,
+  &:active {
+    color: $hovered;
+  }
 }

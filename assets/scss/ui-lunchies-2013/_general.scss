@@ -3,35 +3,35 @@
 \*------------------------------------*/
 
 a {
-	@include vendor(transition, all 500ms ease);
+  @include vendor(transition, all 500ms ease);
 
-	&,
-	&:visited,
-	&:active,
-	&:hover {
-		text-decoration: none;
-	}
+  &,
+  &:visited,
+  &:active,
+  &:hover {
+    text-decoration: none;
+  }
 
-	&,
-	&:visited {
-		color: white;
-	}
+  &,
+  &:visited {
+    color: white;
+  }
 
-	&:active,
-	&:hover {
-		color: black;
-	}
+  &:active,
+  &:hover {
+    color: black;
+  }
 }
 
 img[width],
 img[height] {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 @include media-query(portable) {
-	img {
-		display: block;
-		margin: 0 auto;
-	}
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }

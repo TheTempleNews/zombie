@@ -7,34 +7,34 @@
 
 
 .menu-toggle {
-	&,
-	& span {
-		@extend .accessibility--desk;
-	}
+  &,
+  & span {
+    @extend .accessibility--desk;
+  }
 }
 
 
 
 .site-nav {
-	font-weight: 600;
-	font-family: $font-stack__sans-serif;
-	text-transform: uppercase;
-	padding-bottom: $half-spacing-unit;
+  font-weight: 600;
+  font-family: $font-stack__sans-serif;
+  text-transform: uppercase;
+  padding-bottom: $half-spacing-unit;
 
-	// Level 0
-	ul {
-		margin-bottom: 0;
+  // Level 0
+  ul {
+    margin-bottom: 0;
 
-		li {
-			margin: 0 $base-spacing-unit / 4;
+    li {
+      margin: 0 $base-spacing-unit / 4;
 
-			a {
-				&:hover,
-				&:focus {
-					background-color: $color__red;
-					color: black;
-				}
-			}
-		}
-	}
+      a {
+        &:hover,
+        &:focus {
+          background-color: $color__red;
+          color: black;
+        }
+      }
+    }
+  }
 }

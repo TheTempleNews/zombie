@@ -3,20 +3,20 @@
 \*------------------------------------*/
 
 .content {
-	color: black;
-	max-width: $container-width;
-	margin: 0 auto;
-	font-family: $font-stack--serif;
+  color: black;
+  max-width: $container-width;
+  margin: 0 auto;
+  font-family: $font-stack--serif;
 }
 
 // :/
 #content {
-	padding: 0 16px;
-	padding: 0 1rem;
+  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 article {
-	margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
  // hierarchical over-specific selector combat
@@ -25,52 +25,52 @@ article {
 .page-template-default .hentry h3,
 .article__header__title,
 .headline {
-	font-family: $font-stack--headline;
-	font-weight: normal;
+  font-family: $font-stack--headline;
+  font-weight: normal;
 
-	a {
-		color: black;
-	}
+  a {
+    color: black;
+  }
 }
 
 .dek {
-	font-style: italic;
-	font-size: 30px;
-	font-size: 1.875rem;
+  font-style: italic;
+  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .slug-getting-reacquainted {
 
-	.article__header {
-		max-width: 800px;
-		text-align: center;
-		margin: 2.5em auto;
+  .article__header {
+    max-width: 800px;
+    text-align: center;
+    margin: 2.5em auto;
 
-		@media only screen and (min-width: 768px) {
-			margin: 5.5em auto;
-		}
-	}
+    @media only screen and (min-width: 768px) {
+      margin: 5.5em auto;
+    }
+  }
 
-	.article__header__title {
-		font-family: $font-stack--serif !important;  // hierarchical over-specific selector combat
-	}
+  .article__header__title {
+    font-family: $font-stack--serif !important;  // hierarchical over-specific selector combat
+  }
 
-	img {
-		clear: both;
-		max-width: 100%;
+  img {
+    clear: both;
+    max-width: 100%;
 
-		@media only screen and (min-width: 768px) {
-			max-width: 400px !important; // damn wordpress image classes
-		}
-	}
+    @media only screen and (min-width: 768px) {
+      max-width: 400px !important; // damn wordpress image classes
+    }
+  }
 
-	.post-content p {
-		font-size: 20px;
-		font-size: 1.25rem;
+  .post-content p {
+    font-size: 20px;
+    font-size: 1.25rem;
 
-		@media only screen and (min-width: 768px) {
-			font-size: 24px;
-			font-size: 1.5rem;
-		}
-	}
+    @media only screen and (min-width: 768px) {
+      font-size: 24px;
+      font-size: 1.5rem;
+    }
+  }
 }

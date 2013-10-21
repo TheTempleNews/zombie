@@ -4,7 +4,7 @@
  * Login page CSS.
  */
 function zombie_login_css() {
-	echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/assets/css/login.min.css">';
+  echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/assets/css/login.min.css">';
 }
 
 /**
