@@ -5,6 +5,7 @@
  */
 require_once locate_template('/lib/utils.php');           // Utility functions
 require_once locate_template('/lib/init.php');            // Initial theme setup and constants
+require_once locate_template('/lib/post-types.php');      // Custom post types
 require_once locate_template('/lib/wrapper.php');         // Theme wrapper class
 require_once locate_template('/lib/sidebar.php');         // Sidebar class
 require_once locate_template('/lib/config.php');          // Configuration
