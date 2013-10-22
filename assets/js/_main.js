@@ -1,7 +1,7 @@
 // Modified http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/
 // Only fires on body class (working off strictly WordPress body_class)
 
-var ExampleSite = {
+var Zombie = {
   // All pages
   common: {
     init: function() {
@@ -28,6 +28,27 @@ var ExampleSite = {
         $this.toggleClass('active').next('ul').toggleClass('active');
       });
 
+
+      /**
+       * FitVids
+       */
+      $(document).fitVids();
+
+      /**
+       * FitText
+       */
+      $(".moversshakers-text-banner.fittext").fitText(1);
+      $(".the-american-text-banner.fittext").fitText(1.75);
+      $(".page-branded .page-title.fittext").fitText(0.5);
+      $('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
+      $('.breaking-news-banner.fittext p').fitText(2.25);
+      $('.special-issue-banner--reunion-2013 h2.fittext').fitText();
+
+      /**
+       * SlabText
+       */
+      $(".slabtextthis").slabText();
+
     },
     finalize: function() { }
   },
@@ -42,12 +63,31 @@ var ExampleSite = {
     init: function() {
       // JS here
     }
+  },
+  'page-music-issue': {
+    init: function() {
+
+      /**
+       * Masonry
+       */
+      var masonContainer = $('.mason');
+      if (!!masonContainer.masonry) {
+        masonContainer.masonry({
+          itemSelector: 'article.free-mason',
+          columnWidth: function( containerWidth ) {
+            return containerWidth / 2;
+          },
+          gutterWidth: 0
+        });
+      }
+
+    }
   }
 };
 
 var UTIL = {
   fire: function(func, funcname, args) {
-    var namespace = ExampleSite;
+    var namespace = Zombie;
     funcname = (funcname === undefined) ? 'init' : funcname;
     if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
       namespace[func][funcname](args);
@@ -66,3 +106,15 @@ var UTIL = {
 };
 
 $(document).ready(UTIL.loadEvents);
+
+/* On window load scripts */
+jQuery(window).load(function() {
+
+  /* set .article-container elements in mgallery to the maximum height of one of those elements
+  THIS MUST BE PERFORMED ON WINDOW LOAD! */
+  var maxHeight = 0;
+  $('#post-type-loop-main .article-container')
+    .each(function() { maxHeight = Math.max(maxHeight, $(this).height()); })
+      .height(maxHeight);
+
+});

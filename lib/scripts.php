@@ -35,7 +35,7 @@ function zombie_scripts() {
 
   // Register
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, null, false);
-  wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '522a3375eee3656897ef5a00559179fe', true);
+  wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', false, '70c43903eef3f63198d7c9f67e5413a4', true);
   wp_register_script('special-issue-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts-special-issues.min.js', array('jquery'), time(), true);
   wp_register_script('timeline-storyjs', get_stylesheet_directory_uri() . '/assets/js/plugins/timeline/js/storyjs-embed.js', array('jquery'), time(), false);
 
