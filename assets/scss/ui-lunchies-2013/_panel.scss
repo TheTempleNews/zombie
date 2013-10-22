@@ -1,0 +1,190 @@
+/*------------------------------------*\
+    LUNCHIES 2013: PANEL
+\*------------------------------------*/
+
+.panel {
+  @include media-query(desk) {
+    height: 100vh;
+    position: relative;
+  }
+}
+
+  .panel__inner {
+    @extend %grid;
+
+    padding: $base-spacing-unit * 4;
+    //padding-top: $base-spacing-unit * 4;
+    //padding-bottom: $base-spacing-unit * 4;
+
+    @include media-query(palm) {
+      padding: $base-spacing-unit * 4 $base-spacing-unit * 2;
+    }
+
+    @include media-query(desk) {
+      position: absolute;
+      top: 20%;
+    }
+  }
+
+  .panel__featured-image,
+  .panel__header {
+    @extend %grid__item;
+    @extend %desk--one-half;
+  }
+
+  .panel__featured-image {}
+
+  .panel__header {
+    font-weight: 100;
+  }
+
+    .panel__header__post-title {
+      @extend .mega;
+      margin-top: $base-spacing-unit;
+    }
+
+    .panel__header__dek {
+      @extend .beta;
+      font-style: italic;
+    }
+
+  .panel__read-more {
+    @extend %grid__item;
+    @extend %desk--one-half;
+    @extend %push--desk--one-half;
+    text-align: right;
+  }
+
+
+
+
+
+.panel--wrapped {
+  background-color: $color__epsilon;
+
+  .panel__header {
+    font-family: $font-stack__wrapped;
+  }
+}
+
+
+
+
+
+.panel--family-culture-ties-trucks {
+  background-color: $color__beta;
+
+  .panel__header {
+    font-family: $font-stack__family-culture-ties-trucks;
+  }
+
+    .panel__header__post-title {
+      a {
+        @include a-color($color__alpha, white)
+      }
+    }
+}
+
+
+
+
+
+.panel--one-freshman-first-time-truck-experience {
+  background-color: $color__gamma;
+
+  .panel__header {
+    font-family: $font-stack__one-freshman-first-time-truck-experience;
+  }
+
+    .panel__header__post-title {
+      a {
+        @include a-color($color__delta, $color__beta)
+      }
+    }
+}
+
+
+
+
+
+.panel--yumtown-debuts-new-fall-item {
+  background-color: $color__alpha;
+
+  .panel__header {
+    font-family: $font-stack__yumtown-debuts-new-fall-item;
+  }
+}
+
+
+
+
+
+.panel--food-pad-restaurant-traces-history-back-almost-30-years {
+  background-color: $color__delta;
+
+  .panel__header {
+    font-family: $font-stack__food-pad-restaurant-traces-history-back-almost-30-years;
+  }
+
+    .panel__header__post-title {
+      a {
+        @include a-color($color__alpha, $color__beta)
+      }
+    }
+
+    .panel__header__dek {
+      color: white;
+    }
+}
+
+
+
+
+
+.panel--staff-favorites {
+  background-color: $color__epsilon;
+
+  .panel__header {
+    @extend %desk--one-third;
+    font-family: $font-stack__staff-favorites;
+  }
+}
+
+  .panel--staff-favorites__content {
+    @extend %grid__item;
+    @extend %desk--two-thirds;
+  }
+
+
+
+
+
+.panel--lunchies-top-ten {
+  background-color: $color__zeta;
+
+  @include media-query(desk) {
+    .panel__inner {
+      position: relative;
+      top: 0;
+    }
+  }
+
+  .panel__header {
+    @extend %grid__item;
+    font-family: $font-stack__lunchies-top-ten;
+  }
+}
+
+  .panel--lunchies-top-ten__content {
+    @extend %grid__item;
+
+    .tablepress-container {
+      @extend %grid__item;
+      @extend %desk--one-half;
+    }
+
+    .tablepress-table-description {
+      @extend .gamma;
+      text-align: center;
+    }
+  }

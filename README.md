@@ -1,16 +1,16 @@
 /******************************************************************
-Bones 
+Bones
 A Lightweight Wordpress Development Theme
 
 _______________________________________________________________
 HEADS UP!!!
-Bones & Bones (Responsive Edition) have been merged. 
+Bones & Bones (Responsive Edition) have been merged.
 _______________________________________________________________
 
 Bones is designed to make the life of developers easier. It's built
 using HTML5 & has a strong semantic foundation. It was updated recently
 using some of the HTML5 Boilerplate's recommended markup and setup.
-It's constantly growing so be sure to check back often if you are a 
+It's constantly growing so be sure to check back often if you are a
 frequent user. I'm always open to contribution. :)
 
 Designed by Eddie Machado
@@ -33,7 +33,7 @@ http://themble.com/support
 Submit Bugs & or Fixes:
 https://github.com/eddiemachado/bones/issues
 
-To view Release & Update Notes, read the log.txt file inside 
+To view Release & Update Notes, read the log.txt file inside
 the library folder.
 
 ******************************************************************/

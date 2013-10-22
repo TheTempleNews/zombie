@@ -1,5 +1,3 @@
-.fuse*
-.style.css.swp
-
-/library/metabox/
 .DS_Store
+/node_modules/
+.sass-cache

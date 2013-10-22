@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    LUNCHIES 2013: FOOTER
+\*------------------------------------*/
+
+.page-footer {
+  position: fixed;
+  height: $footer-height;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+}
+
+  .page-footer__inner {
+    @extend %grid;
+  }
+
+    .page-footer__home-link {
+      @include a-color(white, $color__alpha);
+      @extend %grid__item;
+      text-align: center;
+      line-height: $footer-height;
+    }

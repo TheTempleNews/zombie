@@ -6,16 +6,16 @@
  * The most recent should always be at the time of the last Weekender issue.
  */
 function ttn_weekender_year() {
-	$args = array(
-		'post_type'     => 'article_living',
-		'category_name' => 'weekender'
-	);
-	$query = get_posts($args);
-	$most_recent = $query[0];
-	$most_recent_post_date = $most_recent->post_date;
-	$output = date( 'Y', strtotime( $most_recent_post_date ) );
-	
-	return $output;	
+  $args = array(
+    'post_type'     => 'article_living',
+    'category_name' => 'weekender'
+  );
+  $query = get_posts($args);
+  $most_recent = $query[0];
+  $most_recent_post_date = $most_recent->post_date;
+  $output = date( 'Y', strtotime( $most_recent_post_date ) );
+
+  return $output;
 }
 define('WEEKENDER_YEAR', ttn_weekender_year());
 
@@ -25,12 +25,12 @@ define('WEEKENDER_YEAR', ttn_weekender_year());
  * The most recent should always be at the time of the last lunchies issue.
  */
 function lunchies_year() {
-	$query = get_posts('post_type=food_vendor');
-	$most_recent = $query[0];
-	$most_recent_post_date = $most_recent->post_date;
-	$output = date( 'Y', strtotime( $most_recent_post_date ) );
-	
-	return $output;	
+  $query = get_posts('post_type=food_vendor');
+  $most_recent = $query[0];
+  $most_recent_post_date = $most_recent->post_date;
+  $output = date( 'Y', strtotime( $most_recent_post_date ) );
+
+  return $output;
 }
 define('LUNCHIES_YEAR', lunchies_year());
 
@@ -40,16 +40,16 @@ define('LUNCHIES_YEAR', lunchies_year());
  * The most recent should always be at the time of the last Movers & Shakers issue.
  */
 function ttn_movers_shakers_year() {
-	$args = array(
-		'post_type'     => 'article_living',
-		//'category_name' => 'movers-shakers'
-	);
-	$query = get_posts($args);
-	$most_recent = $query[0];
-	$most_recent_post_date = $most_recent->post_date;
-	$output = date( 'Y', strtotime( $most_recent_post_date ) );
-	
-	return $output;	
+  $args = array(
+    'post_type'     => 'article_living',
+    //'category_name' => 'movers-shakers'
+  );
+  $query = get_posts($args);
+  $most_recent = $query[0];
+  $most_recent_post_date = $most_recent->post_date;
+  $output = date( 'Y', strtotime( $most_recent_post_date ) );
+
+  return $output;
 }
 define('MOVERS_SHAKERS_YEAR', ttn_movers_shakers_year());
 
@@ -59,16 +59,16 @@ define('MOVERS_SHAKERS_YEAR', ttn_movers_shakers_year());
  * The most recent should always be at the time of the last Bar Guide issue.
  */
 function ttn_bar_guide_year() {
-	$args = array(
-		'post_type'     => 'article_ae',
-		'category_name' => 'bar-guide'
-	);
-	$query = get_posts($args);
-	$most_recent = $query[0];
-	$most_recent_post_date = $most_recent->post_date;
-	$output = date( 'Y', strtotime( $most_recent_post_date ) );
-	
-	return $output;	
+  $args = array(
+    'post_type'     => 'article_ae',
+    'category_name' => 'bar-guide'
+  );
+  $query = get_posts($args);
+  $most_recent = $query[0];
+  $most_recent_post_date = $most_recent->post_date;
+  $output = date( 'Y', strtotime( $most_recent_post_date ) );
+
+  return $output;
 }
 define('BAR_GUIDE_YEAR', ttn_bar_guide_year());
 
@@ -78,24 +78,24 @@ define('BAR_GUIDE_YEAR', ttn_bar_guide_year());
  * The most recent should always be at the time of the last Music Issue.
  */
 function ttn_music_issue_year() {
-	$args = array(
-		'post_type'     => 'article_ae',
-		'category_name' => 'music-issue-music'
-	);
-	$query = get_posts($args);
-	$most_recent = $query[0];
-	$most_recent_post_date = $most_recent->post_date;
-	$output = date( 'Y', strtotime( $most_recent_post_date ) );
-	
-	return $output;	
+  $args = array(
+    'post_type'     => 'article_ae',
+    'category_name' => 'music-issue-music'
+  );
+  $query = get_posts($args);
+  $most_recent = $query[0];
+  $most_recent_post_date = $most_recent->post_date;
+  $output = date( 'Y', strtotime( $most_recent_post_date ) );
+
+  return $output;
 }
 define('MUSIC_ISSUE_YEAR', ttn_music_issue_year());
 
 /**
  * Displays the name of a Mover & Shaker.
- * 
+ *
  * Will only work when a single 'movers-shakers-people' item exists per post.
- * 
+ *
  * @author Chris Montgomery <mont.chr@gmail.com>
  * @since 1.4.0
  * @see the_category_no_link()
@@ -103,11 +103,11 @@ define('MUSIC_ISSUE_YEAR', ttn_music_issue_year());
  * @param mixed $post
  */
 function ttn_movers_shakers_name_no_link() {
-	//global $post;
-	$persons = the_terms( the_ID(), 'movers-shakers-people' );
-	foreach( $persons as $person) {
-    	echo $person;
-	}
+  //global $post;
+  $persons = the_terms( the_ID(), 'movers-shakers-people' );
+  foreach( $persons as $person) {
+      echo $person;
+  }
 }
 
 /**
@@ -118,5 +118,5 @@ function ttn_movers_shakers_name_no_link() {
  *
  */
 function ttn_special_issue_banner() {
-	include('banners.php');
+  include('banners.php');
 }

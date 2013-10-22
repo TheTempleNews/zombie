@@ -1,43 +1,43 @@
-<?php get_header(); ?>
-			
-			<div id="content">
+<?php get_template_part('templates/head'); ?>
 
-				<div id="inner-content" class="wrap clearfix">
-			
-					<div id="main" class="eightcol first clearfix" role="main">
+      <div id="content">
 
-						<article id="post-not-found" class="hentry clearfix">
-						
-							<header class="article-header">
-							
-								<h1><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h1>
-						
-							</header> <!-- end article header -->
-					
-							<section class="post-content">
-							
-								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
-					
-							</section> <!-- end article section -->
+        <div id="inner-content" class="wrap clearfix">
 
-							<section class="search">
-				
-							    <p><?php get_search_form(); ?></p>
-				
-							</section> <!-- end search section -->
-						
-							<footer class="article-header">
-							
-							    <p><?php _e("This is the 404.php template.", "bonestheme"); ?></p>
-							
-							</footer> <!-- end article footer -->
-					
-						</article> <!-- end article -->
-			
-					</div> <!-- end #main -->
+          <div id="main" class="eightcol first clearfix" role="main">
 
-				</div> <!-- end #inner-content -->
-    
-			</div> <!-- end #content -->
+            <article id="post-not-found" class="hentry clearfix">
 
-<?php get_footer(); ?>
+              <header class="article-header">
+
+                <h1><?php _e("Epic 404 - Article Not Found", "zombie"); ?></h1>
+
+              </header> <!-- end article header -->
+
+              <section class="post-content">
+
+                <p><?php _e("The article you were looking for was not found, but maybe try looking again!", "zombie"); ?></p>
+
+              </section> <!-- end article section -->
+
+              <section class="search">
+
+                  <p><?php get_search_form(); ?></p>
+
+              </section> <!-- end search section -->
+
+              <footer class="article-header">
+
+                  <p><?php _e("This is the 404.php template.", "zombie"); ?></p>
+
+              </footer> <!-- end article footer -->
+
+            </article> <!-- end article -->
+
+          </div> <!-- end #main -->
+
+        </div> <!-- end #inner-content -->
+
+      </div> <!-- end #content -->
+
+

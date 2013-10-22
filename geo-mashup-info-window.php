@@ -1,11 +1,11 @@
 <?php
 /**
- * This is the default template for the info window in Geo Mashup maps. 
+ * This is the default template for the info window in Geo Mashup maps.
  *
  * Don't modify this file! It will be overwritten by upgrades.
  *
- * Instead, copy this file to "geo-mashup-info-window.php" in your theme directory, 
- * or info-window.php in the Geo Mashup Custom plugin directory, if you have that 
+ * Instead, copy this file to "geo-mashup-info-window.php" in your theme directory,
+ * or info-window.php in the Geo Mashup Custom plugin directory, if you have that
  * installed. Those files take precedence over this one.
  *
  * For styling of the info window, see map-style-default.css.
@@ -20,53 +20,53 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 
 <?php // this code isnt working
 if ( is_page('lunchies') == true ) { ?>
-	<div class="locationinfo post-location-info">
-	<?php if (have_posts()) : ?>
+  <div class="locationinfo post-location-info">
+  <?php if (have_posts()) : ?>
 
-		<?php while (have_posts()) : the_post(); ?>
+    <?php while (have_posts()) : the_post(); ?>
 
-			<h2><?php the_title(); ?></h2>
+      <h2><?php the_title(); ?></h2>
 
-		<?php endwhile; ?>
+    <?php endwhile; ?>
 
-	<?php else : ?>
+  <?php else : ?>
 
-		<h2 class="center">Not Found</h2>
-		<p class="center">Sorry, but you are looking for something that isn't here.</p>
+    <h2 class="center">Not Found</h2>
+    <p class="center">Sorry, but you are looking for something that isn't here.</p>
 
-	<?php endif; ?>
+  <?php endif; ?>
 
-	</div>
-	
+  </div>
+
 <?php } else { ?>
-	
-	<div class="locationinfo post-location-info">
-		
-		
-	<?php if (have_posts()) : ?>
 
-		<?php while (have_posts()) : the_post(); ?>
+  <div class="locationinfo post-location-info">
 
-			<h2 class="fittext"><?php /* ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">--><?php */ the_title(); /* ?></a><?php */ ?></h2><?php /* ?>
-			<p class="meta"><span class="blogdate"><?php the_time('F jS, Y') ?></span> <?php the_category( ', ' ) ?></p>
-			<?php if ( function_exists( 'has_post_thumbnail') and has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail(); ?>
-			<?php endif; ?>
 
-			<?php if ($wp_query->post_count == 1) : ?>
-				<div class="storycontent">
-					<?php the_excerpt(); ?>
-				</div>
-			<?php endif; ?>
+  <?php if (have_posts()) : ?>
 
-		<?php */ endwhile; ?>
+    <?php while (have_posts()) : the_post(); ?>
 
-	<?php else : ?>
+      <h2 class="fittext"><?php /* ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">--><?php */ the_title(); /* ?></a><?php */ ?></h2><?php /* ?>
+      <p class="meta"><span class="blogdate"><?php the_time('F jS, Y') ?></span> <?php the_category( ', ' ) ?></p>
+      <?php if ( function_exists( 'has_post_thumbnail') and has_post_thumbnail() ) : ?>
+      <?php the_post_thumbnail(); ?>
+      <?php endif; ?>
 
-		<h2 class="center">Not Found</h2>
-		<p class="center">Sorry, but you are looking for something that isn't here.</p>
+      <?php if ($wp_query->post_count == 1) : ?>
+        <div class="storycontent">
+          <?php the_excerpt(); ?>
+        </div>
+      <?php endif; ?>
 
-	<?php endif; ?>
+    <?php */ endwhile; ?>
 
-	</div>
+  <?php else : ?>
+
+    <h2 class="center">Not Found</h2>
+    <p class="center">Sorry, but you are looking for something that isn't here.</p>
+
+  <?php endif; ?>
+
+  </div>
 <?php } ?>

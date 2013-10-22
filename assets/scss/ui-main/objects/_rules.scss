@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    TTN: OBJECTS: RULES
+\*------------------------------------*/
+/**
+ * Horizontal rules, extend `hr`.
+ *
+ * ^^Extends ^inuit.css.
+ */
+
+
+
+
+/**
+ * Thick rules in sitewide header and footer.
+ *
+ * Extends `.rule`.
+ */
+.rule--site {
+  border-bottom-width: 3px;
+    margin-bottom: 0;
+}

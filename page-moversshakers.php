@@ -4,97 +4,97 @@ Template Name: Movers & Shakers
 */
 ?>
 
-<?php get_header(); ?>
-			
-			<div id="content">
-			
-				<div id="inner-content" class="wrap clearfix">
-				
-					<div id="moversshakers-page-header">
-						<h2 id="moversshakers-page-title" class="moversshakers-type-banner special-issue-page-title fittext">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></h2>
+<?php get_template_part('templates/head'); ?>
 
-						<div id="moversshakers-page-summary">
+      <div id="content">
 
-							<?php // Easy. Just pull the description from the page. But it's not future friendly... how can full collections of special issues be considered a full package, archived together?
+        <div id="inner-content" class="wrap clearfix">
 
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
+          <div id="moversshakers-page-header">
+            <h2 id="moversshakers-page-title" class="moversshakers-type-banner special-issue-page-title fittext">Movers &amp; Shakers <?php echo MOVERS_SHAKERS_YEAR; ?></h2>
 
-							the_content();
+            <div id="moversshakers-page-summary">
 
-							endwhile; endif; ?>
-							
-						</div> <!-- end #moversshakers-summary -->
-					</div> <!-- end #moversshakers-header -->
-					
-					<div id="moversshakers-main">
-						
-						<div id="moversshakers-articles">
+              <?php // Easy. Just pull the description from the page. But it's not future friendly... how can full collections of special issues be considered a full package, archived together?
 
-									<?php
+              if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-									// set class to first or last depending on position in three column layout
-									// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
-									$style_classes = array('first', 'last');
-									$styles_count = count($style_classes);
-									$style_index = 0;
-								
-									$movers_shakers_args = array(
-										'post_type'      => 'article_living',
-										'category_name'  => 'movers-shakers',
-										'year'           => MOVERS_SHAKERS_YEAR, // will only pull posts from the year of the most recent post in the "movers-shakers" category
-										'orderby'        => 'rand', // shaking things up a bit
-										'posts_per_page' => 16 // it will never be 16
-									);
-								
-									$movers_shakers_query = get_posts($movers_shakers_args);
-								
-									//
-									foreach($movers_shakers_query as $post) : setup_postdata($post);
+              the_content();
 
-									// this is the second part of the operation that determines first or last class based on column divisions. see above.
-									$k = $style_classes[$style_index++ % $styles_count];
-									?>
-								
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'moversshakers-article sixcol clearfix ' . $k ); ?> role="article">
+              endwhile; endif; ?>
 
-										<div class="moversshakers-featured-image-container featured-image-container">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-792'); ?></a>
-										</div> <!-- end .moversshakers-featured-image-container -->
+            </div> <!-- end #moversshakers-summary -->
+          </div> <!-- end #moversshakers-header -->
 
-										<header class="moversshakers-article-header">
+          <div id="moversshakers-main">
 
-											<?php
-											$movers_shakers_people = get_the_terms( $post->ID, 'movers-shakers-people' );
+            <div id="moversshakers-articles">
 
-											if ( $movers_shakers_people && !is_wp_error($movers_shakers_people)) {
-												$people = array();
+                  <?php
 
-												foreach ( $movers_shakers_people as $person ) {
-													$people[] = $person->name;
-												}
+                  // set class to first or last depending on position in three column layout
+                  // http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+                  $style_classes = array('first', 'last');
+                  $styles_count = count($style_classes);
+                  $style_index = 0;
 
-												$mover_shaker_name = join(",", $people);
-											}
-											?>
+                  $movers_shakers_args = array(
+                    'post_type'      => 'article_living',
+                    'category_name'  => 'movers-shakers',
+                    'year'           => MOVERS_SHAKERS_YEAR, // will only pull posts from the year of the most recent post in the "movers-shakers" category
+                    'orderby'        => 'rand', // shaking things up a bit
+                    'posts_per_page' => 16 // it will never be 16
+                  );
 
-											<h3 class="moversshakers-name"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo $mover_shaker_name; ?></a></h3>
+                  $movers_shakers_query = get_posts($movers_shakers_args);
 
-											<div class="moversshakers-dek dek">
-												<?php the_excerpt(); ?>
-											</div> <!-- end .moversshakers-dek -->
+                  //
+                  foreach($movers_shakers_query as $post) : setup_postdata($post);
 
-										</header> <!-- end .moversshakers-header -->
+                  // this is the second part of the operation that determines first or last class based on column divisions. see above.
+                  $k = $style_classes[$style_index++ % $styles_count];
+                  ?>
 
-									</article>
-								
-									<?php endforeach; ?>
+                  <article id="post-<?php the_ID(); ?>" <?php post_class( 'moversshakers-article sixcol clearfix ' . $k ); ?> role="article">
 
-						</div> <!-- end #moversshakers-articles -->
-						
-					</div> <!-- end #moversshakers-main -->
-				
-				</div> <!-- end #inner-content -->
+                    <div class="moversshakers-featured-image-container featured-image-container">
+                      <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('zom-landscape-792'); ?></a>
+                    </div> <!-- end .moversshakers-featured-image-container -->
 
-			</div> <!-- end #content -->
+                    <header class="moversshakers-article-header">
 
-<?php get_footer(); ?>
+                      <?php
+                      $movers_shakers_people = get_the_terms( $post->ID, 'movers-shakers-people' );
+
+                      if ( $movers_shakers_people && !is_wp_error($movers_shakers_people)) {
+                        $people = array();
+
+                        foreach ( $movers_shakers_people as $person ) {
+                          $people[] = $person->name;
+                        }
+
+                        $mover_shaker_name = join(",", $people);
+                      }
+                      ?>
+
+                      <h3 class="moversshakers-name"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo $mover_shaker_name; ?></a></h3>
+
+                      <div class="moversshakers-dek dek">
+                        <?php the_excerpt(); ?>
+                      </div> <!-- end .moversshakers-dek -->
+
+                    </header> <!-- end .moversshakers-header -->
+
+                  </article>
+
+                  <?php endforeach; ?>
+
+            </div> <!-- end #moversshakers-articles -->
+
+          </div> <!-- end #moversshakers-main -->
+
+        </div> <!-- end #inner-content -->
+
+      </div> <!-- end #content -->
+
+

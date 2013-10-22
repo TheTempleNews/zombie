@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    TTN: ORGANISMS: SITE HEADER
+\*------------------------------------*/
+/**
+ * The main site header at the top of most
+ * pages besides (some) special issue pages.
+ */
+
+.site-header {
+  background-color: black;
+  position: relative; // ^why?
+  z-index: 9999; // ^why?
+}
+
+  .site-header__branding {
+    @extend %grid;
+  }
+
+    .site-header__branding__logo {
+      @extend %grid__item;
+      @extend %portable--two-thirds;
+      @extend %desk--one-half;
+
+      img {
+        margin: 0;
+      }
+    }
+
+    .site-header__branding__social {
+      @extend %grid__item;
+      @extend %desk--one-sixth;
+    }
+
+      .site-header__branding__social__tagline {
+        @extend .accessibility--portable;
+        margin: 0;
+        padding: 0;
+      }
+
+    .site-header__branding__search {
+      @extend %grid__item;
+      @extend %desk--two-sixths;
+    }
