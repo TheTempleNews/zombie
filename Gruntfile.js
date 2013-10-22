@@ -102,6 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-notify');
 
   // Register tasks
   grunt.registerTask('default', [

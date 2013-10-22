@@ -27,6 +27,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compass": "~0.6.0",
     "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-wp-version": "~0.1.0"
+    "grunt-wp-version": "~0.1.0",
+    "grunt-notify": "~0.2.13"
   }
 }
