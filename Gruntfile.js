@@ -23,16 +23,16 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
-        minify: {
-          expand: true,
-          cwd: 'assets/css/',
-          src: [
-            '*.css',
-            '!*.min.css'
-          ],
-          dest: 'assets/css/',
-          ext: '.min.css'
-        }
+      minify: {
+        expand: true,
+        cwd: 'assets/css/',
+        src: [
+          '*.css',
+          '!*.min.css'
+        ],
+        dest: 'assets/css/',
+        ext: '.min.css'
+      }
     },
     uglify: {
       dist: {
@@ -44,6 +44,17 @@ module.exports = function(grunt) {
           'assets/js/scripts-special-issues.min.js': [
             'assets/js/special-issues/*.js'
           ]
+        }
+      }
+    },
+    grunticon: {
+      icons: {
+        options: {
+          src: "assets/img/icons/dist",
+          dest: "assets/img/icons/",
+          colors: {
+            white: "white"
+          }
         }
       }
     },
@@ -59,7 +70,7 @@ module.exports = function(grunt) {
     watch: {
       scss: {
         files: [
-          'assets/scss/*.scss'
+          'assets/scss/**/*.scss'
         ],
         tasks: ['compass', 'cssmin', 'version']
       },
@@ -96,6 +107,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -108,7 +120,8 @@ module.exports = function(grunt) {
     'compass',
     'cssmin',
     'uglify',
-    'version'
+    'version',
+    'grunticon'
   ]);
   grunt.registerTask('dev', [
     'watch'
