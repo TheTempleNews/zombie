@@ -942,7 +942,7 @@ function ttn_get_the_slug($type = '') {
 * Retrieve a post given its title.
 *
 * @link  http://wordpress.stackexchange.com/questions/11292/how-do-i-get-a-post-page-or-cpt-id-from-a-title-or-slug/11296#11296
-* 
+*
 * @uses $wpdb
 *
 * @param string $post_title Page title
@@ -958,3 +958,26 @@ function zombie_get_post_by_title($page_title, $post_type ='post' , $output = OB
 
     return null;
 }
+
+
+
+function zombie_feed_request($qv) {
+    // If a request for the RSS feed is made, but the request
+    // isn't specifically for a Custom Post Type feed
+    if (isset($qv['feed']) && !isset($qv['post_type'])) {
+        // Return a feed with posts of post type 'post' and 'thoughts'
+        $qv['post_type'] = array(
+                                 'post',
+                                 'article_news',
+                                 'article_sports',
+                                 'article_living',
+                                 'article_ae',
+                                 'article_opinion',
+                                 'multimedia',
+                                 'slideshow'
+                                 );
+    }
+
+    return $qv;
+}
+add_filter('request', 'zombie_feed_request');
