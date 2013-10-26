@@ -3795,6 +3795,13 @@ label,
  * Gutterless grids have all the properties of regular grids, minus any spacing.
  * Extends `.grid`.
  */
+/* line 275, ../scss/vendor/csswizardry-grids/csswizardry-grids.scss */
+.site-header__branding {
+  margin-left: 0; }
+  /* line 278, ../scss/vendor/csswizardry-grids/csswizardry-grids.scss */
+  .site-header__branding > .site-header__branding__logo, .site-header__branding > .site-header__branding__social, .site-header__branding > .site-header__branding__search {
+    padding-left: 0; }
+
 /**
  * Align the entire grid to the right. Extends `.grid`.
  */
@@ -4293,7 +4300,7 @@ a:link {
  * Molecules.
  */
 /*------------------------------------*\
-	$UI-FORMS
+  $UI-FORMS
 \*------------------------------------*/
 /**
  * There's a few things to note here.
@@ -4498,19 +4505,19 @@ input[type=color] {
 /**
  * Forms, neatly stacked on top of one another.
  *
-	<form class="form form--stacked">
-		<fieldset>
-			<legend>A Stacked Form</legend>
+  <form class="form form--stacked">
+    <fieldset>
+      <legend>A Stacked Form</legend>
 
-			<label for="email">Email</label>
-			<input id="email" type="email" placeholder="Email" class="text-input">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Email" class="text-input">
 
-			<label for="password">Password</label>
-			<input id="password" type="password" placeholder="Password" class="text-input">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Password" class="text-input">
 
-			<button type="submit" class="btn btn--small btn--positive">Sign in</button>
-		</fieldset>
-	</form>
+      <button type="submit" class="btn btn--small btn--positive">Sign in</button>
+    </fieldset>
+  </form>
  *
  */
 /* line 213, ../scss/ui-main/molecules/_forms.scss */
@@ -4537,27 +4544,27 @@ input[type=color] {
 /**
  * Stacked form with labels aligned to the left edge.
  *
-	<form class="form form--aligned">
-		<fieldset>
-			<div class="form__control-group">
-				<label for="name">Username</label>
-				<input id="name" type="text" placeholder="Username" class="text-input">
-			</div>
+  <form class="form form--aligned">
+    <fieldset>
+      <div class="form__control-group">
+        <label for="name">Username</label>
+        <input id="name" type="text" placeholder="Username" class="text-input">
+      </div>
 
-			<div class="form__control-group">
-				<label for="password">Password</label>
-				<input id="password" type="password" placeholder="Password" class="text-input">
-			</div>
+      <div class="form__control-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" class="text-input">
+      </div>
 
-			<div class="form__controls">
-				<label for="cb" class="checkbox">
-					<input id="cb" type="checkbox"> I've read the terms and conditions
-				</label>
+      <div class="form__controls">
+        <label for="cb" class="checkbox">
+          <input id="cb" type="checkbox"> I've read the terms and conditions
+        </label>
 
-				<button type="submit" class="btn btn--small btn--positive">Submit</button>
-			</div>
-		</fieldset>
-	</form>
+        <button type="submit" class="btn btn--small btn--positive">Submit</button>
+      </div>
+    </fieldset>
+  </form>
  *
  */
 /* line 256, ../scss/ui-main/molecules/_forms.scss */
@@ -4611,10 +4618,10 @@ input[type=color] {
 /**
  * Text input with fully-rounded edges (e.g. Safari style)
  *
-	<form class="form">
-		<input type="text" class="text-input  text-input--rounded  text-input">
-		<button type="submit" class="btn btn--small">Search</button>
-	</form>
+  <form class="form">
+    <input type="text" class="text-input  text-input--rounded  text-input">
+    <button type="submit" class="btn btn--small">Search</button>
+  </form>
  *
  */
 /*input*/
@@ -4626,15 +4633,15 @@ input[type=color] {
 /**
  * Grouped form inputs
  *
-	<form class="form">
-		<fieldset class="form__group">
-			<input type="text" class="one-half  text-input" placeholder="Username">
-			<input type="text" class="one-half  text-input" placeholder="Password">
-			<input type="email" class="one-half  text-input" placeholder="Email">
-		</fieldset>
+  <form class="form">
+    <fieldset class="form__group">
+      <input type="text" class="one-half  text-input" placeholder="Username">
+      <input type="text" class="one-half  text-input" placeholder="Password">
+      <input type="email" class="one-half  text-input" placeholder="Email">
+    </fieldset>
 
-		<button type="submit" class="btn btn--small one-half btn--positive">Sign in</button>
-	</form>
+    <button type="submit" class="btn btn--small one-half btn--positive">Sign in</button>
+  </form>
  *
  */
 /* line 357, ../scss/ui-main/molecules/_forms.scss */
@@ -4767,11 +4774,32 @@ input[type=color] {
   position: relative;
   z-index: 9999; }
 
-/* line 24, ../scss/ui-main/organisms/_header--site.scss */
-.site-header__branding__logo img {
-  margin: 0; }
+/* line 20, ../scss/ui-main/organisms/_header--site.scss */
+.site-header__branding__logo {
+  /**
+   * Logo sizing based on font size.
+   *
+   * FitText will control this when JS is enabled.
+   */
+  background-size: contain;
+  text-indent: -9999px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    /* line 20, ../scss/ui-main/organisms/_header--site.scss */
+    .site-header__branding__logo {
+      font-size: 30px;
+      font-size: 1.875rem;
+      line-height: 1.6; } }
+  @media only screen and (min-width: 1024px) {
+    /* line 20, ../scss/ui-main/organisms/_header--site.scss */
+    .site-header__branding__logo {
+      font-size: 48px;
+      font-size: 3rem;
+      line-height: 1; } }
 
-/* line 34, ../scss/ui-main/organisms/_header--site.scss */
+/* line 46, ../scss/ui-main/organisms/_header--site.scss */
 .site-header__branding__social__tagline {
   margin: 0;
   padding: 0; }

@@ -14,6 +14,7 @@
 
   .site-header__branding {
     @extend %grid;
+    @extend %grid--full;
   }
 
     .site-header__branding__logo {
@@ -21,8 +22,19 @@
       @extend %portable--two-thirds;
       @extend %desk--one-half;
 
-      img {
-        margin: 0;
+      /**
+       * Logo sizing based on font size.
+       *
+       * FitText will control this when JS is enabled.
+       */
+      background-size: contain;
+      text-indent: -9999px;
+      @include font-size(20px);
+      @include media-query(lap) {
+        @include font-size(30px);
+      }
+      @include media-query(desk) {
+        @include font-size(48px);
       }
     }
 

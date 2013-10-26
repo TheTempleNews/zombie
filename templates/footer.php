@@ -2,7 +2,8 @@
   <div id="outer-footer">
     <div id="inner-footer" class="wrap clearfix">
       <div id="footer-column-center" class="fourcol clearfix push_four">
-        <a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-500-emboss-tr.png" /></a>
+
+        <?php get_template_part('templates/logo'); ?>
 
         <nav id="footer-links-sections" class="footer-links" role="navigation">
           <?php zombie_footer_links_sections(); // Adjust using Menus in Wordpress Admin ?>

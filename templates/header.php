@@ -21,9 +21,7 @@
     <div class="wrap">
       <div class="inner">
 
-        <a href="<?php echo home_url(); ?>" class="site-header__branding__logo  logo"  rel="nofollow">
-          <img alt="The Temple News" title="The Temple News" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-500-emboss-tr.png" />
-        </a><!--
+        <?php get_template_part('templates/logo'); ?><!--
 
         --><div class="site-header__branding__social">
           <div class="inner">

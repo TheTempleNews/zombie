@@ -37,6 +37,7 @@ var Zombie = {
       /**
        * FitText
        */
+      $('.site-header__branding__logo').fitText();
       $(".moversshakers-text-banner.fittext").fitText(1);
       $(".the-american-text-banner.fittext").fitText(1.75);
       $(".page-branded .page-title.fittext").fitText(0.5);
