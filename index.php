@@ -226,8 +226,12 @@
 
 					<div id="column-right-inner" class="column-inner">
 
+						<section id="ttn-network-most-recent-posts" class="ttn-network-feed">
+							<h3 class="most-recent-posts-feed-title network-feed-title">Most Recent</h3>
+							<h4 class="most-recent-posts-feed-subtitle network-feed-subtitle">The latest from all TTN sites.</h4>
 
-
+							<?php ttn_network_feed(null, 'http://mix.chimpfeedr.com/c6672-The-Temple-News-Network'); ?>
+						</section>
 
 						<!-- SPORTS SECTION -->
 						<section id="section-box-sports" class="section-container section-box clearfix">

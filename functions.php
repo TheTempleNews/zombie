@@ -629,10 +629,17 @@ function the_post_thumbnail_caption() {
  * Displays a list of the 5 most recent posts from a network site.
  *
  * http://codex.wordpress.org/Function_Reference/fetch_feed
+ *
+ * @param string $domain Subdomain, if any.
+ * @param string $url URL of an outside feed to get.
  */
-	function ttn_network_feed( $domain ) {
+	function ttn_network_feed( $domain, $url = null ) {
 
-		$feed_url = 'http://' . $domain . '.temple-news.com/feed/';
+		if (!$url) {
+			$feed_url = 'http://' . $domain . '.temple-news.com/feed/';
+		} elseif ($url) {
+			$feed_url = $url;
+		}
 
 		// Get RSS Feed(s)
 		include_once(ABSPATH . WPINC . '/feed.php');
