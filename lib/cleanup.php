@@ -264,3 +264,27 @@ function zombie_get_search_form($form) {
   return $form;
 }
 add_filter('get_search_form', 'zombie_get_search_form');
+
+/**
+ * Include custom post types in RSS feed.
+ */
+function zombie_feed_request($qv) {
+    // If a request for the RSS feed is made, but the request
+    // isn't specifically for a Custom Post Type feed
+    if (isset($qv['feed']) && !isset($qv['post_type'])) {
+        // Return a feed with posts of post type 'post' and 'thoughts'
+        $qv['post_type'] = array(
+                                 'post',
+                                 'article_news',
+                                 'article_sports',
+                                 'article_living',
+                                 'article_ae',
+                                 'article_opinion',
+                                 'multimedia',
+                                 'slideshow'
+                                 );
+    }
+
+    return $qv;
+}
+add_filter('request', 'zombie_feed_request');
