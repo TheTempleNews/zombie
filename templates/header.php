@@ -21,7 +21,9 @@
     <div class="wrap">
       <div class="inner">
 
-        <?php get_template_part('templates/logo'); ?><!--
+        <a href="<?php echo home_url(); ?>" class="site-header__branding__logo  icon-ttn-logo-500-white  logo" title="The Temple News" rel="nofollow">
+          The Temple News
+        </a><!--
 
         --><div class="site-header__branding__social">
           <div class="inner">
