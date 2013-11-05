@@ -15,6 +15,11 @@
 /* Version Number */
 	define( 'ZOM_VERSION', '1.5.16' );
 
+/* Do we want LiveReload enabled?
+This should be moved to local-config.php
+once we get to that point. */
+  define( 'LIVE_RELOAD', true );
+
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
 	define( 'HOME_TOP_PROMO', false );

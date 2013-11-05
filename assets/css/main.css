@@ -3953,15 +3953,11 @@ label,
   /**
    * Halves
    */
-  /* line 373, ../scss/vendor/csswizardry-grids/csswizardry-grids.scss */
-  .site-header__branding__logo {
-    width: 50%; }
-
   /**
    * Thirds
    */
   /* line 379, ../scss/vendor/csswizardry-grids/csswizardry-grids.scss */
-  .site-header__branding__search {
+  .site-header__branding__search, .site-header__branding__logo {
     width: 33.333%; }
 
   /**
@@ -4781,25 +4777,13 @@ input[type=color] {
    *
    * FitText will control this when JS is enabled.
    */
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
   background-size: contain;
-  text-indent: -9999px;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.2; }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
-    /* line 20, ../scss/ui-main/organisms/_header--site.scss */
-    .site-header__branding__logo {
-      font-size: 30px;
-      font-size: 1.875rem;
-      line-height: 1.6; } }
-  @media only screen and (min-width: 1024px) {
-    /* line 20, ../scss/ui-main/organisms/_header--site.scss */
-    .site-header__branding__logo {
-      font-size: 48px;
-      font-size: 3rem;
-      line-height: 1; } }
+  text-indent: -9999px; }
 
-/* line 46, ../scss/ui-main/organisms/_header--site.scss */
+/* line 40, ../scss/ui-main/organisms/_header--site.scss */
 .site-header__branding__social__tagline {
   margin: 0;
   padding: 0; }

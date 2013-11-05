@@ -14,10 +14,10 @@
 function zombie_scripts() {
   // Main stylesheet
   // wp_enqueue_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), ZOM_VERSION, 'all' );
-  wp_enqueue_style('zombie-main', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array(), '970d72518e356fad7eccb87535818b8a');
+  wp_enqueue_style('zombie-main', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), 'dbec5b67e39fa2ac82478248eb306755');
 
   // IE-only stylesheet
-  // wp_register_style('zombie-ie-stylesheet', get_stylesheet_directory_uri() . '/assets/css/ie.min.css', array(), '');
+  // wp_register_style('zombie-ie-stylesheet', get_stylesheet_directory_uri() . '/assets/css/ie.css', array(), '');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -35,7 +35,7 @@ function zombie_scripts() {
 
   // Register
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, null, false);
-  wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', false, '50cebc3d38e9daeefdc7f541a2552b72', true);
+  wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', false, '70c43903eef3f63198d7c9f67e5413a4', true);
   wp_register_script('special-issue-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts-special-issues.min.js', array('jquery'), time(), true);
   wp_register_script('timeline-storyjs', get_stylesheet_directory_uri() . '/assets/js/plugins/timeline/js/storyjs-embed.js', array('jquery'), time(), false);
 

@@ -18,20 +18,18 @@ module.exports = function(grunt) {
           specify: [
             'assets/scss/*.scss',
             '!csswizardry-grids.scss'
+          ],
+          environment: 'production',
+          outputStyle: 'compressed'
+        }
+      },
+      dev: {
+        options: {
+          specify: [
+            'assets/scss/*.scss',
+            '!csswizardry-grids.scss'
           ]
         }
-      }
-    },
-    cssmin: {
-      minify: {
-        expand: true,
-        cwd: 'assets/css/',
-        src: [
-          '*.css',
-          '!*.min.css'
-        ],
-        dest: 'assets/css/',
-        ext: '.min.css'
       }
     },
     uglify: {
@@ -61,7 +59,7 @@ module.exports = function(grunt) {
     version: {
       options: {
         file: 'lib/scripts.php',
-        css: 'assets/css/main.min.css',
+        css: 'assets/css/main.css',
         cssHandle: 'zombie-main',
         js: 'assets/js/scripts.min.js',
         jsHandle: 'zombie-scripts'
@@ -72,7 +70,7 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/**/*.scss'
         ],
-        tasks: ['compass', 'cssmin', 'version']
+        tasks: ['compass:dev', 'version']
       },
       js: {
         files: [
@@ -84,20 +82,16 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
-          'assets/css/*.css',
-          'assets/js/scripts.min.js',
-          'assets/js/scripts-special-issues.min.js',
-          'templates/*.php',
-          '*.php'
+          'assets/css/*.css'
         ]
       }
     },
     clean: {
       dist: [
-        'assets/css/*.min.css',
+        'assets/css/main.css',
         'assets/js/*.min.js'
       ]
     }
@@ -110,15 +104,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-wp-version');
   grunt.loadNpmTasks('grunt-notify');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
-    'compass',
-    'cssmin',
+    'compass:dist',
     'uglify',
     'version',
     'grunticon'
