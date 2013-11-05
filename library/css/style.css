@@ -4452,6 +4452,12 @@ very heavy because they're imported at the first media query.
 .special-issue-banner--reunion-2013 h2 a:active {
   color: #cccccc;
 }
+/**********************************
+ * BASKETBALL PREVIEW 2013 STYLES *
+ *********************************/
+.special-issue-banner--basketball-preview-2013 {
+  text-align: center;
+}
 /******************************************************************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's 
