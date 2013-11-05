@@ -117,6 +117,10 @@
 						<div class="special-issue-banner--reunion-2013  special-issue-banner  fittext  clearfix">
 							<h2 class="fittext"><a href="<?php home_url(); ?>/reunion-2013/">The Temple News Reunion 2013</a></h2>
 						</div>
+					<?php } elseif (BASKETBALL_PREVIEW_2013) { ?>
+						<div class="special-issue-banner--basketball-preview-2013  special-issue-banner  fittext  clearfix">
+							<h2 class="fittext tk-museo-slab aligncenter"><a href="<?php home_url(); ?>/category/sports/basketball-preview-2013/">Basketball Preview 2013</a></h2>
+						</div>
 					<?php } // END IT ALL! ?>
 
 				</div> <!-- end .home-top-promo -->
