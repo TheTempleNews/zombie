@@ -3,3 +3,5 @@
 
 /library/metabox/
 .DS_Store
+/.sass-cache/
+/node_modules/

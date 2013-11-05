@@ -41,31 +41,6 @@ define('TTX_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . 
 define('TTX_NAME', "Flex Tetrodo");  
 define ("TTX_VERSION", "0.1");
 
-// Load FS2 Script
-function ttx_script() {
-	// For fade animation  
-    /* print '<script type="text/javascript" charset="utf-8"> 
-		jQuery(window).load(function() { 
-				jQuery(\'.flexslider\').flexslider(); 
-			}
-		);
-	</script>'; */
-	
-	// For slide animation
-	// Not quite working as desired on iOS - when swiping, slideshow stops. pauseOnAction: false should disable this but that's not working either...
-	print '<script type="text/javascript">
-		jQuery(window).load(function() {
-			jQuery(\'.flexslider\').flexslider({
-				animation: "slide",
-				pauseOnAction: false,
-				pauseOnHover: false,
-		  });
-		});
-	</script>';
-}  
-      
-add_action('wp_footer', 'ttx_script');
-
 // Meet Tetrodo!
 function ttx_get_slider() {
 	$slider = "";

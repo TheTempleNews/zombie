@@ -28,6 +28,13 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+  // Flexslider
+  $('.flexslider').flexslider({
+    animation: 'slide',
+    pauseOnAction: false,
+    pauseOnHover: false,
+  });
+
 	/* FitVids */
 	$(".video-container").fitVids();
 
@@ -38,6 +45,9 @@ jQuery(document).ready(function($) {
 	$(".the-american-text-banner.fittext").fitText(1.75);
 	$(".page-branded .page-title.fittext").fitText(0.5);
 	//$(".documentary-banner .fittext").fitText();
+	$('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
+	$('.breaking-news-banner.fittext p').fitText(2.25);
+	$('.special-issue-banner--reunion-2013 h2.fittext').fitText();
 
 	/* slabText */
 	$(".slabtextthis").slabText();
@@ -56,7 +66,7 @@ jQuery(document).ready(function($) {
 				gutterWidth: 0
 			});
 		}
-		
+
 //	});
 
 

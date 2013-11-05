@@ -629,10 +629,17 @@ function the_post_thumbnail_caption() {
  * Displays a list of the 5 most recent posts from a network site.
  *
  * http://codex.wordpress.org/Function_Reference/fetch_feed
+ *
+ * @param string $domain Subdomain, if any.
+ * @param string $url URL of an outside feed to get.
  */
-	function ttn_network_feed( $domain ) {
+	function ttn_network_feed( $domain, $url = null ) {
 
-		$feed_url = 'http://' . $domain . '.temple-news.com/feed/';
+		if (!$url) {
+			$feed_url = 'http://' . $domain . '.temple-news.com/feed/';
+		} elseif ($url) {
+			$feed_url = $url;
+		}
 
 		// Get RSS Feed(s)
 		include_once(ABSPATH . WPINC . '/feed.php');
@@ -891,3 +898,93 @@ function ttn_get_featured_image_fallback( $size = 'zom-landscape-396' ) {
 
 	echo $thumbnail;
 }
+
+/**
+ * Get the current page's slug.
+ *
+ * @link http://www.tcbarrett.com/2011/09/wordpress-the_slug-get-post-slug-function/
+ * @link http://stackoverflow.com/questions/4837006/how-to-get-the-current-page-name-in-wordpress
+ * @link http://stackoverflow.com/questions/2805879/wordpress-taxonomy-title-output
+ *
+ * @param string $type Set an override post/page type of options: 'post' (including custom types), 'page', or 'cat'.
+ *
+ * @return $slug string The page slug
+ */
+function ttn_get_the_slug($type = '') {
+	global $post;
+
+	if (is_single() || $type === 'post') {
+
+		/*$slug = basename(get_permalink());
+		do_action('before_slug', $slug);
+		$slug = apply_filters('slug_filter', $slug);
+		if( $echo ) echo $slug;
+		do_action('after_slug', $slug);*/
+
+		$slug = $post->post_name;
+
+	} elseif (is_page() || $type === 'page') {
+
+		$slug = get_query_var('pagename');
+		if ( !$pagename && $id > 0 ) {
+			// If a static page is set as the front page,
+			// $pagename will not be set. Retrieve it from the queried object
+			$post = $wp_query->get_queried_object();
+			$pagename = $post->post_name;
+		}
+
+	} elseif (is_category() || $type === 'cat') {
+		$cat = get_category( get_query_var( 'cat' ) );
+		$slug = $cat->slug;
+
+		//$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+		//$slug = $term->name;
+	}
+
+	return $slug;
+}
+
+
+/**
+* Retrieve a post given its title.
+*
+* @link  http://wordpress.stackexchange.com/questions/11292/how-do-i-get-a-post-page-or-cpt-id-from-a-title-or-slug/11296#11296
+*
+* @uses $wpdb
+*
+* @param string $post_title Page title
+* @param string $post_type post type ('post','page','any custom type')
+* @param string $output Optional. Output type. OBJECT, ARRAY_N, or ARRAY_A.
+* @return mixed
+*/
+function zombie_get_post_by_title($page_title, $post_type ='post' , $output = OBJECT) {
+    global $wpdb;
+        $post = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $page_title, $post_type));
+        if ( $post )
+            return get_post($post, $output);
+
+    return null;
+}
+
+
+
+function zombie_feed_request($qv) {
+    // If a request for the RSS feed is made, but the request
+    // isn't specifically for a Custom Post Type feed
+    if (isset($qv['feed']) && !isset($qv['post_type'])) {
+        // Return a feed with posts of post type 'post' and 'thoughts'
+        $qv['post_type'] = array(
+                                 'post',
+                                 'article_news',
+                                 'article_sports',
+                                 'article_living',
+                                 'article_ae',
+                                 'article_opinion',
+                                 'multimedia',
+                                 'slideshow'
+                                 );
+    }
+
+    return $qv;
+}
+add_filter('request', 'zombie_feed_request');
