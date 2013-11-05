@@ -14,7 +14,7 @@
 function zombie_scripts() {
   // Main stylesheet
   // wp_enqueue_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), ZOM_VERSION, 'all' );
-  wp_enqueue_style('zombie-main', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), 'dbec5b67e39fa2ac82478248eb306755');
+  wp_enqueue_style('zombie-main', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), '3eb6aaa52c0c177d618b6223f0991d50');
 
   // IE-only stylesheet
   // wp_register_style('zombie-ie-stylesheet', get_stylesheet_directory_uri() . '/assets/css/ie.css', array(), '');
