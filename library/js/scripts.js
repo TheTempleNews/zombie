@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
 	$('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
 	$('.breaking-news-banner.fittext p').fitText(2.25);
 	$('.special-issue-banner--reunion-2013 h2.fittext').fitText();
-	$('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText();
+	$('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText(1.5);
 
 	/* slabText */
 	$(".slabtextthis").slabText();
