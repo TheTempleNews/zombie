@@ -13,8 +13,12 @@
 }
 
   .site-header__branding {
-    @extend %grid;
-    @extend %grid--full;
+    margin-bottom: $base-spacing-unit;
+
+    .inner {
+      @extend %grid;
+      @extend %grid--full;
+    }
   }
 
     .site-header__branding__logo {
@@ -27,23 +31,30 @@
        *
        * FitText will control this when JS is enabled.
        */
-      @include font-size(48px, 1.2);
       background-size: contain;
       text-indent: -9999px;
+      @include font-size(40px);
+      @include media-query(lap) {
+        @include font-size(40px);
+      }
+      @include media-query(desk) {
+        @include font-size(60px);
+      }
     }
 
     .site-header__branding__social {
       @extend %grid__item;
-      @extend %desk--one-sixth;
-    }
+      @extend %desk--one-third;
+      @extend .accessibility--portable;
 
-      .site-header__branding__social__tagline {
-        @extend .accessibility--portable;
-        margin: 0;
-        padding: 0;
-      }
+      color: white;
+      vertical-align: middle;
+      padding-top: $base-line-height;
+      font-family: $font-stack__sans-serif;
+      padding-left: 10px;
+    }
 
     .site-header__branding__search {
       @extend %grid__item;
-      @extend %desk--two-sixths;
+      @extend %desk--one-third;
     }
