@@ -33,6 +33,37 @@
 						</section> <!-- end #section-box-featured -->
 
 
+						<!-- FEATURED EDITORIAL -->
+						<section id="section-box-featured-editorial" class="section-box section-box-featured clearfix">
+							<h2 class="section-box-featured-title section-box-title">Featured Editorial</h2>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
+
+								<?php
+								$feat_editorial_query = new WP_Query( array(
+																		'category__and'  => array(3, 28),
+																		'post_type'      => 'article_opinion',
+																		'posts_per_page' => 1
+								                                     )
+								);
+
+								if ($feat_editorial_query->have_posts()) : while ($feat_editorial_query->have_posts()) : $feat_editorial_query->the_post();
+								?>
+
+									<h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									<div class="dek">
+										<?php the_excerpt(); ?>
+									</div> <!-- end dek -->
+
+								<?php
+								endwhile;
+								endif;
+								?>
+
+							</article>
+
+						</section>
+
+
 
 						<!-- FEATURED MULTIMEDIA -->
 						<section id="section-box-featured-multimedia" class="section-box section-box-featured clearfix">

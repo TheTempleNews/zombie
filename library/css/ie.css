@@ -773,6 +773,7 @@ style a page via class
   float: left;
   position: relative;
 }
+.home #section-box-featured-editorial,
 .home #section-box-featured-multimedia,
 .home #section-box-featured-slideshow,
 .home #section-box-print,
@@ -786,8 +787,12 @@ style a page via class
 .home .section-box-featured#section-box-featured-content {
   margin-bottom: 3em;
 }
+.home .section-box-featured#section-box-featured-editorial .headline,
 .home .section-box-featured#section-box-featured-multimedia .headline,
-.home .section-box-featured#section-box-featured-slideshow .headline {
+.home .section-box-featured#section-box-featured-slideshow .headline,
+.home .section-box-featured#section-box-featured-editorial .dek,
+.home .section-box-featured#section-box-featured-multimedia .dek,
+.home .section-box-featured#section-box-featured-slideshow .dek {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .home .section-box-featured#section-box-featured-slideshow a {
