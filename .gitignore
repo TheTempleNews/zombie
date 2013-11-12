@@ -3,8 +3,9 @@
 .sass-cache
 
 /assets/js/scripts.min.js
+/assets/js/scripts-special-issues.min.js
 
 /assets/css/main.css
-
 /assets/css/ie.css
 /assets/css/lunchies-2013.css
+/assets/css/reunion-2013.css
