@@ -29,8 +29,8 @@
 
 
             <!-- FEATURED MULTIMEDIA -->
-            <section id="section-box-featured-multimedia" class="section-box section-box-featured clearfix">
-              <h2 class="section-box-featured-title section-box-title">Featured Multimedia</h2>
+            <section id="section-box-featured-multimedia" class="pane  section-box section-box-featured clearfix">
+              <h2 class="pane__title  section-box-featured-title section-box-title">Featured Multimedia</h2>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 
@@ -65,8 +65,8 @@
 
 
             <!-- FEATURED SLIDESHOW -->
-            <section id="section-box-featured-slideshow" class="section-box section-box-featured clearfix">
-              <h2 class="section-box-featured-title section-box-title">Featured Slideshow</h2>
+            <section id="section-box-featured-slideshow" class="pane  section-box section-box-featured clearfix">
+              <h2 class="pane__title  section-box-featured-title section-box-title">Featured Slideshow</h2>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'top-slideshow-article clearfix' ); ?> role="article">
 
@@ -156,7 +156,7 @@
 
 
             <!-- NEWS SECTION -->
-            <section id="section-box-news" class="section-container section-box clearfix">
+            <section id="section-box-news" class="pane  section-container section-box clearfix">
 
                 <?php the_zombie_loop('news'); ?>
 
@@ -198,7 +198,7 @@
 
 
             <!-- LIVING SECTION -->
-            <section id="section-box-living" class="section-container section-box clearfix">
+            <section id="section-box-living" class="pane  section-container section-box clearfix">
 
               <?php the_zombie_loop('living'); ?>
 
@@ -224,7 +224,7 @@
 
 
             <!-- SPORTS SECTION -->
-            <section id="section-box-sports" class="section-container section-box clearfix">
+            <section id="section-box-sports" class="pane  section-container section-box clearfix">
 
                 <?php the_zombie_loop('sports'); ?>
 
@@ -266,7 +266,7 @@
 
 
             <!-- A&E SECTION -->
-            <section id="section-box-ae" class="section-container section-box clearfix">
+            <section id="section-box-ae" class="pane  section-container section-box clearfix">
 
               <?php the_zombie_loop('ae'); ?>
 
@@ -301,7 +301,7 @@
 
 
       <!-- OPINION SECTION -->
-      <section id="section-box-opinion" class="section-container section-box twelvecol first last clearfix">
+      <section id="section-box-opinion" class="pane  section-container section-box twelvecol first last clearfix">
 
         <?php the_zombie_loop( 'opinion', 6 ); ?>
 
@@ -310,7 +310,7 @@
 
 
       <!-- MULTIMEDIA SECTION -->
-      <section id="section-box-multimedia" class="section-box section-container twelvecol first last clearfix">
+      <section id="section-box-multimedia" class="pane  section-box section-container twelvecol first last clearfix">
         <h2 class="section-box-title"><a href="<?php get_site_url(); ?>/multimedia/">Multimedia</a></h2>
 
 
@@ -444,7 +444,7 @@
 
 
       <!-- SLIDESHOWS SECTION -->
-      <section id="section-box-slideshows" class="section-box section-container twelvecol first last clearfix">
+      <section id="section-box-slideshows" class="pane  section-box section-container twelvecol first last clearfix">
         <h2 class="section-box-title"><a href="<?php get_site_url(); ?>/slideshows/">Slideshows</a></h2>
 
 

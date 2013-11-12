@@ -1,0 +1,28 @@
+/*-----------------------*\
+    TTN: OBJECTS: PANE
+\*-----------------------*/
+/**
+ * It's really just a box.
+ * Some like to call them "modules".
+ * I like to call them panels, for now. Wait...
+ */
+
+.pane {}
+
+  .pane__title {
+    @include font-size($h1-size);
+    @extend .rule--suffix;
+
+    padding-bottom: $half-spacing-unit;
+    font-family: $font-stack__sans-serif;
+    font-weight: 600;
+  }
+
+  .pane__title--light {
+    @extend .pane__title;
+    font-weight: 100;
+  }
+
+
+
+
