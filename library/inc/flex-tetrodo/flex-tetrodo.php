@@ -37,8 +37,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Define constants
 define('TTX_PREFIX', "ttx_");
-define('TTX_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );  
-define('TTX_NAME', "Flex Tetrodo");  
+define('TTX_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );
+define('TTX_NAME', "Flex Tetrodo");
 define ("TTX_VERSION", "0.1");
 
 // Meet Tetrodo!
@@ -46,7 +46,7 @@ function ttx_get_slider() {
 	$slider = "";
 	$slider .= '<div class="flexslider flex-tetrodo twelvecol first last">
 		<ul class="slides">';
-		
+
 		// Query posts in Featured category
 		$ttx_query = new WP_Query( array(
 			'cat' => 3,
@@ -61,7 +61,7 @@ function ttx_get_slider() {
 		);
 
 		if ( $ttx_query->have_posts() ) : while ( $ttx_query->have_posts() ) : $ttx_query->the_post();
-		
+
 			$img = get_the_post_thumbnail(get_the_ID(), 'zom-landscape-576');
 			$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'zom-landscape-576');
 			$title = '<h1 class="headline">' . '<a href="' . get_post_permalink() . '" rel="bookmark" title="' . the_title_attribute('echo=0') . '">' . get_the_title() . '</a></h1>';
@@ -72,25 +72,25 @@ function ttx_get_slider() {
 				$slider .= '<div class="slide-info">';
 					$slider .= $title;
 					$slider .= $dek;
-				$slider .= '</div>'; 
+				$slider .= '</div>';
 			$slider .= '</li>';
 
 		endwhile; endif; wp_reset_query(); // End query
 
-	$slider .= '</ul> 
-	</div>';  
+	$slider .= '</ul>
+	</div>';
 
-	return $slider; 
-	
+	return $slider;
+
 }
 
 // Add shortcode
-function ttx_insert_slider( $atts, $content = null ) {  
+function ttx_insert_slider( $atts, $content = null ) {
 	$slider = ttx_get_slider();
 	return $slider;
 }
 
-add_shortcode('ttx_slider', 'ttx_insert_slider');  
+add_shortcode('ttx_slider', 'ttx_insert_slider');
 
 // Add template tag
 function ttx_slider() {
