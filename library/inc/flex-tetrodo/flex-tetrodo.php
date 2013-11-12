@@ -55,8 +55,7 @@ function ttx_get_slider() {
 				'article_news',
 				'article_sports',
 				'article_living',
-				'article_ae',
-				'article_opinion'
+				'article_ae'
 				)
 			)
 		);
