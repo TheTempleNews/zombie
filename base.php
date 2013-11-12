@@ -14,21 +14,20 @@
   ?>
 
   <div id="root" class="root  wrap  container" role="document">
-    <div class="content  grid">
-      <div class="main  grid__item  <?php echo zombie_main_class(); ?>" role="main">
-        <div class="main__inner  pane">
+    <div class="content">
+      <main class="main  <?php echo zombie_main_class(); ?>" role="main">
+        <div class="main__inner">
           <?php include zombie_template_path(); ?>
         </div>
-      </div><!-- /.main
+      </main><!-- /.main
     --><?php if (zombie_display_sidebar()) : ?><!--
-      --><aside class="sidebar  grid__item  <?php echo zombie_sidebar_class(); ?>" role="complementary">
-        <div class="sidebar__inner  pane">
+      --><aside class="sidebar  <?php echo zombie_sidebar_class(); ?>" role="complementary">
+        <div class="sidebar__inner">
           <?php include zombie_sidebar_path(); ?>
         </div>
       </aside><!-- /.sidebar -->
       <?php endif; ?>
     </div><!-- /.content -->
-    <div id="sticky-push"><!-- This is an empty div for our sticky footer. --></div>
   </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
