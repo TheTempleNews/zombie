@@ -2,7 +2,10 @@
     TTN: OBJECTS: RULES
 \*------------------------------------*/
 /**
- * Horizontal rules, extend `hr`.
+ * Horizontal rules.
+ *
+ * The original object extends `hr`,
+ * but these might not necessarily.
  *
  * ^^Extends ^inuit.css.
  */
@@ -18,4 +21,19 @@
 .rule--site {
   border-bottom-width: 3px;
     margin-bottom: 0;
+}
+
+
+
+
+/**
+ * A rule to follow an element, does not extend `hr`.
+ */
+.rule--suffix {
+  border:none;
+  border-bottom-color: $base-ui-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: $base-spacing-unit - 1px;
+  margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
 }

@@ -101,6 +101,7 @@ $color__gray--dark: #777;
 $color__primary: $color__red;
 
 $brand-color: $color__red; // ^overrides inuit.css
+$base-ui-color: $color__gray--light; // ^overrides inuit.css
 
 /**
  * Color palette for Music Issue 2013 color scheme.
@@ -108,3 +109,13 @@ $brand-color: $color__red; // ^overrides inuit.css
 $color--music-issue-2013__blue: #528ba3;
 $color--music-issue-2013__overlay: rgba(80,80,80,0.2);
 $color--music-issue-2013__green: #4fa442;
+
+
+
+
+
+/*------------------------------------*\
+    $BORDERS
+\*------------------------------------*/
+
+$border-primary: 1px solid $color__gray--light;
