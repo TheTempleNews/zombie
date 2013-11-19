@@ -14,18 +14,9 @@
 
   .site-header__branding {
     margin-bottom: $base-spacing-unit;
-
-    .inner {
-      @extend %grid;
-      @extend %grid--full;
-    }
   }
 
     .site-header__branding__logo {
-      @extend %grid__item;
-      @extend %portable--two-thirds;
-      @extend %desk--one-third;
-
       /**
        * Logo sizing based on font size.
        *
@@ -43,8 +34,6 @@
     }
 
     .site-header__branding__social {
-      @extend %grid__item;
-      @extend %desk--one-third;
       @extend .accessibility--portable;
 
       color: white;
@@ -54,7 +43,4 @@
       padding-left: 10px;
     }
 
-    .site-header__branding__search {
-      @extend %grid__item;
-      @extend %desk--one-third;
-    }
+    .site-header__branding__search {}

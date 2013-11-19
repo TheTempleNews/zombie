@@ -19,13 +19,13 @@
 
   <div class="site-header__branding">
     <div class="wrap">
-      <div class="inner">
+      <div class="inner  grid  grid--full">
 
-        <a href="<?php echo home_url(); ?>" class="site-header__branding__logo  icon-ttn-logo-500-white  logo" title="The Temple News" rel="nofollow">
+        <a href="<?php echo home_url(); ?>" class="site-header__branding__logo  icon-ttn-logo-500-white  logo  grid__item  portable--two-thirds  desk--one-third" title="The Temple News" rel="nofollow">
           The Temple News
         </a><!--
 
-        --><div class="site-header__branding__social">
+        --><div class="site-header__branding__social  grid__item  desk--one-third">
           <div class="inner">
             <a class="icon-facebook  social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"></a>
             <a class="icon-twitter  social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"></a>
@@ -39,7 +39,7 @@
           <span>MENU</span>
         </div> --><!--
 
-        --><div class="site-header__branding__search">
+        --><div class="site-header__branding__search  grid__item  desk--one-third">
           <?php get_search_form( true ); ?>
         </div>
 
