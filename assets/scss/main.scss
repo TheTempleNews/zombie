@@ -28,13 +28,14 @@
  */
 @import "ui-main/generic/mixins";
 @import "ui-main/generic/typography";
+@import "ui-main/generic/layout";
+@import "ui-main/generic/links";
 
 
 /**
  * Base styles.
  */
-@import "ui-main/base/links";
-@import "ui-main/base/widths";
+
 
 
 /**
@@ -56,3 +57,9 @@
  */
 @import "ui-main/organisms/header--site";
 @import "ui-main/organisms/nav--site";
+
+
+/**
+ * Pages.
+ */
+@import "ui-main/pages/front-page";
