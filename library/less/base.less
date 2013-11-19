@@ -188,18 +188,37 @@ style a page via class
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {
-	.section-box-title {
-		/* border-top: @niceborders-s; */
-		.h6;
+	.box,
+	.section-box {
+		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
+	}
+
+	.box-title {
+		.h5;
 		border-bottom: @niceborders-s;
-		padding: (@lhem-s/2) 0;
-		margin-bottom: (@lhem-s)-@1px-s;
-		font-weight: 600;
+		padding: 0 0 16px;
+		padding: 0 0 1rem;
+		margin-bottom: 24px-1px;
+		font-weight: 400;
+		color: black;
+		text-transform: uppercase;
 
 		a, a:visited {
-			color: @thatred;
+			color: black;
 			display: block;
 		}
+
+		a:hover,
+		a:active {
+			color: @thatred;
+		}
+	}
+
+	.section-box-title {
+		.box-title;
+		.h2;
+		text-transform: none;
 	}
 
 	.section-box-featured {
@@ -319,7 +338,12 @@ style a page via class
 		.headline {
 			.h4;
 			font-family: @serif;
+			font-weight: 400;
 			margin: 0 0 0.25em;
+
+			a {
+				color: black;
+			}
 		}
 
 		.top-headline {
@@ -1191,6 +1215,10 @@ FLEX TETRODO STYLES
 		font-style: italic;
 		font-family: @serif;
 		color: #565656;
+	}
+
+	.flex-control-nav {
+		position: static;
 	}
 
 	.flex-direction-nav a {

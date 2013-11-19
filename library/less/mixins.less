@@ -4,7 +4,7 @@ Author: Chris Montgomery (@montchr, mont.chr@gmail.com)
 
 Stylesheet: Mixins & Constants Stylesheet
 
-This is where you can take advantage of LESS' great features: 
+This is where you can take advantage of LESS' great features:
 Mixins & Constants. I won't go in-depth on how they work exactly,
 there are a few articles below that will help do that. What I will
 tell you is that this will help speed up simple changes like
@@ -12,7 +12,7 @@ changing a color or adding CSS3 techniques like box shadow and
 border-radius.
 
 A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more. 
+remember less is more.
 
 ******************************************************************/
 
@@ -21,8 +21,8 @@ remember less is more.
 CLEARFIXIN'
 *********************/
 
-/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
-.clearfix { 
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
 	&:before,
 	&:after {
 		content: "";
@@ -32,7 +32,7 @@ CLEARFIXIN'
 		clear: both;
 	}
 	/* for IE */
-	zoom: 1; 
+	zoom: 1;
 }
 
 /*********************
@@ -40,10 +40,10 @@ TOOLS
 *********************/
 
 // BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
-* { 
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing:    border-box; 
-	box-sizing:         border-box; 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
 }
 
 /* http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
@@ -184,7 +184,7 @@ TYPOGRAPHY
 	    font-style: normal;
 
 	}
-	
+
 /* Mensch */
 	@font-face {
 	    font-family: 'MenschRegular';
@@ -233,7 +233,7 @@ TYPOGRAPHY
 	    font-style: normal;
 
 	}
-	
+
 /* Blackout Midnight */
 	@font-face{
 		font-family: 'BlackoutMidnight';
@@ -332,8 +332,8 @@ TYPOGRAPHY
 	}
 
 /* Mixins */
-@sans-serif:         'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif; 
-@serif:              'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif; 
+@sans-serif:         'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serif:              'Alegreya', "Georgia", Cambria, Times New Roman, Times, serif;
 @headline:           'LeagueGothicRegular', Impact, sans-serif;
 
 /* smallcaps */
@@ -379,8 +379,8 @@ TYPOGRAPHY
         display:block;
         }
 
-/* 
-use the best ampersand 
+/*
+use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
@@ -395,32 +395,32 @@ span.amp {
 
 
 /* alerts & notices */
-.alert { 
+.alert {
 	text-align: center;
 	font-weight: normal;
 	font-family: @headline;
 	font-size: 1.875em;
 }
 
-.help { 
-	border-color: darken(@alert-yellow, 5%); 
-	background: @alert-yellow; 
+.help {
+	border-color: darken(@alert-yellow, 5%);
+	background: @alert-yellow;
 }
 
-.info { 
-	border-color: darken(@alert-blue, 5%); 
-	background: @alert-blue; 
+.info {
+	border-color: darken(@alert-blue, 5%);
+	background: @alert-blue;
 }
 
-.error { 
-	border-color: darken(@alert-red, 5%); 
-	background: @alert-red; 
+.error {
+	border-color: darken(@alert-red, 5%);
+	background: @alert-red;
 }
 
-.success { 
-	border-color: darken(@alert-green, 5%); 
-	background: @alert-green; 
-} 
+.success {
+	border-color: darken(@alert-green, 5%);
+	background: @alert-green;
+}
 
 /*********************
 BORDERS
@@ -429,8 +429,8 @@ BORDERS
 @1px-s: 0.0714em; /* ~1px for 87.5% font-size */
 @1px-l: 0.0625em; /* ~1px for 100% font-size */
 
-@niceborders-s: @1px-s solid #CCCCCC; /* border is ~1px for 87.5% font-size */
-@niceborders-l: @1px-l solid #CCCCCC; /* border is ~1px for 100% font-size */
+@niceborders-s: 1px solid #CCCCCC; /* border is ~1px for 87.5% font-size */
+@niceborders-l: 1px solid #CCCCCC; /* border is ~1px for 100% font-size */
 
 /*********************
 BORDER RADIUS
@@ -498,7 +498,7 @@ TRANISTION
 
 /*********************
 CSS3 GRADIENTS
-Be careful with these since they can 
+Be careful with these since they can
 really slow down your CSS. Don't overdue it.
 *********************/
 
@@ -517,7 +517,7 @@ BOX SIZING
 *********************/
 
 /* .boxSizing(border-box); */
-/* NOTE: value of "padding-box" is only supported in Gecko. So 
+/* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 .boxSizing(@type: border-box) {
 	-webkit-box-sizing: @type;
@@ -534,7 +534,7 @@ BOX SHADOW
 .boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) {
 	-webkit-box-shadow: @x @y @radius @spread @color;
 	   -moz-box-shadow: @x @y @radius @spread @color;
-					box-shadow: @x @y @radius @spread @color; 
+					box-shadow: @x @y @radius @spread @color;
 }
 
 .boxShadow-curl(@background-color: #FFFFFF) {
@@ -609,7 +609,7 @@ BOX SHADOW
 .boxShadow-curved-topbottom(@background-color: #FFFFFF) {
 	background: @background-color;
 	position:relative;
-	
+
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -679,10 +679,10 @@ BUTTONS
 	 	border-left-color: darken(@bones-pink, 20%);
 		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
 	}
-	
+
 	&:active {
 		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
-	}	
+	}
 }
 
 .blue-button, .blue-button:visited {

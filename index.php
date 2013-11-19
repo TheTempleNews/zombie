@@ -20,9 +20,9 @@
 
 
 						<!-- FEATURED CONTENT -->
-						<section id="section-box-featured-content" class="section-box section-box-featured clearfix">
+						<section id="box-featured-content" class="box box-featured clearfix">
 
-							<h2 class="section-box-featured-title section-box-title">Featured Content</h2>
+							<h2 class="box-featured-title box-title">Featured Content</h2>
 
 								<!-- featured content stuff goes here -->
 								<?php
@@ -30,12 +30,12 @@
 									ttx_slider();
 								} ?>
 
-						</section> <!-- end #section-box-featured -->
+						</section> <!-- end #box-featured -->
 
 
 						<!-- FEATURED EDITORIAL -->
-						<section id="section-box-featured-editorial" class="section-box section-box-featured clearfix">
-							<h2 class="section-box-featured-title section-box-title">Featured Editorial</h2>
+						<section id="box-featured-editorial" class="box box-featured clearfix">
+							<h2 class="box-featured-title box-title">Featured Editorial</h2>
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 
 								<?php
@@ -65,8 +65,8 @@
 
 
 						<!-- FEATURED MULTIMEDIA -->
-						<section id="section-box-featured-multimedia" class="section-box section-box-featured clearfix">
-							<h2 class="section-box-featured-title section-box-title">Featured Multimedia</h2>
+						<section id="box-featured-multimedia" class="box box-featured clearfix">
+							<h2 class="box-featured-title box-title">Featured Multimedia</h2>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 
@@ -96,7 +96,7 @@
 
 										</article> <!-- end article -->
 
-						</section> <!-- end #section-box-multimedia -->
+						</section> <!-- end #box-multimedia -->
 
 
 						<div class="ttn-network-feed">
@@ -109,8 +109,8 @@
 
 
 						<!-- FEATURED SLIDESHOW -->
-						<section id="section-box-featured-slideshow" class="section-box section-box-featured clearfix">
-							<h2 class="section-box-featured-title section-box-title">Featured Slideshow</h2>
+						<section id="box-featured-slideshow" class="box box-featured clearfix">
+							<h2 class="box-featured-title box-title">Featured Slideshow</h2>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'top-slideshow-article clearfix' ); ?> role="article">
 
@@ -152,13 +152,13 @@
 
 								</article> <!-- end article -->
 
-						</section> <!-- end #section-box-featured-slideshow -->
+						</section> <!-- end #box-featured-slideshow -->
 
 						<?php /*
 						<!-- PRINT EDITION -->
-						<section id="section-box-print" class="section-box section-box-featured clearfix">
+						<section id="box-print" class="box box-featured clearfix">
 
-							<h2 class="section-box-featured-title section-box-title">Print Edition</h2>
+							<h2 class="box-featured-title box-title">Print Edition</h2>
 
 								<?php
 								$print_thumb = new WP_Query('post_type=print_edition&posts_per_page=1');
@@ -169,7 +169,7 @@
 
 								<?php endwhile; endif; wp_reset_postdata(); ?>
 
-						</section> <!-- end #section-box-print -->
+						</section> <!-- end #box-print -->
 						*/ ?>
 
 

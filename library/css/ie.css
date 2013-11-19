@@ -23,7 +23,7 @@ Author: Chris Montgomery (@montchr, mont.chr@gmail.com)
 
 Stylesheet: Mixins & Constants Stylesheet
 
-This is where you can take advantage of LESS' great features: 
+This is where you can take advantage of LESS' great features:
 Mixins & Constants. I won't go in-depth on how they work exactly,
 there are a few articles below that will help do that. What I will
 tell you is that this will help speed up simple changes like
@@ -31,7 +31,7 @@ changing a color or adding CSS3 techniques like box shadow and
 border-radius.
 
 A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more. 
+remember less is more.
 
 ******************************************************************/
 /*********************
@@ -249,8 +249,8 @@ TYPOGRAPHY
 .slabtextdone .slabtext {
   display: block;
 }
-/* 
-use the best ampersand 
+/*
+use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
@@ -312,7 +312,7 @@ TRANISTION
 /* .transition(all,2s); */
 /*********************
 CSS3 GRADIENTS
-Be careful with these since they can 
+Be careful with these since they can
 really slow down your CSS. Don't overdue it.
 *********************/
 /* .css-gradient(#dfdfdf,#f8f8f8); */
@@ -320,7 +320,7 @@ really slow down your CSS. Don't overdue it.
 BOX SIZING
 *********************/
 /* .boxSizing(border-box); */
-/* NOTE: value of "padding-box" is only supported in Gecko. So 
+/* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BOX SHADOW
@@ -564,7 +564,7 @@ body {
   line-height: 1.5;
 }
 .hoz-rule-third {
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
 }
 /***********************
 ADVERTS AND SOCIAL MEDIA
@@ -772,27 +772,11 @@ style a page via class
 .home .section-box-featured#section-box-featured-slideshow a {
   display: block;
 }
+.home #box-featured-editorial {
+  font-size: 87.5%;
+}
 .home .section-box-title {
-  /* border-top: @niceborders-l; */
-  border-bottom: 0.0625em solid #cccccc;
-  padding: 0.75em 0;
-  margin-bottom: 1.4375em;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-  filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
-}
-.home .section-box-title a:hover {
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-  filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=4px, offy=4px);
-  position: relative;
-  top: -1px;
-  left: -1px;
-}
-.home .section-box-title a:active {
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-  filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=3px, offy=3px);
-  position: relative;
-  top: 1px;
-  left: 1px;
+  border-bottom: 1px solid #cccccc;
 }
 .home #links-print-edition span {
   font-family: 'Source Sans Pro', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -812,17 +796,6 @@ style a page via class
 .home article .featured-image-container-thumb {
   width: 96px;
   margin: 0 1.5em 1.5em 0;
-}
-.home article .headline {
-  font-size: 1.5em;
-  line-height: 1;
-  margin: 0.5em 0;
-  margin: 0 0 0.25em;
-}
-.home article .top-headline {
-  font-size: 2.25em;
-  line-height: 1.333333;
-  margin: 0.333333em 0;
 }
 .home article .dek {
   display: block;
@@ -890,7 +863,7 @@ style a page via class
   font-size: 2.25em;
   line-height: 1.333333;
   margin: 0.333333em 0;
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   padding: 0;
   margin: auto 0 1.5em;
 }
@@ -993,7 +966,7 @@ style a page via class
 }
 /* archive page */
 .post-type-archive .top-archive-article {
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   margin: 0 0 3em 0;
 }
 /* post type archive */
@@ -1016,7 +989,7 @@ style a page via class
 }
 .single .authors {
   font-family: 'Alegreya SC';
-  border-right: 0.0625em solid #cccccc;
+  border-right: 1px solid #cccccc;
   padding-right: 0.75em;
 }
 .single time {
@@ -1653,7 +1626,7 @@ p {
   margin-bottom: 1.5em;
 }
 .hentry footer {
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   padding-bottom: 1.5em;
   margin-bottom: 3em;
 }
@@ -1661,7 +1634,7 @@ p {
   font-size: 2.25em;
   line-height: 1.333333;
   margin: 0.333333em 0;
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   padding: 0;
   margin: auto 0 1.5em;
 }
@@ -1674,7 +1647,7 @@ p {
 }
 .post-content pre,
 .post-content code {
-  border: 0.0625em solid #cccccc;
+  border: 1px solid #cccccc;
 }
 .post-content .single-featured-image-full-container {
   border-bottom: none;
@@ -1742,7 +1715,7 @@ COMMENT STYLES
 .commentlist .vcard img.avatar {
   left: 0.625em;
   padding: 0.125em;
-  border: 0.0625em solid #cccccc;
+  border: 1px solid #cccccc;
 }
 .commentlist .comment_content {
   margin-left: 3.125em;
@@ -1822,7 +1795,7 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-weight: 300;
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   padding: 0.75em 0;
   margin-bottom: 1.4375em;
 }
@@ -1875,7 +1848,7 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-weight: 300;
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   padding: 0.75em 0;
   margin-bottom: 1.4375em;
 }
@@ -1907,7 +1880,7 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
   zoom: 1;
   margin-bottom: 0.75em;
   padding-bottom: 0.75em;
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   display: block;
 }
 .widget_twitter div ul li:before,
@@ -2065,7 +2038,7 @@ at any lower resolution they will not fit.
   font-weight: 700;
 }
 .three-column-container {
-  border-bottom: 0.0625em solid #cccccc;
+  border-bottom: 1px solid #cccccc;
 }
 /* 
 you can call the larger styles if you want, but there's really no need 
