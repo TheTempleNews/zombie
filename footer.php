@@ -54,6 +54,10 @@
 										<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-black.png" alt="broadcecil-logo" /></a>
 							</div>
 
+							<div id="theowleryad-footer" class="theowleryad ttn-network-banner" title="The Cherry">
+										<a href="http://owlery.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/TheOwleryBanner-white.png" alt="The Owlery blog" title="The Owlery blog" /></a>
+							</div>
+
 							<div id="thecherryad-footer" class="thecherryad ttn-network-banner" title="The Cherry">
 										<a href="http://thecherry.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-black.png" alt="thecherry-logo" /></a>
 							</div>

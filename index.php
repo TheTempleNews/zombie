@@ -64,7 +64,6 @@
 						</section>
 
 
-
 						<!-- FEATURED MULTIMEDIA -->
 						<section id="section-box-featured-multimedia" class="section-box section-box-featured clearfix">
 							<h2 class="section-box-featured-title section-box-title">Featured Multimedia</h2>
@@ -99,6 +98,14 @@
 
 						</section> <!-- end #section-box-multimedia -->
 
+
+						<div class="ttn-network-feed">
+							<div class="theowleryad ttn-network-banner" title="The Cherry">
+										<a href="http://owlery.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/TheOwleryBanner-black.png" alt="The Owlery blog" title="The Owlery blog" /></a>
+							</div>
+
+							<?php ttn_network_feed('owlery'); ?>
+						</div>
 
 
 						<!-- FEATURED SLIDESHOW -->
@@ -146,8 +153,6 @@
 								</article> <!-- end article -->
 
 						</section> <!-- end #section-box-featured-slideshow -->
-
-
 
 						<?php /*
 						<!-- PRINT EDITION -->
@@ -198,8 +203,9 @@
 								<?php the_zombie_loop('news'); ?>
 
 								<div id="broadcecil-feed" class="ttn-network-feed">
-									<h3 class="broadcecil-feed-title network-feed-title"><a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil">Broad &amp; Cecil</a></h3>
-									<h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News</h4>
+									<div class="broadcecilad ttn-network-banner">
+										<a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
+									</div>
 
 									<?php ttn_network_feed('broadandcecil'); ?>
 
@@ -266,8 +272,9 @@
 								<?php the_zombie_loop('sports'); ?>
 
 								<div id="thecherry-feed" class="ttn-network-feed">
-									<h3 class="thecherry-feed-title network-feed-title"><a href="http://thecherry.temple-news.com/">The Cherry</a></h3>
-									<h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News</h4>
+									<div class="thecherryad ttn-network-banner" title="The Cherry">
+										<a href="http://thecherry.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
+									</div>
 
 									<?php ttn_network_feed('thecherry'); ?>
 

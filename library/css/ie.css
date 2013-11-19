@@ -37,9 +37,9 @@ remember less is more.
 /*********************
 CLEARFIXIN'
 *********************/
-/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */.clearfix {
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
   /* for IE */
-
   zoom: 1;
 }
 .clearfix:before,
@@ -447,7 +447,6 @@ upon your base.scss styles.
 }
 #main.the-essayist {
   /* end archive */
-
 }
 #main.the-essayist.essayist-archive h2.essayist-text-banner {
   font-size: 120px;
@@ -465,13 +464,10 @@ upon your base.scss styles.
 }
 .page-template-documentary-php {
   /* "Branded" Documentary Page */
-
   /* end .page-branded */
-
 }
 .page-template-documentary-php.page-branded .page-title {
-  font-size: 6em /* 84px @ 14px base */
-;
+  font-size: 6em /* 84px @ 14px base */;
 }
 /* end documentary template */
 /*********************
@@ -480,28 +476,22 @@ NAVIGATION STYLES
 /* .menu is clearfixed inside mixins.scss */
 .menu {
   /* end .menu ul */
-
 }
 .menu ul {
   /* end .menu ul li */
-
   /* highlight current page */
-
   /* end current highlighters */
-
 }
 .menu ul li {
   /*
 				plan your menus and drop-downs wisely.
 				*/
-
 }
 .menu ul li a {
   /*
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/
-
 }
 /* end .menu */
 /*********************
@@ -510,7 +500,6 @@ POSTS & CONTENT STYLES
 /* post content */
 .post-content {
   /* at this larger size, we can start to align images */
-
 }
 .post-content img[class*="align"],
 .post-content img[class*="wp-image-"],
@@ -584,9 +573,9 @@ ADVERTS AND SOCIAL MEDIA
 .ttn-network-feed {
   border-top: none;
   border-bottom: none;
-  margin: 0 0 1.5em;
 }
 .ttn-network-feed {
+  margin: 0 0 1.5em;
   padding: 0.6875em 1em;
   background: #ffffff;
   position: relative;
@@ -639,9 +628,6 @@ ADVERTS AND SOCIAL MEDIA
   padding: 0;
   list-style: none;
 }
-.ttn-network-feed ul li {
-  margin: 1.5em 0;
-}
 .ad-container .ad > div {
   margin: 0 auto;
 }
@@ -670,21 +656,16 @@ ADVERTS AND SOCIAL MEDIA
 }
 #main.the-essayist {
   /* end essayist-archive and essay */
-
   /* end essayist-archive */
-
   /* end essay */
-
 }
 #main.the-essayist.essayist-archive,
 #main.the-essayist.essay {
   /* end .post */
-
 }
 #main.the-essayist.essayist-archive article,
 #main.the-essayist.essay article {
   /* end .byline */
-
 }
 #main.the-essayist.essayist-archive article .byline,
 #main.the-essayist.essay article .byline {
@@ -692,7 +673,6 @@ ADVERTS AND SOCIAL MEDIA
   font-size: 1.875em;
   margin-bottom: 0;
   /* end a */
-
 }
 #main.the-essayist.essayist-archive article .byline a,
 #main.the-essayist.essay article .byline a {
@@ -753,11 +733,8 @@ style a page via class
 ********************/
 .home {
   /* end .home #section-box-opinion */
-
   /* end #section-box-multimedia */
-
   /* end #section-box-slideshows */
-
 }
 .home #column-center {
   -webkit-box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
@@ -800,7 +777,6 @@ style a page via class
 }
 .home .section-box-title {
   /* border-top: @niceborders-l; */
-
   border-bottom: 0.0625em solid #cccccc;
   padding: 0.75em 0;
   margin-bottom: 1.4375em;
@@ -877,11 +853,9 @@ style a page via class
 }
 .home #section-box-multimedia {
   /* end #multimedia-mgallery */
-
 }
 .home #section-box-multimedia #multimedia-mgallery {
   /* end .multimedia-mgallery-main */
-
 }
 .home #section-box-multimedia #multimedia-mgallery article {
   border-bottom: none;
@@ -894,11 +868,9 @@ style a page via class
 }
 .home #section-box-slideshows {
   /* end #slideshows-mgallery */
-
 }
 .home #section-box-slideshows #slideshows-mgallery {
   /* end .slideshows-mgallery-main */
-
 }
 .home #section-box-slideshows #slideshows-mgallery article {
   border-bottom: none;
@@ -916,7 +888,6 @@ style a page via class
 /* blog page */
 .archive {
   /* end article */
-
 }
 .archive .archive-main-title {
   font-size: 2.25em;
@@ -930,12 +901,10 @@ style a page via class
   font-weight: 300;
   font-size: 0.750em;
   /* 12px */
-
 }
 .archive article {
   margin-bottom: 1.5em;
   /* end .featured-image-container-thumb */
-
 }
 .archive article header,
 .archive article .dek,
@@ -943,7 +912,6 @@ style a page via class
 .archive article .headline,
 .archive article .featured-image-container {
   /* for IE */
-
   zoom: 1;
 }
 .archive article header:before,
@@ -979,7 +947,6 @@ style a page via class
 .archive article .featured-image-container-full img {
   display: block;
   /* for IE */
-
   zoom: 1;
   margin: 0;
 }
@@ -1072,13 +1039,10 @@ style a page via class
 /* end single multimedia */
 .page-template-documentary-php {
   /* "Branded" Documentary Page */
-
   /* end .page-branded */
-
 }
 .page-template-documentary-php.page-branded .page-title {
-  font-size: 9em /* 144px @ 16px base */
-;
+  font-size: 9em /* 144px @ 16px base */;
 }
 /* end documentary template */
 .post-type-archive-multimedia,
@@ -1086,21 +1050,18 @@ style a page via class
 .single-multimedia,
 .single-slideshow {
   /* end #main */
-
 }
 .post-type-archive-multimedia #main,
 .post-type-archive-slideshow #main,
 .single-multimedia #main,
 .single-slideshow #main {
   /* end .article-container */
-
 }
 .post-type-archive-multimedia #main .mgallery-row,
 .post-type-archive-slideshow #main .mgallery-row,
 .single-multimedia #main .mgallery-row,
 .single-slideshow #main .mgallery-row {
   /* for IE */
-
   zoom: 1;
 }
 .post-type-archive-multimedia #main .mgallery-row:before,
@@ -1129,7 +1090,6 @@ style a page via class
   -moz-box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.5);
   /* end article */
-
 }
 .post-type-archive-multimedia #main .article-container:hover,
 .post-type-archive-slideshow #main .article-container:hover,
@@ -1476,7 +1436,6 @@ HEADER SYTLES
 *********************/
 .header {
   /* keeps header the same proportions no matter what size the viewport */
-
   font-size: 87.5%;
   line-height: 1.428571429;
 }
@@ -1489,7 +1448,6 @@ HEADER SYTLES
 			position: relative;
 			top: 0.8em;
 			z-index: 999; */
-
 }
 #top-header #tagline-social-container {
   display: inline-block;
@@ -1499,7 +1457,6 @@ HEADER SYTLES
 }
 #top-header #tagline-social-container .header-social {
   /* this is .h1 styling but ie.less won't compile because it doesn't understand that class reference */
-
   text-rendering: optimizelegibility;
   font-weight: 600;
   font-size: 3.000em;
@@ -1532,11 +1489,8 @@ NAVIGATION STYLES
   background: #eee;
   border: 0;
   /* end .menu ul li */
-
   /* highlight current page */
-
   /* end current highlighters */
-
 }
 .nav li {
   float: left;
@@ -1544,9 +1498,7 @@ NAVIGATION STYLES
   /*
 		plan your menus and drop-downs wisely.
 		*/
-
   /* showing sub-menus */
-
 }
 .nav li a {
   border-bottom: 0;
@@ -1554,7 +1506,6 @@ NAVIGATION STYLES
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-
 }
 .nav li a:hover,
 .nav li a:focus {
@@ -1569,7 +1520,6 @@ NAVIGATION STYLES
   display: none;
   z-index: 8999;
   /* highlight sub-menu current page */
-
 }
 .nav li ul.sub-menu li,
 .nav li ul.children li {
@@ -1578,7 +1528,6 @@ NAVIGATION STYLES
 				just remember deeper menus suck
 				for usability. k, bai.
 				*/
-
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1610,7 +1559,6 @@ NAVIGATION STYLES
   background-color: #000000;
   margin: 0;
   /* border-bottom: 1px solid #ccc; */
-
 }
 #menu-top-navigation li {
   position: relative;
@@ -1619,9 +1567,7 @@ NAVIGATION STYLES
   /*
 		plan your menus and drop-downs wisely.
 		*/
-
   /* showing sub-menus */
-
 }
 #menu-top-navigation li a {
   border-bottom: 0;
@@ -1632,7 +1578,6 @@ NAVIGATION STYLES
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-
 }
 #menu-top-navigation li a:hover,
 #menu-top-navigation li a:focus {
@@ -1648,7 +1593,6 @@ NAVIGATION STYLES
   display: none;
   z-index: 8999;
   /* highlight sub-menu current page */
-
 }
 #menu-top-navigation li ul.sub-menu li,
 #menu-top-navigation li ul.children li {
@@ -1657,7 +1601,6 @@ NAVIGATION STYLES
 				just remember deeper menus suck
 				for usability. k, bai.
 				*/
-
 }
 #menu-top-navigation li ul.sub-menu li a,
 #menu-top-navigation li ul.children li a {
@@ -1728,7 +1671,6 @@ p {
 .post-content {
   margin: 0 0 3em;
   /* end .wp-caption */
-
 }
 .post-content dd {
   margin-bottom: 1.5em;
@@ -1742,7 +1684,6 @@ p {
   padding-bottom: 0.75em;
   font-size: 0.875em;
   /* 14px */
-
 }
 .post-content blockquote.blockquote-full {
   float: left;
@@ -1763,7 +1704,6 @@ p {
 .post-content .wp-caption {
   padding: 0.375em;
   /* this is the caption itself */
-
 }
 .post-content .wp-caption p.wp-caption-text {
   margin: 0.375em;
@@ -1782,17 +1722,11 @@ COMMENT STYLES
 ******************************************************************/
 .commentlist {
   /* vcard */
-
   /* end .commentlist .vcard */
-
   /* comment content */
-
   /* end .commentlist .comment_content */
-
   /* comment reply link */
-
   /* end .commentlist .comment-reply-link */
-
 }
 .commentlist li {
   margin-bottom: 1.5em;
@@ -1902,7 +1836,6 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
-
 }
 .widget ul li ul {
   margin-top: 0.75em;
@@ -1964,19 +1897,16 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 .widget_twitter div {
   padding: 0;
   /* end .intent-meta */
-
 }
 .widget_twitter div ul {
   list-style: none;
   padding: 0;
   font-size: 75%;
   /* 12px */
-
   line-height: 1.333;
 }
 .widget_twitter div ul li {
   /* for IE */
-
   zoom: 1;
   margin-bottom: 0.75em;
   padding-bottom: 0.75em;
@@ -2003,7 +1933,6 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 }
 .widget_twitter div .entry-content {
   /* for IE */
-
   zoom: 1;
   padding: 0 0 5px;
 }
@@ -2028,7 +1957,6 @@ SIDEBARS & ASIDES & WIDGETIZED AREAS
 .widget_twitter div .intent-meta a {
   background: url(../images/everything-spritev2.png);
   /** from Twitter resources */
-
   display: inline-block;
   height: 16px;
   text-indent: -9999px;
@@ -2062,7 +1990,6 @@ FOOTER STYLES
 .footer p {
   font-size: 0.875em;
   /* 14px */
-
 }
 #inner-footer {
   margin: 1.5em auto;
@@ -2109,15 +2036,13 @@ be seen on the Desktop.
  ****************/
 .page-template-documentary-php {
   /* "Branded" Documentary Page */
-
   /* end .page-branded */
-
 }
 .page-template-documentary-php.page-branded .page-title {
-  font-size: 12em /* 192px @ 16px base */
-;
+  font-size: 12em /* 192px @ 16px base */;
 }
-/* end documentary template *//******************************************************************
+/* end documentary template */
+/******************************************************************
 Site Name: The Temple News
 Author: Chris Montgomery (@montchr, mont.chr@gmail.com)
 
