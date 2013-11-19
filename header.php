@@ -37,6 +37,10 @@
 			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<?php endif; ?>
 
+		<?php if (THE_OWLERY_BANNER && HOME_TOP_PROMO) : ?>
+			<link href='http://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
+		<?php endif; ?>
+
 		<?php
 		// Load font Source Sans Pro 900 on Movers & Shakers page
 		if ( is_page('movers-shakers') ) : ?>

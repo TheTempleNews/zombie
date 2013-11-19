@@ -121,7 +121,12 @@
 						<div class="special-issue-banner--basketball-preview-2013  special-issue-banner  fittext  clearfix">
 							<h2 class="fittext tk-museo-slab aligncenter"><a href="<?php home_url(); ?>/category/sports/basketball-preview-2013/">Basketball Preview 2013</a></h2>
 						</div>
-					<?php } // END IT ALL! ?>
+					<?php } elseif (THE_OWLERY_BANNER) { ?>
+						<div class="launch-banner--the-owlery  launch-banner  fittext">
+							<h2 class="fittext"><a href="http://owlery.temple-news.com/">The Owlery</a></h2>
+							<h3 class="fittext h4">The new features blog of The Temple News</h3>
+						</div>
+					<?php } ?>
 
 				</div> <!-- end .home-top-promo -->
 
