@@ -737,11 +737,8 @@ style a page via class
   /* end #section-box-slideshows */
 }
 .home #column-center {
-  -webkit-box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
-  position: relative;
-  top: -1.5em;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 .home #column-center #column-center-inner {
   padding: 1.5em;
