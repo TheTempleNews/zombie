@@ -20,7 +20,7 @@ if ( $banner_query->have_posts() ) : while ( $banner_query->have_posts() ) : $ba
 		</div>
 	<?php endif;
 
-endwhile; endif; ?>
+endwhile; endif; wp_reset_query(); ?>
 
 
 
