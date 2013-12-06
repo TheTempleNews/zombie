@@ -12,7 +12,7 @@ if ( $banner_query->have_posts() ) : while ( $banner_query->have_posts() ) : $ba
 	$start_time = get_field('banner_start');
 	$end_time = get_field('banner_end');
 
-	if ($start_time < $now && $now < $end_time) : ?>
+	if (is_home() && $start_time < $now && $now < $end_time) : ?>
 		<div class="banner-<?php the_ID(); ?> top-banner--<?php the_field('banner_type'); ?> top-banner">
 			<a href="<?php the_field('banner_link'); ?>">
 				<?php the_content(); ?>
