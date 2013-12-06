@@ -1,3 +1,27 @@
+<?php
+
+$now = current_time('timestamp', 0);
+$banner_query = new WP_Query( array(
+                             'post_type' => 'banner',
+                             'posts_per_page' => 1
+                             )
+);
+
+if ( $banner_query->have_posts() ) : while ( $banner_query->have_posts() ) : $banner_query->the_post();
+
+	$start_time = get_field('banner_start');
+	$end_time = get_field('banner_end');
+
+	if ($start_time < $now && $now < $end_time) : ?>
+		<div class="banner--<?php the_ID(); ?> top-banner--<?php the_field('banner_type'); ?> top-banner">
+			<?php the_content(); ?>
+		</div>
+	<?php endif;
+
+endwhile; endif; ?>
+
+
+
 				<?php if ( is_home() && HOME_TOP_PROMO == true ) : ?>
 
 				<div class="home-top-promo clearfix">

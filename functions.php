@@ -72,6 +72,13 @@ require_once('library/inc/special-issues/special-issues.php');
 10. CUSTOM POST TYPES (library/inc/custom-post-types.php)
  */
 require_once('library/inc/custom-post-types.php');
+/*
+11. TOP BANNERS
+ */
+function ttn_special_issue_banner() {
+	include('library/inc/banners.php');
+}
+
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/

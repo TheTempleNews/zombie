@@ -109,14 +109,3 @@ function ttn_movers_shakers_name_no_link() {
     	echo $person;
 	}
 }
-
-/**
- * Wrapper for include of top banners.
- *
- * @author Chris Montgomery <mont.chr@gmail.com>
- * @since 1.4.5
- *
- */
-function ttn_special_issue_banner() {
-	include('banners.php');
-}
