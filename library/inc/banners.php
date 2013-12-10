@@ -13,7 +13,7 @@ if ( $banner_query->have_posts() ) : while ( $banner_query->have_posts() ) : $ba
 	$end_time = get_field('banner_end');
 
 	if (is_home() && $start_time < $now && $now < $end_time) : ?>
-		<div class="banner-<?php the_ID(); ?> top-banner--<?php the_field('banner_type'); ?> top-banner">
+		<div class="banner-<?php the_ID(); ?> top-banner--<?php the_field('banner_type'); ?> top-banner<?php echo (get_field('banner_fittext')) ? ' fittext' : ''; ?>">
 			<a href="<?php the_field('banner_link'); ?>">
 				<?php the_content(); ?>
 			</a>

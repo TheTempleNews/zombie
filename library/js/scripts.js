@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
 	$(".video-container").fitVids();
 
 	/* fitText  */
+	$('.fittext.top-banner--breaking').fitText(2.5);
 	//$("#moversshakers-page-title.fittext").fitText(0.8);
 	$(".moversshakers-text-banner.fittext").fitText(1);
 	//$(".moversshakers-text-banner.fittext").fitText(0.75);
