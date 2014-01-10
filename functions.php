@@ -25,12 +25,11 @@ sidebars, comments, ect.
 */
 require_once('library/bones.php'); // if you remove this, bones will break
 /*
-2. library/custom-post-type.php
-	- an example custom post type
-	- example custom taxonomy (like categories)
-	- example custom taxonomy (like tags)
+2. library/post-types.php
+   library/taxonomies.php
 */
-// require_once('library/custom-post-type.php'); // you can disable this if you like
+require_once('library/post-types.php');
+require_once('library/taxonomies.php');
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
