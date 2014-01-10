@@ -24,7 +24,7 @@
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 									
 									<section class="dek">
-										<p><?php echo gdtt_get_post_meta($post->ID, 'media_dek', true); ?></p>
+										<p><?php echo get_field($post->ID, 'media_dek', true); ?></p>
 									</section> <!-- end dek -->
 									
 									<p class="byline"><?php _e("by", "zombietheme"); ?> <span class="authors"><?php if(function_exists('coauthors_posts_links')) coauthors_posts_links(); else the_author_posts_link(); ?></span> <time datetime="<?php echo the_time('c'); ?>" pubdate><?php the_time('d F Y'); ?></time>

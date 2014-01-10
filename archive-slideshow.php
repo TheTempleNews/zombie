@@ -82,7 +82,7 @@
 													
 													<?php /* disabled because deks are usually not provided by photo desk - montchr 2013.02.11
 													<section class="slideshows-dek media-dek">
-														<?php echo gdtt_get_post_meta($post->ID, 'media_dek', true); ?>
+														<?php echo get_field($post->ID, 'media_dek', true); ?>
 													</section> <!-- end slideshows-dek -->
 													*/ ?>
 		
