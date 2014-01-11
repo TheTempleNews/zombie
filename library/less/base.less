@@ -1043,76 +1043,7 @@ and more scalable.
 */
 
 .nav {
-	border: @niceborders-s;
-	border-bottom: 0;
-	font-family: 'Open Sans', sans-serif;
-	text-rendering: optimizelegibility;
-	padding: 0;
-
-	li {
-
-		a {
-			display: block;
-			text-decoration: none;
-			padding: 10px 10px;
-			background-color: #eee;
-
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.less file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-
-			}
-		}
-
-		&:first-child {}
-
-		&:last-child {}
-
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
-
-			li {
-
-				a {
-					padding-left: 30px;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-
-				}
-
-				&:first-child {}
-
-				&:last-child {}
-
-			}
-
-		}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current-page-ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
-
+	font-family: @sans-serif;
 } /* end .nav */
 
 
@@ -1143,6 +1074,7 @@ and more scalable.
 	font-weight: 600;
 	text-transform: uppercase;
 	background-color: #eee;
+	padding: 0;
 
 	.sub-menu {
 		margin-top: 0;
@@ -1154,12 +1086,10 @@ and more scalable.
 		display: none;
 
 		li {
-			float: none;
-			width: 100%;
 
 			a {
 				display: block;
-				padding-left: 0;
+				padding: 10px;
 				margin-left: 30px;
 			}
 		}
@@ -1174,6 +1104,8 @@ and more scalable.
 			margin-right: 20%;
 			display: block;
 			background-color: #eee;
+			text-decoration: none;
+			padding: 10px;
 		}
 
 	}
@@ -1182,7 +1114,6 @@ and more scalable.
 		background-image: url("../images/icon-chevron-down.png");
 		background-position: 94% 9px;
 		background-repeat: no-repeat;
-		border-bottom: 1px solid #ccc;
 
 		a {
 			position: relative;

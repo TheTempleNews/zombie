@@ -1452,69 +1452,12 @@ HEADER SYTLES
 .outer-line {
   margin-bottom: 0;
 }
+#inner-header {
+  padding-bottom: 0;
+}
 /*********************
 NAVIGATION STYLES
 *********************/
-.nav {
-  background: #eee;
-  border: 0;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */
-}
-.nav li {
-  float: left;
-  position: relative;
-  /*
-		plan your menus and drop-downs wisely.
-		*/
-  /* showing sub-menus */
-}
-.nav li a {
-  border-bottom: 0;
-  /*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-}
-.nav li a:hover,
-.nav li a:focus {
-  background-color: #b70000;
-}
-.nav li ul.sub-menu,
-.nav li ul.children {
-  width: 200px;
-  border: 1px solid #ccc;
-  border-top: 0;
-  position: absolute;
-  display: none;
-  z-index: 8999;
-  /* highlight sub-menu current page */
-}
-.nav li ul.sub-menu li,
-.nav li ul.children li {
-  /*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-}
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 10px;
-  border-right: 0;
-  display: block;
-  width: 180px;
-  border-bottom: 1px solid #ccc;
-}
-.nav li ul.sub-menu li:last-child a,
-.nav li ul.children li:last-child a {
-  border-bottom: 0;
-}
-.nav li:hover ul {
-  top: auto;
-  display: block;
-}
 /* end .nav */
 /* Cancel FlexNav for 768+ */
 .js .menu-button {
@@ -1524,8 +1467,6 @@ NAVIGATION STYLES
   display: block;
 }
 #menu-top-navigation {
-  font-weight: 600;
-  text-transform: uppercase;
   background-color: #000000;
   margin: 0;
   /* border-bottom: 1px solid #ccc; */
@@ -1542,8 +1483,8 @@ NAVIGATION STYLES
 #menu-top-navigation li a {
   border-bottom: 0;
   margin: 0;
-  background-color: black;
   padding-top: 0.5em;
+  background-color: transparent;
   /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
@@ -1557,15 +1498,16 @@ NAVIGATION STYLES
 #menu-top-navigation li ul.sub-menu,
 #menu-top-navigation li ul.children {
   width: 200px;
-  border: 1px solid #ccc;
   border-top: 0;
   position: absolute;
   display: none;
   z-index: 8999;
+  background-color: #cccccc;
   /* highlight sub-menu current page */
 }
 #menu-top-navigation li ul.sub-menu li,
 #menu-top-navigation li ul.children li {
+  width: 100%;
   /*
 				if you need to go deeper, go nuts
 				just remember deeper menus suck
@@ -1574,11 +1516,17 @@ NAVIGATION STYLES
 }
 #menu-top-navigation li ul.sub-menu li a,
 #menu-top-navigation li ul.children li a {
-  padding-left: 10px;
+  margin: 0;
+  padding: 10px;
   border-right: 0;
   display: block;
-  width: 180px;
-  border-bottom: 1px solid #ccc;
+  color: black;
+}
+#menu-top-navigation li ul.sub-menu li a:hover,
+#menu-top-navigation li ul.children li a:hover,
+#menu-top-navigation li ul.sub-menu li a:focus,
+#menu-top-navigation li ul.children li a:focus {
+  color: white;
 }
 #menu-top-navigation li ul.sub-menu li:last-child a,
 #menu-top-navigation li ul.children li:last-child a {
@@ -1961,7 +1909,7 @@ FOOTER STYLES
   font-size: 0.875em;
   /* 14px */
 }
-#inner-footer {
+footer {
   margin: 1.5em auto;
 }
 /* left column */

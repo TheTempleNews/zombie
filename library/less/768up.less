@@ -834,102 +834,15 @@ HEADER SYTLES
 		margin-bottom: 0;
 	}
 
+	#inner-header {
+		padding-bottom: 0;
+	}
+
 /*********************
 NAVIGATION STYLES
 *********************/
 
-.nav {
-	background: #eee;
-	border: 0;
-
-	li {
-		float: left;
-		position: relative;
-
-		a {
-			border-bottom: 0;
-
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
-				background-color: #b70000;
-
-			}
-		}
-
-		&:first-child {}
-		&:last-child {}
-
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			width: 200px;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			display: none;
-			z-index: 8999;
-
-			li {
-
-				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-						border-bottom: 0;
-					}
-				}
-
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {}
-			}
-
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current-page-ancestor {
-				a {}
-			}
-		}
-
-		/* showing sub-menus */
-		&:hover ul {
-			top: auto;
-			display: block;
-		}
-
-	} /* end .menu ul li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current-page-ancestor {
-		a {}
-	}  /* end current highlighters */
-
-} /* end .nav */
+.nav {} /* end .nav */
 
 
 /* Cancel FlexNav for 768+ */
@@ -942,8 +855,6 @@ NAVIGATION STYLES
 }
 
 #menu-top-navigation {
-	font-weight: 600;
-	text-transform: uppercase;
 	background-color: #000000;
 	margin: 0;
 	/* border-bottom: 1px solid #ccc; */
@@ -956,9 +867,8 @@ NAVIGATION STYLES
 		a {
 			border-bottom: 0;
 			margin: 0;
-			background-color: black;
 			padding-top: 0.5em;
-
+			background-color: transparent;
 
 			/*
 			you can use hover styles here even though this size
@@ -980,23 +890,26 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			width: 200px;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
+			background-color: @thatgrey;
 
 			li {
+				width: 100%;
 
 				a {
-					padding-left: 10px;
+					margin: 0;
+					padding: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+					color: black;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						color: white;
+					}
 
 					&:link {}
 				}
@@ -1538,7 +1451,7 @@ FOOTER STYLES
 	}
 }
 
-	#inner-footer {
+	footer {
 		margin: @lhem-l auto;
 	}
 
