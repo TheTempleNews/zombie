@@ -1,0 +1,11 @@
+{
+  "name": "ttn-zombie",
+  "version": "1.6.1",
+  "main": "style.css",
+  "dependencies": {
+    "inuit.css": ">= 5.0.0",
+    "csswizardry-grids": "*"
+  },
+  "devDependencies": {},
+  "private": true
+}

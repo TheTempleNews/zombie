@@ -1,6 +1,0 @@
-[submodule "library/scss/vendor/inuit.css"]
-	path = library/scss/vendor/inuit.css
-	url = https://github.com/csswizardry/inuit.css.git
-[submodule "library/scss/vendor/csswizardry-grids"]
-	path = library/scss/vendor/csswizardry-grids
-	url = https://github.com/csswizardry/csswizardry-grids.git
