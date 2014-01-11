@@ -18,17 +18,49 @@
 
 
             <!-- FEATURED CONTENT -->
-            <section id="section-box-featured-content" class="section-box section-box-featured clearfix">
+            <section id="box-featured-content" class="box box-featured clearfix">
 
-              <h2 class="section-box-featured-title section-box-title">Featured Content</h2>
+              <h2 class="box-featured-title box-title">Featured Content</h2>
 
-            </section> <!-- end #section-box-featured -->
+            </section> <!-- end #box-featured -->
+
+
+
+            <!-- FEATURED EDITORIAL -->
+            <section id="box-featured-editorial" class="box box-featured clearfix">
+              <h2 class="box-featured-title box-title">Featured Editorial</h2>
+              <article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
+
+                <?php
+                $feat_editorial_query = new WP_Query( array(
+                                    'category__and'  => array(3, 28),
+                                    'post_type'      => 'article_opinion',
+                                    'posts_per_page' => 1
+                                                     )
+                );
+
+                if ($feat_editorial_query->have_posts()) : while ($feat_editorial_query->have_posts()) : $feat_editorial_query->the_post();
+                ?>
+
+                  <h3 class="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                  <div class="dek">
+                    <?php the_excerpt(); ?>
+                  </div> <!-- end dek -->
+
+                <?php
+                endwhile;
+                endif;
+                ?>
+
+              </article>
+
+            </section>
 
 
 
             <!-- FEATURED MULTIMEDIA -->
-            <section id="section-box-featured-multimedia" class="pane  section-box section-box-featured clearfix">
-              <h2 class="pane__title  section-box-featured-title section-box-title">Featured Multimedia</h2>
+            <section id="box-featured-multimedia" class="box box-featured clearfix">
+              <h2 class="box-featured-title box-title">Featured Multimedia</h2>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 
@@ -58,13 +90,23 @@
 
                     </article> <!-- end article -->
 
-            </section> <!-- end #section-box-multimedia -->
+            </section> <!-- end #box-multimedia -->
+
+
+
+            <div class="ttn-network-feed">
+              <div class="theowleryad ttn-network-banner" title="The Cherry">
+                    <a href="http://owlery.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/TheOwleryBanner-black.png" alt="The Owlery blog" title="The Owlery blog" /></a>
+              </div>
+
+              <?php ttn_network_feed('owlery'); ?>
+            </div>
 
 
 
             <!-- FEATURED SLIDESHOW -->
-            <section id="section-box-featured-slideshow" class="pane  section-box section-box-featured clearfix">
-              <h2 class="pane__title  section-box-featured-title section-box-title">Featured Slideshow</h2>
+            <section id="box-featured-slideshow" class="box box-featured clearfix">
+              <h2 class="box-featured-title box-title">Featured Slideshow</h2>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'top-slideshow-article clearfix' ); ?> role="article">
 
@@ -106,7 +148,7 @@
 
                 </article> <!-- end article -->
 
-            </section> <!-- end #section-box-featured-slideshow -->
+            </section> <!-- end #box-featured-slideshow -->
 
 
 
@@ -159,18 +201,13 @@
                 <?php the_zombie_loop('news'); ?>
 
                 <div id="broadcecil-feed" class="ttn-network-feed">
-                  <h3 class="broadcecil-feed-title network-feed-title"><a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil">Broad &amp; Cecil</a></h3>
-                  <h4 class="broadandcecil-feed-subtitle network-feed-subtitle">The news blog of The Temple News</h4>
+                  <div class="broadcecilad ttn-network-banner">
+                    <a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
+                  </div>
 
                   <?php ttn_network_feed('broadandcecil'); ?>
 
                 </div> <!-- end #broadcecil-feed -->
-
-                <!--
-                <div id="broadcecilad-main" class="broadcecilad ttn-network-banner">
-                  <a href="http://broadandcecil.temple-news.com/" title="Broad &amp; Cecil News Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/broadcecil-logo-crop.png" alt="broadcecil-logo" /></a>
-                </div>
-                -->
 
             </section> <!-- end #section-box-news -->
 
@@ -227,18 +264,13 @@
                 <?php the_zombie_loop('sports'); ?>
 
                 <div id="thecherry-feed" class="ttn-network-feed">
-                  <h3 class="thecherry-feed-title network-feed-title"><a href="http://thecherry.temple-news.com/">The Cherry</a></h3>
-                  <h4 class="thecherry-feed-subtitle network-feed-subtitle">The sports blog of The Temple News</h4>
+                  <div class="thecherryad ttn-network-banner" title="The Cherry">
+                    <a href="http://thecherry.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
+                  </div>
 
                   <?php ttn_network_feed('thecherry'); ?>
 
                 </div> <!-- end #thecherry-feed -->
-
-                <!--
-                <div id="thecherryad-main" class="thecherryad ttn-network-banner">
-                  <a href="http://thecherry.temple-news.com/" title="The Cherry Sports Blog"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/thecherry-logo-crop.png" alt="thecherry-logo" /></a>
-                </div>
-                -->
 
             </section> <!-- end #section-box-sports -->
 
@@ -348,9 +380,8 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twelvecol first last clearfix' ); ?> role="article">
 
                   <?php
-                  // http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/
-                  // Get the video URL and put it in the $video variable
-                  $videoID = get_post_meta($post->ID, 'video_link', true);
+                  // Get the video URL
+                  $videoID = function_exists('get_field') ? get_field('video_link') : get_post_meta($post->ID, 'video_link', true);
                   // Check if there is in fact a video URL
                   if ($videoID) {
                     // Echo the embed code via oEmbed

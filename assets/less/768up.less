@@ -34,7 +34,6 @@ ADVERTS AND SOCIAL MEDIA
 .ttn-network-feed {
 	border-top: none;
 	border-bottom: none;
-	margin: 0 0 @lhem-l;
 }
 
 .ttn-network-banner {
@@ -42,6 +41,7 @@ ADVERTS AND SOCIAL MEDIA
 }
 
 .ttn-network-feed {
+	margin: 0 0 @lhem-l;
 	padding: (@lhem-l/2-@1px-l) 1em;
 	.boxShadow-curved();
 
@@ -61,10 +61,6 @@ ADVERTS AND SOCIAL MEDIA
 
 		padding: 0;
 		list-style: none;
-
-		li {
-			margin: @lhem-l 0;
-		}
 	}
 }
 
@@ -225,9 +221,12 @@ style a page via class
 .home {
 
 	#column-center {
-		.boxShadow( @radius: 12px, @spread: 4px );
-		position: relative;
-		top: -1.5em;
+		//.boxShadow( @radius: 12px, @spread: 4px );
+		//position: relative;
+		//top: -1.5em;
+
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
 
 		#column-center-inner {
 			padding: @lhem-l;
@@ -243,6 +242,7 @@ style a page via class
 
 	}
 
+	#section-box-featured-editorial,
 	#section-box-featured-multimedia,
 	#section-box-featured-slideshow,
 	#section-box-print,
@@ -261,10 +261,12 @@ style a page via class
 			margin-bottom: (@lhem-l*2);
 		}
 
+		&#section-box-featured-editorial,
 		&#section-box-featured-multimedia,
 		&#section-box-featured-slideshow {
 
-			.headline {
+			.headline,
+			.dek {
 				font-family: @sans-serif;
 			}
 		}
@@ -276,25 +278,19 @@ style a page via class
 		}
 	}
 
+	#box-featured-editorial {
+		font-size: 87.5%;
+	}
+
 	.section-box-title {
-		/* border-top: @niceborders-l; */
 		border-bottom: @niceborders-l;
-		padding: (@lhem-l/2) 0;
-		margin-bottom: (@lhem-l)-@1px-l;
-		.textShadow();
 
 		a:hover {
-			.textShadow( @x: 4px, @y: 4px );
-			position: relative;
-			top: -1px;
-			left: -1px;
+
 		}
 
 		a:active {
-			.textShadow( @x: 3px, @y: 3px );
-			position: relative;
-			top: 1px;
-			left: 1px;
+
 		}
 	}
 
@@ -319,15 +315,6 @@ style a page via class
 		.featured-image-container-thumb {
 			width: 96px;
 			margin: 0 @lhem-l @lhem-l 0;
-		}
-
-		.headline {
-			.h4;
-			margin: 0 0 0.25em;
-		}
-
-		.top-headline {
-			.h3;
 		}
 
 		.dek {
@@ -847,102 +834,15 @@ HEADER SYTLES
 		margin-bottom: 0;
 	}
 
+	#inner-header {
+		padding-bottom: 0;
+	}
+
 /*********************
 NAVIGATION STYLES
 *********************/
 
-.nav {
-	background: #eee;
-	border: 0;
-
-	li {
-		float: left;
-		position: relative;
-
-		a {
-			border-bottom: 0;
-
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
-				background-color: #b70000;
-
-			}
-		}
-
-		&:first-child {}
-		&:last-child {}
-
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			width: 200px;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			display: none;
-			z-index: 8999;
-
-			li {
-
-				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-						border-bottom: 0;
-					}
-				}
-
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {}
-			}
-
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current-page-ancestor {
-				a {}
-			}
-		}
-
-		/* showing sub-menus */
-		&:hover ul {
-			top: auto;
-			display: block;
-		}
-
-	} /* end .menu ul li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current-page-ancestor {
-		a {}
-	}  /* end current highlighters */
-
-} /* end .nav */
+.nav {} /* end .nav */
 
 
 /* Cancel FlexNav for 768+ */
@@ -955,8 +855,6 @@ NAVIGATION STYLES
 }
 
 #menu-top-navigation {
-	font-weight: 600;
-	text-transform: uppercase;
 	background-color: #000000;
 	margin: 0;
 	/* border-bottom: 1px solid #ccc; */
@@ -969,9 +867,8 @@ NAVIGATION STYLES
 		a {
 			border-bottom: 0;
 			margin: 0;
-			background-color: black;
 			padding-top: 0.5em;
-
+			background-color: transparent;
 
 			/*
 			you can use hover styles here even though this size
@@ -993,23 +890,26 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			width: 200px;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
+			background-color: @thatgrey;
 
 			li {
+				width: 100%;
 
 				a {
-					padding-left: 10px;
+					margin: 0;
+					padding: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+					color: black;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						color: white;
+					}
 
 					&:link {}
 				}
@@ -1551,7 +1451,7 @@ FOOTER STYLES
 	}
 }
 
-	#inner-footer {
+	footer {
 		margin: @lhem-l auto;
 	}
 

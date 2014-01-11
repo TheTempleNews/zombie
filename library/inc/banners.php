@@ -1,10 +1,36 @@
+<?php
+
+$now = current_time('timestamp', 0);
+$banner_query = new WP_Query( array(
+                             'post_type' => 'banner',
+                             'posts_per_page' => 1
+                             )
+);
+
+if ( $banner_query->have_posts() ) : while ( $banner_query->have_posts() ) : $banner_query->the_post();
+
+  $start_time = get_field('banner_start');
+  $end_time = get_field('banner_end');
+
+  if (is_home() && $start_time < $now && $now < $end_time) : ?>
+    <div class="banner-<?php the_ID(); ?> top-banner--<?php the_field('banner_type'); ?> top-banner<?php echo (get_field('banner_fittext')) ? ' fittext' : ''; ?>">
+      <a href="<?php the_field('banner_link'); ?>">
+        <?php the_content(); ?>
+      </a>
+    </div>
+  <?php endif;
+
+endwhile; endif; wp_reset_query(); ?>
+
+
+
         <?php if ( is_home() && HOME_TOP_PROMO == true ) : ?>
 
         <div class="home-top-promo clearfix">
 
           <?php if (LUNCHIES_2012 == true) { // lunchies top banner ?>
 
-            <a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
+            <a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php echo LUNCHIES_YEAR; ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" /></a>
 
           <?php } elseif (ELECTION_ISSUE == true) { // election issue top banner
 
@@ -117,7 +143,16 @@
             <div class="special-issue-banner--reunion-2013  special-issue-banner  fittext  clearfix">
               <h2 class="fittext"><a href="<?php home_url(); ?>/reunion-2013/">The Temple News Reunion 2013</a></h2>
             </div>
-          <?php } // END IT ALL! ?>
+          <?php } elseif (BASKETBALL_PREVIEW_2013) { ?>
+            <div class="special-issue-banner--basketball-preview-2013  special-issue-banner  fittext  clearfix">
+              <h2 class="fittext tk-museo-slab aligncenter"><a href="<?php home_url(); ?>/category/sports/basketball-preview-2013/">Basketball Preview 2013</a></h2>
+            </div>
+          <?php } elseif (THE_OWLERY_BANNER) { ?>
+            <div class="launch-banner--the-owlery  launch-banner  fittext">
+              <h2 class="fittext"><a href="http://owlery.temple-news.com/">The Owlery</a></h2>
+              <h3 class="fittext h4">The new features blog of The Temple News</h3>
+            </div>
+          <?php } ?>
 
         </div> <!-- end .home-top-promo -->
 
@@ -136,7 +171,7 @@
             <div id="lunchies-top-promo">
 
               <a href="http://temple-news.com/lunchies/" title="Lunchies <?php echo LUNCHIES_YEAR; ?>">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banners/lunchies/lunchies-banner-<?php the_time('Y'); ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/lunchies/lunchies-banner-<?php the_time('Y'); ?>.png" alt="Lunchies <?php echo LUNCHIES_YEAR; ?>" />
               </a>
 
             </div> <!-- end #lunchies-top-promo -->

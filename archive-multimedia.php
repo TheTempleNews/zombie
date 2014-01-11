@@ -73,9 +73,8 @@
                       <article id="post-<?php the_ID(); ?>" <?php post_class( 'top-multimedia-article clearfix' ); ?> role="article">
 
                         <?php
-                        // http://designisphilosophy.com/tutorials/simple-video-embedding-with-custom-fields-in-wordpress-youtube/
-                        // Get the video URL and put it in the $video variable
-                        $videoID = gdtt_get_post_meta($post->ID, 'video_link', true);
+                        // Get the video URL
+                        $videoID = function_exists('get_field') ? get_field('video_link') : get_post_meta($post->ID, 'video_link', true);
                         // Check if there is in fact a video URL
                         if ($videoID) {
                           // Echo the embed code via oEmbed

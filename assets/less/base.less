@@ -55,7 +55,6 @@ ADVERTS AND SOCIAL MEDIA
 .ttn-network-feed {
 	border-top: @niceborders-s;
 	border-bottom: @niceborders-s;
-	margin: 0 0 @lhem-s;
 }
 
 .ttn-network-banner {
@@ -68,6 +67,7 @@ ADVERTS AND SOCIAL MEDIA
 }
 
 .ttn-network-feed {
+	margin: 0 0 @lhem-s;
 
 	.network-feed-title,
 	.network-feed-subtitle {
@@ -106,7 +106,7 @@ ADVERTS AND SOCIAL MEDIA
 		list-style: none;
 
 		li {
-			margin: @lhem-s/2 0;
+			margin: 1em 0;
 
 			.ttn-network-feed-timestamp {
 				margin: 0;
@@ -188,18 +188,37 @@ style a page via class
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {
-	.section-box-title {
-		/* border-top: @niceborders-s; */
-		.h6;
+	.box,
+	.section-box {
+		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
+	}
+
+	.box-title {
+		.h5;
 		border-bottom: @niceborders-s;
-		padding: (@lhem-s/2) 0;
-		margin-bottom: (@lhem-s)-@1px-s;
-		font-weight: 600;
+		padding: 0 0 16px;
+		padding: 0 0 1rem;
+		margin-bottom: 24px-1px;
+		font-weight: 400;
+		color: black;
+		text-transform: uppercase;
 
 		a, a:visited {
-			color: @thatred;
+			color: black;
 			display: block;
 		}
+
+		a:hover,
+		a:active {
+			color: @thatred;
+		}
+	}
+
+	.section-box-title {
+		.box-title;
+		.h2;
+		text-transform: none;
 	}
 
 	.section-box-featured {
@@ -319,7 +338,12 @@ style a page via class
 		.headline {
 			.h4;
 			font-family: @serif;
+			font-weight: 400;
 			margin: 0 0 0.25em;
+
+			a {
+				color: black;
+			}
 		}
 
 		.top-headline {
@@ -332,6 +356,7 @@ style a page via class
 		}
 	} /* end article */
 
+	#section-box-featured-editorial,
 	#section-box-featured-multimedia,
 	#section-box-featured-slideshow,
 	#section-box-print,
@@ -1018,76 +1043,7 @@ and more scalable.
 */
 
 .nav {
-	border: @niceborders-s;
-	border-bottom: 0;
-	font-family: 'Open Sans', sans-serif;
-	text-rendering: optimizelegibility;
-	padding: 0;
-
-	li {
-
-		a {
-			display: block;
-			text-decoration: none;
-			padding: 10px 10px;
-			background-color: #eee;
-
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.less file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-
-			}
-		}
-
-		&:first-child {}
-
-		&:last-child {}
-
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
-
-			li {
-
-				a {
-					padding-left: 30px;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-
-				}
-
-				&:first-child {}
-
-				&:last-child {}
-
-			}
-
-		}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current-page-ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
-
+	font-family: @sans-serif;
 } /* end .nav */
 
 
@@ -1118,6 +1074,7 @@ and more scalable.
 	font-weight: 600;
 	text-transform: uppercase;
 	background-color: #eee;
+	padding: 0;
 
 	.sub-menu {
 		margin-top: 0;
@@ -1129,12 +1086,10 @@ and more scalable.
 		display: none;
 
 		li {
-			float: none;
-			width: 100%;
 
 			a {
 				display: block;
-				padding-left: 0;
+				padding: 10px;
 				margin-left: 30px;
 			}
 		}
@@ -1149,6 +1104,8 @@ and more scalable.
 			margin-right: 20%;
 			display: block;
 			background-color: #eee;
+			text-decoration: none;
+			padding: 10px;
 		}
 
 	}
@@ -1157,7 +1114,6 @@ and more scalable.
 		background-image: url("../images/icon-chevron-down.png");
 		background-position: 94% 9px;
 		background-repeat: no-repeat;
-		border-bottom: 1px solid #ccc;
 
 		a {
 			position: relative;
@@ -1190,6 +1146,10 @@ FLEX TETRODO STYLES
 		font-style: italic;
 		font-family: @serif;
 		color: #565656;
+	}
+
+	.flex-control-nav {
+		position: static;
 	}
 
 	.flex-direction-nav a {
@@ -1884,6 +1844,10 @@ FOOTER STYLES
 			li {
 				float: none;
 				position: inherit;
+
+				a {
+					padding: 10px;
+				}
 
 				a,
 				a:hover,

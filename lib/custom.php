@@ -687,3 +687,12 @@ function zombie_get_post_by_title($page_title, $post_type ='post' , $output = OB
 
     return null;
 }
+
+
+/*
+11. TOP BANNERS
+^TODO
+ */
+function ttn_special_issue_banner() {
+  include('banners.php');
+}

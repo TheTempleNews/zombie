@@ -37,12 +37,15 @@ var Zombie = {
       /**
        * FitText
        */
+      $('.fittext.top-banner--breaking').fitText(2.5);
       $(".moversshakers-text-banner.fittext").fitText(1);
       $(".the-american-text-banner.fittext").fitText(1.75);
       $(".page-branded .page-title.fittext").fitText(0.5);
       $('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
       $('.breaking-news-banner.fittext p').fitText(2.25);
       $('.special-issue-banner--reunion-2013 h2.fittext').fitText();
+      $('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText(1.5);
+      $('.launch-banner--the-owlery h2.fittext').fitText(1);
 
       /**
        * SlabText

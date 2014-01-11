@@ -59,3 +59,5 @@ once we get to that point. */
 	define( 'REUNION_2013', false );
 
   define( 'BREAKING_NEWS', false );
+
+  define( 'THE_OWLERY_BANNER', false );
