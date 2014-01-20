@@ -694,5 +694,5 @@ function zombie_get_post_by_title($page_title, $post_type ='post' , $output = OB
 ^TODO
  */
 function ttn_special_issue_banner() {
-  include('banners.php');
+  require_once locate_template('/library/inc/banners.php');
 }
