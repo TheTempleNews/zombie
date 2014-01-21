@@ -8,50 +8,51 @@ var Zombie = {
 
       $('body').addClass('js');
 
-      /**
-       * Sitewide Navigation
-       */
-      var $menu = $('.main-nav'),
-          $menulink = $('.menu-link'),
-          //$menuItem = $('.main-nav ul li a'),
-          $menuTrigger = $('.dropdown__toggle');
+      jQuery(document).ready(function($) {
+        /**
+         * Sitewide Navigation
+         */
+        var $menu = $('.main-nav'),
+            $menulink = $('.menu-link'),
+            //$menuItem = $('.main-nav ul li a'),
+            $menuTrigger = $('.dropdown__toggle');
 
-      $menulink.click(function(e) {
-        e.preventDefault();
-        $menulink.toggleClass('active');
-        $menu.toggleClass('active');
+        $menulink.click(function(e) {
+          e.preventDefault();
+          $menulink.toggleClass('active');
+          $menu.toggleClass('active');
+        });
+
+        $menuTrigger.click(function(e) {
+          e.preventDefault();
+          var $this = $(this);
+          $this.toggleClass('active').next('ul').toggleClass('active');
+        });
+
+
+        /**
+         * FitVids
+         */
+        $(document).fitVids();
+
+        /**
+         * FitText
+         */
+        $('.fittext.top-banner--breaking').fitText(2.5);
+        $(".moversshakers-text-banner.fittext").fitText(1);
+        $(".the-american-text-banner.fittext").fitText(1.75);
+        $(".page-branded .page-title.fittext").fitText(0.5);
+        $('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
+        $('.breaking-news-banner.fittext p').fitText(2.25);
+        $('.special-issue-banner--reunion-2013 h2.fittext').fitText();
+        $('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText(1.5);
+        $('.launch-banner--the-owlery h2.fittext').fitText(1);
+
+        /**
+         * SlabText
+         */
+        $(".slabtextthis").slabText();
       });
-
-      $menuTrigger.click(function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        $this.toggleClass('active').next('ul').toggleClass('active');
-      });
-
-
-      /**
-       * FitVids
-       */
-      $(document).fitVids();
-
-      /**
-       * FitText
-       */
-      $('.fittext.top-banner--breaking').fitText(2.5);
-      $(".moversshakers-text-banner.fittext").fitText(1);
-      $(".the-american-text-banner.fittext").fitText(1.75);
-      $(".page-branded .page-title.fittext").fitText(0.5);
-      $('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
-      $('.breaking-news-banner.fittext p').fitText(2.25);
-      $('.special-issue-banner--reunion-2013 h2.fittext').fitText();
-      $('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText(1.5);
-      $('.launch-banner--the-owlery h2.fittext').fitText(1);
-
-      /**
-       * SlabText
-       */
-      $(".slabtextthis").slabText();
-
     },
     finalize: function() { }
   },
@@ -70,20 +71,21 @@ var Zombie = {
   'page-music-issue': {
     init: function() {
 
-      /**
-       * Masonry
-       */
-      var masonContainer = $('.mason');
-      if (!!masonContainer.masonry) {
-        masonContainer.masonry({
-          itemSelector: 'article.free-mason',
-          columnWidth: function( containerWidth ) {
-            return containerWidth / 2;
-          },
-          gutterWidth: 0
-        });
-      }
-
+      jQuery(document).ready(function($) {
+        /**
+         * Masonry
+         */
+        var masonContainer = $('.mason');
+        if (!!masonContainer.masonry) {
+          masonContainer.masonry({
+            itemSelector: 'article.free-mason',
+            columnWidth: function( containerWidth ) {
+              return containerWidth / 2;
+            },
+            gutterWidth: 0
+          });
+        }
+      });
     }
   }
 };
