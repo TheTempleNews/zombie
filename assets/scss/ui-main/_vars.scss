@@ -49,24 +49,38 @@ $use-greybox:       false;
 \*------------------------------------*/
 
 /**
- * CSSWizardry-Grids
+ * Breakpoints
  */
-$responsive: true;
-$mobile-first: true;
-$use-silent-classes: false;
-$push: true;
-$breakpoints: (
-    'palm' '(max-width: 480px)',
-    'lap' '(min-width: 481px) and (max-width: 1023px)',
-    'lapandup' '(min-width: 481px)',
-    'portable' '(max-width: 1023px)',
-    'desk' '(min-width: 1024px)'
-);
+$break-xs:           481px;
+$break-s:            768px;
+$break-m:            1024px;
+$break-l:            1280px;
+$break-xl:           2880px;
+
+// For inuit.css
+$lap-start:          $break-xs;
+$desk-start:         $break-m;
+$desk-wide-start:    $break-l;
+$palm-end:           $break-xs - 1px;
+$lap-end:            $break-m - 1px;
+
 
 /**
- * Define a maximum width for the container.
+ * Susy
  */
-$container-width: 1140px;
+$total-columns:      12;
+$column-width:       4em;
+$gutter-width:       1em;
+$grid-padding:       $gutter-width;
+
+$layout-palm:        4 $break-xs;             // < 480px, 4 cols
+$layout-lap:         $break-xs 8 $break-s;    // > 480px < 768px, 8 cols
+$layout-lapandup:    $break-xs;               // > 480px
+$layout-portable:    8 $break-m;              // < 1024px, 8 cols
+$layout-desk:        $break-m 12;             // > 1024px, 12 cols
+$layout-wide:        $break-l;                // > 1280px
+$layout-super:       $break-xl 24;            // > 2880px, 24 cols
+
 
 
 
