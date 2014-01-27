@@ -2,6 +2,8 @@
 /node_modules/
 /components/
 .sass-cache
+.bundle
+.rvmrc
 
 /assets/js/scripts.min.js
 /assets/js/scripts-special-issues.min.js
