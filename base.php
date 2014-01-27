@@ -13,22 +13,22 @@
     }
   ?>
 
-  <div id="root" class="root  wrap  container" role="document">
+  <div id="root" class="root" role="document">
     <div class="content">
       <main class="main  <?php echo zombie_main_class(); ?>" role="main">
-        <div class="main__inner">
+        <div class="inner">
           <?php include zombie_template_path(); ?>
         </div>
-      </main><!-- /.main
-    --><?php if (zombie_display_sidebar()) : ?><!--
-      --><aside class="sidebar  <?php echo zombie_sidebar_class(); ?>" role="complementary">
-        <div class="sidebar__inner">
+      </main>
+    <?php if (zombie_display_sidebar()) : ?>
+      <aside class="sidebar  <?php echo zombie_sidebar_class(); ?>" role="complementary">
+        <div class="inner">
           <?php include zombie_sidebar_path(); ?>
         </div>
-      </aside><!-- /.sidebar -->
+      </aside>
       <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+    </div>
+  </div>
 
   <?php get_template_part('templates/footer'); ?>
 
