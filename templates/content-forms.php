@@ -1,3 +1,5 @@
+<!-- NOTE: THIS IS JUST A STYLE GUIDE! -->
+
 <h2>Default Form</h2>
 
 <form class="form">
