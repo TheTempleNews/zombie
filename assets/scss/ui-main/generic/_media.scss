@@ -1,0 +1,17 @@
+/*---------------------------*\
+    TTN: GENERIC: MEDIA
+\*---------------------------*/
+/**
+ * Images, video, etc.
+ */
+
+/**
+ * Images with width or height attributes should still be fluid.
+ *
+ * Overrides inuit.css.
+ */
+img[width],
+img[height] {
+  max-width: 100%;
+  height: auto;
+}
