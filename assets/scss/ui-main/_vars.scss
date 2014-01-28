@@ -107,22 +107,46 @@ $base-spacing-unit: 16px; // $OVERRIDES inuit.css
     $COLORS
 \*------------------------------------*/
 
-$color__red: #cc0000;
-$color__red--cherry: #9e1b34;
-$color__gray--light: #ccc;
-$color__gray--dark: #777;
+/**
+ * Grays
+ */
+$color-gray--light:                #ccc;
+$color-gray--dark:                 #777;
 
-$color__primary: $color__red;
-
-$brand-color: $color__red; // ^overrides inuit.css
-$base-ui-color: $color__gray--light; // ^overrides inuit.css
 
 /**
- * Color palette for Music Issue 2013 color scheme.
+ * Standard color palette
  */
-$color--music-issue-2013__blue: #528ba3;
-$color--music-issue-2013__overlay: rgba(80,80,80,0.2);
-$color--music-issue-2013__green: #4fa442;
+$color-red:                        #cc0000;
+$color-red--cherry:                #9e1b34;
+$color-blue:                       #528ba3;
+$color-green:                      #4fa442;
+$color-yellow:                     #C7CF47;
+
+$color-alpha:                      $color-red;
+$color-beta:                       $color-blue;
+$color-gamma:                      $color-yellow;
+$color-delta:                      $color-green;
+
+$color-success:                    $color-green;
+$color-info:                       $color-blue;
+$color-alert:                      $color-yellow;
+$color-warning:                    $color-red;
+
+
+/**
+ * Inuit.css colors
+ *
+ * Overrides inuitcss
+ */
+$brand-color:                      $color-red;
+$base-ui-color:                    $color-gray--light;
+
+
+/**
+ * Music Issue 2013 color scheme.
+ */
+$MusicIssue2013-color--overlay:    rgba(80,80,80,0.2);
 
 
 
@@ -132,4 +156,4 @@ $color--music-issue-2013__green: #4fa442;
     $BORDERS
 \*------------------------------------*/
 
-$border-primary: 1px solid $color__gray--light;
+$border-alpha: 1px solid $base-ui-color;
