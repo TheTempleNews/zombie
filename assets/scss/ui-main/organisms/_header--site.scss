@@ -6,41 +6,68 @@
  * pages besides (some) special issue pages.
  */
 
-.site-header {
+.banner {
   background-color: black;
+  padding-top: $base-spacing-unit;
   position: relative; // ^why?
   z-index: 9999; // ^why?
 }
 
-  .site-header__branding {
+  .brand {
     margin-bottom: $base-spacing-unit;
+
+    /**
+     * Prevent weird search input movement on resize.
+     */
+    @include vendor(transition, none);
   }
 
-    .site-header__branding__logo {
-      /**
-       * Logo sizing based on font size.
-       *
-       * FitText will control this when JS is enabled.
-       */
+    .brand__logo {
+      @include text-hide();
+      display: block;
       background-size: contain;
-      text-indent: -9999px;
-      @include font-size(40px);
-      @include media-query(lap) {
-        @include font-size(40px);
-      }
-      @include media-query(desk) {
-        @include font-size(60px);
-      }
+      height: 50px;
     }
 
-    .site-header__branding__social {
+    .brand__social {
       @extend .accessibility--portable;
-
       color: white;
       vertical-align: middle;
       padding-top: $base-line-height;
       font-family: $font-stack__sans-serif;
-      padding-left: 10px;
     }
 
-    .site-header__branding__search {}
+    .brand__search {
+      margin-top: $base-spacing-unit;
+
+      @include at-breakpoint($layout-lapandup) {
+        margin-top: 0;
+      }
+    }
+
+
+@include at-breakpoint($layout-lap) {
+  .brand__logo,
+  .brand__search {
+    @include span-columns(6);
+  }
+
+  .brand__search {
+    @include omega;
+  }
+}
+
+
+@include at-breakpoint($layout-desk) {
+  .brand__logo {
+    @include span-columns(5);
+  }
+
+  .brand__social {
+    @include span-columns(3);
+  }
+
+  .brand__search {
+    @include span-columns(4 omega);
+  }
+}

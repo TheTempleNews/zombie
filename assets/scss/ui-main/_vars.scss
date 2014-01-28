@@ -75,9 +75,9 @@ $grid-padding:       $gutter-width;
 
 $layout-palm:        $total-columns $palm-end;
 $layout-lap:         $lap-start $total-columns $lap-end;
-$layout-lapandup:    $lap-start;
+$layout-lapandup:    $lap-start $total-columns;
 $layout-portable:    $total-columns $lap-end;
-$layout-desk:        $desk-start;
+$layout-desk:        $desk-start $total-columns;
 $layout-wide:        $desk-wide-start;
 $layout-super:       $break-xl $total-columns * 2;
 

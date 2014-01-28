@@ -1,6 +1,6 @@
-<header class="site-header" role="banner">
+<header class="banner" role="banner">
 
-  <div class="site-header__leaderboard  wrap">
+  <div class="banner__leaderboard">
     <!-- DESKTOP-ONLY ADS -->
     <?php if ( !is_handheld() ) : ?>
       <div class="ad--leaderboard  ad">
@@ -17,46 +17,40 @@
     <?php endif; // end if is NOT handheld (desktop) ?>
   </div>
 
-  <div class="site-header__branding">
+  <div class="brand">
     <div class="wrap">
-      <div class="inner  grid  grid--full">
 
-        <a href="<?php echo home_url(); ?>" class="site-header__branding__logo  icon-ttn-logo-500-white  logo  grid__item  portable--two-thirds  desk--one-third" title="The Temple News" rel="nofollow">
-          The Temple News
-        </a><!--
+      <a href="<?php echo home_url(); ?>" class="brand__logo  icon-ttn-logo-500-white  logo" title="The Temple News" rel="nofollow">
+        The Temple News
+      </a>
 
-        --><div class="site-header__branding__social  grid__item  desk--one-third">
-          <div class="inner">
-            <a class="icon-facebook  social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"></a>
-            <a class="icon-twitter  social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"></a>
-            <a class="icon-rss  social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"></a>
-          </div>
-
-          <p class="site-header__branding__social__tagline  tagline"><?php bloginfo('description'); ?></p>
-        </div><!--
-
-        --><!-- <div class="menu-toggle icon-reorder">
-          <span>MENU</span>
-        </div> --><!--
-
-        --><div class="site-header__branding__search  grid__item  desk--one-third">
-          <?php get_search_form( true ); ?>
+      <div class="brand__social">
+        <div class="inner">
+          <a class="icon-facebook  icon  icon--l" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"></a>
+          <a class="icon-twitter  icon  icon--l" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"></a>
+          <a class="icon-rss  icon  icon--l" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"></a>
         </div>
+        <p class="brand__social__tagline  tagline"><?php bloginfo('description'); ?></p>
+      </div>
 
-      </div> <!-- end .site-header__branding -->
+      <!-- <div class="menu-toggle icon-reorder">
+        <span>MENU</span>
+      </div> -->
 
-    </div><!-- end .site-header__branding .wrap -->
+      <div class="brand__search">
+        <?php get_search_form( true ); ?>
+      </div>
 
-  </div><!-- end .site-header__branding -->
+    </div><!-- end .brand .wrap -->
+  </div><!-- end .brand -->
 
   <hr class="rule  rule--site  brand-color" />
 
   <nav class="site-nav" role="navigation">
     <div class="inner  wrap">
-      <?php zombie_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+      <?php zombie_main_nav(); ?>
     </div>
   </nav>
-
   </div> <!-- end #inner-header -->
 
 </header> <!-- end header -->
