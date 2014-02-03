@@ -20,29 +20,15 @@
 
 				<!-- DESKTOP-ONLY ADS -->
 				<?php if ( !is_handheld() ) : ?>
-				<div class="ad-container rectangle-ad-container clearfix">
-					<div class="ad rectangle-ad adsense">
+				<div class="ad-container clearfix">
+					<div class="ad tower-ad adsense">
 
-						<!-- NSSidebarRect -->
-						<!-- <div id='div-gpt-ad-1342714724220-4' style='width:300px; height:100px; margin:0px auto;'>
+						<!-- NSSideBarMidTower -->
+						<div id='div-gpt-ad-1391462521514-5' style='width:300px; height:600px;'>
 						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342714724220-4'); });
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1391462521514-5'); });
 						</script>
-						</div> -->
-
-						<!-- NSSideBarMidBox -->
-						<!-- <div id='div-gpt-ad-1344368320426-0' style='width:300px; height:250px; margin: 0 auto;'>
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344368320426-0'); });
-						</script>
-						</div> -->
-
-						<!-- HalfPage -->
-						<!-- <div id='div-gpt-ad-1366661404407-0' style='width:300px; height:600px;'>
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1366661404407-0'); });
-						</script>
-						</div> -->
+						</div>
 
 					</div>
 
@@ -68,3 +54,20 @@
 					<?php endif; ?>
 
 				</div> <!-- end sidebar2 -->
+
+				<!-- DESKTOP-ONLY ADS -->
+				<?php if ( !is_handheld() ) : ?>
+				<div class="ad-container clearfix">
+					<div class="ad rectangle-ad adsense">
+
+						<!-- NSSideBarMidBox -->
+						<div id='div-gpt-ad-1391462521514-4' style='width:300px; height:250px;'>
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1391462521514-4'); });
+						</script>
+						</div>
+
+					</div>
+
+				</div>
+				<?php endif; ?>
