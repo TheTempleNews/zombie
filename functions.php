@@ -994,3 +994,11 @@ function zombie_feed_request($qv) {
     return $qv;
 }
 add_filter('request', 'zombie_feed_request');
+
+
+/**
+ * WP Picturefill post thumbnail support
+ */
+if(defined('PICTUREFILL_WP_VERSION')){
+	apply_picturefill_wp_to_post_thumbnail();
+}
