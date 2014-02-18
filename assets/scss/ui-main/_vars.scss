@@ -284,10 +284,10 @@ $input-border-radius:              $brand-round;
 
 // Default `.form-control` height
 $input-height-base:                ($base-line-height + ($base-padding-v * 2) + 2);
-//** Small `.form-control` height
-$input-height-sm:                  ($base-line-height-sm + ($base-padding-v-lg * 2) + 2);
 //** Large `.form-control` height
 $input-height-lg:                  ($base-line-height-lg + ($base-padding-v-lg * 2) + 2);
+//** Small `.form-control` height
+$input-height-sm:                  ($base-line-height-sm + ($base-padding-v-sm * 2) + 2);
 
 // Placeholder color
 $input-color-placeholder:          $color-gray--light;

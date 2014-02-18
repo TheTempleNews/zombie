@@ -242,8 +242,16 @@ input[type="date"] {
  *
  * Build on `.form__control` with modifier classes to decrease or increase the
  * height and font-size of form controls.
+ *
+ * $parent
+ * $input-height
+ * $padding-vertical
+ * $padding-horizontal
+ * $font-size
+ * $line-height
+ * $border-radius
  */
-@include input-size('.input--sm', $input-height-sm, $base-padding-v-sm, $base-padding-h-sm, $milli-size, $base-line-height-sm, $border-radius-sm);
+@include input-size('.input--sm', $input-height-sm, $base-padding-v-sm, $base-padding-h-sm, $base-font-size-sm, $base-line-height-sm, $border-radius-sm);
 
 @include input-size('.input--lg', $input-height-lg, $base-padding-v-lg, $base-padding-h-lg, $base-font-size-lg, $base-line-height-lg, $border-radius-lg);
 

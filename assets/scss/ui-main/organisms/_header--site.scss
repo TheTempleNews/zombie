@@ -38,11 +38,7 @@
     }
 
     .brand__search {
-      margin-top: $base-spacing-unit;
-
-      @include at-breakpoint($layout-lapandup) {
-        margin-top: 0;
-      }
+      margin-top: $half-spacing-unit;
     }
 
 
@@ -69,5 +65,12 @@
 
   .brand__search {
     @include span-columns(4 omega);
+  }
+}
+
+
+@include at-breakpoint($lap-start $total-columns 600px) {
+  .brand__search {
+    margin-top: 0;
   }
 }

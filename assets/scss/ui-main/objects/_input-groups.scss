@@ -53,12 +53,12 @@
  * Remix the default form control sizing classes into new ones for easier
  * manipulation.
  */
-.input-group-lg > .form__control,
-.input-group-lg > .input-group__addon,
-.input-group-lg > .input-group__btn > .btn { @extend .input-lg; }
-.input-group-sm > .form__control,
-.input-group-sm > .input-group__addon,
-.input-group-sm > .input-group__btn > .btn { @extend .input-sm; }
+.input-group--lg > .form__control,
+.input-group--lg > .input-group__addon,
+.input-group--lg > .input-group__btn > .btn { @extend .input--lg; }
+.input-group--sm > .form__control,
+.input-group--sm > .input-group__addon,
+.input-group--sm > .input-group__btn > .btn { @extend .input--sm; }
 
 
 /**
@@ -90,7 +90,7 @@
  * Text input groups
  */
 .input-group__addon {
-  padding: $base-spacing-unit / 4 $base-spacing-unit / 2;
+  padding: $base-padding-v $base-padding-h;
   font-size: $base-font-size;
   font-weight: normal;
   line-height: 1;
@@ -103,15 +103,15 @@
   /**
    * Sizing
    */
-  &.input-sm {
-    padding: $base-spacing-unit / 2;
-    font-size: $milli-size;
-    border-radius: $brand-round / 2;
+  &.input--sm {
+    padding: $base-padding-v-sm $base-padding-h-sm;
+    font-size: $base-font-size-sm;
+    border-radius: $border-radius-sm;
   }
-  &.input-lg {
-    padding: $base-spacing-unit * 2;
-    font-size: $h4-size;
-    border-radius: $brand-round * 2;
+  &.input--lg {
+    padding: $base-padding-v-lg $base-padding-h-lg;
+    font-size: $base-font-size-lg;
+    border-radius: $border-radius-lg;
   }
 
   /**
