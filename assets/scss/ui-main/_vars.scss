@@ -192,30 +192,29 @@ $color-green:                      #4fa442;
 $color-yellow:                     #C7CF47;
 $color-purple-light:               #66afe9;
 
-$color-alpha:                      $color-red;
-$color-beta:                       $color-blue;
-$color-gamma:                      $color-yellow;
-$color-delta:                      $color-green;
-
-$color-success:                    $color-green;
-$color-info:                       $color-blue;
-$color-alert:                      $color-yellow;
-$color-warning:                    $color-red;
-
 
 /**
- * Inuit.css colors
+ * Brand colors
  *
- * Overrides inuitcss
+ * $OVERRIDES inuit.css
  */
 $brand-color:                      $color-red;
 $base-ui-color:                    $color-gray--light;
+
+$brand-primary:                    $brand-color;
+$brand-success:                    $color-green;
+$brand-info:                       $color-blue;
+$brand-warning:                    $color-yellow;
+$brand-danger:                     $color-red;
 
 
 /**
  * General color usage
  */
 $text-color:                       $color-gray--10;
+
+$link-color:                       $brand-primary;
+$link-hover-color:                 $brand-info;
 
 /**
  * Music Issue 2013 color scheme.

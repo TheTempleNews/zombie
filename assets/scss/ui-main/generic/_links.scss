@@ -6,14 +6,14 @@
 a {
   &,
   &:visited {
-    color: $color-alpha;
+    color: $link-color;
     text-decoration: none;
     @include vendor(transition, all 250ms linear);
   }
 
   &:hover,
   &:focus {
-    color: $color-gray--dark;
+    color: $link-hover-color;
   }
 
   &:link {
