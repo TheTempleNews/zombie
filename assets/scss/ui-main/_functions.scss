@@ -1,0 +1,161 @@
+/*------------------------------------*\
+    TTN: FUNCTIONS
+\*------------------------------------*/
+/**
+ * UNIT CONVERSION.....................Convert units to other units.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $UNIT-CONVERSION
+\*------------------------------------*/
+/**
+ * Convert units to other units.
+ *
+ * TL;DR Use the `convert-to-*` unit converters in most cases.
+ *
+ * http://codepen.io/thomasdobber/pen/CAKiB
+ * http://codepen.io/montchr/pen/IcwBf
+ */
+
+
+@function strip-unit($number){
+  @if type-of($number) == "number" {
+    @return ($number / ($number * 0 + 1));
+  } @else {
+    @warn "Not a number: #{$number}";
+    @return $number;
+  }
+}
+
+@function px-to-em($pixel-value, $parent-font-size:$base-font-size){
+  @if unit($pixel-value) == "px" {
+    $pixel-value: strip-unit($pixel-value);
+    $parent-font-size: strip-unit($parent-font-size);
+    @return ($pixel-value / $parent-font-size) * 1em;
+  } @else {
+    @warn "Not a pixel value: #{$pixel-value}";
+    @return $pixel-value;
+  }
+}
+
+@function em-to-px($em-value, $parent-font-size:$base-font-size){
+  @if unit($em-value) == "em" {
+    $em-value: strip-unit($em-value);
+    $parent-font-size: strip-unit($parent-font-size);
+    @return ($em-value * $parent-font-size) * 1px;
+  } @else {
+    @warn "Not an em value: #{$em-value}";
+    @return $em-value;
+  }
+}
+
+@function px-to-rem($pixel-value){
+  @if unit($pixel-value) == "px" {
+    $pixel-value: strip-unit($pixel-value);
+    $base-font-size: strip-unit($base-font-size);
+    @return ($pixel-value / $base-font-size) * 1rem;
+  } @else {
+    @warn "Not a pixel value: #{$pixel-value}";
+    @return $pixel-value;
+  }
+}
+
+@function rem-to-px($rem-value){
+  @if unit($rem-value) == "rem" {
+    $rem-value: strip-unit($rem-value);
+    $base-font-size: strip-unit($base-font-size);
+    @return ($rem-value * $base-font-size) * 1px;
+  } @else {
+    @warn "Not a rem value: #{$rem-value}";
+    @return $rem-value;
+  }
+}
+
+@function rem-to-em($rem-value, $parent-font-size:$base-font-size){
+  @if unit($rem-value) == "rem" {
+    $rem-value: strip-unit($rem-value);
+    $parent-font-size: strip-unit($parent-font-size);
+    @return ($rem-value / $parent-font-size) * 1em;
+  } @else {
+    @warn "Not a rem value: #{$rem-value}";
+    @return $rem-value;
+  }
+}
+
+@function em-to-rem($em-value, $parent-font-size:$base-font-size){
+  @if unit($em-value) == "em" {
+    $em-value: strip-unit($em-value);
+    $parent-font-size: strip-unit($parent-font-size);
+    @return (($em-value * $parent-font-size) / $base-font-size) * 1rem;
+  } @else {
+    @warn "Not an em value: #{$em-value}";
+    @return $em-value;
+  }
+}
+
+@function convert-to-rem($value, $parent-font-size:$base-font-size){
+
+  @if unitless($value) {
+    @warn "Assuming unitless value is rem value: #{ $value }";
+    @return $value * 1rem;
+
+  } @else if unit($value) == "rem" {
+    @return $value;
+
+  } @else if unit($value) == "px" {
+    @return px-to-rem($value);
+
+  } @else if unit($value) == "em" {
+    @return em-to-rem($value, $parent-font-size);
+
+  } @else {
+    @warn "Can not calculate rem from unit: #{ $value }";
+    @return $value;
+  }
+}
+
+@function convert-to-em($value, $parent-font-size:$base-font-size){
+
+  @if unitless($value) {
+    @warn "Assuming unitless value is em value: #{ $value }";
+    @return $value * 1em;
+
+  } @else if unit($value) == "em" {
+    @return $value;
+
+  } @else if unit($value) == "px"{
+    @return px-to-em($value, $parent-font-size);
+
+  } @else if unit($value) == "rem" {
+    @return rem-to-em($value, $parent-font-size);
+
+  } @else {
+    @warn "Can not calculate em from unit: #{ $value }";
+    @return $value;
+  }
+}
+
+@function convert-to-px($value, $parent-font-size:$base-font-size){
+
+  @if unitless($value) {
+    @warn "Assuming unitless value is px value: #{ $value }";
+    @return $value * 1px;
+
+  } @else if unit($value) == "px" {
+    @return $value;
+
+  } @else if unit($value) == "rem" {
+    @return rem-to-px($value);
+
+  } @else if unit($value) == "em" {
+    @return em-to-px($value, $parent-font-size);
+
+  } @else {
+    @warn "Can not calculate px from unit: #{ $value }";
+    @return $value;
+  }
+}
