@@ -34,7 +34,7 @@ $use-flyout:        false;
 $use-arrows:        false;
 $use-sprite:        false;
 $use-icon-text:     true;
-$use-beautons:      true;
+$use-beautons:      false;
 $use-lozenges:      false;
 $use-rules:         true;
 $use-stats:         false;
@@ -127,8 +127,8 @@ $base-font-size-lg:                $h3-size;
 
 $base-line-height:                 24px; // $OVERRIDES inuit.css
 $line-height-ratio:                ($base-line-height / $base-font-size); // $OVERRIDES inuit.css
-$base-line-height-sm:              ($base-font-size-sm * #{$line-height-ratio}px);
-$base-line-height-lg:              ($base-font-size-lg * #{$line-height-ratio}px);
+$base-line-height-sm:              ($base-font-size-sm * $line-height-ratio);
+$base-line-height-lg:              ($base-font-size-lg * $line-height-ratio);
 
 
 
@@ -140,13 +140,15 @@ $base-line-height-lg:              ($base-font-size-lg * #{$line-height-ratio}px
 
 $base-spacing-unit:                $base-line-height; // $OVERRIDES inuit.css
 
-$base-padding-v:                   $base-spacing-unit / 4;
-$base-padding-v-sm:                ($base-padding-v - ($base-padding-v / 2));
-$base-padding-v-lg:                ($base-padding-v * 2);
+$base-padding-v:                   ($base-spacing-unit / 4); // 6px
+$base-padding-v-lg:                ($base-padding-v * 1.5); // 9px
+$base-padding-v-sm:                (ceil($base-padding-v / 1.25)); // 5px
+$base-padding-v-xs:                ($base-padding-v / $base-padding-v); // 1px
 
-$base-padding-h:                   convert-to-px($grid-padding);
-$base-padding-h-sm:                ($base-padding-h - ($base-padding-h / 2));
-$base-padding-h-lg:                ($base-padding-h * 2);
+$base-padding-h:                   (convert-to-px($grid-padding) / 1.3333333333); // 12px
+$base-padding-h-lg:                ($base-padding-h * 1.3333333333); // 16px
+$base-padding-h-sm:                ($base-padding-h / 1.2); // 10px
+$base-padding-h-xs:                ($base-padding-h / 2.4); // 5px
 
 
 
@@ -295,3 +297,40 @@ $legend-border-color:              $color-gray--light;
 
 $input-group-addon-bg:             $color-gray--lighter;
 $input-group-addon-border-color:   $input-border;
+
+
+
+
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+
+$btn-font-weight:                  normal;
+
+$btn-default-color:                $color-gray--dark;
+$btn-default-bg:                   #fff;
+$btn-default-border:               $color-gray--lighter;
+
+$btn-primary-color:                #fff;
+$btn-primary-bg:                   $brand-primary;
+$btn-primary-border:               darken($btn-primary-bg, 5%);
+
+$btn-success-color:                #fff;
+$btn-success-bg:                   $brand-success;
+$btn-success-border:               darken($btn-success-bg, 5%);
+
+$btn-info-color:                   #fff;
+$btn-info-bg:                      $brand-info;
+$btn-info-border:                  darken($btn-info-bg, 5%);
+
+$btn-warning-color:                #fff;
+$btn-warning-bg:                   $brand-warning;
+$btn-warning-border:               darken($btn-warning-bg, 5%);
+
+$btn-danger-color:                 #fff;
+$btn-danger-bg:                    $brand-danger;
+$btn-danger-border:                darken($btn-danger-bg, 5%);
+
+$btn-link-disabled-color:          $color-gray--light;
