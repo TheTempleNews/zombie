@@ -101,6 +101,8 @@ $font-stack__condensed:            "League Gothic", Impact, Haettenschweiler, "F
 $base-font-family:                 $font-stack__serif; // $OVERRIDES inuit.css
 $base-font-family--smallcaps:      $font-stack__serif--smallcaps;
 
+$brand-face:                       $font-stack__sans-serif; // $OVERRIDES inuit.css
+
 
 /**
  * Font-sizes (in pixels).
