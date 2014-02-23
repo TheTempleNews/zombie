@@ -47,11 +47,6 @@
   </div> <!-- end #outer-footer -->
 </footer> <!-- end footer -->
 
-<!-- LiveReload -->
-<?php //if (LIVE_RELOAD) : ?>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-<?php //endif; ?>
-
 
 
 <?php wp_footer(); // js scripts are inserted using this function ?>
