@@ -66,9 +66,13 @@ module.exports = function(grunt) {
     },
     grunticon: {
       icons: {
+        files: [{
+          expand: true,
+          cwd: 'assets/img/icons',
+          src: ['*.svg', '*.png'],
+          dest: 'assets/img/icons/dist'
+        }],
         options: {
-          src: "assets/img/icons/dist",
-          dest: "assets/img/icons/",
           colors: {
             white: "white"
           }
