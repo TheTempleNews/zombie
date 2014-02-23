@@ -1,5 +1,20 @@
-// Modified http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/
-// Only fires on body class (working off strictly WordPress body_class)
+/* ========================================================================
+ * DOM-based Routing
+ * Based on http://goo.gl/EUTi53 by Paul Irish
+ *
+ * Only fires on body classes that match. If a body class contains a dash,
+ * replace the dash with an underscore when adding it to the object below.
+ *
+ * .noConflict()
+ * The routing is enclosed within an anonymous function so that you can 
+ * always reference jQuery with $, even when in .noConflict() mode.
+ *
+ * Google CDN, Latest jQuery
+ * To use the default WordPress version of jQuery, go to lib/config.php and
+ * remove or comment out: add_theme_support('jquery-cdn');
+ * ======================================================================== */
+
+(function($) {
 
 var Zombie = {
   // All pages
@@ -8,51 +23,48 @@ var Zombie = {
 
       $('body').addClass('js');
 
-      jQuery(document).ready(function($) {
-        /**
-         * Sitewide Navigation
-         */
-        var $menu = $('.main-nav'),
-            $menulink = $('.menu-link'),
-            //$menuItem = $('.main-nav ul li a'),
-            $menuTrigger = $('.dropdown__toggle');
+      /**
+       * Sitewide Navigation
+       */
+       var $menu = $('#main-nav'),
+           $menulink = $('.menu-link'),
+           //$menuItem = $('.main-nav ul li a'),
+           $menuTrigger = $('.touch .dropdown__toggle');
 
-        $menulink.click(function(e) {
-          e.preventDefault();
-          $menulink.toggleClass('active');
-          $menu.toggleClass('active');
-        });
+       $menulink.click(function(e) {
+         $menulink.toggleClass('active');
+         $menu.toggleClass('active');
+       });
 
-        $menuTrigger.click(function(e) {
-          e.preventDefault();
-          var $this = $(this);
-          $this.toggleClass('active').next('ul').toggleClass('active');
-        });
+       $menuTrigger.click(function(e) {
+         e.preventDefault();
+         var $this = $(this);
+         $this.toggleClass('active').next('ul').toggleClass('active');
+       });
 
 
-        /**
-         * FitVids
-         */
-        $(document).fitVids();
+      /**
+       * FitVids
+       */
+      $(document).fitVids();
 
-        /**
-         * FitText
-         */
-        $('.fittext.top-banner--breaking').fitText(2.5);
-        $(".moversshakers-text-banner.fittext").fitText(1);
-        $(".the-american-text-banner.fittext").fitText(1.75);
-        $(".page-branded .page-title.fittext").fitText(0.5);
-        $('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
-        $('.breaking-news-banner.fittext p').fitText(2.25);
-        $('.special-issue-banner--reunion-2013 h2.fittext').fitText();
-        $('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText(1.5);
-        $('.launch-banner--the-owlery h2.fittext').fitText(1);
+      /**
+       * FitText
+       */
+      $('.fittext.top-banner--breaking').fitText(2.5);
+      $(".moversshakers-text-banner.fittext").fitText(1);
+      $(".the-american-text-banner.fittext").fitText(1.75);
+      $(".page-branded .page-title.fittext").fitText(0.5);
+      $('.special-issue-banner--lunchies-2013 h2.fittext').fitText();
+      $('.breaking-news-banner.fittext p').fitText(2.25);
+      $('.special-issue-banner--reunion-2013 h2.fittext').fitText();
+      $('.special-issue-banner--basketball-preview-2013 h2.fittext').fitText(1.5);
+      $('.launch-banner--the-owlery h2.fittext').fitText(1);
 
-        /**
-         * SlabText
-         */
-        $(".slabtextthis").slabText();
-      });
+      /**
+       * SlabText
+       */
+      $(".slabtextthis").slabText();
     },
     finalize: function() { }
   },
@@ -112,7 +124,13 @@ var UTIL = {
 
 $(document).ready(UTIL.loadEvents);
 
-/* On window load scripts */
+})(jQuery); // Fully reference jQuery after this point.
+
+
+
+
+
+
 jQuery(window).load(function() {
 
   /* set .article-container elements in mgallery to the maximum height of one of those elements

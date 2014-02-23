@@ -14,7 +14,7 @@
 function zombie_scripts() {
   // Main stylesheet
   // wp_enqueue_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), ZOM_VERSION, 'all' );
-  wp_enqueue_style('zombie-main', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), '357467365fda7511351de9293982e527');
+  wp_enqueue_style('zombie-main', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array(), '4240ff95016d503ac2d22fc46d03d48d');
 
   // IE-only stylesheet
   // wp_register_style('zombie-ie-stylesheet', get_stylesheet_directory_uri() . '/assets/css/ie.css', array(), '');
@@ -35,7 +35,7 @@ function zombie_scripts() {
 
   // Register
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, null, false);
-  wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', false, '168bd0c8b59f58db1bb38adeb72e70c1', true);
+  wp_register_script('zombie-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', false, 'abb8d56e60113c19402dd3b8153a4589', true);
   wp_register_script('special-issue-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts-special-issues.min.js', array('jquery'), time(), true);
   wp_register_script('timeline-storyjs', get_stylesheet_directory_uri() . '/assets/js/plugins/timeline/js/storyjs-embed.js', array('jquery'), time(), false);
 

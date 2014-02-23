@@ -12,22 +12,41 @@ module.exports = function(grunt) {
         'assets/js/special-issues/_*.js'
       ]
     },
-    compass: {
+    sass: {
       dist: {
         options: {
-          specify: [
-            'assets/scss/*.scss',
-            '!csswizardry-grids.scss'
+          style: 'compressed',
+          compass: true
+        },
+        files: {
+          'assets/css/main.min.css': [
+            'assets/scss/main.scss'
           ],
-          environment: 'production',
-          outputStyle: 'compressed'
+          'assets/css/lunchies-2013.css': [
+            'assets/scss/lunchies-2013.scss'
+          ],
+          'assets/css/reunion-2013.css': [
+            'assets/scss/reunion-2013.scss'
+          ]
         }
       },
       dev: {
         options: {
-          specify: [
-            'assets/scss/*.scss',
-            '!csswizardry-grids.scss'
+          style: 'expanded',
+          compass: true,
+          // Source maps are available, but require Sass 3.3.0 to be installed
+          // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
+          sourcemap: false
+        },
+        files: {
+          'assets/css/main.min.css': [
+            'assets/scss/main.scss'
+          ],
+          'assets/css/lunchies-2013.css': [
+            'assets/scss/lunchies-2013.scss'
+          ],
+          'assets/css/reunion-2013.css': [
+            'assets/scss/reunion-2013.scss'
           ]
         }
       }
@@ -57,9 +76,10 @@ module.exports = function(grunt) {
       }
     },
     version: {
+      // Soon to be replaced by `grunt-wp-assets`
       options: {
         file: 'lib/scripts.php',
-        css: 'assets/css/main.css',
+        css: 'assets/css/main.min.css',
         cssHandle: 'zombie-main',
         js: 'assets/js/scripts.min.js',
         jsHandle: 'zombie-scripts'
@@ -70,7 +90,7 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/**/*.scss'
         ],
-        tasks: ['compass:dev', 'version']
+        tasks: ['sass:dev', 'version']
       },
       js: {
         files: [
@@ -85,13 +105,16 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          'assets/css/*.css'
+          'assets/css/*.css',
+          'assets/js/scripts.min.js',
+          'templates/*.php',
+          '*.php'
         ]
       }
     },
     clean: {
       dist: [
-        'assets/css/main.css',
+        'assets/css/main.min.css',
         'assets/js/*.min.js'
       ]
     }
@@ -103,14 +126,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-wp-version');
   grunt.loadNpmTasks('grunt-notify');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
-    'compass:dist',
+    'sass:dist',
     'uglify',
     'version',
     'grunticon'
