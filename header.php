@@ -81,7 +81,6 @@
 
 			googletag.pubads().enableSingleRequest();
 			googletag.enableServices();
-			});
 		});
 		</script>
 		<!-- end advertisement -->
