@@ -73,12 +73,15 @@
 			googletag.defineSlot('/4602070/NSLeaderboard', [728, 90], 'div-gpt-ad-1342714724220-0').addService(googletag.pubads());
 			googletag.defineSlot('/4602070/NSNewsBoxL', [300, 250], 'div-gpt-ad-1342714724220-1').addService(googletag.pubads());
 			googletag.defineSlot('/4602070/NSOpinionBar', [728, 90], 'div-gpt-ad-1342714724220-2').addService(googletag.pubads());
-			googletag.defineSlot('/4602070/NSSideBarMidBox', [300, 250], 'div-gpt-ad-1342714724220-3').addService(googletag.pubads());
+			googletag.defineSlot('/4602070/NSSideBarMidBox', [300, 250], 'div-gpt-ad-1394035111008-0').addService(googletag.pubads());
 			googletag.defineSlot('/4602070/NSSideBarMidBox', [300, 250], 'div-gpt-ad-1344368320426-0').addService(googletag.pubads());
+			googletag.defineSlot('/4602070/NSSideBarMidTower', [300, 600], 'div-gpt-ad-1394035111008-1').addService(googletag.pubads());
 			googletag.defineSlot('/4602070/NSSportsBoxR', [300, 250], 'div-gpt-ad-1342714724220-5').addService(googletag.pubads());
 			googletag.defineSlot('/4602070/HalfPage', [300, 600], 'div-gpt-ad-1366661404407-0').addService(googletag.pubads());
+
 			googletag.pubads().enableSingleRequest();
 			googletag.enableServices();
+			});
 		});
 		</script>
 		<!-- end advertisement -->

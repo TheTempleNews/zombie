@@ -24,9 +24,9 @@
 					<div class="ad tower-ad adsense">
 
 						<!-- NSSideBarMidTower -->
-						<div id='div-gpt-ad-1391462521514-5' style='width:300px; height:600px;'>
+						<div id='div-gpt-ad-1394035111008-1' style='width:300px; height:600px;'>
 						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1391462521514-5'); });
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1394035111008-1'); });
 						</script>
 						</div>
 
@@ -61,9 +61,9 @@
 					<div class="ad rectangle-ad adsense">
 
 						<!-- NSSideBarMidBox -->
-						<div id='div-gpt-ad-1391462521514-4' style='width:300px; height:250px;'>
+						<div id='div-gpt-ad-1394035111008-0' style='width:300px; height:250px;'>
 						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1391462521514-4'); });
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1394035111008-0'); });
 						</script>
 						</div>
 
