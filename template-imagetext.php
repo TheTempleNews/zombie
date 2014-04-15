@@ -36,7 +36,7 @@ Template Name: Special Issue: Imagetext
 
 			$args = array(
 				'post_type'     => $post_types,
-				'category_name' => $category,
+				'cat'           => $category,
 				'year'          => $year
 			);
 
