@@ -152,6 +152,10 @@ endwhile; endif; wp_reset_query(); ?>
 							<h2 class="fittext"><a href="http://owlery.temple-news.com/">The Owlery</a></h2>
 							<h3 class="fittext h4">The new features blog of The Temple News</h3>
 						</div>
+					<?php } elseif (CHOPBOOM) { ?>
+						<div class="launch-banner--chopboom  launch-banner">
+							<a href="http://chopboom.temple-news.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/banners/chop-banner-edit.jpg"></a>
+						</div>
 					<?php } ?>
 
 				</div> <!-- end .home-top-promo -->
