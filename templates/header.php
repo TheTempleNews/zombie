@@ -33,9 +33,10 @@
         <p class="brand__social__tagline  tagline"><?php bloginfo('description'); ?></p>
       </div>
 
-      <!-- <div class="menu-toggle icon-reorder">
-        <span>MENU</span>
-      </div> -->
+      <a class="btn btn--navbar menu-link" data-toggle="collapse" data-target=".nav-collapse">
+        <i class="icon-reorder"></i>
+        <span class="accessibility">Menu</span>
+      </a>
 
       <div class="brand__search">
         <?php get_search_form( true ); ?>

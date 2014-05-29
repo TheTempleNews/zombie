@@ -19,20 +19,295 @@
   font-weight: 600;
   font-family: $font-stack__sans-serif;
   text-transform: uppercase;
-  padding-bottom: $half-spacing-unit;
+  padding-bottom: $base-padding-v;
 }
 
   /*ul*/.nav-menu {
-    white-space: normal;
-    margin-bottom: 0;
-    li {
-      margin: 0 $base-spacing-unit / 4;
-      a {
-        &:hover,
-        &:focus {
-          background-color: $brand-primary;
-          color: black;
-        }
+
+  }
+
+
+/**
+ * This is the main navigation bar.
+ * It is very complex.
+ *
+ * It is mainly used near the top of a page,
+ * but it can appear in the footer for no-js situations.
+ *
+ * E.G.
+  <header>
+    <div class="container">
+      <a class="brand" href="#"></a>
+      <a class="btn btn--navbar menu-link" data-toggle="collapse" data-target=".nav-collapse">
+        <i class="icon-reorder"></i>
+        <span class="accessibility">Menu</span>
+      </a>
+      <nav class="main-nav" role="navigation">
+        <ul class="nav">
+          ...
+        </ul>
+      </nav>
+    </div>
+  </header>
+ *
+ * Heavily based upon Brad Frost's multi-toggle navigation pattern.
+ * http://codepen.io/bradfrost/full/qwJvF
+ */
+
+/**
+ * Menu toggle for smaller screens.
+ */
+.menu-link {
+  float: right;
+}
+
+.main-nav {
+  @extend .cf;
+  white-space: normal;
+  margin-bottom: 0;
+  li {
+    margin: 0 $base-padding-h-xs;
+    a {
+      &:hover,
+      &:focus {
+        background-color: $brand-primary;
+        color: black;
       }
     }
   }
+
+  background-color: $main-nav-bg;
+  color: $main-nav-color;
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+
+  &.active {
+    max-height: 55em;
+  }
+
+  /*ul*/.level-1 {
+    @extend .nav--stacked;
+    border-top: 1px solid #808080;
+  }
+
+  a {
+    display: block;
+    @include font-size($main-nav-font-size);
+    padding: $base-padding-v $base-padding-h-xs;
+    position: relative;
+
+    &,
+    &:visited {
+      color: $main-nav-color;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $main-nav__dropdown-bg--active;
+      color: $main-nav-link-color--alt;
+    }
+  }
+}
+
+  .dropdown,
+  .dropdown--submenu {
+    @extend .cf;
+
+    > a {
+      &:after {
+        content: "\FF0B";
+
+        display: block;
+        font-size: 1.5em;
+        padding: $base-padding-v-sm $base-padding-h-xs;
+        text-decoration: none;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      &.active:after {
+        content: "\FE63";
+        text-decoration: none;
+      }
+    } // end > a
+  } // end .dropdown
+
+    .dropdown__menu {
+      @extend .cf;
+      > li {
+        a {
+          background-color: $main-nav__dropdown-bg;
+        }
+      }
+    }
+
+.js {
+  .main-nav,
+  .dropdown__menu {
+    overflow: hidden;
+    max-height: 0;
+
+    &.active {
+      max-height: 55em;
+    }
+  }
+} // end .js
+
+
+
+@include media-query(portable) {
+  .main-nav {
+    clear: both;
+    background-color: $main-nav__dropdown-bg;
+
+    ul {
+      @include nav-dividers($stacked: true);
+    }
+
+      /*ul*/.level-2,
+      /*ul*/.level-3,
+      /*ul*/.level-4 {
+        > li {
+          a {
+            &:hover,
+            &:active {
+              background-color: $main-nav__dropdown-bg--active;
+            }
+          }
+        }
+      }
+
+      /*ul*/.level-2 {
+        > li {
+          a {
+            padding-left: $base-spacing-unit;
+
+            &,
+            &:visited {
+              background-color: transparentize($main-nav__dropdown-bg--active, 0.7);
+            }
+          }
+        }
+      } // end /*ul*/.level-2
+
+        /*ul*/.level-3 {
+          > li {
+            a {
+              padding-left: $base-spacing-unit * 2;
+              &,
+              &:visited {
+                background-color: transparentize($main-nav__dropdown-bg--active, 0.5);
+              }
+            }
+          }
+        }
+
+          /*ul*/.level-4 {
+            > li {
+              a {
+                padding-left: $base-spacing-unit * 3;
+                &,
+                &:visited {
+                  background-color: transparentize($main-nav__dropdown-bg--active, 0.3);
+                }
+              }
+            }
+          }
+  } // end .main-nav
+}
+
+
+
+@include media-query(desk) {
+
+  .dropdown__toggle,
+  .menu-link {
+    display: none;
+  }
+
+  .js {
+    .main-nav,
+    .dropdown__menu {
+      max-height: none;
+      overflow: visible;
+    }
+
+    .dropdown__menu {
+      display: none;
+    }
+
+    .nav {
+      li {
+        &:hover {
+          // this selector is very messy
+          > .dropdown__menu {
+            display: block;
+          }
+        }
+      }
+    }
+  } // end .js
+
+  .main-nav {
+    a {
+      border: 0;
+    }
+
+    /*ul*/.level-1 {
+      margin: 0;
+      border: 0;
+
+      > li {
+        position: relative;
+
+        &,
+        > a {
+          display: inline-block; // overrides nav--stacked for first level
+        }
+      }
+    }
+  } // end .main-nav
+
+
+
+    .dropdown {
+      > a {
+        padding-right: $base-padding-h * 2;
+
+        &:after,
+        &.active:after {
+          @include font-size($main-nav-font-size);
+          content: "\25BC";
+          text-decoration: none;
+          padding-top: $base-padding-v;
+        }
+      }
+
+      li {
+        position: relative;
+      }
+    } // end .dropdown
+
+      .dropdown__menu {
+        position: absolute;
+        width: $main-nav__dropdown-width;
+
+        a {
+          color: $main-nav__dropdown-color;
+        }
+      }
+
+      .dropdown--submenu {
+        .dropdown__menu {
+          top: 0;
+          left: $main-nav__dropdown-width;
+        }
+      }
+
+} // end media query desk

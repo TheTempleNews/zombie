@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    TTN: GENERIC: NAV
+\*------------------------------------*/
+
+
+/**
+ * Set `.nav--block` padding to use v/h padding units.
+ *
+ * $OVERRIDES inuit.css
+ */
+.nav--block{
+  > li{
+    > a{
+        padding: $base-padding-v $base-padding-h;
+    }
+  }
+}

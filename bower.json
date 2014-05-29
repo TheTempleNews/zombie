@@ -4,7 +4,9 @@
   "main": "style.css",
   "dependencies": {
     "inuit.css": ">= 5.0.0",
-    "csswizardry-grids": "*"
+    "csswizardry-grids": "*",
+    "normalize.scss": "3.0.0-alpha.1+normalize.3.0.0",
+    "normalize-scss": "~3.0.0"
   },
   "devDependencies": {},
   "private": true

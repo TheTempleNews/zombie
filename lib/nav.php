@@ -125,18 +125,18 @@ add_filter('wp_nav_menu_args', 'zombie_nav_menu_args');
 // The Main Menu
 function zombie_main_nav() {
   wp_nav_menu(array(
-    'container' => false,                           // remove nav container
-    'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
-    'menu' => 'The Main Menu',                      // nav name
-    'menu_class' => 'nav-menu  nav  nav--block',     // adding custom nav class
-    'menu_id' => 'menu-top-navigation',             // id for nav ul
-    'theme_location' => 'main-nav',                 // where it's located in the theme
-    'before' => '',                                 // before the menu
-    'after' => '',                                  // after the menu
-    'link_before' => '',                            // before each link
-    'link_after' => '',                             // after each link
-    'depth' => 0,                                   // limit the depth of the nav
-    'fallback_cb' => ''      // fallback function
+    'container' => false,
+    'container_class' => 'menu clearfix',
+    'menu' => 'The Main Menu',
+    'menu_class' => 'main-nav  nav  nav--block',
+    'menu_id' => 'main-nav',
+    'theme_location' => 'main-nav',
+    'before' => '',
+    'after' => '',
+    'link_before' => '',
+    'link_after' => '',
+    'depth' => 0,
+    'fallback_cb' => ''
   ));
 }
 
