@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    TTN: ORGANISMS: SITE NAV
+    TTN: SPECIFICS: SITEWIDE: SITE NAV
 \*------------------------------------*/
 /**
  * The main navigation organism.
@@ -9,7 +9,7 @@
 .menu-toggle {
   &,
   & span {
-    @extend .accessibility--desk;
+    @include cloak-at($query-desk);
   }
 }
 
@@ -62,7 +62,8 @@
 }
 
 .main-nav {
-  @extend .cf;
+  @include scut-clearfix;
+  @include scut-list-unstyled;
   white-space: normal;
   margin-bottom: 0;
   li {
@@ -90,7 +91,7 @@
   }
 
   /*ul*/.level-1 {
-    @extend .nav--stacked;
+    @include scut-list-unstyled;
     border-top: 1px solid #808080;
   }
 
@@ -115,7 +116,7 @@
 
   .dropdown,
   .dropdown--submenu {
-    @extend .cf;
+    @include scut-clearfix;
 
     > a {
       &:after {
@@ -139,7 +140,9 @@
   } // end .dropdown
 
     .dropdown__menu {
-      @extend .cf;
+      @include scut-clearfix;
+      @include scut-list-unstyled;
+
       > li {
         a {
           background-color: $main-nav__dropdown-bg;
@@ -161,7 +164,7 @@
 
 
 
-@include media-query(portable) {
+@include breakpoint($query-portable) {
   .main-nav {
     clear: both;
     background-color: $main-nav__dropdown-bg;
@@ -224,7 +227,7 @@
 
 
 
-@include media-query(desk) {
+@include breakpoint($query-desk) {
 
   .dropdown__toggle,
   .menu-link {

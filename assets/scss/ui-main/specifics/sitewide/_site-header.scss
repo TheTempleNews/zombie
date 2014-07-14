@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    TTN: ORGANISMS: SITE HEADER
+    TTN: SPECIFICS: SITEWIDE: SITE HEADER
 \*------------------------------------*/
 /**
  * The main site header at the top of most
@@ -19,7 +19,7 @@
     /**
      * Prevent weird search input movement on resize.
      */
-    @include vendor(transition, none);
+    transition: none;
   }
 
     .brand__logo {
@@ -30,7 +30,7 @@
     }
 
     .brand__social {
-      @extend .accessibility--portable;
+      @include cloak-at($query-portable);
       color: white;
       vertical-align: middle;
       padding-top: $base-line-height;
@@ -43,13 +43,17 @@
 
     .brand__search {
       margin-top: $half-spacing-unit;
+
+      .form__control-label {
+        @include cloak;
+      }
     }
 
 
-@include at-breakpoint($layout-lap) {
+@include susy-breakpoint($query-lap, $layout-lap) {
   .brand__logo,
   .brand__search {
-    @include span-columns(6);
+    @include span(6);
   }
 
   .brand__search {
@@ -58,22 +62,22 @@
 }
 
 
-@include at-breakpoint($layout-desk) {
+@include susy-breakpoint($query-desk, $layout-desk) {
   .brand__logo {
-    @include span-columns(5);
+    @include span(5);
   }
 
   .brand__social {
-    @include span-columns(3);
+    @include span(3);
   }
 
   .brand__search {
-    @include span-columns(4 omega);
+    @include span(4 omega);
   }
 }
 
 
-@include at-breakpoint($lap-start $total-columns 600px) {
+@include susy-breakpoint($lap-start 600px, $total-columns) {
   .brand__search {
     margin-top: 0;
   }

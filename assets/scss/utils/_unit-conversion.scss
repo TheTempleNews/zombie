@@ -1,19 +1,10 @@
-/*------------------------------------*\
-    TTN: FUNCTIONS
-\*------------------------------------*/
-/**
- * UNIT CONVERSION.....................Convert units to other units.
- */
-
-
-
-
-
-/*------------------------------------*\
-    $UNIT-CONVERSION
-\*------------------------------------*/
+/* ==========================================================================
+   TTN: BASE: UTILS: Unit Conversion
+   ========================================================================== */
 /**
  * Convert units to other units.
+ *
+ * Some of these do what SCUT already does.
  *
  * TL;DR Use the `convert-to-*` unit converters in most cases.
  *
@@ -159,3 +150,4 @@
     @return $value;
   }
 }
+

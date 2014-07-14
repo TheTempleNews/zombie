@@ -7,49 +7,11 @@
 
 
 /*------------------------------------*\
-    $OBJECTS-AND-ABSTRACTIONS
-\*------------------------------------*/
-/**
- * All of inuit.css' objects and abstractions are initially turned off by
- * default. This means that you start any project with as little as possible,
- * and introducing objects and abstractions is as simple as switching the
- * following variables to `true`.
- */
-$use-grids:         false;
-$use-flexbox:       false;
-$use-columns:       false;
-$use-nav:           true;
-$use-options:       false;
-$use-pagination:    false;
-$use-breadcrumb:    false;
-$use-media:         true;
-$use-marginalia:    false;
-$use-island:        false;
-$use-block-list:    false;
-$use-matrix:        true;
-$use-split:         false;
-$use-this-or-this:  false;
-$use-link-complex:  false;
-$use-flyout:        false;
-$use-arrows:        false;
-$use-sprite:        false;
-$use-icon-text:     true;
-$use-beautons:      false;
-$use-lozenges:      false;
-$use-rules:         true;
-$use-stats:         false;
-$use-greybox:       false;
-
-
-
-
-
-/*------------------------------------*\
     $GRIDS
 \*------------------------------------*/
 
 /**
- * Breakpoints
+ * Breakpoints and common media queries
  */
 $break-xs:           481px;
 $break-s:            768px;
@@ -57,12 +19,21 @@ $break-m:            1024px;
 $break-l:            1280px;
 $break-xl:           2880px;
 
-// For inuit.css
 $lap-start:          $break-xs;
 $desk-start:         $break-m;
 $desk-wide-start:    $break-l;
-$palm-end:           $break-xs - 1px;
-$lap-end:            $break-m - 1px;
+$palm-end:           ($break-xs - 1px);
+$lap-end:            ($break-m - 1px);
+
+$query-names:        palm lap lapandup portable desk wide super;
+
+$query-palm:         max-width $palm-end;
+$query-lap:          $lap-start $lap-end;
+$query-lapandup:     $lap-start;
+$query-portable:     max-width $lap-end;
+$query-desk:         $desk-start;
+$query-wide:         $desk-wide-start;
+$query-super:        $break-xl;
 
 
 /**
@@ -73,13 +44,13 @@ $column-width:       4em;
 $gutter-width:       1em;
 $grid-padding:       $gutter-width;
 
-$layout-palm:        $total-columns $palm-end;
-$layout-lap:         $lap-start $total-columns $lap-end;
-$layout-lapandup:    $lap-start $total-columns;
-$layout-portable:    $total-columns $lap-end;
-$layout-desk:        $desk-start $total-columns;
-$layout-wide:        $desk-wide-start;
-$layout-super:       $break-xl $total-columns * 2;
+$layout-palm:        $total-columns;
+$layout-lap:         $total-columns;
+$layout-lapandup:    $total-columns;
+$layout-portable:    $total-columns;
+$layout-desk:        $total-columns;
+$layout-wide:        $total-columns;
+$layout-super:       ($total-columns * 2);
 
 
 
@@ -98,16 +69,14 @@ $font-stack__serif:                "Alegreya", Constantia, "Lucida Bright", Luci
 $font-stack__serif--smallcaps:     "Alegreya SC", $font-stack__serif;
 $font-stack__condensed:            "League Gothic", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 
-$base-font-family:                 $font-stack__serif; // $OVERRIDES inuit.css
+$base-font-family:                 $font-stack__serif;
 $base-font-family--smallcaps:      $font-stack__serif--smallcaps;
 
-$brand-face:                       $font-stack__sans-serif; // $OVERRIDES inuit.css
+$brand-face:                       $font-stack__sans-serif;
 
 
 /**
  * Font-sizes (in pixels).
- *
- * $OVERRIDES inuit.css
  */
 $giga-size:                        96px;
 $mega-size:                        72px;
@@ -128,7 +97,7 @@ $base-font-size-sm:                $milli-size;
 $base-font-size-lg:                $h3-size;
 
 $base-line-height:                 24px; // $OVERRIDES inuit.css
-$line-height-ratio:                ($base-line-height / $base-font-size); // $OVERRIDES inuit.css
+$line-height-ratio:                ($base-line-height / $base-font-size);
 $base-line-height-sm:              ($base-font-size-sm * $line-height-ratio);
 $base-line-height-lg:              ($base-font-size-lg * $line-height-ratio);
 
@@ -140,7 +109,8 @@ $base-line-height-lg:              ($base-font-size-lg * $line-height-ratio);
 \*------------------------------------*/
 
 
-$base-spacing-unit:                $base-line-height; // $OVERRIDES inuit.css
+$base-spacing-unit:                $base-line-height;
+$half-spacing-unit:                ($base-spacing-unit / 2);
 
 $base-padding-v:                   ($base-spacing-unit / 4); // 6px
 $base-padding-v-lg:                ($base-padding-v * 1.5); // 9px
@@ -199,8 +169,6 @@ $color-purple-light:               #66afe9;
 
 /**
  * Brand colors
- *
- * $OVERRIDES inuit.css
  */
 $brand-color:                      $color-red;
 $base-ui-color:                    $color-gray--light;

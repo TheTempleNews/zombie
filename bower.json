@@ -8,6 +8,8 @@
     "normalize.scss": "3.0.0-alpha.1+normalize.3.0.0",
     "normalize-scss": "~3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "scut": "~0.10.4"
+  },
   "private": true
 }

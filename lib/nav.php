@@ -22,7 +22,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     $level = $depth + 2;
     $output .= "\n<ul class=\"";
     $output .= "level-" . $level . " ";
-    $output .= "dropdown__menu nav--stacked nav\">\n";
+    $output .= "dropdown__menu\">\n";
   }
 
   function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
@@ -128,7 +128,7 @@ function zombie_main_nav() {
     'container' => false,
     'container_class' => 'menu clearfix',
     'menu' => 'The Main Menu',
-    'menu_class' => 'main-nav  nav  nav--block',
+    'menu_class' => 'main-nav',
     'menu_id' => 'main-nav',
     'theme_location' => 'main-nav',
     'before' => '',

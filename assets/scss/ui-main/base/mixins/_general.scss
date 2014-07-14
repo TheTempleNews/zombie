@@ -1,0 +1,90 @@
+/**
+ * Hide text only, not other content.
+ *
+ * Taken from Twitter Bootstrap v3.0.1
+ */
+@mixin text-hide() {
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+
+/**
+ * WebKit-style focus
+ *
+ * Taken from Bootstrap v3.1.1
+ */
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+/**
+ * Placeholder text
+ *
+ * Taken from Bootstrap v3.1.1
+ */
+@mixin placeholder($color: $input-color-placeholder) {
+  &::-moz-placeholder           { color: $color;   // Firefox
+                                  opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+
+/**
+ * Creates a wrapper for a series of columns
+ *
+ * Taken from Bootstrap v3.1.1
+ */
+@mixin make-row($gutter: $gutter-width) {
+  margin-left:  ($gutter / -2);
+  margin-right: ($gutter / -2);
+  @include clearfix();
+}
+
+
+/**
+ * User select
+ *
+ * For selecting text on the page
+ *
+ * From Bootstrap v3.1.1
+ */
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select; // IE10+
+          user-select: $select;
+}
+
+
+/**
+ * Add vertical dividers to list elements.
+ *
+ * For use with the nav object. Include on a `.nav` element.
+ */
+@mixin nav-dividers($width: 1px, $type: solid, $color: $base-ui-color, $stacked: false) {
+  @if $stacked == false {
+    > li {
+      border-left: $width $type $color;
+      &:last-child {
+        border-right: $width $type $color;
+      }
+    }
+  } @else {
+    > li {
+      border-top: $width $type $color;
+      &:last-child {
+        border-bottom: $width $type $color;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  $UI-FORMS
+  TTN: BASE: FORMS
 \*------------------------------------*/
 /**
  * There's a few things to note here.
@@ -417,7 +417,7 @@ input[type="checkbox"],
 
 .form--inline {
 
-  @include media-query(lap-and-up) {
+  @include breakpoint($lap-start) {
 
     /**
      * Inline-block all the things for "inline"
@@ -532,7 +532,7 @@ input[type="checkbox"],
   /**
    * Only right align form labels here when the columns stop stacking
    */
-  @include media-query(lap-and-up) {
+  @include breakpoint($lap-start) {
     .form__control-label {
       text-align: right;
     }

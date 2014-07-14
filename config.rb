@@ -4,6 +4,7 @@
 
 # Require any additional compass plugins here.
 require "susy"
+require "breakpoint"
 
 # Add import paths.
 add_import_path "./components"

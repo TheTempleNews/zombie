@@ -1,9 +1,15 @@
 /*------------------------------------*\
-    TTN: GENERIC: LAYOUT
+    TTN: BASE: LAYOUT
 \*------------------------------------*/
 /**
  * Large-scale layout and grid styles.
  */
+
+html{
+  font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+  overflow-y:scroll;
+  min-height:100%;
+}
 
 .root,
 .wrap {

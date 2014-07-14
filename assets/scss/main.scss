@@ -12,51 +12,30 @@
 /**
  * Setup
  */
-@import "ui-main/functions";
+@import "scut/dist/scut";
+@import "utils/__utils";
 @import "ui-main/vars";
-@import "inuit.css/inuit";
 @import "compass";
+@import "breakpoint";
 @import "susy";
 
 
 /**
- * Generic styles.
+ * Base
  */
-@import "ui-main/generic/mixins";
-@import "ui-main/generic/typography";
-@import "ui-main/generic/layout";
-@import "ui-main/generic/links";
-@import "ui-main/generic/media";
+@import "ui-main/base/__base";
 
 
 /**
- * Base styles.
+ * Components
  */
-
-
-
-/**
- * Objects.
- */
-@import "ui-main/objects/box-shadow";
-@import "ui-main/objects/buttons";
-@import "ui-main/objects/input-groups";
-@import "ui-main/objects/nav";
-@import "ui-main/objects/pane";
-@import "ui-main/objects/rules";
-
-
-/**
- * Molecules.
- */
-@import "ui-main/molecules/forms";
+@import "ui-main/components/__components";
 
 
 /**
  * Organisms.
  */
-@import "ui-main/organisms/header--site";
-@import "ui-main/organisms/nav--site";
+@import "ui-main/specifics/__specifics";
 
 
 /**

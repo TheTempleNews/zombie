@@ -1,0 +1,47 @@
+/**
+ * Give inline and unstyled lists a big, blocky hit area.
+ *
+ * Use with the SCUT list mixins.
+ *
+ * Sourced from Inuit.CSS v5
+ */
+@mixin ui-list-block($padding: $half-spacing-unit) {
+  line-height:1;
+
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing:-0.31em;
+  word-spacing:-0.43em;
+  white-space:nowrap;
+
+  > li {
+    letter-spacing:normal;
+    word-spacing:normal;
+
+    > a {
+      padding: $padding;
+    }
+  }
+}
+
+
+/**
+ * Force an inline list to occupy 100% of the available width of its parent.
+ *
+ * Use with the `scut-list-inline` mixin.
+ *
+ * Sourced from Inuit.CSS v5
+ */
+@mixin ui-list-fit {
+  display:table;
+  width:100%;
+
+  > li{
+    display:table-cell;
+
+    > a{
+      display:block;
+    }
+  }
+}

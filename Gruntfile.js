@@ -21,13 +21,14 @@ module.exports = function(grunt) {
         files: {
           'assets/css/main.min.css': [
             'assets/scss/main.scss'
-          ],
-          'assets/css/lunchies-2013.css': [
-            'assets/scss/lunchies-2013.scss'
-          ],
-          'assets/css/reunion-2013.css': [
-            'assets/scss/reunion-2013.scss'
           ]
+          // ],
+          // 'assets/css/lunchies-2013.css': [
+          //   'assets/scss/lunchies-2013.scss'
+          // ],
+          // 'assets/css/reunion-2013.css': [
+          //   'assets/scss/reunion-2013.scss'
+          // ]
         }
       },
       dev: {
@@ -41,13 +42,14 @@ module.exports = function(grunt) {
         files: {
           'assets/css/main.min.css': [
             'assets/scss/main.scss'
-          ],
-          'assets/css/lunchies-2013.css': [
-            'assets/scss/lunchies-2013.scss'
-          ],
-          'assets/css/reunion-2013.css': [
-            'assets/scss/reunion-2013.scss'
           ]
+          // ],
+          // 'assets/css/lunchies-2013.css': [
+          //   'assets/scss/lunchies-2013.scss'
+          // ],
+          // 'assets/css/reunion-2013.css': [
+          //   'assets/scss/reunion-2013.scss'
+          // ]
         }
       }
     },

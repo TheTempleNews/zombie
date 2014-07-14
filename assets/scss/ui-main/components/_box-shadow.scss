@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    TTN: OBJECTS: BOX SHADOW
+    TTN: COMPONENTS: BOX SHADOW
 \*------------------------------------*/
 /**
  * Fancy CSS3 box shadows. Use with caution.
@@ -39,11 +39,11 @@
   }
 
   &:before {
-    @include vendor(transform, rotate(-3deg));
+    transform: rotate(-3deg);
   }
 
   &:after {
-    @include vendor(transform, rotate(3deg));
+    transform: rotate(3deg);
     right: $radius;
     left: auto;
   }
@@ -62,7 +62,7 @@
  */
 @mixin box-shadow--curved($background-color: #FFFFFF, $top-edge: false) {
   background: $background-color;
-    position:relative;
+  position:relative;
 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
@@ -70,24 +70,24 @@
   &:after {
     box-shadow: 0 0 20px rgba(0,0,0,0.8);
     content:"";
-      position:absolute;
-      z-index:-1;
-      bottom:0;
-      left:10px;
-      right:10px;
-      border-radius:100px / 10px;
+    position:absolute;
+    z-index:-1;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
 
-      @if $top-edge == true {
-        top: 0;
-      } @elseif $top-edge == false {
-        top:50%;
-      }
+    @if $top-edge == true {
+      top: 0;
+    } @elseif $top-edge == false {
+      top:50%;
+    }
   }
 
   &:after {
     right:10px;
-      left:auto;
-      @include vendor(transform, skew(8deg) rotate(3deg));
+    left:auto;
+    transform: skew(8deg) rotate(3deg);
   }
 }
 
