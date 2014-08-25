@@ -12,7 +12,7 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		$meta_value = "sp";
 
 	} elseif ( $ttn_section == "lifestyle" ) {
-		$cat_id     = 11;
+		$cat_id     = 8971;
 		$cat_name   = "Lifestyle";
 		$meta_value = "lv";
 
@@ -29,6 +29,14 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 	}
 
 	$post_type  = "article_" . strtolower($ttn_section);
+
+	// Patch for the assumption that $ttn_section ~= the post type
+	// Necessary for renaming Living Section to Lifestyle
+	// 
+	// Added by Chris Montgomery <@montchr> 2014-08-25 04:02:21
+	if ($ttn_section === "lifestyle") $post_type = "article_living" ;
+
+
 
 	$count = 1;
 	$cat_link = get_category_link($cat_id);
