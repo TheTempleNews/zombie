@@ -11,9 +11,9 @@ function the_zombie_loop( $ttn_section, $show_posts = 5 ) {
 		$cat_name   = "Sports";
 		$meta_value = "sp";
 
-	} elseif ( $ttn_section == "living" ) {
+	} elseif ( $ttn_section == "lifestyle" ) {
 		$cat_id     = 11;
-		$cat_name   = "Living";
+		$cat_name   = "Lifestyle";
 		$meta_value = "lv";
 
 	} elseif ( $ttn_section == "ae" ) {

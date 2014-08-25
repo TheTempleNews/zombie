@@ -240,12 +240,12 @@
 
 
 
-						<!-- LIVING SECTION -->
-						<section id="section-box-living" class="section-container section-box clearfix">
+						<!-- LIFESTYLE SECTION -->
+						<section id="section-box-lifestyle" class="section-container section-box clearfix">
 
-							<?php the_zombie_loop('living'); ?>
+							<?php the_zombie_loop('lifestyle'); ?>
 
-						</section> <!-- end #section-box-living -->
+						</section> <!-- end #section-box-lifestyle -->
 
 
 

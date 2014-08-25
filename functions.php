@@ -697,7 +697,7 @@ function zom_columnist_headshot($context) {
 	$column_categories = array(
 		'columns',
 		'columns-arts-entertainment',
-		'columns-living',
+		'columns-lifestyle',
 		'commentary', // Opinion commentary
 		'commentaries' // Sports commentary
 	);

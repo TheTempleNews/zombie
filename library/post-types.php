@@ -116,23 +116,32 @@ function zombie_register_custom_post_types() {
 
 
   /**
-   * Living Articles
+   * Lifestyle Articles
+   *
+   * Formerly known as Living Articles, for the Living Section. The post type
+   * name should most likely not be changed unless you're up for some SQL
+   * wrangling. Changing `article_living` to anything but that could cause
+   * issues. In the admin interface, however, references to Living are changed
+   * to Lifestyle wherever possible.
+   *
+   * Also, in the future, if an EIC wants to change the name of a section, warn
+   * them strongly against doing so.
    */
   register_post_type( 'article_living',
                      array(
                            'labels' => array(
-                                             'name'               => 'Living',
-                                             'singular_name'      => 'Living',
+                                             'name'               => 'Lifestyle',
+                                             'singular_name'      => 'Lifestyle',
                                              'add_new'            => 'Add New',
-                                             'add_new_item'       => 'Add New Living Article',
-                                             'edit_item'          => 'Edit Living Article',
-                                             'new_item'           => 'New Living Article',
-                                             'view_item'          => 'View Living Article',
-                                             'search_items'       => 'Search Living Articles',
-                                             'not_found'          => 'No Living Articles Found',
-                                             'not_found_in_trash' => 'No Living Article Found In Trash',
-                                             'parent_item_colon'  => 'Parent Living Articles:',
-                                             'menu_name'          => 'Living Articles'
+                                             'add_new_item'       => 'Add New Lifestyle Article',
+                                             'edit_item'          => 'Edit Lifestyle Article',
+                                             'new_item'           => 'New Lifestyle Article',
+                                             'view_item'          => 'View Lifestyle Article',
+                                             'search_items'       => 'Search Lifestyle Articles',
+                                             'not_found'          => 'No Lifestyle Articles Found',
+                                             'not_found_in_trash' => 'No Lifestyle Article Found In Trash',
+                                             'parent_item_colon'  => 'Parent Lifestyle Articles:',
+                                             'menu_name'          => 'Lifestyle Articles'
                                              ),
                      'publicly_queryable'  => true,
                      'exclude_from_search' => false,
@@ -140,14 +149,14 @@ function zombie_register_custom_post_types() {
                      'hierarchical'        => false,
                      'public'              => true,
                      'rewrite' => array(
-                                        'slug'       => 'living',
+                                        'slug'       => 'lifestyle',
                                         'with_front' => true,
                                         'feeds'      => true,
                                         'pages'      => true
                                         ),
                      'show_in_menu'      => true,
                      'show_in_admin_bar' => true,
-                     'has_archive'       => 'living',
+                     'has_archive'       => 'lifestyle',
                      'query_var'         => true,
                      'supports' => array(
                                          'title',
@@ -166,7 +175,7 @@ function zombie_register_custom_post_types() {
                      'can_export'        => true,
                      'show_in_nav_menus' => false,
                      '_edit_link'        => 'post.php?post=%d',
-                     'description'       => 'This is an article from the Living Desk.'
+                     'description'       => 'This is an article from the Lifestyle Desk.'
                      )
   );
 
