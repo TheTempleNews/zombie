@@ -13,11 +13,11 @@
  */
 
 /* Version Number */
-	define( 'ZOM_VERSION', '1.8.2' );
+	define( 'ZOM_VERSION', '1.8.3' );
 
 /* Top Banner Settings */
 	// Set this to true to display a banner at the top of the home page
-	define( 'HOME_TOP_PROMO', true );
+	define( 'HOME_TOP_PROMO', false );
 
 	// Set this to true to display a banner at the top of the single article
 	define( 'SINGLE_TOP_PROMO', false );
@@ -59,5 +59,5 @@
 
 	define( 'THE_OWLERY_BANNER', false );
 
-	define( 'CHOPBOOM', true );
+	define( 'CHOPBOOM', false );
 
