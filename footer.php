@@ -27,7 +27,7 @@
 
 							</nav>
 
-							<div class="footer-social-container">
+							<!-- <div class="footer-social-container">
 								<div class="footer-social">
 
 									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
@@ -35,7 +35,7 @@
 									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
 
 								</div>
-							</div>
+							</div> -->
 
 							<nav id="footer-links-meta" class="footer-links" role="navigation">
 

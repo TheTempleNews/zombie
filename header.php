@@ -125,13 +125,13 @@
 
 							<div id="tagline-social-container">
 
-								<div class="header-social clearfix">
+								<!-- <div class="header-social clearfix">
 
 									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
 									<a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="icon-twitter"></i></a>
 									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
 
-								</div>
+								</div> -->
 
 								<!-- if you'd like to use the site description you can un-comment it below -->
 								<span id="site-tagline"><?php bloginfo('description'); ?></span>
