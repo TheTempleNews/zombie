@@ -147,12 +147,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev', [
 		'jshint',
 		'less:dev',
-		'sass:dev',
 		'autoprefixer:dev'
 	]);
 	grunt.registerTask('build', [
 		'less:build',
-		'sass:build',
 		'autoprefixer:build',
 		'uglify'
 	]);
