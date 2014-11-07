@@ -1,5 +1,6 @@
 .fuse*
 .style.css.swp
+*.map
 
 /library/metabox/
 .DS_Store
