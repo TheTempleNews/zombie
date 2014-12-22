@@ -27,15 +27,26 @@
 
 							</nav>
 
-							<!-- <div class="footer-social-container">
+							<div class="footer-social-container">
 								<div class="footer-social">
 
+									<!--
 									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
 									<a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="icon-twitter"></i></a>
 									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
+									-->
+
+									<!-- FA icons -->
+									<a href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="fa fa-facebook"></i></a>
+									<a href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="fa fa-twitter"></i></a>
+									<!-- gives unicode value
+									<a href="http://instagram.com/templenews" tittle="The Temple News on Instagram"><i class="fa fa-instagram"></i></a>
+									-->
+									<a href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="fa fa-rss"></i></a>
+									<!-- end FA icons -->
 
 								</div>
-							</div> -->
+							</div>
 
 							<nav id="footer-links-meta" class="footer-links" role="navigation">
 
