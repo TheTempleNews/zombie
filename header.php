@@ -29,8 +29,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
 
 		<!-- Font Awesome -->
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<!-- Thanks MaxCDN for it -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		
 		<!-- Typekit -->
 		<script type="text/javascript" src="//use.typekit.net/qno7mfo.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -135,12 +136,12 @@
 									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a> -->
 
 									<!-- FA icons -->
-									<a href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="fa fa-facebook"></i></a>
-									<a href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="fa fa-twitter"></i></a>
-									<!-- gives unicode value FF-->
-									<a href="http://instagram.com/templenews" title="The Temple News on Instagram"><i class="fa fa-instagram"></i></a>
+									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="fa fa-facebook"></i></a>
+									<a class="social-icon-large" href="https://www.twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="fa fa-twitter"></i></a>
 									
-									<a href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="fa fa-rss"></i></a>
+
+									<a class ="social-icon-large" href="https://www.instagram.com/templenews" title="The Temple News on Instagram"><i class="fa fa-instagram"></i></a>									
+									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="fa fa-rss"></i></a>
 									<!-- end FA icons -->
 
 								</div> 
