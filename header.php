@@ -126,25 +126,23 @@
 
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
 
-
 							<div id="tagline-social-container">
-
-								<div class="header-social clearfix">
-
-									<!-- <a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
+							<!-- <div class="header-social clearfix"> -->
+								<div class="footer-social">
+									<!-- old icons need to be fixed
+									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
 									<a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="icon-twitter"></i></a>
-									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a> -->
-
-									<!-- FA icons -->
-									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="fa fa-facebook"></i></a>
-									<a class="social-icon-large" href="https://www.twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="fa fa-twitter"></i></a>
-									
-
-									<a class ="social-icon-large" href="https://www.instagram.com/templenews" title="The Temple News on Instagram"><i class="fa fa-instagram"></i></a>									
-									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="fa fa-rss"></i></a>
-									<!-- end FA icons -->
-
-								</div> 
+									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
+									--> 
+									 <a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook" target="_blank">
+									 <img align="middle" id="fb" alt="FB" title="The Temple News on Facebook" src="<?php echo get_template_directory_uri(); ?>/library/images/sm/fb3d_48x48.png" /></a>
+									 <a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter" target="_blank">
+									 <img align="middle" id="twitter" alt="Twitter" title="The Temple News on Twitter" src="<?php echo get_template_directory_uri(); ?>/library/images/sm/Tt3d_48x48.png" /></a>
+									 <a class="social-icon-large" href="https://www.instagram.com/templenews" title="The Temple News on Instagram" target="_blank">
+									 <img align="middle" id="insta" alt="Insta" title="The Temple News on Instagram" src="<?php echo get_template_directory_uri(); ?>/library/images/sm/Ig3d_48x48.png" /></a>
+									 <a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed" target="_blank">
+									 <img align="middle" id="rss" alt="RSS" title="The Temple News RSS feed" src="<?php echo get_template_directory_uri(); ?>/library/images/sm/RSS3d_48x48.png" /></a>
+									</div> 
 
 								<!-- if you'd like to use the site description you can un-comment it below -->
 								<span id="site-tagline"><?php bloginfo('description'); ?></span>
