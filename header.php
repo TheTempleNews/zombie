@@ -20,6 +20,15 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
+
+		<!-- Pixeden Social Icon Font Set -->
+		<!--Not on CDN o avoid CROS-->
+		<link href="http://temple-news.com/css/pe-icon-social/css/pe-icon-social.css" media="all" rel="stylesheet" type="text/css">
+		<!-- Optional - Adds useful class to manipulate icon font display and social color style -->
+		<link href="http://temple-news.com/css/pe-icon-social/css/helper.css" media="all" rel="stylesheet" type="text/css">
+		<link href="http://temple-news.com/css/pe-icon-social/css/social-style.css" media="all" rel="stylesheet" type="text/css">
+
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
@@ -28,10 +37,6 @@
 		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya:400italic,400,700|Alegreya+SC:400,400italic' rel='stylesheet' type='text/css'>
 
-		<!-- Font Awesome -->
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-		
-		
 		<!-- Typekit -->
 		<script type="text/javascript" src="//use.typekit.net/qno7mfo.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -123,54 +128,30 @@
 						<?php endif; // end if is NOT handheld (desktop) ?>
 
 						<div id="top-header">
-
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" alt="The Temple News" title="The Temple News Home" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-500-emboss-tr.png" /></a>
-
 							<div id="tagline-social-container">
-								<div class="header-social clearfix">
-								
-									<!-- old icons need to be fixed
-									<a class="social-icon-large" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="icon-facebook"></i></a>
-									<a class="social-icon-large" href="https://twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="icon-twitter"></i></a>
-									<a class="social-icon-large" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="icon-rss"></i></a>
-									--> 
-									 <!-- FA icons -->
-									<a href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="fa fa-facebook"></i></a>
-									<a href="https://www.twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="fa fa-twitter"></i></a>
-									<a href="https://www.instagram.com/templenews" tittle="The Temple News on Instagram"><i class="fa fa-instagram"></i></a>
-									<a href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="fa fa-rss"></i></a>
-									<!-- end FA icons -->
-								 </div>
+								<div class="header-social clearfix">									
+									<a class="social-icon-large" target="_blank" href="https://www.facebook.com/thetemplenews" title="The Temple News on Facebook"><i class="pe-so-facebook pe-hover"></i></a>
+									<a class="social-icon-large" target="_blank" href="https://www.twitter.com/thetemplenews" title="The Temple News on Twitter"><i class="pe-so-twitter pe-hover"></i></a>
+									<a class="social-icon-large" target="_blank" href="https://www.instagram.com/templenews" tittle="The Temple News on Instagram"><i class="pe-so-instagram pe-hover"></i></a>
+									<a class="social-icon-large" target="_blank" href="<?php bloginfo('rss2_url'); ?>" title="The Temple News RSS feed"><i class="pe-so-rss pe-hover"></i></a>
+								</div>
 								<!-- if you'd like to use the site description you can un-comment it below -->
-								<span id="site-tagline"><?php bloginfo('description'); ?></span>
+								<span id="site-tagline"><?php bloginfo('description');?></span>
 							</div>
-
-
 							<!-- menu button -->
 							<div class="menu-button icon-reorder last">
 								MENU
 							</div>
-
 							<?php echo bones_wpsearch(); ?>
-
 						</div> <!-- end #top-header -->
-
-
 					</div><!-- end #outer-header .wrap -->
-
 				</div><!-- end #outer-header -->
-
 				<div class="outer-line"></div>
-
 				<div id="inner-header" class="wrap clearfix">
-
 					<nav role="navigation">
 						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
-
 					<?php // get_search_form(); ?>
-
-
 				</div> <!-- end #inner-header -->
-
 			</header> <!-- end header -->
