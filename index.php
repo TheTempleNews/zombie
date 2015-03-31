@@ -622,6 +622,50 @@
 
 
 
+			<!-- Essay SECTION -->
+			<section id="section-box-essay" class="section-container section-box twelvecol first last clearfix">
+				<h2 class="section-box-title"><a href="<?php get_site_url(); ?>/essay/">The Essayist</a></h2>
+					<?php // no reason to change this stuff
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					$top_article_class = 'top-' . $post_type;
+
+					// set class to first or last depending on position in n column layout where number of keys == n
+					// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+					$style_classes = array('first', '', '', '', '', 'last');
+					$styles_count = count($style_classes);
+					$style_index = 0;
+
+					// sets up counter to display first post differently (see TOP ARTICLE)
+					// disable this because wooslider is borked
+					//$firstpost = 'firstpost';
+
+					$essay_query = new WP_Query( array(
+						'post_type'     => 'essay',
+						'posts_per_page' => 6
+						)
+					);
+
+					?>
+					<div class="essay-main">
+						<?php // begin the loop again
+							if ( $essay_query->have_posts() ) : while ( $essay_query->have_posts() ) : $essay_query->the_post();
+							// else { // all non-first posts format ?>
+								<?php
+								// this is the second part of the operation that determines first or last class based on column divisions. see above.
+								$k = $style_classes[$style_index++ % $styles_count]; ?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class( 'twocol clearfix ' . $k ); ?> role="article">
+									<header>
+										<h2 class="home-essay-headline essay-headline headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+									</header>
+									<br/>
+									<section class="essay-dek dek">
+										<?php the_excerpt(); ?>
+									</section> <!-- end essay-dek -->
+								</article> <!-- end article -->
+						<?php // } // end non-first posts
+						endwhile; endif; // kill loop ?>					
+					</div> <!-- end #essay-main -->
+			</section> <!-- end #section-box-essay -->
 
 
 		</div> <!-- end #inner-content -->
