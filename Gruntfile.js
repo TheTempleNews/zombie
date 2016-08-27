@@ -86,6 +86,9 @@ module.exports = function(grunt) {
 				}
 			},
 			build: {
+				options: {
+					compress: true
+				},
 				files: {
 					'library/js/scripts.min.js': [jsMainFileList],
 					'library/js/scripts-lunchies-2013.min.js': ['library/js/scripts-lunchies-2013.js'],
@@ -146,12 +149,14 @@ module.exports = function(grunt) {
 	]);
 	grunt.registerTask('dev', [
 		'jshint',
+		'uglify:dev',
 		'less:dev',
 		'autoprefixer:dev'
 	]);
 	grunt.registerTask('build', [
+		'jshint',
+		'uglify',
 		'less:build',
-		'autoprefixer:build',
-		'uglify'
+		'autoprefixer:build'
 	]);
 };
