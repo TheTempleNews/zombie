@@ -511,10 +511,6 @@ function remove_menus() {
 	if ($user_role !== 'administrator') {
 		$restricted = array(__('Posts'),
 							__('Pages'),
-							__('Appearance'),
-							__('Plugins'),
-							__('Tools'),
-							__('Settings')
 		);
 		end ($menu);
 		while (prev($menu)) {
@@ -543,40 +539,6 @@ function nua_add_cap() {
 // add_action('admin_init','nua_add_cap');
 add_filter( 'new_user_approve_minimum_cap', 'nua_add_cap' );
 
-
-/**
- * To display the caption or any other post thumbnail metadata.
- * @see http://wordpress.org/support/topic/display-caption-with-the_post_thumbnail?replies=10
- */
-function the_post_thumbnail_caption() {
-  global $post;
-
-  $thumb_id = get_post_thumbnail_id($post->id);
-
-  $args = array(
-	'post_type' => 'attachment',
-	'post_status' => null,
-	'post_parent' => $post->ID,
-	'include'  => $thumb_id
-	);
-
-   $thumbnail_image = get_posts($args);
-
-   if ($thumbnail_image && isset($thumbnail_image[0])) {
-	 //show thumbnail title
-	 //echo $thumbnail_image[0]->post_title;
-
-	 //Uncomment to show the thumbnail caption
-	 echo $thumbnail_image[0]->post_excerpt;
-
-	 //Uncomment to show the thumbnail description
-	 //echo $thumbnail_image[0]->post_content;
-
-	 //Uncomment to show the thumbnail alt field
-	 //$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-	 //if(count($alt)) echo $alt;
-  }
-}
 /**
  * Fixes issue where Editors cannot edit users (a capability added by User Role Editor plugin (?)).
  * @see http://wordpress.org/support/topic/plugin-user-role-editor-not-able-to-add-ability-to-edit-users?replies=4

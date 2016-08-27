@@ -24,7 +24,7 @@
 
 
 				<!-- DESKTOP-ONLY ADS -->
-				<?php if ( !is_handheld() ) : ?>
+				<?php if ( function_exists( 'is_handheld' ) && ! is_handheld() ) : ?>
 				<div class="ad-container clearfix">
 					<div class="ad rectangle-ad twelvecol first last">
 
