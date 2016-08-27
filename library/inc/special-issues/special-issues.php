@@ -11,6 +11,11 @@ function ttn_weekender_year() {
 		'category_name' => 'weekender'
 	);
 	$query = get_posts($args);
+
+	if ( empty( $query ) ) {
+		return;
+	}
+
 	$most_recent = $query[0];
 	$most_recent_post_date = $most_recent->post_date;
 	$output = date( 'Y', strtotime( $most_recent_post_date ) );
@@ -26,6 +31,11 @@ define('WEEKENDER_YEAR', ttn_weekender_year());
  */
 function lunchies_year() {
 	$query = get_posts('post_type=food_vendor');
+
+	if ( empty( $query ) ) {
+		return;
+	}
+
 	$most_recent = $query[0];
 	$most_recent_post_date = $most_recent->post_date;
 	$output = date( 'Y', strtotime( $most_recent_post_date ) );
@@ -45,6 +55,11 @@ function ttn_movers_shakers_year() {
 		//'category_name' => 'movers-shakers'
 	);
 	$query = get_posts($args);
+
+	if ( empty( $query ) ) {
+		return;
+	}
+
 	$most_recent = $query[0];
 	$most_recent_post_date = $most_recent->post_date;
 	$output = date( 'Y', strtotime( $most_recent_post_date ) );
@@ -64,6 +79,11 @@ function ttn_bar_guide_year() {
 		'category_name' => 'bar-guide'
 	);
 	$query = get_posts($args);
+
+	if ( empty( $query ) ) {
+		return;
+	}
+
 	$most_recent = $query[0];
 	$most_recent_post_date = $most_recent->post_date;
 	$output = date( 'Y', strtotime( $most_recent_post_date ) );
@@ -83,6 +103,11 @@ function ttn_music_issue_year() {
 		'category_name' => 'music-issue-music'
 	);
 	$query = get_posts($args);
+
+	if ( empty( $query ) ) {
+		return;
+	}
+
 	$most_recent = $query[0];
 	$most_recent_post_date = $most_recent->post_date;
 	$output = date( 'Y', strtotime( $most_recent_post_date ) );
@@ -105,6 +130,11 @@ define('MUSIC_ISSUE_YEAR', ttn_music_issue_year());
 function ttn_movers_shakers_name_no_link() {
 	//global $post;
 	$persons = the_terms( the_ID(), 'movers-shakers-people' );
+
+	if ( empty( $persons ) ) {
+		return;
+	}
+	
 	foreach( $persons as $person) {
     	echo $person;
 	}

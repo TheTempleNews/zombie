@@ -110,7 +110,7 @@
 					<div class="wrap clearfix">
 
 						<!-- DESKTOP-ONLY ADS -->
-						<?php if ( !is_handheld() ) : ?>
+						<?php if ( function_exists( 'is_handheld' ) && !is_handheld() ) : ?>
 						<div id="ad-topnavbar" class="ad">
 
 						<!-- THIS IS AN ADVERTISEMENT FNORD -->
