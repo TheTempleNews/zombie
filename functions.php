@@ -511,10 +511,6 @@ function remove_menus() {
 	if ($user_role !== 'administrator') {
 		$restricted = array(__('Posts'),
 							__('Pages'),
-							__('Appearance'),
-							__('Plugins'),
-							__('Tools'),
-							__('Settings')
 		);
 		end ($menu);
 		while (prev($menu)) {
